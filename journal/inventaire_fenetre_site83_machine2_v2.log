@@ -1,0 +1,130 @@
+==========================================================================
+0. CUSTODY DES ARTEFACTS OUVERTS
+==========================================================================
+  M15   m15_results.json       96d784077577d57d  CONFORME
+  M12   m12_results.json       fa109da92e582520  CONFORME
+  M13b  m13b_results.json      22fa176013a9d46b  CONFORME
+
+==========================================================================
+1. LIGNES DE LA FENETRE [2.62, 2.73], LUES AU BLOC G6, EN EXTENSION
+==========================================================================
+  MANCHE p   point  sgn  statut
+  M15    4   2.62   +1   vivante
+  M15    4   2.62   -1   vivante
+  M15    4   2.64   +1   MORTE
+  M15    4   2.65   +1   vivante
+  M12    4   2.67   +1   vivante
+  M15    4   2.69   +1   MORTE
+  M13b   4   2.70   +1   MORTE
+  M15    4   2.71   +1   MORTE
+  M12    4   2.72   +1   vivante
+  M15    4   2.73   +1   MORTE
+  M15    5   2.62   +1   vivante
+  M15    5   2.62   -1   vivante
+  M15    5   2.64   +1   vivante
+  M15    5   2.64   -1   vivante
+  M15    5   2.65   +1   MORTE
+  M15    5   2.65   -1   vivante
+  M12    5   2.67   +1   vivante
+  M12    5   2.67   -1   vivante
+  M15    5   2.69   +1   vivante
+  M15    5   2.69   -1   vivante
+  M15    5   2.71   +1   vivante
+  M15    5   2.71   -1   vivante
+  M12    5   2.72   +1   vivante
+  M12    5   2.72   -1   vivante
+  M15    5   2.73   +1   vivante
+  M15    5   2.73   -1   vivante
+  M15    7   2.62   +1   vivante
+  M15    7   2.62   -1   vivante
+  M15    7   2.64   +1   vivante
+  M15    7   2.64   -1   vivante
+  M15    7   2.65   +1   vivante
+  M15    7   2.65   -1   vivante
+  M12    7   2.67   +1   MORTE
+  M12    7   2.67   -1   vivante
+  M15    7   2.69   +1   vivante
+  M15    7   2.69   -1   vivante
+  M15    7   2.71   +1   MORTE
+  M15    7   2.71   -1   vivante
+  M12    7   2.72   +1   vivante
+  M12    7   2.72   -1   vivante
+  M15    7   2.73   +1   vivante
+  M15    7   2.73   -1   vivante
+  TOTAL : 42 lignes  (p=4 : 10 ; impair : 32)
+
+==========================================================================
+2. CONTROLE CROISE : le recompte G6 rend-il le resume de l'artefact ?
+==========================================================================
+  M15 resume.points_perdus : ['4|2.640000000000', '4|2.690000000000', '4|2.710000000000', '4|2.730000000000', '5|2.650000000000', '7|2.710000000000']
+  M15 recompte au bloc G6  : ['4|2.640000000000', '4|2.690000000000', '4|2.710000000000', '4|2.730000000000', '5|2.650000000000', '7|2.710000000000']
+  CONCORDANCE : True   (les 6 pertes M15 sont toutes de mecanisme G6)
+
+==========================================================================
+3. N-23 -- ATTRIBUTION PAR DEGRE DES MORTS 2.71 ET 2.73
+==========================================================================
+  point 2.71 (5 lignes) : 4|+1 MORTE, 5|+1 vivante, 5|-1 vivante, 7|+1 MORTE, 7|-1 vivante
+      degres morts : [4, 7]
+  point 2.72 (5 lignes) : 4|+1 vivante, 5|+1 vivante, 5|-1 vivante, 7|+1 vivante, 7|-1 vivante
+      degres morts : aucun
+  point 2.73 (5 lignes) : 4|+1 MORTE, 5|+1 vivante, 5|-1 vivante, 7|+1 vivante, 7|-1 vivante
+      degres morts : [4]
+
+  AU SEUL DEGRE 4 : 2.71 MORTE | 2.72 VIVANTE | 2.73 MORTE
+  => la signature 48.3 est instanciee AU DEGRE 4, pas seulement au niveau point.
+     Reserve : 2.72 vient de M12, 2.71 et 2.73 de M15 (juxtaposition
+     inter-manches, legitime par 48.4, a declarer au gel).
+
+==========================================================================
+4. COMPTES PAR DEGRE -- COMPTES, PAS AFFIRMES ; q_L(80 %) sur chacun
+==========================================================================
+  3.2 fenetre M15 seule      (dossier 4/7 et 2/24) p=4 4/7  q_L=0.7717 | impair 2/24 q_L=0.1700
+  3.3 complement SANS 2.72   (dossier 5/9 et 3/28) p=4 5/9  q_L=0.7325 | impair 3/28 q_L=0.1882
+  3.3 complement AVEC 2.72   (inventaire reel)   p=4 5/10 q_L=0.6732 | impair 3/32 q_L=0.1656
+
+==========================================================================
+5. D-8 -- L'UNITE DE COMPTE N'EST PAS DECLAREE
+   La campagne declare, a p IMPAIR, la convention s* = min des deux
+   signes (M1/(f)) : l'unite naturelle y est (degre, point), alors que
+   le bloc G6 exclut par BRANCHE DE SIGNE. Les deux lectures existent.
+==========================================================================
+  (a) ligne sign-resolue [ce que compte le dossier] p=4 5/10 q_L=0.6732 | impair 3/32 q_L=0.1656
+  (b) unite (degre,point), morte si >=1 branche morte p=4 5/9  q_L=0.7325 | impair 3/16 q_L=0.3180
+  (c) unite (degre,point), morte si TOUTES les branches p=4 5/9  q_L=0.7325 | impair 0/16 q_L=0.0957
+  branches par unite : p=4 -> [1, 2] ; impair -> [2]
+  LES TROIS MORTS IMPAIRS SONT TOUS DE SIGNE +1 : 5|2.65|+1, 7|2.71|+1, 7|2.67|+1
+  => aucune unite impaire n'est morte AUX DEUX SIGNES (lecture (c) : 0/16).
+  Portee : p=4 est quasi mono-signe (une seule branche partout sauf 2.62),
+  donc le dimensionnement de la strate 1 (p=4 seul) est ROBUSTE a ce choix ;
+  c'est la LECTURE degre-selective de 3.4 / B3 qui en depend.
+
+==========================================================================
+6. D-9 -- LE TRAITEMENT DES ANCRES N'EST PAS SYMETRIQUE
+   N-22 met 2.62 et 2.72 sur le MEME plan (ancres de geometrie). Le
+   compte du dossier garde 2.62 DEDANS et met 2.72 DEHORS. Les deux
+   sont des survivants : les exclure baisse n sans baisser k.
+==========================================================================
+  les deux DEDANS (inventaire reel)              p=4 5/10 q_L=0.6732 | impair 3/32 q_L=0.1656
+  2.72 dehors [lecture du dossier]               p=4 5/9  q_L=0.7325 | impair 3/28 q_L=0.1882
+  2.62 dehors                                    p=4 5/8  q_L=0.8014 | impair 3/28 q_L=0.1882
+  les deux dehors                                p=4 5/7  q_L=0.8805 | impair 3/24 q_L=0.2179
+  AMPLITUDE sur la borne p=4 qui dimensionne la strate 1 : 0.2073
+  (a comparer aux 0.0769 qui ont fait RETIRER le q_L de niveau-point en D-1)
+  Rendements strate 1 (N = 3 tentatives p=4) aux deux extremes :
+    q = 0.6732 -> E[surv] = 0.9805  P(>=1) = 0.6949
+    q = 0.8805 -> E[surv] = 0.3586  P(>=1) = 0.3175
+
+==========================================================================
+7. CE QUE CET INVENTAIRE NE JOUE PAS
+==========================================================================
+  - Aucune mesure rejouee : les statuts sont LUS aux blocs G6, pas
+    recalcules depuis les s*.
+  - 'MORTE' == exclue par G6. Sur la fenetre M15 les pertes sont toutes
+    de mecanisme G6 (resume) ; non re-verifie pour M12 et M13b.
+  - Les points hors [2.62, 2.73] ne sont pas inventories ; le domaine
+    large (bornes 0.0855 / 0.0679) n'est pas recalcule ici.
+  - Aucun q_L de niveau-point n'est derive (N-20).
+  - Le choix ENTRE les lectures des sections 5 et 6 n'est pas fait ici :
+    il appartient au gel, qui doit le DECLARER avant mesure.
+
+=== FIN DE L'INVENTAIRE v2 ===
