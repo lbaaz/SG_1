@@ -1,55 +1,58 @@
-# Le fantôme en bocal — paquet de reproductibilité (19/07/2026)
+# Quantum metastability of island-protected ghosts — the interacting Pais–Uhlenbeck oscillator
 
-Campagne : PU en interaction, classique + quantique. Résultats et contexte : note_bocal_2026-07-19.md (avec erratum du même jour sur le positionnement Damour-Smilga).
+Reproducibility bundle for the note *"Quantum metastability of classically protected islands in the interacting Pais–Uhlenbeck oscillator: measured rates, a spectral census, and classical threshold laws"* (`note_outreach_EN_2026-07.md`, included in this bundle; PDF to be generated at repo creation).
 
-## Environnement
-python3, numpy, scipy, sympy, matplotlib. Aucune graine aléatoire (dynamique déterministe, RK4 pas fixe).
+**What this is.** Classical threshold maps and quantum escape-rate measurements for the quartically self-interacting PU oscillator, x⁗ + (ω₁²+ω₂²)ẍ + ω₁²ω₂²x = g x³, in the Hermitian indefinite realization H = −ω₁n₁ + ω₂n₂ + (g/4)x⁴. Headline results: classically protected islands leak at all amplitudes with truncation-converged rates; no bound island eigenstates exist (spectral census); the ħ-dependence at fixed classical point is a steep power law (~ħ⁴⁻⁵), not e^(−S/ħ), in the deep-quantum window; classical thresholds obey g·s*² ≈ C·(ω₂−ω₁)²(ω₁+ω₂) with C = 0.272 ± 0.035 (C = 1/4 within errors), with an exact cancellation valley at 1:1 and a finite threshold at exact degeneracy. Follow-up runs (tir1/tir2, pre-registered protocol) settle the form of Gamma: no single law — a floor Γ₀ ≈ 1.4×10⁻⁶ (the ground-cluster resonance width) plus a resonant excess; the floor is non-perturbative in g (g² and g⁴ excluded by 2–6 orders; consistent with e^(−c/g), c ≈ 0.37, across nine orders of magnitude). The threshold law is equivalently a detuning-blind amplitude condition g·A₂*²·(ω₁+ω₂) = 4C; the right edge alone gives C = 0.269 ± 0.011 (see spotcheck_reformulation.py).
 
-## Ordre de reproduction (temps indicatifs sur conteneur standard)
-1. pu_test.py — bénin/malin de base, (1,√2), grilles g et s. (~2 min)
-2. bocal_dictionnaire.py — dictionnaire linéaire PU↔dimère PT (sympy) + théorème RWA. (~1 min)
-3. bocal_phases.py — cartes de phase PU générique / PU 3:1 / dimère Kerr. ATTENTION : le scan (1,3) y est confondu en raideur — corrigé par le suivant. (~5 min)
-4. bocal_ab.py — test A/B à raideur appariée (4 systèmes) → bocal_ab_data.npz, figure bocal_ab.png. (~8 min)
-5. bocal_critere.py — décalages multi-échelles (répulsion), vérification FFT, loi K=g·s*², prédictions hors échantillon. Lit bocal_ab_data.npz. (~10 min)
-6. bocal_paysage.py — paysage s*(ω₂), théorème de parité en contexte → bocal_paysage.npz, figure bocal_critere.png. (~4 min)
-7. bocal_normale.py — forme normale 1:1, vallée d'invisibilité (vérif E₁/E₂ et ρ), plateau K₀(ε). (~6 min)
-8. bocal_q_build.py puis bocal_q_run.py puis bocal_q_salvage.py — quantique : construction/diag (N=44,36 puis 64,52), évolutions, contrôle de troncature. Les caches propres bq_*.npz (lourds, ~30 s à régénérer chacun) ne sont PAS inclus. Figure bocal_quantum.png. (~5 min)
-9. bocal_g_build72.py puis bocal_g_run.py — taux de fuite Γ(s), leviers N=44/64/72, ansatz. (bocal_gamma.py = version monolithique qui dépasse les timeouts : conservée pour référence.) → bocal_gamma.npz. (~3 min)
+*Disclosure: this exploration was carried out by an independent researcher in extended collaboration with an AI assistant (Anthropic's Claude); everything below has been re-run in full, twice, by the human author on independent hardware (~14 min per pipeline; agreement ≤5e-10 except five float-sensitive cells at the fractal blow-up boundary of the control systems).*
 
-## Réserves à garder en tête (détaillées dans la note)
-- Classique : T=400, une famille de CI (s,0,0,s), frontières ±1 cellule ; C=0.254 empirique.
-- Quantique : un système (1,√2), g=0.05, ħ=1 ; « fuite » = flux à travers n=34, convergé entre N=64 et 72 (ratios 0.89–1.09) ; continuum = extrapolation ; fenêtres de fit invalides pour s≥1.3 ; forme de Γ(s) non tranchée [MISE A JOUR bundle 3 : tranchee par les tirs 1-2, voir addendum — plancher + exces, pas de loi unique].
-- Porte de lecture restante avant toute rédaction : section quantique de Smilga, arXiv:1710.11538.
+## Environment
 
-## Addendum kill (meme soir)
-kill_k1.py (K1a temps long + K1b bord mobile), k2_run.py (K2 mur vs capuchon), k3_build.py+k3_run.py (K3 chaine hbar a point classique fixe, caches bq72_g* regenerables ~30s chacun). Donnees : kill_k*.npz. Verdicts dans note_bocal (sec. 4bis).
+Python ≥ 3.10 with `numpy`, `scipy`, `sympy`, `matplotlib` (see `requirements.txt`). No other dependencies. Deterministic (fixed-step RK4, exact diagonalization); no random seeds.
 
-## Addendum K4 (meme soir)
-kill_k4.py : familles d'etats (coupes au rivage, comprimes, Fock) + recensement spectral des etats lies. Verdict : survecu, fuite structurelle (0 etat propre lie dans l'ile). Donnees : kill_k4.npz. Note v2 mise a jour (sec. 4).
+```
+pip install -r requirements.txt
+```
 
-## Addendum K5-K6 (meme soir, tard)
-kill_k6.py : taux uniformes immunises au front (bord adaptatif + survie insulaire) + re-fit de C. Verdicts : K6 repare (monotone ; quantique plus lent que classique au-dela du seuil), C=0.272+/-0.035 (1/4 candidat). K5 : revue 2408.16832 = complement ; GSTZ 2007.05541 lu en integralite = blessure conceptuelle et repositionnement, voir note sec. 9.
+**Cache builds** (once, before the quantum steps): `python3 build64.py` (bq_64.npz, ~15 s); `python3 k3_build.py 0.05`, then `0.025`, then `0.0125` (bq72_g*.npz, ~30 s each).
 
-## Erratum d'empaquetage (attrape par verification externe -- premiere execution de la porte 1)
-pu_test.py et pu_plot.py manquaient du tarball : la copie originale utilisait '2>/dev/null' et les fichiers de la premiere session avaient disparu du repertoire ephemere avant l'empaquetage. Sources originales irrecuperables (transcripts verifies) : les deux scripts sont des RECONSTRUCTIONS du meme jour, en miroir exact du systeme canonique de bocal_ab.py, validees contre les ancres archivees (s* dans (1.25,1.30] ; t_blow(1.30)=111 ; t_blow(1.50)=17 -- reproduites). Au passage, la ligne de CI de la note outreach ((x,x',x'',x''')(0)) etait erronee et a ete corrigee : le jet correct est (s,0,s,0), tuple canonique (s,0,0,s). Lecon gravee : plus jamais de cp silencieux ; l'empaquetage est desormais verifie fichier par fichier.
+## Reproduction order (indicative runtimes, single node)
 
-Addendum a l'erratum : en cascade, la colonne classique de kill_k6 (tclas) lisait bocal_ab_data au plus proche voisin (g=0.0516, s=1.333/1.533) en zone frontaliere fractale ; corrigee par integration directe aux vrais points (t_blow(0.05; 1.3/1.4/1.5/1.6) = 54/25/52/14). Notes FR et EN mises a jour ; le claim 'quantique plus lent au-dela du seuil' en sort renforce (x4 a x14) avec une observation neuve : la duree de vie quantique est lisse la ou le classique fluctue (frontiere criblee).
+| # | script | produces | time |
+|---|---|---|---|
+| 1 | `pu_test.py` | baseline benign/malicious scan, (1,√2) | ~2 min |
+| 2 | `bocal_dictionnaire.py` | linear PU↔PT-dimer dictionary + RWA theorem (sympy) | ~1 min |
+| 3 | `bocal_phases.py` | phase maps (note: the (1,3) scan here is stiffness-confounded; superseded by 4) | ~5 min |
+| 4 | `bocal_ab.py` | stiffness-matched A/B thresholds → `bocal_ab_data.npz` | ~8 min |
+| 5 | `bocal_critere.py` | frequency-shift (repulsion) check vs FFT; K = g·s*² invariant; out-of-sample tests | ~10 min |
+| 6 | `bocal_paysage.py` | threshold landscape s*(ω₂) → `bocal_paysage.npz` | ~4 min |
+| 7 | `bocal_normale.py` | 1:1 normal form, invisibility-valley verification, K₀ plateau | ~6 min |
+| 8 | `bocal_q_build.py`, `bocal_q_run.py`, `bocal_q_salvage.py` | quantum build/diag + truncation control | ~5 min |
+| 9 | `bocal_g_build72.py`, `bocal_g_run.py` | leak rates Γ(s), truncation levers N = 44/64/72 → `bocal_gamma.npz` | ~3 min |
+| 10 | `kill_k1.py` | leak vs sloshing: long-time plateaus, shell-independence of Γ(n_c) | ~5 min |
+| 11 | `k2_run.py` | regularization robustness (hard wall vs soft taper) | ~3 min |
+| 12 | `k3_build.py 0.025` / `0.0125`, then `k3_run.py` | ħ-cascade at fixed classical point g·s² = 0.0245 | ~4 min |
+| 13 | `kill_k4.py` | state families (shore-cut, squeezed, Fock) + bound-state census | ~4 min |
+| 14 | `kill_k6.py` | front-proof uniform rates (adaptive edge + island survival); C refit | ~6 min |
+| 15 | `tir1_gammas.py` | exploratory low-s run — kept as the guard trail that caught the box-saturation artifact (its long-window estimator is superseded by 16) → `tir1_partA.npz` | ~3 min |
+| 16 | `tir1_partB2.py` | guarded low-s rates (anchors first, two observables, N = 64/72 box invariance) → `tir1_final.npz`, verdict vs pre-registered forms | ~5 min |
+| 17 | `tir1_plancher.py` | floor probes: s = 0.15–0.20, Fock ground state, ground-level shore cuts → `tir1_plancher.npz` | ~4 min |
+| 18 | `tir2_gcut.py` | coupling cut at fixed states across g = 0.05 / 0.025 / 0.0125 → `tir2_gcut.npz` (figure deferred to 19) | ~3 min |
+| 19 | `tir2_fin.py` | g = 0.0125 completion with honest bounds; final synthesis figure `bocal_tirs12.png` → `tir2_final.npz` | ~2 min |
+| 20 | `spotcheck_reformulation.py` | per-point test of the detuning-blind threshold form on the landscape → `spotcheck_reformulation.npz` | ~1 s |
 
-## Addendum tirs 1-2 (forme de Gamma tranchee)
-tir1_gammas/partB2/plancher + tir2_gcut/fin : protocole anti-hallucination G1-G9 (integrite, checksum <H0>=-s^2/2, ancres d'abord, norme, moities, invariance de boite N64/72, deux observables, residu oscillant, predictions pre-enregistrees + exclusion mecanique). Verdicts : les trois formes candidates de Gamma(s) sont EXCLUES comme lois globales ; decouverte d'un plancher Gamma0~1.4e-6 (largeur du cluster fondamental, tau~7e5 ; systematique x2, invariance N marginale 0.58 avouee) regenere par la dynamique (coupe n<=4 : 1.05x) ; le plancher est NON-PERTURBATIF en g (x1590 pour g->g/2 ; g^2 et g^4 morts ; compatible e^{-c/g}, c~0.37 ; borne a g=0.0125) -- premiers points quantitatifs du regime GSTZ, deux mecanismes desormais mesures separement (fondamental non-perturbatif vs iles resonantes hbar^4-5). Deux artefacts fabriques puis executes par le protocole en cours de route (fenetre longue saturee ; fenetre fraction-de-plateau trop tardive) : voir transcript.
+Heavy eigensystem caches (`bq_*.npz`, ~215 MB each) are **not** shipped; each regenerates in ~30 s from the build scripts. Small result files (`bocal_*.npz`, `kill_*.npz`, `tir*_*.npz`, `spotcheck_reformulation.npz`) and the seven figures (`figures/`) are included.
 
-## Combles d'empaquetage (run externe #2, verificateur humain)
-- build64.py AJOUTE : construit bq_64.npz (requis par k2_run, bocal_g_run, tir1_partB2, tir1_plancher). Invocation : python3 build64.py (~15 s).
-- k3_build.py : invocations explicites requises : python3 k3_build.py 0.05 ; 0.025 ; 0.0125 (bq72_g*.npz, ~30 s chacun).
-- pu_test.py : etiquette 'ancres' corrigee (111/17 = plus proche voisin g=0.0516 de l'archive ; ancres directes g=0.05 : 54/25/52/14).
-Etat de verification : bundles 1 et 2 re-executes integralement par l'auteur humain (~14 min), accord <=5e-10 sauf 5 cellules C/D en zone frontaliere criblee (<=11 pas RK4, ~0.03%, A/B bit-identiques) ; scripts tirs 1-2 posterieurs, re-run humain en attente.
+## Known pitfalls
 
-Correctif chemins (attrape par la validation de build64) : tous les scripts du bundle utilisaient des chemins ABSOLUS herites de l'environnement d'origine (/home/claude pour les caches, /mnt/user-data/outputs pour les figures) -- casses hors de cet environnement. Tout est passe en chemins RELATIFS (caches et figures ecrits dans le repertoire courant). Ancre fonctionnelle re-verifiee sur le cache reconstruit (K2 : 7.67e-5 / 1.20e-3 reproduits).
+- `bocal_phases.py` step 3 confounds stiffness at (1,3); the stiffness-matched protocol (step 4) is authoritative.
+- Edge-flux fit windows are invalid for s ≥ 1.3 (front-arrival transient); use the island-survival estimator (`kill_k6.py`).
+- The census in `kill_k4.py` is at fixed truncation N = 72; backed by the convergence tests of steps 9–10.
 
-Addendum reformulation : la loi de seuil equivaut a g*A2^2*(w1+w2) = 4C (aveugle au detuning) le long de la famille de CI ; decomposition par bord : droit C=0.269+/-0.011 (le point A/B (1,2.85) tombe a 0.996 de la forme 1/4), gauche limite par resolution (~20-40 pourcent par point, quantification Delta_s=0.2) -- remplace le "5-15 pourcent" global des versions anterieures. Statut mono-rayon des CI promu question centrale ; juge annonce : la frontiere de blow-up dans le plan (A1,A2) complet.
+## Caveats (in full in the note)
 
-## Bundle 3 (changelog)
-- AJOUTES : spotcheck_reformulation.py + .npz (test point par point de la forme equivalente aveugle au detuning ; bord droit C = 0.269 +/- 0.011, point-phare (1, 2.85) a 0.996 de la forme 1/4) ; references tir1_partA.npz et tir2_gcut.npz (retour verificateur, point 0) ; note_outreach_EN_2026-07.md ; requirements.txt ; LICENSE (MIT, nom en placeholder) ; README_EN.md (page d'accueil du futur depot : etapes 15-20, sept figures, resultats de tete a jour des tirs).
-- REPARE : tir2_gcut.py etait un vrai bug — il crashait avant son savez (None a g = 0.0125), donc tir2_gcut.npz n'existait pas ; desormais None-robuste, et ne produit plus de figure (la synthese finale appartient a tir2_fin — point 4 du retour).
-- COHERENCE : la mention initiale "forme de Gamma(s) non tranchee" est annotee (point 2 du retour) ; les notes FR et EN portent la reformulation et la decomposition par bord.
-- REPARE (run externe #3) : compare_worst.py (outil de verification, ajoute avec ce bundle) portait deux faux negatifs : empoisonnement NaN par les cellules inf des grilles t_blow (inf-inf=NaN neutralisait d.max()>0 -> "bit-exact" errone sur bocal_ab_data, l'inverse de sa mission) et crash ValueError sur les archives a dicts (kill_k1 et suivantes, 10 fichiers sur 15 jamais compares). Corrige : motifs inf/NaN compares a part (NaN==NaN via equal_nan), ecarts calcules sur les seules entrees finies, dicts imbriques aplatis en feuilles. Table du run externe #3 (20 etapes, 24 min, zero intervention) : 3 bit-exact, 9 a <=1e-9, 3 a <=1e-6 (quantites plancher comparees en absolu : <=9e-16), pire ecart global 3.49e-4 = tbD cellule frontaliere connue.
+One main system (ω₁, ω₂) = (1, √2), one main g = 0.05; occupations 1–15 (deep quantum); "escape" operationalized as flux across n = 34 in a truncated basis — only the *outgoing* rate is claimed; C is empirical; the mechanism behind the ħ⁴⁻⁵ law is undecided; the semiclassical regime is out of reach at these sizes (N ≈ 96 would be required).
+
+## License & contact
+
+MIT (see `LICENSE`). Contact: [NAME] — [email]. Questions, objections and kill-tests are exactly what we are asking for.

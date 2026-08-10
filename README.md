@@ -1,18 +1,21 @@
-# BOCAL campaign -- bundle v2 (Held)
+# BOCAL campaign -- bundle v3 (Held)
 
 Frozen, versioned, self-contained snapshot of an ongoing two-machine
 falsification campaign, cut on 2026-08-10 for external review. This is
 a snapshot, not a publication: the campaign continues behind it.
-Tag `bundle-v2` incorporates the pre-send review fixes (the review
+Tag `bundle-v2` incorporated the pre-send review fixes (the review
 itself ships in `journal/revue_pre_envoi_2026-08-10b_machine2_v1.md`);
-the original cut remains frozen under tag `bundle-v1-held` and is
-never amended.
+tag `bundle-v3` merges the two independently produced "version c"
+states of the note into version d (the collision and the merge are
+consigned in journal delta 64 and the campaign journal); the original
+cut remains frozen under tag `bundle-v1-held` and is never amended.
 
 ## Where to start
 
-Read `notes/note_outreach_EN_unified_2026-08-10c.md` (the single
-outreach note, version c; version b is the state frozen at
-`bundle-v1-held`). The prior-art review is in
+Read `notes/note_outreach_EN_unified_2026-08-10d.md` (the single
+outreach note, version d; version b is the state frozen at
+`bundle-v1-held`, and the machine-1 "version c" state consigned by
+journal delta 64 is kept under `journal/`). The prior-art review is in
 `notes/novelty_review.md`: it qualifies novelty, not correctness --
 its presence frames the claims. Everything else is evidence:
 pre-registered gates, primary run outputs, and the two-signatory
@@ -46,7 +49,7 @@ The quartic bundle has its own recursive manifest,
 
 ## Supersession and known caveats
 
-- `quartic-bundle/README_EN.md` predates the unified note; where the
+- `quartic-bundle/README.md` (English; the original French is kept as `README_FR.md`) predates the unified note; where the
   two differ, the note supersedes it -- in particular the note
   withdraws "truncation-converged rates" below mid-island (note
   §5(b)(i)) and its "PDF to be generated" line is stale. The quartic
@@ -63,13 +66,14 @@ The quartic bundle has its own recursive manifest,
 
 ## Layout
 
-    notes/           entry point: unified outreach note (c) + novelty review
+    notes/           entry point: unified outreach note (e) + novelty review
     gels/            certified pre-registrations (the credibility core)
     scripts/         engine, pilots, per-round measurement scripts, cut preflights
     runs/            primary JSON outputs, run logs, archived sweep logs, certifications
-    journal/         campaign deltas 1..60 as held by machine 2, errata,
-                     cross-certifications, pre-send review (earlier
-                     master-journal states through §17: on request)
+    journal/         campaign deltas 1..60, 64-65 as held by machine 2
+                     (61-63 in transfer), errata, cross-certifications,
+                     pre-send review (earlier master-journal states
+                     through §17: on request)
     quartic-bundle/  original quartic bundle, unchanged, as re-executed
                      (recursive manifest: quartic-bundle-MANIFEST-*.txt)
 
@@ -79,5 +83,5 @@ output.
 ## Licensing and contact
 
 Text: CC BY 4.0 (LICENSE). Code: MIT (LICENSE-CODE).
-Contact: see the outreach note. Full journals beyond this bundle,
+Contact: via GitHub (@lbaaz). Full journals beyond this bundle,
 the reimplementation codebase, and any registry lookups: on request.

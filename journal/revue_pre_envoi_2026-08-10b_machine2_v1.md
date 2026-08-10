@@ -205,4 +205,53 @@ balance dominante α = 4/(p−2), A par α(α+1)(α+2)(α+3) = g·A^{p−2} ✓ 
 5. A4 : régénérer le PDF depuis le .md corrigé ; relire le rendu.
 6. Envoi.
 
-=== FIN DE LA REVUE PRÉ-ENVOI (machine 2, v1) ===
+---
+
+## H. ADDENDUM v1.1 — VALIDATION DE LA VERSION d (2026-08-10, post-delta 64)
+
+Objet : `note_outreach_EN_unified_2026-08-10d.md` + `note_outreach_EN_unified_2026-08-10d.pdf`,
+dépôt aux tags `bundle-v2` / `bundle-v3`.
+
+**Verdict : VALIDÉE sur le contenu. Un seul point reste ouvert : A3 (dépôt privé).**
+
+Vérifié :
+- **Diff b→d exhaustif** : uniquement les corrections attendues, aucune régression, pied de
+  page interne purgé, note signée (baaz + email) — A1/A2 clos ; D2 dissous par la
+  signature (les « baaz » du dépôt ne contredisent plus rien).
+- **B1–B9 : tous appliqués aux valeurs exactes** (amplitudes ×500 + énergies ×2.1×10⁵ ;
+  1/Γ ≈ 1.0×10⁵ → 0.82 ; Γ₀ 1.4/1.6 attribués sonde cohérente s=0.15 / Fock |0,0⟩ ;
+  A₂ = −2s/Δ général en §2.1 ; ~15 h ; fenêtre déclarée [1.73, 2.82] ; 1.3 MB / 14–24 min ;
+  +0.0188 en ln contre la corde 2.89–3.06 ; marqueur (reimplementation) sur la prose §5(a)).
+- **C1–C4 : appliqués** (invariance K exacte par rescaling en abstract + §3(a) ; unités
+  ω₁=1 + puissance de ω₁ non contrainte ; parade « zéro prouvé, pas bruit » en §5(a′) ;
+  [12] éclaté en [12a]–[12e] avec renvois corrects ; [17] resserrée ; [14] arXiv seul).
+- **D1 clos** : la note ne cite plus 641dbe3e (« register value, not a shipped file »).
+- **D4/D5 clos et VÉRIFIÉS sur le remote** : tags `bundle-v2` (manifeste `9db2afa4…`, 0 échec)
+  et `bundle-v3` (manifeste `2f898234…`, 0 échec) existent, chaque message de commit porte son
+  empreinte de manifeste comme la note l'affirme ; les scripts par manche shippés ont les
+  sha256 exacts des JSON (M13 `1cb38518`, M13b `536c897b` = m13_saturation_v1c.py,
+  M14 `a43d046d`) ; logs M5/M6 publics (minimum à 2.00 traçable) ; note de dérivation v5
+  publique (~0.61) ; phrase reimplementation en §8.
+- **E1 clos** : [20] Wysong et al. ajoutée, description conforme au papier.
+- **Cohérence dépôt** : copie de la note d dans le dépôt bit-identique à la locale
+  (`74950a6b…`) ; delta 64 public et documente les 30 patchs b→c ; fusion c→d documentée au
+  message de commit v3 ; README v3 couvre D3 (deltas « 1..60 et 64, 61-63 in transfer »,
+  §17 « on request »), D6 (bannière de supersession + vérif du manifeste quartique depuis
+  quartic-bundle/) et D7 (caveat D=1.0, français signalé).
+- **PDF d : conforme au .md** (extraction pypdf, 12 pages, toutes sections présentes,
+  aucune troncature, fin sur [20]) : nom/email/version d présents ; toutes les corrections
+  rendues ; zéro résidu (placeholders, PROPOSAL, Baaz, destinataires, 641dbe3e, « a month
+  apart », 1.8×10⁵, PRD 112 : absents ; « 1.1 MB » n'apparaît que dans la mention légitime
+  de l'écart consigné) ; URL et empreinte `88ed9158…` présentes.
+
+**Restant avant envoi :**
+- [x] **A3 — CLOS le 2026-08-10** : dépôt rendu public (sur instruction de baaz, exécuté
+  par machine 2 via `gh repo edit --visibility public`). Contre-épreuve non authentifiée :
+  API 200, les trois tags visibles, clone frais anonyme de main (= bundle-v3), manifeste
+  `2f898234…` conforme au message de commit, `sha256sum -c` : 0 échec. Le §8 de la note d
+  est désormais vrai tel quel ; le chemin du transfert (Held → Deffayet/Vikman) est ouvert.
+- [ ] Cosmétique, non bloquant : README v3 ligne 69 dit « unified outreach note (c) » —
+  c'est la **d** qui est dans notes/ (la c est dans journal/). Une ligne à corriger au
+  prochain tag ; peut partir tel quel.
+
+=== FIN DE LA REVUE PRÉ-ENVOI (machine 2, v1.1) ===
