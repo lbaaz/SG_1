@@ -1,0 +1,30 @@
+  G3 : identite de force + appariement du temoin : OK
+  p=3 w2=2.000 g=0.050 full    s*=  0.5243  
+  p=3 w2=2.000 g=0.050 ablres  s*= 27.2371  widen->37.5 
+  p=3 w2=2.000 g=0.050 ablctrl s*=  0.4737  
+  p=5 w2=2.000 g=0.050 full    s*=  0.3749  
+  p=5 w2=2.000 g=0.050 ablres  s*=  1.6359  
+  p=5 w2=2.000 g=0.050 ablctrl s*=  0.3739  
+  p=3 w2=2.000 g=0.100 ablres  s*= 13.7319  widen->15.0 
+  p=5 w2=2.000 g=0.100 ablres  s*=  1.2965  
+  p=3 w2=1.900 g=0.050 full    s*=  1.9202  
+  p=3 w2=1.950 g=0.050 full    s*=  1.1140  
+  p=3 w2=2.050 g=0.050 full    s*=  3.2470  
+  p=3 w2=2.100 g=0.050 full    s*= 33.8170  widen->37.5 
+  p=5 w2=1.900 g=0.050 full    s*=  0.6131  
+  p=5 w2=1.950 g=0.050 full    s*=  0.5204  
+  p=5 w2=2.050 g=0.050 full    s*=  0.8303  
+  p=5 w2=2.100 g=0.050 full    s*=  1.1383  
+== M5 verdicts ==
+  G1 : s*_full(3)=0.5243 vs M1 0.484 (ecart 8.3%)  !! ALERTE
+  G1 : s*_full(5)=0.3749 vs m3_calib sP=0.3748 (ecart 0.0%)
+  G2 (p=3, ablres) : K(2g)/K = 1.008  OK
+  G2 (p=5, ablres) : K(2g)/K = 0.996  OK
+  p=3 : R_res=51.948  R_ctrl=0.903  Q=57.502
+  P-M5a : PLAFOND RESONANT CONFIRME [SOUS RESERVE G1]
+  p=5 : R_res=4.364  R_ctrl=0.998  Q=4.375
+  P-M5b : RESONANT AUSSI A p=5 — contredit H-COURSE, a ecrire tel quel [SOUS RESERVE G1]
+  p=3 detuning : d=-0.10 -> 3.662  d=-0.05 -> 2.125  d=+0.05 -> 6.193  d=+0.10 -> 64.498
+  P-M5c : NON CONCLUANT (asym x17.61) [SOUS RESERVE G1]
+  p=5 detuning : d=-0.10 -> 1.636  d=-0.05 -> 1.388  d=+0.05 -> 2.215  d=+0.10 -> 3.037
+  P-M5d : SENSIBILITE FINE SANS COLLAPSE GROSSIER — surprise, a documenter (asym x1.86) [SOUS RESERVE G1]
