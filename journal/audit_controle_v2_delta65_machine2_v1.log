@@ -1,0 +1,99 @@
+========================================================================
+1. CUSTODY -- empreintes re-derivees localement (brut / canonique NFC+LF)
+========================================================================
+    16690 o  brut 347f25daf1046c43  cano 347f25daf1046c43  CR=0 nonASCII=0               dossier_trilemme_site_v2.md
+    13347 o  brut f8e1f257ea9541cb  cano f8e1f257ea9541cb  CR=0 nonASCII=0     CONFORME  dossier_trilemme_site_v1.md
+    16106 o  brut 1c490f90fafcf8ff  cano 1c490f90fafcf8ff  CR=0 nonASCII=0     CONFORME  note_machine2_arbitrage_trilemme_v1.md
+     4380 o  brut e5931c94518916ce  cano e5931c94518916ce  CR=0 nonASCII=0     CONFORME  journal_delta_65_fusion_d_v3.md
+     4357 o  brut f4552c5f6fe40446  cano f4552c5f6fe40446  CR=0 nonASCII=0     CONFORME  journal_delta_64_revue_note_c (1).md
+    14007 o  brut 5704987e7d6ff7a6  cano 5704987e7d6ff7a6  CR=0 nonASCII=573   CONFORME  note_derivation_P1_signes_E_v5.md
+    55485 o  brut 74950a6b6912699c  cano 74950a6b6912699c  CR=0 nonASCII=1130  CONFORME  note_outreach_EN_unified_2026-08-10d.md
+    20461 o  brut 342f7cc97d04a7b4  cano 342f7cc97d04a7b4  CR=0 nonASCII=937   MISMATCH  revue_pre_envoi_2026-08-10b_machine2_v1.md
+     3003 o  brut 5ad0561e14ec563e  cano 5ad0561e14ec563e  CR=0 nonASCII=0               depot_journal_delta_65_pseudonymisation_baaz_COPIE.md
+  deltas machine 1 annonces RE-PRESENTES en 65.5, absents de BOCAL4 : 61, 62, 63
+
+========================================================================
+2. ESTIMATEUR q_L(80%) : borne q telle que P(Bin(n,q) <= k) = 0.20
+   (bisection 200 pas ; identification ACQUISE au tour precedent, 14/14)
+========================================================================
+  pilote M12             k= 1 n=12 -> 0.22961693269696842  registre 0.22961693269696845   ecart 2.78e-17
+  ITEM 3 p=4 domaine     k= 1 n=34 -> 0.08552233635862677  registre 0.0855                ecart 2.23e-05
+  ITEM 3 impair domaine  k= 3 n=80 -> 0.06785821837833145  registre 0.0679                ecart 4.18e-05
+
+========================================================================
+3. ITEM 3 SUR LA FENETRE (v2 sections 3.2 et 3.3) -- regle 16
+========================================================================
+  3.2 p=4 fenetre        k=4 n= 7 -> 0.7717  dossier 0.7717  OK
+  3.2 impair fenetre     k=2 n=24 -> 0.1700  dossier 0.1700  OK
+  3.3 p=4 complement     k=5 n= 9 -> 0.7325  dossier 0.7325  OK
+  3.3 impair complement  k=3 n=28 -> 0.1882  dossier 0.1882  OK
+
+========================================================================
+4. D-1 -- instabilite du q_L de NIVEAU-POINT, quatre lectures non gouvernees
+========================================================================
+  dossier v1 (retire)      k=7 n=8 -> 0.9725  note 0.9725  OK
+  2.72 compte vivant       k=7 n=9 -> 0.9074  note 0.9074  OK
+  2.67 grossiere retiree   k=6 n=7 -> 0.9686  note 0.9686  OK
+  les deux corrections     k=6 n=8 -> 0.8956  note 0.8956  OK
+  amplitude re-derivee = 0.0769   (note d'arbitrage : 0.0769)
+
+========================================================================
+5. RENDEMENTS -- E[surv] = N(1-q) ; P(>=1) = 1 - q^N
+========================================================================
+  colonne fenetre    q_L=0.7717
+    N=3 : E[surv] = 0.6850   P(>=1) = 0.5405
+    N=5 : E[surv] = 1.1416   P(>=1) = 0.7264
+    N=7 : E[surv] = 1.5983   P(>=1) = 0.8371
+    N=9 : E[surv] = 2.0549   P(>=1) = 0.9030
+  colonne complement q_L=0.7325
+    N=3 : E[surv] = 0.8026   P(>=1) = 0.6070
+    N=5 : E[surv] = 1.3377   P(>=1) = 0.7892
+    N=7 : E[surv] = 1.8728   P(>=1) = 0.8869
+    N=9 : E[surv] = 2.4079   P(>=1) = 0.9393
+
+========================================================================
+6. GEOMETRIE -- g(a,b,c) = (b-a)(c-b), b = 8/3, arithmetique EXACTE (Fraction)
+========================================================================
+  corde M15   2.62-2.73 : g = 133/45000  (0.00295556)
+  recul       2.60-2.80 : g = 2/225      (0.00888889)
+  corde int.  2.62-2.72 : g = 14/5625    (0.00248889)
+  ratio recul/M15    = 400/133 = 3.0075   (dossier 400/133 = 3.0075)
+  ratio interne/M15  = 16/19  = 0.8421   (dossier 16/19  = 0.842)
+
+========================================================================
+7. D-6 -- SENSIBILITE de l'inventaire complementaire 3.3 (non ecrit en extension)
+   La phrase de 3.3 cite TROIS apports (2.70, 2.67, 2.72) et rend n=9 :
+   7 (fenetre) + 1 (2.70) + 1 (2.67) = 9 exige que la ligne p=4 de 2.72
+   ne soit PAS comptee, alors que la meme phrase la nomme VIVANTE.
+========================================================================
+  3.3 tel qu ecrit (2.72 hors compte)    k=5 n= 9 -> q_L = 0.7325   P(>=1|N=3) = 0.6070
+  2.72 p=4 comptee vivante               k=5 n=10 -> q_L = 0.6732   P(>=1|N=3) = 0.6949
+  amplitude sur la colonne de dimensionnement = 0.0593
+  (a comparer aux 0.0769 qui ont fait RETIRER le q_L niveau-point en D-1)
+  impair : 24 -> 28 lignes, +4, dont 1 seule attribuee (7|2.67|+1) ;
+    k=3 n=28 -> q_L = 0.1882
+    k=3 n=29 -> q_L = 0.1820
+    k=3 n=30 -> q_L = 0.1762
+
+========================================================================
+8. D-7 / N-20 -- ce que la v2 porte encore en clair
+========================================================================
+  occurrences de '0.9725'       : 3
+  occurrences de '0.9074'       : 1
+  occurrences de '0.9686'       : 1
+  occurrences de '0.8956'       : 1
+  occurrences de 'niveau-point' : 5
+  occurrences de 'N = 9'        : 2
+  N-20..N-26 presents : N-20(4), N-21(2), N-22(2), N-23(3), N-24(3), N-25(3), N-26(3)
+
+========================================================================
+9. COLLISION DE NUMERO DE DELTA 65 -- deux pieces distinctes
+========================================================================
+  machine 1 : journal_delta_65_fusion_d_v3.md            e5931c94518916ce  4380 o
+  depot     : journal/journal_delta_65_pseudonymisation_baaz.md
+              5ad0561e14ec563e  3003 o  (releve : gh api repos/lbaaz/SG_1)
+  les deux declarent s'inserer APRES le delta 64.
+  journal/ du depot public, deltas releves : 50..60, 64, 65 -- 61/62/63 ABSENTS
+  des DEUX registres (BOCAL4 et depot).
+
+=== FIN DE L'AUDIT ===
