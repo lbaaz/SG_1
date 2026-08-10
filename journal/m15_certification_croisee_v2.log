@@ -1,0 +1,529 @@
+
+==============================================================================
+[1] FORME CANONIQUE DU BLOC GELE (regle 12 et son corollaire)
+==============================================================================
+   OK   aucun CR dans le fichier (LF seul)
+   OK   texte stable par NFC
+   OK   ASCII pur (aucun caractere composable)
+   occurrences du terminateur : 1
+   OK   terminateur UNE SEULE fois (corollaire regle 12)
+   OK   le bloc commence a la ligne 1 (colonne 0)
+   OK   terminateur en LIGNE PLEINE : '=== FIN DU GEL M15 ==='
+   OK   aucune queue apres le terminateur
+   longueur du bloc : 26563 caracteres
+   EMPREINTE NFC+LF DU BLOC M15 v2 :
+   c92c58e52603fd086b9e987d4439f50f0aa0263f9d3b9cd694dc7892a2245080
+   (v1, pour memoire : a2bb2dcd0866... -- NON CERTIFIE)
+
+==============================================================================
+[2] LES EMPREINTES CITEES, RECALCULEES -- ET LA RESERVE v1 QUI TOMBE
+==============================================================================
+   OK   fa109da9  out/m12_results.json                   (brut) M12 ponctuel
+   OK   22fa1760  out/m13b_results.json                  (brut) M13b (crible)
+   OK   68df6576  out/m14_results.json                   (brut) M14 (canyon 5:2)
+   OK   ed0e27b1  out/m12_pilote_results.json            (brut) pilote M12
+   OK   bf9866a7  m12_pre_enregistrement_v4.md           (canonique) gel M12 v4 (R-2 prime)
+   OK   273d0a53  gel_m14_p1a_v2.md                      (canonique) gel M14 v2 (B_E, N-3)
+   OK   c8ed357b  m9_replication_v1.py                   (brut) moteur classique
+   OK   97c02eab  p1_re_derivation_machine2_v1.md        (canonique) re-derivation machine 2
+   OK   5704987e  note_derivation_P1_signes_E_v5.md      (canonique) note P1 v5 (SOURCE)
+   OK   a944511d  m15_certification_croisee_v1.md        (canonique) ma certification v1
+   OK   61f2610f  m15_certification_croisee_v1.log       (brut) mon log v1 -- BRUT, voir N-10
+   OK   32714630  m15_certification_croisee_v1.py        (canonique) mon script v1
+   OK   a2bb2dcd  m15_pre_enregistrement_v1.md           (canonique) gel M15 v1 (refuse)
+   OK   ad275870  out/m11_results.json                   (brut) M11
+   OK   7cf3624b  out/m10_results.json                   (brut) M10
+   OK   70fe5611  out/m13_results.json                   (brut) M13
+
+   N-10 -- CONVENTIONS MELANGEES DANS UNE MEME PHRASE DU GEL, et la faute est
+   d abord la mienne : "certification a944511d, log 61f2610f, script d audit
+   32714630" cite DEUX empreintes canoniques NFC+LF et UNE en sha BRUT.
+     m15_certification_croisee_v1.log : brut 61f2610f7af4 | canonique b1a4a0c42eb4 | CR present : True
+   Mon log v1 a ete ecrit en CRLF (redirection Windows) : les deux empreintes
+   different, et seule la BRUTE concorde avec le gel. Regle de campagne : les
+   empreintes se livrent ETIQUETEES. Mon log v2 est ecrit en LF seul.
+
+   LA RESERVE v1 EST LEVEE : la note P1 v5 est au repertoire et concorde.
+   entree P1-b : ligne 185, sous la section '## 6. Prédictions et consignations révisées'
+   OK   le gel cite "section 6, entree P1-b" -> CONCORDE
+   OK   etiquette "falsifieur d ETAGE B SEULEMENT" presente VERBATIM dans la note
+   table des rangs, section 1 (VERBATIM) : | 8:3 | 11 | (6, 2) | (3, 1) | (3, 1) |
+   ATTENTION, section 2 de la MEME note : - **8/3** — (3,1)/(3,1)/(6,2) : rien aux rangs bas ⇒ pas de canyon de E
+   -> la note enonce le triplet dans DEUX ORDRES (hors chaine, consigne N-6).
+
+==============================================================================
+[3] LES FAITS QUE LE GEL DECLARE, RE-DERIVES (aucun chiffre lu comme un fait)
+==============================================================================
+   (a) rangs a 8/3 -- regle j*q <= r*p ET j*q = r*p (mod 2), q = 11 :
+   OK   p=4 -> (6, 2) (gel : (6, 2))
+   OK   p=5 -> (3, 1) (gel : (3, 1))
+   OK   p=7 -> (3, 1) (gel : (3, 1))
+   OK   N-4 : le rang (6,2) a p=4 est PERMIS par la parite (22 <= 24, memes parites)
+
+   (b) le pas de s*4 est-il SOUS la fenetre ?
+   OK   s*4(2.55) = 2.881241  (gel : 2.881241) [fa109da9]
+   OK   s*4(2.60) = 7.157439  (gel : 7.157439) [ad275870]
+   OK   s*4(2.67) = 7.462573  (gel : 7.462573) [fa109da9]
+   OK   facteur total 2.55->2.67 = 2.590 (gel : 2.590)
+   OK   part consommee dans [2.55,2.60] = 95.6 % (gel : 95.6 %)
+
+   (c) le crible p=4 de M13b, et la mort de 2.70 :
+       points M13b seuls : [2.7, 2.74, 2.78, 2.85, 2.89, 2.92, 2.96, 3.02, 3.05, 3.15, 3.22, 3.26, 3.3]
+       plus petit ecart INTERNE a M13b : 3/100 -- l entrelacement n est donc PAS
+       interne : il se lit sur l UNION M13 u M13b (le crible du delta 48.3).
+   OK   crible ENTRELACE au centieme sur M13 u M13b (plus petit ecart = 1/100)
+   OK   2.70 est MORT dans 22fa1760 (G6.exclue = True)
+       explosion_sous_0.98s = 7.687913955583313 ; fenetre fine = [7.1626527536490485, 8.356428212590558]
+       ratio explosion/s* = 0.9660 ; le gel ecrit "0.924-0.966 s*"
+       2.70 est a 1/100 de 2.69
+       2.70 est a 1/100 de 2.71
+
+   (d) les trois instances du mecanisme "grossiere mordue" -- COMPTEES :
+       m12         7|2.670000000000|+1    degre 7 (IMPAIR) cote +1
+       m14         5|2.500000000000|-1    degre 5 (IMPAIR) cote -1
+       m12_pilote  7|1.700000000000|-1    degre 7 (IMPAIR) cote -1
+   OK   trois instances au registre (gel : trois)
+   OK   toutes a degre IMPAIR (gel : toutes)
+       cotes comptes : ['+1', '-1', '-1']
+       Le gel ecrit "les deux instances a cote identifie sont cote -1".
+       COMPTE : les TROIS portent un cote au registre (la cle G6 est
+       p|w|sgn), et la repartition est 2 x -1 pour 1 x +1. Un compte
+       inscrit doit etre compte : a reformuler (N-7).
+   OK   a 2.50 le cote +1 survit avec grossiere VIDE (gel : asymetrie de signe)
+
+   (f) les six E deja connus autour du programme :
+   OK   E(2.60) = +0.5554 (gel : +0.5554) [M10+M11]
+   OK   E(2.67) = +0.4274 (gel : +0.4274) [M12]  <-- POINT PERDU, NON OPPOSABLE
+   OK   E(2.72) = +0.5174 (gel : +0.5174) [M12]
+   OK   E(2.75) = +0.5251 (gel : +0.5251) [M10+M11]
+   OK   E(2.78) = +0.5193 (gel : +0.5193) [M12]
+   OK   E(2.80) = +0.5426 (gel : +0.5426) [M12]
+   OK   E(2.67) est a -0.1059 de la corde 2.60<->2.72 (gel : -0.106)
+       partage du residu de 2.67 : res_S57 = -0.0860
+       partage du residu de 2.67 : res_S4  = -0.0198
+       -> le gel ecrit "porte principalement par le canal 7", c est-a-dire
+          par S57 : CONFIRME (le residu de S4 est marginal).
+
+   CONSTAT AGGRAVANT du HISTORIQUE v2, re-derive sur le canyon M14 reel :
+   OK   clause (2) v1 sur 68df6576 : D(g) = +0.1096, D(d) = -0.0781 (gel : +0.109 / -0.078)
+       N-11 : D(g) vaut +0.1096 ; le gel inscrit +0.109, qui est la TRONCATURE
+       et non l arrondi (+0.110). Sans effet ici ; a corriger a l inscription.
+   OK   signes OPPOSES -> la clause v1 aurait MANQUE le seul canyon mesure
+
+==============================================================================
+[4] ITEM 2 -- NOUVEAUTE PAR VALEUR EXACTE (critere NOMME par le gel)
+==============================================================================
+   w2=2.62  NEUF
+   w2=2.64  NEUF
+   w2=2.65  NEUF
+   w2=2.69  NEUF
+   w2=2.71  NEUF
+   w2=2.73  NEUF
+   OK   les six points sont neufs PAR VALEUR EXACTE dans les 7 artefacts de la lignee
+   proximites consignees par le gel, re-derivees en exact :
+   OK   2.62 est a 1/50 de 2.60 (gel : 1/50)
+   OK   2.73 est a 1/50 de 2.75 (gel : 1/50)
+   OK   2.75 est bien un BRULE du pilote (le brulage porte la VALEUR, pas un voisinage)
+   la regle d >= 0.03 (bf9866a7) EXCLURAIT : [2.62, 2.73]
+   motifs de non-reconduction, declares au gel : (1) propre a M12 -- precedent
+   M14 (2.46 a 1/100 de 2.45) ; (2) tester un site a moins de 0.01 d un point
+   de grille impose des points dans ce rayon. RE-DERIVE, sur la grille au
+   CENTIEME (celle que la manche mesure), et non sur la grille M10/M11 :
+   OK   8/3 est a 1/300 = 0.00333 du centieme le plus proche (2.67) -> le motif (2) est FONDE
+     (pour memoire, la distance a la grille M10/M11 est 1/15 -- ce n est pas
+      la grille dont parle le motif (2).)
+
+==============================================================================
+[5] ITEM 3 -- q_L LOCAL, PAR DEGRE ET PAR DOMAINE (unite : LIGNE SIGNEE)
+==============================================================================
+   --- lignee entiere ---
+     p=4     16/ 87 = 0.1839   q_L(borne sup 80 %) = 0.2278
+     impair   5/160 = 0.0312   q_L(borne sup 80 %) = 0.0490
+   --- [2.35, 3.10] -- domaine implicite du gel ---
+     p=4     10/ 46 = 0.2174   q_L(borne sup 80 %) = 0.2847
+     impair   3/ 80 = 0.0375   q_L(borne sup 80 %) = 0.0679
+     morts : ['m12:7|2.380000000000|+1', 'm12:7|2.670000000000|+1', 'm13:4|2.900000000000|+1', 'm13:4|2.940000000000|+1', 'm13:4|2.970000000000|+1', 'm13:4|3.000000000000|+1', 'm13:4|3.000000000000|-1', 'm13:4|3.030000000000|+1', 'm13b:4|2.700000000000|+1', 'm13b:4|2.920000000000|+1', 'm13b:4|2.960000000000|+1', 'm13b:4|3.050000000000|+1', 'm14:5|2.500000000000|-1']
+   --- [2.35, 2.90[ -- HORS bloc de saturation M13/M13b ---
+     p=4      1/ 34 = 0.0294   q_L(borne sup 80 %) = 0.0855
+     impair   3/ 80 = 0.0375   q_L(borne sup 80 %) = 0.0679
+     morts : ['m12:7|2.380000000000|+1', 'm12:7|2.670000000000|+1', 'm13b:4|2.700000000000|+1', 'm14:5|2.500000000000|-1']
+   --- [2.55, 2.85] -- fenetre elargie du site ---
+     p=4      1/ 20 = 0.0500   q_L(borne sup 80 %) = 0.1424
+     impair   1/ 40 = 0.0250   q_L(borne sup 80 %) = 0.0730
+     morts : ['m12:7|2.670000000000|+1', 'm13b:4|2.700000000000|+1']
+
+   LE DOMAINE CHANGE TOUT : 10 des 13 morts de [2.35,3.10] sont les p=4 du
+   BLOC DE SATURATION [2.90, 3.05] (M13/M13b) -- regime H-SAT, pas le site.
+   Le gel les range parmi les morts "CORRELEES au site" : domaines melanges
+   au sens d E27. Le domaine opposable pour M15 est [2.35, 2.90[.
+
+   FAIT LOCAL, COMPTE (il fonde mon attente, il ne fonde aucune porte) :
+     points DEJA MESURES a moins de 4/100 du site : [(2.67, ['m12']), (2.7, ['m13b'])]
+     parmi eux, points portant au moins une ligne EXCLUE : [2.67, 2.7]
+   **ECHEC** N-12 : au moins un des points deja mesures pres du site a survecu (2/2 sont morts)
+
+   FAISABILITE, forme derivee (1 ligne p=4 + 4 lignes impaires par point) :
+     survie POINT = (1-q4)^1 x (1-qi)^4 = 0.6904
+     P(>= 2 survivants sur 3, un flanc) = 0.7718
+     P(plancher de comptes ATTEINT, les deux flancs) = 0.5957
+     P(les 6 points survivent, config 3+3) = 0.1083
+     P(les DEUX flancs a exactement 2) = 0.1960
+   -> JUGEMENT DE FAISABILITE : la geometrie est JOUABLE (37 recherches,
+      ~13 s/recherche au registre = ~8 min), mais le plancher de comptes
+      MANQUE avec probabilite 0.40, et la configuration 3+3 -- la seule ou
+      la clause de centrage discrimine (voir [9]) -- n arrive que 0.11 fois
+      sur 10. Sur le domaine du gel ([2.35,3.10]) ce serait pire encore.
+
+==============================================================================
+[6] ITEM 4 -- G2 : LE COMPTE N EST PAS DERIVABLE (deux heritages incompatibles)
+==============================================================================
+   CE QUE M12 (bf9866a7) DECLARE, VERBATIM :
+     | G2  INVARIANCE EN g (regression) : K = g s*^(p-2) mesure a 2g sur le premier
+     | G1' : 1 ; G2 : 3 x 2 = 6 ; G4 : 1 ; G8 (regression p=4) : 2
+     | G2 INVARIANCE EN g (regression) : K = g s*^(p-2) mesure a 2g sur le premier point de la liste (2.22), aux trois degres, tolerance 10 %. Echec -> ligne EXCLUE et consignee. G3 IDENTITE DE FORCE :
+   CE QUE M14 (273d0a53) DECLARE, VERBATIM :
+     | G2 une recherche à 2g sur 7|2.50|+1 (le degré résonnant), |K2/K1 − 1| consigné sans porte (précédent M13) ; G9 constructeurs complets ; selftest : **les huit vecteurs E signés du test négati
+
+   Les deux precedents different EN NATURE et EN COMPTE :
+     M12 : 6 recherches (3 degres x 2), tolerance 10 %, echec -> LIGNE EXCLUE
+           -> une exclusion G2 alimente G7, donc le PLANCHER DE COMPTES ;
+     M14 : 1 recherche a 2g sur une ligne DESIGNEE, |K2/K1 - 1| consigne
+           SANS PORTE -- aucune exclusion possible.
+   De plus la designation M12 ("le PREMIER point de la liste") n a AUCUN
+   referent dans M15 : la manche n a pas de liste de priorite.
+   **ECHEC** D-5 (ITEM 4) : "reconduite selon les regles de designation heritees" ne designe rien -> compte INDERIVABLE (37 + G2 vaut 38 ou 43)
+
+==============================================================================
+[7] ITEM 5 -- HERITAGE M12/M14 : LA MOITIE RECOPIE (l autre moitie est DUE)
+==============================================================================
+   N-3, ordre de sommation -- ce que M14 declare :
+     | B_E = ((pas₄/sF₄) + 2.25·(pas₅/sF₅)) + 1.25·(pas₇/sF₇), évaluation
+   ce que M15 v2 ecrit :
+     | B_E(point) = ((pas_4/sF_4) + 2.25*(pas_5/sF_5)) + 1.25*(pas_7/sF_7)
+     | -- FORME ET ORDRE DE SOMMATION DE M14 (N-3) RECONDUITS :
+     | B_E57(point) = (2.25*(pas_5/sF_5)) + 1.25*(pas_7/sF_7)
+     | B_E4(point) = pas_4/sF_4.
+   OK   N-3 (ordre de sommation, evaluation gauche-droite) RECONDUIT dans M15 v2
+   OK   la reconduction est DECLAREE, pas seulement pratiquee
+   la barre, forme derivee PAR CORDE (defaut D-3 v1) :
+     | barre(b)   = 10*((B_E(LOIN_g) + B_E(LOIN_d)) + B_E(b))
+     | barre57(b) = 10*((B_E57(LOIN_g) + B_E57(LOIN_d)) + B_E57(b))
+     | barre4(b)  = 10*((B_E4(LOIN_g) + B_E4(LOIN_d)) + B_E4(b))
+   OK   les trois barres nomment leurs DEUX ancres + le point courant (D-3 v1 corrige)
+
+   TEST EXECUTE DE LA REUTILISATION (la reprise "a l identique" se teste) :
+     B_E(2.72), ordre M14 ((a+b)+c) : 1.25836445022179123174e-06
+     B_E(2.72), ordre naif  a+b+c   : 1.25836445022179123174e-06  ecart 0 ulp
+     B_E(2.72), ordre inverse       : 1.25836445022179123174e-06  ecart au bit : AUCUN
+   OK   sur CETTE donnee les deux ordres coincident au bit -- la convention N-3 n est donc pas verifiable par sa seule sortie : elle se reconduit par ECRIT
+     E(2.72) par la cloture M12      : 5.17398806204655614671e-01
+     E(2.72) par S4 + S57            : 5.17398806204655503649e-01
+     N-8 -- ecart E - (S4 + S57) = 1.110e-16 : les trois quantites du gel ne sont
+     PAS additives au bit (clotures differentes : E ferme en (a-b)+c, S57 en
+     (-b)+c). AUCUNE porte ne les compare, donc aucun effet ; mais le gel
+     consigne "le partage p=5 / p=7 de res_S57" -- une addition implicite qui
+     doit etre declaree non exacte, ou refermee dans un ordre unique.
+
+   CE QUI RESTE DU : les VERROUS DE CUSTODY QUI MORDENT (forme math.nextafter,
+   temoin embarque) ne peuvent pas etre certifies ici -- le script n existe pas
+   (E19). ITEM 5 est donc CERTIFIE POUR MOITIE, et l autre moitie est reportee
+   a la certification du script. Le gel doit le dire.
+
+==============================================================================
+[8] D-6 (ITEM 6) -- L ENSEMBLE F : LE TEXTE DU GEL ADMET DEUX LECTURES
+==============================================================================
+   listes DECLAREES par les artefacts eux-memes :
+     m11.resume.w2_retenus (p=4)            : [1.7, 2.15, 2.3, 2.45, 2.6, 2.75, 2.85]
+     m10.resume.w2_retenus_par_degre["5"]   : [1.3, 1.7, 1.8, 2.15, 2.3, 2.45, 2.6, 2.75, 2.85]
+     m11 exclut a p=4 : ['4|1.300000000000|+1', '4|1.300000000000|-1', '4|1.550000000000|+1', '4|1.550000000000|-1', '4|1.800000000000|+1', '4|1.800000000000|-1']
+
+   points a E OPPOSABLE (les trois degres VALIDES, regle declaree) : 23
+     dont grille M10xM11 : 12 (et NON 16 : 1.30, 1.55, 1.80 perdent p=4 par G6 ;
+     1.35, 1.41, 1.45, 1.90, 2.05, 1.25 ne sont pas R-2 prime propres)
+     dont M12 : 11 (les 11 valides -- concorde avec le gel)
+
+   LECTURE A -- la regle DECLAREE ("points a E opposable", trois degres valides) :
+     |F| = 14 : [1.7, 1.73, 1.76, 1.84, 1.86, 2.15, 2.22, 2.27, 2.3, 2.6, 2.75, 2.78, 2.8, 2.85]
+   LECTURE B -- la parenthese "grille 16" prise pour un compte de points :
+     |F| = 16 : [1.3, 1.7, 1.73, 1.76, 1.8, 1.84, 1.86, 2.15, 2.22, 2.27, 2.3, 2.6, 2.75, 2.78, 2.8, 2.85]
+     -> ecart : [1.3, 1.8]
+   PIEGE : la lecture B rend |F| = 16, le meme nombre que "grille 16" cite au
+   gel. Un relecteur qui "verifie 16" croit confirmer, et prend le mauvais F.
+
+   triplets a<b<c de largeur <= 11/100 : lecture A -> 8 ; lecture B -> 15
+          LECTURE A      LECTURE B     
+   PLANCHER_E 0.021954       0.036487         (rapport B/A = 1.66)
+   PLANCHER_S57 0.022285       0.022285         (rapport B/A = 1.00)
+   PLANCHER_S4 0.006190       0.019662         (rapport B/A = 3.18)
+     A : PLANCHER_E    realise par (2.75, 2.78, 2.85), largeur 1/10
+     A : PLANCHER_S57  realise par (2.22, 2.27, 2.30), largeur 2/25
+     A : PLANCHER_S4   realise par (1.73, 1.76, 1.84), largeur 11/100
+   **ECHEC** D-6 : le texte du gel determine F sans ambiguite (deux lectures : |F| = 14 ou 16, et PLANCHER_E dans un rapport 1.66)
+
+   CONSIGNATION PRE-RUN EXIGEE PAR L ITEM 6 -- lecture A (la regle declaree) :
+     PLANCHER_E   = 0.021954
+     PLANCHER_S57 = 0.022285
+     PLANCHER_S4  = 0.006190
+   NOTE E28 : 1.70 entre dans F avec une marge R-2 prime de 1/3000 = 0.000333,
+   decidee en arithmetique EXACTE (en flottant elle vaut 3.33e-04, aucun risque).
+
+==============================================================================
+[9] D-1 (ITEM 6 bis) -- LE PLANCHER N EST PAS HOMOGENE A CE QU IL DOIT EXCLURE
+==============================================================================
+   Le residu d un FOND LISSE de courbure k a la corde (a,c) vaut, au point b :
+       residu = k * (b-a) * (c-b)        [facteur geometrique exact]
+   Le gel compare un residu de M15 a un MAX de residus de F sans corriger ce
+   facteur. Or les geometries different :
+     triplet qui realise PLANCHER_E : (2.75,2.78,2.85)  g = 21/10000 = 0.002100
+     interieur M15 2.64, corde 2.62<->2.73 : g = 9/5000 = 0.001800  (rapport 0.86)
+     interieur M15 2.65, corde 2.62<->2.73 : g = 3/1250 = 0.002400  (rapport 1.14)
+     interieur M15 2.69, corde 2.62<->2.73 : g = 7/2500 = 0.002800  (rapport 1.33)
+     interieur M15 2.71, corde 2.62<->2.73 : g = 9/5000 = 0.001800  (rapport 0.86)
+   COURBURE MAXIMALE du fond opposable, K_E    = 27.088  (triplet 2.75,2.78,2.80)
+   COURBURE MAXIMALE du fond opposable, K_S57  = 21.714  (triplet 2.75,2.78,2.80)
+   COURBURE MAXIMALE du fond opposable, K_S4   = 5.836  (triplet 1.70,1.73,1.76)
+
+   CONSEQUENCE, exhibee sur le vecteur temoin du gel lui-meme (ITEM 7, cas 3) :
+   "fond LISSE a extremum HORS site (max en 2.70)", amplitude -8.0*(w-2.70)^2 :
+     residu en 2.64 = 0.0144   vs PLANCHER_E(lecture A) = 0.0220  -> ne tire pas
+     residu en 2.65 = 0.0192   vs PLANCHER_E(lecture A) = 0.0220  -> ne tire pas
+     residu en 2.69 = 0.0224   vs PLANCHER_E(lecture A) = 0.0220  -> TIRE
+     residu en 2.71 = 0.0144   vs PLANCHER_E(lecture A) = 0.0220  -> ne tire pas
+   **ECHEC** D-1a : ATTENDU DU GEL "extremum hors site NE TIRE PAS par seuil" (residu max 0.0224 vs plancher 0.0220)
+   -> l argmax tombe en 2.69 = PROCHE du flanc droit : C2 est SATISFAITE.
+      Le gel rendrait STRUCTURE-AU-SITE-RESOLUE = "ETAGE B FALSIFIE" sur un
+      fond parfaitement LISSE. C est le defaut D-1 de la v1, revenu par le
+      plancher : il ne survit que sous la lecture B (0.0365), pas sous la A.
+   ET LE FOND REEL SUFFIT : la courbure maximale mesuree du fond opposable est
+   K_E = 27.09, la ou 7.84 suffit a faire tirer la porte au point 2.69.
+
+   FORME EXECUTABLE DU CORRECTIF (plancher homogene, derive PAR POINT) :
+     g(a,b,c)       = (b-a)*(c-b)                        [Fraction, exact]
+     K_X            = max sur les triplets de F de |residu(b|a,c)| / g(a,b,c)
+     PLANCHER_X(b)  = K_X * g(LOIN_g, b, LOIN_d)         [au run, par interieur]
+     seuil_X(b)     = max( PLANCHER_X(b), barre_X(b) )
+   VERIFICATION DU CORRECTIF SUR LES TROIS CAS A REPONSE CONNUE :
+     (i)  fond lisse synthetique k=8.0, argmax en 2.69 (doit NE PAS tirer) :
+          residu 0.0224 vs PLANCHER_E(b) = 0.0758 -> ne tire pas  OK
+     (ii) fond lisse REEL (2.75<->2.85, interieur 2.78) (doit NE PAS tirer) :
+          residu 0.0220 vs PLANCHER_E(b) = 0.0569 -> ne tire pas  OK
+     (iii) CANYON M14 REEL, x_M = 2.48 (doit MORDRE) :
+          residu 0.2647 vs PLANCHER_E(b) = 0.1138 -> MORD  OK  (marge 2.33 x)
+   OK   le plancher HOMOGENE separe les trois cas : les deux fonds lisses se taisent, le canyon mord a 2.33 x
+
+==============================================================================
+[10] ITEM 7 -- TEST NEGATIF DU CRITERE COMPLET, CODE DEPUIS LE SEUL TEXTE DU GEL
+==============================================================================
+   Le critere est re-ecrit ci-dessous a partir des seules definitions du gel
+   (PROCHE/LOIN, CORDE, RESIDU, BARRE DE CORDE, PLANCHER, C1/C2/C3).
+
+   CAS (1) -- LE CANYON M14 REEL (68df6576) : IL DOIT MORDRE
+     verdict rendu : STRUCTURE-AU-SITE-RESOLUE (FALAISE)
+     x_M = 2.48  res_E = +0.2647  res_S57 = +0.2598  res_S4 = +0.0049
+     C1=True C2=True C3=True | barre_E(x_M) = 4.628e-05 (le PLANCHER domine de 474 x)
+   OK   x_M = 2.48 (gel : 2.48)
+   OK   res_E = +0.2647 (gel : +0.264)
+   OK   LE CANYON MORD (gel : STRUCTURE-AU-SITE)
+   OK   forme FALAISE (gel : residus +0.264 / -0.156, signes opposes)
+   OK   C3 : le canyon est bien PORTE PAR 5/7 (le gel ne l ecrit pas -- N-9)
+   OK   res_S4 = +0.0049 sous PLANCHER_S4 = 0.0062 : aucune fausse attribution canal 4
+
+   CAS (2) -- TRONCON LISSE REEL. Le gel laisse machine 2 designer le pseudo-
+   site ("par exemple 2.76"). 2.76 REND LE BANC INJOUABLE : le groupe droit de
+   F est {2.75, 2.78, 2.80, 2.85} et il ne reste qu UN point a gauche de 2.76.
+   JE DESIGNE 2.79, seul choix qui donne 2+2 -- exactement le plancher de
+   comptes de la manche, donc le banc le plus representatif.
+     flanc gauche [2.75, 2.78] | flanc droit [2.8, 2.85]
+
+     (2a) plancher du gel (tous les triplets de F) :
+          verdict : PAS-DE-STRUCTURE-RESOLUE
+          x_M = 2.78  res_E = -0.0220  vs PLANCHER_E = 0.021954  (C1=False C2=True C3=False)
+          CIRCULARITE : le banc est bati sur des points de F, et PLANCHER_E est
+          un MAX sur des triplets de F -- dont (2.75,2.78,2.85), celui qui LE
+          REALISE. Ce cas ne peut pas echouer : il ne teste rien.
+
+     (2b) PARADE (esprit de la regle 14 : ne pas tester un critere sur les
+          donnees qui l ont calibre) -- plancher LEAVE-OUT, les triplets
+          touchant les points testes retires : PLANCHER_E = 0.021703 (4 triplets)
+          verdict : PAS-DE-STRUCTURE-RESOLUE
+          x_M = 2.78  res_E = -0.0220  res_S57 = -0.0204  (C1=True C2=True C3=False)
+          n_disc = 0  largeur de centrage = 1/50
+   **ECHEC** D-1b : sur un fond REEL, opposable et LISSE (quatre points mesures hors site et hors 5:2), la clause d amplitude C1 ne doit pas tirer
+     LECTURE EXACTE DE CE CAS -- les trois defauts s y rencontrent :
+       C1 TIRE (0.0220 > 0.021703) sur du fond pur : le PLANCHER n est pas conservateur
+       C2 est VRAIE mais n_disc = 0 (config 2+2) : elle ne discrimine rien (D-1)
+       C3 est FAUSSE -> le cas tombe dans le TROU de la partition (D-2), et
+         le verdict rendu, PAS-DE-STRUCTURE-RESOLUE, est JUSTE POUR UNE MAUVAISE RAISON.
+     -> Si machine 1 corrige D-2 seul, ce meme fond rendra une CONSIGNATION de
+        structure. D-2 ne se corrige pas sans le plancher homogene (ITEM 6 bis).
+
+   CAS (3) -- LES SIX VECTEURS SYNTHETIQUES DE MA CERTIFICATION v1, SUR LE v2
+   vecteur                                        res_E(xM) x_M     verdict rendu (C1,C2)        attendu du gel
+   fond monotone croissant (le PAS de s*4)          +0.0000    2.64 C1=False C2=False            PAS-DE-STRUCTURE  OK
+   fond monotone decroissant                        +0.0000    2.64 C1=False C2=False            PAS-DE-STRUCTURE  OK
+   creux centre au site (profondeur 0.10)           -0.0667    2.65 C1=True C2=True              STRUCTURE (V-CREUX)  OK
+   bosse centree au site                            +0.0667    2.65 C1=True C2=True              STRUCTURE (V-BOSSE)  OK
+   fond LISSE a extremum HORS site (max en 2.70)    +0.0224    2.69 C1=True C2=True              NE TIRE PAS par seuil  **ECART**
+   ondulation du fond, amplitude 0.02               -0.0275    2.71 C1=True C2=False             NE TIRE PAS  OK
+   NOTE 1 : ces vecteurs ne definissent que E. C3 (canaux) est INTESTABLE sur
+   eux ; le cas (1) est le SEUL du banc qui exerce C3. Le banc ne couvre pas la
+   clause qui decide entre 5/7 et canal 4.
+   NOTE 2 -- UN VERDICT JUSTE POUR UNE MAUVAISE RAISON N EST PAS UN TEST PASSE :
+   le gel motive "ondulation 0.02 -> NE TIRE PAS" par "le PLANCHER est cette
+   echelle par construction". RE-DERIVE : C1 = True (residu 0.0275 > plancher 0.0220) ;
+   ce vecteur ne tire que parce que C2 est FAUSSE (x_M = 2.71, hors des PROCHE).
+   Le motif ecrit au gel est donc faux, meme si le verdict tombe juste.
+
+==============================================================================
+[11] D-2 -- LA CLAUSE DE CENTRAGE EST VIDE AU PLANCHER DE COMPTES
+==============================================================================
+   Le plancher de comptes est "au moins 2 survivants PAR flanc". Enumeration
+   exhaustive des configurations, avec le nombre d interieurs NON-PROCHE :
+   config    interieurs                 interieurs NON-PROCHE    largeur centrage
+   3+3       [2.64, 2.65, 2.69, 2.71]   [2.64, 2.71]             1/25
+   2+2       [2.64, 2.69]               []                       1/20
+   2+2       [2.64, 2.69]               []                       1/20
+   2+2       [2.64, 2.71]               []                       7/100
+   2+2       [2.65, 2.69]               []                       1/25
+   2+2       [2.65, 2.69]               []                       1/25
+   2+2       [2.65, 2.71]               []                       3/50
+   2+2       [2.65, 2.69]               []                       1/25
+   2+2       [2.65, 2.69]               []                       1/25
+   2+2       [2.65, 2.71]               []                       3/50
+   **ECHEC** D-2 : a 2+2 -- le plancher de comptes EXACT -- il existe un interieur hors {PROCHE_g, PROCHE_d}, donc C2 discrimine encore quelque chose
+   -> les 9 configurations 2+2 ont TOUTES n_disc = 0 : C2 est satisfaite DES
+      QUE C1 tire, et le verdict garde son nom en perdant sa resolution.
+   largeur de centrage a 2+2 : de 1/25 a 7/100, la ou le gel consigne 1/25 "au
+   programme complet". Le verdict garde son nom et perd sa resolution, en
+   silence. C est le piege recurrent : un controle qui passe sans rien tester.
+
+   FORME EXECUTABLE DU CORRECTIF :
+     n_disc = #{ b interieur : b non dans {PROCHE_g, PROCHE_d} }
+     largeur_centrage = PROCHE_d - PROCHE_g          [Fraction, consignee]
+     STRUCTURE-AU-SITE-RESOLUE exige C1 et C2 et C3 ET n_disc >= 1 ;
+     si C1 et C2 et C3 et n_disc == 0 -> STRUCTURE-RESOLUE-CENTRAGE-NON-DISCRIMINE
+       (consignation ; largeur_centrage au JSON ; AUCUNE lecture 8/3).
+     selftest : sur la config 2+2, un vecteur d extremum en 2.64 doit rendre un
+     verdict DIFFERENT de STRUCTURE-AU-SITE-RESOLUE. Sinon le test est vide.
+
+==============================================================================
+[12] D-3 -- LA PARTITION DES VERDICTS A UN TROU, ET IL EST NON VIDE
+==============================================================================
+   Le gel ecrit : PAS-DE-STRUCTURE-RESOLUE ssi plancher atteint ET non-(C1 et C2
+   et C3). Le cas C1 et C2 et NON C3 et NON canal-4 y tombe donc, et se lit
+   "l etage B TIENT AU SITE" -- alors qu une structure de E au site est resolue.
+   La bande est NON VIDE et se chiffre sur les planchers consignes :
+     PLANCHER_S57 + PLANCHER_S4 = 0.028474  >  PLANCHER_E = 0.021954
+     largeur de la bande : 0.006520
+     temoin : res_S57 = 0.0218 (<= 0.0223), res_S4 = 0.0061 (<= 0.0062) -> res_E = 0.0279 (> 0.0220)
+   **ECHEC** D-3 : la bande C1 et C2 et NON C3 et NON canal-4 est VIDE (elle ne l est pas : largeur 0.006520)
+   -> C1 VRAI, C2 possible, C3 FAUX, canal-4 FAUX : le gel prononce "l etage B
+      TIENT" sur une structure qu il vient de resoudre. Faux negatif de porte.
+
+   FORME EXECUTABLE DU CORRECTIF (partition, quatre branches exclusives) :
+     PAS-DE-STRUCTURE-RESOLUE            ssi plancher atteint ET NON C1
+     STRUCTURE-NON-CENTREE               ssi C1 ET NON C2
+     STRUCTURE-AU-SITE-RESOLUE           ssi C1 ET C2 ET C3   [+ n_disc >= 1, D-1]
+     STRUCTURE-CANAL-4-CANDIDATE         ssi C1 ET C2 ET NON C3 ET |res_S4| > seuil4
+     STRUCTURE-RESOLUE-NON-ATTRIBUEE     ssi C1 ET C2 ET NON C3 ET |res_S4| <= seuil4
+       (consignation ; l etage B N EST PAS declare tenir dans cette branche)
+
+==============================================================================
+[13] D-4 -- P-M15b : "AU MOINS 1 LIGNE" EST ATTEINT PAR LE FOND UNE FOIS SUR DEUX
+==============================================================================
+   TAUX DE BASE au registre (champ gros_explosifs present) :
+     lignes IMPAIRES : 3 mordues / 96 = 0.0312
+     lignes PAIRES   : 0 mordues / 87 = 0.0000
+     HORS DENOMINATEUR : les 64 lignes de M10 (champ absent) -- dit ici, pas cache.
+   Le programme M15 porte 24 lignes impaires. Sous le taux de base :
+     P(X >= 1) = 0.5333    <-- SEUIL DU GEL
+     P(X >= 2) = 0.1719 
+     P(X >= 3) = 0.0379 
+     P(X >= 4) = 0.0061 
+   **ECHEC** D-4 : le verdict SIGNATURE PRESENTE du gel n est pas atteint par le fond (P = 0.5333)
+   Et la RESTRICTION A LA PARITE IMPAIRE, qui fonde le prior (d), n est pas
+   etablie : 3/96 impair contre 0/87 pair -> Fisher unilateral p = 0.1422.
+
+   FORME EXECUTABLE DU CORRECTIF (au choix, mais l un des deux) :
+     (A) seuil derive du fond :
+         b      = 3/96 [compte au registre, champ present, M10 exclu]
+         n      = 24   [lignes impaires du programme]
+         k_min  = min{ k : P(Binom(n,b) >= k) <= 0.05 } = 3
+         SIGNATURE PRESENTE ssi k_observe >= k_min ; sinon SIGNATURE NON RESOLUE.
+     (B) le verdict garde son seuil de 1 mais PORTE SA PROBABILITE SOUS LE FOND :
+         "SIGNATURE PRESENTE (k=1, P_fond = 0.53)" -- et l attente centrale de
+         machine 1 (la CONJONCTION) ne peut pas s appuyer dessus.
+
+==============================================================================
+[14] COMPTES ATTENDUS -- COMPTES, PAS AFFIRMES
+==============================================================================
+   points du programme          : 6   (gel : 6)
+   recherches du programme      : 30   (gel : 30)
+   G1' (2.72 en entier)         : 5   (gel : 5)
+   G8a (second cote p=4, 2.62)  : 1   (gel : 1)
+   G4 (dt/2)                    : 1   (gel : 1)
+   TOTAL hors G2                : 37   (gel : 37 + G2)
+   OK   les comptes hors G2 sont derivables
+   G2 : INDERIVABLE -- voir [6]. Le total est 38 (precedent M14) ou 43
+   (precedent M12), et seul le precedent M12 peut faire perdre un point.
+   OK   ancre G1' : 2.72 est mesure aux trois degres dans fa109da9
+   OK   ancre G1' : 5 cotes mesures (gel : 5 lignes)
+
+==============================================================================
+[15] CE QUE CE LOG NE JOUE PAS (exigence de titre -- ca ne se coupe jamais)
+==============================================================================
+   1. AUCUNE recherche de s* : aucun moteur importe, aucune mesure. Tous les
+      s* lus viennent des artefacts, verifies par empreinte en [2].
+   2. Il ne certifie PAS le script m15_site83_v1.py : il n existe pas (E19).
+      Donc ITEM 5 n est couvert que pour sa MOITIE "recopie des definitions" ;
+      les VERROUS DE CUSTODY QUI MORDENT (math.nextafter, temoin embarque), le
+      selftest et le pre-vol a moteur factice restent DUS a l etape suivante.
+   3. Le taux de base de [13] exclut les 64 lignes de M10 : le champ
+      gros_explosifs y est ABSENT. Le denominateur est 96 lignes impaires,
+      pas 160. Un taux calcule sur un champ absent serait une invention.
+   4. Il ne mesure PAS la resolution de passe ligne par ligne de P-M15b : il en
+      derive le taux de base au registre, pas le mecanisme.
+   5. Le banc de [10] n exerce C3 que sur le cas (1) : les vecteurs synthetiques
+      ne definissent que E. La clause qui decide entre 5/7 et canal 4 est
+      TESTEE UNE SEULE FOIS dans tout ce log.
+   6. Les q_L de [5] sont des bornes superieures BINOMIALES sur des morts
+      supposees INDEPENDANTES. Le registre montre le contraire (bloc contigu
+      M13) : la faisabilite calculee est donc OPTIMISTE, et c est dit.
+   7. Il n ecrit aucun fichier.
+
+   Arithmetique : EXACTE (Fraction) partout ou une SELECTION se joue (distances,
+   R-2 prime, nouveaute, appartenance a F, facteurs geometriques g). Les E,
+   residus, planchers et taux sont des flottants -- des mesures. Les deux seuls
+   flottants qui DECIDENT dans ce log sont exhibes avec leur marge : le residu
+   0.0224 contre le plancher 0.0220 en [9], et 0.0220 contre 0.0217 en [10.2b].
+   Marges relatives 1.8 % et 1.4 % : ELLES SONT MINCES, et un plancher recalcule
+   par machine 1 avec une convention de sommation differente pourrait les
+   inverser. C est une raison de plus de consigner F et les planchers PRE-RUN.
+
+==============================================================================
+[16] SYNTHESE
+==============================================================================
+   empreinte du bloc M15 v2 (NFC+LF) : c92c58e52603fd086b9e987d4439f50f0aa0263f9d3b9cd694dc7892a2245080
+   controles mecaniques en echec     : 2
+     - N-12 : au moins un des points deja mesures pres du site a survecu (2/2 sont morts)
+     - ITEM 7 cas (3) : fond LISSE a extremum HORS site (max en 2.70) -- attendu 'NE TIRE PAS par seuil', rendu C1=True C2=True
+   BLOQUANTS                         : 7
+     - D-5 (ITEM 4) : "reconduite selon les regles de designation heritees" ne designe rien -> compte INDERIVABLE (37 + G2 vaut 38 ou 43)
+     - D-6 : le texte du gel determine F sans ambiguite (deux lectures : |F| = 14 ou 16, et PLANCHER_E dans un rapport 1.66)
+     - D-1a : ATTENDU DU GEL "extremum hors site NE TIRE PAS par seuil" (residu max 0.0224 vs plancher 0.0220)
+     - D-1b : sur un fond REEL, opposable et LISSE (quatre points mesures hors site et hors 5:2), la clause d amplitude C1 ne doit pas tirer
+     - D-2 : a 2+2 -- le plancher de comptes EXACT -- il existe un interieur hors {PROCHE_g, PROCHE_d}, donc C2 discrimine encore quelque chose
+     - D-3 : la bande C1 et C2 et NON C3 et NON canal-4 est VIDE (elle ne l est pas : largeur 0.006520)
+     - D-4 : le verdict SIGNATURE PRESENTE du gel n est pas atteint par le fond (P = 0.5333)
+
+   CE QUI EST ACQUIS ET NE REVIENT PAS :
+     - le critere v2 MORD sur le seul canyon mesure de la campagne (cas 1) :
+       x_M = 2.48, res_E = +0.2647, FALAISE, porte par 5/7 -- D-1 v1 est repare ;
+     - la note P1 v5 est au repertoire, son empreinte concorde, et la citation
+       "section 6, entree P1-b, falsifieur d etage B seulement" est LITTERALE ;
+     - tous les faits declares en (a)(b)(c)(d)(f) et le constat aggravant du
+       HISTORIQUE se re-derivent aux valeurs ecrites ;
+     - N-3 est reconduit, la barre est par CORDE et nomme ses trois points.
+
+   VERDICT MACHINE 2 : GEL M15 v2 NON CERTIFIE.
+   Ce log n autorise AUCUN depot de script (E19).

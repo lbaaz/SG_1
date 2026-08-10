@@ -1,0 +1,737 @@
+{
+ "meta": {
+  "G3_par_degre": [
+   {
+    "G3_backward": 4.3284256267548534e-16,
+    "etiquette": "G1' (rejeu 4|2.80|+1) -- lie aussi le programme, G8, G2 et G4 (P=4 unique, gel Sec.7)",
+    "p": 4
+   }
+  ],
+  "balayages": {
+   "attendus": 10,
+   "comptes": 10,
+   "sautes": 0
+  },
+  "cible_g1p": {
+   "champ": "resultats.carte['4|2.800000000000'].sF",
+   "sha256": "fa109da92e582520cfcb63b46bc41fa7d4b62295891f413bb97c6095b2fe59b1",
+   "statut": "REELLE",
+   "valeur_gel": 8.129205119847189
+  },
+  "convention_empreinte": "B -- bloc saut final inclus = fichier",
+  "date_utc": "2026-08-02T14:34:22Z",
+  "declarations": {
+   "G2_G4_sans_porte": "le gel v3 ecrit CONSIGNE et ne declare aucun seuil pour G2 ni G4 : ecarts publies, aucune exclusion -- le gel fait foi",
+   "G8": "3.00, deux signes ; moitie grossiere ATTENDUE VIDE a p=4 (pre-declare)",
+   "borne": "HI0 = 20 en RECEVABILITE de script ; BORNE_ATTEINTE consigne, s conserve, jamais tronque (gel Sec.4)",
+   "classement_emplacement": "quantite de PROFIL : vit dans resultats.classement ; chaque G6 porte un renvoi",
+   "classement_ex_aequo": "AJOUT DECLARE a la regle gelee (cert. script v1, machine 2) : le gel Sec.6 ecrit 'la chute resolue pour chacun des deux voisins survivants' DE L'ARGMIN ; le script teste les bords du BLOC d'ex aequo contre leurs voisins EXTERIEURS. Sans ex aequo les deux lectures coincident. Avec, elles divergent (le gel litteral rend NON CLASSE, le script CANYON) : direction NON conservatrice, motif = la lecture litterale viderait N-5 de son sens, un creux a fond plat restant un creux. Cas INATTEIGNABLE : tolerance d'ex aequo instrumentale (~1e-6 relatif) contre un ecart inter-points de 3 a 4 ordres au-dessus, meme au fond d'un creux. Champ 'resolution_bloc' publie par consignation.",
+   "editions_machine2": "le script a ete edite par machine 2 apres sa certification v1, sur demande explicite : [9] du selftest (nextafter), cette declaration, denominateur d'attrition, commentaire d'empreinte non verifiable. AUCUNE edition ne touche le chemin de mesure, les gardes, le classifieur, la geometrie ni le gel jumeau. Ecart a la repartition machine1/machine2, CONSIGNE.",
+   "etage_cible": "H-SAT et etage B au site 3:1 ; l'etage A n'est PAS teste (gel Sec.1)",
+   "provenance_attente": "les trois points p=4 de M12 (2.72-2.80) motivent l'attente LISSE (gel Sec.3, regle de provenance)",
+   "rebind_unique": "P = 4 unique : G1' lie le programme, G8, G2 et G4 ; aucune re-liaison avant G4 (P inchange) -- ecart au gabarit, declare",
+   "selftest_vecteurs": "5 profils d'archive = vecteurs de TEST DU CODE ; aucun chiffre M5/M6 dans un resultat M13 (gel Sec.7)"
+  },
+  "exclusions": {
+   "4|2.900000000000": [
+    "G6 sgn=+1 explosion sous seuil"
+   ],
+   "4|2.940000000000": [
+    "G6 sgn=+1 explosion sous seuil"
+   ],
+   "4|2.970000000000": [
+    "G6 sgn=+1 explosion sous seuil"
+   ],
+   "4|3.000000000000": [
+    "G6 sgn=+1 explosion sous seuil",
+    "G6 sgn=-1 explosion sous seuil"
+   ],
+   "4|3.030000000000": [
+    "G6 sgn=+1 explosion sous seuil"
+   ]
+  },
+  "gardes": [],
+  "gel_sha256_bloc": "26c5a4454f0dff55ab451a9987638cf6d6db4ba1fd2962cd9f0063c38114a2c3",
+  "m12_json_sha256_attendu": "fa109da92e582520cfcb63b46bc41fa7d4b62295891f413bb97c6095b2fe59b1",
+  "mode": "REEL",
+  "pilote_sha256": "663b17e2955c79c09f1b6c0fb4443cd0c1f98be0db03ef089f5df682018ce905",
+  "recherches": {
+   "attendues": 13,
+   "comptees": 13,
+   "sautees": 0
+  },
+  "script_sha256": "1cb38518e9210047a53171b6ab70170b0f5e51d4a6b60347193de415af01d545"
+ },
+ "resultats": {
+  "G1p": {
+   "champ_cible": "resultats.carte['4|2.800000000000'].sF",
+   "cible": 8.129205119847189,
+   "ecart_absolu": 0.0,
+   "ligne": "4|2.80|+1",
+   "mesure": {
+    "duree_s": 19.17337660002522,
+    "motif_exclusion": "",
+    "note": "OK|pas=1.82e-06",
+    "recevable": true,
+    "s": 8.129205119847189
+   },
+   "verdict": "PASSE"
+  },
+  "G2": {
+   "4|+1": {
+    "K2_sur_K1": 1.0260366510056154,
+    "g": "2g",
+    "mesure": {
+     "duree_s": 14.620722499967087,
+     "motif_exclusion": "",
+     "note": "OK|pas=1.82e-06",
+     "recevable": true,
+     "s": 6.766306015754545
+    },
+    "ratio_motif": null,
+    "statut": "CONSIGNE (le gel v3 ne declare pas de seuil ; aucune exclusion -- meta.declarations.G2_G4_sans_porte)",
+    "w2": 3.0
+   }
+  },
+  "G4": {
+   "attente_gel": "ligne attendue : 3.15 (gel Sec.7 -- attente, pas designation)",
+   "duree_s": 29.6030613000039,
+   "ecart": 0.0,
+   "ecart_motif": null,
+   "forme": "|s_dt2/s_dt - 1| (ratio, convention du primaire M12)",
+   "p": 4,
+   "s_dt": 9.970764210546593,
+   "s_dt2": 9.970764210546593,
+   "sgn": 1,
+   "statut": "CONSIGNE (le gel v3 ne declare pas de seuil ; aucune exclusion)",
+   "w2": 3.15
+  },
+  "G6": {
+   "4|2.850000000000|+1": {
+    "bornes_fin": [
+     7.424244257813272,
+     8.66161830078215
+    ],
+    "bornes_gros": [
+     0.05,
+     7.424244257813272
+    ],
+    "classement_renvoi": "quantite de PROFIL : voir resultats.classement",
+    "ecart_absolu_indice_40_au_seuil": 0.0,
+    "ecart_relatif_indice_40_au_seuil": 0.0,
+    "exclue": false,
+    "explosif_a_l_indice_40": false,
+    "explosion_sous_0.98s": null,
+    "explosion_sous_0.98s_motif": "aucune explosion sous 0.98 s* dans la fenetre fine",
+    "explosion_sous_LO0_0.90s": null,
+    "explosion_sous_LO0_0.90s_motif": "aucune explosion dans la fenetre grossiere [LO0, 0.90 s*]",
+    "fin_explosifs": 20,
+    "fin_non_explosifs": 56,
+    "g8b_grossier_attendu": "VIDE (pre-declare avant mesure, gel Sec.7/G8)",
+    "gros_explosifs": 0,
+    "ilots": 5,
+    "ilots_au_dessus": 5,
+    "ilots_au_dessus_domaine": "[s*, 1.05 s*] -- domaine declare, gel v3 (S5b)",
+    "ilots_domaine_lignee": "[0.90 s*, 1.05 s*] -- champ 'ilots', balayer lignee",
+    "indice_40_compte_comme_sous_seuil": false,
+    "indice_du_seuil_098": 40,
+    "n_fin": 76,
+    "n_gros": 180,
+    "n_total": 256,
+    "pas_eff_fin_rel": 0.0020000000000000005,
+    "pas_eff_gros_rel": 0.004994071379928207,
+    "pas_final_recherche": 1.82e-06,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.008,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "4|2.900000000000|+1": {
+    "bornes_fin": [
+     8.215798892548401,
+     9.585098707973133
+    ],
+    "bornes_gros": [
+     0.05,
+     8.215798892548401
+    ],
+    "classement_renvoi": "quantite de PROFIL : voir resultats.classement",
+    "ecart_absolu_indice_40_au_seuil": 0.0,
+    "ecart_relatif_indice_40_au_seuil": 1.1102230246251565e-16,
+    "exclue": true,
+    "explosif_a_l_indice_40": true,
+    "explosion_sous_0.98s": 8.434886863016358,
+    "explosion_sous_LO0_0.90s": null,
+    "explosion_sous_LO0_0.90s_motif": "aucune explosion dans la fenetre grossiere [LO0, 0.90 s*]",
+    "fin_explosifs": 36,
+    "fin_non_explosifs": 40,
+    "g8b_grossier_attendu": "VIDE (pre-declare avant mesure, gel Sec.7/G8)",
+    "gros_explosifs": 0,
+    "ilots": 6,
+    "ilots_au_dessus": 2,
+    "ilots_au_dessus_domaine": "[s*, 1.05 s*] -- domaine declare, gel v3 (S5b)",
+    "ilots_domaine_lignee": "[0.90 s*, 1.05 s*] -- champ 'ilots', balayer lignee",
+    "indice_40_compte_comme_sous_seuil": false,
+    "indice_du_seuil_098": 40,
+    "n_fin": 76,
+    "n_gros": 180,
+    "n_total": 256,
+    "pas_eff_fin_rel": 0.0020000000000000005,
+    "pas_eff_gros_rel": 0.00499733378833223,
+    "pas_final_recherche": 1.82e-06,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.002,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "4|2.940000000000|+1": {
+    "bornes_fin": [
+     8.392904949060574,
+     9.791722440570668
+    ],
+    "bornes_gros": [
+     0.05,
+     8.392904949060574
+    ],
+    "classement_renvoi": "quantite de PROFIL : voir resultats.classement",
+    "ecart_absolu_indice_40_au_seuil": 0.0,
+    "ecart_relatif_indice_40_au_seuil": 1.1102230246251565e-16,
+    "exclue": true,
+    "explosif_a_l_indice_40": false,
+    "explosion_sous_0.98s": 8.803224746570201,
+    "explosion_sous_LO0_0.90s": null,
+    "explosion_sous_LO0_0.90s_motif": "aucune explosion dans la fenetre grossiere [LO0, 0.90 s*]",
+    "fin_explosifs": 29,
+    "fin_non_explosifs": 47,
+    "g8b_grossier_attendu": "VIDE (pre-declare avant mesure, gel Sec.7/G8)",
+    "gros_explosifs": 0,
+    "ilots": 9,
+    "ilots_au_dessus": 5,
+    "ilots_au_dessus_domaine": "[s*, 1.05 s*] -- domaine declare, gel v3 (S5b)",
+    "ilots_domaine_lignee": "[0.90 s*, 1.05 s*] -- champ 'ilots', balayer lignee",
+    "indice_40_compte_comme_sous_seuil": false,
+    "indice_du_seuil_098": 40,
+    "n_fin": 76,
+    "n_gros": 180,
+    "n_total": 256,
+    "pas_eff_fin_rel": 0.0020000000000000005,
+    "pas_eff_gros_rel": 0.004997979488339298,
+    "pas_final_recherche": 1.82e-06,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.002,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "4|2.970000000000|+1": {
+    "bornes_fin": [
+     8.443460221013801,
+     9.85070359118277
+    ],
+    "bornes_gros": [
+     0.05,
+     8.443460221013801
+    ],
+    "classement_renvoi": "quantite de PROFIL : voir resultats.classement",
+    "ecart_absolu_indice_40_au_seuil": 0.0,
+    "ecart_relatif_indice_40_au_seuil": 1.1102230246251565e-16,
+    "exclue": true,
+    "explosif_a_l_indice_40": false,
+    "explosion_sous_0.98s": 8.893778099467871,
+    "explosion_sous_LO0_0.90s": null,
+    "explosion_sous_LO0_0.90s_motif": "aucune explosion dans la fenetre grossiere [LO0, 0.90 s*]",
+    "fin_explosifs": 28,
+    "fin_non_explosifs": 48,
+    "g8b_grossier_attendu": "VIDE (pre-declare avant mesure, gel Sec.7/G8)",
+    "gros_explosifs": 0,
+    "ilots": 6,
+    "ilots_au_dessus": 3,
+    "ilots_au_dessus_domaine": "[s*, 1.05 s*] -- domaine declare, gel v3 (S5b)",
+    "ilots_domaine_lignee": "[0.90 s*, 1.05 s*] -- champ 'ilots', balayer lignee",
+    "indice_40_compte_comme_sous_seuil": false,
+    "indice_du_seuil_098": 40,
+    "n_fin": 76,
+    "n_gros": 180,
+    "n_total": 256,
+    "pas_eff_fin_rel": 0.0020000000000000005,
+    "pas_eff_gros_rel": 0.004998158834947359,
+    "pas_final_recherche": 1.82e-06,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.004,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "4|3.000000000000|+1": {
+    "bornes_fin": [
+     8.502129302045944,
+     9.919150852386935
+    ],
+    "bornes_gros": [
+     0.05,
+     8.502129302045944
+    ],
+    "classement_renvoi": "quantite de PROFIL : voir resultats.classement",
+    "ecart_absolu_indice_40_au_seuil": 1.7763568394002505e-15,
+    "ecart_relatif_indice_40_au_seuil": 2.220446049250313e-16,
+    "exclue": true,
+    "explosif_a_l_indice_40": false,
+    "explosion_sous_0.98s": 8.917788956812634,
+    "explosion_sous_LO0_0.90s": null,
+    "explosion_sous_LO0_0.90s_motif": "aucune explosion dans la fenetre grossiere [LO0, 0.90 s*]",
+    "fin_explosifs": 24,
+    "fin_non_explosifs": 52,
+    "g8b_grossier_attendu": "VIDE (pre-declare avant mesure, gel Sec.7/G8)",
+    "gros_explosifs": 0,
+    "ilots": 7,
+    "ilots_au_dessus": 5,
+    "ilots_au_dessus_domaine": "[s*, 1.05 s*] -- domaine declare, gel v3 (S5b)",
+    "ilots_domaine_lignee": "[0.90 s*, 1.05 s*] -- champ 'ilots', balayer lignee",
+    "indice_40_compte_comme_sous_seuil": false,
+    "indice_du_seuil_098": 40,
+    "n_fin": 76,
+    "n_gros": 180,
+    "n_total": 256,
+    "pas_eff_fin_rel": 0.0020000000000000005,
+    "pas_eff_gros_rel": 0.004998364291785965,
+    "pas_final_recherche": 1.82e-06,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.0160000000000002,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "4|3.000000000000|-1": {
+    "bornes_fin": [
+     8.502129302045944,
+     9.919150852386935
+    ],
+    "bornes_gros": [
+     0.05,
+     8.502129302045944
+    ],
+    "classement_renvoi": "quantite de PROFIL : voir resultats.classement",
+    "ecart_absolu_indice_40_au_seuil": 1.7763568394002505e-15,
+    "ecart_relatif_indice_40_au_seuil": 2.220446049250313e-16,
+    "exclue": true,
+    "explosif_a_l_indice_40": false,
+    "explosion_sous_0.98s": 8.917788956812634,
+    "explosion_sous_LO0_0.90s": null,
+    "explosion_sous_LO0_0.90s_motif": "aucune explosion dans la fenetre grossiere [LO0, 0.90 s*]",
+    "fin_explosifs": 24,
+    "fin_non_explosifs": 52,
+    "g8b_grossier_attendu": "VIDE (pre-declare avant mesure, gel Sec.7/G8)",
+    "gros_explosifs": 0,
+    "ilots": 7,
+    "ilots_au_dessus": 5,
+    "ilots_au_dessus_domaine": "[s*, 1.05 s*] -- domaine declare, gel v3 (S5b)",
+    "ilots_domaine_lignee": "[0.90 s*, 1.05 s*] -- champ 'ilots', balayer lignee",
+    "indice_40_compte_comme_sous_seuil": false,
+    "indice_du_seuil_098": 40,
+    "n_fin": 76,
+    "n_gros": 180,
+    "n_total": 256,
+    "pas_eff_fin_rel": 0.0020000000000000005,
+    "pas_eff_gros_rel": 0.004998364291785965,
+    "pas_final_recherche": 1.82e-06,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.0160000000000002,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "4|3.030000000000|+1": {
+    "bornes_fin": [
+     8.5314769823338,
+     9.953389812722767
+    ],
+    "bornes_gros": [
+     0.05,
+     8.5314769823338
+    ],
+    "classement_renvoi": "quantite de PROFIL : voir resultats.classement",
+    "ecart_absolu_indice_40_au_seuil": 0.0,
+    "ecart_relatif_indice_40_au_seuil": 0.0,
+    "exclue": true,
+    "explosif_a_l_indice_40": false,
+    "explosion_sous_0.98s": 8.967530250319749,
+    "explosion_sous_LO0_0.90s": null,
+    "explosion_sous_LO0_0.90s_motif": "aucune explosion dans la fenetre grossiere [LO0, 0.90 s*]",
+    "fin_explosifs": 24,
+    "fin_non_explosifs": 52,
+    "g8b_grossier_attendu": "VIDE (pre-declare avant mesure, gel Sec.7/G8)",
+    "gros_explosifs": 0,
+    "ilots": 5,
+    "ilots_au_dessus": 4,
+    "ilots_au_dessus_domaine": "[s*, 1.05 s*] -- domaine declare, gel v3 (S5b)",
+    "ilots_domaine_lignee": "[0.90 s*, 1.05 s*] -- champ 'ilots', balayer lignee",
+    "indice_40_compte_comme_sous_seuil": false,
+    "indice_du_seuil_098": 40,
+    "n_fin": 76,
+    "n_gros": 180,
+    "n_total": 256,
+    "pas_eff_fin_rel": 0.0020000000000000005,
+    "pas_eff_gros_rel": 0.004998466005926354,
+    "pas_final_recherche": 1.82e-06,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.004,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "4|3.060000000000|+1": {
+    "bornes_fin": [
+     8.62681095406808,
+     10.064612779746096
+    ],
+    "bornes_gros": [
+     0.05,
+     8.62681095406808
+    ],
+    "classement_renvoi": "quantite de PROFIL : voir resultats.classement",
+    "ecart_absolu_indice_40_au_seuil": 0.0,
+    "ecart_relatif_indice_40_au_seuil": 1.1102230246251565e-16,
+    "exclue": false,
+    "explosif_a_l_indice_40": false,
+    "explosion_sous_0.98s": null,
+    "explosion_sous_0.98s_motif": "aucune explosion sous 0.98 s* dans la fenetre fine",
+    "explosion_sous_LO0_0.90s": null,
+    "explosion_sous_LO0_0.90s_motif": "aucune explosion dans la fenetre grossiere [LO0, 0.90 s*]",
+    "fin_explosifs": 23,
+    "fin_non_explosifs": 53,
+    "g8b_grossier_attendu": "VIDE (pre-declare avant mesure, gel Sec.7/G8)",
+    "gros_explosifs": 0,
+    "ilots": 3,
+    "ilots_au_dessus": 3,
+    "ilots_au_dessus_domaine": "[s*, 1.05 s*] -- domaine declare, gel v3 (S5b)",
+    "ilots_domaine_lignee": "[0.90 s*, 1.05 s*] -- champ 'ilots', balayer lignee",
+    "indice_40_compte_comme_sous_seuil": false,
+    "indice_du_seuil_098": 40,
+    "n_fin": 76,
+    "n_gros": 180,
+    "n_total": 256,
+    "pas_eff_fin_rel": 0.0020000000000000005,
+    "pas_eff_gros_rel": 0.0049987916421164735,
+    "pas_final_recherche": 1.82e-06,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.006,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "4|3.100000000000|+1": {
+    "bornes_fin": [
+     8.880829022268161,
+     10.360967192646187
+    ],
+    "bornes_gros": [
+     0.05,
+     8.880829022268161
+    ],
+    "classement_renvoi": "quantite de PROFIL : voir resultats.classement",
+    "ecart_absolu_indice_40_au_seuil": 0.0,
+    "ecart_relatif_indice_40_au_seuil": 0.0,
+    "exclue": false,
+    "explosif_a_l_indice_40": false,
+    "explosion_sous_0.98s": null,
+    "explosion_sous_0.98s_motif": "aucune explosion sous 0.98 s* dans la fenetre fine",
+    "explosion_sous_LO0_0.90s": null,
+    "explosion_sous_LO0_0.90s_motif": "aucune explosion dans la fenetre grossiere [LO0, 0.90 s*]",
+    "fin_explosifs": 27,
+    "fin_non_explosifs": 49,
+    "g8b_grossier_attendu": "VIDE (pre-declare avant mesure, gel Sec.7/G8)",
+    "gros_explosifs": 0,
+    "ilots": 4,
+    "ilots_au_dessus": 3,
+    "ilots_au_dessus_domaine": "[s*, 1.05 s*] -- domaine declare, gel v3 (S5b)",
+    "ilots_domaine_lignee": "[0.90 s*, 1.05 s*] -- champ 'ilots', balayer lignee",
+    "indice_40_compte_comme_sous_seuil": false,
+    "indice_du_seuil_098": 40,
+    "n_fin": 76,
+    "n_gros": 180,
+    "n_total": 256,
+    "pas_eff_fin_rel": 0.0020000000000000005,
+    "pas_eff_gros_rel": 0.004999625170324491,
+    "pas_final_recherche": 1.82e-06,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.002,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "4|3.150000000000|+1": {
+    "bornes_fin": [
+     8.973687789491933,
+     10.469302421073923
+    ],
+    "bornes_gros": [
+     0.05,
+     8.973687789491933
+    ],
+    "classement_renvoi": "quantite de PROFIL : voir resultats.classement",
+    "ecart_absolu_indice_40_au_seuil": 1.7763568394002505e-15,
+    "ecart_relatif_indice_40_au_seuil": 1.1102230246251565e-16,
+    "exclue": false,
+    "explosif_a_l_indice_40": false,
+    "explosion_sous_0.98s": null,
+    "explosion_sous_0.98s_motif": "aucune explosion sous 0.98 s* dans la fenetre fine",
+    "explosion_sous_LO0_0.90s": null,
+    "explosion_sous_LO0_0.90s_motif": "aucune explosion dans la fenetre grossiere [LO0, 0.90 s*]",
+    "fin_explosifs": 26,
+    "fin_non_explosifs": 50,
+    "g8b_grossier_attendu": "VIDE (pre-declare avant mesure, gel Sec.7/G8)",
+    "gros_explosifs": 0,
+    "ilots": 3,
+    "ilots_au_dessus": 2,
+    "ilots_au_dessus_domaine": "[s*, 1.05 s*] -- domaine declare, gel v3 (S5b)",
+    "ilots_domaine_lignee": "[0.90 s*, 1.05 s*] -- champ 'ilots', balayer lignee",
+    "indice_40_compte_comme_sous_seuil": false,
+    "indice_du_seuil_098": 40,
+    "n_fin": 76,
+    "n_gros": 180,
+    "n_total": 256,
+    "pas_eff_fin_rel": 0.0020000000000000005,
+    "pas_eff_gros_rel": 0.004999918096331809,
+    "pas_final_recherche": 1.82e-06,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.0040000000000002,
+    "transition_dans_la_fenetre_fine": true
+   }
+  },
+  "G8": {
+   "4|3.000000000000": {
+    "G8a": {
+     "ecart_absolu": 0.0,
+     "verdict": "OK"
+    },
+    "G8b": {
+     "attendu": "ZERO deviation -- identite demontree au gel, G8b",
+     "fin": {
+      "deviations": 0,
+      "explosifs_+1": 24,
+      "n": 76,
+      "non_explosifs_+1": 52,
+      "pouvoir": "REEL si la transition est encadree (note N-1)",
+      "transition_encadree": true
+     },
+     "grossier": {
+      "deviations": 0,
+      "explosifs_+1": 0,
+      "explosifs_-1": 0,
+      "n": 180,
+      "pouvoir": "NUL si les deux comptes sont 0 (note N-1)"
+     },
+     "ilots_identiques": true,
+     "retombee_identique": true
+    }
+   }
+  },
+  "carte": {
+   "4|2.850000000000": {
+    "asym": null,
+    "asym_motif": "P-M12e : r_s = 1 par demonstration (M11, reproduite au bit par le pilote) ; un seul signe au programme",
+    "frag": null,
+    "frag_motif": "P-M12e : r_s = 1 par demonstration (M11, reproduite au bit par le pilote) ; un seul signe au programme",
+    "sF": 8.24916028645919,
+    "sM": null,
+    "sM_motif": "P-M12e : r_s = 1 par demonstration (M11, reproduite au bit par le pilote) ; un seul signe au programme",
+    "sP": {
+     "duree_s": 19.599704699998256,
+     "motif_exclusion": "",
+     "note": "OK|pas=1.82e-06",
+     "recevable": true,
+     "s": 8.24916028645919
+    }
+   },
+   "4|2.900000000000": {
+    "asym": null,
+    "asym_motif": "P-M12e : r_s = 1 par demonstration (M11, reproduite au bit par le pilote) ; un seul signe au programme",
+    "frag": null,
+    "frag_motif": "P-M12e : r_s = 1 par demonstration (M11, reproduite au bit par le pilote) ; un seul signe au programme",
+    "sF": 9.128665436164889,
+    "sM": null,
+    "sM_motif": "P-M12e : r_s = 1 par demonstration (M11, reproduite au bit par le pilote) ; un seul signe au programme",
+    "sP": {
+     "duree_s": 19.529560599999968,
+     "motif_exclusion": "",
+     "note": "OK|pas=1.82e-06",
+     "recevable": true,
+     "s": 9.128665436164889
+    }
+   },
+   "4|2.940000000000": {
+    "asym": null,
+    "asym_motif": "P-M12e : r_s = 1 par demonstration (M11, reproduite au bit par le pilote) ; un seul signe au programme",
+    "frag": null,
+    "frag_motif": "P-M12e : r_s = 1 par demonstration (M11, reproduite au bit par le pilote) ; un seul signe au programme",
+    "sF": 9.325449943400637,
+    "sM": null,
+    "sM_motif": "P-M12e : r_s = 1 par demonstration (M11, reproduite au bit par le pilote) ; un seul signe au programme",
+    "sP": {
+     "duree_s": 19.329522800049745,
+     "motif_exclusion": "",
+     "note": "OK|pas=1.82e-06",
+     "recevable": true,
+     "s": 9.325449943400637
+    }
+   },
+   "4|2.970000000000": {
+    "asym": null,
+    "asym_motif": "P-M12e : r_s = 1 par demonstration (M11, reproduite au bit par le pilote) ; un seul signe au programme",
+    "frag": null,
+    "frag_motif": "P-M12e : r_s = 1 par demonstration (M11, reproduite au bit par le pilote) ; un seul signe au programme",
+    "sF": 9.381622467793113,
+    "sM": null,
+    "sM_motif": "P-M12e : r_s = 1 par demonstration (M11, reproduite au bit par le pilote) ; un seul signe au programme",
+    "sP": {
+     "duree_s": 19.102828400034923,
+     "motif_exclusion": "",
+     "note": "OK|pas=1.82e-06",
+     "recevable": true,
+     "s": 9.381622467793113
+    }
+   },
+   "4|3.000000000000": {
+    "asym": 1.0,
+    "frag": 1,
+    "sF": 9.446810335606603,
+    "sM": {
+     "duree_s": 14.682261399982963,
+     "motif_exclusion": "",
+     "note": "OK|pas=1.82e-06",
+     "recevable": true,
+     "role": "regression_G8",
+     "s": 9.446810335606603
+    },
+    "sP": {
+     "duree_s": 17.26389940001536,
+     "motif_exclusion": "",
+     "note": "OK|pas=1.82e-06",
+     "recevable": true,
+     "s": 9.446810335606603
+    }
+   },
+   "4|3.030000000000": {
+    "asym": null,
+    "asym_motif": "P-M12e : r_s = 1 par demonstration (M11, reproduite au bit par le pilote) ; un seul signe au programme",
+    "frag": null,
+    "frag_motif": "P-M12e : r_s = 1 par demonstration (M11, reproduite au bit par le pilote) ; un seul signe au programme",
+    "sF": 9.479418869259778,
+    "sM": null,
+    "sM_motif": "P-M12e : r_s = 1 par demonstration (M11, reproduite au bit par le pilote) ; un seul signe au programme",
+    "sP": {
+     "duree_s": 14.757183799985796,
+     "motif_exclusion": "",
+     "note": "OK|pas=1.82e-06",
+     "recevable": true,
+     "s": 9.479418869259778
+    }
+   },
+   "4|3.060000000000": {
+    "asym": null,
+    "asym_motif": "P-M12e : r_s = 1 par demonstration (M11, reproduite au bit par le pilote) ; un seul signe au programme",
+    "frag": null,
+    "frag_motif": "P-M12e : r_s = 1 par demonstration (M11, reproduite au bit par le pilote) ; un seul signe au programme",
+    "sF": 9.58534550452009,
+    "sM": null,
+    "sM_motif": "P-M12e : r_s = 1 par demonstration (M11, reproduite au bit par le pilote) ; un seul signe au programme",
+    "sP": {
+     "duree_s": 14.79554870002903,
+     "motif_exclusion": "",
+     "note": "OK|pas=1.82e-06",
+     "recevable": true,
+     "s": 9.58534550452009
+    }
+   },
+   "4|3.100000000000": {
+    "asym": null,
+    "asym_motif": "P-M12e : r_s = 1 par demonstration (M11, reproduite au bit par le pilote) ; un seul signe au programme",
+    "frag": null,
+    "frag_motif": "P-M12e : r_s = 1 par demonstration (M11, reproduite au bit par le pilote) ; un seul signe au programme",
+    "sF": 9.867587802520179,
+    "sM": null,
+    "sM_motif": "P-M12e : r_s = 1 par demonstration (M11, reproduite au bit par le pilote) ; un seul signe au programme",
+    "sP": {
+     "duree_s": 14.787841699959245,
+     "motif_exclusion": "",
+     "note": "OK|pas=1.82e-06",
+     "recevable": true,
+     "s": 9.867587802520179
+    }
+   },
+   "4|3.150000000000": {
+    "asym": null,
+    "asym_motif": "P-M12e : r_s = 1 par demonstration (M11, reproduite au bit par le pilote) ; un seul signe au programme",
+    "frag": null,
+    "frag_motif": "P-M12e : r_s = 1 par demonstration (M11, reproduite au bit par le pilote) ; un seul signe au programme",
+    "sF": 9.970764210546593,
+    "sM": null,
+    "sM_motif": "P-M12e : r_s = 1 par demonstration (M11, reproduite au bit par le pilote) ; un seul signe au programme",
+    "sP": {
+     "duree_s": 14.811028000025544,
+     "motif_exclusion": "",
+     "note": "OK|pas=1.82e-06",
+     "recevable": true,
+     "s": 9.970764210546593
+    }
+   }
+  },
+  "classement": {
+   "consignation": {
+    "motif": "m = 4 < 7",
+    "survivants": [
+     2.85,
+     3.06,
+     3.1,
+     3.15
+    ]
+   },
+   "plancher": {
+    "motif": "m = 4 < 7",
+    "statut": "ECHEC"
+   },
+   "verdict": "NON CONCLUANT DE GEOMETRIE"
+  },
+  "structure_sous_seuil": {
+   "hors_site": [
+    2.9
+   ],
+   "lecture": "attrition simple",
+   "note": "consigne SEPAREMENT de P-M13a ; compatible avec toute issue de P-M13a, y compris NON CLASSE (gel Sec.5)",
+   "site_d_inf_0.06": [
+    2.94,
+    2.97,
+    3.0,
+    3.03
+   ]
+  }
+ },
+ "resume": {
+  "attrition_9": {
+   "perimetre": "POINTS du programme perdus sur les 9 points ; le denominateur etait 10 (balayages) en v1 -- unites melangees, corrige (cert. script v1, N-1)",
+   "points_perdus": 5,
+   "statut": "FAIT consigne",
+   "sur": 9
+  },
+  "duree_des_mesures_carte_s": {
+   "moyenne": 16.86593795000808,
+   "n": 10,
+   "perimetre": "les mesures de la carte (programme + G8) ; G1', G2, G4 non compris -- le nom porte le perimetre (lecon D1-2)",
+   "total": 168.65937950008083
+  },
+  "m": 4,
+  "pertes_par_mecanisme": {
+   "BORNE_ATTEINTE": 0,
+   "G5": 0,
+   "G6": 5
+  },
+  "pertes_par_mecanisme_note": "ventilation par MECANISME, pas une partition (une ligne peut porter plusieurs motifs)",
+  "points_perdus": [
+   "4|2.900000000000",
+   "4|2.940000000000",
+   "4|2.970000000000",
+   "4|3.000000000000",
+   "4|3.030000000000"
+  ]
+ },
+ "verdict": {
+  "P_M13a": "NON CONCLUANT DE GEOMETRIE",
+  "detail": "m = 4 < 7 -- aucune lecture ; la manche suivante redessine la fenetre (gel Sec.5)",
+  "lecture_pertes": "attrition simple",
+  "m": 4
+ }
+}

@@ -1,0 +1,1496 @@
+{
+ "meta": {
+  "G3_par_degre": [
+   {
+    "G3_backward": 4.407548970089733e-16,
+    "p": 5
+   },
+   {
+    "G3_backward": 4.745927885856733e-16,
+    "p": 7
+   },
+   {
+    "G3_backward": 4.407548970089733e-16,
+    "p": 5
+   },
+   {
+    "G3_backward": 4.745927885856733e-16,
+    "p": 7
+   },
+   {
+    "G3_backward": 4.407548970089733e-16,
+    "p": 5
+   },
+   {
+    "G3_backward": 4.745927885856733e-16,
+    "p": 7
+   },
+   {
+    "G3_backward": 4.407548970089733e-16,
+    "p": 5
+   },
+   {
+    "G3_backward": 4.407548970089733e-16,
+    "p": 5
+   }
+  ],
+  "balayages_G6": {
+   "attendus": 64,
+   "comptes": 64
+  },
+  "date_utc": "2026-07-27T12:23:18Z",
+  "exclusions": {
+   "1.250000": [
+    "G6 p=5 sgn=-1 explosion a 0.23390"
+   ]
+  },
+  "fit_non_ampute_par_degre": {
+   "5": [
+    1.25,
+    1.3,
+    1.7,
+    1.8,
+    2.15,
+    2.3,
+    2.45,
+    2.6,
+    2.75,
+    2.85
+   ],
+   "7": [
+    1.25,
+    1.3,
+    1.7,
+    1.8,
+    2.15,
+    2.3,
+    2.45,
+    2.6,
+    2.75,
+    2.85
+   ]
+  },
+  "gardes": [
+   "G1 p=5 w2=1.3500 sgn=+1 : 0.34648 vs 0.34648 (0.00 %) -> PASSE",
+   "G1 p=5 w2=1.3500 sgn=-1 : 0.30974 vs 0.30974 (0.00 %) -> PASSE",
+   "G1 p=5 w2=1.4142 sgn=+1 : 0.38447 vs 0.38447 (0.00 %) -> PASSE",
+   "G1 p=5 w2=1.4142 sgn=-1 : 0.32642 vs 0.32642 (0.00 %) -> PASSE",
+   "G1 p=5 w2=1.8000 sgn=+1 : 0.66682 vs 0.66682 (0.00 %) -> PASSE",
+   "G1 p=5 w2=1.8000 sgn=-1 : 0.90117 vs 0.90117 (0.00 %) -> PASSE",
+   "G1 p=5 w2=2.8500 sgn=+1 : 3.19469 vs 3.19469 (0.00 %) -> PASSE",
+   "G1 p=5 w2=2.8500 sgn=-1 : 2.58541 vs 2.58541 (0.00 %) -> PASSE",
+   "G1 p=7 w2=1.3500 sgn=+1 : 0.26000 vs 0.26000 (0.00 %) -> PASSE",
+   "G1 p=7 w2=1.3500 sgn=-1 : 0.22875 vs 0.22875 (0.00 %) -> PASSE",
+   "G1 p=7 w2=1.4142 sgn=+1 : 0.29756 vs 0.29756 (0.00 %) -> PASSE",
+   "G1 p=7 w2=1.4142 sgn=-1 : 0.25627 vs 0.25627 (0.00 %) -> PASSE",
+   "G1 p=7 w2=1.8000 sgn=+1 : 0.52141 vs 0.52141 (0.00 %) -> PASSE",
+   "G1 p=7 w2=1.8000 sgn=-1 : 0.64259 vs 0.64259 (0.00 %) -> PASSE",
+   "G1 p=7 w2=2.8500 sgn=+1 : 1.94232 vs 1.94232 (0.00 %) -> PASSE",
+   "G1 p=7 w2=2.8500 sgn=-1 : 1.62409 vs 1.62409 (0.00 %) -> PASSE",
+   "G2 w2=1.3500 sgn=+1 : K(g)=0.0020797 K(2g)=0.00211002 ecart 1.46 % -> PASSE",
+   "G2 w2=1.3500 sgn=-1 : K(g)=0.00148584 K(2g)=0.00148675 ecart 0.06 % -> PASSE",
+   "G2 w2=1.8000 sgn=+1 : K(g)=0.0148251 K(2g)=0.0148415 ecart 0.11 % -> PASSE",
+   "G2 w2=1.8000 sgn=-1 : K(g)=0.0365926 K(2g)=0.0365992 ecart 0.02 % -> PASSE",
+   "G2 w2=2.8500 sgn=+1 : K(g)=1.63026 K(2g)=1.63026 ecart 0.00 % -> PASSE",
+   "G2 w2=2.8500 sgn=-1 : K(g)=0.864091 K(2g)=0.864004 ecart 0.01 % -> PASSE",
+   "G4 ligne la plus raide (g s*^(p-1) = 6.648) p=5 w2=2.7500 sgn=+1 : s*(dt)=3.39565 s*(dt/2)=3.39565 ecart 0.000 % -> PASSE"
+  ],
+  "gel_sha256_bloc": "c1d42aa51796b879fa5ca42f1dc20c5abd7fa45bd9076280f13a7499dcecba76",
+  "moteur_sha256": "c8ed357b120352c4d1078307add3eaac285940c8bec00acc2ddc9ff386ab2c5c",
+  "partition": {
+   "fit": [
+    1.25,
+    1.3,
+    1.7,
+    1.8,
+    2.15,
+    2.3,
+    2.45,
+    2.6,
+    2.75,
+    2.85
+   ],
+   "hors_fit": [
+    1.35,
+    1.4142135623730951,
+    1.45,
+    1.55,
+    1.9,
+    2.05
+   ]
+  },
+  "recherches": {
+   "attendues": 71,
+   "comptees": 71,
+   "detail_attendu": {
+    "G2": 6,
+    "G4": 1,
+    "carte": 64
+   }
+  },
+  "script_sha256": "c3a91f601fb5bb50fc888bddca3305294a8721d8dc36c973fb0a632bbdc04188"
+ },
+ "resultats": {
+  "G2": {
+   "1.350000|+1": {
+    "K_2g": 0.0021100177734642003,
+    "K_g": 0.0020797029085748027,
+    "ecart": 0.014576536275641372,
+    "verdict": "PASSE"
+   },
+   "1.350000|-1": {
+    "K_2g": 0.0014867459057317613,
+    "K_g": 0.0014858371638808419,
+    "ecart": 0.0006116025854043805,
+    "verdict": "PASSE"
+   },
+   "1.800000|+1": {
+    "K_2g": 0.014841460984291045,
+    "K_g": 0.01482507812456701,
+    "ecart": 0.0011050774630918525,
+    "verdict": "PASSE"
+   },
+   "1.800000|-1": {
+    "K_2g": 0.03659923986636692,
+    "K_g": 0.036592640292476074,
+    "ecart": 0.0001803524926897726,
+    "verdict": "PASSE"
+   },
+   "2.850000|+1": {
+    "K_2g": 1.63026459107877,
+    "K_g": 1.6302639186079624,
+    "ecart": 4.124919898984558e-07,
+    "verdict": "PASSE"
+   },
+   "2.850000|-1": {
+    "K_2g": 0.8640039536285532,
+    "K_g": 0.8640905620975149,
+    "ecart": 0.00010023077760679122,
+    "verdict": "PASSE"
+   }
+  },
+  "G4": {
+   "ecart": 0.0,
+   "echelle_force": 6.647523184491651,
+   "p": 5,
+   "s_dt": 3.39564643672404,
+   "s_dt2": 3.39564643672404,
+   "sgn": 1,
+   "verdict": "PASSE",
+   "w2": 2.75
+  },
+  "G6": {
+   "5|1.250000000000|+1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 1,
+    "premiere_retombee_en_s": 1.0027047383153578
+   },
+   "5|1.250000000000|-1": {
+    "exclue": true,
+    "explosion_sous_0.98s": 0.23389876000145204,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 2,
+    "premiere_retombee_en_s": null
+   },
+   "5|1.300000000000|+1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 3,
+    "premiere_retombee_en_s": 1.0220823723607206
+   },
+   "5|1.300000000000|-1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 3,
+    "premiere_retombee_en_s": 1.000373040808073
+   },
+   "5|1.350000000000|+1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 1,
+    "premiere_retombee_en_s": 1.002581614143707
+   },
+   "5|1.350000000000|-1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 1,
+    "premiere_retombee_en_s": null
+   },
+   "5|1.414213562373|+1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 1,
+    "premiere_retombee_en_s": 1.0018350089607577
+   },
+   "5|1.414213562373|-1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 1,
+    "premiere_retombee_en_s": null
+   },
+   "5|1.450000000000|+1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 1,
+    "premiere_retombee_en_s": null
+   },
+   "5|1.450000000000|-1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 1,
+    "premiere_retombee_en_s": null
+   },
+   "5|1.550000000000|+1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 1,
+    "premiere_retombee_en_s": 1.0000687453221515
+   },
+   "5|1.550000000000|-1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 2,
+    "premiere_retombee_en_s": 1.0043363168208925
+   },
+   "5|1.700000000000|+1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 1,
+    "premiere_retombee_en_s": 1.0042346710300505
+   },
+   "5|1.700000000000|-1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 2,
+    "premiere_retombee_en_s": 1.0137810285989546
+   },
+   "5|1.800000000000|+1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 1,
+    "premiere_retombee_en_s": null
+   },
+   "5|1.800000000000|-1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 2,
+    "premiere_retombee_en_s": 1.0083448492258715
+   },
+   "5|1.900000000000|+1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 1,
+    "premiere_retombee_en_s": null
+   },
+   "5|1.900000000000|-1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 1,
+    "premiere_retombee_en_s": null
+   },
+   "5|2.050000000000|+1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 1,
+    "premiere_retombee_en_s": null
+   },
+   "5|2.050000000000|-1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 1,
+    "premiere_retombee_en_s": null
+   },
+   "5|2.150000000000|+1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 1,
+    "premiere_retombee_en_s": null
+   },
+   "5|2.150000000000|-1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 1,
+    "premiere_retombee_en_s": null
+   },
+   "5|2.300000000000|+1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 1,
+    "premiere_retombee_en_s": 1.0014061532521188
+   },
+   "5|2.300000000000|-1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 1,
+    "premiere_retombee_en_s": null
+   },
+   "5|2.450000000000|+1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 1,
+    "premiere_retombee_en_s": null
+   },
+   "5|2.450000000000|-1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 1,
+    "premiere_retombee_en_s": null
+   },
+   "5|2.600000000000|+1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 2,
+    "premiere_retombee_en_s": 1.0012502011895061
+   },
+   "5|2.600000000000|-1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 2,
+    "premiere_retombee_en_s": 1.0123271547083332
+   },
+   "5|2.750000000000|+1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 1,
+    "premiere_retombee_en_s": 1.0012173959742223
+   },
+   "5|2.750000000000|-1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 1,
+    "premiere_retombee_en_s": 1.0014437068111932
+   },
+   "5|2.850000000000|+1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 2,
+    "premiere_retombee_en_s": 1.0445845599469257
+   },
+   "5|2.850000000000|-1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 1,
+    "premiere_retombee_en_s": null
+   },
+   "7|1.250000000000|+1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 2,
+    "premiere_retombee_en_s": 1.0031686898548462
+   },
+   "7|1.250000000000|-1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 2,
+    "premiere_retombee_en_s": 1.00209348555674
+   },
+   "7|1.300000000000|+1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 1,
+    "premiere_retombee_en_s": 1.05
+   },
+   "7|1.300000000000|-1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 1,
+    "premiere_retombee_en_s": null
+   },
+   "7|1.350000000000|+1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 1,
+    "premiere_retombee_en_s": null
+   },
+   "7|1.350000000000|-1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 2,
+    "premiere_retombee_en_s": 1.010822968678826
+   },
+   "7|1.414213562373|+1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 1,
+    "premiere_retombee_en_s": null
+   },
+   "7|1.414213562373|-1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 1,
+    "premiere_retombee_en_s": 1.0007653158776277
+   },
+   "7|1.450000000000|+1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 1,
+    "premiere_retombee_en_s": null
+   },
+   "7|1.450000000000|-1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 1,
+    "premiere_retombee_en_s": null
+   },
+   "7|1.550000000000|+1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 2,
+    "premiere_retombee_en_s": 1.0022853698189258
+   },
+   "7|1.550000000000|-1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 3,
+    "premiere_retombee_en_s": 1.0009496361852304
+   },
+   "7|1.700000000000|+1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 2,
+    "premiere_retombee_en_s": 1.0005619603689113
+   },
+   "7|1.700000000000|-1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 3,
+    "premiere_retombee_en_s": 1.0196836719655438
+   },
+   "7|1.800000000000|+1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 1,
+    "premiere_retombee_en_s": 1.0000467626722764
+   },
+   "7|1.800000000000|-1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 1,
+    "premiere_retombee_en_s": null
+   },
+   "7|1.900000000000|+1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 1,
+    "premiere_retombee_en_s": null
+   },
+   "7|1.900000000000|-1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 1,
+    "premiere_retombee_en_s": null
+   },
+   "7|2.050000000000|+1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 1,
+    "premiere_retombee_en_s": null
+   },
+   "7|2.050000000000|-1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 1,
+    "premiere_retombee_en_s": null
+   },
+   "7|2.150000000000|+1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 1,
+    "premiere_retombee_en_s": null
+   },
+   "7|2.150000000000|-1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 1,
+    "premiere_retombee_en_s": null
+   },
+   "7|2.300000000000|+1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 2,
+    "premiere_retombee_en_s": 1.0077696532278637
+   },
+   "7|2.300000000000|-1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 2,
+    "premiere_retombee_en_s": 1.003018674257414
+   },
+   "7|2.450000000000|+1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 3,
+    "premiere_retombee_en_s": 1.0019310994873802
+   },
+   "7|2.450000000000|-1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 2,
+    "premiere_retombee_en_s": 1.007801019447445
+   },
+   "7|2.600000000000|+1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 2,
+    "premiere_retombee_en_s": 1.0072965335426884
+   },
+   "7|2.600000000000|-1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 1,
+    "premiere_retombee_en_s": 1.0021973516821039
+   },
+   "7|2.750000000000|+1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 1,
+    "premiere_retombee_en_s": 1.0017187717275198
+   },
+   "7|2.750000000000|-1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 1,
+    "premiere_retombee_en_s": null
+   },
+   "7|2.850000000000|+1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 1,
+    "premiere_retombee_en_s": null
+   },
+   "7|2.850000000000|-1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "fenetre_consignation": "[s*, 1.05 s*] -- intersection avec [s*, 1.3 s*] du gel",
+    "ilots": 1,
+    "premiere_retombee_en_s": null
+   }
+  },
+  "carte": {
+   "5|1.250000000000": {
+    "asym": 0.9152951976204349,
+    "frag": 1,
+    "sF": 0.21854839993369285,
+    "sM": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 0.2387736770627338
+    },
+    "sP": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 0.21854839993369285
+    }
+   },
+   "5|1.300000000000": {
+    "asym": 1.1674428994454884,
+    "frag": -1,
+    "sF": 0.26554003093321277,
+    "sM": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 0.26554003093321277
+    },
+    "sP": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 0.3100028236315146
+    }
+   },
+   "5|1.350000000000": {
+    "asym": 1.1186048400992352,
+    "frag": -1,
+    "sF": 0.3097422181577249,
+    "sM": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 0.3097422181577249
+    },
+    "sP": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 0.34647914441430433
+    }
+   },
+   "5|1.414213562373": {
+    "asym": 1.1778523483679078,
+    "frag": -1,
+    "sF": 0.3264173489597934,
+    "sM": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 0.3264173489597934
+    },
+    "sP": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 0.3844714410203195
+    }
+   },
+   "5|1.450000000000": {
+    "asym": 1.2032960493688247,
+    "frag": -1,
+    "sF": 0.31213110166746344,
+    "sM": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 0.31213110166746344
+    },
+    "sP": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 0.37558612152159776
+    }
+   },
+   "5|1.550000000000": {
+    "asym": 0.8401268586246149,
+    "frag": 1,
+    "sF": 0.5191405261079459,
+    "sM": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 0.6179311145436288
+    },
+    "sP": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 0.5191405261079459
+    }
+   },
+   "5|1.700000000000": {
+    "asym": 0.7839137624792674,
+    "frag": 1,
+    "sF": 0.634855992258079,
+    "sM": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 0.8098543776680658
+    },
+    "sP": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 0.634855992258079
+    }
+   },
+   "5|1.800000000000": {
+    "asym": 0.7399477967469118,
+    "frag": 1,
+    "sF": 0.6668205807758855,
+    "sM": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 0.9011724660948772
+    },
+    "sP": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 0.6668205807758855
+    }
+   },
+   "5|1.900000000000": {
+    "asym": 0.7340188617323352,
+    "frag": 1,
+    "sF": 0.6126647122607962,
+    "sM": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 0.8346716197658262
+    },
+    "sP": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 0.6126647122607962
+    }
+   },
+   "5|2.050000000000": {
+    "asym": 1.401783287070762,
+    "frag": -1,
+    "sF": 0.5921408246930379,
+    "sM": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 0.5921408246930379
+    },
+    "sP": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 0.8300531116469985
+    }
+   },
+   "5|2.150000000000": {
+    "asym": 1.4797068158788014,
+    "frag": -1,
+    "sF": 0.96812937200306,
+    "sM": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 0.96812937200306
+    },
+    "sP": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 1.4325476304053915
+    }
+   },
+   "5|2.300000000000": {
+    "asym": 1.7578982521980682,
+    "frag": -1,
+    "sF": 1.5185353716877459,
+    "sM": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 1.5185353716877459
+    },
+    "sP": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 2.6694306757908324
+    }
+   },
+   "5|2.450000000000": {
+    "asym": 1.5300118795474205,
+    "frag": -1,
+    "sF": 1.8483714134937146,
+    "sM": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 1.8483714134937146
+    },
+    "sP": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 2.8280302204612404
+    }
+   },
+   "5|2.600000000000": {
+    "asym": 1.4311392339284577,
+    "frag": -1,
+    "sF": 2.2655694078535484,
+    "sM": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 2.2655694078535484
+    },
+    "sP": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 3.2423452667672765
+    }
+   },
+   "5|2.750000000000": {
+    "asym": 1.326173495880274,
+    "frag": -1,
+    "sF": 2.5604843161717032,
+    "sM": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 2.5604843161717032
+    },
+    "sP": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 3.39564643672404
+    }
+   },
+   "5|2.850000000000": {
+    "asym": 1.2356616032839396,
+    "frag": -1,
+    "sF": 2.5854119536437774,
+    "sM": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 2.5854119536437774
+    },
+    "sP": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 3.1946942797889326
+    }
+   },
+   "7|1.250000000000": {
+    "asym": 0.9438162315005773,
+    "frag": 1,
+    "sF": 0.16414881704033743,
+    "sM": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 0.1739203158006263
+    },
+    "sP": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 0.16414881704033743
+    }
+   },
+   "7|1.300000000000": {
+    "asym": 0.921461065332873,
+    "frag": 1,
+    "sF": 0.1788887108981531,
+    "sM": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 0.19413594087508246
+    },
+    "sP": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 0.1788887108981531
+    }
+   },
+   "7|1.350000000000": {
+    "asym": 1.1365905833771193,
+    "frag": -1,
+    "sF": 0.2287530346434747,
+    "sM": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 0.2287530346434747
+    },
+    "sP": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 0.2599985450947133
+    }
+   },
+   "7|1.414213562373": {
+    "asym": 1.161134463622305,
+    "frag": -1,
+    "sF": 0.25626983575792206,
+    "sM": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 0.25626983575792206
+    },
+    "sP": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 0.29756373828535104
+    }
+   },
+   "7|1.450000000000": {
+    "asym": 1.1733145862140255,
+    "frag": -1,
+    "sF": 0.25562495786097494,
+    "sM": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 0.25562495786097494
+    },
+    "sP": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 0.2999284916586275
+    }
+   },
+   "7|1.550000000000": {
+    "asym": 0.8159941672653055,
+    "frag": 1,
+    "sF": 0.3606188011276276,
+    "sM": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 0.4419379642579958
+    },
+    "sP": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 0.3606188011276276
+    }
+   },
+   "7|1.700000000000": {
+    "asym": 0.8032484499663715,
+    "frag": 1,
+    "sF": 0.4728872772841633,
+    "sM": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 0.5887185680893141
+    },
+    "sP": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 0.4728872772841633
+    }
+   },
+   "7|1.800000000000": {
+    "asym": 0.8114299391092893,
+    "frag": 1,
+    "sF": 0.5214135849626669,
+    "sM": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 0.6425860814736823
+    },
+    "sP": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 0.5214135849626669
+    }
+   },
+   "7|1.900000000000": {
+    "asym": 0.8077449312393364,
+    "frag": 1,
+    "sF": 0.5144574698740823,
+    "sM": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 0.6369058473505264
+    },
+    "sP": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 0.5144574698740823
+    }
+   },
+   "7|2.050000000000": {
+    "asym": 1.2447705760708023,
+    "frag": -1,
+    "sF": 0.5267198019706617,
+    "sM": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 0.5267198019706617
+    },
+    "sP": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 0.6556453113269195
+    }
+   },
+   "7|2.150000000000": {
+    "asym": 1.2688077421454445,
+    "frag": -1,
+    "sF": 0.7230214783561295,
+    "sM": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 0.7230214783561295
+    },
+    "sP": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 0.917375249475702
+    }
+   },
+   "7|2.300000000000": {
+    "asym": 1.2682938362672935,
+    "frag": -1,
+    "sF": 0.9442538084807293,
+    "sM": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 0.9442538084807293
+    },
+    "sP": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 1.1975912851680264
+    }
+   },
+   "7|2.450000000000": {
+    "asym": 1.4227572191516933,
+    "frag": -1,
+    "sF": 1.1764888775785918,
+    "sM": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 1.1764888775785918
+    },
+    "sP": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 1.6738580438266142
+    }
+   },
+   "7|2.600000000000": {
+    "asym": 1.16637267409764,
+    "frag": -1,
+    "sF": 1.4075952595434436,
+    "sM": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 1.4075952595434436
+    },
+    "sP": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 1.6417806469208478
+    }
+   },
+   "7|2.750000000000": {
+    "asym": 1.2540798597972735,
+    "frag": -1,
+    "sF": 1.5718430659061957,
+    "sM": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 1.5718430659061957
+    },
+    "sP": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 1.9712167317149585
+    }
+   },
+   "7|2.850000000000": {
+    "asym": 1.1959462488225985,
+    "frag": -1,
+    "sF": 1.624089637373729,
+    "sM": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 1.624089637373729
+    },
+    "sP": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 1.9423239095687654
+    }
+   }
+  }
+ },
+ "resume": {
+  "P-M10a": {
+   "detail": [
+    {
+     "IC95": [
+      0.8948631319605815,
+      1.1523076483585184
+     ],
+     "p": 5,
+     "sigma": 0.13973140851069346
+    },
+    {
+     "IC95": [
+      0.887094752979071,
+      1.0228156896964422
+     ],
+     "p": 7,
+     "sigma": 0.07366432937571374
+    }
+   ],
+   "lecture_non_concluant": {
+    "5": {
+     "SE": 0.06567462153008592,
+     "sigma": 0.13973140851069346,
+     "sigma_max": 0.1392
+    },
+    "7": {
+     "SE": 0.03462268793810487,
+     "sigma": 0.07366432937571374,
+     "sigma_max": 0.1392
+    }
+   },
+   "verdict": "NON CONCLUANT DE PUISSANCE"
+  },
+  "P-M10b": {
+   "ecart_beta": 0.0686301688217934,
+   "verdict": "P-INDEPENDANCE COMPATIBLE"
+  },
+  "P-M10d": {
+   "residus": {
+    "5": {
+     "1.300000": 0.13814691856449457,
+     "1.700000": -0.021626602109384274,
+     "1.800000": -0.14640994791198003,
+     "2.150000": -0.265590992048858,
+     "2.300000": 0.0114337048431008,
+     "2.450000": 0.050717365523932245,
+     "2.600000": 0.10991333283952154,
+     "2.750000": 0.098773144302021,
+     "2.850000": 0.02464307599715443
+    },
+    "7": {
+     "1.300000": 0.03176605222829587,
+     "1.700000": 0.041607645549014194,
+     "1.800000": -0.022951816479044762,
+     "2.150000": -0.1550924643682372,
+     "2.300000": -0.04964065788926608,
+     "2.450000": 0.023524224694738943,
+     "2.600000": 0.06822412054810395,
+     "2.750000": 0.05403144437326757,
+     "2.850000": 0.00853145134312755
+    }
+   }
+  },
+  "P-M10e": {
+   "5|1.250000000000": {
+    "frag": 1,
+    "r_s": 0.9152951976204349
+   },
+   "5|1.300000000000": {
+    "frag": -1,
+    "r_s": 1.1674428994454884
+   },
+   "5|1.350000000000": {
+    "frag": -1,
+    "r_s": 1.1186048400992352
+   },
+   "5|1.414213562373": {
+    "frag": -1,
+    "r_s": 1.1778523483679078
+   },
+   "5|1.450000000000": {
+    "frag": -1,
+    "r_s": 1.2032960493688247
+   },
+   "5|1.550000000000": {
+    "frag": 1,
+    "r_s": 0.8401268586246149
+   },
+   "5|1.700000000000": {
+    "frag": 1,
+    "r_s": 0.7839137624792674
+   },
+   "5|1.800000000000": {
+    "frag": 1,
+    "r_s": 0.7399477967469118
+   },
+   "5|1.900000000000": {
+    "frag": 1,
+    "r_s": 0.7340188617323352
+   },
+   "5|2.050000000000": {
+    "frag": -1,
+    "r_s": 1.401783287070762
+   },
+   "5|2.150000000000": {
+    "frag": -1,
+    "r_s": 1.4797068158788014
+   },
+   "5|2.300000000000": {
+    "frag": -1,
+    "r_s": 1.7578982521980682
+   },
+   "5|2.450000000000": {
+    "frag": -1,
+    "r_s": 1.5300118795474205
+   },
+   "5|2.600000000000": {
+    "frag": -1,
+    "r_s": 1.4311392339284577
+   },
+   "5|2.750000000000": {
+    "frag": -1,
+    "r_s": 1.326173495880274
+   },
+   "5|2.850000000000": {
+    "frag": -1,
+    "r_s": 1.2356616032839396
+   },
+   "7|1.250000000000": {
+    "frag": 1,
+    "r_s": 0.9438162315005773
+   },
+   "7|1.300000000000": {
+    "frag": 1,
+    "r_s": 0.921461065332873
+   },
+   "7|1.350000000000": {
+    "frag": -1,
+    "r_s": 1.1365905833771193
+   },
+   "7|1.414213562373": {
+    "frag": -1,
+    "r_s": 1.161134463622305
+   },
+   "7|1.450000000000": {
+    "frag": -1,
+    "r_s": 1.1733145862140255
+   },
+   "7|1.550000000000": {
+    "frag": 1,
+    "r_s": 0.8159941672653055
+   },
+   "7|1.700000000000": {
+    "frag": 1,
+    "r_s": 0.8032484499663715
+   },
+   "7|1.800000000000": {
+    "frag": 1,
+    "r_s": 0.8114299391092893
+   },
+   "7|1.900000000000": {
+    "frag": 1,
+    "r_s": 0.8077449312393364
+   },
+   "7|2.050000000000": {
+    "frag": -1,
+    "r_s": 1.2447705760708023
+   },
+   "7|2.150000000000": {
+    "frag": -1,
+    "r_s": 1.2688077421454445
+   },
+   "7|2.300000000000": {
+    "frag": -1,
+    "r_s": 1.2682938362672935
+   },
+   "7|2.450000000000": {
+    "frag": -1,
+    "r_s": 1.4227572191516933
+   },
+   "7|2.600000000000": {
+    "frag": -1,
+    "r_s": 1.16637267409764
+   },
+   "7|2.750000000000": {
+    "frag": -1,
+    "r_s": 1.2540798597972735
+   },
+   "7|2.850000000000": {
+    "frag": -1,
+    "r_s": 1.1959462488225985
+   }
+  },
+  "P-M10f": {
+   "(i)_sous_ensemble_commun": {
+    "ecart_au_repere": -8.41610347276922e-06,
+    "enveloppe_verifiee": true,
+    "etendue": 0.22299158389652723,
+    "repere": 0.223,
+    "sup": 0.22299158389652723
+   },
+   "(ii)_tous_points_mesures": {
+    "etendue": 0.37087180436489653,
+    "n": 16,
+    "repere": null
+   },
+   "argmax_d": {
+    "attendu": [
+     2.3,
+     2.45,
+     2.6
+    ],
+    "d_par_point": {
+     "1.250000": 0.28623406265560436,
+     "1.300000": 0.3950017192969486,
+     "1.350000": 0.3030974269475646,
+     "1.414214": 0.2419458388351785,
+     "1.450000": 0.19971193525328745,
+     "1.550000": 0.36435316186276645,
+     "1.700000": 0.29454114364706296,
+     "1.800000": 0.24597745945045446,
+     "1.900000": 0.1747049354105416,
+     "2.050000": 0.11707576406262277,
+     "2.150000": 0.2919267981224673,
+     "2.300000": 0.47510658312521103,
+     "2.450000": 0.45177045903447766,
+     "2.600000": 0.47594336283525757,
+     "2.750000": 0.4879475684275193,
+     "2.850000": 0.46493742273170574
+    },
+    "w2": 2.75
+   },
+   "points_communs": [
+    1.25,
+    1.3,
+    1.35,
+    1.4142135623730951,
+    1.45,
+    1.55,
+    1.7,
+    1.8,
+    1.9,
+    2.05,
+    2.15,
+    2.3,
+    2.45,
+    2.6,
+    2.75,
+    2.85
+   ]
+  },
+  "fit": {
+   "5": {
+    "SE": 0.06567462153008592,
+    "Sxx": 4.526816771216256,
+    "beta": 1.02358539015955,
+    "n": 9,
+    "ordonnee": -1.0843212294966835,
+    "residus": {
+     "1.300000": 0.13814691856449457,
+     "1.700000": -0.021626602109384274,
+     "1.800000": -0.14640994791198003,
+     "2.150000": -0.265590992048858,
+     "2.300000": 0.0114337048431008,
+     "2.450000": 0.050717365523932245,
+     "2.600000": 0.10991333283952154,
+     "2.750000": 0.098773144302021,
+     "2.850000": 0.02464307599715443
+    },
+    "sigma": 0.13973140851069346
+   },
+   "7": {
+    "SE": 0.03462268793810487,
+    "Sxx": 4.526816771216256,
+    "beta": 0.9549552213377566,
+    "n": 9,
+    "ordonnee": -1.3984082455549225,
+    "residus": {
+     "1.300000": 0.03176605222829587,
+     "1.700000": 0.041607645549014194,
+     "1.800000": -0.022951816479044762,
+     "2.150000": -0.1550924643682372,
+     "2.300000": -0.04964065788926608,
+     "2.450000": 0.023524224694738943,
+     "2.600000": 0.06822412054810395,
+     "2.750000": 0.05403144437326757,
+     "2.850000": 0.00853145134312755
+    },
+    "sigma": 0.07366432937571374
+   }
+  },
+  "w2_retenus_par_degre": {
+   "5": [
+    1.3,
+    1.7,
+    1.8,
+    2.15,
+    2.3,
+    2.45,
+    2.6,
+    2.75,
+    2.85
+   ],
+   "7": [
+    1.3,
+    1.7,
+    1.8,
+    2.15,
+    2.3,
+    2.45,
+    2.6,
+    2.75,
+    2.85
+   ]
+  }
+ }
+}

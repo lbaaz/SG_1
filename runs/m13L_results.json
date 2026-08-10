@@ -1,0 +1,188 @@
+{
+ "E": [
+  {
+   "pas": 1.82e-06,
+   "sF": 8.004070693188863,
+   "source": "m13b_results.json",
+   "w2": 2.74
+  },
+  {
+   "pas": 1.82e-06,
+   "sF": 8.03774683329979,
+   "source": "m13b_results.json",
+   "w2": 2.78
+  },
+  {
+   "pas": 1.82e-06,
+   "sF": 8.24916028645919,
+   "source": "m13b_results.json",
+   "w2": 2.85
+  },
+  {
+   "pas": 1.82e-06,
+   "sF": 8.32614839932537,
+   "source": "m13b_results.json",
+   "w2": 2.89
+  },
+  {
+   "pas": 1.82e-06,
+   "sF": 9.448896274377903,
+   "source": "m13b_results.json",
+   "w2": 3.02
+  },
+  {
+   "pas": 1.82e-06,
+   "sF": 9.58534550452009,
+   "source": "m13_results.json",
+   "w2": 3.06
+  },
+  {
+   "pas": 1.82e-06,
+   "sF": 9.867587802520179,
+   "source": "m13_results.json",
+   "w2": 3.1
+  },
+  {
+   "pas": 1.82e-06,
+   "sF": 9.970764210546593,
+   "source": "m13b_results.json",
+   "w2": 3.15
+  },
+  {
+   "pas": 1.82e-06,
+   "sF": 10.12336988508276,
+   "source": "m13b_results.json",
+   "w2": 3.22
+  },
+  {
+   "pas": 1.82e-06,
+   "sF": 10.24575225953888,
+   "source": "m13b_results.json",
+   "w2": 3.26
+  },
+  {
+   "pas": 1.82e-06,
+   "sF": 10.359444134932074,
+   "source": "m13b_results.json",
+   "w2": 3.3
+  }
+ ],
+ "G_L1": {
+  "2.85": {
+   "ecart_absolu": 0.0,
+   "m13": 8.24916028645919,
+   "m13b": 8.24916028645919,
+   "verdict": "PASSE"
+  },
+  "3.15": {
+   "ecart_absolu": 0.0,
+   "m13": 9.970764210546593,
+   "m13b": 9.970764210546593,
+   "verdict": "PASSE"
+  }
+ },
+ "G_L2": {
+  "ecart_absolu": 0.0,
+  "m12": 8.03774683329979,
+  "m13b": 8.03774683329979,
+  "statut": "CONSIGNE HORS PORTE -- custody de chaine inter-manches, pas une donnee de E (gel L8)",
+  "w2": 2.78
+ },
+ "meta": {
+  "date": "OMISE du JSON (gel L8) -- vit dans le log",
+  "entrees": {
+   "m12_results.json_pour_G_L2": "fa109da92e582520cfcb63b46bc41fa7d4b62295891f413bb97c6095b2fe59b1",
+   "m13_results.json": "70fe5611712f0e5078a3ab852fded135e9606dcd162070c0a76205aaa1077f99",
+   "m13b_results.json": "22fa176013a9d46b9656d121c736cad46bc6e5196a9f52fee57d78bdd056277b"
+  },
+  "gel_sha256": "f779bbe3a71dd5e436bba923239af45e276895ee34a6cd61090a95e726cbaf0e",
+  "implementation": "machine 2",
+  "mode": "LECTURE -- zero recherche neuve"
+ },
+ "plancher_L4": {
+  "droite_ge_3.06": [
+   3.06,
+   3.1,
+   3.15,
+   3.22,
+   3.26,
+   3.3
+  ],
+  "exige_1_site": true,
+  "exige_3_droite": true,
+  "exige_3_gauche": true,
+  "exige_9": true,
+  "gauche_le_2.90": [
+   2.74,
+   2.78,
+   2.85,
+   2.89
+  ],
+  "site_d_lt_0.12": [
+   2.89,
+   3.02,
+   3.06,
+   3.1
+  ],
+  "statut": "OK",
+  "taille_E": 11
+ },
+ "verdict": {
+  "P_M13L": "LISSE",
+  "consignation": {
+   "fenetre": [
+    2.94,
+    3.06
+   ],
+   "motif": "strictement monotone (croissant)",
+   "profil": [
+    [
+     2.74,
+     8.004070693188863
+    ],
+    [
+     2.78,
+     8.03774683329979
+    ],
+    [
+     2.85,
+     8.24916028645919
+    ],
+    [
+     2.89,
+     8.32614839932537
+    ],
+    [
+     3.02,
+     9.448896274377903
+    ],
+    [
+     3.06,
+     9.58534550452009
+    ],
+    [
+     3.1,
+     9.867587802520179
+    ],
+    [
+     3.15,
+     9.970764210546593
+    ],
+    [
+     3.22,
+     10.12336988508276
+    ],
+    [
+     3.26,
+     10.24575225953888
+    ],
+    [
+     3.3,
+     10.359444134932074
+    ]
+   ]
+  },
+  "resolution_L6": "LISSE a resolution DERIVEE : tout creux centre au site, de classe mesuree (unimodal, demi-largeur >= 0.03), a une profondeur centrale D <~ 0.05/0.64 ~ 0.08 en ln -- contre 0.49, 0.80 et 2.73 aux canyons impairs de 2:1, soit une exclusion d'un facteur 6 a 35. Echappatoires DECLAREES, non exclues : demi-largeur < 0.02 (plus etroit que tout canyon mesure) ; creux decentre loge dans un trou de E.",
+  "resolution_L6_statut": "La borne L6 n'a PAS le statut du verdict L5 : ses chiffres (0.05 de rugosite, 64 % de forme) sont choisis en connaissance de E, contrairement au classifieur, anterieur aux deux runs. Notes R-1/R-2/R-3 de la certification."
+ }
+}

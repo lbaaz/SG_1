@@ -1,0 +1,1403 @@
+{
+ "meta": {
+  "G3_par_degre": [
+   {
+    "G3_backward": 4.407548970089733e-16,
+    "p": 5
+   },
+   {
+    "G3_backward": 4.3284256267548534e-16,
+    "p": 4
+   },
+   {
+    "G3_backward": 4.3284256267548534e-16,
+    "p": 4
+   }
+  ],
+  "balayages": {
+   "attendus": 32,
+   "comptes": 32,
+   "invariant": "comptes + sautes == attendus",
+   "sautes": 0,
+   "somme": 32
+  },
+  "balayages_nature": "16 MESURES (sgn +1) et 16 CONTROLES (sgn -1) -- note N-2",
+  "convention_empreinte": "B -- bloc saut final inclus = fichier",
+  "date_utc": "2026-07-27T18:50:40Z",
+  "exclusions": {
+   "1.300000": [
+    "G6 sgn=+1 explosion sous seuil",
+    "G6 sgn=-1 explosion sous seuil"
+   ],
+   "1.550000": [
+    "G6 sgn=+1 explosion sous seuil",
+    "G6 sgn=-1 explosion sous seuil"
+   ],
+   "1.800000": [
+    "G6 sgn=+1 explosion sous seuil",
+    "G6 sgn=-1 explosion sous seuil"
+   ]
+  },
+  "gardes": [
+   "G1' p=5 w2=1.8000 sgn=+1 : 0.6668205808 vs 0.6668205808 (0.0000 %) -> PASSE",
+   "G1' p=5 w2=1.8000 sgn=-1 : 0.9011724661 vs 0.9011724661 (0.0000 %) -> PASSE"
+  ],
+  "gel_sha256_bloc": "b3c27a149766ac4aecb5768923ac3cce2dd1bc052ea988acc72efeb349d79dd4",
+  "m10_sha256": "7cf3624b45dd7d2bb91d29485bd14599e749bd60ba683c4b0c0b224a28aba3bc",
+  "moteur_sha256": "c8ed357b120352c4d1078307add3eaac285940c8bec00acc2ddc9ff386ab2c5c",
+  "note_sha256": "51e5d26d3cf34f2461b552ca6fc08988b808f0ff39cf5eead4b55ca13858c5f5",
+  "recherches": {
+   "attendues": 41,
+   "comptees": 41,
+   "invariant": "comptees + sautees == attendues",
+   "sautees": 0,
+   "somme": 41
+  },
+  "script_sha256": "80cfa79582d5128d843afac254b32f9d985b0cf062b82fe20c4894bf23c98b97",
+  "w2_retenus": [
+   1.7,
+   2.15,
+   2.3,
+   2.45,
+   2.6,
+   2.75,
+   2.85
+  ]
+ },
+ "predictions": {
+  "beta4": 1.1093731011867916,
+  "res4_fit": {
+   "1.300000": 0.27112300148474294,
+   "1.700000": -0.10066941168238236,
+   "1.800000": -0.3007326122031491,
+   "2.150000": -0.40371415164963403,
+   "2.300000": 0.0877766582585594,
+   "2.450000": 0.08470879156042388,
+   "2.600000": 0.16202484820379354,
+   "2.750000": 0.1547002692129628,
+   "2.850000": 0.04478260681468803
+  },
+  "res4_hors_fit": {
+   "1.250000": 0.1670507645045501,
+   "1.350000": 0.11534840499396298,
+   "1.414214": -0.12543374688652165,
+   "1.450000": -0.33123259475245564,
+   "1.550000": 0.11632073716943708,
+   "1.900000": -0.6441211562175435,
+   "2.050000": -0.9771882087155541
+  },
+  "s4_absolu": {
+   "1.250000": 0.31256113383615985,
+   "1.300000": 0.4350747059156878,
+   "1.350000": 0.4524205560113782,
+   "1.414214": 0.44169035075778657,
+   "1.450000": 0.40063997908588295,
+   "1.550000": 0.8186167798348327,
+   "1.700000": 0.9174284735320533,
+   "1.800000": 0.9068643135076104,
+   "1.900000": 0.762192381900254,
+   "2.050000": 0.6854593457224559,
+   "2.150000": 1.3944763183773325,
+   "2.300000": 2.7500786959370758,
+   "2.450000": 3.251180002529642,
+   "2.600000": 4.107256654885477,
+   "2.750000": 4.7120868937930265,
+   "2.850000": 4.623059136794264
+  }
+ },
+ "resultats": {
+  "G2": {
+   "1.350000|+1": {
+    "K_2g": 0.06642566767834017,
+    "K_g": 0.06517613209514192,
+    "ecart": 0.01917167440028833,
+    "verdict": "PASSE"
+   },
+   "1.350000|-1": {
+    "K_2g": 0.06642566767834017,
+    "K_g": 0.06517613209514192,
+    "ecart": 0.01917167440028833,
+    "verdict": "PASSE"
+   },
+   "1.800000|+1": {
+    "K_2g": 0.2462961102490755,
+    "K_g": 0.24292910067026807,
+    "ecart": 0.013860050399550516,
+    "verdict": "PASSE"
+   },
+   "1.800000|-1": {
+    "K_2g": 0.2462961102490755,
+    "K_g": 0.24292910067026807,
+    "ecart": 0.013860050399550516,
+    "verdict": "PASSE"
+   },
+   "2.850000|+1": {
+    "K_2g": 3.355420391735916,
+    "K_g": 3.402432271584774,
+    "ecart": 0.013817139062979988,
+    "verdict": "PASSE"
+   },
+   "2.850000|-1": {
+    "K_2g": 3.355420391735916,
+    "K_g": 3.402432271584774,
+    "ecart": 0.013817139062979988,
+    "verdict": "PASSE"
+   }
+  },
+  "G4": {
+   "ecart": 0.0,
+   "echelle_force": 28.067209172124247,
+   "s_dt": 8.24916028645919,
+   "s_dt2": 8.24916028645919,
+   "sgn": 1,
+   "verdict": "PASSE",
+   "w2": 2.85
+  },
+  "G6": {
+   "4|1.250000000000|+1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "explosion_sous_LO0_0.90s": null,
+    "fin_explosifs": 125,
+    "fin_non_explosifs": 76,
+    "gros_explosifs": 0,
+    "ilots": 14,
+    "n_fin": 201,
+    "n_gros": 171,
+    "n_total": 372,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.002,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "4|1.250000000000|-1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "explosion_sous_LO0_0.90s": null,
+    "fin_explosifs": 125,
+    "fin_non_explosifs": 76,
+    "gros_explosifs": 0,
+    "ilots": 14,
+    "n_fin": 201,
+    "n_gros": 171,
+    "n_total": 372,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.002,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "4|1.300000000000|+1": {
+    "exclue": true,
+    "explosion_sous_0.98s": 1.022074610584715,
+    "explosion_sous_LO0_0.90s": null,
+    "fin_explosifs": 145,
+    "fin_non_explosifs": 56,
+    "gros_explosifs": 0,
+    "ilots": 7,
+    "n_fin": 201,
+    "n_gros": 172,
+    "n_total": 373,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.006,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "4|1.300000000000|-1": {
+    "exclue": true,
+    "explosion_sous_0.98s": 1.022074610584715,
+    "explosion_sous_LO0_0.90s": null,
+    "fin_explosifs": 145,
+    "fin_non_explosifs": 56,
+    "gros_explosifs": 0,
+    "ilots": 7,
+    "n_fin": 201,
+    "n_gros": 172,
+    "n_total": 373,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.006,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "4|1.350000000000|+1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "explosion_sous_LO0_0.90s": null,
+    "fin_explosifs": 141,
+    "fin_non_explosifs": 60,
+    "gros_explosifs": 0,
+    "ilots": 6,
+    "n_fin": 201,
+    "n_gros": 173,
+    "n_total": 374,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.002,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "4|1.350000000000|-1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "explosion_sous_LO0_0.90s": null,
+    "fin_explosifs": 141,
+    "fin_non_explosifs": 60,
+    "gros_explosifs": 0,
+    "ilots": 6,
+    "n_fin": 201,
+    "n_gros": 173,
+    "n_total": 374,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.002,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "4|1.414213562373|+1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "explosion_sous_LO0_0.90s": null,
+    "fin_explosifs": 148,
+    "fin_non_explosifs": 53,
+    "gros_explosifs": 0,
+    "ilots": 4,
+    "n_fin": 201,
+    "n_gros": 173,
+    "n_total": 374,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.004,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "4|1.414213562373|-1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "explosion_sous_LO0_0.90s": null,
+    "fin_explosifs": 148,
+    "fin_non_explosifs": 53,
+    "gros_explosifs": 0,
+    "ilots": 4,
+    "n_fin": 201,
+    "n_gros": 173,
+    "n_total": 374,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.004,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "4|1.450000000000|+1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "explosion_sous_LO0_0.90s": null,
+    "fin_explosifs": 133,
+    "fin_non_explosifs": 68,
+    "gros_explosifs": 0,
+    "ilots": 10,
+    "n_fin": 201,
+    "n_gros": 174,
+    "n_total": 375,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.002,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "4|1.450000000000|-1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "explosion_sous_LO0_0.90s": null,
+    "fin_explosifs": 133,
+    "fin_non_explosifs": 68,
+    "gros_explosifs": 0,
+    "ilots": 10,
+    "n_fin": 201,
+    "n_gros": 174,
+    "n_total": 375,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.002,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "4|1.550000000000|+1": {
+    "exclue": true,
+    "explosion_sous_0.98s": 1.4019454913904585,
+    "explosion_sous_LO0_0.90s": null,
+    "fin_explosifs": 135,
+    "fin_non_explosifs": 66,
+    "gros_explosifs": 0,
+    "ilots": 14,
+    "n_fin": 201,
+    "n_gros": 175,
+    "n_total": 376,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.004,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "4|1.550000000000|-1": {
+    "exclue": true,
+    "explosion_sous_0.98s": 1.4019454913904585,
+    "explosion_sous_LO0_0.90s": null,
+    "fin_explosifs": 135,
+    "fin_non_explosifs": 66,
+    "gros_explosifs": 0,
+    "ilots": 14,
+    "n_fin": 201,
+    "n_gros": 175,
+    "n_total": 376,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.004,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "4|1.700000000000|+1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "explosion_sous_LO0_0.90s": null,
+    "fin_explosifs": 151,
+    "fin_non_explosifs": 50,
+    "gros_explosifs": 0,
+    "ilots": 4,
+    "n_fin": 201,
+    "n_gros": 176,
+    "n_total": 377,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.002,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "4|1.700000000000|-1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "explosion_sous_LO0_0.90s": null,
+    "fin_explosifs": 151,
+    "fin_non_explosifs": 50,
+    "gros_explosifs": 0,
+    "ilots": 4,
+    "n_fin": 201,
+    "n_gros": 176,
+    "n_total": 377,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.002,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "4|1.800000000000|+1": {
+    "exclue": true,
+    "explosion_sous_0.98s": 2.1425010032560476,
+    "explosion_sous_LO0_0.90s": null,
+    "fin_explosifs": 153,
+    "fin_non_explosifs": 48,
+    "gros_explosifs": 0,
+    "ilots": 7,
+    "n_fin": 201,
+    "n_gros": 177,
+    "n_total": 378,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.002,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "4|1.800000000000|-1": {
+    "exclue": true,
+    "explosion_sous_0.98s": 2.1425010032560476,
+    "explosion_sous_LO0_0.90s": null,
+    "fin_explosifs": 153,
+    "fin_non_explosifs": 48,
+    "gros_explosifs": 0,
+    "ilots": 7,
+    "n_fin": 201,
+    "n_gros": 177,
+    "n_total": 378,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.002,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "4|1.900000000000|+1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "explosion_sous_LO0_0.90s": null,
+    "fin_explosifs": 148,
+    "fin_non_explosifs": 53,
+    "gros_explosifs": 0,
+    "ilots": 4,
+    "n_fin": 201,
+    "n_gros": 177,
+    "n_total": 378,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.006,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "4|1.900000000000|-1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "explosion_sous_LO0_0.90s": null,
+    "fin_explosifs": 148,
+    "fin_non_explosifs": 53,
+    "gros_explosifs": 0,
+    "ilots": 4,
+    "n_fin": 201,
+    "n_gros": 177,
+    "n_total": 378,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.006,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "4|2.050000000000|+1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "explosion_sous_LO0_0.90s": null,
+    "fin_explosifs": 151,
+    "fin_non_explosifs": 50,
+    "gros_explosifs": 0,
+    "ilots": 1,
+    "n_fin": 201,
+    "n_gros": 178,
+    "n_total": 379,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": null,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "4|2.050000000000|-1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "explosion_sous_LO0_0.90s": null,
+    "fin_explosifs": 151,
+    "fin_non_explosifs": 50,
+    "gros_explosifs": 0,
+    "ilots": 1,
+    "n_fin": 201,
+    "n_gros": 178,
+    "n_total": 379,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": null,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "4|2.150000000000|+1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "explosion_sous_LO0_0.90s": null,
+    "fin_explosifs": 151,
+    "fin_non_explosifs": 50,
+    "gros_explosifs": 0,
+    "ilots": 1,
+    "n_fin": 201,
+    "n_gros": 178,
+    "n_total": 379,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": null,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "4|2.150000000000|-1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "explosion_sous_LO0_0.90s": null,
+    "fin_explosifs": 151,
+    "fin_non_explosifs": 50,
+    "gros_explosifs": 0,
+    "ilots": 1,
+    "n_fin": 201,
+    "n_gros": 178,
+    "n_total": 379,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": null,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "4|2.300000000000|+1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "explosion_sous_LO0_0.90s": null,
+    "fin_explosifs": 151,
+    "fin_non_explosifs": 50,
+    "gros_explosifs": 0,
+    "ilots": 1,
+    "n_fin": 201,
+    "n_gros": 178,
+    "n_total": 379,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": null,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "4|2.300000000000|-1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "explosion_sous_LO0_0.90s": null,
+    "fin_explosifs": 151,
+    "fin_non_explosifs": 50,
+    "gros_explosifs": 0,
+    "ilots": 1,
+    "n_fin": 201,
+    "n_gros": 178,
+    "n_total": 379,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": null,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "4|2.450000000000|+1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "explosion_sous_LO0_0.90s": null,
+    "fin_explosifs": 130,
+    "fin_non_explosifs": 71,
+    "gros_explosifs": 0,
+    "ilots": 16,
+    "n_fin": 201,
+    "n_gros": 178,
+    "n_total": 379,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.002,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "4|2.450000000000|-1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "explosion_sous_LO0_0.90s": null,
+    "fin_explosifs": 130,
+    "fin_non_explosifs": 71,
+    "gros_explosifs": 0,
+    "ilots": 16,
+    "n_fin": 201,
+    "n_gros": 178,
+    "n_total": 379,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.002,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "4|2.600000000000|+1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "explosion_sous_LO0_0.90s": null,
+    "fin_explosifs": 132,
+    "fin_non_explosifs": 69,
+    "gros_explosifs": 0,
+    "ilots": 10,
+    "n_fin": 201,
+    "n_gros": 180,
+    "n_total": 381,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.002,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "4|2.600000000000|-1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "explosion_sous_LO0_0.90s": null,
+    "fin_explosifs": 132,
+    "fin_non_explosifs": 69,
+    "gros_explosifs": 0,
+    "ilots": 10,
+    "n_fin": 201,
+    "n_gros": 180,
+    "n_total": 381,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.002,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "4|2.750000000000|+1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "explosion_sous_LO0_0.90s": null,
+    "fin_explosifs": 143,
+    "fin_non_explosifs": 58,
+    "gros_explosifs": 0,
+    "ilots": 6,
+    "n_fin": 201,
+    "n_gros": 180,
+    "n_total": 381,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.002,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "4|2.750000000000|-1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "explosion_sous_LO0_0.90s": null,
+    "fin_explosifs": 143,
+    "fin_non_explosifs": 58,
+    "gros_explosifs": 0,
+    "ilots": 6,
+    "n_fin": 201,
+    "n_gros": 180,
+    "n_total": 381,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.002,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "4|2.850000000000|+1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "explosion_sous_LO0_0.90s": null,
+    "fin_explosifs": 141,
+    "fin_non_explosifs": 60,
+    "gros_explosifs": 0,
+    "ilots": 9,
+    "n_fin": 201,
+    "n_gros": 180,
+    "n_total": 381,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.0080000000000002,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "4|2.850000000000|-1": {
+    "exclue": false,
+    "explosion_sous_0.98s": null,
+    "explosion_sous_LO0_0.90s": null,
+    "fin_explosifs": 141,
+    "fin_non_explosifs": 60,
+    "gros_explosifs": 0,
+    "ilots": 9,
+    "n_fin": 201,
+    "n_gros": 180,
+    "n_total": 381,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.0080000000000002,
+    "transition_dans_la_fenetre_fine": true
+   }
+  },
+  "G8": {
+   "4|1.250000000000": {
+    "G8a": {
+     "ecart_absolu": 0.0,
+     "en_pas": 0.0,
+     "verdict": "OK"
+    },
+    "G8b": {
+     "attendu": "ZERO deviation -- identite demontree au gel, G8b",
+     "fin": {
+      "deviations": 0,
+      "explosifs_+1": 125,
+      "n": 201,
+      "non_explosifs_+1": 76,
+      "pouvoir": "REEL si la transition est encadree (note N-1)",
+      "transition_encadree": true
+     },
+     "grossier": {
+      "deviations": 0,
+      "explosifs_+1": 0,
+      "explosifs_-1": 0,
+      "n": 171,
+      "pouvoir": "NUL si les deux comptes sont 0 (note N-1)"
+     },
+     "ilots_identiques": true,
+     "retombee_identique": true
+    }
+   },
+   "4|1.300000000000": {
+    "G8a": {
+     "ecart_absolu": 0.0,
+     "en_pas": 0.0,
+     "verdict": "OK"
+    },
+    "G8b": {
+     "attendu": "ZERO deviation -- identite demontree au gel, G8b",
+     "fin": {
+      "deviations": 0,
+      "explosifs_+1": 145,
+      "n": 201,
+      "non_explosifs_+1": 56,
+      "pouvoir": "REEL si la transition est encadree (note N-1)",
+      "transition_encadree": true
+     },
+     "grossier": {
+      "deviations": 0,
+      "explosifs_+1": 0,
+      "explosifs_-1": 0,
+      "n": 172,
+      "pouvoir": "NUL si les deux comptes sont 0 (note N-1)"
+     },
+     "ilots_identiques": true,
+     "retombee_identique": true
+    }
+   },
+   "4|1.350000000000": {
+    "G8a": {
+     "ecart_absolu": 0.0,
+     "en_pas": 0.0,
+     "verdict": "OK"
+    },
+    "G8b": {
+     "attendu": "ZERO deviation -- identite demontree au gel, G8b",
+     "fin": {
+      "deviations": 0,
+      "explosifs_+1": 141,
+      "n": 201,
+      "non_explosifs_+1": 60,
+      "pouvoir": "REEL si la transition est encadree (note N-1)",
+      "transition_encadree": true
+     },
+     "grossier": {
+      "deviations": 0,
+      "explosifs_+1": 0,
+      "explosifs_-1": 0,
+      "n": 173,
+      "pouvoir": "NUL si les deux comptes sont 0 (note N-1)"
+     },
+     "ilots_identiques": true,
+     "retombee_identique": true
+    }
+   },
+   "4|1.414213562373": {
+    "G8a": {
+     "ecart_absolu": 0.0,
+     "en_pas": 0.0,
+     "verdict": "OK"
+    },
+    "G8b": {
+     "attendu": "ZERO deviation -- identite demontree au gel, G8b",
+     "fin": {
+      "deviations": 0,
+      "explosifs_+1": 148,
+      "n": 201,
+      "non_explosifs_+1": 53,
+      "pouvoir": "REEL si la transition est encadree (note N-1)",
+      "transition_encadree": true
+     },
+     "grossier": {
+      "deviations": 0,
+      "explosifs_+1": 0,
+      "explosifs_-1": 0,
+      "n": 173,
+      "pouvoir": "NUL si les deux comptes sont 0 (note N-1)"
+     },
+     "ilots_identiques": true,
+     "retombee_identique": true
+    }
+   },
+   "4|1.450000000000": {
+    "G8a": {
+     "ecart_absolu": 0.0,
+     "en_pas": 0.0,
+     "verdict": "OK"
+    },
+    "G8b": {
+     "attendu": "ZERO deviation -- identite demontree au gel, G8b",
+     "fin": {
+      "deviations": 0,
+      "explosifs_+1": 133,
+      "n": 201,
+      "non_explosifs_+1": 68,
+      "pouvoir": "REEL si la transition est encadree (note N-1)",
+      "transition_encadree": true
+     },
+     "grossier": {
+      "deviations": 0,
+      "explosifs_+1": 0,
+      "explosifs_-1": 0,
+      "n": 174,
+      "pouvoir": "NUL si les deux comptes sont 0 (note N-1)"
+     },
+     "ilots_identiques": true,
+     "retombee_identique": true
+    }
+   },
+   "4|1.550000000000": {
+    "G8a": {
+     "ecart_absolu": 0.0,
+     "en_pas": 0.0,
+     "verdict": "OK"
+    },
+    "G8b": {
+     "attendu": "ZERO deviation -- identite demontree au gel, G8b",
+     "fin": {
+      "deviations": 0,
+      "explosifs_+1": 135,
+      "n": 201,
+      "non_explosifs_+1": 66,
+      "pouvoir": "REEL si la transition est encadree (note N-1)",
+      "transition_encadree": true
+     },
+     "grossier": {
+      "deviations": 0,
+      "explosifs_+1": 0,
+      "explosifs_-1": 0,
+      "n": 175,
+      "pouvoir": "NUL si les deux comptes sont 0 (note N-1)"
+     },
+     "ilots_identiques": true,
+     "retombee_identique": true
+    }
+   },
+   "4|1.700000000000": {
+    "G8a": {
+     "ecart_absolu": 0.0,
+     "en_pas": 0.0,
+     "verdict": "OK"
+    },
+    "G8b": {
+     "attendu": "ZERO deviation -- identite demontree au gel, G8b",
+     "fin": {
+      "deviations": 0,
+      "explosifs_+1": 151,
+      "n": 201,
+      "non_explosifs_+1": 50,
+      "pouvoir": "REEL si la transition est encadree (note N-1)",
+      "transition_encadree": true
+     },
+     "grossier": {
+      "deviations": 0,
+      "explosifs_+1": 0,
+      "explosifs_-1": 0,
+      "n": 176,
+      "pouvoir": "NUL si les deux comptes sont 0 (note N-1)"
+     },
+     "ilots_identiques": true,
+     "retombee_identique": true
+    }
+   },
+   "4|1.800000000000": {
+    "G8a": {
+     "ecart_absolu": 0.0,
+     "en_pas": 0.0,
+     "verdict": "OK"
+    },
+    "G8b": {
+     "attendu": "ZERO deviation -- identite demontree au gel, G8b",
+     "fin": {
+      "deviations": 0,
+      "explosifs_+1": 153,
+      "n": 201,
+      "non_explosifs_+1": 48,
+      "pouvoir": "REEL si la transition est encadree (note N-1)",
+      "transition_encadree": true
+     },
+     "grossier": {
+      "deviations": 0,
+      "explosifs_+1": 0,
+      "explosifs_-1": 0,
+      "n": 177,
+      "pouvoir": "NUL si les deux comptes sont 0 (note N-1)"
+     },
+     "ilots_identiques": true,
+     "retombee_identique": true
+    }
+   },
+   "4|1.900000000000": {
+    "G8a": {
+     "ecart_absolu": 0.0,
+     "en_pas": 0.0,
+     "verdict": "OK"
+    },
+    "G8b": {
+     "attendu": "ZERO deviation -- identite demontree au gel, G8b",
+     "fin": {
+      "deviations": 0,
+      "explosifs_+1": 148,
+      "n": 201,
+      "non_explosifs_+1": 53,
+      "pouvoir": "REEL si la transition est encadree (note N-1)",
+      "transition_encadree": true
+     },
+     "grossier": {
+      "deviations": 0,
+      "explosifs_+1": 0,
+      "explosifs_-1": 0,
+      "n": 177,
+      "pouvoir": "NUL si les deux comptes sont 0 (note N-1)"
+     },
+     "ilots_identiques": true,
+     "retombee_identique": true
+    }
+   },
+   "4|2.050000000000": {
+    "G8a": {
+     "ecart_absolu": 0.0,
+     "en_pas": 0.0,
+     "verdict": "OK"
+    },
+    "G8b": {
+     "attendu": "ZERO deviation -- identite demontree au gel, G8b",
+     "fin": {
+      "deviations": 0,
+      "explosifs_+1": 151,
+      "n": 201,
+      "non_explosifs_+1": 50,
+      "pouvoir": "REEL si la transition est encadree (note N-1)",
+      "transition_encadree": true
+     },
+     "grossier": {
+      "deviations": 0,
+      "explosifs_+1": 0,
+      "explosifs_-1": 0,
+      "n": 178,
+      "pouvoir": "NUL si les deux comptes sont 0 (note N-1)"
+     },
+     "ilots_identiques": true,
+     "retombee_identique": true
+    }
+   },
+   "4|2.150000000000": {
+    "G8a": {
+     "ecart_absolu": 0.0,
+     "en_pas": 0.0,
+     "verdict": "OK"
+    },
+    "G8b": {
+     "attendu": "ZERO deviation -- identite demontree au gel, G8b",
+     "fin": {
+      "deviations": 0,
+      "explosifs_+1": 151,
+      "n": 201,
+      "non_explosifs_+1": 50,
+      "pouvoir": "REEL si la transition est encadree (note N-1)",
+      "transition_encadree": true
+     },
+     "grossier": {
+      "deviations": 0,
+      "explosifs_+1": 0,
+      "explosifs_-1": 0,
+      "n": 178,
+      "pouvoir": "NUL si les deux comptes sont 0 (note N-1)"
+     },
+     "ilots_identiques": true,
+     "retombee_identique": true
+    }
+   },
+   "4|2.300000000000": {
+    "G8a": {
+     "ecart_absolu": 0.0,
+     "en_pas": 0.0,
+     "verdict": "OK"
+    },
+    "G8b": {
+     "attendu": "ZERO deviation -- identite demontree au gel, G8b",
+     "fin": {
+      "deviations": 0,
+      "explosifs_+1": 151,
+      "n": 201,
+      "non_explosifs_+1": 50,
+      "pouvoir": "REEL si la transition est encadree (note N-1)",
+      "transition_encadree": true
+     },
+     "grossier": {
+      "deviations": 0,
+      "explosifs_+1": 0,
+      "explosifs_-1": 0,
+      "n": 178,
+      "pouvoir": "NUL si les deux comptes sont 0 (note N-1)"
+     },
+     "ilots_identiques": true,
+     "retombee_identique": true
+    }
+   },
+   "4|2.450000000000": {
+    "G8a": {
+     "ecart_absolu": 0.0,
+     "en_pas": 0.0,
+     "verdict": "OK"
+    },
+    "G8b": {
+     "attendu": "ZERO deviation -- identite demontree au gel, G8b",
+     "fin": {
+      "deviations": 0,
+      "explosifs_+1": 130,
+      "n": 201,
+      "non_explosifs_+1": 71,
+      "pouvoir": "REEL si la transition est encadree (note N-1)",
+      "transition_encadree": true
+     },
+     "grossier": {
+      "deviations": 0,
+      "explosifs_+1": 0,
+      "explosifs_-1": 0,
+      "n": 178,
+      "pouvoir": "NUL si les deux comptes sont 0 (note N-1)"
+     },
+     "ilots_identiques": true,
+     "retombee_identique": true
+    }
+   },
+   "4|2.600000000000": {
+    "G8a": {
+     "ecart_absolu": 0.0,
+     "en_pas": 0.0,
+     "verdict": "OK"
+    },
+    "G8b": {
+     "attendu": "ZERO deviation -- identite demontree au gel, G8b",
+     "fin": {
+      "deviations": 0,
+      "explosifs_+1": 132,
+      "n": 201,
+      "non_explosifs_+1": 69,
+      "pouvoir": "REEL si la transition est encadree (note N-1)",
+      "transition_encadree": true
+     },
+     "grossier": {
+      "deviations": 0,
+      "explosifs_+1": 0,
+      "explosifs_-1": 0,
+      "n": 180,
+      "pouvoir": "NUL si les deux comptes sont 0 (note N-1)"
+     },
+     "ilots_identiques": true,
+     "retombee_identique": true
+    }
+   },
+   "4|2.750000000000": {
+    "G8a": {
+     "ecart_absolu": 0.0,
+     "en_pas": 0.0,
+     "verdict": "OK"
+    },
+    "G8b": {
+     "attendu": "ZERO deviation -- identite demontree au gel, G8b",
+     "fin": {
+      "deviations": 0,
+      "explosifs_+1": 143,
+      "n": 201,
+      "non_explosifs_+1": 58,
+      "pouvoir": "REEL si la transition est encadree (note N-1)",
+      "transition_encadree": true
+     },
+     "grossier": {
+      "deviations": 0,
+      "explosifs_+1": 0,
+      "explosifs_-1": 0,
+      "n": 180,
+      "pouvoir": "NUL si les deux comptes sont 0 (note N-1)"
+     },
+     "ilots_identiques": true,
+     "retombee_identique": true
+    }
+   },
+   "4|2.850000000000": {
+    "G8a": {
+     "ecart_absolu": 0.0,
+     "en_pas": 0.0,
+     "verdict": "OK"
+    },
+    "G8b": {
+     "attendu": "ZERO deviation -- identite demontree au gel, G8b",
+     "fin": {
+      "deviations": 0,
+      "explosifs_+1": 141,
+      "n": 201,
+      "non_explosifs_+1": 60,
+      "pouvoir": "REEL si la transition est encadree (note N-1)",
+      "transition_encadree": true
+     },
+     "grossier": {
+      "deviations": 0,
+      "explosifs_+1": 0,
+      "explosifs_-1": 0,
+      "n": 180,
+      "pouvoir": "NUL si les deux comptes sont 0 (note N-1)"
+     },
+     "ilots_identiques": true,
+     "retombee_identique": true
+    }
+   }
+  },
+  "carte": {
+   "4|1.250000000000": {
+    "asym": 1.0,
+    "frag": 1,
+    "sF": 0.94162724312684,
+    "sM": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 0.94162724312684
+    },
+    "sP": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 0.94162724312684
+    }
+   },
+   "4|1.300000000000": {
+    "asym": 1.0,
+    "frag": 1,
+    "sF": 1.085004894463604,
+    "sM": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 1.085004894463604
+    },
+    "sP": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 1.085004894463604
+    }
+   },
+   "4|1.350000000000": {
+    "asym": 1.0,
+    "frag": 1,
+    "sF": 1.1417191606970771,
+    "sM": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 1.1417191606970771
+    },
+    "sP": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 1.1417191606970771
+    }
+   },
+   "4|1.414213562373": {
+    "asym": 1.0,
+    "frag": 1,
+    "sF": 1.2489088463817724,
+    "sM": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 1.2489088463817724
+    },
+    "sP": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 1.2489088463817724
+    }
+   },
+   "4|1.450000000000": {
+    "asym": 1.0,
+    "frag": 1,
+    "sF": 1.2847843267666583,
+    "sM": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 1.2847843267666583
+    },
+    "sP": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 1.2847843267666583
+    }
+   },
+   "4|1.550000000000": {
+    "asym": 1.0,
+    "frag": 1,
+    "sF": 1.445304630299442,
+    "sM": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 1.445304630299442
+    },
+    "sP": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 1.445304630299442
+    }
+   },
+   "4|1.700000000000": {
+    "asym": 1.0,
+    "frag": 1,
+    "sF": 1.9678686752808552,
+    "sM": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 1.9678686752808552
+    },
+    "sP": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 1.9678686752808552
+    }
+   },
+   "4|1.800000000000": {
+    "asym": 1.0,
+    "frag": 1,
+    "sF": 2.2042191391523125,
+    "sM": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 2.2042191391523125
+    },
+    "sP": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 2.2042191391523125
+    }
+   },
+   "4|1.900000000000": {
+    "asym": 1.0,
+    "frag": 1,
+    "sF": 2.399727537301592,
+    "sM": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 2.399727537301592
+    },
+    "sP": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 2.399727537301592
+    }
+   },
+   "4|2.050000000000": {
+    "asym": 1.0,
+    "frag": 1,
+    "sF": 2.681712915249993,
+    "sM": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 2.681712915249993
+    },
+    "sP": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 2.681712915249993
+    }
+   },
+   "4|2.150000000000": {
+    "asym": 1.0,
+    "frag": 1,
+    "sF": 2.8164163857820776,
+    "sM": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 2.8164163857820776
+    },
+    "sP": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 2.8164163857820776
+    }
+   },
+   "4|2.300000000000": {
+    "asym": 1.0,
+    "frag": 1,
+    "sF": 2.9342510811669866,
+    "sM": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 2.9342510811669866
+    },
+    "sP": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 2.9342510811669866
+    }
+   },
+   "4|2.450000000000": {
+    "asym": 1.0,
+    "frag": 1,
+    "sF": 2.947689154162677,
+    "sM": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 2.947689154162677
+    },
+    "sP": {
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 2.947689154162677
+    }
+   },
+   "4|2.600000000000": {
+    "asym": 1.0,
+    "frag": 1,
+    "sF": 7.157438697540399,
+    "sM": {
+     "motif_exclusion": "",
+     "note": "OK|pas=1.82e-06",
+     "recevable": true,
+     "s": 7.157438697540399
+    },
+    "sP": {
+     "motif_exclusion": "",
+     "note": "OK|pas=1.82e-06",
+     "recevable": true,
+     "s": 7.157438697540399
+    }
+   },
+   "4|2.750000000000": {
+    "asym": 1.0,
+    "frag": 1,
+    "sF": 7.966441671731798,
+    "sM": {
+     "motif_exclusion": "",
+     "note": "OK|pas=1.82e-06",
+     "recevable": true,
+     "s": 7.966441671731798
+    },
+    "sP": {
+     "motif_exclusion": "",
+     "note": "OK|pas=1.82e-06",
+     "recevable": true,
+     "s": 7.966441671731798
+    }
+   },
+   "4|2.850000000000": {
+    "asym": 1.0,
+    "frag": 1,
+    "sF": 8.24916028645919,
+    "sM": {
+     "motif_exclusion": "",
+     "note": "OK|pas=1.82e-06",
+     "recevable": true,
+     "s": 8.24916028645919
+    },
+    "sP": {
+     "motif_exclusion": "",
+     "note": "OK|pas=1.82e-06",
+     "recevable": true,
+     "s": 8.24916028645919
+    }
+   }
+  }
+ },
+ "resume": {
+  "P-M11a": {
+   "motif": "7 points < 8",
+   "verdict": "NON CONCLUANT PAR CONSTRUCTION"
+  },
+  "P-M11b": {
+   "motif": "7 points < 8",
+   "verdict": "NON CONCLUANT PAR CONSTRUCTION"
+  },
+  "P-M11c": {
+   "motif": "7 points < 8",
+   "verdict": "NON CONCLUANT PAR CONSTRUCTION"
+  },
+  "n_fit": 7,
+  "w2_retenus": [
+   1.7,
+   2.15,
+   2.3,
+   2.45,
+   2.6,
+   2.75,
+   2.85
+  ]
+ }
+}

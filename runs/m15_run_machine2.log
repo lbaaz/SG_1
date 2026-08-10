@@ -1,0 +1,49 @@
+Gel jumeau M15 v3 : sha e41f4da3685e6d1b... -> CONCORDANT
+Instrument (pilote) 663b17e2955c79c09f1b6c0f... -> CONCORDANT
+  gel jumeau du pilote re-verifie (03e29c86...) : CONCORDANT
+Pre-run : F (|F| = 14), 8 triplets et K_X re-derives ==
+  consignation pre-run de la certification (note 8081a032...) ; ARRET arme.
+Moteur c8ed357b120352c4d1078307... -> CONCORDANT
+rule-11 : six points du programme en centiemes exacts ; ancre G1'
+  sur la carte m12 a 1e-9. Le programme est NEUF par valeur (ITEM 2).
+
+--- G1' custody : rejeu au bit des 5 lignes de 2.72 ---
+  rebinding m9.P = 7 | G3 backward = 4.746e-16
+G3 : erreur backward max = 4.746e-16 (tolerance 1e-12) -> PASSE
+
+  rebinding m9.P = 5 | G3 backward = 4.408e-16
+G3 : erreur backward max = 4.408e-16 (tolerance 1e-12) -> PASSE
+
+  rebinding m9.P = 4 | G3 backward = 4.328e-16
+G3 : erreur backward max = 4.328e-16 (tolerance 1e-12) -> PASSE
+
+  ecarts absolus = 0.0 EXACT sur les 5 lignes : custody intacte.
+
+--- degre p = 7 ---
+  rebinding m9.P = 7 | G3 backward = 4.746e-16
+G3 : erreur backward max = 4.746e-16 (tolerance 1e-12) -> PASSE
+
+
+--- degre p = 5 ---
+  rebinding m9.P = 5 | G3 backward = 4.408e-16
+G3 : erreur backward max = 4.408e-16 (tolerance 1e-12) -> PASSE
+
+
+--- degre p = 4 ---
+  rebinding m9.P = 4 | G3 backward = 4.328e-16
+G3 : erreur backward max = 4.328e-16 (tolerance 1e-12) -> PASSE
+
+
+--- G4 : dt/2 sur la ligne maximisant g*s^(p-1) ---
+  rebinding m9.P = 4 | G3 backward = 4.328e-16
+G3 : erreur backward max = 4.328e-16 (tolerance 1e-12) -> PASSE
+
+
+--- G2 invariance (1 recherche a 2g, 7|PROCHE_droit|+1) ---
+
+--- P-M15a : critere au site (partition D-3) ---
+P-M15b : k = 0 / n_eff = 24, k_min = 3 -> SIGNATURE NON RESOLUE
+
+Ecrit : out\m15_results.json
+Recherches : 37 + 1 = 38 / 38 | balayages : 31 + 0 = 31 / 31
+sha256 du JSON : 96d784077577d57db2ccdea8500481e8761f3632d3856fc9a966df2667bc4162

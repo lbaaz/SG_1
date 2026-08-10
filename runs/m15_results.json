@@ -1,0 +1,1918 @@
+{
+ "meta": {
+  "G3_par_degre": [
+   {
+    "G3_backward": 4.745927885856733e-16,
+    "p": 7
+   },
+   {
+    "G3_backward": 4.407548970089733e-16,
+    "p": 5
+   },
+   {
+    "G3_backward": 4.3284256267548534e-16,
+    "p": 4
+   },
+   {
+    "G3_backward": 4.745927885856733e-16,
+    "p": 7
+   },
+   {
+    "G3_backward": 4.407548970089733e-16,
+    "p": 5
+   },
+   {
+    "G3_backward": 4.3284256267548534e-16,
+    "p": 4
+   },
+   {
+    "G3_backward": 4.3284256267548534e-16,
+    "p": 4
+   }
+  ],
+  "artefacts": {
+   "m10_sha256": "7cf3624b45dd7d2bb91d29485bd14599e749bd60ba683c4b0c0b224a28aba3bc",
+   "m11_sha256": "ad275870847d440ecfb04e7b7108c24748d1a1126eb223c6b3db9a1c9038d124",
+   "m12_sha256": "fa109da92e582520cfcb63b46bc41fa7d4b62295891f413bb97c6095b2fe59b1",
+   "statut": "REELLES"
+  },
+  "balayages": {
+   "attendus": 31,
+   "comptes": 31,
+   "sautes": 0
+  },
+  "cible_g1p": {
+   "sha256_attendu": "fa109da92e582520cfcb63b46bc41fa7d4b62295891f413bb97c6095b2fe59b1",
+   "source": "m12_results.json"
+  },
+  "convention_empreinte": "B -- bloc saut final inclus = fichier",
+  "date_utc": "2026-08-08T16:10:39Z",
+  "declarations": {
+   "G8b": "test STRUCTUREL sur la source du moteur (gel v3) ; la comparaison de masques de la lignee est consignee en plus, SANS porte",
+   "N-13": "assignation R-2' = argmin de la marge NORMALISEE d/rayon (gel v3) ; la lecture ABSOLUE (cert. v2) differe sur 6 points de F, meme ensemble F",
+   "N-14": "flanc droit sans survivant -> G2 SAUTEE avec motif, recherches jouees = 37",
+   "N-15": "resolution de la manche chiffree note 8081a032 section 5 ; planchers PAR POINT consignes ici (pre_run + P_M15a)",
+   "P-M15b_unite": "ligne SIGNEE impaire du programme (unite du registre D-4, denominateur 96)"
+  },
+  "exclusions": {
+   "4|2.640000000000": [
+    "G6 sgn=+1 explosion sous seuil (fenetre FINE)"
+   ],
+   "4|2.690000000000": [
+    "G6 sgn=+1 explosion sous seuil (fenetre FINE)"
+   ],
+   "4|2.710000000000": [
+    "G6 sgn=+1 explosion sous seuil (fenetre FINE)"
+   ],
+   "4|2.730000000000": [
+    "G6 sgn=+1 explosion sous seuil (fenetre FINE)"
+   ],
+   "5|2.650000000000": [
+    "G6 sgn=+1 explosion sous seuil (fenetre FINE)"
+   ],
+   "7|2.710000000000": [
+    "G6 sgn=+1 explosion sous seuil (fenetre FINE)"
+   ]
+  },
+  "forme_canonique": "LF, labels normalises, date omise -- la date ci-dessus est HORS bloc canonique",
+  "gardes": [
+   "G2 SAUTEE (N-14) : flanc droit vide"
+  ],
+  "gel_sha256_bloc": "e41f4da3685e6d1b930848f1e6ad27cf3c12ce291050cbd61194c0ee2326ba72",
+  "mode": "REEL",
+  "moteur_sha256": "c8ed357b120352c4d1078307add3eaac285940c8bec00acc2ddc9ff386ab2c5c",
+  "pilote_sha256": "663b17e2955c79c09f1b6c0fb4443cd0c1f98be0db03ef089f5df682018ce905",
+  "recherches": {
+   "attendues": 38,
+   "comptees": 37,
+   "derivation": "31 + 5*g8_echec (programme) + 5 (G1') + 1 (G4) + 1 (G2 joue ou saute, N-14)",
+   "sautees": 1
+  },
+  "reference_pre_run": {
+   "note_certification_v3": "8081a0325e0821de31d07b26f10f57afcb5f98a93c18e3e2634d314efb4f9402",
+   "role": "ARRET seulement -- les valeurs UTILISEES sont re-derivees des artefacts (ITEM 6)"
+  },
+  "script_sha256": "d05cf50bcf923a7e50386b5a1129b28c5ab1a002ebe7a58139173bd2a7d4d3cc"
+ },
+ "resultats": {
+  "G1p": {
+   "4|+1": {
+    "cible": 7.954564778010348,
+    "ecart_absolu": 0.0,
+    "mesure": {
+     "duree_s": 13.610262799891643,
+     "motif_exclusion": "",
+     "note": "OK|pas=1.82e-06",
+     "recevable": true,
+     "s": 7.954564778010348
+    },
+    "verdict": "PASSE"
+   },
+   "5|+1": {
+    "cible": 3.3926796364460365,
+    "ecart_absolu": 0.0,
+    "mesure": {
+     "duree_s": 10.915549200028181,
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 3.3926796364460365
+    },
+    "verdict": "PASSE"
+   },
+   "5|-1": {
+    "cible": 2.528446130737688,
+    "ecart_absolu": 0.0,
+    "mesure": {
+     "duree_s": 10.876594200031832,
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 2.528446130737688
+    },
+    "verdict": "PASSE"
+   },
+   "7|+1": {
+    "cible": 1.8741954855353522,
+    "ecart_absolu": 0.0,
+    "mesure": {
+     "duree_s": 11.077360299997963,
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 1.8741954855353522
+    },
+    "verdict": "PASSE"
+   },
+   "7|-1": {
+    "cible": 1.5289957858440253,
+    "ecart_absolu": 0.0,
+    "mesure": {
+     "duree_s": 11.12326389993541,
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 1.5289957858440253
+    },
+    "verdict": "PASSE"
+   }
+  },
+  "G2": {
+   "motif": "N-14 : flanc droit sans survivant, G2 sans cible ; recherches jouees = 37",
+   "verdict": "SAUTEE"
+  },
+  "G4": {
+   "ecart": 0.0,
+   "p": 4,
+   "s_dt": 7.973179454709609,
+   "s_dt2": 7.973179454709609,
+   "sgn": 1,
+   "verdict": "PASSE",
+   "w2": 2.71
+  },
+  "G6": {
+   "4|2.620000000000|+1": {
+    "bornes_fin": [
+     6.501620399495701,
+     7.585223799411652
+    ],
+    "bornes_gros": [
+     0.05,
+     6.501620399495701
+    ],
+    "ecart_absolu_indice_40_au_seuil": 8.881784197001252e-16,
+    "ecart_relatif_indice_40_au_seuil": 1.1102230246251565e-16,
+    "exclue": false,
+    "explosif_a_l_indice_40": false,
+    "explosion_sous_0.98s": null,
+    "explosion_sous_0.98s_motif": "aucune explosion sous 0.98 s* dans la fenetre fine",
+    "explosion_sous_LO0_0.90s": null,
+    "explosion_sous_LO0_0.90s_motif": "aucune explosion dans la fenetre grossiere [LO0, 0.90 s*]",
+    "fin_explosifs": 11,
+    "fin_non_explosifs": 65,
+    "g8b_grossier_attendu": "VIDE (pre-declare, lignee pilote/M12, note ad8dd209)",
+    "gros_explosifs": 0,
+    "ilots": 3,
+    "ilots_au_dessus": 3,
+    "ilots_au_dessus_domaine": "[s*, 1.05 s*] -- domaine declare, gel v3 (S5b)",
+    "ilots_domaine_lignee": "[0.90 s*, 1.05 s*] -- champ 'ilots', balayer lignee",
+    "indice_40_compte_comme_sous_seuil": false,
+    "indice_du_seuil_098": 40,
+    "motif_fenetre": "voir cles explosion_* (fenetre nommee, D1-1)",
+    "n_fin": 76,
+    "n_gros": 180,
+    "n_total": 256,
+    "pas_eff_fin_rel": 0.0020000000000000005,
+    "pas_eff_gros_rel": 0.0049892661928272065,
+    "pas_final_recherche": 1.82e-06,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.002,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "4|2.620000000000|-1": {
+    "bornes_fin": [
+     6.501620399495701,
+     7.585223799411652
+    ],
+    "bornes_gros": [
+     0.05,
+     6.501620399495701
+    ],
+    "ecart_absolu_indice_40_au_seuil": 8.881784197001252e-16,
+    "ecart_relatif_indice_40_au_seuil": 1.1102230246251565e-16,
+    "exclue": false,
+    "explosif_a_l_indice_40": false,
+    "explosion_sous_0.98s": null,
+    "explosion_sous_0.98s_motif": "aucune explosion sous 0.98 s* dans la fenetre fine",
+    "explosion_sous_LO0_0.90s": null,
+    "explosion_sous_LO0_0.90s_motif": "aucune explosion dans la fenetre grossiere [LO0, 0.90 s*]",
+    "fin_explosifs": 11,
+    "fin_non_explosifs": 65,
+    "g8b_grossier_attendu": "VIDE (pre-declare, lignee pilote/M12, note ad8dd209)",
+    "gros_explosifs": 0,
+    "ilots": 3,
+    "ilots_au_dessus": 3,
+    "ilots_au_dessus_domaine": "[s*, 1.05 s*] -- domaine declare, gel v3 (S5b)",
+    "ilots_domaine_lignee": "[0.90 s*, 1.05 s*] -- champ 'ilots', balayer lignee",
+    "indice_40_compte_comme_sous_seuil": false,
+    "indice_du_seuil_098": 40,
+    "motif_fenetre": "voir cles explosion_* (fenetre nommee, D1-1)",
+    "n_fin": 76,
+    "n_gros": 180,
+    "n_total": 256,
+    "pas_eff_fin_rel": 0.0020000000000000005,
+    "pas_eff_gros_rel": 0.0049892661928272065,
+    "pas_final_recherche": 1.82e-06,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.002,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "4|2.640000000000|+1": {
+    "bornes_fin": [
+     7.123405897790621,
+     8.310640214089059
+    ],
+    "bornes_gros": [
+     0.05,
+     7.123405897790621
+    ],
+    "ecart_absolu_indice_40_au_seuil": 0.0,
+    "ecart_relatif_indice_40_au_seuil": 0.0,
+    "exclue": true,
+    "explosif_a_l_indice_40": true,
+    "explosion_sous_0.98s": 7.424171924586226,
+    "explosion_sous_LO0_0.90s": null,
+    "explosion_sous_LO0_0.90s_motif": "aucune explosion dans la fenetre grossiere [LO0, 0.90 s*]",
+    "fin_explosifs": 51,
+    "fin_non_explosifs": 25,
+    "g8b_grossier_attendu": "VIDE (pre-declare, lignee pilote/M12, note ad8dd209)",
+    "gros_explosifs": 0,
+    "ilots": 7,
+    "ilots_au_dessus": 1,
+    "ilots_au_dessus_domaine": "[s*, 1.05 s*] -- domaine declare, gel v3 (S5b)",
+    "ilots_domaine_lignee": "[0.90 s*, 1.05 s*] -- champ 'ilots', balayer lignee",
+    "indice_40_compte_comme_sous_seuil": false,
+    "indice_du_seuil_098": 40,
+    "motif_fenetre": "voir cles explosion_* (fenetre nommee, D1-1)",
+    "n_fin": 76,
+    "n_gros": 180,
+    "n_total": 256,
+    "pas_eff_fin_rel": 0.0020000000000000005,
+    "pas_eff_gros_rel": 0.004992641324891101,
+    "pas_final_recherche": 1.82e-06,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": null,
+    "premiere_retombee_en_s_motif": "aucune retombee dans la fenetre [s*, 1.05 s*]",
+    "transition_dans_la_fenetre_fine": true
+   },
+   "4|2.650000000000|+1": {
+    "bornes_fin": [
+     6.779508505619635,
+     7.909426589889574
+    ],
+    "bornes_gros": [
+     0.05,
+     6.779508505619635
+    ],
+    "ecart_absolu_indice_40_au_seuil": 8.881784197001252e-16,
+    "ecart_relatif_indice_40_au_seuil": 1.1102230246251565e-16,
+    "exclue": false,
+    "explosif_a_l_indice_40": true,
+    "explosion_sous_0.98s": null,
+    "explosion_sous_0.98s_motif": "aucune explosion sous 0.98 s* dans la fenetre fine",
+    "explosion_sous_LO0_0.90s": null,
+    "explosion_sous_LO0_0.90s_motif": "aucune explosion dans la fenetre grossiere [LO0, 0.90 s*]",
+    "fin_explosifs": 28,
+    "fin_non_explosifs": 48,
+    "g8b_grossier_attendu": "VIDE (pre-declare, lignee pilote/M12, note ad8dd209)",
+    "gros_explosifs": 0,
+    "ilots": 6,
+    "ilots_au_dessus": 3,
+    "ilots_au_dessus_domaine": "[s*, 1.05 s*] -- domaine declare, gel v3 (S5b)",
+    "ilots_domaine_lignee": "[0.90 s*, 1.05 s*] -- champ 'ilots', balayer lignee",
+    "indice_40_compte_comme_sous_seuil": false,
+    "indice_du_seuil_098": 40,
+    "motif_fenetre": "voir cles explosion_* (fenetre nommee, D1-1)",
+    "n_fin": 76,
+    "n_gros": 180,
+    "n_total": 256,
+    "pas_eff_fin_rel": 0.0020000000000000005,
+    "pas_eff_gros_rel": 0.0049908511211356615,
+    "pas_final_recherche": 1.82e-06,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.01,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "4|2.690000000000|+1": {
+    "bornes_fin": [
+     7.145579262682388,
+     8.336509139796119
+    ],
+    "bornes_gros": [
+     0.05,
+     7.145579262682388
+    ],
+    "ecart_absolu_indice_40_au_seuil": 0.0,
+    "ecart_relatif_indice_40_au_seuil": 0.0,
+    "exclue": true,
+    "explosif_a_l_indice_40": false,
+    "explosion_sous_0.98s": 7.685467473640613,
+    "explosion_sous_LO0_0.90s": null,
+    "explosion_sous_LO0_0.90s_motif": "aucune explosion dans la fenetre grossiere [LO0, 0.90 s*]",
+    "fin_explosifs": 27,
+    "fin_non_explosifs": 49,
+    "g8b_grossier_attendu": "VIDE (pre-declare, lignee pilote/M12, note ad8dd209)",
+    "gros_explosifs": 0,
+    "ilots": 5,
+    "ilots_au_dessus": 3,
+    "ilots_au_dessus_domaine": "[s*, 1.05 s*] -- domaine declare, gel v3 (S5b)",
+    "ilots_domaine_lignee": "[0.90 s*, 1.05 s*] -- champ 'ilots', balayer lignee",
+    "indice_40_compte_comme_sous_seuil": false,
+    "indice_du_seuil_098": 40,
+    "motif_fenetre": "voir cles explosion_* (fenetre nommee, D1-1)",
+    "n_fin": 76,
+    "n_gros": 180,
+    "n_total": 256,
+    "pas_eff_fin_rel": 0.0020000000000000005,
+    "pas_eff_gros_rel": 0.004992750837961204,
+    "pas_final_recherche": 1.82e-06,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.004,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "4|2.710000000000|+1": {
+    "bornes_fin": [
+     7.175861509238648,
+     8.37183842744509
+    ],
+    "bornes_gros": [
+     0.05,
+     7.175861509238648
+    ],
+    "ecart_absolu_indice_40_au_seuil": 8.881784197001252e-16,
+    "ecart_relatif_indice_40_au_seuil": 1.1102230246251565e-16,
+    "exclue": true,
+    "explosif_a_l_indice_40": false,
+    "explosion_sous_0.98s": 7.670198635430644,
+    "explosion_sous_LO0_0.90s": null,
+    "explosion_sous_LO0_0.90s_motif": "aucune explosion dans la fenetre grossiere [LO0, 0.90 s*]",
+    "fin_explosifs": 26,
+    "fin_non_explosifs": 50,
+    "g8b_grossier_attendu": "VIDE (pre-declare, lignee pilote/M12, note ad8dd209)",
+    "gros_explosifs": 0,
+    "ilots": 6,
+    "ilots_au_dessus": 4,
+    "ilots_au_dessus_domaine": "[s*, 1.05 s*] -- domaine declare, gel v3 (S5b)",
+    "ilots_domaine_lignee": "[0.90 s*, 1.05 s*] -- champ 'ilots', balayer lignee",
+    "indice_40_compte_comme_sous_seuil": false,
+    "indice_du_seuil_098": 40,
+    "motif_fenetre": "voir cles explosion_* (fenetre nommee, D1-1)",
+    "n_fin": 76,
+    "n_gros": 180,
+    "n_total": 256,
+    "pas_eff_fin_rel": 0.0020000000000000005,
+    "pas_eff_gros_rel": 0.004992899307064133,
+    "pas_final_recherche": 1.82e-06,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.002,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "4|2.730000000000|+1": {
+    "bornes_fin": [
+     7.1566544478279575,
+     8.349430189132617
+    ],
+    "bornes_gros": [
+     0.05,
+     7.1566544478279575
+    ],
+    "ecart_absolu_indice_40_au_seuil": 0.0,
+    "ecart_relatif_indice_40_au_seuil": 0.0,
+    "exclue": true,
+    "explosif_a_l_indice_40": false,
+    "explosion_sous_0.98s": 7.697379450552736,
+    "explosion_sous_LO0_0.90s": null,
+    "explosion_sous_LO0_0.90s_motif": "aucune explosion dans la fenetre grossiere [LO0, 0.90 s*]",
+    "fin_explosifs": 23,
+    "fin_non_explosifs": 53,
+    "g8b_grossier_attendu": "VIDE (pre-declare, lignee pilote/M12, note ad8dd209)",
+    "gros_explosifs": 0,
+    "ilots": 4,
+    "ilots_au_dessus": 3,
+    "ilots_au_dessus_domaine": "[s*, 1.05 s*] -- domaine declare, gel v3 (S5b)",
+    "ilots_domaine_lignee": "[0.90 s*, 1.05 s*] -- champ 'ilots', balayer lignee",
+    "indice_40_compte_comme_sous_seuil": false,
+    "indice_du_seuil_098": 40,
+    "motif_fenetre": "voir cles explosion_* (fenetre nommee, D1-1)",
+    "n_fin": 76,
+    "n_gros": 180,
+    "n_total": 256,
+    "pas_eff_fin_rel": 0.0020000000000000005,
+    "pas_eff_gros_rel": 0.00499280528358634,
+    "pas_final_recherche": 1.82e-06,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.002,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "5|2.620000000000|+1": {
+    "bornes_fin": [
+     2.9328658962596768,
+     3.421676878969623
+    ],
+    "bornes_gros": [
+     0.05,
+     2.9328658962596768
+    ],
+    "ecart_absolu_indice_40_au_seuil": 0.0,
+    "ecart_relatif_indice_40_au_seuil": 0.0,
+    "exclue": false,
+    "explosif_a_l_indice_40": false,
+    "explosion_sous_0.98s": null,
+    "explosion_sous_0.98s_motif": "aucune explosion sous 0.98 s* dans la fenetre fine",
+    "explosion_sous_LO0_0.90s": null,
+    "explosion_sous_LO0_0.90s_motif": "aucune explosion dans la fenetre grossiere [LO0, 0.90 s*]",
+    "fin_explosifs": 19,
+    "fin_non_explosifs": 57,
+    "gros_explosifs": 0,
+    "ilots": 4,
+    "ilots_au_dessus": 4,
+    "ilots_au_dessus_domaine": "[s*, 1.05 s*] -- domaine declare, gel v3 (S5b)",
+    "ilots_domaine_lignee": "[0.90 s*, 1.05 s*] -- champ 'ilots', balayer lignee",
+    "indice_40_compte_comme_sous_seuil": false,
+    "indice_du_seuil_098": 40,
+    "motif_fenetre": "voir cles explosion_* (fenetre nommee, D1-1)",
+    "n_fin": 76,
+    "n_gros": 178,
+    "n_total": 254,
+    "pas_eff_fin_rel": 0.0020000000000000005,
+    "pas_eff_gros_rel": 0.004998060146277842,
+    "pas_final_recherche": 6.03e-07,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.002,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "5|2.620000000000|-1": {
+    "bornes_fin": [
+     2.098439201941361,
+     2.4481790689315877
+    ],
+    "bornes_gros": [
+     0.05,
+     2.098439201941361
+    ],
+    "ecart_absolu_indice_40_au_seuil": 4.440892098500626e-16,
+    "ecart_relatif_indice_40_au_seuil": 1.1102230246251565e-16,
+    "exclue": false,
+    "explosif_a_l_indice_40": false,
+    "explosion_sous_0.98s": null,
+    "explosion_sous_0.98s_motif": "aucune explosion sous 0.98 s* dans la fenetre fine",
+    "explosion_sous_LO0_0.90s": null,
+    "explosion_sous_LO0_0.90s_motif": "aucune explosion dans la fenetre grossiere [LO0, 0.90 s*]",
+    "fin_explosifs": 17,
+    "fin_non_explosifs": 59,
+    "gros_explosifs": 0,
+    "ilots": 7,
+    "ilots_au_dessus": 7,
+    "ilots_au_dessus_domaine": "[s*, 1.05 s*] -- domaine declare, gel v3 (S5b)",
+    "ilots_domaine_lignee": "[0.90 s*, 1.05 s*] -- champ 'ilots', balayer lignee",
+    "indice_40_compte_comme_sous_seuil": false,
+    "indice_du_seuil_098": 40,
+    "motif_fenetre": "voir cles explosion_* (fenetre nommee, D1-1)",
+    "n_fin": 76,
+    "n_gros": 177,
+    "n_total": 253,
+    "pas_eff_fin_rel": 0.0020000000000000005,
+    "pas_eff_gros_rel": 0.004991792558037768,
+    "pas_final_recherche": 6.03e-07,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.002,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "5|2.640000000000|+1": {
+    "bornes_fin": [
+     2.953040560427489,
+     3.445213987165404
+    ],
+    "bornes_gros": [
+     0.05,
+     2.953040560427489
+    ],
+    "ecart_absolu_indice_40_au_seuil": 0.0,
+    "ecart_relatif_indice_40_au_seuil": 0.0,
+    "exclue": false,
+    "explosif_a_l_indice_40": false,
+    "explosion_sous_0.98s": null,
+    "explosion_sous_0.98s_motif": "aucune explosion sous 0.98 s* dans la fenetre fine",
+    "explosion_sous_LO0_0.90s": null,
+    "explosion_sous_LO0_0.90s_motif": "aucune explosion dans la fenetre grossiere [LO0, 0.90 s*]",
+    "fin_explosifs": 11,
+    "fin_non_explosifs": 65,
+    "gros_explosifs": 0,
+    "ilots": 4,
+    "ilots_au_dessus": 4,
+    "ilots_au_dessus_domaine": "[s*, 1.05 s*] -- domaine declare, gel v3 (S5b)",
+    "ilots_domaine_lignee": "[0.90 s*, 1.05 s*] -- champ 'ilots', balayer lignee",
+    "indice_40_compte_comme_sous_seuil": false,
+    "indice_du_seuil_098": 40,
+    "motif_fenetre": "voir cles explosion_* (fenetre nommee, D1-1)",
+    "n_fin": 76,
+    "n_gros": 178,
+    "n_total": 254,
+    "pas_eff_fin_rel": 0.0020000000000000005,
+    "pas_eff_gros_rel": 0.004998652367469508,
+    "pas_final_recherche": 6.03e-07,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.004,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "5|2.640000000000|-1": {
+    "bornes_fin": [
+     2.10565254428463,
+     2.456594634998735
+    ],
+    "bornes_gros": [
+     0.05,
+     2.10565254428463
+    ],
+    "ecart_absolu_indice_40_au_seuil": 0.0,
+    "ecart_relatif_indice_40_au_seuil": 0.0,
+    "exclue": false,
+    "explosif_a_l_indice_40": false,
+    "explosion_sous_0.98s": null,
+    "explosion_sous_0.98s_motif": "aucune explosion sous 0.98 s* dans la fenetre fine",
+    "explosion_sous_LO0_0.90s": null,
+    "explosion_sous_LO0_0.90s_motif": "aucune explosion dans la fenetre grossiere [LO0, 0.90 s*]",
+    "fin_explosifs": 9,
+    "fin_non_explosifs": 67,
+    "gros_explosifs": 0,
+    "ilots": 2,
+    "ilots_au_dessus": 2,
+    "ilots_au_dessus_domaine": "[s*, 1.05 s*] -- domaine declare, gel v3 (S5b)",
+    "ilots_domaine_lignee": "[0.90 s*, 1.05 s*] -- champ 'ilots', balayer lignee",
+    "indice_40_compte_comme_sous_seuil": false,
+    "indice_du_seuil_098": 40,
+    "motif_fenetre": "voir cles explosion_* (fenetre nommee, D1-1)",
+    "n_fin": 76,
+    "n_gros": 177,
+    "n_total": 253,
+    "pas_eff_fin_rel": 0.0020000000000000005,
+    "pas_eff_gros_rel": 0.004992209958849965,
+    "pas_final_recherche": 6.03e-07,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.0060000000000002,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "5|2.650000000000|+1": {
+    "bornes_fin": [
+     3.0683074473407936,
+     3.5796920218975927
+    ],
+    "bornes_gros": [
+     0.05,
+     3.0683074473407936
+    ],
+    "ecart_absolu_indice_40_au_seuil": 4.440892098500626e-16,
+    "ecart_relatif_indice_40_au_seuil": 1.1102230246251565e-16,
+    "exclue": true,
+    "explosif_a_l_indice_40": false,
+    "explosion_sous_0.98s": 3.2864981991516946,
+    "explosion_sous_LO0_0.90s": null,
+    "explosion_sous_LO0_0.90s_motif": "aucune explosion dans la fenetre grossiere [LO0, 0.90 s*]",
+    "fin_explosifs": 25,
+    "fin_non_explosifs": 51,
+    "gros_explosifs": 0,
+    "ilots": 4,
+    "ilots_au_dessus": 3,
+    "ilots_au_dessus_domaine": "[s*, 1.05 s*] -- domaine declare, gel v3 (S5b)",
+    "ilots_domaine_lignee": "[0.90 s*, 1.05 s*] -- champ 'ilots', balayer lignee",
+    "indice_40_compte_comme_sous_seuil": false,
+    "indice_du_seuil_098": 40,
+    "motif_fenetre": "voir cles explosion_* (fenetre nommee, D1-1)",
+    "n_fin": 76,
+    "n_gros": 179,
+    "n_total": 255,
+    "pas_eff_fin_rel": 0.0020000000000000005,
+    "pas_eff_gros_rel": 0.004973786145208676,
+    "pas_final_recherche": 6.03e-07,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.006,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "5|2.650000000000|-1": {
+    "bornes_fin": [
+     2.1086945702630544,
+     2.4601436653068967
+    ],
+    "bornes_gros": [
+     0.05,
+     2.1086945702630544
+    ],
+    "ecart_absolu_indice_40_au_seuil": 4.440892098500626e-16,
+    "ecart_relatif_indice_40_au_seuil": 1.1102230246251565e-16,
+    "exclue": false,
+    "explosif_a_l_indice_40": false,
+    "explosion_sous_0.98s": null,
+    "explosion_sous_0.98s_motif": "aucune explosion sous 0.98 s* dans la fenetre fine",
+    "explosion_sous_LO0_0.90s": null,
+    "explosion_sous_LO0_0.90s_motif": "aucune explosion dans la fenetre grossiere [LO0, 0.90 s*]",
+    "fin_explosifs": 6,
+    "fin_non_explosifs": 70,
+    "gros_explosifs": 0,
+    "ilots": 4,
+    "ilots_au_dessus": 4,
+    "ilots_au_dessus_domaine": "[s*, 1.05 s*] -- domaine declare, gel v3 (S5b)",
+    "ilots_domaine_lignee": "[0.90 s*, 1.05 s*] -- champ 'ilots', balayer lignee",
+    "indice_40_compte_comme_sous_seuil": false,
+    "indice_du_seuil_098": 40,
+    "motif_fenetre": "voir cles explosion_* (fenetre nommee, D1-1)",
+    "n_fin": 76,
+    "n_gros": 177,
+    "n_total": 253,
+    "pas_eff_fin_rel": 0.0020000000000000005,
+    "pas_eff_gros_rel": 0.004992385129916953,
+    "pas_final_recherche": 6.03e-07,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.002,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "5|2.690000000000|+1": {
+    "bornes_fin": [
+     3.029860538963834,
+     3.5348372954578062
+    ],
+    "bornes_gros": [
+     0.05,
+     3.029860538963834
+    ],
+    "ecart_absolu_indice_40_au_seuil": 0.0,
+    "ecart_relatif_indice_40_au_seuil": 1.1102230246251565e-16,
+    "exclue": false,
+    "explosif_a_l_indice_40": false,
+    "explosion_sous_0.98s": null,
+    "explosion_sous_0.98s_motif": "aucune explosion sous 0.98 s* dans la fenetre fine",
+    "explosion_sous_LO0_0.90s": null,
+    "explosion_sous_LO0_0.90s_motif": "aucune explosion dans la fenetre grossiere [LO0, 0.90 s*]",
+    "fin_explosifs": 18,
+    "fin_non_explosifs": 58,
+    "gros_explosifs": 0,
+    "ilots": 3,
+    "ilots_au_dessus": 3,
+    "ilots_au_dessus_domaine": "[s*, 1.05 s*] -- domaine declare, gel v3 (S5b)",
+    "ilots_domaine_lignee": "[0.90 s*, 1.05 s*] -- champ 'ilots', balayer lignee",
+    "indice_40_compte_comme_sous_seuil": false,
+    "indice_du_seuil_098": 40,
+    "motif_fenetre": "voir cles explosion_* (fenetre nommee, D1-1)",
+    "n_fin": 76,
+    "n_gros": 179,
+    "n_total": 255,
+    "pas_eff_fin_rel": 0.0020000000000000005,
+    "pas_eff_gros_rel": 0.004972740625025322,
+    "pas_final_recherche": 6.03e-07,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.006,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "5|2.690000000000|-1": {
+    "bornes_fin": [
+     2.2100082057672044,
+     2.578342906728405
+    ],
+    "bornes_gros": [
+     0.05,
+     2.2100082057672044
+    ],
+    "ecart_absolu_indice_40_au_seuil": 4.440892098500626e-16,
+    "ecart_relatif_indice_40_au_seuil": 1.1102230246251565e-16,
+    "exclue": false,
+    "explosif_a_l_indice_40": false,
+    "explosion_sous_0.98s": null,
+    "explosion_sous_0.98s_motif": "aucune explosion sous 0.98 s* dans la fenetre fine",
+    "explosion_sous_LO0_0.90s": null,
+    "explosion_sous_LO0_0.90s_motif": "aucune explosion dans la fenetre grossiere [LO0, 0.90 s*]",
+    "fin_explosifs": 16,
+    "fin_non_explosifs": 60,
+    "gros_explosifs": 0,
+    "ilots": 4,
+    "ilots_au_dessus": 4,
+    "ilots_au_dessus_domaine": "[s*, 1.05 s*] -- domaine declare, gel v3 (S5b)",
+    "ilots_domaine_lignee": "[0.90 s*, 1.05 s*] -- champ 'ilots', balayer lignee",
+    "indice_40_compte_comme_sous_seuil": false,
+    "indice_du_seuil_098": 40,
+    "motif_fenetre": "voir cles explosion_* (fenetre nommee, D1-1)",
+    "n_fin": 76,
+    "n_gros": 177,
+    "n_total": 253,
+    "pas_eff_fin_rel": 0.0020000000000000005,
+    "pas_eff_gros_rel": 0.004997943662806297,
+    "pas_final_recherche": 6.03e-07,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.002,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "5|2.710000000000|+1": {
+    "bornes_fin": [
+     3.0606733357429676,
+     3.570785558366796
+    ],
+    "bornes_gros": [
+     0.05,
+     3.0606733357429676
+    ],
+    "ecart_absolu_indice_40_au_seuil": 0.0,
+    "ecart_relatif_indice_40_au_seuil": 0.0,
+    "exclue": false,
+    "explosif_a_l_indice_40": false,
+    "explosion_sous_0.98s": null,
+    "explosion_sous_0.98s_motif": "aucune explosion sous 0.98 s* dans la fenetre fine",
+    "explosion_sous_LO0_0.90s": null,
+    "explosion_sous_LO0_0.90s_motif": "aucune explosion dans la fenetre grossiere [LO0, 0.90 s*]",
+    "fin_explosifs": 22,
+    "fin_non_explosifs": 54,
+    "gros_explosifs": 0,
+    "ilots": 4,
+    "ilots_au_dessus": 4,
+    "ilots_au_dessus_domaine": "[s*, 1.05 s*] -- domaine declare, gel v3 (S5b)",
+    "ilots_domaine_lignee": "[0.90 s*, 1.05 s*] -- champ 'ilots', balayer lignee",
+    "indice_40_compte_comme_sous_seuil": false,
+    "indice_du_seuil_098": 40,
+    "motif_fenetre": "voir cles explosion_* (fenetre nommee, D1-1)",
+    "n_fin": 76,
+    "n_gros": 179,
+    "n_total": 255,
+    "pas_eff_fin_rel": 0.0020000000000000005,
+    "pas_eff_gros_rel": 0.004973580634166522,
+    "pas_final_recherche": 6.03e-07,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.002,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "5|2.710000000000|-1": {
+    "bornes_fin": [
+     2.264157679796131,
+     2.6415172930954864
+    ],
+    "bornes_gros": [
+     0.05,
+     2.264157679796131
+    ],
+    "ecart_absolu_indice_40_au_seuil": 0.0,
+    "ecart_relatif_indice_40_au_seuil": 1.1102230246251565e-16,
+    "exclue": false,
+    "explosif_a_l_indice_40": false,
+    "explosion_sous_0.98s": null,
+    "explosion_sous_0.98s_motif": "aucune explosion sous 0.98 s* dans la fenetre fine",
+    "explosion_sous_LO0_0.90s": null,
+    "explosion_sous_LO0_0.90s_motif": "aucune explosion dans la fenetre grossiere [LO0, 0.90 s*]",
+    "fin_explosifs": 24,
+    "fin_non_explosifs": 52,
+    "gros_explosifs": 0,
+    "ilots": 3,
+    "ilots_au_dessus": 3,
+    "ilots_au_dessus_domaine": "[s*, 1.05 s*] -- domaine declare, gel v3 (S5b)",
+    "ilots_domaine_lignee": "[0.90 s*, 1.05 s*] -- champ 'ilots', balayer lignee",
+    "indice_40_compte_comme_sous_seuil": false,
+    "indice_du_seuil_098": 40,
+    "motif_fenetre": "voir cles explosion_* (fenetre nommee, D1-1)",
+    "n_fin": 76,
+    "n_gros": 178,
+    "n_total": 254,
+    "pas_eff_fin_rel": 0.0020000000000000005,
+    "pas_eff_gros_rel": 0.004972457961202172,
+    "pas_final_recherche": 6.03e-07,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.0020000000000002,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "5|2.730000000000|+1": {
+    "bornes_fin": [
+     3.066020091380219,
+     3.5770234399435887
+    ],
+    "bornes_gros": [
+     0.05,
+     3.066020091380219
+    ],
+    "ecart_absolu_indice_40_au_seuil": 4.440892098500626e-16,
+    "ecart_relatif_indice_40_au_seuil": 1.1102230246251565e-16,
+    "exclue": false,
+    "explosif_a_l_indice_40": false,
+    "explosion_sous_0.98s": null,
+    "explosion_sous_0.98s_motif": "aucune explosion sous 0.98 s* dans la fenetre fine",
+    "explosion_sous_LO0_0.90s": null,
+    "explosion_sous_LO0_0.90s_motif": "aucune explosion dans la fenetre grossiere [LO0, 0.90 s*]",
+    "fin_explosifs": 24,
+    "fin_non_explosifs": 52,
+    "gros_explosifs": 0,
+    "ilots": 3,
+    "ilots_au_dessus": 3,
+    "ilots_au_dessus_domaine": "[s*, 1.05 s*] -- domaine declare, gel v3 (S5b)",
+    "ilots_domaine_lignee": "[0.90 s*, 1.05 s*] -- champ 'ilots', balayer lignee",
+    "indice_40_compte_comme_sous_seuil": false,
+    "indice_du_seuil_098": 40,
+    "motif_fenetre": "voir cles explosion_* (fenetre nommee, D1-1)",
+    "n_fin": 76,
+    "n_gros": 179,
+    "n_total": 255,
+    "pas_eff_fin_rel": 0.0020000000000000005,
+    "pas_eff_gros_rel": 0.004973724676739702,
+    "pas_final_recherche": 6.03e-07,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.004,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "5|2.730000000000|-1": {
+    "bornes_fin": [
+     2.272595324938141,
+     2.651361212427832
+    ],
+    "bornes_gros": [
+     0.05,
+     2.272595324938141
+    ],
+    "ecart_absolu_indice_40_au_seuil": 0.0,
+    "ecart_relatif_indice_40_au_seuil": 0.0,
+    "exclue": false,
+    "explosif_a_l_indice_40": false,
+    "explosion_sous_0.98s": null,
+    "explosion_sous_0.98s_motif": "aucune explosion sous 0.98 s* dans la fenetre fine",
+    "explosion_sous_LO0_0.90s": null,
+    "explosion_sous_LO0_0.90s_motif": "aucune explosion dans la fenetre grossiere [LO0, 0.90 s*]",
+    "fin_explosifs": 21,
+    "fin_non_explosifs": 55,
+    "gros_explosifs": 0,
+    "ilots": 2,
+    "ilots_au_dessus": 2,
+    "ilots_au_dessus_domaine": "[s*, 1.05 s*] -- domaine declare, gel v3 (S5b)",
+    "ilots_domaine_lignee": "[0.90 s*, 1.05 s*] -- champ 'ilots', balayer lignee",
+    "indice_40_compte_comme_sous_seuil": false,
+    "indice_du_seuil_098": 40,
+    "motif_fenetre": "voir cles explosion_* (fenetre nommee, D1-1)",
+    "n_fin": 76,
+    "n_gros": 178,
+    "n_total": 254,
+    "pas_eff_fin_rel": 0.0020000000000000005,
+    "pas_eff_gros_rel": 0.00497287486104022,
+    "pas_final_recherche": 6.03e-07,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.002,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "7|2.620000000000|+1": {
+    "bornes_fin": [
+     1.502924747431991,
+     1.753412205337323
+    ],
+    "bornes_gros": [
+     0.05,
+     1.502924747431991
+    ],
+    "ecart_absolu_indice_40_au_seuil": 0.0,
+    "ecart_relatif_indice_40_au_seuil": 1.1102230246251565e-16,
+    "exclue": false,
+    "explosif_a_l_indice_40": false,
+    "explosion_sous_0.98s": null,
+    "explosion_sous_0.98s_motif": "aucune explosion sous 0.98 s* dans la fenetre fine",
+    "explosion_sous_LO0_0.90s": null,
+    "explosion_sous_LO0_0.90s_motif": "aucune explosion dans la fenetre grossiere [LO0, 0.90 s*]",
+    "fin_explosifs": 24,
+    "fin_non_explosifs": 52,
+    "gros_explosifs": 0,
+    "ilots": 2,
+    "ilots_au_dessus": 2,
+    "ilots_au_dessus_domaine": "[s*, 1.05 s*] -- domaine declare, gel v3 (S5b)",
+    "ilots_domaine_lignee": "[0.90 s*, 1.05 s*] -- champ 'ilots', balayer lignee",
+    "indice_40_compte_comme_sous_seuil": false,
+    "indice_du_seuil_098": 40,
+    "motif_fenetre": "voir cles explosion_* (fenetre nommee, D1-1)",
+    "n_fin": 76,
+    "n_gros": 176,
+    "n_total": 252,
+    "pas_eff_fin_rel": 0.0020000000000000005,
+    "pas_eff_gros_rel": 0.004971762177801686,
+    "pas_final_recherche": 6.03e-07,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.0020000000000002,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "7|2.620000000000|-1": {
+    "bornes_fin": [
+     1.2690888850812392,
+     1.4806036992614457
+    ],
+    "bornes_gros": [
+     0.05,
+     1.2690888850812392
+    ],
+    "ecart_absolu_indice_40_au_seuil": 0.0,
+    "ecart_relatif_indice_40_au_seuil": 1.1102230246251565e-16,
+    "exclue": false,
+    "explosif_a_l_indice_40": false,
+    "explosion_sous_0.98s": null,
+    "explosion_sous_0.98s_motif": "aucune explosion sous 0.98 s* dans la fenetre fine",
+    "explosion_sous_LO0_0.90s": null,
+    "explosion_sous_LO0_0.90s_motif": "aucune explosion dans la fenetre grossiere [LO0, 0.90 s*]",
+    "fin_explosifs": 21,
+    "fin_non_explosifs": 55,
+    "gros_explosifs": 0,
+    "ilots": 4,
+    "ilots_au_dessus": 4,
+    "ilots_au_dessus_domaine": "[s*, 1.05 s*] -- domaine declare, gel v3 (S5b)",
+    "ilots_domaine_lignee": "[0.90 s*, 1.05 s*] -- champ 'ilots', balayer lignee",
+    "indice_40_compte_comme_sous_seuil": false,
+    "indice_du_seuil_098": 40,
+    "motif_fenetre": "voir cles explosion_* (fenetre nommee, D1-1)",
+    "n_fin": 76,
+    "n_gros": 174,
+    "n_total": 250,
+    "pas_eff_fin_rel": 0.0020000000000000005,
+    "pas_eff_gros_rel": 0.004997349657381112,
+    "pas_final_recherche": 6.03e-07,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.002,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "7|2.640000000000|+1": {
+    "bornes_fin": [
+     1.4990227233900615,
+     1.7488598439550718
+    ],
+    "bornes_gros": [
+     0.05,
+     1.4990227233900615
+    ],
+    "ecart_absolu_indice_40_au_seuil": 2.220446049250313e-16,
+    "ecart_relatif_indice_40_au_seuil": 1.1102230246251565e-16,
+    "exclue": false,
+    "explosif_a_l_indice_40": false,
+    "explosion_sous_0.98s": null,
+    "explosion_sous_0.98s_motif": "aucune explosion sous 0.98 s* dans la fenetre fine",
+    "explosion_sous_LO0_0.90s": null,
+    "explosion_sous_LO0_0.90s_motif": "aucune explosion dans la fenetre grossiere [LO0, 0.90 s*]",
+    "fin_explosifs": 26,
+    "fin_non_explosifs": 50,
+    "gros_explosifs": 0,
+    "ilots": 1,
+    "ilots_au_dessus": 1,
+    "ilots_au_dessus_domaine": "[s*, 1.05 s*] -- domaine declare, gel v3 (S5b)",
+    "ilots_domaine_lignee": "[0.90 s*, 1.05 s*] -- champ 'ilots', balayer lignee",
+    "indice_40_compte_comme_sous_seuil": false,
+    "indice_du_seuil_098": 40,
+    "motif_fenetre": "voir cles explosion_* (fenetre nommee, D1-1)",
+    "n_fin": 76,
+    "n_gros": 175,
+    "n_total": 251,
+    "pas_eff_fin_rel": 0.0020000000000000005,
+    "pas_eff_gros_rel": 0.004999887596122059,
+    "pas_final_recherche": 6.03e-07,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": null,
+    "premiere_retombee_en_s_motif": "aucune retombee dans la fenetre [s*, 1.05 s*]",
+    "transition_dans_la_fenetre_fine": true
+   },
+   "7|2.640000000000|-1": {
+    "bornes_fin": [
+     1.308598846620032,
+     1.5266986543900374
+    ],
+    "bornes_gros": [
+     0.05,
+     1.308598846620032
+    ],
+    "ecart_absolu_indice_40_au_seuil": 0.0,
+    "ecart_relatif_indice_40_au_seuil": 1.1102230246251565e-16,
+    "exclue": false,
+    "explosif_a_l_indice_40": false,
+    "explosion_sous_0.98s": null,
+    "explosion_sous_0.98s_motif": "aucune explosion sous 0.98 s* dans la fenetre fine",
+    "explosion_sous_LO0_0.90s": null,
+    "explosion_sous_LO0_0.90s_motif": "aucune explosion dans la fenetre grossiere [LO0, 0.90 s*]",
+    "fin_explosifs": 26,
+    "fin_non_explosifs": 50,
+    "gros_explosifs": 0,
+    "ilots": 1,
+    "ilots_au_dessus": 1,
+    "ilots_au_dessus_domaine": "[s*, 1.05 s*] -- domaine declare, gel v3 (S5b)",
+    "ilots_domaine_lignee": "[0.90 s*, 1.05 s*] -- champ 'ilots', balayer lignee",
+    "indice_40_compte_comme_sous_seuil": false,
+    "indice_du_seuil_098": 40,
+    "motif_fenetre": "voir cles explosion_* (fenetre nommee, D1-1)",
+    "n_fin": 76,
+    "n_gros": 175,
+    "n_total": 251,
+    "pas_eff_fin_rel": 0.0020000000000000005,
+    "pas_eff_gros_rel": 0.004974782035805815,
+    "pas_final_recherche": 6.03e-07,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": null,
+    "premiere_retombee_en_s_motif": "aucune retombee dans la fenetre [s*, 1.05 s*]",
+    "transition_dans_la_fenetre_fine": true
+   },
+   "7|2.650000000000|+1": {
+    "bornes_fin": [
+     1.4779495132657454,
+     1.7242744321433696
+    ],
+    "bornes_gros": [
+     0.05,
+     1.4779495132657454
+    ],
+    "ecart_absolu_indice_40_au_seuil": 0.0,
+    "ecart_relatif_indice_40_au_seuil": 0.0,
+    "exclue": false,
+    "explosif_a_l_indice_40": false,
+    "explosion_sous_0.98s": null,
+    "explosion_sous_0.98s_motif": "aucune explosion sous 0.98 s* dans la fenetre fine",
+    "explosion_sous_LO0_0.90s": null,
+    "explosion_sous_LO0_0.90s_motif": "aucune explosion dans la fenetre grossiere [LO0, 0.90 s*]",
+    "fin_explosifs": 21,
+    "fin_non_explosifs": 55,
+    "gros_explosifs": 0,
+    "ilots": 4,
+    "ilots_au_dessus": 4,
+    "ilots_au_dessus_domaine": "[s*, 1.05 s*] -- domaine declare, gel v3 (S5b)",
+    "ilots_domaine_lignee": "[0.90 s*, 1.05 s*] -- champ 'ilots', balayer lignee",
+    "indice_40_compte_comme_sous_seuil": false,
+    "indice_du_seuil_098": 40,
+    "motif_fenetre": "voir cles explosion_* (fenetre nommee, D1-1)",
+    "n_fin": 76,
+    "n_gros": 175,
+    "n_total": 251,
+    "pas_eff_fin_rel": 0.0020000000000000005,
+    "pas_eff_gros_rel": 0.004997427646869189,
+    "pas_final_recherche": 6.03e-07,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.016,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "7|2.650000000000|-1": {
+    "bornes_fin": [
+     1.3061268951155234,
+     1.5238147109681106
+    ],
+    "bornes_gros": [
+     0.05,
+     1.3061268951155234
+    ],
+    "ecart_absolu_indice_40_au_seuil": 2.220446049250313e-16,
+    "ecart_relatif_indice_40_au_seuil": 1.1102230246251565e-16,
+    "exclue": false,
+    "explosif_a_l_indice_40": false,
+    "explosion_sous_0.98s": null,
+    "explosion_sous_0.98s_motif": "aucune explosion sous 0.98 s* dans la fenetre fine",
+    "explosion_sous_LO0_0.90s": null,
+    "explosion_sous_LO0_0.90s_motif": "aucune explosion dans la fenetre grossiere [LO0, 0.90 s*]",
+    "fin_explosifs": 25,
+    "fin_non_explosifs": 51,
+    "gros_explosifs": 0,
+    "ilots": 2,
+    "ilots_au_dessus": 2,
+    "ilots_au_dessus_domaine": "[s*, 1.05 s*] -- domaine declare, gel v3 (S5b)",
+    "ilots_domaine_lignee": "[0.90 s*, 1.05 s*] -- champ 'ilots', balayer lignee",
+    "indice_40_compte_comme_sous_seuil": false,
+    "indice_du_seuil_098": 40,
+    "motif_fenetre": "voir cles explosion_* (fenetre nommee, D1-1)",
+    "n_fin": 76,
+    "n_gros": 175,
+    "n_total": 251,
+    "pas_eff_fin_rel": 0.0020000000000000005,
+    "pas_eff_gros_rel": 0.004974408001612341,
+    "pas_final_recherche": 6.03e-07,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.01,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "7|2.690000000000|+1": {
+    "bornes_fin": [
+     1.6716559331493834,
+     1.9502652553409474
+    ],
+    "bornes_gros": [
+     0.05,
+     1.6716559331493834
+    ],
+    "ecart_absolu_indice_40_au_seuil": 0.0,
+    "ecart_relatif_indice_40_au_seuil": 0.0,
+    "exclue": false,
+    "explosif_a_l_indice_40": false,
+    "explosion_sous_0.98s": null,
+    "explosion_sous_0.98s_motif": "aucune explosion sous 0.98 s* dans la fenetre fine",
+    "explosion_sous_LO0_0.90s": null,
+    "explosion_sous_LO0_0.90s_motif": "aucune explosion dans la fenetre grossiere [LO0, 0.90 s*]",
+    "fin_explosifs": 20,
+    "fin_non_explosifs": 56,
+    "gros_explosifs": 0,
+    "ilots": 4,
+    "ilots_au_dessus": 4,
+    "ilots_au_dessus_domaine": "[s*, 1.05 s*] -- domaine declare, gel v3 (S5b)",
+    "ilots_domaine_lignee": "[0.90 s*, 1.05 s*] -- champ 'ilots', balayer lignee",
+    "indice_40_compte_comme_sous_seuil": false,
+    "indice_du_seuil_098": 40,
+    "motif_fenetre": "voir cles explosion_* (fenetre nommee, D1-1)",
+    "n_fin": 76,
+    "n_gros": 176,
+    "n_total": 252,
+    "pas_eff_fin_rel": 0.0020000000000000005,
+    "pas_eff_gros_rel": 0.004989031913607722,
+    "pas_final_recherche": 6.03e-07,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.002,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "7|2.690000000000|-1": {
+    "bornes_fin": [
+     1.321611746611262,
+     1.5418803710464726
+    ],
+    "bornes_gros": [
+     0.05,
+     1.321611746611262
+    ],
+    "ecart_absolu_indice_40_au_seuil": 0.0,
+    "ecart_relatif_indice_40_au_seuil": 1.1102230246251565e-16,
+    "exclue": false,
+    "explosif_a_l_indice_40": false,
+    "explosion_sous_0.98s": null,
+    "explosion_sous_0.98s_motif": "aucune explosion sous 0.98 s* dans la fenetre fine",
+    "explosion_sous_LO0_0.90s": null,
+    "explosion_sous_LO0_0.90s_motif": "aucune explosion dans la fenetre grossiere [LO0, 0.90 s*]",
+    "fin_explosifs": 25,
+    "fin_non_explosifs": 51,
+    "gros_explosifs": 0,
+    "ilots": 2,
+    "ilots_au_dessus": 2,
+    "ilots_au_dessus_domaine": "[s*, 1.05 s*] -- domaine declare, gel v3 (S5b)",
+    "ilots_domaine_lignee": "[0.90 s*, 1.05 s*] -- champ 'ilots', balayer lignee",
+    "indice_40_compte_comme_sous_seuil": false,
+    "indice_du_seuil_098": 40,
+    "motif_fenetre": "voir cles explosion_* (fenetre nommee, D1-1)",
+    "n_fin": 76,
+    "n_gros": 175,
+    "n_total": 251,
+    "pas_eff_fin_rel": 0.0020000000000000005,
+    "pas_eff_gros_rel": 0.004976727964554859,
+    "pas_final_recherche": 6.03e-07,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.03,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "7|2.710000000000|+1": {
+    "bornes_fin": [
+     1.759069524195278,
+     2.0522477782278243
+    ],
+    "bornes_gros": [
+     0.05,
+     1.759069524195278
+    ],
+    "ecart_absolu_indice_40_au_seuil": 2.220446049250313e-16,
+    "ecart_relatif_indice_40_au_seuil": 1.1102230246251565e-16,
+    "exclue": true,
+    "explosif_a_l_indice_40": false,
+    "explosion_sous_0.98s": 1.872431782421196,
+    "explosion_sous_LO0_0.90s": null,
+    "explosion_sous_LO0_0.90s_motif": "aucune explosion dans la fenetre grossiere [LO0, 0.90 s*]",
+    "fin_explosifs": 31,
+    "fin_non_explosifs": 45,
+    "gros_explosifs": 0,
+    "ilots": 7,
+    "ilots_au_dessus": 4,
+    "ilots_au_dessus_domaine": "[s*, 1.05 s*] -- domaine declare, gel v3 (S5b)",
+    "ilots_domaine_lignee": "[0.90 s*, 1.05 s*] -- champ 'ilots', balayer lignee",
+    "indice_40_compte_comme_sous_seuil": false,
+    "indice_du_seuil_098": 40,
+    "motif_fenetre": "voir cles explosion_* (fenetre nommee, D1-1)",
+    "n_fin": 76,
+    "n_gros": 176,
+    "n_total": 252,
+    "pas_eff_fin_rel": 0.0020000000000000005,
+    "pas_eff_gros_rel": 0.004996675963770153,
+    "pas_final_recherche": 6.03e-07,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.004,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "7|2.710000000000|-1": {
+    "bornes_fin": [
+     1.3326668479806474,
+     1.5547779893107552
+    ],
+    "bornes_gros": [
+     0.05,
+     1.3326668479806474
+    ],
+    "ecart_absolu_indice_40_au_seuil": 0.0,
+    "ecart_relatif_indice_40_au_seuil": 0.0,
+    "exclue": false,
+    "explosif_a_l_indice_40": false,
+    "explosion_sous_0.98s": null,
+    "explosion_sous_0.98s_motif": "aucune explosion sous 0.98 s* dans la fenetre fine",
+    "explosion_sous_LO0_0.90s": null,
+    "explosion_sous_LO0_0.90s_motif": "aucune explosion dans la fenetre grossiere [LO0, 0.90 s*]",
+    "fin_explosifs": 13,
+    "fin_non_explosifs": 63,
+    "gros_explosifs": 0,
+    "ilots": 4,
+    "ilots_au_dessus": 4,
+    "ilots_au_dessus_domaine": "[s*, 1.05 s*] -- domaine declare, gel v3 (S5b)",
+    "ilots_domaine_lignee": "[0.90 s*, 1.05 s*] -- champ 'ilots', balayer lignee",
+    "indice_40_compte_comme_sous_seuil": false,
+    "indice_du_seuil_098": 40,
+    "motif_fenetre": "voir cles explosion_* (fenetre nommee, D1-1)",
+    "n_fin": 76,
+    "n_gros": 175,
+    "n_total": 251,
+    "pas_eff_fin_rel": 0.0020000000000000005,
+    "pas_eff_gros_rel": 0.004978351270990699,
+    "pas_final_recherche": 6.03e-07,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.0080000000000002,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "7|2.730000000000|+1": {
+    "bornes_fin": [
+     1.7401788849139506,
+     2.0302086990662755
+    ],
+    "bornes_gros": [
+     0.05,
+     1.7401788849139506
+    ],
+    "ecart_absolu_indice_40_au_seuil": 0.0,
+    "ecart_relatif_indice_40_au_seuil": 0.0,
+    "exclue": false,
+    "explosif_a_l_indice_40": false,
+    "explosion_sous_0.98s": null,
+    "explosion_sous_0.98s_motif": "aucune explosion sous 0.98 s* dans la fenetre fine",
+    "explosion_sous_LO0_0.90s": null,
+    "explosion_sous_LO0_0.90s_motif": "aucune explosion dans la fenetre grossiere [LO0, 0.90 s*]",
+    "fin_explosifs": 20,
+    "fin_non_explosifs": 56,
+    "gros_explosifs": 0,
+    "ilots": 6,
+    "ilots_au_dessus": 6,
+    "ilots_au_dessus_domaine": "[s*, 1.05 s*] -- domaine declare, gel v3 (S5b)",
+    "ilots_domaine_lignee": "[0.90 s*, 1.05 s*] -- champ 'ilots', balayer lignee",
+    "indice_40_compte_comme_sous_seuil": false,
+    "indice_du_seuil_098": 40,
+    "motif_fenetre": "voir cles explosion_* (fenetre nommee, D1-1)",
+    "n_fin": 76,
+    "n_gros": 176,
+    "n_total": 252,
+    "pas_eff_fin_rel": 0.0020000000000000005,
+    "pas_eff_gros_rel": 0.004995089083278848,
+    "pas_final_recherche": 6.03e-07,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": 1.004,
+    "transition_dans_la_fenetre_fine": true
+   },
+   "7|2.730000000000|-1": {
+    "bornes_fin": [
+     1.412234585481262,
+     1.6476070163948056
+    ],
+    "bornes_gros": [
+     0.05,
+     1.412234585481262
+    ],
+    "ecart_absolu_indice_40_au_seuil": 2.220446049250313e-16,
+    "ecart_relatif_indice_40_au_seuil": 1.1102230246251565e-16,
+    "exclue": false,
+    "explosif_a_l_indice_40": true,
+    "explosion_sous_0.98s": null,
+    "explosion_sous_0.98s_motif": "aucune explosion sous 0.98 s* dans la fenetre fine",
+    "explosion_sous_LO0_0.90s": null,
+    "explosion_sous_LO0_0.90s_motif": "aucune explosion dans la fenetre grossiere [LO0, 0.90 s*]",
+    "fin_explosifs": 32,
+    "fin_non_explosifs": 44,
+    "gros_explosifs": 0,
+    "ilots": 3,
+    "ilots_au_dessus": 1,
+    "ilots_au_dessus_domaine": "[s*, 1.05 s*] -- domaine declare, gel v3 (S5b)",
+    "ilots_domaine_lignee": "[0.90 s*, 1.05 s*] -- champ 'ilots', balayer lignee",
+    "indice_40_compte_comme_sous_seuil": false,
+    "indice_du_seuil_098": 40,
+    "motif_fenetre": "voir cles explosion_* (fenetre nommee, D1-1)",
+    "n_fin": 76,
+    "n_gros": 175,
+    "n_total": 251,
+    "pas_eff_fin_rel": 0.0020000000000000005,
+    "pas_eff_gros_rel": 0.004989285088910837,
+    "pas_final_recherche": 6.03e-07,
+    "pas_relatif_fin": 0.002,
+    "pas_relatif_gros": 0.005,
+    "premiere_retombee_en_s": null,
+    "premiere_retombee_en_s_motif": "aucune retombee dans la fenetre [s*, 1.05 s*]",
+    "transition_dans_la_fenetre_fine": true
+   }
+  },
+  "G8": {
+   "G8a": {
+    "ecart_absolu": 0.0,
+    "ligne": "4|2.62",
+    "verdict": "PASSE"
+   },
+   "masques_2.62": {
+    "attendu": "ZERO deviation -- identite demontree au gel, G8b",
+    "fin": {
+     "deviations": 0,
+     "explosifs_+1": 11,
+     "n": 76,
+     "non_explosifs_+1": 65,
+     "pouvoir": "REEL si la transition est encadree (note N-1)",
+     "transition_encadree": true
+    },
+    "grossier": {
+     "deviations": 0,
+     "explosifs_+1": 0,
+     "explosifs_-1": 0,
+     "n": 180,
+     "pouvoir": "NUL si les deux comptes sont 0 (note N-1)"
+    },
+    "ilots_identiques": true,
+    "retombee_identique": true,
+    "statut": "consignation de lignee, SANS porte (G8b v3 = structurel)"
+   },
+   "structurel": {
+    "note": "ancrage par bloc de fonction du fichier c8ed357b (regle 12), pas de sous-chaine nue sur le fichier",
+    "parite_bit_du_champ_x_aleatoires": true,
+    "parite_bit_note": "INFORMATION, aucune porte : pow n'est pas symetrique a la negation au dernier ulp ; la preuve M11 porte sur la STRUCTURE (negation exacte de l'entree, exposant impair, cap symetrique) et la parite OPPOSABLE des seuils est MESUREE par G8a et les masques a 2.62",
+    "predicats_source": {
+     "cap_symetrique": true,
+     "exposant_impair_a_p_pair": true,
+     "force_somme_puissance": true
+    },
+    "verdict": "PASSE"
+   }
+  },
+  "P_M15a": {
+   "flanc_droit": [],
+   "flanc_gauche": [
+    2.62
+   ],
+   "plancher_de_comptes": false,
+   "survivants": [
+    2.62
+   ],
+   "verdict": "NON CONCLUANT DE GEOMETRIE"
+  },
+  "P_M15b": {
+   "P_fond_ge_k": 1.0,
+   "b_fond": "1/32",
+   "instances_impaires": [],
+   "instances_p4": [],
+   "k": 0,
+   "k_min": 3,
+   "n_eff": 24,
+   "note": "une instance sous k_min est une CONSIGNATION, pas un verdict ; aucune branche SIGNATURE ABSENTE (gel v3)",
+   "verdict": "SIGNATURE NON RESOLUE"
+  },
+  "carte": {
+   "4|2.620000000000": {
+    "asym": 1.0,
+    "frag": 1,
+    "sF": 7.224022666106334,
+    "sM": {
+     "duree_s": 14.070709499996156,
+     "motif_exclusion": "",
+     "note": "OK|pas=1.82e-06",
+     "recevable": true,
+     "role": "regression_G8a",
+     "s": 7.224022666106334
+    },
+    "sP": {
+     "duree_s": 14.181022000033408,
+     "motif_exclusion": "",
+     "note": "OK|pas=1.82e-06",
+     "recevable": true,
+     "s": 7.224022666106334
+    }
+   },
+   "4|2.640000000000": {
+    "asym": null,
+    "asym_motif": "cote unique (parite demontree, G8a/G8b -- gel v3)",
+    "frag": 1,
+    "sF": 7.91489544198958,
+    "sP": {
+     "duree_s": 14.119976299931295,
+     "motif_exclusion": "",
+     "note": "OK|pas=1.82e-06",
+     "recevable": true,
+     "s": 7.91489544198958
+    }
+   },
+   "4|2.650000000000": {
+    "asym": null,
+    "asym_motif": "cote unique (parite demontree, G8a/G8b -- gel v3)",
+    "frag": 1,
+    "sF": 7.532787228466261,
+    "sP": {
+     "duree_s": 14.009444699971937,
+     "motif_exclusion": "",
+     "note": "OK|pas=1.82e-06",
+     "recevable": true,
+     "s": 7.532787228466261
+    }
+   },
+   "4|2.690000000000": {
+    "asym": null,
+    "asym_motif": "cote unique (parite demontree, G8a/G8b -- gel v3)",
+    "frag": 1,
+    "sF": 7.9395325140915425,
+    "sP": {
+     "duree_s": 13.840745700057596,
+     "motif_exclusion": "",
+     "note": "OK|pas=1.82e-06",
+     "recevable": true,
+     "s": 7.9395325140915425
+    }
+   },
+   "4|2.710000000000": {
+    "asym": null,
+    "asym_motif": "cote unique (parite demontree, G8a/G8b -- gel v3)",
+    "frag": 1,
+    "sF": 7.973179454709609,
+    "sP": {
+     "duree_s": 18.13471060001757,
+     "motif_exclusion": "",
+     "note": "OK|pas=1.82e-06",
+     "recevable": true,
+     "s": 7.973179454709609
+    }
+   },
+   "4|2.730000000000": {
+    "asym": null,
+    "asym_motif": "cote unique (parite demontree, G8a/G8b -- gel v3)",
+    "frag": 1,
+    "sF": 7.9518382753643975,
+    "sP": {
+     "duree_s": 18.384054000023752,
+     "motif_exclusion": "",
+     "note": "OK|pas=1.82e-06",
+     "recevable": true,
+     "s": 7.9518382753643975
+    }
+   },
+   "5|2.620000000000": {
+    "asym": 1.3976415869215322,
+    "frag": -1,
+    "sF": 2.3315991132681786,
+    "sM": {
+     "duree_s": 10.961837399983779,
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 2.3315991132681786
+    },
+    "sP": {
+     "duree_s": 11.053875100100413,
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 3.2587398847329743
+    }
+   },
+   "5|2.640000000000": {
+    "asym": 1.402434873903068,
+    "frag": -1,
+    "sF": 2.339613938094033,
+    "sM": {
+     "duree_s": 11.020304400008172,
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 2.339613938094033
+    },
+    "sP": {
+     "duree_s": 11.065578500041738,
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 3.2811561782527656
+    }
+   },
+   "5|2.650000000000": {
+    "asym": 1.4550743813780627,
+    "frag": -1,
+    "sF": 2.3429939669589492,
+    "sM": {
+     "duree_s": 11.01706910005305,
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 2.3429939669589492
+    },
+    "sP": {
+     "duree_s": 11.00369500007946,
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 3.409230497045326
+    }
+   },
+   "5|2.690000000000": {
+    "asym": 1.370972528996569,
+    "frag": -1,
+    "sF": 2.4555646730746714,
+    "sM": {
+     "duree_s": 11.027942100074142,
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 2.4555646730746714
+    },
+    "sP": {
+     "duree_s": 11.06839819997549,
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 3.3665117099598154
+    }
+   },
+   "5|2.710000000000": {
+    "asym": 1.3517933680389949,
+    "frag": -1,
+    "sF": 2.5157307553290345,
+    "sM": {
+     "duree_s": 11.026784800109453,
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 2.5157307553290345
+    },
+    "sP": {
+     "duree_s": 11.006967000081204,
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 3.4007481508255197
+    }
+   },
+   "5|2.730000000000": {
+    "asym": 1.3491271665199231,
+    "frag": -1,
+    "sF": 2.525105916597935,
+    "sM": {
+     "duree_s": 11.099392600008287,
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 2.525105916597935
+    },
+    "sP": {
+     "duree_s": 11.095793399959803,
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 3.4066889904224653
+    }
+   },
+   "7|2.620000000000": {
+    "asym": 1.1842549131897748,
+    "frag": -1,
+    "sF": 1.410098761201377,
+    "sM": {
+     "duree_s": 10.972953099990264,
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 1.410098761201377
+    },
+    "sP": {
+     "duree_s": 10.968225299962796,
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 1.6699163860355455
+    }
+   },
+   "7|2.640000000000": {
+    "asym": 1.14551738087029,
+    "frag": -1,
+    "sF": 1.4539987184667023,
+    "sM": {
+     "duree_s": 10.920362700009719,
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 1.4539987184667023
+    },
+    "sP": {
+     "duree_s": 10.958806399954483,
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 1.665580803766735
+    }
+   },
+   "7|2.650000000000": {
+    "asym": 1.1315512442112488,
+    "frag": -1,
+    "sF": 1.4512521056839147,
+    "sM": {
+     "duree_s": 10.898909199982882,
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 1.4512521056839147
+    },
+    "sP": {
+     "duree_s": 10.865069400053471,
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 1.6421661258508282
+    }
+   },
+   "7|2.690000000000": {
+    "asym": 1.2648615884624723,
+    "frag": -1,
+    "sF": 1.4684574962347356,
+    "sM": {
+     "duree_s": 10.929324400029145,
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 1.4684574962347356
+    },
+    "sP": {
+     "duree_s": 11.00188909994904,
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 1.8573954812770928
+    }
+   },
+   "7|2.710000000000": {
+    "asym": 1.3199619446231043,
+    "frag": -1,
+    "sF": 1.4807409422007192,
+    "sM": {
+     "duree_s": 10.96200159995351,
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 1.4807409422007192
+    },
+    "sP": {
+     "duree_s": 10.942438300000504,
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 1.954521693550309
+    }
+   },
+   "7|2.730000000000": {
+    "asym": 1.2322165897961856,
+    "frag": -1,
+    "sF": 1.5691495394236243,
+    "sM": {
+     "duree_s": 10.79493850003928,
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 1.5691495394236243
+    },
+    "sP": {
+     "duree_s": 11.016573400003836,
+     "motif_exclusion": "",
+     "note": "OK|pas=6.03e-07",
+     "recevable": true,
+     "s": 1.9335320943488339
+    }
+   }
+  },
+  "pre_run": {
+   "F": [
+    1.7,
+    1.73,
+    1.76,
+    1.84,
+    1.86,
+    2.15,
+    2.22,
+    2.27,
+    2.3,
+    2.6,
+    2.75,
+    2.78,
+    2.8,
+    2.85
+   ],
+   "K": {
+    "E": 27.087843982636088,
+    "S4": 5.835764868361201,
+    "S57": 21.714076721274235
+   },
+   "assignations_v3": {
+    "1.70": "5/3",
+    "1.73": "3/2",
+    "1.76": "2/1",
+    "1.84": "2/1",
+    "1.86": "2/1",
+    "2.15": "2/1",
+    "2.22": "2/1",
+    "2.27": "2/1",
+    "2.30": "2/1",
+    "2.60": "3/1",
+    "2.75": "3/1",
+    "2.78": "3/1",
+    "2.80": "3/1",
+    "2.85": "3/1"
+   },
+   "realisateurs": {
+    "E": [
+     "11/4",
+     "139/50",
+     "14/5"
+    ],
+    "S4": [
+     "17/10",
+     "173/100",
+     "44/25"
+    ],
+    "S57": [
+     "11/4",
+     "139/50",
+     "14/5"
+    ]
+   },
+   "rejets_F": {
+    "1.250000000000": "23",
+    "1.300000000000": "1",
+    "1.350000000000": "3",
+    "1.414213562373": "3",
+    "1.450000000000": "3",
+    "1.550000000000": "13",
+    "1.800000000000": "1",
+    "1.900000000000": "3",
+    "2.050000000000": "3",
+    "2.380000000000": "2",
+    "2.420000000000": "5",
+    "2.450000000000": "5",
+    "2.550000000000": "5",
+    "2.670000000000": "24",
+    "2.720000000000": "4"
+   },
+   "triplets": [
+    {
+     "K_E_local": 24.11490783000082,
+     "g_exact": "9/10000",
+     "res_E": -0.02170341704700074,
+     "triplet": [
+      "17/10",
+      "173/100",
+      "44/25"
+     ]
+    },
+    {
+     "K_E_local": 4.25168550359951,
+     "g_exact": "3/1250",
+     "res_E": -0.010204045208638823,
+     "triplet": [
+      "173/100",
+      "44/25",
+      "46/25"
+     ]
+    },
+    {
+     "K_E_local": 6.1362178058328025,
+     "g_exact": "1/625",
+     "res_E": -0.009817948489332484,
+     "triplet": [
+      "44/25",
+      "46/25",
+      "93/50"
+     ]
+    },
+    {
+     "K_E_local": 14.04025964784213,
+     "g_exact": "3/2000",
+     "res_E": -0.021060389471763197,
+     "triplet": [
+      "111/50",
+      "227/100",
+      "23/10"
+     ]
+    },
+    {
+     "K_E_local": 27.087843982636088,
+     "g_exact": "3/5000",
+     "res_E": -0.01625270638958165,
+     "triplet": [
+      "11/4",
+      "139/50",
+      "14/5"
+     ]
+    },
+    {
+     "K_E_local": 10.454236398282067,
+     "g_exact": "21/10000",
+     "res_E": -0.02195389643639234,
+     "triplet": [
+      "11/4",
+      "139/50",
+      "57/20"
+     ]
+    },
+    {
+     "K_E_local": 3.800793364540489,
+     "g_exact": "1/400",
+     "res_E": -0.009501983411351222,
+     "triplet": [
+      "11/4",
+      "14/5",
+      "57/20"
+     ]
+    },
+    {
+     "K_E_local": 6.179371186071925,
+     "g_exact": "1/1000",
+     "res_E": 0.006179371186071925,
+     "triplet": [
+      "139/50",
+      "14/5",
+      "57/20"
+     ]
+    }
+   ]
+  }
+ },
+ "resume": {
+  "g8_echec": false,
+  "pertes_note": "ventilation par MECANISME, pas une partition",
+  "pertes_par_mecanisme": {
+   "G4": 0,
+   "G5": 0,
+   "G6": 6
+  },
+  "points_perdus": [
+   "4|2.640000000000",
+   "4|2.690000000000",
+   "4|2.710000000000",
+   "4|2.730000000000",
+   "5|2.650000000000",
+   "7|2.710000000000"
+  ],
+  "survivants": [
+   2.62
+  ]
+ },
+ "verdict": {
+  "P_M15b": "SIGNATURE NON RESOLUE",
+  "detail": {
+   "lignes_perdues_mordues": [],
+   "verdict": "NON CONCLUANT DE GEOMETRIE"
+  },
+  "manche": "NON CONCLUANT DE GEOMETRIE"
+ }
+}

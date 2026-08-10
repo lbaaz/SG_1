@@ -1,0 +1,41 @@
+Gel jumeau M12 v4 : sha bf9866a763c559d3... -> CONCORDANT
+Script pilote 663b17e2955c79c09f1b6c0f... -> CONCORDANT
+  gel jumeau du pilote re-verifie (03e29c86...) : CONCORDANT
+Moteur c8ed357b120352c4d1078307... -> CONCORDANT
+G9 avant-run : constructeurs de consignations COMPLETS.
+rule-11 : 13 points du programme + ancre G2 sur la liste, 1e-9 ;
+  G1' rejoue une ligne du PILOTE (1.70) -- hors liste par construction.
+
+--- G1' custody : rejeu au bit de (1.70, p=7, +1) ---
+  rebinding m9.P = 7 | G3 backward = 4.746e-16
+G3 : erreur backward max = 4.746e-16 (tolerance 1e-12) -> PASSE
+
+  ecart absolu = 0.0 EXACT : custody intacte.
+
+--- degre p = 7 ---
+  degre 7 : recherches, balayages, G2 consignes
+
+--- degre p = 5 ---
+  rebinding m9.P = 5 | G3 backward = 4.408e-16
+G3 : erreur backward max = 4.408e-16 (tolerance 1e-12) -> PASSE
+
+  degre 5 : recherches, balayages, G2 consignes
+
+--- degre p = 4 ---
+  rebinding m9.P = 4 | G3 backward = 4.328e-16
+G3 : erreur backward max = 4.328e-16 (tolerance 1e-12) -> PASSE
+
+  degre 4 : recherches, balayages, G2 consignes
+
+--- G4 : dt/2 sur l'echelle de force maximale ---
+  rebinding m9.P = 4 | G3 backward = 4.328e-16
+G3 : erreur backward max = 4.328e-16 (tolerance 1e-12) -> PASSE
+
+  G4 sur 4|2.80|+1 : PASSE
+
+--- E aux points survivants, et portes ---
+
+Ecrit : out\m12_results.json
+Recherches : 75 + 0 = 75 / 75 | balayages : 67 + 0 = 67 / 67
+m = 11 | CLASSE REFUTEE
+sha256 du JSON : fa109da92e582520cfcb63b46bc41fa7d4b62295891f413bb97c6095b2fe59b1

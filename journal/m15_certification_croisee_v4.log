@@ -1,0 +1,71 @@
+== 1. SOURCES ET LIVRAISON (empreintes re-derivees) ==
+OK   empreinte m15_pre_enregistrement_v3.md -- e41f4da3685e6d1b attendu e41f4da3685e6d1b
+OK   empreinte m15_pre_enregistrement_v4.md -- 35022c5c0784cb82 attendu 35022c5c0784cb82
+OK   empreinte m15_certification_croisee_v3.md -- 8081a0325e0821de attendu 8081a0325e0821de
+OK   empreinte m15_erratum_grossiere_mordue_v3.md -- 16c6d86e389da2a9 attendu 16c6d86e389da2a9
+OK   empreinte m15_erratum_grossiere_mordue_v2.md -- f4a3508b84d40cb6 attendu f4a3508b84d40cb6
+== 2. EXTRACTION INDEPENDANTE (regle declaree du script, re-appliquee) ==
+OK   E29.3 : ancre debut unique et colonne 0
+OK   E29.3 : ancre fin presente apres debut -- premiere occurrence de '4. MOTIVATION' apres debut (occurrences source : 1)
+OK   N-13 : ancre debut unique et colonne 0
+OK   N-13 : ancre fin presente apres debut -- premiere occurrence de '### N-14' apres debut (occurrences source : 1)
+OK   N-15 : ancre debut unique et colonne 0
+OK   N-15 : ancre fin presente apres debut -- premiere occurrence de '\n---\n' apres debut (occurrences source : 10)
+OK   marqueurs E29.3 uniques
+OK   E29.3 : BYTE-VERBATIM v4 == source -- v4 709 car., source 709 car.
+OK   E29.3 : compte annonce delta 53 -- 709 attendu 709
+OK   E29.3 : N-14 absent de l'extrait
+OK   marqueurs N-13 uniques
+OK   N-13 : BYTE-VERBATIM v4 == source -- v4 1109 car., source 1109 car.
+OK   N-13 : compte annonce delta 53 -- 1109 attendu 1109
+OK   N-13 : N-14 absent de l'extrait
+OK   marqueurs N-15 uniques
+OK   N-15 : BYTE-VERBATIM v4 == source -- v4 2111 car., source 2111 car.
+OK   N-15 : compte annonce delta 53 -- 2111 attendu 2111
+OK   N-15 : N-14 absent de l'extrait
+== 3. DEFINITION E29 RE-APPLIQUEE (pas seulement heritee ; M2-a) ==
+OK   E29.3 porte 'passe GROSSIERE'
+OK   E29.3 porte '[LO0, 0.90'
+OK   E29.3 porte 'explosion_sous_LO0_0.90s'
+OK   E29.3 porte 'gros_explosifs'
+OK   E29.3 porte 'b_fond = 3/96'
+OK   E29.3 porte 'k_min = 3'
+OK   E29.3 porte 'n_eff = 24'
+OK   E29.3 : ASCII pur
+== 4. RESERVE DELTA 51 : v3 erratum vs v2 contre-signee ==
+OK   ancre '1. ' unique
+OK   ancre '1. ' unique
+OK   erratum v3 sections 1-7 == v2 (bit)
+== 5. DIFF v3 -> v4 PAR HUNK (chaque bloc contigu = un patch declare) ==
+   hunks non-egaux : 4
+OK   hunk 'A+B en-tete' : present et unique -- 1 hunk(s)
+OK   hunk 'C mot N-13' : present et unique -- 1 hunk(s)
+OK   hunk 'D chiffre N-15' : present et unique -- 1 hunk(s)
+OK   hunk 'E PORTAGE' : present et unique -- 1 hunk(s)
+OK   aucun hunk clandestin -- 0 hunk(s) hors patchs declares
+== 6. ANCIENS ABSENTS, NOUVEAUX UNIQUES (patchs A-D) ==
+OK   patch A : ancien present 1x en v3
+OK   patch A : ancien absent de v4
+OK   patch A : nouveau present 1x en v4
+OK   patch A : nouveau absent de v3
+OK   patch B : ancien present 1x en v3
+OK   patch B : ancien absent de v4
+OK   patch B : nouveau present 1x en v4
+OK   patch B : nouveau absent de v3
+OK   patch C : ancien present 1x en v3
+OK   patch C : ancien absent de v4
+OK   patch C : nouveau present 1x en v4
+OK   patch C : nouveau absent de v3
+OK   patch D : ancien present 1x en v3
+OK   patch D : ancien absent de v4
+OK   patch D : nouveau present 1x en v4
+OK   patch D : nouveau absent de v3
+OK   clause retiree par C ('2.42, 2.45 et 2.55 sous 5:2') survit en P4.2
+== 7. INVARIANTS DE SORTIE (recomptes) ==
+OK   terminateur exactement 1x
+OK   terminateur en derniere ligne
+OK   v4 NFC
+OK   LF final unique
+OK   ASCII partout hors extraits NFC (N-13, N-15) -- les seuls caracteres non-ASCII de v4 vivent dans les deux extraits declares
+
+VERDICT : 0 echec. Gel v4 35022c5c0784cb82 : controles machine 2 passes.
