@@ -1,0 +1,50 @@
+==========================================================================
+SONDE E-A (fondement de E34 / Q2) -- m17_chaine_v8.py a25619c412c93fd9  82195 o
+==========================================================================
+
+1. GEOMETRIE
+   w2 = 1.95 ; g = 0.00181573657617 ; fraction s = 0.70 (Q1) ; s = 1.35851872595
+   occupations reelles de la graine : n1_0 = 7.594346, n2_0 = 2.568327
+   tau_M = 0.02   (regle d'arret du gel : premier pas sous tau_M)
+   barriere : 7 sites, m2_bord = 7   (5e argument REEL de gamma_chaine :
+    c'est la BARRIERE, pas s -- releve du site d'appel l.1128/1159, non suppose du factice, dont le parametre portait un autre nom)
+
+2. ECHELLE EN eta_c -- LES DEUX DIRECTIONS, A M x4
+   reference eta = |delta_des|          Gamma_c = 7.703743e-09
+   (eta_c rendu par le moteur : 0.05 ; M = 60 ; recouvrement 0.9141)
+
+   MONTANTE (la lettre du gel)          DESCENDANTE (l'erratum)
+     x2   7.145671e-09   7.24 %            /2   6.990528e-09   9.26 %
+     x4   5.252141e-09  26.50 %            /4   6.447878e-09   7.76 %
+     x8   3.466775e-09  33.99 %            /8   6.234095e-09   3.32 %
+                                           /16  6.146984e-09   1.40 % < tau_M
+                                           /32  6.107244e-09   0.65 % < tau_M
+
+   MONTANTE : 7.24 % -> 26.50 % -> 33.99 % -- DIVERGE
+   DESCENDANTE : 9.26 % -> 7.76 % -> 3.32 % -> 1.40 % -> 0.65 %
+   premier pas sous tau_M : /16, pas 1.40 %, Gamma_c = 6.146984e-09
+
+3. CE QUE LA REGLE D'ARRET BORNE -- LE PAS, PAS LE RESIDU
+   rapports mesures : 3.32 -> 1.40 (r = 0.42), 1.40 -> 0.65 (r = 0.46)
+   residu estime a eta/16 = pas x r/(1-r) = 1.20 % (sous tau_M)
+   Richardson (deux derniers pas) : 6.067503e-09
+   LES TROIS A CONSIGNER : eta final = |delta_des|/32 ; Gamma_c la
+   = 6.107244e-09 ; Richardson = 6.067503e-09 ; residu declare = 1.20 %
+
+4. INDEPENDANCE EN M -- LE BORD N'Y EST POUR RIEN
+   M facteur   Gamma_c              ecart doublement
+   x1          7.763487439e-09   7.8046 %   (M = 15)
+   x2          7.703743264e-09   7.2442 %   (M = 30)
+   x4          7.703743341e-09   7.2442 %   (M = 60)
+   les trois valeurs partagent 3 caracteres de tete : 7.7
+
+5. LE CONSTAT S-E DU BANC LEGER, RELEVE DE LA SORTIE DU SCRIPT
+   (au pre-vol v2 je n'avais garde que les lignes de COMPTE : la ligne
+    qui porte les nombres de E-A n'y figurait pas. Elle figure ici.)
+   commande : python m17_chaine_v8.py --banc-leger  (code retour 0)
+   | BANC LEGER : 7 scenarios PASSES
+   | - S-E constat : statut nominal = ARRET ANCRES NON CONSIGNEES (motifs : ancres non consignees : Q1_fr
+   | action_P6, Q2_eta_descente, Q3_lecture_graine, Q4_ex_aequo_cascade, GEL_EMPREINTE (ancre E19)) ; EA.
+   | Gamma_c operatif 6.1470e-09 (eta |d|x0.0625, 4 pas, stat M desc 4.2e-06, residu 0.0102, Richardson 6
+   | .0599e-09) ; temoin 4.7 : 7.7635e-09, ecart doublement 0.078
+   | comptes banc : 7 + 0 sabotes survivants == 7
