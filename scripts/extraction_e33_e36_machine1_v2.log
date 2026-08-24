@@ -1,0 +1,20 @@
+COMPOSITION E34 v2 -- machine 1, 2026-08-24
+acte source : journal_delta_80_acte_M17_v2.md  a2b80c149d6a05bc  (custody PASSEE)
+note m2     : note_machine2_contresignature_E33_E36_v1.md  f9de93f16c5382ed  (custody PASSEE, copie recue)
+
+verrous contresignes (clause l.170) :
+  E33             076e110c6a0a53c7 == 076e110c6a0a53c7  TENU
+  E34_amendement  5b16b328a1e843fd == 5b16b328a1e843fd  TENU
+  E35             febc6ef278392136 == febc6ef278392136  TENU
+  E36             6d808620ab1df171 == 6d808620ab1df171  TENU
+  E34_texte v1    cbf046e533c2c94d (concorde, NON SIGNE, remplace ici)
+
+forme machine 2 extraite : note l.133-136, 45 mots
+segment substitue : 1 occurrence (unicite asseree)
+bloc E34_TEXTE_v2 : 668 o, 105 mots (v1 : 74), empreinte acd878ec74d6948b
+re-pliage declare : glouton, indent 2, largeur 72, coupure aux espaces
+garde mot a mot : forme inseree == forme extraite, PASSEE
+test negatif : mutation d'un mot de la forme -> MORD
+
+comptes : 5 blocs extraits + 1 compose + 0 echoues
+EMPREINTE (convention B, contenu jusqu'a la ligne precedente incluse) : 20a849f1ab0a2bfe

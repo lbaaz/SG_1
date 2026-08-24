@@ -1,0 +1,50 @@
+==========================================================================
+RE-COMPOSITION INDEPENDANTE DU BLOC E34_TEXTE_v2 -- MACHINE 2
+==========================================================================
+
+1. CUSTODY DES SOURCES
+   acte 80 v2   journal_delta_80_acte_M17_v2.md                a2b80c149d6a05bc 18049 o  CONFORME
+   ma note v1   note_machine2_contresignature_E33_E36_v1.md    f9de93f16c5382ed  9527 o  CONFORME
+   delta 81 v2  journal_delta_81_contresignature_E33_E36_v2.md 6e7fed3ca455b684  6760 o  CONFORME
+
+2. LES QUATRE VERROUS CONTRESIGNES -- ONT-ILS BOUGE ?
+   E33              l.45 -46  076e110c6a0a53c7  TENU (et cite au 81 v2)
+   E34_amendement   l.74 -76  5b16b328a1e843fd  TENU (et cite au 81 v2)
+   E35              l.85 -92  febc6ef278392136  TENU (et cite au 81 v2)
+   E36              l.104-107 6d808620ab1df171  TENU (et cite au 81 v2)
+   4/4 verrous tenus
+
+3. LA RE-COMPOSITION
+   bloc v1 de l'acte : l.55-62, 477 o, empreinte cbf046e533c2c94d
+   forme machine 2 : note l.133-136 (span DERIVE, non lu du log m1)
+   45 mots ; premiers : et le RESIDU estime par le ...
+   derniers : ... Richardson porte sur la MEME paire.
+   segment a substituer : 14 mot(s) ; occurrences dans le bloc v1 : 1
+   mots : v1 74 -> v2 105
+
+   bloc compose : 668 o, 105 mots, empreinte acd878ec74d6948b
+   annonce par le delta 81 v2 : 668 o, 105 mots, acd878ec74d6948b
+   -> CONCORDE AU BIT
+
+4. GARDE MOT A MOT ET TEST NEGATIF
+   forme inseree == forme extraite : True
+   mutation d'UN mot de la forme ('estime' -> 'ESTIME') -> empreinte b4e5ba93184818d8 : MORD
+   test negatif du pliage : largeur 71 au lieu de 72 -> MORD
+
+5. LE RACCORD -- CE QUE LA SUBSTITUTION LAISSE A LA JOINTURE
+   voisinage de la couture : ... sur la MEME paire. -- la regle d'arret borne le ...
+   dernier mot de la forme : 'paire.' ; premier mot qui suit : '--'
+   la forme se termine par un POINT : True
+   la suite reprend par un TIRET de continuation : True
+   -> RACCORD DEFECTUEUX : une phrase se ferme, puis une incise en
+      tiret la continue comme si elle ne s'etait pas fermee. Dans le
+      bloc v1 le tiret suivait une parenthese SANS point.
+      v1 a la meme place : ... pas x r/(1-r)) -- la regle d'arret ...
+
+6. LES QUATRE AUTRES BLOCS SONT-ILS INCHANGES DANS LE 81 v2 ?
+   E33              076e110c6a0a53c7 cite au 81 v2 : True
+   E34_amendement   5b16b328a1e843fd cite au 81 v2 : True
+   E35              febc6ef278392136 cite au 81 v2 : True
+   E36              6d808620ab1df171 cite au 81 v2 : True
+   le 81 v2 cite l'acte : True ; ma note : True
+   emplacements de signature restants : 2
