@@ -1,0 +1,124 @@
+{
+ "G4_mordues": [],
+ "G4_points": [
+  [
+   "1.95",
+   "NON APPLICABLE"
+  ],
+  [
+   "1.97",
+   "NON APPLICABLE"
+  ],
+  [
+   "1.98",
+   "NON APPLICABLE"
+  ],
+  [
+   "2.02",
+   "NON APPLICABLE"
+  ],
+  [
+   "2.03",
+   "NON APPLICABLE"
+  ],
+  [
+   "2.05",
+   "NON APPLICABLE"
+  ]
+ ],
+ "G9_points": [],
+ "P2": {
+  "droite": {
+   "dans_bande": true,
+   "rapport_de_rapports": 1.0183762673201626
+  },
+  "gauche": {
+   "dans_bande": true,
+   "rapport_de_rapports": 0.973569668038408
+  },
+  "lecture": "les deux cotes"
+ },
+ "P3": {
+  "etat": "ECHOUE",
+  "n_eff": 6,
+  "p_exact": "49/720",
+  "rangs_classiques": [
+   3,
+   2,
+   1,
+   4,
+   5,
+   6
+  ],
+  "rangs_quantiques": [
+   5,
+   3,
+   1,
+   2,
+   4,
+   6
+  ],
+  "rho": "5/7",
+  "rho_crit": "29/35"
+ },
+ "P4": {
+  "bande": 0.6,
+  "convention": "ecart-type population (ddof = 0), declare",
+  "ecart_type_residu": 0.030080581655745394,
+  "lecture": "dans la bande",
+  "residu_moyen_consigne": -0.7467371060108735
+ },
+ "P5": {
+  "convention": "signe predit = signe(pente Sigma2 gauche - pente Sigma2 droite), DECLARE, a ratifier",
+  "paires": [
+   {
+    "accord": false,
+    "ecart": 0.0360906608296262,
+    "paire": [
+     1.98,
+     2.02
+    ],
+    "signe_predit": -1
+   },
+   {
+    "accord": false,
+    "ecart": 0.05413680740752291,
+    "paire": [
+     1.97,
+     2.03
+    ],
+    "signe_predit": -1
+   },
+   {
+    "accord": false,
+    "ecart": 0.08108601716375807,
+    "paire": [
+     1.95,
+     2.05
+    ],
+    "signe_predit": -1
+   }
+  ],
+  "resultat": "0/3"
+ },
+ "P6": {
+  "etat": "ECHOUE",
+  "n_eff": 6,
+  "p_exact": "1/2",
+  "rho": "1/35",
+  "rho_crit": "29/35",
+  "violations_ii": 0
+ },
+ "P7": {
+  "sain": true
+ },
+ "arret_ex_aequo": [],
+ "arrets_points": [],
+ "arrets_sans_index": [],
+ "comptes_carte": {
+  "ecartees": 3,
+  "lignes": 9,
+  "selectionnees": 6
+ },
+ "verdict": "PAS DE SIGNAL"
+}
