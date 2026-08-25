@@ -4,7 +4,8 @@ Frozen, versioned, self-contained snapshot of an ongoing two-machine
 falsification campaign, cut on 2026-08-10 for external review. This is
 a snapshot, not a publication: the campaign continues behind it.
 Tag `bundle-v2` incorporated the pre-send review fixes (the review
-itself ships in `journal/revue_pre_envoi_2026-08-10b_machine2_v1.md`);
+document itself is not in this cut: it is recorded as lost on both
+sides in journal delta 78);
 tag `bundle-v3` merges the two independently produced "version c"
 states of the note into version d (the collision and the merge are
 consigned in journal delta 64 and the campaign journal); the original
@@ -12,11 +13,13 @@ cut remains frozen under tag `bundle-v1-held` and is never amended.
 
 ## Where to start
 
-Read `notes/note_outreach_EN_unified_2026-08-10d.md` (the single
-outreach note, version d; version b is the state frozen at
-`bundle-v1-held`, and the machine-1 "version c" state consigned by
-journal delta 64 is kept under `journal/`). The prior-art review is in
-`notes/novelty_review.md`: it qualifies novelty, not correctness --
+Read `notes/note_outreach_EN_unified_2026-08-10e.md` (the single
+outreach note: version e, the pseudonymous public copy of version d,
+which is the merged state described above; version b is the state
+frozen at `bundle-v1-held`, and the machine-1 "version c" state
+consigned by journal delta 64 is kept under `journal/`). The
+prior-art review is in `notes/novelty_review.md`: it qualifies
+novelty, not correctness --
 its presence frames the claims. Everything else is evidence:
 pre-registered gates, primary run outputs, and the two-signatory
 campaign journal, mistakes included (they are part of the argument,
@@ -70,10 +73,10 @@ The quartic bundle has its own recursive manifest,
     gels/            certified pre-registrations (the credibility core)
     scripts/         engine, pilots, per-round measurement scripts, cut preflights
     runs/            primary JSON outputs, run logs, archived sweep logs, certifications
-    journal/         campaign deltas 1..60, 64-65 as held by machine 2
-                     (61-63 in transfer), errata, cross-certifications,
-                     pre-send review (earlier master-journal states
-                     through §17: on request)
+    journal/         campaign deltas 19..82 as separate files (earlier
+                     ones live inside the master-journal states;
+                     those through §17: on request), errata,
+                     cross-certifications
     quartic-bundle/  original quartic bundle, unchanged, as re-executed
                      (recursive manifest: quartic-bundle-MANIFEST-*.txt)
 
