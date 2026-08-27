@@ -1,0 +1,89 @@
+[0001] DEBUT          banc_qualification_machine1_v3  --mode temoin --sortie out_banc/temoin --registre D:/devs/bocal_coupe/bundle-v1  UTC 2026-08-27T23:12:37Z
+[0002] FILES          E18 : aucun numero pris ; maximum cite E42, N-69, D-M17-45 (registre 37ad1b6, pieces .md/.txt)
+[0003] N-59           banc_qualification_machine1_v3.py  144725 o  sha256 brut 5fae2a8c94cf8685  convention B 5fae2a8c94cf8685  ASCII/LF True
+[0004] E19            gels/temoin_negatif_pre_enregistrement_v7.md  8b083e9f109b5a8e  39750 o  attendu 8b083e9f109b5a8e 39750  -> CONCORDANT
+[0005] E19            gels/alpha_pre_enregistrement_v5.md  045c2435aaf623ce  28998 o  attendu 045c2435aaf623ce 28998  -> CONCORDANT
+[0006] E19            journal/note_machine1_certification_gels_v7_v4.md  6b2425dbf906205b  attendu 6b2425dbf906205b  -> CONCORDANT
+[0007] E19            journal/note_machine1_certification_gel_alpha_v5.md  fe43f7c4d142bcdb  attendu fe43f7c4d142bcdb  -> CONCORDANT
+[0008] CUSTODY        scripts/m9_replication_v1.py  sha256 brut c8ed357b120352c4...  36325 o  -> CONCORDANT
+[0009] CUSTODY        runs/m12_results.json  sha256 brut fa109da92e582520...  130856 o  -> CONCORDANT
+[0010] MOTEUR         scripts/m9_replication_v1.py charge, sha256 c8ed357b120352c4..., gel jumeau M9 v2 conforme, P=5 T_MAX=400.0 CAP=10000.0
+[0011] COMPTE         attendus (forme derivee) : {'T1': 4, 'T1b': 3, 'T2': 18, 'T2a': 1, 'T2b': 3, 'T3a': 0, 'T3b': 3, 'W_bascule': 9} = 41
+[0012] W-transcr.     controles symboliques 7 (ii) : 22/22 PASSE
+[0013] W-transcr.     algorithme transcrit contre chercher_seuil DEPOSE (integrer synthetique) : 9/9 PASSE
+[0014] W-transcr.     champ de forces (2.11) sur tirage declare : empreinte B f7f8be507eb5e9cb (double transcription : machine 2 compare)
+[0015] T1-A           t_c(CAP_0=10) = 20.100000 ; PREDICTION t_c(CAP_4=160) = 321.600000 ; T_MAX = c_T x = 643.200000 (consigne AVANT verification)
+[0016] T1-A           t_c = ['20.1000', '39.2520', '79.6800', '156.0960', '313.3920']
+[0017] T1-A           y = t_c/CAP = ['2.01000', '1.96260', '1.99200', '1.95120', '1.95870'] ; R = ['1.95284', '2.02996', '1.95904', '2.00769'] ; disp = 0.02977 ; tol_R = 0.05955 ; tol_R/(q-1) = 0.05955 (plafond 0.2500) ; fenetre_q=True fenetre_1=False saturation=False
+[0018] T3a-A          derive relative sur le flot a dt=0.006 (107200 pas) : H1 1.614e-08 (H1_0=2), N 8.972e-10 (N_0=0.75)
+[0019] T3a-A          flot a dt/2 (214400 pas, W-integrales seule) : H1 9.451e-10, N 2.914e-11 ; omega_max=2.0000 b=0.01200 tol_int=0.00858 (plafond 0.25) ; q_int H1 = 4.094287531949448, N = None -> W-integrales MORD ; NON LUE au plancher sur N
+[0020] T1-B           t_c(CAP_0=10) = 8.496000 ; PREDICTION t_c(CAP_4=160) = 135.936000 ; T_MAX = c_T x = 271.872000 (consigne AVANT verification)
+[0021] T1-B           t_c = ['8.4960', '16.4700', '32.3940', '62.7540', '126.2820']
+[0022] T1-B           y = t_c/CAP = ['0.84960', '0.82350', '0.80985', '0.78442', '0.78926'] ; R = ['1.93856', '1.96685', '1.93721', '2.01233'] ; disp = 0.08033 ; tol_R = 0.16066 ; tol_R/(q-1) = 0.16066 (plafond 0.2500) ; fenetre_q=True fenetre_1=False saturation=False
+[0023] T3a-B          derive relative sur le flot a dt=0.006 (66667 pas) : H1 2.681e-07 (H1_0=10), N 1.596e-08 (N_0=6)
+[0024] T3a-B          flot a dt/2 (133333 pas, W-integrales seule) : H1 1.556e-08, N 5.128e-10 ; omega_max=3.6056 b=0.02163 tol_int=0.01536 (plafond 0.25) ; q_int H1 = 4.107234156694868, N = 4.959797905872892 -> W-integrales MORD
+[0025] T1b            oscillation de l'enveloppe lue sur le flot A : osc = max_T (T - t_pic)/T = 0.00460 ({'200': (199.08, 102.32769860888119), '400': (399.33, 205.24857326816888)})
+[0026] T1b-a          CAP=100 T_MAX=200 -> seuil=0.9772529765993441 motif=OK|pas=6.03e-07 k=0 ; W-transcription (iii) PASSE : pas=6.03e-07 attendu(k=0)=6.03e-07 den=9863185 encadrement=[0.05, 6] seuil=0.9772529765993441 coherent=True
+[0027] T1b-b          CAP=200 T_MAX=200 -> seuil=1.954505405708197 motif=OK|pas=6.03e-07 k=0 ; W-transcription (iii) PASSE : pas=6.03e-07 attendu(k=0)=6.03e-07 den=9863185 encadrement=[0.05, 6] seuil=1.954505405708197 coherent=True
+[0028] T1b-c          CAP=100 T_MAX=400 -> seuil=0.4872145458084787 motif=OK|pas=6.03e-07 k=0 ; W-transcription (iii) PASSE : pas=6.03e-07 attendu(k=0)=6.03e-07 den=9863185 encadrement=[0.05, 6] seuil=0.4872145458084787 coherent=True
+[0029] T1b            loi 1 : s*(qCAP,T)/s*(CAP,T) = 1.999999 (attendu q=2, tol 9.202e-03, plafond 0.250) ; loi 2 : s*(CAP,c_T T)/s*(CAP,T) = 0.498555 (attendu 1/c_T=0.500, tol 2.301e-03, plafond 0.125) ; regime LOIS ; k=0 partout True
+[0030] T2-4|1.73      e(dt2)=9.8909e-06 (380 pas) e(dt2/2)=6.6011e-07 (760) p_obs=3.9053 tol_ordre=0.2003 (plafond 0.25) W-pas PASSE ; plancher c_pl x 1.69e-12 W-plancher PASSE ; e/ln10=4.296e-06 conversion(plafond 2/15) True
+[0031] Wb-4|1.73      phase grossiere depuis tau=2.0018e-01 (k'=4) : 17 pas de dt1, bascule a tau_b=9.8178e-02 (err 1.89e-05), e_avec(dt2)=3.4842e-04 (x35.2 de e_sans) W-bascule PASSE
+[0032] T2-4|2.27      e(dt2)=9.8910e-06 (380 pas) e(dt2/2)=6.6012e-07 (760) p_obs=3.9053 tol_ordre=0.2003 (plafond 0.25) W-pas PASSE ; plancher c_pl x 1.69e-12 W-plancher PASSE ; e/ln10=4.296e-06 conversion(plafond 2/15) True
+[0033] Wb-4|2.27      phase grossiere depuis tau=1.6126e-01 (k'=4) : 14 pas de dt1, bascule a tau_b=7.7258e-02 (err 4.76e-05), e_avec(dt2)=8.4359e-04 (x85.3 de e_sans) W-bascule PASSE
+[0034] T2-4|2.80      e(dt2)=9.8909e-06 (380 pas) e(dt2/2)=6.6013e-07 (760) p_obs=3.9053 tol_ordre=0.2003 (plafond 0.25) W-pas PASSE ; plancher c_pl x 1.69e-12 W-plancher PASSE ; e/ln10=4.296e-06 conversion(plafond 2/15) True
+[0035] Wb-4|2.80      phase grossiere depuis tau=1.3453e-01 (k'=4) : 12 pas de dt1, bascule a tau_b=6.2535e-02 (err 1.06e-04), e_avec(dt2)=1.7657e-03 (x178.5 de e_sans) W-bascule PASSE
+[0036] T2-5|1.73      e(dt2)=3.3605e-06 (380 pas) e(dt2/2)=2.2198e-07 (760) p_obs=3.9202 tol_ordre=0.1848 (plafond 0.25) W-pas PASSE ; plancher c_pl x 1.69e-12 W-plancher PASSE ; e/ln10=1.459e-06 conversion(plafond 2/15) True
+[0037] Wb-5|1.73      phase grossiere depuis tau=2.0018e-01 (k'=4) : 17 pas de dt1, bascule a tau_b=9.8178e-02 (err 6.48e-06), e_avec(dt2)=1.1710e-04 (x34.8 de e_sans) W-bascule PASSE
+[0038] T2-5|2.27      e(dt2)=3.3605e-06 (380 pas) e(dt2/2)=2.2199e-07 (760) p_obs=3.9201 tol_ordre=0.1848 (plafond 0.25) W-pas PASSE ; plancher c_pl x 1.69e-12 W-plancher PASSE ; e/ln10=1.459e-06 conversion(plafond 2/15) True
+[0039] Wb-5|2.27      phase grossiere depuis tau=1.6126e-01 (k'=4) : 14 pas de dt1, bascule a tau_b=7.7258e-02 (err 1.64e-05), e_avec(dt2)=2.8551e-04 (x85.0 de e_sans) W-bascule PASSE
+[0040] T2-5|2.80      e(dt2)=3.3605e-06 (380 pas) e(dt2/2)=2.2196e-07 (760) p_obs=3.9203 tol_ordre=0.1848 (plafond 0.25) W-pas PASSE ; plancher c_pl x 1.69e-12 W-plancher PASSE ; e/ln10=1.459e-06 conversion(plafond 2/15) True
+[0041] Wb-5|2.80      phase grossiere depuis tau=1.3453e-01 (k'=4) : 12 pas de dt1, bascule a tau_b=6.2535e-02 (err 3.69e-05), e_avec(dt2)=6.0241e-04 (x179.3 de e_sans) W-bascule PASSE
+[0042] T2-7|1.73      e(dt2)=1.0486e-06 (380 pas) e(dt2/2)=6.8698e-08 (760) p_obs=3.9321 tol_ordre=0.1720 (plafond 0.25) W-pas PASSE ; plancher c_pl x 1.69e-12 W-plancher PASSE ; e/ln10=4.554e-07 conversion(plafond 2/15) True
+[0043] Wb-7|1.73      phase grossiere depuis tau=2.0018e-01 (k'=4) : 17 pas de dt1, bascule a tau_b=9.8178e-02 (err 2.03e-06), e_avec(dt2)=3.6243e-05 (x34.6 de e_sans) W-bascule PASSE
+[0044] T2-7|2.27      e(dt2)=1.0487e-06 (380 pas) e(dt2/2)=6.8696e-08 (760) p_obs=3.9322 tol_ordre=0.1720 (plafond 0.25) W-pas PASSE ; plancher c_pl x 1.69e-12 W-plancher PASSE ; e/ln10=4.554e-07 conversion(plafond 2/15) True
+[0045] Wb-7|2.27      phase grossiere depuis tau=1.6126e-01 (k'=4) : 14 pas de dt1, bascule a tau_b=7.7258e-02 (err 5.16e-06), e_avec(dt2)=8.8850e-05 (x84.7 de e_sans) W-bascule PASSE
+[0046] T2-7|2.80      e(dt2)=1.0487e-06 (380 pas) e(dt2/2)=6.8701e-08 (760) p_obs=3.9321 tol_ordre=0.1720 (plafond 0.25) W-pas PASSE ; plancher c_pl x 1.69e-12 W-plancher PASSE ; e/ln10=4.554e-07 conversion(plafond 2/15) True
+[0047] Wb-7|2.80      phase grossiere depuis tau=1.3453e-01 (k'=4) : 12 pas de dt1, bascule a tau_b=6.2535e-02 (err 1.17e-05), e_avec(dt2)=1.8865e-04 (x179.9 de e_sans) W-bascule PASSE
+[0048] T2a            g=0 f=0 w2=2.27 horizon=6.2832 dt=0.006 : e = 2.0329e-09 -> PASSE
+[0049] T2b-p4         tronquee x''''=g x^(p-1), fenetre [k tau_dom, tau_CAP] a w2=2.27, 380 pas : e = 9.8910e-06 -> PASSE
+[0050] T2b-p5         tronquee x''''=g x^(p-1), fenetre [k tau_dom, tau_CAP] a w2=2.27, 380 pas : e = 3.3606e-06 -> PASSE
+[0051] T2b-p7         tronquee x''''=g x^(p-1), fenetre [k tau_dom, tau_CAP] a w2=2.27, 380 pas : e = 1.0487e-06 -> PASSE
+[0052] T3b-w1_lam1_x01 Omega^2=2 m=0.25 x0(formule)=1.000000000000 periode=4.768022, 10 periodes, 7947 pas : e = 4.3915e-09 -> PASSE
+[0053] T3b-w1_lam1_x02 Omega^2=5 m=0.4 x0(formule)=2.000000000000 periode=3.179723, 10 periodes, 5300 pas : e = 4.3504e-08 -> PASSE
+[0054] T3b-w1_lam1_x04 Omega^2=17 m=0.470588 x0(formule)=4.000000000000 periode=1.775291, 10 periodes, 2959 pas : e = 7.1435e-07 -> PASSE
+[0055] W-comptes      comptes 41 + sautes 0 == attendus 41 -> PASSE
+[0056] VERDICT        REGLAGE QUALIFIE (bonus T-3 retire) -- branche 6 : T-3 mord seul (W-integrales, T-3a)
+[0057] BANC           banc des gardes rejoue a la fin du run (D-b-3) :
+[0058] T1b-a          CAP=100 T_MAX=200 -> seuil=0.9765628546965307 motif=OK|pas=6.03e-07 k=0 ; W-transcription (iii) PASSE : pas=6.03e-07 attendu(k=0)=6.03e-07 den=9863185 encadrement=[0.05, 6] seuil=0.9765628546965307 coherent=True
+[0059] T1b-b          CAP=200 T_MAX=200 -> seuil=1.9531251619025702 motif=OK|pas=6.03e-07 k=0 ; W-transcription (iii) PASSE : pas=6.03e-07 attendu(k=0)=6.03e-07 den=9863185 encadrement=[0.05, 6] seuil=1.9531251619025702 coherent=True
+[0060] T1b-c          CAP=100 T_MAX=400 -> seuil=0.48828170109351093 motif=OK|pas=6.03e-07 k=0 ; W-transcription (iii) PASSE : pas=6.03e-07 attendu(k=0)=6.03e-07 den=9863185 encadrement=[0.05, 6] seuil=0.48828170109351093 coherent=True
+[0061] BANC           G1 W-pas seule -> NON CONCLUANT D'INTEGRATEUR branche 4, motif la nomme seule MORD NON CONCLUANT D'INTEGRATEUR / branche 4 : W-pas x MORD
+[0062] BANC           G2 W-plancher seule -> NON CONCLUANT D'INTEGRATEUR branche 4, motif la nomme seule MORD NON CONCLUANT D'INTEGRATEUR / branche 4 : W-plancher x MORD
+[0063] BANC           G3 W-bascule seule -> NON CONCLUANT D'INTEGRATEUR branche 4, motif la nomme seule MORD NON CONCLUANT D'INTEGRATEUR / branche 4 : W-bascule x MORD
+[0064] BANC           G4 W-croissance (CAP_0 jamais franchi) -> NON CONCLUANT DE TEMOIN branche 2 MORD NON CONCLUANT DE TEMOIN / branche 2 : W-croissance MORD
+[0065] BANC           G5 3bis (i) R hors des deux fenetres, tol_R sous plafond -> NON CONCLUANT DE REGIME MORD R=['1.800', '2.222', '1.800', '2.222'] tol_R=0.208 NON CONCLUANT DE REGIME
+[0066] T1b-a          CAP=100 T_MAX=200 -> seuil=0.0976564162590482 motif=OK|pas=6.03e-07 k=0 ; W-transcription (iii) PASSE : pas=6.03e-07 attendu(k=0)=6.03e-07 den=9863185 encadrement=[0.05, 6] seuil=0.0976564162590482 coherent=True
+[0067] T1b-b          CAP=200 T_MAX=200 -> seuil=0.13810697051713017 motif=OK|pas=6.03e-07 k=0 ; W-transcription (iii) PASSE : pas=6.03e-07 attendu(k=0)=6.03e-07 den=9863185 encadrement=[0.05, 6] seuil=0.13810697051713017 coherent=True
+[0068] T1b-c          CAP=100 T_MAX=400 -> seuil=0.0488281270198217 motif=OK|pas=3.80e-09 k=-1 ; W-transcription (iii) PASSE : pas=3.80e-09 attendu(k=-1)=3.80e-09 den=9863185 encadrement=[0.0125, 0.05] seuil=0.0488281270198217 coherent=True
+[0069] BANC           G6 3bis (ii) T-1b ni loi 1 ni stable (s* ~ sqrt(CAP)) -> NON CONCLUANT DE REGIME MORD loi1=1.4142 loi2=0.5000 NON CONCLUANT DE REGIME
+[0070] BANC           G7 4bis tol_ordre > plafond -> NON CONCLUANT DE RESOLUTION   MORD NON CONCLUANT DE RESOLUTION / branche 4bis : une tolerance depasse son plafond
+[0071] BANC           G8 4bis tol_R > eta_R (q-1) sans saturation -> NON CONCLUANT DE RESOLUTION MORD R=['1.500', '1.600', '1.667', '1.800'] tol_R/(q-1)=1.667 NON CONCLUANT DE RESOLUTION
+[0072] BANC           G9 W-comptes 40 + 0 != 41 -> BANC NON JOUE                   MORD W-comptes MORD (40 + 0 != 41)
+[0073] BANC           G10 etat tangent (1,0,0,1) : H1_0 = 0 -> ARRET declare (gel 4.3) MORD 
+[0074] BANC           G11 alpha(dt2) != alpha(dt2/2) -> G-dt MORD -> NON CONCLUANT DE RESOLUTION branche 2 MORD NON CONCLUANT DE RESOLUTION / branche 2 : G-dt p=4, plafond 10.2 p=4, G-dt p=5, plafond 10.2 p=5, G-dt p=7, plafond 10.2 p=7 MORD
+[0075] BANC           G12 alpha(k=4) != alpha(k=2) -> G-k MORD -> NON CONCLUANT DE RESOLUTION branche 2 MORD NON CONCLUANT DE RESOLUTION / branche 2 : G-k p=4, plafond 10.2 p=4, G-k p=5, plafond 10.2 p=5, G-k p=7, plafond 10.2 p=7 MORD
+[0076] BANC           G13 alpha depend de w2 -> G-w2 MORD -> REFUTE branche 4, motif G-w2 MORD REFUTE / branche 4 : G-w2 p=4, G-w2 p=5, G-w2 p=7 MORD (alpha depend de s ou de w2)
+[0077] BANC           G14 CAP_p jamais atteint -> G-fen -> NON CONCLUANT DE FENETRE branche 3, compte inchange MORD NON CONCLUANT DE FENETRE ; comptes=63
+[0078] BANC           G15 G-comptes 89 + 0 != 90 -> MANCHE NON JOUEE               MORD G-comptes MORD (89 + 0 != 90)
+[0079] BANC           G16 W-transcription : NPASSES=2 et k incoherent -> controle positif MORD MORD pas=2.84e-05 attendu(k=0)=6.03e-07 den=9863185 encadrement=[0.05, 6] seuil=0.9765731100045271 coherent=True
+[0080] BANC           G17 sous le seuil, un faux blow-up -> G-seuil MORD -> INSTRUMENT REFUTE MORD INSTRUMENT REFUTE / branche 1 : G-seuil MORD (exposant convergent sous le seuil)
+[0081] BANC           G18 alpha depend de s -> G-s MORD -> REFUTE branche 4, motif G-s MORD REFUTE / branche 4 : G-s p=4, G-s p=5, G-s p=7 MORD (alpha depend de s ou de w2)
+[0082] BANC           G20 W-integrales q_int(H1) = 3 -> MORD -> branche 6, QUALIFIE bonus retire MORD REGLAGE QUALIFIE (bonus T-3 retire) / branche 6 : T-3 mord seul (W-integrales, T-3a)
+[0083] BANC           G21 derive(dt/2) sous le plancher machine -> NON LUE (LD-16), pas de morsure MORD N : NON LUE (plancher, LD-16) ; H1 : PASSE
+[0084] L-banc-faux    s=2.406602 sgn=+1 attendu EXPLOSE : instrument True (pas 1074), moteur True ; indice identique False -> ECART
+[0085] BANC           G19 physique corrompue (exposant p) contre le moteur -> G-lignee ECART MORD booleen True indice False
+[0086] NE-JOUE-PAS    lectures NON LUES : ['W-integrales N etat A NON LUE (plancher machine, LD-16)']
+[0087] NE-JOUE-PAS    gardes sans morsure demontree dans ce journal (16 enumerees des gels, 16 demontrees) : aucune
+[0088] NE-JOUE-PAS    runs du gel non joues : aucun (0 sautes)
+[0089] JSON           out_banc/temoin\resultats_temoin.json  24208 o  empreinte B 644240dc894c2733

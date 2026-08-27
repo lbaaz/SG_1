@@ -1,0 +1,98 @@
+CERTIFICATION DE L'INSTRUMENT DES DEUX BANCS -- machine 2, 27/08/2026
+cible   : banc_qualification_machine1_v2.py  d74928ef093c96d0
+barre   : POUR_MACHINE1_ordre_instrument_bancs_v1.md  6e176705468a4834 (C-1..C-12)
+registre: D:/devs/bocal_coupe/bundle-v1
+
+=== 1. FORME -- C-12, N-65, N-69, E19
+[F-01] empreinte B de la cible == d74928ef093c96d0 (note m1 v3)   OK    d74928ef093c96d0 133202 o
+[F-02] les pieces : ASCII pur, CR = 0                             OK    hors norme : aucune
+[F-03] aucune mention d'outillage : code, journaux, sorties de pr OK    0 occurrence(s) : 
+[F-04] le docstring cite les 2 gels ET les 2 certifications (E19) OK    manquantes : aucune
+[F-05] la main est dans le nom du fichier (N-65)                  OK    banc_qualification_machine1_v2.py
+[F-06] aucun numero de manche pris dans l'en-tete (N-69)          OK    aucun
+[F-07] chaque journal dit ce qu'il NE JOUE PAS (C-11)             OK    sans la section : aucun
+
+=== 2. ANCRES DU REGISTRE (E19)
+[A-01] m9_replication_v1.py (brut)                                OK    c8ed357b120352c4
+[A-02] m12_results.json (brut)                                    OK    fa109da92e582520
+[A-03] alpha_pre_enregistrement_v2.md (B)                         OK    35a70834b2a34514
+[A-04] temoin_negatif_pre_enregistrement_v5.md (B)                OK    0905a9b78ba40349
+[A-05] la garde d'ancre MORD sur un registre faux (C-1)           OK    refus : ARRET E19 : gel absent D:\devs\bocal\BOCAL4\_registre_absent
+
+=== 3. RE-DERIVATIONS INDEPENDANTES -- exactes, contre le texte des gels
+[R-01] alpha_p = 4/(p-2) exact : 2, 4/3, 4/5                      OK    2, 4/3, 4/5
+[R-02] K_p = a(a+1)(a+2)(a+3) exact : 120, 3640/81, 9576/625      OK    120, 3640/81, 9576/625
+[R-03] A_p == table du gel alpha (a g = 1/20)                     OK    48.98979, 9.65048, 3.14244
+[R-04] tau_dom == table du gel alpha 6                            OK    5.0044e-02, 4.0314e-02, 3.3634e-02
+[R-05] dt_2 = r tau_dom / M == table du gel alpha 5.4             OK    2.5022e-04, 2.0157e-04, 1.6817e-04
+[R-06] les NEUF CAP_p == table du gel alpha 5.4                   OK    9 valeurs re-derivees
+[R-07] les NEUF bascules (k = 2) == table du gel alpha 5.3        OK    9 valeurs re-derivees
+[R-08] den = (NGRID-1)^NPASSES (NDENSE-1) = 9 863 185 et pas_k    OK    den=9863185  k0=6.0325e-07 k1=1.8250e-06 k-1=3.8020e-09
+[R-09] terme neglige delta/((a+2)(a+3)) : 1/20, 9/1300, 25/10640  OK    p=4 1/2000, p=5 9/13000, p=7 1/1064
+[R-10] ecart minimal entre exposants = 8/15 et plafond eta x 8/15 OK    8/15 = 8/15 ; plafond = 2/15
+[R-11] les fonctions de la cible == mes derivations (9 CAP, 18 ba OK    CAP True / bascule True
+
+=== 4. JAMBE DE MUTATION -- on mute, le controle doit MORDRE
+[M-00] reference : phase 1 == moteur (booleen ET indice)          OK    indice 2044
+[M-01] RK4 mute (le demi-pas oublie dans k2) : la lignee MORD     OK    mutation MORD -> 2060
+[M-02] test d'explosion mute (|x1+x2| au lieu du max) : la lignee OK    mutation MORD -> 2091
+[M-03] non-linearite mutee (g a un millieme pres) : la lignee MOR OK    mutation MORD -> 2042
+[M-03b] resolution du controle de lignee : une mutation a 1e-9 ne  OK    l'indice reste 2044 : le controle separe les fautes de FORME, pas les derniers bits (constat, pas un defaut)
+[M-04] reference : controle positif de transcription PASSE        OK    pas=6.03e-07 attendu(k=0)=6.03e-07 den=9863185 encadrement=[0.05, 6] seuil=0.9
+[M-05] passe dense mutee (NDENSE 96 -> 95) : le controle positif  OK    pas=6.10e-07 attendu(k=0)=6.03e-07 den=9863185 encadrement=[0.05, 6] seuil=0.9
+[M-06] grille mutee (NGRID 48 -> 49) : le controle positif MORD   OK    pas=5.66e-07 attendu(k=0)=6.03e-07 den=9863185 encadrement=[0.05, 6] seuil=0.9
+[M-07] encadrement mute (LO0 0.05 -> 0.5) : le controle positif M OK    pas=5.58e-07 attendu(k=0)=6.03e-07 den=9863185 encadrement=[0.05, 6] seuil=0.9
+[M-08] MAX_ELARG, EXERCE (encadrement de depart sous le seuil) pu OK    sain : k=4 seuil=0.9772525852450298 ; mute a 1 : k=1 motif=ECHEC_HAUT
+
+=== 5. COUVERTURE DES GARDES (C-1) -- perimetre enumere par la machine
+[G-01] gardes enumerees depuis le texte des DEUX gels             OK    16 : G-comptes G-dt G-fen G-k G-lignee G-s G-seuil G-w2 W-bascule W-comptes W-croissance W-integrales W-mirage W-pas W-plancher W-transcription
+[G-02a] chaque garde du perimetre a une entree de temoin           OK    16 entrees pour 16 gardes
+[G-02] chaque garde est FORCEE au banc, ou DECLAREE sans morsure  OK    forcees 15/16 ; declarees au journal : W-integrales
+        forcees (scenario cite, MORD lu au journal) : G-comptes G-dt G-fen G-k G-lignee G-s G-seuil G-w2 W-bascule W-comptes W-croissance W-mirage W-pas W-plancher W-transcription
+        W-integrales     PAS DE MORSURE : aucune lecture (LD-9) : pas jouable au compte gele
+[G-04] cascade temoin : chaque branche a un scenario              OK    branches 1 2 3 3bis 4 4bis 5 6 ; jamais atteintes au banc : aucune
+[G-05] cascade alpha : chaque branche a un scenario               OK    branches 1 2 3 4 5 6 7 ; jamais atteintes au banc : aucune
+[G-03] le banc conclut 40/40 scenarios mordent (rejoue par moi)   OK    bilan relu dans mon propre run du banc
+
+=== 6. LA BARRE ANNONCEE -- C-2, C-3, C-6, C-8, C-9
+[C-02] G-seuil est atteignable : derniere fenetre, t* libre, et B OK    scenario B4d : MORD
+[C-03] le code REFUSE l'etat tangent interdit (4.3), pas seulemen OK    refus : ETAT INTERDIT (gel temoin 4.3) : H1_0 = 0.0, N_0 = 0.75 -- s
+[C-03b] sur l'etat tangent, D est proportionnel a x' (rapport -0.5 OK    rapport moyen -0.500000000, dispersion 4.3e-11, |D| max 0.612 (borne = le temoin PASSERAIT)
+[C-06a] attendus du temoin DERIVES == 39 (gel temoin 9)            OK    {'T1': 2, 'T1b': 3, 'T2': 18, 'T2a': 1, 'T2b': 3, 'T3a': 0, 'T3b': 3, 'W_bascule': 9} = 39
+[C-06b] attendus d'alpha DERIVES == 90 (gel alpha 4.5)             OK    90
+[C-06c] les journaux portent la forme derivee comptes + sautes ==  OK    2 occurrence(s) : [('39', '0', '39'), ('90', '0', '90')]
+[C-08] ajustement II : alpha n'est pas ajuste (il n'est meme pas  OK    I rend alpha=2.00000000 (vrai 2) ; II a alpha impose rend A=50.0000
+[C-08b] D-alpha-5 montre : a alpha FAUX, c'est A qui absorbe l'err OK    alpha impose 1 (au lieu de 2) -> A = 40.972 au lieu de 50
+[C-09] agregation : aucune moyenne d'alpha n'est prise (six par d OK    occurrences de 'P-alpha' 4 ; moyennes 0
+
+=== 7. LES TROIS FAITS A TRANCHER -- verifies
+[T-01] gel temoin 9 : T-1 = 2 flots, T-3a = 0, aucun flot a dt/2  OK    T-1 = 2, T-3a = 0, total = 36, 'dt/2' dans le compte : False
+[T-01b] gel temoin 8 : W-integrales EXIGE la lecture dt contre dt/ OK    l'exigence de 8 et le compte de 9 sont INCOMPATIBLES a compte gele
+[T-02] aux trois points, NI 1.05 s* NI 1.20 s* n'explose avant T_ OK    p=5 w2=2.27 c=1.05 -> non; p=5 w2=2.27 c=1.20 -> non; p=5 w2=2.80 c=1.05 -> non; p=5 w2=2.80 c=1.20 -> non; p=7 w2=2.80 c=1.05 -> non; p=7 w2=2.80 c=1.20 -> non
+[T-02b] controle non vide : a p = 4, 1.20 s* explose aux trois w2  OK    trois points de degre 4 : EXPLOSE
+[T-03] P-A : incoherence de TEXTE, lisible sans aucun run         OK    10.3 tire la tolerance de la DISPERSION de l'instrument ; D-alpha-9 borne le biais du MODELE a delta/((a+2)(a+3)) -- deux grandeurs sans rapport, et la premiere DECROIT quand l'instrument s'ameliore
+[T-03b] et la borne du biais ne depend d'aucune mesure : elle est  OK    (p-2) x delta/((a+2)(a+3)) a p=4 = 1/1000 = 1.0e-03 -- rien n'a ete mesure pour l'ecrire
+
+=== 8. LA v2 -- PERIMETRE DU CHANGEMENT, CORRECTIFS, ET CE QUE J'Y TROUVE
+[V-01] le perimetre du changement est celui que la note declare   OK    neuves banc_gardes enumerer_gardes ne_joue_pas verdict_comptes ; modifiees 12 ; retirees aucune
+[V-02] physique, transcription, ajustements, derivations : INCHAN OK    29 fonctions comparees ; bougees : aucune
+[V-03] D-b-1 : date_utc n'appelle plus utcnow (la cause, pas le s OK    utcnow absent ; mes quatre journaux joues avec -W error::DeprecationWarning
+[V-04] D-b-2 : trois lignes NE-JOUE-PAS dans CHAQUE journal de mo OK    temoin 3, alpha 3
+[V-05] D-b-3 : le banc rend 40/40 et 15 gardes sur 16 demontrees  OK    rejoue chez moi en 12.5 s
+[V-06] D-b-4 : l'etat tangent est REFUSE, et le refus est declare OK    SystemExit 'ETAT INTERDIT' ; scenario G10 MORD
+[V-07] 10.1 : la tolerance CONTIENT les ecarts que G-dt et G-k te OK    tol = max(ecarts_dt + ecarts_k + disps) -- donc ecart <= tol TOUJOURS
+[V-08] lecture NON DECLAREE : G-dt/G-k mordent contre le PLAFOND, MORD  le code compare au plafond 2/15 ; aucune LD ne le declare (LD-1..LD-14 seulement)
+[V-09] G-dt et G-k ne sont pas REDONDANTES avec le plafond 10.2   MORD  max(ecarts_dt) > 2/15 implique tol > 2/15 : la branche 2 tombe deja par le plafond
+[V-10] et le banc le MONTRE : G11/G12 nomment toujours le plafond OK    les deux scenarios rendent 'G-dt|G-k p=x, plafond 10.2 p=x'
+[V-11] la vacuite est PROPRE a G-dt/G-k : G-s et G-w2 comparent d OK    les ecarts en s et en w2 n'entrent pas dans tol : ces deux gardes mordent vraiment
+[V-12] LD-4 : la forme retenue vaut 0.2003 a p=4 ; la forme simpl OK    b = (alpha+5)/M = 0.3500 ; tol_ordre = 0.2003 ; log2(1+1/M) = 0.0704
+[V-13] EPREUVE DE PUISSANCE : la tolerance separe encore l'ordre  OK    |4-3| = 1 contre tol_ordre = 0.2003 (facteur 5.0), et sous le plafond eta = 1/4
+[V-14] la chronologie de LD-4 change le verdict : 3.905 passe ici OK    0.095 sous 0.2003 et au-dessus de 0.0704 : l'ecart entre les deux formes est REEL
+
+=== BILAN
+controles joues 68 : 66 passent, 2 mordent
+gardes sans morsure demontree : W-integrales
+
+CE QUE CE LOG NE JOUE PAS : il ne rejoue pas les 39 + 90 runs reels,
+ne mesure rien (N-62), ne tranche aucun des trois faits (arbitrage
+d'operateur), et ne corrige pas le code de la cible.

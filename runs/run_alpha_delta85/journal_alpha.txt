@@ -1,0 +1,152 @@
+[0001] DEBUT          banc_qualification_machine1_v3  --mode alpha --sortie out_banc/alpha --porte-temoin out_banc/temoin/resultats_temoin.json --registre D:/devs/bocal_coupe/bundle-v1  UTC 2026-08-27T23:18:40Z
+[0002] FILES          E18 : aucun numero pris ; maximum cite E42, N-69, D-M17-45 (registre 37ad1b6, pieces .md/.txt)
+[0003] N-59           banc_qualification_machine1_v3.py  144725 o  sha256 brut 5fae2a8c94cf8685  convention B 5fae2a8c94cf8685  ASCII/LF True
+[0004] E19            gels/temoin_negatif_pre_enregistrement_v7.md  8b083e9f109b5a8e  39750 o  attendu 8b083e9f109b5a8e 39750  -> CONCORDANT
+[0005] E19            gels/alpha_pre_enregistrement_v5.md  045c2435aaf623ce  28998 o  attendu 045c2435aaf623ce 28998  -> CONCORDANT
+[0006] E19            journal/note_machine1_certification_gels_v7_v4.md  6b2425dbf906205b  attendu 6b2425dbf906205b  -> CONCORDANT
+[0007] E19            journal/note_machine1_certification_gel_alpha_v5.md  fe43f7c4d142bcdb  attendu fe43f7c4d142bcdb  -> CONCORDANT
+[0008] CUSTODY        scripts/m9_replication_v1.py  sha256 brut c8ed357b120352c4...  36325 o  -> CONCORDANT
+[0009] CUSTODY        runs/m12_results.json  sha256 brut fa109da92e582520...  130856 o  -> CONCORDANT
+[0010] MOTEUR         scripts/m9_replication_v1.py charge, sha256 c8ed357b120352c4..., gel jumeau M9 v2 conforme, P=5 T_MAX=400.0 CAP=10000.0
+[0011] PORTE          temoin resultats_temoin.json (644240dc894c2733) : REGLAGE QUALIFIE (bonus T-3 retire) ; reglage {'CAP_depose': 10000.0, 'M': 20, 'T_MAX_depose': 400.0, 'c_0': 10, 'c_T': 2, 'c_pl': 10, 'delta': '1/100', 'dt1': 0.006, 'eta': '1/4', 'eta_R': '1/4', 'k': 2, 'k_prime': 4, 'q': 2, 'r': '1/10'} ; e(dt2)/ln10 par degre max = {4: '4.296e-06', 5: '1.459e-06', 7: '4.554e-07'}
+[0012] COMPTE         attendus (forme derivee) : {'plan': 18, 'G_dt': 18, 'G_k': 18, 'G_seuil': 9, 'G_lignee': 27} = 90
+[0013] CARTE          neuf s* lus (sF) ; regle 11 contre la table 4.2 : ecart max 4.4e-13 -> CONCORDANT
+[0014] CARTE          signes joues (4.4 v5, sgn = frag, +1 sans second seuil) : {'4|1.73': '+1 (asym --)', '4|2.27': '+1 (asym --)', '4|2.80': '+1 (asym --)', '5|1.73': '+1 (asym 0.7908)', '5|2.27': '-1 (asym 1.9140)', '5|2.80': '-1 (asym 1.2809)', '7|1.73': '+1 (asym 0.8360)', '7|2.27': '-1 (asym 1.2424)', '7|2.80': '-1 (asym 1.2359)'}
+[0015] A-p4_w1.73_c1.05_dt2_k2 bascule pas 20083 t=120.4980 |x|=5.1251e+03 ; phase 2 371 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.999824 (4/(p-2)=2.000000) disp_loc=2.255e-04 ; II : gA^(p-2)/K=1.000226 t*=120.595800
+[0016] A-p4_w1.73_c1.05_dt2s2_k2 bascule pas 20083 t=120.4980 |x|=5.1251e+03 ; phase 2 742 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=1.999823 (4/(p-2)=2.000000) disp_loc=2.253e-04 ; II : gA^(p-2)/K=1.000222 t*=120.595800
+[0017] A-p4_w1.73_c1.05_dt2_k4 bascule pas 20066 t=120.3960 |x|=1.2305e+03 ; phase 2 779 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.999826 (4/(p-2)=2.000000) disp_loc=2.275e-04 ; II : gA^(p-2)/K=1.000223 t*=120.595800
+[0018] A-p4_w1.73_c1.20_dt2_k2 bascule pas 2086 t=12.5160 |x|=5.0878e+03 ; phase 2 373 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.999828 (4/(p-2)=2.000000) disp_loc=2.262e-04 ; II : gA^(p-2)/K=1.000222 t*=12.614159
+[0019] A-p4_w1.73_c1.20_dt2s2_k2 bascule pas 2086 t=12.5160 |x|=5.0878e+03 ; phase 2 745 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=1.999823 (4/(p-2)=2.000000) disp_loc=2.255e-04 ; II : gA^(p-2)/K=1.000222 t*=12.614159
+[0020] A-p4_w1.73_c1.20_dt2_k4 bascule pas 2069 t=12.4140 |x|=1.2260e+03 ; phase 2 780 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.999824 (4/(p-2)=2.000000) disp_loc=2.272e-04 ; II : gA^(p-2)/K=1.000226 t*=12.614158
+[0021] S-p4_w1.73_c0.95_seuil sous seuil (s=1.905227) : |x|max phase 2 2.0284e+00 ; ajustement libre alpha=0.0887 t*=400.1001 (T_MAX=400) disp_loc=3.085e-02 ; II gA^(p-2)/K=3.663e-07
+[0022] A-p4_w2.27_c1.05_dt2_k2 bascule pas 3889 t=23.3340 |x|=7.6168e+03 ; phase 2 378 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.999823 (4/(p-2)=2.000000) disp_loc=2.261e-04 ; II : gA^(p-2)/K=1.000226 t*=23.414225
+[0023] A-p4_w2.27_c1.05_dt2s2_k2 bascule pas 3889 t=23.3340 |x|=7.6168e+03 ; phase 2 756 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=1.999822 (4/(p-2)=2.000000) disp_loc=2.259e-04 ; II : gA^(p-2)/K=1.000223 t*=23.414225
+[0024] A-p4_w2.27_c1.05_dt2_k4 bascule pas 3876 t=23.2560 |x|=1.9619e+03 ; phase 2 765 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.999823 (4/(p-2)=2.000000) disp_loc=2.293e-04 ; II : gA^(p-2)/K=1.000226 t*=23.414224
+[0025] A-p4_w2.27_c1.20_dt2_k2 bascule pas 7339 t=44.0340 |x|=8.0655e+03 ; phase 2 367 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.999825 (4/(p-2)=2.000000) disp_loc=2.239e-04 ; II : gA^(p-2)/K=1.000225 t*=44.111960
+[0026] A-p4_w2.27_c1.20_dt2s2_k2 bascule pas 7339 t=44.0340 |x|=8.0655e+03 ; phase 2 734 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=1.999824 (4/(p-2)=2.000000) disp_loc=2.235e-04 ; II : gA^(p-2)/K=1.000222 t*=44.111960
+[0027] A-p4_w2.27_c1.20_dt2_k4 bascule pas 7326 t=43.9560 |x|=2.0191e+03 ; phase 2 754 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.999825 (4/(p-2)=2.000000) disp_loc=2.279e-04 ; II : gA^(p-2)/K=1.000224 t*=44.111959
+[0028] S-p4_w2.27_c0.95_seuil sous seuil (s=2.772408) : |x|max phase 2 5.0812e+00 ; ajustement libre alpha=-0.0359 t*=400.0805 (T_MAX=400) disp_loc=7.252e-03 ; II gA^(p-2)/K=9.854e-07
+[0029] A-p4_w2.80_c1.05_dt2_k2 bascule pas 61135 t=366.8100 |x|=1.1132e+04 ; phase 2 375 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.999825 (4/(p-2)=2.000000) disp_loc=2.222e-04 ; II : gA^(p-2)/K=1.000224 t*=366.876361
+[0030] A-p4_w2.80_c1.05_dt2s2_k2 bascule pas 61135 t=366.8100 |x|=1.1132e+04 ; phase 2 750 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=1.999824 (4/(p-2)=2.000000) disp_loc=2.219e-04 ; II : gA^(p-2)/K=1.000221 t*=366.876361
+[0031] A-p4_w2.80_c1.05_dt2_k4 bascule pas 61124 t=366.7440 |x|=2.8036e+03 ; phase 2 768 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.999829 (4/(p-2)=2.000000) disp_loc=2.294e-04 ; II : gA^(p-2)/K=1.000221 t*=366.876359
+[0032] A-p4_w2.80_c1.20_dt2_k2 bascule pas 1676 t=10.0560 |x|=1.2425e+04 ; phase 2 354 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.999827 (4/(p-2)=2.000000) disp_loc=2.182e-04 ; II : gA^(p-2)/K=1.000224 t*=10.118810
+[0033] A-p4_w2.80_c1.20_dt2s2_k2 bascule pas 1676 t=10.0560 |x|=1.2425e+04 ; phase 2 707 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=1.999822 (4/(p-2)=2.000000) disp_loc=2.174e-04 ; II : gA^(p-2)/K=1.000223 t*=10.118810
+[0034] A-p4_w2.80_c1.20_dt2_k4 bascule pas 1665 t=9.9900 |x|=2.9600e+03 ; phase 2 746 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.999823 (4/(p-2)=2.000000) disp_loc=2.285e-04 ; II : gA^(p-2)/K=1.000226 t*=10.118807
+[0035] S-p4_w2.80_c0.95_seuil sous seuil (s=7.722745) : |x|max phase 2 6.2608e+00 ; ajustement libre alpha=-0.1040 t*=400.0672 (T_MAX=400) disp_loc=3.233e-02 ; II gA^(p-2)/K=7.019e-07
+[0036] A-p5_w1.73_c1.05_dt2_k2 bascule pas 4439 t=26.6340 |x|=2.1979e+02 ; phase 2 364 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.333186 (4/(p-2)=1.333333) disp_loc=1.398e-04 ; II : gA^(p-2)/K=1.000323 t*=26.729971
+[0037] A-p5_w1.73_c1.05_dt2s2_k2 bascule pas 4439 t=26.6340 |x|=2.1979e+02 ; phase 2 728 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=1.333186 (4/(p-2)=1.333333) disp_loc=1.397e-04 ; II : gA^(p-2)/K=1.000320 t*=26.729971
+[0038] A-p5_w1.73_c1.05_dt2_k4 bascule pas 4422 t=26.5320 |x|=8.3915e+01 ; phase 2 772 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.333187 (4/(p-2)=1.333333) disp_loc=1.419e-04 ; II : gA^(p-2)/K=1.000321 t*=26.729970
+[0039] A-p5_w1.73_c1.20_dt2_k2 bascule pas 2651 t=15.9060 |x|=2.0945e+02 ; phase 2 378 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.333149 (4/(p-2)=1.333333) disp_loc=2.053e-04 ; II : gA^(p-2)/K=1.000351 t*=16.005497
+[0040] A-p5_w1.73_c1.20_dt2s2_k2 bascule pas 2651 t=15.9060 |x|=2.0945e+02 ; phase 2 756 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=1.333149 (4/(p-2)=1.333333) disp_loc=2.068e-04 ; II : gA^(p-2)/K=1.000348 t*=16.005497
+[0041] A-p5_w1.73_c1.20_dt2_k4 bascule pas 2635 t=15.8100 |x|=8.5312e+01 ; phase 2 762 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.333151 (4/(p-2)=1.333333) disp_loc=2.063e-04 ; II : gA^(p-2)/K=1.000348 t*=16.005497
+[0042] S-p5_w1.73_c0.95_seuil sous seuil (s=0.623414) : |x|max phase 2 1.2576e+00 ; ajustement libre alpha=-0.1177 t*=400.1001 (T_MAX=400) disp_loc=3.316e-02 ; II gA^(p-2)/K=4.569e-07
+[0043] A-p5_w2.27_c1.05_dt2_k2 bascule pas 3815 t=22.8900 |x|=2.9881e+02 ; phase 2 359 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.333138 (4/(p-2)=1.333333) disp_loc=2.288e-04 ; II : gA^(p-2)/K=1.000364 t*=22.966213
+[0044] A-p5_w2.27_c1.05_dt2s2_k2 bascule pas 3815 t=22.8900 |x|=2.9881e+02 ; phase 2 717 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=1.333135 (4/(p-2)=1.333333) disp_loc=2.298e-04 ; II : gA^(p-2)/K=1.000365 t*=22.966213
+[0045] A-p5_w2.27_c1.05_dt2_k4 bascule pas 3801 t=22.8060 |x|=1.1132e+02 ; phase 2 775 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.333133 (4/(p-2)=1.333333) disp_loc=2.281e-04 ; II : gA^(p-2)/K=1.000371 t*=22.966213
+[0046] A-p5_w2.27_c1.20_dt2_k2 bascule pas 1898 t=11.3880 |x|=2.9957e+02 ; phase 2 358 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.333147 (4/(p-2)=1.333333) disp_loc=2.143e-04 ; II : gA^(p-2)/K=1.000351 t*=11.464073
+[0047] A-p5_w2.27_c1.20_dt2s2_k2 bascule pas 1898 t=11.3880 |x|=2.9957e+02 ; phase 2 715 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=1.333145 (4/(p-2)=1.333333) disp_loc=2.145e-04 ; II : gA^(p-2)/K=1.000352 t*=11.464073
+[0048] A-p5_w2.27_c1.20_dt2_k4 bascule pas 1884 t=11.3040 |x|=1.1138e+02 ; phase 2 775 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.333149 (4/(p-2)=1.333333) disp_loc=2.174e-04 ; II : gA^(p-2)/K=1.000348 t*=11.464072
+[0049] S-p5_w2.27_c0.95_seuil sous seuil (s=1.337687) : |x|max phase 2 9.9809e-02 ; ajustement libre alpha=-0.9679 t*=400.0073 (T_MAX=400) disp_loc=1.315e-02 ; II gA^(p-2)/K=1.282e-11
+[0050] A-p5_w2.80_c1.05_dt2_k2 bascule pas 5740 t=34.4400 |x|=3.7377e+02 ; phase 2 364 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.333159 (4/(p-2)=1.333333) disp_loc=2.374e-04 ; II : gA^(p-2)/K=1.000336 t*=34.504443
+[0051] A-p5_w2.80_c1.05_dt2s2_k2 bascule pas 5740 t=34.4400 |x|=3.7377e+02 ; phase 2 727 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=1.333156 (4/(p-2)=1.333333) disp_loc=2.384e-04 ; II : gA^(p-2)/K=1.000337 t*=34.504443
+[0052] A-p5_w2.80_c1.05_dt2_k4 bascule pas 5729 t=34.3740 |x|=1.4623e+02 ; phase 2 756 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.333155 (4/(p-2)=1.333333) disp_loc=2.420e-04 ; II : gA^(p-2)/K=1.000340 t*=34.504441
+[0053] A-p5_w2.80_c1.20_dt2_k2 bascule pas 945 t=5.6700 |x|=3.9366e+02 ; phase 2 349 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.333155 (4/(p-2)=1.333333) disp_loc=2.403e-04 ; II : gA^(p-2)/K=1.000340 t*=5.731983
+[0054] A-p5_w2.80_c1.20_dt2s2_k2 bascule pas 945 t=5.6700 |x|=3.9366e+02 ; phase 2 698 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=1.333155 (4/(p-2)=1.333333) disp_loc=2.414e-04 ; II : gA^(p-2)/K=1.000337 t*=5.731983
+[0055] A-p5_w2.80_c1.20_dt2_k4 bascule pas 933 t=5.5980 |x|=1.4112e+02 ; phase 2 777 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.333153 (4/(p-2)=1.333333) disp_loc=2.462e-04 ; II : gA^(p-2)/K=1.000342 t*=5.731981
+[0056] S-p5_w2.80_c0.95_seuil sous seuil (s=2.463482) : |x|max phase 2 9.2269e-01 ; ajustement libre alpha=0.5219 t*=400.0672 (T_MAX=400) disp_loc=2.977e-01 ; II gA^(p-2)/K=2.972e-08
+[0057] A-p7_w1.73_c1.05_dt2_k2 bascule pas 3585 t=21.5100 |x|=2.0730e+01 ; phase 2 359 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=0.799702 (4/(p-2)=0.800000) disp_loc=3.852e-04 ; II : gA^(p-2)/K=1.000777 t*=21.604618
+[0058] A-p7_w1.73_c1.05_dt2s2_k2 bascule pas 3585 t=21.5100 |x|=2.0730e+01 ; phase 2 717 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=0.799699 (4/(p-2)=0.800000) disp_loc=3.967e-04 ; II : gA^(p-2)/K=1.000783 t*=21.604618
+[0059] A-p7_w1.73_c1.05_dt2_k4 bascule pas 3568 t=21.4080 |x|=1.1568e+01 ; phase 2 766 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=0.799695 (4/(p-2)=0.800000) disp_loc=3.846e-04 ; II : gA^(p-2)/K=1.000792 t*=21.604618
+[0060] A-p7_w1.73_c1.20_dt2_k2 bascule pas 2037 t=12.2220 |x|=2.0236e+01 ; phase 2 370 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=0.799209 (4/(p-2)=0.800000) disp_loc=1.209e-03 ; II : gA^(p-2)/K=1.001585 t*=12.319410
+[0061] A-p7_w1.73_c1.20_dt2s2_k2 bascule pas 2037 t=12.2220 |x|=2.0236e+01 ; phase 2 739 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=0.799200 (4/(p-2)=0.800000) disp_loc=1.249e-03 ; II : gA^(p-2)/K=1.001599 t*=12.319410
+[0062] A-p7_w1.73_c1.20_dt2_k4 bascule pas 2020 t=12.1200 |x|=1.1392e+01 ; phase 2 777 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=0.799187 (4/(p-2)=0.800000) disp_loc=1.214e-03 ; II : gA^(p-2)/K=1.001623 t*=12.319410
+[0063] S-p7_w1.73_c0.95_seuil sous seuil (s=0.470038) : |x|max phase 2 9.9608e-01 ; ajustement libre alpha=-0.1402 t*=400.1001 (T_MAX=400) disp_loc=3.934e-02 ; II gA^(p-2)/K=6.184e-07
+[0064] A-p7_w2.27_c1.05_dt2_k2 bascule pas 2998 t=17.9880 |x|=2.4963e+01 ; phase 2 353 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=0.799766 (4/(p-2)=0.800000) disp_loc=2.736e-04 ; II : gA^(p-2)/K=1.000683 t*=18.063011
+[0065] A-p7_w2.27_c1.05_dt2s2_k2 bascule pas 2998 t=17.9880 |x|=2.4963e+01 ; phase 2 705 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=0.799764 (4/(p-2)=0.800000) disp_loc=2.811e-04 ; II : gA^(p-2)/K=1.000687 t*=18.063011
+[0066] A-p7_w2.27_c1.05_dt2_k4 bascule pas 2984 t=17.9040 |x|=1.3720e+01 ; phase 2 769 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=0.799760 (4/(p-2)=0.800000) disp_loc=2.719e-04 ; II : gA^(p-2)/K=1.000697 t*=18.063011
+[0067] A-p7_w2.27_c1.20_dt2_k2 bascule pas 1585 t=9.5100 |x|=2.5034e+01 ; phase 2 351 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=0.799956 (4/(p-2)=0.800000) disp_loc=2.152e-04 ; II : gA^(p-2)/K=1.000423 t*=9.584749
+[0068] A-p7_w2.27_c1.20_dt2s2_k2 bascule pas 1585 t=9.5100 |x|=2.5034e+01 ; phase 2 702 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=0.799954 (4/(p-2)=0.800000) disp_loc=2.157e-04 ; II : gA^(p-2)/K=1.000421 t*=9.584749
+[0069] A-p7_w2.27_c1.20_dt2_k4 bascule pas 1571 t=9.4260 |x|=1.3771e+01 ; phase 2 768 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=0.799954 (4/(p-2)=0.800000) disp_loc=2.147e-04 ; II : gA^(p-2)/K=1.000422 t*=9.584749
+[0070] S-p7_w2.27_c0.95_seuil sous seuil (s=0.856553) : |x|max phase 2 1.5289e-01 ; ajustement libre alpha=2.1041 t*=400.0805 (T_MAX=400) disp_loc=2.756e+00 ; II gA^(p-2)/K=1.163e-13
+[0071] A-p7_w2.80_c1.05_dt2_k2 bascule pas 1918 t=11.5080 |x|=2.8004e+01 ; phase 2 367 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=0.799912 (4/(p-2)=0.800000) disp_loc=1.236e-04 ; II : gA^(p-2)/K=1.000403 t*=11.573003
+[0072] A-p7_w2.80_c1.05_dt2s2_k2 bascule pas 1918 t=11.5080 |x|=2.8004e+01 ; phase 2 734 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=0.799912 (4/(p-2)=0.800000) disp_loc=1.246e-04 ; II : gA^(p-2)/K=1.000400 t*=11.573003
+[0073] A-p7_w2.80_c1.05_dt2_k4 bascule pas 1907 t=11.4420 |x|=1.6027e+01 ; phase 2 759 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=0.799911 (4/(p-2)=0.800000) disp_loc=1.264e-04 ; II : gA^(p-2)/K=1.000408 t*=11.573002
+[0074] A-p7_w2.80_c1.20_dt2_k2 bascule pas 687 t=4.1220 |x|=2.7282e+01 ; phase 2 380 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=0.799792 (4/(p-2)=0.800000) disp_loc=4.249e-04 ; II : gA^(p-2)/K=1.000538 t*=4.189165
+[0075] A-p7_w2.80_c1.20_dt2s2_k2 bascule pas 687 t=4.1220 |x|=2.7282e+01 ; phase 2 759 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=0.799789 (4/(p-2)=0.800000) disp_loc=4.273e-04 ; II : gA^(p-2)/K=1.000542 t*=4.189165
+[0076] A-p7_w2.80_c1.20_dt2_k4 bascule pas 676 t=4.0560 |x|=1.5785e+01 ; phase 2 772 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=0.799787 (4/(p-2)=0.800000) disp_loc=4.263e-04 ; II : gA^(p-2)/K=1.000547 t*=4.189165
+[0077] S-p7_w2.80_c0.95_seuil sous seuil (s=1.524343) : |x|max phase 2 1.7297e+00 ; ajustement libre alpha=0.1372 t*=400.0672 (T_MAX=400) disp_loc=6.215e-02 ; II gA^(p-2)/K=2.008e-06
+[0078] L-p4_w1.73_c0.95 s=1.905227 sgn=+1 attendu SANS : instrument False (pas None), moteur False ; indice identique None -> OK
+[0079] L-p4_w1.73_c1.05 s=2.105777 sgn=+1 attendu EXPLOSE : instrument True (pas 20041), moteur True ; indice identique True -> OK
+[0080] L-p4_w1.73_c1.20 s=2.406602 sgn=+1 attendu EXPLOSE : instrument True (pas 2044), moteur True ; indice identique True -> OK
+[0081] L-p4_w2.27_c0.95 s=2.772408 sgn=+1 attendu SANS : instrument False (pas None), moteur False ; indice identique None -> OK
+[0082] L-p4_w2.27_c1.05 s=3.064241 sgn=+1 attendu EXPLOSE : instrument True (pas 3854), moteur True ; indice identique True -> OK
+[0083] L-p4_w2.27_c1.20 s=3.501990 sgn=+1 attendu EXPLOSE : instrument True (pas 7303), moteur True ; indice identique True -> OK
+[0084] L-p4_w2.80_c0.95 s=7.722745 sgn=+1 attendu SANS : instrument False (pas None), moteur False ; indice identique None -> OK
+[0085] L-p4_w2.80_c1.05 s=8.535665 sgn=+1 attendu EXPLOSE : instrument True (pas 61103), moteur True ; indice identique True -> OK
+[0086] L-p4_w2.80_c1.20 s=9.755046 sgn=+1 attendu EXPLOSE : instrument True (pas 1643), moteur True ; indice identique True -> OK
+[0087] L-p5_w1.73_c0.95 s=0.623414 sgn=+1 attendu SANS : instrument False (pas None), moteur False ; indice identique None -> OK
+[0088] L-p5_w1.73_c1.05 s=0.689037 sgn=+1 attendu EXPLOSE : instrument True (pas 4432), moteur True ; indice identique True -> OK
+[0089] L-p5_w1.73_c1.20 s=0.787471 sgn=+1 attendu EXPLOSE : instrument True (pas 2644), moteur True ; indice identique True -> OK
+[0090] L-p5_w2.27_c0.95 s=1.337687 sgn=-1 attendu SANS : instrument False (pas None), moteur False ; indice identique None -> OK
+[0091] L-p5_w2.27_c1.05 s=1.478496 sgn=-1 attendu EXPLOSE : instrument True (pas 3809), moteur True ; indice identique True -> OK
+[0092] L-p5_w2.27_c1.20 s=1.689710 sgn=-1 attendu EXPLOSE : instrument True (pas 1892), moteur True ; indice identique True -> OK
+[0093] L-p5_w2.80_c0.95 s=2.463482 sgn=-1 attendu SANS : instrument False (pas None), moteur False ; indice identique None -> OK
+[0094] L-p5_w2.80_c1.05 s=2.722796 sgn=-1 attendu EXPLOSE : instrument True (pas 5735), moteur True ; indice identique True -> OK
+[0095] L-p5_w2.80_c1.20 s=3.111767 sgn=-1 attendu EXPLOSE : instrument True (pas 939), moteur True ; indice identique True -> OK
+[0096] L-p7_w1.73_c0.95 s=0.470038 sgn=+1 attendu SANS : instrument False (pas None), moteur False ; indice identique None -> OK
+[0097] L-p7_w1.73_c1.05 s=0.519515 sgn=+1 attendu EXPLOSE : instrument True (pas 3593), moteur True ; indice identique True -> OK
+[0098] L-p7_w1.73_c1.20 s=0.593732 sgn=+1 attendu EXPLOSE : instrument True (pas 2045), moteur True ; indice identique True -> OK
+[0099] L-p7_w2.27_c0.95 s=0.856553 sgn=-1 attendu SANS : instrument False (pas None), moteur False ; indice identique None -> OK
+[0100] L-p7_w2.27_c1.05 s=0.946716 sgn=-1 attendu EXPLOSE : instrument True (pas 3005), moteur True ; indice identique True -> OK
+[0101] L-p7_w2.27_c1.20 s=1.081961 sgn=-1 attendu EXPLOSE : instrument True (pas 1592), moteur True ; indice identique True -> OK
+[0102] L-p7_w2.80_c0.95 s=1.524343 sgn=-1 attendu SANS : instrument False (pas None), moteur False ; indice identique None -> OK
+[0103] L-p7_w2.80_c1.05 s=1.684801 sgn=-1 attendu EXPLOSE : instrument True (pas 1924), moteur True ; indice identique True -> OK
+[0104] L-p7_w2.80_c1.20 s=1.925486 sgn=-1 attendu EXPLOSE : instrument True (pas 693), moteur True ; indice identique True -> OK
+[0105] DEGRE-p4       exploitable True ; tol=0.00022624702231310856 tol/(8/15)=0.00042421316683707855 (plafond 2/15) ; G-dt False (ecart/(8/15)=8.310386735849162e-06) G-k False (7.543303573859239e-06) ; conversion 5.3(iv) True ; P-alpha True ; G-s False G-w2 False ; dispersion_lnA=1.97714978966701e-06 plancher_lnA=0.0005 tol_lnA=0.0005 (tol/plancher=1.0) P-A True
+[0106] DEGRE-p5       exploitable True ; tol=0.0002402826161780336 tol/(8/15)=0.000450529905333813 (plafond 2/15) ; G-dt False (ecart/(8/15)=4.893286167095834e-06) G-k False (9.900167762671996e-06) ; conversion 5.3(iv) True ; P-alpha True ; G-s False G-w2 False ; dispersion_lnA=2.393510486697892e-06 plancher_lnA=0.0006923076923076923 tol_lnA=0.0006923076923076923 (tol/plancher=1.0) P-A True
+[0107] DEGRE-p7       exploitable True ; tol=0.0012090392304564546 tol/(8/15)=0.0022669485571058523 (plafond 2/15) ; G-dt False (ecart/(8/15)=1.6221708984826e-05) G-k False (4.167467501196842e-05) ; conversion 5.3(iv) True ; P-alpha True ; G-s False G-w2 False ; dispersion_lnA=7.43220491195018e-06 plancher_lnA=0.0009398496240601503 tol_lnA=0.0009398496240601503 (tol/plancher=1.0) P-A True
+[0108] G-lignee       booleens identiques au moteur (le lien) 27/27 ; attendu du gel 5.6 (explose ssi c > 1) respecte 27/27
+[0109] G-seuil        4|1.73 : {'statut': 'AJUSTE', 'i_dispersion': False, 'ii_t_star_fini': False, 'iii_A': False} -> muette
+[0110] G-seuil        4|2.27 : {'statut': 'AJUSTE', 'i_dispersion': False, 'ii_t_star_fini': False, 'iii_A': False} -> muette
+[0111] G-seuil        4|2.80 : {'statut': 'AJUSTE', 'i_dispersion': False, 'ii_t_star_fini': False, 'iii_A': False} -> muette
+[0112] G-seuil        5|1.73 : {'statut': 'AJUSTE', 'i_dispersion': False, 'ii_t_star_fini': False, 'iii_A': False} -> muette
+[0113] G-seuil        5|2.27 : {'statut': 'AJUSTE', 'i_dispersion': False, 'ii_t_star_fini': True, 'iii_A': False} -> muette
+[0114] G-seuil        5|2.80 : {'statut': 'AJUSTE', 'i_dispersion': False, 'ii_t_star_fini': False, 'iii_A': False} -> muette
+[0115] G-seuil        7|1.73 : {'statut': 'AJUSTE', 'i_dispersion': False, 'ii_t_star_fini': False, 'iii_A': False} -> muette
+[0116] G-seuil        7|2.27 : {'statut': 'AJUSTE', 'i_dispersion': False, 'ii_t_star_fini': False, 'iii_A': False} -> muette
+[0117] G-seuil        7|2.80 : {'statut': 'AJUSTE', 'i_dispersion': False, 'ii_t_star_fini': False, 'iii_A': False} -> muette
+[0118] G-comptes      comptes 90 + sautes 0 == attendus 90 -> PASSE
+[0119] VERDICT        VERIFIE -- branche 5 : P-alpha les six par degre ET P-A aux trois degres
+[0120] BANC           banc des gardes rejoue a la fin du run (D-b-3) :
+[0121] T1b-a          CAP=100 T_MAX=200 -> seuil=0.9765628546965307 motif=OK|pas=6.03e-07 k=0 ; W-transcription (iii) PASSE : pas=6.03e-07 attendu(k=0)=6.03e-07 den=9863185 encadrement=[0.05, 6] seuil=0.9765628546965307 coherent=True
+[0122] T1b-b          CAP=200 T_MAX=200 -> seuil=1.9531251619025702 motif=OK|pas=6.03e-07 k=0 ; W-transcription (iii) PASSE : pas=6.03e-07 attendu(k=0)=6.03e-07 den=9863185 encadrement=[0.05, 6] seuil=1.9531251619025702 coherent=True
+[0123] T1b-c          CAP=100 T_MAX=400 -> seuil=0.48828170109351093 motif=OK|pas=6.03e-07 k=0 ; W-transcription (iii) PASSE : pas=6.03e-07 attendu(k=0)=6.03e-07 den=9863185 encadrement=[0.05, 6] seuil=0.48828170109351093 coherent=True
+[0124] BANC           G1 W-pas seule -> NON CONCLUANT D'INTEGRATEUR branche 4, motif la nomme seule MORD NON CONCLUANT D'INTEGRATEUR / branche 4 : W-pas x MORD
+[0125] BANC           G2 W-plancher seule -> NON CONCLUANT D'INTEGRATEUR branche 4, motif la nomme seule MORD NON CONCLUANT D'INTEGRATEUR / branche 4 : W-plancher x MORD
+[0126] BANC           G3 W-bascule seule -> NON CONCLUANT D'INTEGRATEUR branche 4, motif la nomme seule MORD NON CONCLUANT D'INTEGRATEUR / branche 4 : W-bascule x MORD
+[0127] BANC           G4 W-croissance (CAP_0 jamais franchi) -> NON CONCLUANT DE TEMOIN branche 2 MORD NON CONCLUANT DE TEMOIN / branche 2 : W-croissance MORD
+[0128] BANC           G5 3bis (i) R hors des deux fenetres, tol_R sous plafond -> NON CONCLUANT DE REGIME MORD R=['1.800', '2.222', '1.800', '2.222'] tol_R=0.208 NON CONCLUANT DE REGIME
+[0129] T1b-a          CAP=100 T_MAX=200 -> seuil=0.0976564162590482 motif=OK|pas=6.03e-07 k=0 ; W-transcription (iii) PASSE : pas=6.03e-07 attendu(k=0)=6.03e-07 den=9863185 encadrement=[0.05, 6] seuil=0.0976564162590482 coherent=True
+[0130] T1b-b          CAP=200 T_MAX=200 -> seuil=0.13810697051713017 motif=OK|pas=6.03e-07 k=0 ; W-transcription (iii) PASSE : pas=6.03e-07 attendu(k=0)=6.03e-07 den=9863185 encadrement=[0.05, 6] seuil=0.13810697051713017 coherent=True
+[0131] T1b-c          CAP=100 T_MAX=400 -> seuil=0.0488281270198217 motif=OK|pas=3.80e-09 k=-1 ; W-transcription (iii) PASSE : pas=3.80e-09 attendu(k=-1)=3.80e-09 den=9863185 encadrement=[0.0125, 0.05] seuil=0.0488281270198217 coherent=True
+[0132] BANC           G6 3bis (ii) T-1b ni loi 1 ni stable (s* ~ sqrt(CAP)) -> NON CONCLUANT DE REGIME MORD loi1=1.4142 loi2=0.5000 NON CONCLUANT DE REGIME
+[0133] BANC           G7 4bis tol_ordre > plafond -> NON CONCLUANT DE RESOLUTION   MORD NON CONCLUANT DE RESOLUTION / branche 4bis : une tolerance depasse son plafond
+[0134] BANC           G8 4bis tol_R > eta_R (q-1) sans saturation -> NON CONCLUANT DE RESOLUTION MORD R=['1.500', '1.600', '1.667', '1.800'] tol_R/(q-1)=1.667 NON CONCLUANT DE RESOLUTION
+[0135] BANC           G9 W-comptes 40 + 0 != 41 -> BANC NON JOUE                   MORD W-comptes MORD (40 + 0 != 41)
+[0136] BANC           G10 etat tangent (1,0,0,1) : H1_0 = 0 -> ARRET declare (gel 4.3) MORD 
+[0137] BANC           G11 alpha(dt2) != alpha(dt2/2) -> G-dt MORD -> NON CONCLUANT DE RESOLUTION branche 2 MORD NON CONCLUANT DE RESOLUTION / branche 2 : G-dt p=4, plafond 10.2 p=4, G-dt p=5, plafond 10.2 p=5, G-dt p=7, plafond 10.2 p=7 MORD
+[0138] BANC           G12 alpha(k=4) != alpha(k=2) -> G-k MORD -> NON CONCLUANT DE RESOLUTION branche 2 MORD NON CONCLUANT DE RESOLUTION / branche 2 : G-k p=4, plafond 10.2 p=4, G-k p=5, plafond 10.2 p=5, G-k p=7, plafond 10.2 p=7 MORD
+[0139] BANC           G13 alpha depend de w2 -> G-w2 MORD -> REFUTE branche 4, motif G-w2 MORD REFUTE / branche 4 : G-w2 p=4, G-w2 p=5, G-w2 p=7 MORD (alpha depend de s ou de w2)
+[0140] BANC           G14 CAP_p jamais atteint -> G-fen -> NON CONCLUANT DE FENETRE branche 3, compte inchange MORD NON CONCLUANT DE FENETRE ; comptes=63
+[0141] BANC           G15 G-comptes 89 + 0 != 90 -> MANCHE NON JOUEE               MORD G-comptes MORD (89 + 0 != 90)
+[0142] BANC           G16 W-transcription : NPASSES=2 et k incoherent -> controle positif MORD MORD pas=2.84e-05 attendu(k=0)=6.03e-07 den=9863185 encadrement=[0.05, 6] seuil=0.9765731100045271 coherent=True
+[0143] BANC           G17 sous le seuil, un faux blow-up -> G-seuil MORD -> INSTRUMENT REFUTE MORD INSTRUMENT REFUTE / branche 1 : G-seuil MORD (exposant convergent sous le seuil)
+[0144] BANC           G18 alpha depend de s -> G-s MORD -> REFUTE branche 4, motif G-s MORD REFUTE / branche 4 : G-s p=4, G-s p=5, G-s p=7 MORD (alpha depend de s ou de w2)
+[0145] BANC           G20 W-integrales q_int(H1) = 3 -> MORD -> branche 6, QUALIFIE bonus retire MORD REGLAGE QUALIFIE (bonus T-3 retire) / branche 6 : T-3 mord seul (W-integrales, T-3a)
+[0146] BANC           G21 derive(dt/2) sous le plancher machine -> NON LUE (LD-16), pas de morsure MORD N : NON LUE (plancher, LD-16) ; H1 : PASSE
+[0147] L-banc-faux    s=2.406602 sgn=+1 attendu EXPLOSE : instrument True (pas 1074), moteur True ; indice identique False -> ECART
+[0148] BANC           G19 physique corrompue (exposant p) contre le moteur -> G-lignee ECART MORD booleen True indice False
+[0149] NE-JOUE-PAS    lectures NON LUES : aucune
+[0150] NE-JOUE-PAS    gardes sans morsure demontree dans ce journal (16 enumerees des gels, 16 demontrees) : aucune
+[0151] NE-JOUE-PAS    runs du gel non joues : aucun (0 sautes)
+[0152] JSON           out_banc/alpha\resultats_alpha.json  107686 o  empreinte B 6d7d23130e9322f8
