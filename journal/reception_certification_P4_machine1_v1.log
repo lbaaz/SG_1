@@ -1,0 +1,21 @@
+MANIFEST_lot_machine2_certification_acte_P4_v1.txt : B df50b8a2df2ab78b = brut df50b8a2df2ab78b ; 1259 o ; ascii True ; CR 0  -> CANON DU LOT
+  CERTIFICATION_machine2_acte_P4_v1.md           B=f5440553bc3667b5 attendu f5440553bc3667b5  11427/11427 o ascii=True CR=0 -> OK
+  certification_acte_P4_machine2_v1.json         B=5d0dff726b70363b attendu 5d0dff726b70363b    728/728 o ascii=True CR=0 -> OK
+  certification_acte_P4_machine2_v1.log          B=d76d684e2eafe49b attendu d76d684e2eafe49b   4857/4857 o ascii=True CR=0 -> OK
+  certification_acte_P4_machine2_v1.py           B=8901ab790c20ffb6 attendu 8901ab790c20ffb6  12433/12433 o ascii=True CR=0 -> OK
+  perimetre_et_sCAP_machine2_v1.log              B=4fd032a387eefc75 attendu 4fd032a387eefc75   1364/1364 o ascii=True CR=0 -> OK
+  perimetre_et_sCAP_machine2_v1.py               B=e634db2f7cf5c4dc attendu e634db2f7cf5c4dc   5221/5221 o ascii=True CR=0 -> OK
+  rejeu_fantome_machine2_v1.json                 B=330ed379d95b0c58 attendu 330ed379d95b0c58    734/734 o ascii=True CR=0 -> OK
+  rejeu_fantome_machine2_v1.log                  B=98bcb055c8e2f4ff attendu 98bcb055c8e2f4ff   1432/1432 o ascii=True CR=0 -> OK
+  rejeu_fantome_machine2_v1.py                   B=d5015b3bbe626c25 attendu d5015b3bbe626c25   3740/3740 o ascii=True CR=0 -> OK
+pieces : 9/9 conformes ; annoncees 9 ; verifiees + absentes + ecarts = 9 + 0 + 0 = 9 lignes
+certification : piece certifiee 0f8e283fa9499f96 citee 4 fois ; canon lot m1 710498cdc372ed02 cite : True ; 'sous le numero 88' (insensible a la casse) : True ; 'TREIZE' : True
+
+REGISTRE (clone frais) :
+  HEAD d199d33 : delta 87 -- the R3 sequence enters the register: two classical estimators declared before the run pr
+  fichiers delta_87 : ['journal/NOTE_DERIVATION_delta87_machine2_v1.md', 'journal/journal_delta_87_sequence_R3_v1.md']
+  fichiers delta_88 : []
+  plafond : 87 ; premier libre : 88
+  1a21b0a2d3b842b5  journal/journal_delta_87_sequence_R3_v1.md
+  cce710187ad53e04  journal/journal_delta_nn_sequence_R3_v1.md
+  dbdf920620e24258  journal/NOTE_DERIVATION_delta87_machine2_v1.md

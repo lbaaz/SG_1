@@ -1,0 +1,54 @@
+MANIFESTE DU LOT DE DEPOT -- DELTA 88 (SEQUENCE P-4 : LE JUMEAU SANS FANTOME) -- 09/09/2026 -- assemble par machine 1
+Convention B (sha256 NFC+LF, 16 hex) ; pour les ZIP, sha256 brut. Le depot, le numero et les series sont de la main de l'operateur.
+Numero 88 : premier libre au 09/09 sur clone frais (HEAD d199d33, plafond 87, aucun fichier delta_88) ; a REVERIFIER par qui depose.
+Certification machine 2 : CERTIFICATION_machine2_acte_P4_v1.md f5440553bc3667b5 (13/13), portant sur l'empreinte 0f8e283fa9499f96 et elle seule.
+
+A DEPOSER AU REGISTRE (journal/) :
+  0f8e283fa9499f96    39338  journal_delta_88_P4_v1.md   (COPIE OCTET POUR OCTET de journal_delta_nn_P4_v1.md : corps 'nn', numero dans le nom seulement ; forme (a), celle que la certification decrit)
+  f5440553bc3667b5    11427  CERTIFICATION_machine2_acte_P4_v1.md
+PIECES DE LA CHAINE (journal/ ou notes/, au choix de l'operateur) -- feuilles de certification m2 (lot canon df50b8a2df2ab78b) :
+  8901ab790c20ffb6    12433  certification_acte_P4_machine2_v1.py
+  5d0dff726b70363b      728  certification_acte_P4_machine2_v1.json
+  d76d684e2eafe49b     4857  certification_acte_P4_machine2_v1.log
+  e634db2f7cf5c4dc     5221  perimetre_et_sCAP_machine2_v1.py
+  4fd032a387eefc75     1364  perimetre_et_sCAP_machine2_v1.log
+  d5015b3bbe626c25     3740  rejeu_fantome_machine2_v1.py
+  330ed379d95b0c58      734  rejeu_fantome_machine2_v1.json
+  98bcb055c8e2f4ff     1432  rejeu_fantome_machine2_v1.log
+  df50b8a2df2ab78b     1259  MANIFEST_lot_machine2_certification_acte_P4_v1.txt
+PIECES DE LA CHAINE -- re-derivations m1 (lot canon 710498cdc372ed02) :
+  710498cdc372ed02     2810  MANIFEST_lot_machine1_P4_acte_v1.txt
+  75716001ec705899     6334  reception_archive_P4_machine1_v1.py
+  f684320293240f0f    16135  reception_archive_P4_machine1_v1.log
+  afdbe28c91a954f5     7317  rederive_P4_acte_machine1_v1.py
+  f246741a5daf6930    23143  rederive_P4_acte_machine1_v1.json
+  f5659602d1e71d34     5303  rederive_P4_acte_machine1_v1.log
+  1342457a50df0cab     3038  rejeu_et_fantome_acte_machine1_v1.py
+  8bd4ead9d5d711b0     1522  rejeu_et_fantome_acte_machine1_v1.json
+  6b52e0a369fdd561     1002  rejeu_et_fantome_acte_machine1_v1.log
+  0357eea24a5a59b9     1970  fantome_reste_acte_machine1_v1.py
+  1d31e767e8beddbb     3085  fantome_reste_acte_machine1_v1.json
+  e78f3db066652236     2110  fantome_reste_acte_machine1_v1.log
+  294da06d02622dab     5163  rederive_complements_acte_machine1_v1.py
+  a88818a6d93e0634     1419  rederive_complements_acte_machine1_v1.json
+  cd61a2873be31cae     4250  rederive_complements_acte_machine1_v1.log
+  23d5d1ac39dcf8e6     4331  perimetre_instrument_acte_machine1_v1.py
+  113e242886f43909      810  perimetre_instrument_acte_machine1_v1.log
+PIECES DE CE LOT DE DEPOT (plume m1, 09/09) :
+  9237483922b80310     2619  reception_certification_P4_machine1_v1.py
+  782a62ae86b849d9     2089  reception_certification_P4_machine1_v1.log
+  ebd613ca2c5d66bd     1701  deriver_delta88_machine1_v1.py
+  8435832a851cfb62      436  deriver_delta88_machine1_v1.log
+BINAIRES CITES AU DELTA, A VERSER (runs/lots_P4/ propose ; sha256 brut du ZIP, canon interne entre crochets) :
+  5107783aa32d1fd5    45806  lot_machine1_2026-09-02_P4_instrument_v1.zip   [db6054ad58e4ff44]
+  ae763220c01bf2e8     7400  lot_machine1_2026-09-02_P4_lecture_gel_v3.zip   [fcaa79169534cbea]
+  f1907286e1eb7759    26527  lot_machine1_2026-09-02_P4_reponse_v2.zip   [d1ff9faa6e020094]
+  70a43a513f9e0782    45309  lot_machine1_2026-09-02_P4_resultat_v4.zip   [f1d646d9feca7437]
+  c1e8a4b553b47d44    47129  lot_machine2_2026-09-02_P4_addendum_v3.zip   [81ddb80ef0433b15]
+  ad2b0440e6f2f768    18326  lot_machine2_2026-09-02_P4_controle_v2.zip   [f0f304d0351d592b]
+  0c86a9cf625bf3d1    48010  lot_machine2_2026-09-02_P4_run_v4.zip   [3bcac78e23a1d077]
+  c86e3cdb5030205a    43946  lot_machine1_2026-09-08_P4_acte_v1.zip   [710498cdc372ed02]
+OPTION (b), NON RETENUE PAR LA CERTIFICATION : derive \bnn\b -> 88 (28 occurrences, 27 lignes, longueur inchangee) = 52418950067cc1a6 ; exigerait la note de derivation du deposant et le depot des deux versions, comme au delta 87.
+NE PAS CHERCHER : 8c40ac3a616a44e7, bcf2961cfd9d5b40, 4e5cd0419d3cc819 (JSON m2, detenus d'un seul cote, declares a l'acte nn.1 ; references re-derivees par rejeu).
+SUIVI_campagne_2026-09-09.md 4418264615967684 : document de projet, hors registre.
+-- FIN MANIFESTE --

@@ -1,0 +1,11 @@
+patron d303bff2e5e55872 instrument 171a02edfbc23864
+diff hors docstring : 2 retirees + 3 ajoutees = 5 lignes
+    -def integrer_indice(m, w2, s_arr, sgn=1, dt=None, g=None, t_max=None):
+    +def integrer_jumeau(m, w2, s_arr, sgn=1, dt=None, g=None, t_max=None, *, eta):
+    +    eta = float(eta); assert eta in (1.0, -1.0), eta
+    -        return -W1 * W1 * a1 + d1 / delta, -w2 * w2 * a2 - d2 / delta
+    +        return -W1 * W1 * a1 + eta * d1 / delta, -w2 * w2 * a2 - d2 / delta
+sites (hunks) : 2
+noeuds Name(eta) : 5 ; usages arithmetiques : 1 -> ["BinOp(left=Name(id='eta', ctx=Load()), op=Mult(), right=Name(id='d1', ctx=Load()))"]
+AST identique apres neutralisation (hors docstrings) : True
+champ : egalites exactes 24/24 sur 12 cellules x 200000 points (eta=+1 == moteur ; eta=-1 == -d1/delta en dur)

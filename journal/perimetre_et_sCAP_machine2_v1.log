@@ -1,0 +1,19 @@
+=== (1) A-1 : LE PERIMETRE DE L'INSTRUMENT, A L'AST ===
+  diff du code deparse (docstrings retirees) : 2 retirees, 4 ajoutees, 2 endroits
+  acte : 5 lignes (2 retirees, 3 ajoutees) en trois endroits -> a lire ci-dessous
+      -def integrer_indice(m, w2, s_arr, sgn=1, dt=None, g=None, t_max=None):
+      -        return (-W1 * W1 * a1 + d1 / delta, -w2 * w2 * a2 - d2 / delta)
+      +def integrer_jumeau(m, w2, s_arr, sgn=1, dt=None, g=None, t_max=None, *, eta):
+      +    eta = float(eta)
+      +    assert eta in (1.0, -1.0), eta
+      +        return (-W1 * W1 * a1 + eta * d1 / delta, -w2 * w2 * a2 - d2 / delta)
+  noeuds Name(eta) a l'AST : 5   (acte : 5) -> CONFORME
+  usages arithmetiques BinOp(Mult, Name(eta), Name(d1)) : 1   (acte : UN SEUL) -> CONFORME
+  AST identique au patron apres neutralisation : True   (acte : IDENTIQUE) -> CONFORME
+
+=== (2) A-3 : LES PLAFONDS s_CAP DU DEGRE PAIR, RE-DERIVES ===
+  4|2.00 : s_CAP = 330.56  (acte : 330.56) CONFORME   ; sans le terme g s^p : 4685 (acte : 4685, faute D-P4-2)
+  4|2.22 : s_CAP = 353.66  (acte : 353.66) CONFORME   ; sans le terme g s^p : 5304 (acte : 5304, faute D-P4-2)
+  4|3.00 : s_CAP = 422.55  (acte : 422.55) CONFORME   ; sans le terme g s^p : 6860 (acte : 6860, faute D-P4-2)
+  s_CAP : 3 sur 3 conformes
+  rapport au haut de la grille de P-1 (1.15 s_ref) : l'acte annonce 106.7, 110.5, 38.9

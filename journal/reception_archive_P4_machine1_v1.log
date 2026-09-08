@@ -1,0 +1,115 @@
+== PIECES DE TRANSMISSION (convention B annoncee au MANIFEST_ARCHIVE_P4_machine2_v1.txt) ==
+  POUR_MACHINE1_archive_P4_sept_lots_machine2_v1.md    B=909bef4ce6cbd9c3 attendu 909bef4ce6cbd9c3   7610/7610 o ascii=True CR=0 -> OK
+  controle_archive_P4_machine2_v2.log                  B=a7c412962bb43d52 attendu a7c412962bb43d52  10484/10484 o ascii=True CR=0 -> OK
+  controle_archive_P4_machine2_v2.py                   B=a71b8a344e71733d attendu a71b8a344e71733d   9446/9446 o ascii=True CR=0 -> OK
+  spec_lots_P4_machine1_v1.json                        B=8fb9e813713c6283 attendu 8fb9e813713c6283   3534/3534 o ascii=True CR=0 -> OK
+  MANIFEST_ARCHIVE_P4_machine2_v1.txt : B=77c5fbcb8b040d1d (= brut 77c5fbcb8b040d1d) 2528 o ascii=True CR=0 ; aucune empreinte annoncee pour lui-meme
+  transmission : 4/4 conformes
+
+== LES SEPT LOTS (brut du ZIP, canon interne, taille, pieces contre leur propre manifeste) ==
+  lot_machine1_2026-09-02_P4_instrument_v1.zip   brut 5107783aa32d1fd5 = annonce ; canon db6054ad58e4ff44 = annonce ; 45806 o ; pieces 11/11 ; manifeste : 11 contenues (11 ok, 0 ecart), 0 citees ; voies B/brut/deux 0/0/11 -> OK
+  lot_machine1_2026-09-02_P4_lecture_gel_v3.zip  brut ae763220c01bf2e8 = annonce ; canon fcaa79169534cbea = annonce ; 7400 o ; pieces 3/3 ; manifeste : 3 contenues (3 ok, 0 ecart), 0 citees ; voies B/brut/deux 0/0/3 -> OK
+  lot_machine1_2026-09-02_P4_reponse_v2.zip      brut f1907286e1eb7759 = annonce ; canon d1ff9faa6e020094 = annonce ; 26527 o ; pieces 8/8 ; manifeste : 8 contenues (8 ok, 0 ecart), 0 citees ; voies B/brut/deux 0/0/8 -> OK
+  lot_machine1_2026-09-02_P4_resultat_v4.zip     brut 70a43a513f9e0782 = annonce ; canon f1d646d9feca7437 = annonce ; 45309 o ; pieces 9/9 ; manifeste : 9 contenues (9 ok, 0 ecart), 0 citees ; voies B/brut/deux 0/0/9 -> OK
+  lot_machine2_2026-09-02_P4_addendum_v3.zip     brut c1e8a4b553b47d44 = annonce ; canon 81ddb80ef0433b15 = annonce ; 47129 o ; pieces 6/6 ; manifeste : 6 contenues (6 ok, 0 ecart), 0 citees ; voies B/brut/deux 0/1/5 -> OK
+  lot_machine2_2026-09-02_P4_controle_v2.zip     brut ad2b0440e6f2f768 = annonce ; canon f0f304d0351d592b = annonce ; 18326 o ; pieces 6/6 ; manifeste : 6 contenues (6 ok, 0 ecart), 7 citees ; voies B/brut/deux 0/3/3 -> OK
+  lot_machine2_2026-09-02_P4_run_v4.zip          brut 0c86a9cf625bf3d1 = annonce ; canon 3bcac78e23a1d077 = annonce ; 48010 o ; pieces 7/7 ; manifeste : 7 contenues (7 ok, 0 ecart), 0 citees ; voies B/brut/deux 0/0/7 -> OK
+  lots conformes : 7/7
+
+== LES 26 EMPREINTES NOMMEES PAR MACHINE 1 (spec 8fb9e813713c6283) ==
+  TROUVEE e66549fd72f4239b JSON du run                        -> mesures_P4_jumeau_machine2_v1.json (B)
+  TROUVEE cb22a3e1c3149695 log                                -> run_P4_jumeau_machine2_v1.log (B)
+  TROUVEE 16b49388caca74bc depouillement                      -> depouillement_P4_machine2_v1.log (B)
+  TROUVEE 918a1ab5112ddf1f precisions                         -> PRECISIONS_lecture_P4_machine2_v1.md (B)
+  TROUVEE 02b9f8a807aa0ce6 piece citee sans role nomme        -> NOTE_RUN_P4_machine2_v1.md (B)
+  TROUVEE ea1365396fe38600 piece citee sans role nomme        -> run_P4_jumeau_machine2_v1.py (B)
+  TROUVEE bb793be7d4decb3b piece citee sans role nomme        -> depouillement_P4_machine2_v1.py (B)
+  TROUVEE e4d37a4f9ae195d6 addendum                           -> ADDENDUM_v2_gel_P4_machine2_v1.md (B)
+  TROUVEE 69416e4bc3b51051 reception m2                       -> RECEPTION_machine2_lot_m1_v2_P4_v1.md (B)
+  TROUVEE c351f322a455e4ab ZIP imbrique du gel (7 pieces)     -> lot_machine2_2026-09-02_P4_gel_temoin_v1.zip (brut)
+  TROUVEE d7eccfbd9b715a6d gel_P4_temoin_classique_machine2_v -> gel_P4_temoin_classique_machine2_v1.md (B)
+  TROUVEE 7d59cde9b48c0d76 CONTROLE_machine2_lot_m1_P4_v1.md  -> CONTROLE_machine2_lot_m1_P4_v1.md (B)
+  TROUVEE 76b4e5a89f31c8e5 controle_machine2_lot_m1_v1.py     -> controle_machine2_lot_m1_v1.py (B)
+  TROUVEE 2260546cdd13d479 controle_machine2_lot_m1_v1.json   -> controle_machine2_lot_m1_v1.json (brut)
+  TROUVEE 191d17af09b851d2 controle_machine2_lot_m1_v1.log    -> controle_machine2_lot_m1_v1.log (brut)
+  TROUVEE c20972fb5efc4801 verif_nombres_note_m1_v1.py        -> verif_nombres_note_m1_v1.py (B)
+  TROUVEE 5a1be4a66672c034 verif_nombres_note_m1_v1.log       -> verif_nombres_note_m1_v1.log (brut)
+  TROUVEE dd6838c0fbbd3a4b note de resultat                   -> note_machine1_P4_resultat_v1.md (B)
+  PRESENT (par son nom)   predictions_signes_hors_echantillon_machine1_v1.json
+  TROUVEE 35aa7ff7176f823b note P-4 v2                        -> note_machine1_P4_temoin_sans_fantome_v2.md (B)
+  TROUVEE 5b53c2f84a84ef03 banc de derive                     -> banc_derive_machine1_v1.py (B)
+  TROUVEE 9539f6b4c826fd4e reprises                           -> reprises_P4_machine1_v1.json (B)
+  TROUVEE 171a02edfbc23864 instrument                         -> integrer_jumeau_machine1_v1.py (B)
+  TROUVEE d303bff2e5e55872 patron                             -> integrer_indice.py (B)
+  TROUVEE 80e8280603673992 derivation de la barriere          -> derivation_barriere_machine1_v1.json (B)
+  TROUVEE 3c94af636bd56071 note v1                            -> note_machine1_P4_temoin_sans_fantome_v1.md (B)
+  nommees 26, retrouvees 26, manquantes 0
+
+  gel : 2 exemplaires (en clair et imbrique), empreintes B ['d7eccfbd9b715a6d'], brut ['d7eccfbd9b715a6d'], ascii True, CR [0]
+
+== TOUTES LES PIECES (lot ; fichier ; B ; brut ; octets ; CR ; ascii) ==
+  lot_machine1_2026-09-02_P4_instrument_v1.zip                   MANIFEST_lot_machine1_P4_instrument_v1.txt       db6054ad58e4ff44 db6054ad58e4ff44    1233    0 True
+  lot_machine1_2026-09-02_P4_instrument_v1.zip                   note_machine1_P4_temoin_sans_fantome_v1.md       3c94af636bd56071 3c94af636bd56071   21387    0 True
+  lot_machine1_2026-09-02_P4_instrument_v1.zip                   integrer_jumeau_machine1_v1.py                   171a02edfbc23864 171a02edfbc23864    3026    0 True
+  lot_machine1_2026-09-02_P4_instrument_v1.zip                   integrer_indice.py                               d303bff2e5e55872 d303bff2e5e55872    2400    0 True
+  lot_machine1_2026-09-02_P4_instrument_v1.zip                   charge_moteur.py                                 913cb6e3e27dfd53 913cb6e3e27dfd53     465    0 True
+  lot_machine1_2026-09-02_P4_instrument_v1.zip                   controle_jumeau_machine1_v1.py                   a3b8bcae566c0e26 a3b8bcae566c0e26   18488    0 True
+  lot_machine1_2026-09-02_P4_instrument_v1.zip                   controle_jumeau_machine1_v1.json                 aff7c1e8b6e85583 aff7c1e8b6e85583   52918    0 True
+  lot_machine1_2026-09-02_P4_instrument_v1.zip                   controle_jumeau_machine1_v1.log                  bc686c8f8b6f2c58 bc686c8f8b6f2c58    6222    0 True
+  lot_machine1_2026-09-02_P4_instrument_v1.zip                   s_ref_P4_machine1_v1.json                        fb3c93064d661738 fb3c93064d661738    2503    0 True
+  lot_machine1_2026-09-02_P4_instrument_v1.zip                   derivation_barriere_machine1_v1.py               ce5e10099b7b9f7d ce5e10099b7b9f7d    8225    0 True
+  lot_machine1_2026-09-02_P4_instrument_v1.zip                   derivation_barriere_machine1_v1.json             80e8280603673992 80e8280603673992   15448    0 True
+  lot_machine1_2026-09-02_P4_instrument_v1.zip                   derivation_barriere_machine1_v1.log              1804ca61590d7e62 1804ca61590d7e62    2442    0 True
+  lot_machine1_2026-09-02_P4_lecture_gel_v3.zip                  MANIFEST_lot_machine1_P4_lecture_gel_v3.txt      fcaa79169534cbea fcaa79169534cbea     837    0 True
+  lot_machine1_2026-09-02_P4_lecture_gel_v3.zip                  note_machine1_lecture_gel_addendum_P4_v1.md      4d825aeef1b14e2c 4d825aeef1b14e2c    6693    0 True
+  lot_machine1_2026-09-02_P4_lecture_gel_v3.zip                  lecture_gel_addendum_machine1_v1.py              90f3b258d595f058 90f3b258d595f058    6376    0 True
+  lot_machine1_2026-09-02_P4_lecture_gel_v3.zip                  lecture_gel_addendum_machine1_v1.log             3874b61baed5d77c 3874b61baed5d77c    1831    0 True
+  lot_machine1_2026-09-02_P4_reponse_v2.zip                      MANIFEST_lot_machine1_P4_reponse_v2.txt          d1ff9faa6e020094 d1ff9faa6e020094    1437    0 True
+  lot_machine1_2026-09-02_P4_reponse_v2.zip                      note_machine1_reception_controle_m2_P4_v1.md     055b56dea8e008fe 055b56dea8e008fe   13019    0 True
+  lot_machine1_2026-09-02_P4_reponse_v2.zip                      note_machine1_P4_temoin_sans_fantome_v2.md       35aa7ff7176f823b 35aa7ff7176f823b   22587    0 True
+  lot_machine1_2026-09-02_P4_reponse_v2.zip                      reprises_P4_machine1_v1.py                       43596f3f6a98e9a5 43596f3f6a98e9a5    5060    0 True
+  lot_machine1_2026-09-02_P4_reponse_v2.zip                      reprises_P4_machine1_v1.json                     9539f6b4c826fd4e 9539f6b4c826fd4e   10226    0 True
+  lot_machine1_2026-09-02_P4_reponse_v2.zip                      reprises_P4_machine1_v1.log                      0e4413421c20d817 0e4413421c20d817    2126    0 True
+  lot_machine1_2026-09-02_P4_reponse_v2.zip                      banc_derive_machine1_v1.py                       5b53c2f84a84ef03 5b53c2f84a84ef03    5632    0 True
+  lot_machine1_2026-09-02_P4_reponse_v2.zip                      banc_derive_machine1_v1.json                     dfb2628f1b4e67d7 dfb2628f1b4e67d7    1123    0 True
+  lot_machine1_2026-09-02_P4_reponse_v2.zip                      banc_derive_machine1_v1.log                      57f76682fc24494f 57f76682fc24494f     618    0 True
+  lot_machine1_2026-09-02_P4_resultat_v4.zip                     MANIFEST_lot_machine1_P4_resultat_v4.txt         f1d646d9feca7437 f1d646d9feca7437    1567    0 True
+  lot_machine1_2026-09-02_P4_resultat_v4.zip                     note_machine1_P4_resultat_v1.md                  dd6838c0fbbd3a4b dd6838c0fbbd3a4b   21908    0 True
+  lot_machine1_2026-09-02_P4_resultat_v4.zip                     lecture_run_P4_machine1_v1.py                    c08bffa3301c533f c08bffa3301c533f    9716    0 True
+  lot_machine1_2026-09-02_P4_resultat_v4.zip                     lecture_run_P4_machine1_v1.json                  543092ecbdc6e463 543092ecbdc6e463   95275    0 True
+  lot_machine1_2026-09-02_P4_resultat_v4.zip                     lecture_run_P4_machine1_v1.log                   08e3ba2aeef92a25 08e3ba2aeef92a25    5651    0 True
+  lot_machine1_2026-09-02_P4_resultat_v4.zip                     rejeu_P4_machine1_v1.json                        5939596a716e1f36 5939596a716e1f36     816    0 True
+  lot_machine1_2026-09-02_P4_resultat_v4.zip                     lecture_signe_lineaire_machine1_v1.py            eaaaa8ac096417b8 eaaaa8ac096417b8    2268    0 True
+  lot_machine1_2026-09-02_P4_resultat_v4.zip                     lecture_signe_lineaire_machine1_v1.json          b5bc8d1b7277506e b5bc8d1b7277506e    2314    0 True
+  lot_machine1_2026-09-02_P4_resultat_v4.zip                     lecture_signe_lineaire_machine1_v1.log           9790bc3c54e6b57b 9790bc3c54e6b57b    2577    0 True
+  lot_machine1_2026-09-02_P4_resultat_v4.zip                     predictions_signes_hors_echantillon_machine1_v1.json deb66a426c5959e1 deb66a426c5959e1     831    0 True
+  lot_machine2_2026-09-02_P4_addendum_v3.zip                     MANIFEST_lot_machine2_P4_addendum_v3.txt         81ddb80ef0433b15 81ddb80ef0433b15    3517    0 True
+  lot_machine2_2026-09-02_P4_addendum_v3.zip                     ADDENDUM_v2_gel_P4_machine2_v1.md                e4d37a4f9ae195d6 e4d37a4f9ae195d6   12353    0 True
+  lot_machine2_2026-09-02_P4_addendum_v3.zip                     RECEPTION_machine2_lot_m1_v2_P4_v1.md            69416e4bc3b51051 69416e4bc3b51051    9773    0 True
+  lot_machine2_2026-09-02_P4_addendum_v3.zip                     controle_banc_derive_m2_v1.py                    e0c7a846cd7958c0 e0c7a846cd7958c0    2083    0 True
+  lot_machine2_2026-09-02_P4_addendum_v3.zip                     controle_banc_derive_m2_v1.log                   aab0fcb139074ea2 aab0fcb139074ea2     539    0 True
+  lot_machine2_2026-09-02_P4_addendum_v3.zip                     gel_P4_temoin_classique_machine2_v1.md           d7eccfbd9b715a6d d7eccfbd9b715a6d   21467    0 True
+  lot_machine2_2026-09-02_P4_addendum_v3.zip                     lot_machine2_2026-09-02_P4_gel_temoin_v1.zip     None c351f322a455e4ab   24926  104 False
+  lot_machine2_2026-09-02_P4_addendum_v3.zip :: lot_machine2_202 MANIFEST_lot_machine2_P4_gel_v1.txt              68d410302dd4754a 68d410302dd4754a    3867    0 True
+  lot_machine2_2026-09-02_P4_addendum_v3.zip :: lot_machine2_202 gel_P4_temoin_classique_machine2_v1.md           d7eccfbd9b715a6d d7eccfbd9b715a6d   21467    0 True
+  lot_machine2_2026-09-02_P4_addendum_v3.zip :: lot_machine2_202 derivation_barriere_machine2_v1.py               af067e713d1df422 af067e713d1df422   14984    0 True
+  lot_machine2_2026-09-02_P4_addendum_v3.zip :: lot_machine2_202 derivation_barriere_machine2_v1.log              43a4076376d1c076 fe884a6c45566c04    5252   68 True
+  lot_machine2_2026-09-02_P4_addendum_v3.zip :: lot_machine2_202 derivation_barriere_machine2_v1.json             d0d190e0bf5fd61a 363b3f972d21bf60   11721  428 True
+  lot_machine2_2026-09-02_P4_addendum_v3.zip :: lot_machine2_202 verif_nombres_du_gel_machine2_v1.py              637c3f6b8653e171 637c3f6b8653e171    3823    0 True
+  lot_machine2_2026-09-02_P4_addendum_v3.zip :: lot_machine2_202 verif_nombres_du_gel_machine2_v1.log             8051c717e8f7ac85 f52933e4f84118f4    2915   40 True
+  lot_machine2_2026-09-02_P4_controle_v2.zip                     MANIFEST_lot_machine2_P4_controle_v2.txt         f0f304d0351d592b f0f304d0351d592b    4057    0 True
+  lot_machine2_2026-09-02_P4_controle_v2.zip                     CONTROLE_machine2_lot_m1_P4_v1.md                7d59cde9b48c0d76 7d59cde9b48c0d76   11659    0 False
+  lot_machine2_2026-09-02_P4_controle_v2.zip                     controle_machine2_lot_m1_v1.py                   76b4e5a89f31c8e5 76b4e5a89f31c8e5    9547    0 True
+  lot_machine2_2026-09-02_P4_controle_v2.zip                     controle_machine2_lot_m1_v1.json                 3c4fd254bf68ce6f 2260546cdd13d479    4468  175 True
+  lot_machine2_2026-09-02_P4_controle_v2.zip                     controle_machine2_lot_m1_v1.log                  00c281def9782cff 191d17af09b851d2    4363   58 True
+  lot_machine2_2026-09-02_P4_controle_v2.zip                     verif_nombres_note_m1_v1.py                      c20972fb5efc4801 c20972fb5efc4801    5432    0 True
+  lot_machine2_2026-09-02_P4_controle_v2.zip                     verif_nombres_note_m1_v1.log                     c1d2e65573f450ae 5a1be4a66672c034    3333   51 True
+  lot_machine2_2026-09-02_P4_run_v4.zip                          MANIFEST_lot_machine2_P4_run_v4.txt              3bcac78e23a1d077 3bcac78e23a1d077    4194    0 True
+  lot_machine2_2026-09-02_P4_run_v4.zip                          NOTE_RUN_P4_machine2_v1.md                       02b9f8a807aa0ce6 02b9f8a807aa0ce6    7378    0 True
+  lot_machine2_2026-09-02_P4_run_v4.zip                          PRECISIONS_lecture_P4_machine2_v1.md             918a1ab5112ddf1f 918a1ab5112ddf1f    6189    0 True
+  lot_machine2_2026-09-02_P4_run_v4.zip                          run_P4_jumeau_machine2_v1.py                     ea1365396fe38600 ea1365396fe38600   10829    0 True
+  lot_machine2_2026-09-02_P4_run_v4.zip                          run_P4_jumeau_machine2_v1.log                    cb22a3e1c3149695 cb22a3e1c3149695    4665    0 True
+  lot_machine2_2026-09-02_P4_run_v4.zip                          mesures_P4_jumeau_machine2_v1.json               e66549fd72f4239b e66549fd72f4239b  115693    0 True
+  lot_machine2_2026-09-02_P4_run_v4.zip                          depouillement_P4_machine2_v1.py                  bb793be7d4decb3b bb793be7d4decb3b    8431    0 True
+  lot_machine2_2026-09-02_P4_run_v4.zip                          depouillement_P4_machine2_v1.log                 16b49388caca74bc 16b49388caca74bc    5121    0 True
+  total pieces (manifestes compris, ZIP imbrique deplie) : 64

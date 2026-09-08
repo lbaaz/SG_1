@@ -1,0 +1,7 @@
+moteur c8ed357b120352c4 charge ; instrument 171a02edfbc23864 ; numpy 2.4.4 ; DT=0.006 CAP=10000.0 G_REF=0.05 W1=1.0
+REJEU 7|1.50|-1 G_ext eta=-1 T=1600 : t_exp au bit True ; explosifs m1 48 / json 48 (20 s)
+REJEU 5|1.50|+1 G_ext eta=-1 T=1600 : t_exp au bit True ; explosifs m1 34 / json 34 (20 s)
+FANTOME 5|2.00|+1 G_P1 eta=+1 : 10/96 a T=400, 43/96 a T=1600 ; s*_f(400)=0.379198 (i=86) s*_f(1600)=0.237766 (i=53) ; dln=-0.4668 = -33.0 pas ; jumeau meme grille 0/96 (20 s)
+FANTOME 5|2.00|-1 G_P1 eta=+1 : 10/96 a T=400, 43/96 a T=1600 ; s*_f(400)=0.378468 (i=86) s*_f(1600)=0.237308 (i=53) ; dln=-0.4668 = -33.0 pas ; jumeau meme grille 0/96 (22 s)
+FANTOME 7|2.00|+1 G_P1 eta=+1 : 10/96 a T=400, 30/96 a T=1600 ; s*_f(400)=0.397186 (i=86) s*_f(1600)=0.299320 (i=66) ; dln=-0.2829 = -20.0 pas ; jumeau meme grille 0/96 (20 s)
+FANTOME 7|2.00|-1 G_P1 eta=+1 : 10/96 a T=400, 30/96 a T=1600 ; s*_f(400)=0.396752 (i=86) s*_f(1600)=0.298993 (i=66) ; dln=-0.2829 = -20.0 pas ; jumeau meme grille 0/96 (22 s)

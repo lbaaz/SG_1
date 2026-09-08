@@ -1,0 +1,81 @@
+=== 0. L'ACTE ===
+  journal_delta_nn_P4_v1.md : B = 0f8e283fa9499f96, brut = 0f8e283fa9499f96, 39338 octets
+  caracteres non ASCII : 0 ; signes pour cent : 0 ; 'pour cent' en toutes lettres : 5
+
+=== 1. PERIMETRE EXTRAIT DE L'ACTE ===
+  empreintes citees : 63 ; retrouvees dans le corpus detenu : 63 ; non detenues : 0
+
+=== 2. LA BARRIERE, RE-DERIVEE DE LA FORME FERMEE DE nn.2 A-2 (aucun fichier lu) ===
+  S_b(5|1.50) = -2.586702   acte : -2.5867   CONFORME
+  S_b(5|2.00) = -3.634241   acte : -3.6342   CONFORME
+  S_b(5|2.22) = -4.027214   acte : -4.0272   CONFORME
+  S_b(7|1.50) = -1.768674   acte : -1.7687   CONFORME
+  S_b(7|2.00) = -2.168944   acte : -2.1689   CONFORME
+  S_b(7|2.42) = -2.419780   acte : -2.4198   CONFORME
+  S_b(7|2.50) = -2.462330   acte : -2.4623   CONFORME
+  S_b : 7 sur 7 conformes
+
+=== 3. LES COMPTES, RE-DERIVES DE (grille_repr, t_exp) DU JSON e66549fd72f4239b ===
+  empreinte du JSON relu : e66549fd72f4239b (acte : e66549fd72f4239b) -> CONFORME
+  degre PAIR   : 480 points, 0 explosions   (acte : 0 sur 480)  -> CONFORME
+  degre IMPAIR sous s_b : 1512 points, 0 explosions   (acte : 0 sur 1512)  -> CONFORME
+  site 2:1 sur G_P1, quatre colonnes (acte : 0/96 chacune) :
+     5|2.00|+1    0/96 CONFORME
+     5|2.00|-1    0/96 CONFORME
+     7|2.00|+1    0/96 CONFORME
+     7|2.00|-1    0/96 CONFORME
+  garde de derive : max 5.118e-08 <= 1.1e-3 ; grilles qui passent 27 sur 27 ; somme derivee juste 27 sur 27
+
+  LES SEUILS ET LEUR INDEPENDANCE EN T (indices entiers, regle 15) :
+     5|1.50|+1    G_ext  i400=63    i1600=62   |d|=1    s*=0.582187
+     5|1.50|-1    G_P1   i400=68    i1600=68   |d|=0    s*=0.474829
+     5|1.50|-1    G_ext  i400=48    i1600=48   |d|=0    s*=0.474611
+     5|2.00|+1    G_ext  i400=48    i1600=48   |d|=0    s*=1.188317
+     5|2.00|-1    G_ext  i400=67    i1600=67   |d|=0    s*=1.567994
+     5|2.22|-1    G_ext  i400=78    i1600=78   |d|=0    s*=2.354221
+     7|1.50|+1    G_ext  i400=62    i1600=61   |d|=1    s*=0.428043
+     7|1.50|-1    G_ext  i400=48    i1600=48   |d|=0    s*=0.354079
+     7|2.00|+1    G_ext  i400=49    i1600=49   |d|=0    s*=0.785172
+     7|2.00|-1    G_ext  i400=64    i1600=64   |d|=0    s*=0.977298
+     7|2.42|+1    G_P1   i400=70    i1600=69   |d|=1    s*=1.157313
+     7|2.42|+1    G_ext  i400=52    i1600=52   |d|=0    s*=1.167926
+     7|2.50|-1    G_P1   i400=90    i1600=90   |d|=0    s*=1.283752
+     7|2.50|-1    G_ext  i400=55    i1600=55   |d|=0    s*=1.285043
+  seuils : 14 ; |d_indice| = 0 : 11 ; = 1 : 3 ; > 1 : 0   (acte : 14 seuils, 11 / 3 / 0)
+  -> CONFORME
+
+=== 4. LE FAIT NEUF A-5 : s*_j(1600)/s_b, RE-DERIVE ===
+     5|1.50|+1    s_b=0.471130  s*=0.582187  s*/s_b=1.2357  acte : 1.2357  CONFORME
+     5|1.50|-1    s_b=0.471193  s*=0.474611  s*/s_b=1.0073  acte : 1.0073  CONFORME
+     5|2.00|+1    s_b=1.178269  s*=1.188317  s*/s_b=1.0085  acte : 1.0085  CONFORME
+     5|2.00|-1    s_b=1.181103  s*=1.567994  s*/s_b=1.3276  acte : 1.3276  CONFORME
+     5|2.22|-1    s_b=1.512281  s*=2.354221  s*/s_b=1.5567  acte : 1.5567  CONFORME
+     7|1.50|+1    s_b=0.351504  s*=0.428043  s*/s_b=1.2177  acte : 1.2177  CONFORME
+     7|1.50|-1    s_b=0.351506  s*=0.354079  s*/s_b=1.0073  acte : 1.0073  CONFORME
+     7|2.00|+1    s_b=0.768065  s*=0.785172  s*/s_b=1.0223  acte : 1.0223  CONFORME
+     7|2.00|-1    s_b=0.768280  s*=0.977298  s*/s_b=1.2721  acte : 1.2721  CONFORME
+     7|2.42|+1    s_b=1.092858  s*=1.167926  s*/s_b=1.0687  acte : 1.0687  CONFORME
+     7|2.50|-1    s_b=1.152962  s*=1.285043  s*/s_b=1.1146  acte : 1.1146  CONFORME
+  11 sur 11 conformes ; plage re-derivee [1.0073, 1.5567]  (acte : 1.0073 a 1.5567)
+
+=== 5. L'ETAT DU REGISTRE, AU MOMENT DE LA CERTIFICATION ===
+  L'acte (en-tete et nn.1) declare : clone frais a HEAD 0ff330b, plafond 86, premier libre 87.
+  Machine 1 a lu le registre AVANT que machine 2 n'y depose le delta de la sequence R3.
+  ETAT REEL, sur clone re-fetche : origin/main = d199d33
+    delta 87 -- the R3 sequence enters the register: two classical estimators declared before 
+    fichiers delta_87 au registre : 1 ['journal_delta_87_sequence_R3_v1.md']
+    fichiers delta_88 au registre : 0
+  -> le numero 87 est PRIS depuis le depot du delta R3 ; le premier libre est 88.
+
+=== BILAN (compte etabli apres le dernier controle) ===
+  perimetre : empreintes citees toutes detenues  PASSE
+  S_b re-derives de la forme fermee              PASSE
+  JSON du run a l'empreinte de l'acte            PASSE
+  degre pair 0 sur 480                           PASSE
+  degre impair 0 sur 1512 sous s_b               PASSE
+  site 2:1 : 0/96 aux quatre colonnes            PASSE
+  14 seuils, 11 a 0, 3 a 1, 0 au-dela            PASSE
+  s*/s_b : 11 valeurs et la plage                PASSE
+  garde de derive passee 27 sur 27               PASSE
+  somme derivee explosifs + non == 96            PASSE
+  controles passes : 10 sur 10

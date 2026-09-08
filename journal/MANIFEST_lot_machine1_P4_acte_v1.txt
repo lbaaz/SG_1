@@ -1,0 +1,28 @@
+MANIFEST lot_machine1_2026-09-08_P4_acte_v1 -- ACTE DELTA P-4 v1 (numero nn au depot, classe 1), machine 1, 08/09/2026
+colonnes : empreinte_B (sha256 NFC+LF, 16 hex)  sha256_brut  octets  fichier  (tous LF/ASCII : B == brut)
+
+0f8e283fa9499f96  0f8e283fa9499f96     39338  journal_delta_nn_P4_v1.md
+75716001ec705899  75716001ec705899      6334  reception_archive_P4_machine1_v1.py
+f684320293240f0f  f684320293240f0f     16135  reception_archive_P4_machine1_v1.log
+afdbe28c91a954f5  afdbe28c91a954f5      7317  rederive_P4_acte_machine1_v1.py
+f246741a5daf6930  f246741a5daf6930     23143  rederive_P4_acte_machine1_v1.json
+f5659602d1e71d34  f5659602d1e71d34      5303  rederive_P4_acte_machine1_v1.log
+1342457a50df0cab  1342457a50df0cab      3038  rejeu_et_fantome_acte_machine1_v1.py
+8bd4ead9d5d711b0  8bd4ead9d5d711b0      1522  rejeu_et_fantome_acte_machine1_v1.json
+6b52e0a369fdd561  6b52e0a369fdd561      1002  rejeu_et_fantome_acte_machine1_v1.log
+0357eea24a5a59b9  0357eea24a5a59b9      1970  fantome_reste_acte_machine1_v1.py
+1d31e767e8beddbb  1d31e767e8beddbb      3085  fantome_reste_acte_machine1_v1.json
+e78f3db066652236  e78f3db066652236      2110  fantome_reste_acte_machine1_v1.log
+294da06d02622dab  294da06d02622dab      5163  rederive_complements_acte_machine1_v1.py
+a88818a6d93e0634  a88818a6d93e0634      1419  rederive_complements_acte_machine1_v1.json
+cd61a2873be31cae  cd61a2873be31cae      4250  rederive_complements_acte_machine1_v1.log
+23d5d1ac39dcf8e6  23d5d1ac39dcf8e6      4331  perimetre_instrument_acte_machine1_v1.py
+113e242886f43909  113e242886f43909       810  perimetre_instrument_acte_machine1_v1.log
+
+entrants (archive m2 -> m1 du 08/09, reception confirmee 7/7 lots, 26/26 empreintes, 64 pieces ; canons des lots = convention B du manifeste interne) :
+  db6054ad58e4ff44 instrument v1 ; fcaa79169534cbea lecture gel v3 ; d1ff9faa6e020094 reponse v2 ; f1d646d9feca7437 resultat v4 ;
+  81ddb80ef0433b15 addendum v3 (gel d7eccfbd9b715a6d, addendum e4d37a4f9ae195d6) ; f0f304d0351d592b controle v2 (7d59cde9b48c0d76) ; 3bcac78e23a1d077 run v4 (JSON e66549fd72f4239b)
+  registre : clone frais HEAD 0ff330b, plafond 86 ; moteur c8ed357b120352c4 (lecture seule) ; note critique 81ab692160dbcf64 (projet)
+non resolus cote m1, declares a l'acte (nn.1) : 8c40ac3a616a44e7, bcf2961cfd9d5b40, 4e5cd0419d3cc819 (JSON m2 ; references fantomes re-derivees par rejeu, 14/14)
+chemins : chaque script prend en premier argument la racine ou les sept lots sont extraits (un dossier par lot) ; moteur charge par charge_moteur.py du lot instrument (chemin BOCAL4 a substituer)
+attente : certification machine 2 en un tour ; decisions operateur nn.6 (jambes D, S, T = 6400 constatees NON JOUEES ; ordre 87/88 ; numeros de serie) ; depot avec numero dans le nom de fichier et ce manifeste seulement

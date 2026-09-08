@@ -1,0 +1,70 @@
+COMPTES (re-derives depuis grille_repr et t_exp, s_b depuis la forme fermee) :
+  grilles              27
+  impaires             22
+  paires               5
+  points_pairs         480
+  explosifs_pairs      0
+  points_sous_s_b      1512
+  explosifs_sous_s_b   0
+  seuils               14
+  d0                   11
+  d1                   3
+  dplus                0
+  points_grille        2592
+  exacts               2465
+  a_1ulp               127
+  derive_max           5.1175657374347026e-08
+  garde                0.0011
+  grilles_sous_garde   27
+  ecarts_json          0
+  pas_P1               0.014144576281064155
+  pas_ext              0.014592572222314637
+ECARTS au JSON : aucun
+
+SEUILS (premier s explosif de la grille a T ; indices ; d_indice ; s*/s_b ; pas au-dessus de s_b) :
+  colonne    grille i400 i1600    s*(400)   s*(1600)         dln d_i   s_b(sgn)  s*/s_b pas>s_b 1er>s_b expl
+  5|2.22|-1  G_ext   78    78   2.354221   2.354221 +0.00000000   0   1.512281  1.5567   30.33        False
+  7|2.42|+1  G_P1    70    69   1.173800   1.157313 -0.01414458  -1   1.092858  1.0590    4.05        False
+  7|2.42|+1  G_ext   52    52   1.167926   1.167926 +0.00000000   0   1.092858  1.0687    4.55        False
+  5|2.00|+1  G_ext   48    48   1.188317   1.188317 +0.00000000   0   1.178269  1.0085    0.58         True
+  5|2.00|-1  G_ext   67    67   1.567994   1.567994 +0.00000000   0   1.181103  1.3276   19.42        False
+  7|2.00|+1  G_ext   49    49   0.785172   0.785172 +0.00000000   0   0.768065  1.0223    1.51        False
+  7|2.00|-1  G_ext   64    64   0.977298   0.977298 +0.00000000   0   0.768280  1.2721   16.49        False
+  7|2.50|-1  G_P1    90    90   1.283752   1.283752 +0.00000000   0   1.152962  1.1134    7.60        False
+  7|2.50|-1  G_ext   55    55   1.285043   1.285043 +0.00000000   0   1.152962  1.1146    7.43        False
+  5|1.50|+1  G_ext   63    62   0.590745   0.582187 -0.01459257  -1   0.471130  1.2357   14.50        False
+  5|1.50|-1  G_P1    68    68   0.474829   0.474829 +0.00000000   0   0.471193  1.0077    0.54         True
+  5|1.50|-1  G_ext   48    48   0.474611   0.474611 +0.00000000   0   0.471193  1.0073    0.50         True
+  7|1.50|+1  G_ext   62    61   0.434335   0.428043 -0.01459257  -1   0.351504  1.2177   13.50        False
+  7|1.50|-1  G_ext   48    48   0.354079   0.354079 +0.00000000   0   0.351506  1.0073    0.50         True
+
+COLONNES IMPAIRES : s_b(sgn), s_b0, S_b, E_b (forme fermee m1) et sous/sur s_b par grille :
+  5|2.22|-1  G_P1  s_b=1.512281 s_b0=1.508531 S_b=-4.0272 E_b=4.044819 sous=96 expl_sous=0 n_expl= 0 derive=1.03e-08
+  5|2.22|-1  G_ext s_b=1.512281 s_b0=1.508531 S_b=-4.0272 E_b=4.044819 sous=48 expl_sous=0 n_expl=18 derive=1.59e-08
+  7|2.42|+1  G_P1  s_b=1.092858 s_b0=1.093696 S_b=-2.4198 E_b=1.786192 sous=65 expl_sous=0 n_expl=27 derive=1.16e-08
+  7|2.42|+1  G_ext s_b=1.092858 s_b0=1.093696 S_b=-2.4198 E_b=1.786192 sous=48 expl_sous=0 n_expl=44 derive=1.16e-08
+  5|2.00|+1  G_P1  s_b=1.178269 s_b0=1.179679 S_b=-3.6342 E_b=3.169850 sous=96 expl_sous=0 n_expl= 0 derive=4.41e-09
+  5|2.00|+1  G_ext s_b=1.178269 s_b0=1.179679 S_b=-3.6342 E_b=3.169850 sous=48 expl_sous=0 n_expl=48 derive=2.96e-09
+  5|2.00|-1  G_P1  s_b=1.181103 s_b0=1.179679 S_b=-3.6342 E_b=3.169850 sous=96 expl_sous=0 n_expl= 0 derive=4.42e-09
+  5|2.00|-1  G_ext s_b=1.181103 s_b0=1.179679 S_b=-3.6342 E_b=3.169850 sous=48 expl_sous=0 n_expl=25 derive=8.72e-09
+  7|2.00|+1  G_P1  s_b=0.768065 s_b0=0.768172 S_b=-2.1689 E_b=1.344090 sous=96 expl_sous=0 n_expl= 0 derive=4.42e-09
+  7|2.00|+1  G_ext s_b=0.768065 s_b0=0.768172 S_b=-2.1689 E_b=1.344090 sous=48 expl_sous=0 n_expl=47 derive=3.03e-09
+  7|2.00|-1  G_P1  s_b=0.768280 s_b0=0.768172 S_b=-2.1689 E_b=1.344090 sous=96 expl_sous=0 n_expl= 0 derive=4.42e-09
+  7|2.00|-1  G_ext s_b=0.768280 s_b0=0.768172 S_b=-2.1689 E_b=1.344090 sous=48 expl_sous=0 n_expl=29 derive=1.59e-08
+  7|2.50|-1  G_P1  s_b=1.152962 s_b0=1.151825 S_b=-2.4623 E_b=1.866708 sous=83 expl_sous=0 n_expl= 6 derive=1.47e-08
+  7|2.50|-1  G_ext s_b=1.152962 s_b0=1.151825 S_b=-2.4623 E_b=1.866708 sous=48 expl_sous=0 n_expl=41 derive=1.47e-08
+  5|1.50|+1  G_P1  s_b=0.471130 s_b0=0.471161 S_b=-2.5867 E_b=1.389675 sous=96 expl_sous=0 n_expl= 0 derive=1.76e-09
+  5|1.50|+1  G_ext s_b=0.471130 s_b0=0.471161 S_b=-2.5867 E_b=1.389675 sous=48 expl_sous=0 n_expl=34 derive=1.77e-09
+  5|1.50|-1  G_P1  s_b=0.471193 s_b0=0.471161 S_b=-2.5867 E_b=1.389675 sous=68 expl_sous=0 n_expl=28 derive=8.78e-10
+  5|1.50|-1  G_ext s_b=0.471193 s_b0=0.471161 S_b=-2.5867 E_b=1.389675 sous=48 expl_sous=0 n_expl=48 derive=8.73e-10
+  7|1.50|+1  G_P1  s_b=0.351504 s_b0=0.351505 S_b=-1.7687 E_b=0.773458 sous=96 expl_sous=0 n_expl= 0 derive=9.99e-10
+  7|1.50|+1  G_ext s_b=0.351504 s_b0=0.351505 S_b=-1.7687 E_b=0.773458 sous=48 expl_sous=0 n_expl=35 derive=1.89e-09
+  7|1.50|-1  G_P1  s_b=0.351506 s_b0=0.351505 S_b=-1.7687 E_b=0.773458 sous=96 expl_sous=0 n_expl= 0 derive=9.99e-10
+  7|1.50|-1  G_ext s_b=0.351506 s_b0=0.351505 S_b=-1.7687 E_b=0.773458 sous=48 expl_sous=0 n_expl=48 derive=8.80e-10
+
+PAIRES :
+  4|2.22|+1  G_P1  n_expl=0 derive=8.47e-09
+  4|2.22|+1  G_ext n_expl=0 derive=2.05e-08
+  4|2.00|+1  G_P1  n_expl=0 derive=6.52e-09
+  4|2.00|+1  G_ext n_expl=0 derive=1.40e-08
+  4|3.00|+1  G_P1  n_expl=0 derive=5.12e-08

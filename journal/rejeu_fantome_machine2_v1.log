@@ -1,0 +1,19 @@
+=== REJEU FANTOME (eta = +1) SUR LES QUATRE COLONNES 2:1, GRILLE G_P1, T = 1600 ===
+  pas de G_P1 re-derive : ln(1.15/0.3)/95 = 0.014144576   (acte : 0.014145)
+
+  5|2.00|+1     jumeau du JSON 0/96 ; FANTOME rejoue : 10/96 a T=400 -> 43/96 a T=1600
+                s*_f(400) = 0.379198   s*_f(1600) = 0.237766   dln = -0.4668 = -33.0 pas   [15 s]
+                acte      : 10 -> 43, 0.379198 -> 0.237766, dln -0.4668   -> CONFORME
+  5|2.00|-1     jumeau du JSON 0/96 ; FANTOME rejoue : 10/96 a T=400 -> 43/96 a T=1600
+                s*_f(400) = 0.378468   s*_f(1600) = 0.237308   dln = -0.4668 = -33.0 pas   [13 s]
+                acte      : 10 -> 43, 0.378468 -> 0.237308, dln -0.4668   -> CONFORME
+  7|2.00|+1     jumeau du JSON 0/96 ; FANTOME rejoue : 10/96 a T=400 -> 30/96 a T=1600
+                s*_f(400) = 0.397186   s*_f(1600) = 0.299320   dln = -0.2829 = -20.0 pas   [13 s]
+                acte      : 10 -> 30, 0.397186 -> 0.299320, dln -0.2829   -> CONFORME
+  7|2.00|-1     jumeau du JSON 0/96 ; FANTOME rejoue : 10/96 a T=400 -> 30/96 a T=1600
+                s*_f(400) = 0.396752   s*_f(1600) = 0.298993   dln = -0.2829 = -20.0 pas   [13 s]
+                acte      : 10 -> 30, 0.396752 -> 0.298993, dln -0.2829   -> CONFORME
+
+  colonnes rejouees : 4 ; conformes a l'acte : 4
+  dln en pas de grille : degre 5 -> -33.0 et -33.0 ; degre 7 -> -20.0 et -20.0
+  l'acte annonce -33.0 et -20.0 pas EXACTEMENT : CONFORME
