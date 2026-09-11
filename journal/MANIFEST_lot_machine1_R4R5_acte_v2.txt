@@ -1,0 +1,26 @@
+MANIFEST lot_machine1_2026-09-11_R4R5_acte_v2 -- ACTE DELTA R4/R5 v2 (numero nn au depot, classe 1) : v1 86d6ee29d27938ff + les trois correctifs de la certification m2 4e7dafb54a908f71 (H1 A-7 option b, H2 A-6, H3 A-4) + l'outil de la regle (H4 nn.6) ; 8 hunks au diff contexte 0 (+27/-10), 4 de fond, 4 administratifs ; machine 1
+les seize feuilles de re-derivation sont celles du lot v1 (6706e94d9ba2dcd7), inchangees ; a verifier : les hunks contre la v1 ; puis depot (registre a reverifier, HEAD 39fbc89, premier libre 89)
+colonnes : empreinte_B (sha256 NFC+LF, 16 hex)  octets  fichier  (tous LF/ASCII : B == brut)
+
+ce07e533176441a5    30523  journal_delta_nn_R4R5_v2.md
+86d6ee29d27938ff    29317  journal_delta_nn_R4R5_v1.md
+0a04316a080b635d     2844  diff_v1_v2_R4R5_machine1_v1.txt
+684fae6152a75a38     3342  POUR_MACHINE2_v2_acte_R4R5_machine1_v1.md
+0c6ff54c81d5abb4     2771  rederive_acte_R4R5_machine1_v1.py
+3d6241935fa0aed8    23756  rederive_acte_R4R5_machine1_v1.log
+bf78603cd2699f93     8756  lecture_R4_machine1_v1.py
+4d2cf4aebff7e86d     1559  rederive_D_6400_machine1_v1.py
+6fa72fe2ae840619     2312  rederive_R5_machine1_v1.py
+2bda476b2c384e93     3958  capture_2_1_p7_machine1_v1.py
+cb2a0257396fe3e0     1971  enveloppes_apex_machine1_v1.py
+9b7a2c5a2f604a68     1503  lecture_periode_libration_machine1_v1.py
+12b1cb53d0eafb24     1714  lecture_resolution_machine1_v1.py
+187c723064996059     3297  D2_premier_ordre_2_1_pair_machine1_v1.py
+73fc95daf9a870af     4667  D2_prediction_P_D1_5_machine1_v1.py
+ae1d0c38da9b6c20     2979  lecture_voletB_machine1_v1.py
+f7309c54ece9519c     2582  correction_action_P2_machine1_v1.py
+f2846253ad6377f9     2938  prediction_P2_p8_machine1_v1.py
+05a2e9d03554716c     1961  lecture_P2_p8_machine1_v1.py
+895acfe4c18a355e     3707  direction_flanc_machine1_v1.py
+
+pieces : 20 (compte etabli apres le dernier ajout)

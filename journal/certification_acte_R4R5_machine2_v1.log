@@ -1,0 +1,125 @@
+====================================================================================
+CERTIFICATION DE L'ACTE DELTA nn (R4/R5) -- re-derivation par les feuilles de m2
+====================================================================================
+
+[nn.1] LES EMPREINTES DE MES PIECES, CITEES PAR L'ACTE
+  [OK  ] nn.1   run volet B au bit et cite                     90d4675bebb23f0e
+  [OK  ] nn.1   canon volet B au bit et cite                   579cf0a6bed9ac76
+  [OK  ] nn.1   ZIP volet B au bit et cite                     575f0d8f99b64cb3
+  [OK  ] nn.1   run p=8 au bit et cite                         9a201423743cfde6
+  [OK  ] nn.1   controle maxima au bit et cite                 0787e737e657e705
+  [OK  ] nn.1   canon p=8 au bit et cite                       19edb2ba80f357f1
+  [OK  ] nn.1   ZIP p=8 au bit et cite                         752be8b86d1a1d7b
+  [OK  ] nn.1   canon erratum au bit et cite                   0040a285bbbbcd10
+
+[A-1] LE TEST AVEUGLE DU VOLET E -- six paires
+  [OK  ] A-1    les 6 paires du gel sont dans mon run          6 lignes
+  [OK  ] A-1    7|3.90 : A400 -0.129976 et A1600 -0.129976     mesure -0.129976 / -0.129976
+  [OK  ] A-1    7|4.10 : A400 +0.289269 et A1600 +0.303414     mesure +0.289269 / +0.303414
+  [OK  ] A-1    9|1.45 : A400 +0.135987 et A1600 +0.135987     mesure +0.135987 / +0.135987
+  [OK  ] A-1    9|1.55 : A400 -0.224387 et A1600 -0.210242     mesure -0.224387 / -0.210242
+  [OK  ] A-1    13|1.90 : A400 -0.110726 et A1600 -0.110726    mesure -0.110726 / -0.110726
+  [OK  ] A-1    13|2.10 : A400 +0.111924 et A1600 +0.111924    mesure +0.111924 / +0.111924
+  [OK  ] A-1    6 tenues, 0 falsifiee, 0 muette                6/0/0
+  [OK  ] A-1    porte ln 1.02 == celle du run                  
+  [OK  ] A-1    la marche de 3:2 est INVERSEE par rapport a 2: 
+  [OK  ] A-1    la bande 13 [0.095, 0.125] contient les DEUX m 
+
+[A-2] VOLET D -- les trois seuils a T = 6400
+  [OK  ] A-2    7|2.42 indices 70 / 69 / 69                    mesure [70, 69, 69]
+  [OK  ] A-2    7|2.42 : 27 explosifs, identiques a 1600 et 64 1600:27 6400:27
+  [OK  ] A-2    7|2.42 : 0 noeud entre 1600 et 6400            
+  [OK  ] A-2    5|1.50 indices 63 / 62 / 62                    mesure [63, 62, 62]
+  [OK  ] A-2    5|1.50 : 34 explosifs, identiques a 1600 et 64 1600:34 6400:34
+  [OK  ] A-2    5|1.50 : 0 noeud entre 1600 et 6400            
+  [OK  ] A-2    7|1.50 indices 62 / 61 / 61                    mesure [62, 61, 61]
+  [OK  ] A-2    7|1.50 : 35 explosifs, identiques a 1600 et 64 1600:35 6400:35
+  [OK  ] A-2    7|1.50 : 0 noeud entre 1600 et 6400            
+  [OK  ] A-2    l'acte cite 'aucune explosion nouvelle' et les 
+
+[A-3] VOLET C -- 11|6.00 piegee, 11|2.50 non concluante
+  [OK  ] A-3    11|2.50 : s0 = 0.979962                        0.979962
+  [OK  ] A-3    11|2.50 : a T=400 explosifs = 86 a 95          [86, 87, 88, 89, 90, 91, 92, 93, 94, 95]
+  [OK  ] A-3    11|2.50 : ilots {47, 48, 50, 53, 56} a T=1600  [47, 48, 50, 53, 56]
+  [OK  ] A-3    11|2.50 : le bloc du haut ne bouge pas         
+  [OK  ] A-3    11|2.50 : dln = -0.55164                       -0.55164
+  [OK  ] A-3    11|6.00 : s0 = 1.873518                        1.873518
+  [OK  ] A-3    11|6.00 : explosifs = noeuds 85 a 95 AUX DEUX  400:85..95 1600:85..95
+  [OK  ] A-3    11|6.00 : dln = 0                              
+  [OK  ] A-3    loi directe citee a -0.15403                   
+
+[A-4] VOLET A -- GEL 5/5, excursion falsifiee
+  [OK  ] A-4    5 cellules GEL et 6 d'excursion                5 / 6
+  [OK  ] A-4    T du volet A = 3000 (l'hypothese falsifiee)    
+  [MORD] A-4    GEL : apex = excursion libre, 5/5 (l'acte anno max ecart RELATIF 9.49e-06 ; absolu 5.28e-06 -- la borne juste est 1e-5
+  [OK  ] A-4    excursion : rapport 1.0000 aux 6 cellules      max ecart 5.45e-05
+  [OK  ] A-4    zero explosion au volet A                      
+
+[A-5] VOLET B -- l'ile a 6|2.00
+  [OK  ] A-5    s*(400) = s*(1600) = 1.012586, les deux signes 
+  [OK  ] A-5    11 explosifs sur 96 en un intervalle, 0 ilot   11
+  [OK  ] A-5    noeud 85                                       
+  [OK  ] A-5    ratio 1.0                                      
+  [OK  ] A-5    K*(6|2.00) = 0.052565                          0.052565
+  [OK  ] A-5    r1 cite : 0, 0.094, 0.219, 0.346, 0.465, 0.572 
+
+[A-6] LA PERIODE D'ENVELOPPE -- p = 6 puis p = 8
+  [OK  ] A-6    p=6 s=0.40 : predit 503.4, mesure 477.5        
+  [OK  ] A-6    p=6 s=0.50 : predit 206.2, mesure 195.0        
+  [OK  ] A-6    p=6 s=0.60 : predit 99.4, mesure 95.0          
+  [OK  ] A-6    a' effectif 92.52, 92.80, 91.86                92.52 92.80 91.86
+  [MORD] A-6    l'acte ecrit 'BAS de 5.4 a 5.7 pour cent'      ecarts mesures : 5.42 5.73 4.66
+  [OK  ] A-6    profondeur p=6 : 0.897 a 0.905 pour 0.868      
+  [OK  ] A-6    b/a' = 0.01832 coherent avec r1(6) = 0.0940 et b/a' / J2_0 = 0.0412 (l'acte dit 4.1 pc)
+  [OK  ] A-6    p=8 s=0.35 : corrigee 1464.5, naive 1683.9, me 
+  [OK  ] A-6    p=8 s=0.35 : corrigee DANS, naive HORS         
+  [OK  ] A-6    p=8 s=0.45 : corrigee 324.2, naive 372.8, mesu 
+  [OK  ] A-6    p=8 s=0.45 : corrigee DANS, naive HORS         
+  [OK  ] A-6    p=8 s=0.55 : corrigee 97.3, naive 111.8, mesur 
+  [OK  ] A-6    p=8 s=0.55 : corrigee DANS, naive HORS         
+  [OK  ] A-6    p=8 affinee s=0.35 : 1464.19, residu -0.02     
+  [OK  ] A-6    p=8 affinee s=0.45 : 324.70, residu +0.15      
+  [OK  ] A-6    p=8 affinee s=0.55 : 97.83, residu +0.59       
+  [OK  ] A-6    residus de l'erratum ; 2.82 cite QUE dans nn.5 1 occurrence(s) de 2.82, toutes dans nn.5 : True
+  [OK  ] A-6    l'erratum est pris : pas de lecture 10.2 pc a  
+  [OK  ] A-6    profondeur p=8 : 0.917 a 0.930 pour 0.913      
+  [OK  ] A-6    a'(8) = 487.1433 coherent avec la corrigee/nai naive recalculee 1683.9
+
+[A-7] LA PERIODE DE LIBRATION
+  [OK  ] A-7    run : 2450 (s0=0.15) et 500 (s0=0.25)          2450 / 500
+  [OK  ] A-7    bandes [1926, 2519] et [416, 544]              
+  [OK  ] A-7    resolution : 2417 et 483 a plus ou moins 17    2417 / 483
+  [OK  ] A-7    les deux s0 RESOLUS de l'acte sont les miens a 
+  [OK  ] A-7    les quatre C_P sont dans la bande gelee [0.26, 
+  [OK  ] A-7    la pente -1.071 se reproduit des quatre valeur 
+  [MORD] A-7    les QUATRE s0 de la serie C_P sont a la meme r s0 = 0.20 et 0.30 ne sont dans AUCUNE de mes pieces ; la resolution deplace C_P de -1.36 % et -3.33 % aux deux que je detiens
+
+[A-9] LES DEUX PREDICTIONS QUI TOMBENT
+  [OK  ] A-9    n = 6 (le site exact ne porte pas l'observable n=6
+  [OK  ] A-9    rho 13/35 et -19/35 presents dans ma lecture R 
+  [OK  ] A-9    p = 179/720 et 211/240 cites                   
+  [OK  ] A-9    la moitie parite de P1 est declaree tautologie 
+  [OK  ] A-9    mes 96/96 au bit soutiennent cette declaration 
+
+[nn.3/nn.5] LA TABLE ET LES DEFAUTS
+  [OK  ] nn.3   la table porte 10 lignes de prediction         10
+  [OK  ] nn.3   P2 periode : 'coefficient bas de 5.5 pour cent mesure 5.27 pc
+  [OK  ] nn.5   D-R4-6 : le facteur 20.70 de la prose D2       
+  [OK  ] nn.5   D-R4-7 : le +2.82 est retire comme mesure      
+  [OK  ] nn.5   E-m2-5 : mon ecart de custody est repris       
+  [OK  ] nn.5   D-R4-5 : la tautologie est portee au compte de 
+  [OK  ] nn.9   l'acte declare ne prendre aucun numero         
+
+====================================================================================
+re-derivations : 88 ; MORDENT : 3
+
+CE QUI MORD -- a corriger avant depot :
+  A-4    GEL : apex = excursion libre, 5/5 (l'acte annonce 'a 1e-6 pres')
+         max ecart RELATIF 9.49e-06 ; absolu 5.28e-06 -- la borne juste est 1e-5
+  A-6    l'acte ecrit 'BAS de 5.4 a 5.7 pour cent'
+         ecarts mesures : 5.42 5.73 4.66
+  A-7    les QUATRE s0 de la serie C_P sont a la meme resolution
+         s0 = 0.20 et 0.30 ne sont dans AUCUNE de mes pieces ; la resolution deplace C_P de -1.36 % et -3.33 % aux deux que je detiens
+
+VERDICT : CERTIFIE SOUS RESERVE -- les 3 point(s) ci-dessus.
+====================================================================================

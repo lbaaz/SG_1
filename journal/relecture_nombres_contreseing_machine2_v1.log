@@ -1,0 +1,36 @@
+==============================================================================
+RELECTURE MECANIQUE DES NOMBRES DU CONTRESEING v2
+==============================================================================
+
+[A] LE COMPTE DE LA CERTIFICATION v2
+  [OK  ] 89 re-derivees, 0 mordent                              89 / 0
+  [OK  ] 88 sur la v1 dont 3 mordaient                          
+  [OK  ] 20/20 a la reception                                   
+  [OK  ] brut du lot recu 9489d172c9f31884                      
+  [OK  ] mon canon et mon ZIP cites justes                      
+
+[B] LES HUIT HUNKS
+  [OK  ] 8 hunks, 4 de fond + 4 administratifs                  
+  [OK  ] aucun hunk hors des huit attendus                      
+  [OK  ] MON diff reconstruit la v2 au bit                      
+  [OK  ] v1 du lot == 86d6ee29d27938ff                          
+
+[C] D-CERT-4 : LA PIECE DIFF
+  [OK  ] v1 a 406 lignes et v2 en a 422                         406 / 422
+  [OK  ] son diff ECHOUE, 1 hunk sur 8 rejete                   
+  [OK  ] compte reel +26 / -9 contre +27 / -10 annonce          
+  [OK  ] le hunk 8 reel est '@@ -406 +422 @@'                   
+  [OK  ] le hunk 8 qu'elle ecrit est '@@ -406,2 +422,2 @@'      
+
+[D] LES AFFIRMATIONS DE FORME, VERIFIEES
+  [OK  ] 30523 octets, ASCII, LF, zero pour cent                
+  [OK  ] ecart relatif max 9.49e-06 (H3)                        
+
+[E] LE REGISTRE, A LA PORTEE EXACTE
+  [OK  ] plafond local 88, 69 numeros, trou au 20, 89 libre     
+  [OK  ] delta 88 au bit et declare non remplacant              
+  [OK  ] aucun depot git au poste, dit tel quel                 
+
+==============================================================================
+Relecture : 19/19 assertions chiffrees confirmees a la source.
+==============================================================================

@@ -1,0 +1,209 @@
+================================================================================================
+E, D, C, A -- lecture par enumeration du run R4
+================================================================================================
+gel volet E v2 detenu : 91d858bbf2da60af (attendu 91d858bbf2da60af)
+
+=== VOLET E : re-derive depuis (grille_repr, t_exp), regle 5.6 du gel v2 ===
+  porte ln(1.02) = 0.019803 ; pas = 0.014145 ; gel cite au JSON : 91d858bbf2da60af ; moteur c8ed357b120352c4
+  7|3.90  gele A<0  A400=-0.129976 (CONCORDE)  A1600=-0.129976 (CONCORDE)  -> TENUE  ; ilots(+1,-1) a 1600 : 0,0 ; grille = s0 logspace a 2.2e-16 ; borne False/False
+  7|4.10  gele A>0  A400=+0.289269 (CONCORDE)  A1600=+0.303414 (CONCORDE)  -> TENUE  ; ilots(+1,-1) a 1600 : 0,0 ; grille = s0 logspace a 2.2e-16 ; borne False/False
+  9|1.45  gele A>0  A400=+0.135987 (CONCORDE)  A1600=+0.135987 (CONCORDE)  -> TENUE  bande (0.057, 0.24) : DANS  ; ilots(+1,-1) a 1600 : 0,0 ; grille = s0 logspace a 2.2e-16 ; borne False/False
+  9|1.55  gele A<0  A400=-0.224387 (CONCORDE)  A1600=-0.210242 (CONCORDE)  -> TENUE  bande (0.073, 0.305) : DANS  ; ilots(+1,-1) a 1600 : 0,1 ; grille = s0 logspace a 2.2e-16 ; borne False/False
+  13|1.90  gele A<0  A400=-0.110726 (CONCORDE)  A1600=-0.110726 (CONCORDE)  -> TENUE  bande (0.095, 0.125) : DANS  ; ilots(+1,-1) a 1600 : 0,0 ; grille = s0 logspace a 2.2e-16 ; borne False/False
+  13|2.10  gele A>0  A400=+0.111924 (CONCORDE)  A1600=+0.111924 (CONCORDE)  -> TENUE  bande (0.095, 0.125) : DANS  ; ilots(+1,-1) a 1600 : 0,0 ; grille = s0 logspace a 2.2e-16 ; borne False/False
+  COMPTE : tenues 6 + falsifiees 0 + muettes 0 == 6 paires : True
+  flanc 3:2 a 1.45 : exp(|A|(p-1)) = 2.609 (p=7, G6) -> 2.968 (p=9) : +14 pour cent ; en (p-2) : 2.224 -> 2.591
+  flanc 3:2 a 1.55 : exp(|A|(p-1)) = 3.387 (p=7, G6) -> 6.020 (p=9) : +78 pour cent ; en (p-2) : 2.764 -> 4.810
+
+=== VOLET D : T = 6400 sur les trois grilles R-P4-2, contre le JSON P-4 depose ===
+  attendus cites 2154286e9df56806 ; p4 cite e66549fd72f4239b ; instrument 171a02edfbc23864 ; T = 6400.0 ; eta = -1.0
+  7|2.42|+1 G_P1 : P-4 i400=70 i1600=69 s*(1600)=1.1573134984 ; run : s_400=1.1737995265 s_1600=1.1573134984 s_6400=1.1573134984 deplacement +0.0 pas ; s_1600 run == P-4 au repr : True ; verdict embarque : AUCUN DEPLACEMENT ; n_expl 27 + 69 == 96 ; cles brutes du run : aucune (pas de t_exp a 6400 au JSON)
+  5|1.50|+1 G_ext : P-4 i400=63 i1600=62 s*(1600)=0.5821873907 ; run : s_400=0.5907452912 s_1600=0.5821873907 s_6400=0.5821873907 deplacement +0.0 pas ; s_1600 run == P-4 au repr : True ; verdict embarque : AUCUN DEPLACEMENT ; n_expl 34 + 62 == 96 ; cles brutes du run : aucune (pas de t_exp a 6400 au JSON)
+  7|1.50|+1 G_ext : P-4 i400=62 i1600=61 s*(1600)=0.4280427277 ; run : s_400=0.4343347690 s_1600=0.4280427277 s_6400=0.4280427277 deplacement +0.0 pas ; s_1600 run == P-4 au repr : True ; verdict embarque : AUCUN DEPLACEMENT ; n_expl 35 + 61 == 96 ; cles brutes du run : aucune (pas de t_exp a 6400 au JSON)
+
+=== VOLET C : 11|2.50 et 11|6.00, structure brute a 400 et 1600 ===
+  11|2.50 s0=0.9799615844 : explosifs a 400 : [np.int64(86), np.int64(87), np.int64(88), np.int64(89), np.int64(90), np.int64(91), np.int64(92), np.int64(93), np.int64(94), np.int64(95)] ; a 1600 : [np.int64(47), np.int64(48), np.int64(50), np.int64(53), np.int64(56), np.int64(86), np.int64(87), np.int64(88), np.int64(89), np.int64(90), np.int64(91), np.int64(92), np.int64(93), np.int64(94), np.int64(95)]
+     statistique gelee s* = min : s*(400)=0.9922490430 (noeud 86) s*(1600)=0.5715406745 (noeud 47) dln=-0.55164 ; loi directe -ln4/(p-2) = -0.15403 ; ilots hors bloc a 1600 : 4, bloc du haut depuis le noeud 86 (a 400 : 0, noeud 86) ; verdict embarque 'DIRECT' ; pred_direct -0.15403
+  11|6.00 s0=1.8735180320 : explosifs a 400 : [np.int64(85), np.int64(86), np.int64(87), np.int64(88), np.int64(89), np.int64(90), np.int64(91), np.int64(92), np.int64(93), np.int64(94), np.int64(95)] ; a 1600 : [np.int64(85), np.int64(86), np.int64(87), np.int64(88), np.int64(89), np.int64(90), np.int64(91), np.int64(92), np.int64(93), np.int64(94), np.int64(95)]
+     statistique gelee s* = min : s*(400)=1.8703660185 (noeud 85) s*(1600)=1.8703660185 (noeud 85) dln=+0.00000 ; loi directe -ln4/(p-2) = -0.15403 ; ilots hors bloc a 1600 : 0, bloc du haut depuis le noeud 85 (a 400 : 0, noeud 85) ; verdict embarque 'PIEGE' ; pred_direct -0.15403
+
+=== VOLET A : falsifieur m1 tel qu'embarque, applique tel quel ===
+  7|2.50 s0=0.2   excursion : cible 1.74 +- 0.07 ; apex 0.352378 = 1.0000 x libre ; enveloppe plate a 4.4e-06 ; explose False -> HORS TOLERANCE
+  9|2.50 s0=0.2   excursion : cible 1.63 +- 0.07 ; apex 0.352381 = 1.0000 x libre ; enveloppe plate a 1.4e-06 ; explose False -> HORS TOLERANCE
+  11|2.50 s0=0.2   excursion : cible 1.53 +- 0.06 ; apex 0.352381 = 1.0000 x libre ; enveloppe plate a 1.4e-06 ; explose False -> HORS TOLERANCE
+  11|1.75 s0=0.2   excursion : cible 0.77 +- 0.03 ; apex 0.587911 = 1.0001 x libre ; enveloppe plate a 4.7e-06 ; explose False -> HORS TOLERANCE
+  11|2.67 s0=0.2   excursion : cible 1.04 +- 0.04 ; apex 0.330529 = 1.0000 x libre ; enveloppe plate a 8.0e-03 ; explose False -> HORS TOLERANCE
+  11|4.50 s0=0.5   excursion : cible 1.5 +- 0.06 ; apex 0.603894 = 1.0000 x libre ; enveloppe plate a 1.9e-06 ; explose False -> HORS TOLERANCE
+  7|6.00 s0=0.5   GEL : apex 0.557138 = 1.1143 s0 ; libre (3+w2^2)/delta = 1.1143 s0 ; enveloppe plate a 7.1e-06 ; explose False -> GEL tenu (cible embarquee 0.557 = celle de s0=0.5)
+  9|6.00 s0=0.5   GEL : apex 0.557142 = 1.1143 s0 ; libre (3+w2^2)/delta = 1.1143 s0 ; enveloppe plate a 2.3e-06 ; explose False -> GEL tenu (cible embarquee 0.557 = celle de s0=0.5)
+  11|6.00 s0=0.5   GEL : apex 0.557142 = 1.1143 s0 ; libre (3+w2^2)/delta = 1.1143 s0 ; enveloppe plate a 5.6e-07 ; explose False -> GEL tenu (cible embarquee 0.557 = celle de s0=0.5)
+  11|6.00 s0=0.1   GEL : apex 0.111429 = 1.1143 s0 ; libre (3+w2^2)/delta = 1.1143 s0 ; enveloppe plate a 7.8e-07 ; explose False -> GEL tenu (cible embarquee 0.557 = celle de s0=0.5)
+  11|6.00 s0=0.05  GEL : apex 0.055714 = 1.1143 s0 ; libre (3+w2^2)/delta = 1.1143 s0 ; enveloppe plate a 7.8e-07 ; explose False -> GEL tenu (cible embarquee 0.557 = celle de s0=0.5)
+  falsifieur m1 (tel que cite au log) : apex hors tolerance a >= 2 cellules -> 6 cellules HORS ; explosion la ou GEL attendu -> 0 ; GEL tenu 5/5
+  => par la LETTRE du falsifieur embarque, la moitie EXCURSION de P-D1-9 est FALSIFIEE dans sa fenetre T = 3000 ; la moitie GEL est TENUE.
+     Toutes les cellules restent sur l'excursion pleine du mouvement LIBRE (apex = s0 (3+w2^2)/delta) : rien de non lineaire ne s'est produit en 3000.
+
+================================================================================================
+D -- t_exp bruts a 6400
+================================================================================================
+cles d'un resultat v2 : ['colonne', 'grille', 'p', 'w2', 'sgn', 'pas', 'grille_repr', 't_exp', 's_400', 's_1600', 's_1600_depose', 's_6400', 'deplacement_ln', 'deplacement_pas', 'verdict', 'n_expl', 'n_non_expl', 'n_pts', 'duree']
+  7|2.42|+1 G_P1 : grille == P-4 : True ; t_exp<=1600 == P-4 : True ; i400=70 i1600=69 i6400=69 -> deplacement 1600->6400 : 0 noeud ; s*(6400)=1.1573134984 ; explosifs a 6400 : 27/96 (a 1600 : 27)
+  5|1.50|+1 G_ext : grille == P-4 : True ; t_exp<=1600 == P-4 : True ; i400=63 i1600=62 i6400=62 -> deplacement 1600->6400 : 0 noeud ; s*(6400)=0.5821873907 ; explosifs a 6400 : 34/96 (a 1600 : 34)
+  7|1.50|+1 G_ext : grille == P-4 : True ; t_exp<=1600 == P-4 : True ; i400=62 i1600=61 i6400=61 -> deplacement 1600->6400 : 0 noeud ; s*(6400)=0.4280427277 ; explosifs a 6400 : 35/96 (a 1600 : 35)
+
+================================================================================================
+R5 -- rho en fractions, p par enumeration
+================================================================================================
+n = 6 ; cellules ['1.95', '1.97', '1.98', '2.02', '2.03', '2.05'] ; rangs -r_gen [3, 2, 1, 4, 5, 6] ; seuils : 5/7 = 0.714286 (n=7), 29/35 = 0.828571 (n=6)
+  Gamma_LS (H)       rangs [5, 4, 2, 1, 3, 6]  rho = 13/35 = +0.371429  d2 = 22  p = 179/720 = 0.24861  -> NON TENUE a 29/35, NON TENUE a 5/7 ; m2 : rho 13/35 d2 22 p 179/720 NON TENUE -> CONCORDE
+  Gamma_pondere (H)  rangs [6, 5, 4, 1, 2, 3]  rho = -19/35 = -0.542857  d2 = 54  p = 211/240 = 0.87917  -> NON TENUE a 29/35, NON TENUE a 5/7 ; m2 : rho -19/35 d2 54 p 211/240 NON TENUE -> CONCORDE
+  Gamma_c (EA)       rangs [3, 2, 1, 4, 5, 6]  rho = 1 = +1.000000  d2 = 0  p = 1/720 = 0.00139  -> TENUE a 29/35, TENUE a 5/7 ; m2 : rho 1 d2 0 p 1/720 TENUE -> CONCORDE
+registre (delta 82) : Gamma_LS(2.02) = 6.562e-11, Gamma_LS(2.05) = 2.661e-09 : True True
+
+================================================================================================
+quadrature C -- seuil de capture 2:1 a 7|2.50
+================================================================================================
+p=7 w2=2.5 nu=-0.50 Delta=5.25 ; J~10=0.95351 J~20=0.18141 I=0.59070 ; c(J~0)=0.81490 ; dc/dJ~2|canal(J~0)=8.06652
+SEUIL DE CAPTURE derive : eps b dc/dJ~2 = |nu|  ->  s_open = 1.4544   (balayage m2 : apex x1.04 a s0 = 0.51, x1.58 a s0 = 0.65)
+excursion libre : 1.7619 s0 ; verifie S_max(J~0, phi0=pi) = 1.0067
+
+   s0       eps    eps c'  /|nu| | apex modele x libre  t_apex |  m2 apex x libre t_apex m2
+ 0.20  3.05e-06  2.46e-05   0.00 |      0.3524    1.00    1998 |   0.3524    1.00      None
+ 0.40  9.75e-05  7.87e-04   0.00 |      0.7048    1.00    2375 |   0.7068    1.00      None
+ 0.51  3.29e-04  2.65e-03   0.01 |      0.8986    1.00     289 |   0.9324    1.04      None
+ 0.60  7.41e-04  5.97e-03   0.01 |      1.0571    1.00    2325 |       --      --        --
+ 0.65  1.11e-03  8.91e-03   0.02 |      1.1452    1.00     641 |   1.8115    1.58    2450.0
+ 0.70  1.60e-03  1.29e-02   0.03 |      1.2333    1.00    2502 |       --      --        --
+ 0.80  3.12e-03  2.52e-02   0.05 |      1.4095    1.00    2833 |   1.7734    1.26      None
+
+================================================================================================
+quadrature C -- enveloppes des sondes (loi 1/eps a cellule fixee)
+================================================================================================
+SONDE p = 5, cellule 5|1.50 (3:2 EXACTE, piegee : a + b = 5 = p) -- tranches de 50 sur T = 3000
+  5|1.50|+1 s0=0.2       eps=3.20e-04  env[min,max]=[0.846,1.854]  maxima locaux a t=[550, 1550, 2550]  premier apex t=550  periode~1000  eps*periode=0.32  champ t_apex m2=1550.0
+  5|1.50|+1 s0=0.3       eps=1.08e-03  env[min,max]=[1.299,1.892]  maxima locaux a t=[150, 400, 650, 900, 1200, 1450, 1700, 1950]  premier apex t=150  periode~260  eps*periode=0.281  champ t_apex m2=1450.0
+  5|1.50|-1 s0=0.3       eps=1.08e-03  env[min,max]=[1.228,1.807]  maxima locaux a t=[200, 600, 1000, 1400, 1800, 2150, 2550, 2950]  premier apex t=200  periode~393  eps*periode=0.424  champ t_apex m2=200.0
+  test 1/eps a cellule fixee (+1, s0 0.2 -> 0.3) : eps x 3.375 ; periode 1000 -> 260, rapport 3.85 (resolution +-50 par tranche) ; exposant 1.11 (1/eps = 1.00)
+
+BALAYAGE 7|2.50|+1 (5:2 EXACTE piegee, 2:1 desaccordee de -0.5) -- tranches de 50 sur T = 3000
+  7|2.50|+1 s0=0.2       eps=3.05e-06  env[min,max]=[0.352,0.352]  maxima locaux a t=[]  premier apex t=None  periode~None  eps*periode=  champ t_apex m2=3000.0
+  7|2.50|+1 s0=0.3       eps=2.31e-05  env[min,max]=[0.529,0.529]  maxima locaux a t=[]  premier apex t=None  periode~None  eps*periode=  champ t_apex m2=3000.0
+  7|2.50|+1 s0=0.4       eps=9.75e-05  env[min,max]=[0.704,0.707]  maxima locaux a t=[]  premier apex t=None  periode~None  eps*periode=  champ t_apex m2=3000.0
+  7|2.50|+1 s0=0.51      eps=3.29e-04  env[min,max]=[0.897,0.932]  maxima locaux a t=[]  premier apex t=None  periode~None  eps*periode=  champ t_apex m2=3000.0
+  7|2.50|+1 s0=0.65      eps=1.11e-03  env[min,max]=[1.140,1.812]  maxima locaux a t=[2450]  premier apex t=2450  periode~None  eps*periode=  champ t_apex m2=2450.0
+  7|2.50|+1 s0=0.8       eps=3.12e-03  env[min,max]=[1.392,1.773]  maxima locaux a t=[1050]  premier apex t=1050  periode~None  eps*periode=  champ t_apex m2=1050.0
+  7|2.50|+1 s0=1.0       eps=9.52e-03  env[min,max]=[1.565,1.696]  maxima locaux a t=[1500, 2900]  premier apex t=1500  periode~1400  eps*periode=13.333  champ t_apex m2=2900.0
+  premier apex : 0.65 -> 2450, 0.80 -> 1050, 1.00 -> <= 50 (l enveloppe part de son maximum) ; eps x 2.8 puis x 3.1 : pas une loi 1/eps unique ; deux regimes au moins.
+
+================================================================================================
+periode de libration 5|1.50 -- run
+================================================================================================
+gel cite f8face8b95486d02 ; moteur c8ed357b120352c4 ; tranche 50.0 ; bande C_P [0.26, 0.34]
+  s0=0.15 eps=1.3500e-04 T=5050 maxima [1250, 3700] -> periode 2450.0 ; bande [1926, 2519] -> DANS ; C_P = 0.3307 ; premier apex 1250 (predit 1111, ecart 139) ; nb de maxima 2 -> periode sur UN intervalle ; explose False
+  s0=0.25 eps=6.2500e-04 T=1100 maxima [250, 750] -> periode 500.0 ; bande [416, 544] -> DANS ; C_P = 0.3125 ; premier apex 250 (predit 240, ecart 10) ; nb de maxima 2 -> periode sur UN intervalle ; explose False
+  verdict par le falsifieur (hors bande aux DEUX s0) : TENUE ; hors bande 0/2
+
+================================================================================================
+periode de libration 5|1.50 -- resolution a T = 4x
+================================================================================================
+cles : ['gel', 'tranche', 'resultats', 'controles']
+  s0=0.15 eps=1.3500e-04 T=10100 maxima [1250, 3700, 6100, 8500] -> periode 2417 +- 17 ; bande [1926, 2519] -> DANS, RESOLU ; C_P = 0.3262
+  s0=0.25 eps=6.2500e-04 T=2200 maxima [250, 750, 1250, 1700] -> periode 483 +- 17 ; bande [416, 544] -> DANS, RESOLU ; C_P = 0.3021
+  C_P par s0 : [(0.15, 0.3262), (0.2, 0.32), (0.25, 0.3021), (0.3, 0.2808)] ; pente ln P / ln eps sur 4 points : -1.071
+
+================================================================================================
+D2 -- premier ordre a 2:1, degre pair
+================================================================================================
+  p  b/a (J0)  b'/a' (J0)  b'/a' canal J2 x4  b'/a' J2->inf   regime au premier ordre
+  4    0.0000      0.0000             0.0000         0.0000   PAS de terme resonant (4,2) : ile pure
+  6    0.0897      0.0940             0.0970         0.0980   ILE (a' > b' partout) : pas de transport au premier ordre
+  8    0.2139      0.2191             0.2249         0.2265   ILE (a' > b' partout) : pas de transport au premier ordre
+ 10    0.3414      0.3463             0.3538         0.3556   ILE (a' > b' partout) : pas de transport au premier ordre
+ 12    0.4606      0.4649             0.4732         0.4750   ILE (a' > b' partout) : pas de transport au premier ordre
+ 14    0.5684      0.5721             0.5807         0.5824   ILE (a' > b' partout) : pas de transport au premier ordre
+
+Rappel des nombres archives a 2:1 : p = 4 ile, s*(400) = 2.63449 (T-independant, delta 86 A-7 i) ; p impairs 5, 7, 9, 11 : canal direct, nombres de fenetre.
+
+================================================================================================
+volet B -- lecture (P1, P2)
+================================================================================================
+d2 cite 9537d740be94bf91 (attendu 9537d740be94bf91) ; moteur c8ed357b120352c4 ; gardes mordues 0/8
+
+=== P2 : periode de l'enveloppe sous le seuil ===
+  s=0.40 : maxima 5 ; periode re-derivee 477.5 ; predite 503.4 bande [403,629] -> DANS ; a' effectif = 92.52 (derive 87.77 ; rapport 1.0542) ; env min/max = 0.8372/0.9330 = 2.093 s / 2.333 s (derive 2.024 / 2.333, rapport 0.897 vs 0.868) ; champs m2 : { K=0.0012800000000000003, T=2520.0, periode_predite=503.3674105382564, periode_mesuree=477.5, n_maxima=5, plancher_1p03=0.8622708816513698, profondeur_mesuree=0.8972480330196384, env_max=0.9330265043442071, env_min=0.8371561957780289, excursion_libre_predite=0.9333333333333335, n_tranches=252, explose=False, t_expl=None, verdict=DANS LA BANDE, duree=15.3 }
+  s=0.50 : maxima 5 ; periode re-derivee 195.0 ; predite 206.2 bande [165,258] -> DANS ; a' effectif = 92.80 (derive 87.77 ; rapport 1.0573) ; env min/max = 1.0481/1.1658 = 2.096 s / 2.332 s (derive 2.024 / 2.333, rapport 0.899 vs 0.868) ; champs m2 : { K=0.003125, T=1040.0, periode_predite=206.17929135646986, periode_mesuree=195.0, n_maxima=5, plancher_1p03=1.079545512887832, profondeur_mesuree=0.8990533883534759, env_max=1.1657844275704432, env_min=1.0481024396969243, excursion_libre_predite=1.1666666666666667, n_tranches=104, explose=False, t_expl=None, verdict=DANS LA BANDE, duree=6.3 }
+  s=0.60 : maxima 5 ; periode re-derivee 95.0 ; predite 99.4 bande [80,124] -> DANS ; a' effectif = 91.86 (derive 87.77 ; rapport 1.0466) ; env min/max = 1.2654/1.3980 = 2.109 s / 2.330 s (derive 2.024 / 2.333, rapport 0.905 vs 0.868) ; champs m2 : { K=0.00648, T=500.0, periode_predite=99.43059961249512, periode_mesuree=95.0, n_maxima=5, plancher_1p03=1.303368127075045, profondeur_mesuree=0.9051322721412774, env_max=1.398034284671973, env_min=1.2654059486165485, excursion_libre_predite=1.4000000000000001, n_tranches=50, explose=False, t_expl=None, verdict=DANS LA BANDE, duree=3.0 }
+  verdict P2 (hors bande a DEUX des trois s) : TENUE ; hors 0/3
+
+=== P1 : ile ===
+  sgn 1 : {'p': 6, 'w2': 2.0, 'sgn': 1, 's0': 1.01429213281511, 'note': 'OK|pas=6.03e-07', 'borne': False, 's400': 1.0125856840741416, 's1600': 1.0125856840741416, 's400_bloc': 1.0125856840741416, 's1600_bloc': 1.0125856840741416, 'ilots_400': 0, 'ilots_1600': 0, 'explosifs_forment_un_intervalle': True, 'n_expl': 11, 'n_pts': 96, 'duree': 24.7}
+     T=400 : premier explosif noeud 85 s*=1.012586 ; explosifs 11/96 ; composantes contigues 1 (INTERVALLE)
+     T=1600 : premier explosif noeud 85 s*=1.012586 ; explosifs 11/96 ; composantes contigues 1 (INTERVALLE)
+  sgn -1 : {'p': 6, 'w2': 2.0, 'sgn': -1, 's0': 1.01429213281511, 'note': 'OK|pas=6.03e-07', 'borne': False, 's400': 1.0125856840741416, 's1600': 1.0125856840741416, 's400_bloc': 1.0125856840741416, 's1600_bloc': 1.0125856840741416, 'ilots_400': 0, 'ilots_1600': 0, 'explosifs_forment_un_intervalle': True, 'n_expl': 11, 'n_pts': 96, 'duree': 24.8}
+     T=400 : premier explosif noeud 85 s*=1.012586 ; explosifs 11/96 ; composantes contigues 1 (INTERVALLE)
+     T=1600 : premier explosif noeud 85 s*=1.012586 ; explosifs 11/96 ; composantes contigues 1 (INTERVALLE)
+  ratios m2 : {'1': 1.0, '-1': 1.0} ; parite_pas : 0.0
+
+================================================================================================
+volet B -- correction d'action (post hoc)
+================================================================================================
+a'(J~0) = 87.7662 ; b(J~0) = 1.6075 ; deplacement moyen d'action b/a' = 0.01832 (J~2_0 = 0.44444, soit 4.1 pour cent)
+
+    s  P naif P corrige P mesure ecart naif ecart corr | prof naive prof corr prof mes
+ 0.40   503.4     476.2    477.5      +5.4 pc      -0.3 pc |     0.8676    0.8936   0.8972
+ 0.50   206.2     195.0    195.0      +5.7 pc      +0.0 pc |     0.8676    0.8936   0.8991
+ 0.60    99.4      94.1     95.0      +4.7 pc      -1.0 pc |     0.8676    0.8936   0.9051
+
+(pc = ecart relatif en pour cent)
+
+================================================================================================
+p = 8 -- prediction corrigee (a', b/a', bandes)
+================================================================================================
+p = 8, w2 = 2.00 : a'(J~0) = 487.1433 ; b(J~0) = 15.8370 ; b'/a' = 0.2191 (ile) ; b/a' = 0.03251 (deplacement d'action 7.3 pour cent de J~2_0) ; profondeur corrigee 0.9132
+  s = 0.35  K = 9.19e-05  P_env corrigee =  1464.5 (naive  1683.9)  bande [1318, 1611]  T >= 6444
+  s = 0.45  K = 4.15e-04  P_env corrigee =   324.2 (naive   372.8)  bande [292, 357]  T >= 1427
+  s = 0.55  K = 1.38e-03  P_env corrigee =    97.3 (naive   111.8)  bande [88, 107]  T >= 428
+
+================================================================================================
+volet B -- K* a p = 6 (fait non predit)
+================================================================================================
+6|2.00 : s* = 1.0125856841 ; K* = g s*^(p-2) = 0.052565 ; p = 4 (4|2.00, s* = 2.63449) : K* = 0.347
+
+================================================================================================
+p = 8 -- lecture (corrigee vs naive)
+================================================================================================
+cles : ['objet', 'date', 'prediction', 'moteur', 'g', 'dt', 'colonnes', 'n_bande', 'n_hors', 'n_muet', 'n_du_cote_naif', 'verdict', 'falsifieur', 'lecture']
+  s=0.35 : maxima 4 ; periode re-derivee 1466.67 ; corrigee predite 1464.5 (ecart +0.15 pc) ; naive 1683.9 (ecart -12.9 pc) ; bande [1318, 1611] -> corrigee DANS, naive HORS ; profondeur 0.9174 (annoncee 0.9132) ; explose False
+  s=0.45 : maxima 4 ; periode re-derivee 323.33 ; corrigee predite 324.2 (ecart -0.27 pc) ; naive 372.8 (ecart -13.3 pc) ; bande [292, 357] -> corrigee DANS, naive HORS ; profondeur 0.9193 (annoncee 0.9132) ; explose False
+  s=0.55 : maxima 4 ; periode re-derivee 100.00 ; corrigee predite 97.3 (ecart +2.82 pc) ; naive 111.8 (ecart -10.6 pc) ; bande [88, 107] -> corrigee DANS, naive HORS ; profondeur 0.9297 (annoncee 0.9132) ; explose False
+  verdict (hors bande a DEUX des trois s) : corrigee TENUE (0/3 hors) ; naive FALSIFIEE (3/3 hors)
+
+================================================================================================
+flanc -- table de parite et 31/31
+================================================================================================
+TABLE DERIVEE : signe fragile (seuil le plus bas) sur chaque flanc, par parite de (a, b)
+    a:b  phi0(+1)  phi0(-1)  w2 < a/b  w2 > a/b
+  2:1          1pi        0pi        +1        -1
+  3:2          0pi        1pi        -1        +1
+  4:1          1pi        0pi        +1        -1
+  5:2          0pi        1pi        -1        +1
+  5:4          0pi        1pi        -1        +1
+  6:1          1pi        0pi        +1        -1
+  7:2          0pi        1pi        -1        +1
+  4:3          1pi        0pi        +1        -1
+  3:1          1pi        1pi    aucune    aucune
+  5:3          1pi        1pi    aucune    aucune
+  1:1          1pi        1pi    aucune    aucune
+
+FLANC DE 2:1, cellules archivees hors resonance exacte (1.80..2.30) : 31 cellules, direction derivee retrouvee 31/31, exceptions []
+RESONANCE EXACTE 2:00 (asymetrie nulle derivee) : p=5 A=+0.0019, p=7 A=+0.0011, p=9 A=+0.0005, p=11 A=+0.0003  (contre 0.13 a 0.56 sur les flancs)
+9|2.50 : derive '-1' si le flanc droit de 2:1 domine a dw2 = +0.5 ; mesure -1 (A = +0.240)
+
+PREDICTIONS DE DIRECTION POUR LES CELLULES VIERGES (a geler par m2 ; porte : asymetrie mesuree > 2 pour cent, sinon 'sans porte') :
+  7|1.45 : fragile -1 (flanc gauche de 3:2)  ->  A = ln(s+/s-) > 0
+  7|1.55 : fragile +1 (flanc droit de 3:2)  ->  A = ln(s+/s-) < 0
+  7|3.90 : fragile +1 (flanc gauche de 4:1)  ->  A = ln(s+/s-) < 0
+  7|4.10 : fragile -1 (flanc droit de 4:1)  ->  A = ln(s+/s-) > 0
+  7|2.50|+1 : fragile -1 si le flanc droit de 2:1 domine a dw2 = +0.5 (comme a 9|2.50) -> s*(+1) > s*(-1) = 1.198113 ; la 5:2 exacte est symetrique au premier ordre
+  13|1.90 et 13|2.10 : signes A < 0 et A > 0 (derives) ; |A| dans [0.095, 0.125] (grandeur, NON derivee, tolerance fixee AVANT run) ; le test de la variable (p-1)/(p-2) n'est PAS a p = 13
+

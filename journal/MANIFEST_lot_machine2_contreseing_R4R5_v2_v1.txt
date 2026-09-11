@@ -1,0 +1,27 @@
+MANIFESTE lot_machine2_2026-09-11_contreseing_R4R5_v2_v1 -- CONTRESEING DE L'ACTE DELTA nn (R4/R5) v2 (lot recu brut 9489d172c9f31884, manifeste 20/20) ; machine 2, classe 3
+VERDICT : L'ACTE v2 EST CERTIFIE ET DEPOSABLE. 89 nombres RE-DERIVES des .json de machine 2 : 89 concordent, 0 mord (ils etaient 88 sur la v1, dont 3 mordaient ; le 89e controle H4).
+LES HUIT HUNKS SONT VERIFIES UN PAR UN CONTRE LA v1 : quatre de fond (H1 a H4), quatre administratifs, AUCUN hunk hors des huit attendus ; la v1 jointe au lot est bien celle certifiee (86d6ee29d27938ff) ;
+  et MON diff, REFAIT des deux fichiers, reconstruit la v2 AU BIT. Les trois correctifs sont pris tels qu'ecrits, H4 (l'outil de la regle) avec.
+UN DEFAUT SUBSISTE, ET IL NE PORTE PAS SUR L'ACTE -- D-CERT-4 : la piece diff_v1_v2_R4R5_machine1_v1.txt NE RECONSTRUIT PAS la v2.
+  Son hunk 8 declare '@@ -406,2 +422,2 @@' et reclame une ligne 407 vide que NI la v1 (406 lignes) NI la v2 (422) ne portent -- artefact d'un outil qui compte le saut de ligne final.
+  (i) applique par patch, il ECHOUE : 1 hunk sur 8 rejete ; (ii) le compte annonce +27/-10 est celui de CE fichier, le compte reel du passage v1->v2 est +26/-9 ; (iii) le hunk 8 reel est '@@ -406 +422 @@'.
+  Correctif : (a) regenerer la piece et corriger le compte, OU (b) deposer SANS elle en citant ce contreseing, ou les huit hunks sont enumeres -- (b) recommande, la v1 et la v2 etant toutes deux au lot.
+AFFIRMATIONS DE FORME DE SA NOTE, MESUREES ET EXACTES : 30523 octets, ASCII pur, LF seul, zero signe pour cent, et les trois formulations corrigees ont disparu du texte.
+NON JOUE, DECLARE (inchange) : le releve du REGISTRE ORDONNANT -- aucun depot git au poste m2 ; plafond LOCAL 88, 89 libre localement, delta 88 au bit : cela CONCORDE mais ne REMPLACE PAS. Les nombres post hoc de A-1 et les DERIVATIONS de m1 ne sont pas re-derives. Aucun run ouvert.
+
+colonnes : empreinte_B (sha256 NFC+LF, 16 hex)  empreinte_brute (sha256 du fichier, 16 hex)  octets_B  octets_bruts  fichier
+CONVENTION MESUREE LIGNE PAR LIGNE, NON IMPOSEE : 3 des 7 pieces ont B != brut (les .log : Python ecrit CRLF sur Windows).
+Feuilles de MESURE (certification v2, hunks) et feuille de LECTURE (relecture de ma prose) separees. La feuille de certification v1 n'est PAS editee : celle-ci est NEUVE, son ancre au canon 4e7dafb54a908f71 reste valide.
+Le CANON du lot est l'empreinte de CE manifeste ; le brut du ZIP est donne a cote, a titre indicatif.
+
+23dc467b6d37896e 23dc467b6d37896e     6370     6370  CONTRESEING_acte_R4R5_v2_machine2_v1.md
+844b2928b44d1664 844b2928b44d1664    20418    20418  certification_acte_R4R5_v2_machine2_v1.py
+139806bfbca615d2 cc44e137af261335     7531     7648  certification_acte_R4R5_v2_machine2_v1.log
+cddde9e26493756c cddde9e26493756c     6030     6030  controle_hunks_v1_v2_machine2_v1.py
+789f76ffc7732465 a663cb7353003a54     3056     3111  controle_hunks_v1_v2_machine2_v1.log
+c1b3f19773189aa8 c1b3f19773189aa8     4748     4748  relecture_nombres_contreseing_machine2_v1.py
+41af86a61bfb684f a8ca04efa449be87     1847     1883  relecture_nombres_contreseing_machine2_v1.log
+
+entrants : acte v2 ce07e533176441a5 ; acte v1 86d6ee29d27938ff ; diff joint 0a04316a080b635d ; note m1 684fae6152a75a38 ; mes .json de mesure (voletA/C/D/E, voletB 90d4675bebb23f0e, p8 9a201423743cfde6, controle maxima 0787e737e657e705, libration, resolution, R5)
+pieces : 7 (compte etabli APRES le dernier ajout ; le manifeste ne se liste pas lui-meme)
+garde de reception : verifiees + absentes + ecarts == 7

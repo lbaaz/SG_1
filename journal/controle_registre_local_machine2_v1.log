@@ -1,0 +1,23 @@
+==============================================================================
+LE NUMERO DE DELTA : CE QUE LE POSTE MACHINE 2 PERMET DE DIRE
+==============================================================================
+
+[1] CE QUE JE PEUX ETABLIR
+    journaux de delta presents au poste : 69 numeros distincts, de 19 a 88
+    plafond LOCAL                       : 88
+    89 present au poste                 : False
+    trous dans la serie locale          : [20]
+    delta 88 cite par l'acte (0f8e283fa9499f96) : 0f8e283fa9499f96 -> AU BIT
+
+[2] CE QUE JE NE PEUX PAS ETABLIR, ET QUI RESTE A L'OPERATEUR
+    - le plafond du REGISTRE ORDONNANT (journal/ de lbaaz/SG_1 a HEAD 39fbc89) :
+      aucun depot git au poste machine 2. Le releve de machine 1 n'est ni
+      confirme ni infirme ici.
+    - que 89 soit libre AU DEPOT. Il est libre A MON POSTE, ce qui est autre chose.
+
+[3] CONCLUSION, A LA PORTEE EXACTE
+    Le plafond local (88) CONCORDE avec le releve de machine 1 (88), et le delta
+    88 qu'elle cite est au bit. Cela rend son releve VRAISEMBLABLE ; cela ne le
+    remplace pas. Le numero se prend au depot, par l'operateur, sur le registre
+    ordonnant -- et le corps de l'acte garde 'nn' jusque-la, ce qui est correct.
+==============================================================================

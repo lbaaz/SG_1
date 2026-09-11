@@ -1,0 +1,28 @@
+MANIFESTE lot_machine2_2026-09-11_certification_R4R5_v1 -- CERTIFICATION DE L'ACTE DELTA nn (R4/R5) de machine 1 (lot recu brut 90a3e5b058e7d478, manifeste 17/17) ; machine 2, classe 3
+VERDICT : CERTIFIE SOUS RESERVE DE TROIS CORRECTIONS. 88 nombres RE-DERIVES des .json de machine 2 (son log n'est pas relu, il est recalcule) ; 85 concordent, 3 mordent. Aucune reserve n'atteint un verdict de prediction.
+  D-CERT-1 (A-7, LA SEULE QUI ATTEINT UN NOMBRE PORTEUR) : la serie C_P melange DEUX RESOLUTIONS -- 0.3262 (s0=0.15) et 0.3021 (0.25) sont a T = 4x borne haute, 0.320 (0.20) et 0.2808 (0.30) a la resolution d'origine
+    et ne sont dans AUCUNE piece de machine 2. La resolution deplace C_P de -1.36 % et -3.33 % sur les deux points controlables. Pente : -1.071 (quatre points de l'acte), -1.050 (deux resolus), -1.078 (si les deux autres etaient resolus)
+    -> la CONCLUSION de A-7 survit (pente != -1 dans tous les cas) ; le CHIFFRE -1.071 porte une incertitude non declaree de 0.007, soit 9.8 % de l'ecart a -1. Correctif (a) rejouer 0.20 et 0.30, ou (b) declarer la serie non homogene.
+    ET C'EST LA REGLE (ii) QUE L'ACTE PROPOSE LUI-MEME EN nn.6 : troisieme episode de la meme faute en une journee (libration le matin, +2.82 % l'apres-midi, C_P ici). Une regle neuve ne protege pas tant qu'elle n'est pas OUTILLEE.
+  D-CERT-2 (A-6) : la fourchette << BAS de 5.4 a 5.7 pour cent >> EXCLUT son troisieme point (5.42, 5.73, 4.66) et contredit son propre log, qui porte +4.7 pc. Correctif : << 4.7 a 5.7 >>.
+  D-CERT-3 (A-4) : << a 1e-6 pres >> alors que l'ecart relatif max est 9.49e-06 (absolu 5.28e-06). Correctif : << a 1e-5 pres >>. Le fait n'est pas touche.
+CERTIFIE SANS RESERVE : A-1 (6 paires aveugles au chiffre, 12/12), A-2 (10/10, 0 noeud a 6400), A-3 (9/9, ilots exactement {47,48,50,53,56}), A-5 (6/6), A-6 hors la fourchette (21/22), A-9, nn.1 (8/8 de mes empreintes), nn.3, nn.5.
+NON JOUE, DECLARE : le releve du REGISTRE ORDONNANT (aucun depot git au poste m2 -- le plafond LOCAL 88 concorde et le delta 88 est au bit, mais cela ne remplace pas le releve) ; les nombres post hoc de A-1 (archives G6 non versees en .json) ; les DERIVATIONS de machine 1 (machinerie D1 non detenue) ; aucun run ouvert.
+DECLARE CONTRE MOI : ma feuille a d'abord rendu 7 mordants, QUATRE de mon fait -- trois citations coupees par un retour a la ligne, et T.index('nn.6') prenant un renvoi en prose (ligne 1513) pour un titre de section. Un perimetre s'extrait d'une STRUCTURE, jamais d'une PROSE.
+
+colonnes : empreinte_B (sha256 NFC+LF, 16 hex)  empreinte_brute (sha256 du fichier, 16 hex)  octets_B  octets_bruts  fichier
+CONVENTION MESUREE LIGNE PAR LIGNE, NON IMPOSEE : 3 des 7 pieces ont B != brut (les .log : Python ecrit CRLF sur Windows).
+Feuilles de MESURE (certification, registre) et feuille de LECTURE (relecture de ma propre prose) separees, comme la regle du 28/08 l'exige.
+Le CANON du lot est l'empreinte de CE manifeste, annoncee dans le message ; le brut du ZIP est donne a cote, a titre indicatif.
+
+1909ae94046660b4 1909ae94046660b4    10295    10295  CERTIFICATION_acte_R4R5_machine2_v1.md
+76270bed3279abbc 76270bed3279abbc    19752    19752  certification_acte_R4R5_machine2_v1.py
+3c8734ed0b21fdfa 5e03fd9e6daad36a     8027     8152  certification_acte_R4R5_machine2_v1.log
+906f45b2bc5ecf0f 906f45b2bc5ecf0f     2822     2822  controle_registre_local_machine2_v1.py
+3d5d4c48589d8db5 eea1d02dc06afc3b     1310     1333  controle_registre_local_machine2_v1.log
+a03bb2b874003da2 a03bb2b874003da2     6714     6714  relecture_nombres_certification_machine2_v1.py
+300d496b84f2e2a1 81395a41b1a6983c     2141     2182  relecture_nombres_certification_machine2_v1.log
+
+entrants : acte journal_delta_nn_R4R5_v1.md 86d6ee29d27938ff ; mes .json de mesure (voletA ccb612e7d7e53bfd, voletC, voletD v2, voletE, voletB 90d4675bebb23f0e, p8 9a201423743cfde6, controle maxima 0787e737e657e705, libration, resolution, R5)
+pieces : 7 (compte etabli APRES le dernier ajout ; le manifeste ne se liste pas lui-meme)
+garde de reception : verifiees + absentes + ecarts == 7

@@ -1,0 +1,55 @@
+================================================================================
+LES HUIT HUNKS DE LA v2 CONTRE LA v1 -- diff REFAIT, non relu
+================================================================================
+
+[1] LA BASE DU DIFF EST-ELLE LA v1 QUE J'AI CERTIFIEE ?
+  [OK  ] v1 jointe au lot v2 == v1 certifiee (86d6ee29d27938ff)   86d6ee29d27938ff
+  [OK  ] v2 au bit de son manifeste (ce07e533176441a5)            ce07e533176441a5
+
+[2] LE DIFF, REFAIT PAR MOI
+  [OK  ] 8 hunks, comme annonce                                   8
+  [MORD] le compte annonce (+27 / -10) est celui du diff reel     diff reel : +26 / -9
+
+[3] CHAQUE HUNK EST-IL UN DES QUATRE CORRECTIFS, OU ADMINISTRATIF ?
+  [OK  ] hunk en-tete VERSION 2            (administratif)        @@ -9 +9 @@
+  [OK  ] hunk bloc v2 = v1 + correctifs    (administratif)        @@ -10,0 +11,6 @@
+  [OK  ] hunk H3 borne 1e-5                (fond)                 @@ -156 +162,2 @@
+  [OK  ] hunk H2 fourchette 4.7            (fond)                 @@ -195 +202,2 @@
+  [OK  ] hunk H1 serie non homogene        (fond)                 @@ -221,4 +229,8 @@
+  [OK  ] hunk H4 outil de la regle         (fond)                 @@ -328 +340,5 @@
+  [OK  ] hunk nn.10 nom de piece           (administratif)        @@ -383 +399 @@
+  [OK  ] hunk FIN v2                       (administratif)        @@ -406 +422 @@
+  [OK  ] 4 de fond + 4 administratifs == 8 hunks                  4 + 4 == 8
+  [OK  ] AUCUN hunk hors des huit attendus                        
+
+[4] SON DIFF JOINT RECONSTRUIT-IL LA v2 ?
+  [MORD] son diff est identique au mien                           4 ligne(s) different
+        [ 43] mien '@@ -406 +422 @@'
+              sien '@@ -406,2 +422,2 @@'
+        [ 45] mien '+-- FIN journal_delta_nn_R4R5_v2 --'
+              sien '-'
+        [ 46] mien None
+              sien '+-- FIN journal_delta_nn_R4R5_v2 --'
+        [ 47] mien None
+              sien '+'
+  [MORD] son diff applique a v1 rend la v2 AU BIT                 patch rc=1 ; 1 out of 8 hunks FAILED -- saving rejects to file 'C:\Users\bazil\AppData\Local\Temp\tmpqy
+  [OK  ] MON diff applique a v1 rend la v2 AU BIT                 patch rc=0
+
+[5] LES AFFIRMATIONS DE FORME DE SA NOTE
+  [OK  ] v2 : 30523 octets                                        30523
+  [OK  ] v2 : ASCII pur                                           
+  [OK  ] v2 : LF seul, aucun CRLF                                 
+  [OK  ] v2 : zero signe pour cent                                0
+  [OK  ] v2 ne porte plus les trois formulations corrigees        
+
+================================================================================
+controles : 22 ; MORDENT : 3
+
+CE QUI MORD :
+  le compte annonce (+27 / -10) est celui du diff reel
+      diff reel : +26 / -9
+  son diff est identique au mien
+      4 ligne(s) different
+  son diff applique a v1 rend la v2 AU BIT
+      patch rc=1 ; 1 out of 8 hunks FAILED -- saving rejects to file 'C:\Users\bazil\AppData\Local\Temp\tmpqy
+================================================================================

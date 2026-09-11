@@ -1,0 +1,100 @@
+MANIFESTE DU LOT DE DEPOT -- DELTA 89 (SEQUENCE R4/R5 : TESTS D1 A-E, R5, D2, LIBRATION) -- 11/09/2026 -- assemble par machine 1
+Convention B (sha256 NFC+LF, 16 hex) ; pour les ZIP, sha256 brut. Le depot, le numero et les series sont de la main de l'operateur.
+OCTETS = taille BRUTE du fichier sur disque ; l'empreinte est la canonique B (NFC+LF) : pour les six .log CRLF de machine 2 (certification et contreseing) les deux ne coincident pas --
+  octets_B : certification_acte_R4R5_machine2_v1.log 8027 ; controle_registre_local_machine2_v1.log 1310 ; relecture_nombres_certification_machine2_v1.log 2141 ;
+  certification_acte_R4R5_v2_machine2_v1.log 7531 ; controle_hunks_v1_v2_machine2_v1.log 3056 ; relecture_nombres_contreseing_machine2_v1.log 1847 (correctif b de l'accuse m2 fdc6dfa1a0e086c5).
+Releve du registre ordonnant cote machine 1 (11/09, fetch frais) : origin/main 39fbc89, plafond 88, aucun fichier delta_89 ; a rejouer par l'operateur au moment du depot.
+Numero 89 : premier libre au 11/09 sur clone frais (origin/main 39fbc89, plafond 88, aucun fichier delta_89) ; a REVERIFIER par qui depose (releve non joue chez machine 2, sans git au poste).
+Piece certifiee : acte v5 c0f0f4f3b5477310 = v4 d467a239c3555737 (certifiee 704f2b6b84f4c6a0, 32/33, un mordant H9 corrige par H11) = v3 eaaacadd99fb468d (certifiee bdd00189e68b61dc) = v2 ce07e533176441a5 (contresignee 9ead3f431059c056, 89/89) hors hunks, chaine verifiee par transitivite par m2 ; lignee conservee v1 a v4 ; le hunk H11 (une ligne) est a verifier par m2 avant depot.
+D-CERT-6 (erratum m2) : la cause du '-10' etait un filtre de prefixe dans les deux feuilles, non difflib ; le compte -11 etait juste. D-CERT-5 pris : le compte du diff v2->v3 etait -11 et non -10 (filtre de prefixe '---' avalant la ligne FIN) ; corrige a la racine dans le compte v3->v4.
+D-CERT-4 (correctif b pris) : la piece diff_v1_v2_R4R5_machine1_v1.txt n'est PAS deposee (hunk 8 artefact du saut de ligne final, compte +26/-9 reel) ; les huit hunks sont enumeres au contreseing.
+
+A DEPOSER AU REGISTRE (journal/) :
+  c0f0f4f3b5477310    35029  journal_delta_89_R4R5_v5.md   (COPIE OCTET POUR OCTET de journal_delta_nn_R4R5_v5.md : corps 'nn', numero dans le nom seulement ; forme (a), comme au 88)
+  d467a239c3555737    34728  journal_delta_nn_R4R5_v4.md   (remplacee, non editee ; conservee)
+  eaaacadd99fb468d    34028  journal_delta_nn_R4R5_v3.md   (remplacee, non editee ; conservee)
+  ce07e533176441a5    30523  journal_delta_nn_R4R5_v2.md   (remplacee, non editee ; conservee)
+  86d6ee29d27938ff    29317  journal_delta_nn_R4R5_v1.md   (remplacee, non editee ; conservee comme au 87)
+  23dc467b6d37896e     6370  CONTRESEING_acte_R4R5_v2_machine2_v1.md
+  1909ae94046660b4    10295  CERTIFICATION_acte_R4R5_machine2_v1.md
+  5a3992e06b13a1f1    11974  CERTIFICATION_acte_R4R5_v3_machine2_v1.md
+  871ef24e3f28704c     8051  CERTIFICATION_acte_R4R5_v4_machine2_v1.md
+PIECES DE LA CHAINE (journal/ ou notes/) -- feuilles de certification m2 (lots 4e7dafb54a908f71 et 9ead3f431059c056) :
+  76270bed3279abbc    19752  certification_acte_R4R5_machine2_v1.py
+  3c8734ed0b21fdfa     8152  certification_acte_R4R5_machine2_v1.log
+  906f45b2bc5ecf0f     2822  controle_registre_local_machine2_v1.py
+  3d5d4c48589d8db5     1333  controle_registre_local_machine2_v1.log
+  a03bb2b874003da2     6714  relecture_nombres_certification_machine2_v1.py
+  300d496b84f2e2a1     2182  relecture_nombres_certification_machine2_v1.log
+  4e7dafb54a908f71     4075  MANIFEST_lot_machine2_certification_R4R5_v1.txt
+  844b2928b44d1664    20418  certification_acte_R4R5_v2_machine2_v1.py
+  139806bfbca615d2     7648  certification_acte_R4R5_v2_machine2_v1.log
+  cddde9e26493756c     6030  controle_hunks_v1_v2_machine2_v1.py
+  789f76ffc7732465     3111  controle_hunks_v1_v2_machine2_v1.log
+  c1b3f19773189aa8     4748  relecture_nombres_contreseing_machine2_v1.py
+  41af86a61bfb684f     1883  relecture_nombres_contreseing_machine2_v1.log
+  9ead3f431059c056     3528  MANIFEST_lot_machine2_contreseing_R4R5_v2_v1.txt
+PIECES DE LA CHAINE -- re-derivations m1 (lot v2 c0716a47e4dc01f2) :
+  c0716a47e4dc01f2     1867  MANIFEST_lot_machine1_R4R5_acte_v2.txt
+  684fae6152a75a38     3342  POUR_MACHINE2_v2_acte_R4R5_machine1_v1.md
+  0c6ff54c81d5abb4     2771  rederive_acte_R4R5_machine1_v1.py
+  3d6241935fa0aed8    23756  rederive_acte_R4R5_machine1_v1.log
+  bf78603cd2699f93     8756  lecture_R4_machine1_v1.py
+  4d2cf4aebff7e86d     1559  rederive_D_6400_machine1_v1.py
+  6fa72fe2ae840619     2312  rederive_R5_machine1_v1.py
+  2bda476b2c384e93     3958  capture_2_1_p7_machine1_v1.py
+  cb2a0257396fe3e0     1971  enveloppes_apex_machine1_v1.py
+  9b7a2c5a2f604a68     1503  lecture_periode_libration_machine1_v1.py
+  12b1cb53d0eafb24     1714  lecture_resolution_machine1_v1.py
+  187c723064996059     3297  D2_premier_ordre_2_1_pair_machine1_v1.py
+  73fc95daf9a870af     4667  D2_prediction_P_D1_5_machine1_v1.py
+  ae1d0c38da9b6c20     2979  lecture_voletB_machine1_v1.py
+  f7309c54ece9519c     2582  correction_action_P2_machine1_v1.py
+  f2846253ad6377f9     2938  prediction_P2_p8_machine1_v1.py
+  05a2e9d03554716c     1961  lecture_P2_p8_machine1_v1.py
+  895acfe4c18a355e     3707  direction_flanc_machine1_v1.py
+BINAIRES CITES AU DELTA (nn.1), A VERSER (runs/lots_R4R5/ propose ; sha256 brut) -- les lots ZIP recus de machine 2 et emis par machine 1 du 09/09 au 11/09 :
+  4d704c769caba291    11703  lot_machine2_2026-09-09_R2_etat_constante_A_v1.zip
+  6d26323f2b6627a6   118358  lot_machine2_2026-09-09_chaine_constante_A_v1.zip
+  b692fbc019077630    42039  lot_machine2_2026-09-09_gel_volet_E_v1.zip
+  3370d8da59ebbf90    13985  lot_machine2_2026-09-09_provenance_borne_et_transit_v1.zip
+  646cef9f49c44071    10329  lot_machine2_2026-09-09_test_derivation_flanc_v2.zip
+  c698b711ef1cb53f    17028  lot_machine2_2026-09-10_R5_authentification_rgen_v1.zip
+  8e16748ff561114e    10770  lot_machine2_2026-09-10_R5_lecture_PD2_v1.zip
+  22553fafc05347ca    13804  lot_machine2_2026-09-10_certification_constante_A_v5_v1.zip
+  672c81aff68dc1e8    16984  lot_machine2_2026-09-10_contreseing_lecture_R4_v1.zip
+  f647675c3d2ee6fc    20880  lot_machine2_2026-09-10_gel_volet_E_v2.zip
+  c4f063080e8d1f78    74145  lot_machine2_2026-09-10_run_R4_v1.zip
+  752be8b86d1a1d7b    34004  lot_machine2_2026-09-11_P2_p8_v1.zip
+  519bcb0190e52032     7555  lot_machine2_2026-09-11_accuse_p8_v1.zip
+  9247abac718316d8    24370  lot_machine2_2026-09-11_certification_R4R5_v1.zip
+  73a46aa74dcd6c8f    23167  lot_machine2_2026-09-11_contreseing_R4R5_v2_v1.zip
+  b8c8d5a5e173d855    11011  lot_machine2_2026-09-11_contreseing_quadrature_C_v1.zip
+  76c41957e2942d9f    11220  lot_machine2_2026-09-11_correction_et_resolution_v1.zip
+  0bc5afe164538da2    11186  lot_machine2_2026-09-11_run_periode_libration_v1.zip
+  575f0d8f99b64cb3    39604  lot_machine2_2026-09-11_voletB_v1.zip
+  c86e3cdb5030205a    43946  lot_machine1_2026-09-08_P4_acte_v1.zip
+  af7a8d7654be82e2    22149  lot_machine1_2026-09-09_P4_depot_v1.zip
+  57d31747780f212d    17891  lot_machine1_2026-09-09_constante_A_v5.zip
+  f50497b5782dd0f6     7572  lot_machine1_2026-09-09_derivation_flanc_v1.zip
+  da7b78ae81177b75    12059  lot_machine1_2026-09-09_derivation_flanc_v2.zip
+  9151f8db71c6ba3c     5786  lot_machine1_2026-09-09_reponse_R2_flanc_v1.zip
+  c5621c0c08b9611c     6551  lot_machine1_2026-09-09_reponse_parite_v1.zip
+  e57c26f6b632f23b     3673  lot_machine1_2026-09-10_accuse_authentification_rgen_v1.zip
+  63e57a93ea20d124     4839  lot_machine1_2026-09-10_accuse_v5_gelE_v1.zip
+  d18a4c3b6e7b5c5d     4505  lot_machine1_2026-09-10_cloture_lecture_R4_v1.zip
+  f07b1027d32f429e    10891  lot_machine1_2026-09-10_lecture_R4_v1.zip
+  feab39abc7f90e9e     5920  lot_machine1_2026-09-10_lecture_gel_volet_E_v1.zip
+  e3287d8d19d27c03     4717  lot_machine1_2026-09-10_reponse_R5_v1.zip
+  1a4453d6dade4ca8    11813  lot_machine1_2026-09-11_D2_v1.zip
+  f89201648670ec43    45492  lot_machine1_2026-09-11_R4R5_acte_v1.zip
+  c54b0dff8b0d34e0    61583  lot_machine1_2026-09-11_R4R5_acte_v2.zip
+  5cd501b19b180110     3069  lot_machine1_2026-09-11_accuse_contreseing_C_v1.zip
+  66e167a9e177fd20     1687  lot_machine1_2026-09-11_accuse_erratum_p8_v1.zip
+  808f67e5837c0878     3367  lot_machine1_2026-09-11_accuse_resolution_v1.zip
+  dcfe60cc84a7e3ff     4039  lot_machine1_2026-09-11_lecture_P2_p8_v1.zip
+  b2d9c5fe23fd6cbb     3880  lot_machine1_2026-09-11_lecture_periode_libration_v1.zip
+  1e7ba8e979e65eb0    11312  lot_machine1_2026-09-11_lecture_voletB_v1.zip
+  3bb67743f92fb0f0     9693  lot_machine1_2026-09-11_quadrature_C_v1.zip
+NE PAS CHERCHER : archives_G6.json et points M17 v17 (m2 seule) ; e07322da0f4ab4dd, 1290abd4dcdb917e, 19b1588c791e94d8 (aucun poste).
+-- FIN MANIFESTE --
