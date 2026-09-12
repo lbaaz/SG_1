@@ -1,0 +1,106 @@
+========================================================================================
+RE-CERTIFICATION DE L'ACTE DELTA nn (R4/R5) v3 -- machine 2
+========================================================================================
+
+[H5] A-5 : LE p_c FICTIF RETIRE, L'ILE A TOUT DEGRE
+  [OK  ] H5    p=26 (a-b1)/a = -0.01062                           -0.010616
+  [OK  ] H5    p=26 min F/a = 0.10804                             0.108045
+  [OK  ] H5    p=30 (a-b1)/a = -0.10539                           -0.105387
+  [OK  ] H5    p=30 min F/a = 0.06569                             0.065686
+  [OK  ] H5    min F > 0 a TOUS les degres de ma table            p jusqu'a 80
+  [OK  ] H5    le tronque passe sous zero des p = 26, jamais avan 
+  [OK  ] H5    'a p = 6 et 8 un seul harmonique' : (a-b1)/a == mi au bit
+  [OK  ] H5    et des p = 12 les deux SE SEPARENT (sinon la phras 0.54129 > 0.53937
+  [OK  ] H5    l'acte dit 'ILE au premier ordre a TOUT degre pair 
+  [OK  ] H5    les 4 mentions de p_c le disent toutes MORT        non editee) + les hunks H5 a H8 :  | a TOUT degre pair, AUCUN p_c (re-d | admet plusieurs (A-5) : un p_c = 2 | D2_premier_ordre_2_1_pair_machine1
+  [OK  ] H5    'depasse 1 a p = 26' (et non 'atteint') est le bon b1/a = 1.01062
+
+[H5] LES DEUX RUNS CITES, DEPUIS MES .json DE RUN
+  [OK  ] H5    26|2.00 : s* = 0.477418 de 1600 a 25600            0.477418
+  [OK  ] H5    26|2.00 : noeud 85 sur ces trois fenetres          
+  [OK  ] H5    26|2.00 : s*(400) = 0.484219, et c'est une AUTRE f 0.484219 au noeud 86
+  [OK  ] H5    30|2.00 : s* = 0.472090 aux QUATRE fenetres        0.472090
+  [OK  ] H5    30|2.00 : noeud 85 aux quatre                      
+  [OK  ] H5    'zero explosion nouvelle sur un facteur 16' (26 :  n_expl = 11
+  [OK  ] H5    'et 64' (30 : 400->25600)                          n_expl = 11
+  [OK  ] H5    les deux verdicts de MES runs sont bien 'ile'      
+  [OK  ] H5    aucune garde mordue dans les deux runs             
+  [OK  ] H5    K*(26) = g s^24 = 9.83e-10                         9.830e-10
+  [OK  ] H5    K*(30) = g s^28 = 3.73e-11                         3.730e-11
+
+[H5bis] nn.1 : LES EMPREINTES DE MES LOTS, RECALCULEES ICI
+  [OK  ] H5b   1c66dadbdbb19b5a = canon P3 p=26                   lu 1c66dadbdbb19b5a
+  [OK  ] H5b   d1e6aa2b53bb6ae6 = ZIP brut p=26                   lu d1e6aa2b53bb6ae6
+  [OK  ] H5b   fa31d44679868e5c = canon p=30                      lu fa31d44679868e5c
+  [OK  ] H5b   7b660e5c41728f6b = ZIP brut p=30                   lu 7b660e5c41728f6b
+  [OK  ] H5b   aa80c310ec92a3f0 = canon re-derivation             lu aa80c310ec92a3f0
+  [OK  ] H5b   87550aa7ac593dd2 = canon resynchro                 lu 87550aa7ac593dd2
+  [OK  ] H5b   1b2643d2d9f33936 = gel de deux plumes (p=26)       lu 1b2643d2d9f33936
+  [OK  ] H5b   2895cb03634f7592 = JSON du run p=26                lu 2895cb03634f7592
+  [OK  ] H5b   448f041b0d13ee37 = JSON du run p=30                lu 448f041b0d13ee37
+  [OK  ] H5b   b56369d48ae87723 = gel de profondeur               lu b56369d48ae87723
+  [OK  ] H5b   'gel de profondeur tenu 6/6 a 26 et 30'            6 colonnes, 0 mordues
+
+[H7] R-R4-2 : LES QUATRE K*, LE MUR (coherence arithmetique, PAS re-derivation)
+  [OK  ] H7    K*(4) = 0.347                                      0.347027
+  [OK  ] H7    K*(6) = 0.052565                                   0.0525651
+  [OK  ] H7    K*(26) = 9.83e-10                                  9.82966e-10
+  [OK  ] H7    K*(30) = 3.73e-11                                  3.72959e-11
+  [OK  ] H7    les quatre K* sont cites dans l'ordre par l'acte   
+  [OK  ] H7    (3 + w2^2)/Delta = 2.3333 avec w2 = 2, Delta = 3   2.333333 = 7/3
+  [OK  ] H7    S_c(4) = 2.3333 s* = 6.15                          6.1471
+  [OK  ] H7    S_c(6) = 2.3333 s* = 2.36                          2.3627
+  [OK  ] H7    S_c(26) = 2.3333 s* = 1.11                         1.1140
+  [OK  ] H7    S_c(30) = 2.3333 s* = 1.10                         1.1015
+  [OK  ] H7    la suite 6.15, 2.36, 1.11, 1.10 est citee          
+  [OK  ] H7    s*(p) -> 0.4286 est l'inverse de 2.3333 (S_c -> 1) 1/2.3333 = 0.428571 = 3/7
+  [OK  ] H7    -ln 2.3333 = -0.847                                -0.84730
+  [OK  ] H7    pente mesuree de ln K* de 6 a 30 = -0.878          -0.87777
+
+[H6] D-R4-10 : LA TRONCATURE ET LES DEUX ERRATA
+  [OK  ] H6    4^(-1/24) = 0.944                                  0.943874
+  [OK  ] H6    cela fait 4.08 pas de MA grille                    4.0837 pas (pas_ln = 0.014144576)
+  [OK  ] H6    'facteur 4, sens prudent' : 4.08 pas > 1 pas       
+  [OK  ] H6    le defaut porte le bon numero et la bonne cause    
+  [OK  ] H6    l'erratum 1/eps nomme l'omission de a'(J~0)        
+  [OK  ] H6    la forme de la periode est celle de MA note        
+  [OK  ] H6    mes six enveloppes portent AU MOINS 4 periodes     min 4.2
+  [MORD] H6    '4 a 5 periodes' : la borne haute est FAUSSE, une  max mesure = 5.5 -- l'acte ecrit '4 a 5' ; la source est MA note de resynchro
+  [MORD] H6    '117 a 180 unites, MESUREE dans les enveloppes' :  AUCUNE des six : s mesures 0.462648, 0.448485, 0.424881, 0.467870, 0.453547, 0.429676, tous SOUS s* (0.477418, 0.472090). Les trois valeurs sont DERIVEES a s* ; ce qui est mesure est la MODULATION et sa profondeur, ailleurs
+  [OK  ] H6    ce qui EST mesure : les six profondeurs a 0.1 pour gel de profondeur tenu 6/6 -- c'est la mesure qui porte
+
+[FORME] LE HUNK H5 EST-IL RECOLLE OU RE-ENVELOPPE ?
+  [MORD] FORME aucune ligne de PROSE neuve ne depasse la colonne  l. 211 (120 car.) -- la fin de la phrase de la v2 a ete RECOLLEE au hunk H5 au lieu d'etre re-enveloppee (forme seule, aucun nombre en cause)
+
+[H8] nn.6 (c) : LA FENETRE DU SEUIL
+  [OK  ] H8    la regle est ecrite en DEUX clauses distinctes     
+  [OK  ] H8    elle designe laquelle des deux porte la lecture du 
+  [OK  ] H8    la regle MORD sur p=40 : s*(400) != s*(1600)       0.465235 contre 0.458701 -> 1.42 pour cent
+  [OK  ] H8    p = 40 n'entre PAS dans l'acte (lot non parvenu, e 
+
+[DIFF] CE QUI COUVRE LES 89 CONTROLES DE LA v2
+  [OK  ] DIFF  dix hunks, et dix seulement                        10
+  [OK  ] DIFF  +55 lignes                                         
+  [MORD] DIFF  -10 lignes, comme l'annoncent la note et le manife mesure -11 : unified_diff(n=0) perd la DERNIERE suppression du fichier ('-- FIN ... v2 --'), famille D-CERT-4
+  [OK  ] DIFF  hors hunks, la v3 est mot pour mot la v2 certifiee 
+
+[PIECE] LA FEUILLE NEUVE DE machine 1, REJOUEE ICI SANS RETOUCHE
+  [OK  ] PIECE son code independant redonne mes deux nombres a p  
+  [OK  ] PIECE et mes deux nombres a p = 30                       
+  [OK  ] PIECE et ma table entiere, p = 12, 20, 40 comprises      
+  [OK  ] PIECE sa garde interne (son b == coeffs_L(p,1)) passe    
+  [MORD] PIECE le chemin du moteur y est un ARGUMENT, non une con chemin absolu en dur ; c'est SA propre regle. J'ai recree D:\home\claude\D2 pour la jouer sans la modifier
+
+========================================================================================
+BILAN : 71 controles, 5 mordent
+   MORD  [H6] '4 a 5 periodes' : la borne haute est FAUSSE, une colonne fait 5.5
+         max mesure = 5.5 -- l'acte ecrit '4 a 5' ; la source est MA note de resynchro
+   MORD  [H6] '117 a 180 unites, MESUREE dans les enveloppes' : une colonne est-elle a s* ?
+         AUCUNE des six : s mesures 0.462648, 0.448485, 0.424881, 0.467870, 0.453547, 0.429676, tous SOUS s* (0.477418, 0.472090). Les trois valeurs sont DERIVEES a s* ; ce qui est mesure est la MODULATION et sa profondeur, ailleurs
+   MORD  [FORME] aucune ligne de PROSE neuve ne depasse la colonne de l'acte
+         l. 211 (120 car.) -- la fin de la phrase de la v2 a ete RECOLLEE au hunk H5 au lieu d'etre re-enveloppee (forme seule, aucun nombre en cause)
+   MORD  [DIFF] -10 lignes, comme l'annoncent la note et le manifeste
+         mesure -11 : unified_diff(n=0) perd la DERNIERE suppression du fichier ('-- FIN ... v2 --'), famille D-CERT-4
+   MORD  [PIECE] le chemin du moteur y est un ARGUMENT, non une constante
+         chemin absolu en dur ; c'est SA propre regle. J'ai recree D:\home\claude\D2 pour la jouer sans la modifier
+========================================================================================

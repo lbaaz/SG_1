@@ -1,0 +1,60 @@
+============================================================================================
+LES DEUX PRE-VOLS DE MACHINE 1 (NOYAU / LIBM) CONTRE LE MIEN
+============================================================================================
+      feuilles : son noyau 856 | son libm 856 | le mien 856
+      communes aux trois : 856
+  [OK  ] les trois arbres ont la meme forme sur les feuilles comm 856
+
+[1] LES FEUILLES EXPOSEES (ou SES deux runs different)
+      82 feuilles
+        T2                           77
+        T1b                          3
+        /champ_forces_empreinte      1
+        meta                         1
+
+[2] SON ATTENDU : MON JSON == SON RUN LIBM SUR LES EXPOSEES
+      mon JSON == son LIBM   : 77 / 82
+      mon JSON == son NOYAU  : 0 / 82
+      ni l'un ni l'autre     : 5 / 82
+  [OK  ] SON ATTENDU EST TENU : mon poste est du cote LIBM, pas d 77 contre 0
+      les feuilles ou je ne suis NI l'un NI l'autre (ses cas durs UCRT ?) :
+        /T1b/recherches/a/duree_s                                  noyau=0.00014645999999629566 libm=0.0001774229999682575 moi=0.00013859999307896942
+        /T1b/recherches/b/duree_s                                  noyau=4.333900000119684e-05 libm=4.519699996308191e-05 moi=4.329999501351267e-05
+        /T1b/recherches/c/duree_s                                  noyau=3.940499999544045e-05 libm=3.604800002676711e-05 moi=3.619999915827066e-05
+        /champ_forces_empreinte                                    noyau='0491b83e6893dbbf' libm='f150f2685187b9d2' moi='f7f8be507eb5e9cb'
+        /meta/date_utc                                             noyau='2026-09-12T09:59:46Z' libm='2026-09-12T10:02:33Z' moi='2026-08-29T09:09:16Z'
+      (5 au total)
+
+[3] HORS DES EXPOSEES : LES TROIS COINCIDENT-ILS ?
+      feuilles non exposees : 774 ; ou mon JSON differe quand meme : 14
+        /T1/A/W_integrales/tol_int                                 eux=0.008578984888782986 moi=0.008578984888782988
+        /T1/A/W_integrales/tol_int_sur_1                           eux=0.008578984888782986 moi=0.008578984888782988
+        /T2/points/7|1.73/tol_ordre                                eux=0.17202346732631013 moi=0.17202346732631016
+        /T2/points/7|1.73/tol_ordre_sur_1                          eux=0.17202346732631013 moi=0.17202346732631016
+        /T2/points/7|2.27/tol_ordre                                eux=0.17202346732631013 moi=0.17202346732631016
+        /T2/points/7|2.27/tol_ordre_sur_1                          eux=0.17202346732631013 moi=0.17202346732631016
+        /T2/points/7|2.80/tol_ordre                                eux=0.17202346732631013 moi=0.17202346732631016
+        /T2/points/7|2.80/tol_ordre_sur_1                          eux=0.17202346732631013 moi=0.17202346732631016
+        /T3a/A/tol_int                                             eux=0.008578984888782986 moi=0.008578984888782988
+        /T3a/A/tol_int_sur_1                                       eux=0.008578984888782986 moi=0.008578984888782988
+        /meta/machine                                              eux='vm' moi='Erekos\xeb'
+        /meta/numpy                                                eux='2.4.4' moi='2.2.6'
+        /meta/plateforme                                           eux='Linux-6.18.44-fc-v32-x86_64-with-glibc2.39' moi='Windows-10-10.0.26200-SP0'
+        /meta/python                                               eux='3.12.3' moi='3.11.9'
+  [OK  ] hors des exposees, les divergences restent rares et nomm 14 / 774 (1.81 pour cent)
+
+[4] LES NEUF CELLULES T-2 : e/seuil DES TROIS COTES
+      cellule        son noyau       son libm            moi   moi == ?
+      4|1.73        1.61383616     1.65171847     1.65171847   LIBM
+      4|2.27        2.12118192     2.12118189     2.12118189   LIBM
+      4|2.80        2.37909619     2.27299044     2.27299044   LIBM
+      5|1.73        0.99148457     0.99148457     0.99148457   LIBM
+      5|2.27        1.25929537     1.25929537     1.25929537   LIBM
+      5|2.80        1.46865440     1.46865440     1.46865440   LIBM
+      7|1.73        0.75926590     0.68419171     0.68419171   LIBM
+      7|2.27        0.85342207     0.85342207     0.85342207   LIBM
+      7|2.80        0.95653883     0.95653883     0.95653883   LIBM
+
+============================================================================================
+BILAN : 3 controles, 0 mordent
+============================================================================================

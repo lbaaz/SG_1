@@ -1,0 +1,48 @@
+====================================================================================
+RELECTURE DES NOMBRES DE MA NOTE (cas durs BOCAL4)
+====================================================================================
+
+[1] LES 44 AU BIT, RECALCULES ICI
+  [OK  ] 44 grandeurs de flot, 44 au bit                        44/44
+  [OK  ] e/seuil son noyau actif = 0.7592658962                 0.7592658962
+  [OK  ] e/seuil son noyau desactive = 0.6841917056             0.6841917056
+  [OK  ] e/seuil moi = 0.6841917056                             0.6841917056
+  [OK  ] p_obs paire 1 : un ulp, les deux valeurs citees        
+
+[2] LE COMPTE DES CAS DURS ET DES BASCULEMENTS, DEPUIS LE JSON
+      lu au JSON : cas durs K1 par flot = [0, 0, 4, 3]
+  [OK  ] cas durs K1 = [0, 0, 4, 3]                             [0, 0, 4, 3]
+  [OK  ] basculements = 0 aux quatre flots (compte des effets ! bascules [0, 0, 0, 0] ; absorbes [0, 0, 4, 3]
+  [OK  ] et chaque cas dur deplace x_fin de +0.0 ulp            
+  [OK  ] numpy != python sur 0 appel aux quatre flots           
+  [OK  ] les quatre comptes d'appels K1 : 1520, 3040, 6080, 121 
+  [OK  ] total 22 800 appels K1                                 
+  [OK  ] sept cas durs au total                                 
+
+[3] LE CONTRE-EXEMPLE AVX512
+  [OK  ] quinze extensions AVX512 actives                       15
+  [OK  ] citee dans ma note : AVX512F                           
+  [OK  ] citee dans ma note : AVX512_ICL                        
+  [OK  ] citee dans ma note : AVX512_SKX                        
+  [OK  ] citee dans ma note : AVX512VPOPCNTDQ                   
+  [OK  ] aucun niveau X86_Vn nomme par numpy 2.2.6              
+  [OK  ] numpy 2.2.6 et python 3.11.9, comme je l'ecris         
+
+[4] LES EMPREINTES ET LES CANONS
+  [OK  ] canon de son lot = 117bcfaa1f283059                    
+  [OK  ] enveloppe a26895c6fabd0ee2                             a26895c6fabd0ee2
+  [OK  ] mon rejeu1 = ed09e29e91b6eb00                          
+  [OK  ] son JSON du geste = c8d86e5e5b4fd745                   
+  [OK  ] mon lot precedent eb7fb1cefbf2cec4 est cite            
+
+[5] LA CONTRADICTION GARDE / SECTION 7, CITEE MOT POUR MOT
+  [OK  ] sa section 7 dit bien de passer SON JSON               
+  [OK  ] et sa section 1 liste rejeu1 m2 = ed09e29e91b6eb00     
+  [OK  ] le message d'arret est cite exactement dans ma note    
+
+[6] LE VERDICT IMPRIME N'EST PAS CELUI QU'ELLE ATTENDAIT
+  [OK  ] le JSON porte le verdict cote m1, non 'CAUSE DE L'AUTR H-POW TENUE, CAUSE NOMMEE : le jumeau a puissances CR rend l
+
+====================================================================================
+BILAN : 28 controles, 0 mordent
+====================================================================================

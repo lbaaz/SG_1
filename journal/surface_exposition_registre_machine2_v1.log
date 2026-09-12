@@ -1,0 +1,53 @@
+========================================================================================
+SURFACE D'EXPOSITION, MESUREE SUR LE REGISTRE DEPOSE
+========================================================================================
+
+[1] CE QUE LE REGISTRE PERMET DE DATER -- ET IL NE LE PERMET PAS
+      .log deposes au registre              : 34
+      qui nomment une version de numpy      : 1
+      qui nomment une version de python     : 0
+      qui nomment un niveau de dispatch     : 0
+  [OK  ] le registre ne permet PAS de dater l'exposition        aucun log ne porte de niveau de dispatch : c'est la mesure qui fonde sa regle (X)
+
+[2] LA SURFACE DE MACHINE 1 DANS LE REGISTRE
+      scripts .py deposes                   : 91
+        de plume machine 1                  : 27
+        de plume machine 2                  : 15
+        sans plume au nom                   : 49
+      QUI CHARGENT LE MOTEUR : m1 3 | m2 2
+        m1 -> banc_qualification_machine1_v1.py
+        m1 -> banc_qualification_machine1_v2.py
+        m1 -> banc_qualification_machine1_v3.py
+  [OK  ] la surface de machine 1 se reduit au BANC de la consta 3 scripts sur 27 de sa plume
+      PORTEE : classement par le NOM du fichier et detection par MOTIF -- deux
+      approximations, dites comme telles. Un script sans plume au nom qui
+      chargerait le moteur n'est pas attribue ici.
+
+[3] POURQUOI UN VERDICT DE MANCHE N'EST PAS SENSIBLE A UN ulp
+      pas de grille (relatif)               : 1.4145e-02
+      ulp relatif                           : 2.2204e-16
+      rapport                               : 6.37e+13
+      Un seuil s* = min(noeuds explosifs) ne bouge que si un noeud CHANGE DE
+      CLASSE. C'est un evenement discret, pas une derive : il demande un noeud
+      marginal dans sa fenetre. La ou le noyau a mordu -- 7|1.73 -- la lecture
+      n'est pas un seuil de grille mais une grandeur COMPENSEE amplifiee par
+      R = 5.9e+07 : quatorze ordres plus sensible. La campagne n'a qu'un banc
+      de cette nature, et c'est celui-la.
+
+[4] CE QUI RESTE A RE-LIRE, ET CE N'EST PAS UN RESULTAT MAIS UNE PREUVE
+      Une egalite AU BIT entre machines qui a TENU est desormais une preuve
+      plus faible qu'elle n'en avait l'air : elle a pu tenir parce que la
+      chaine n'appelle aucun ** de tableau (robuste), ou parce qu'aucun
+      basculement n'est tombe dessus (fortuit). Les deux se separent par une
+      mesure, et son diagnostic v2 est deja l'instrument : cas durs et
+      basculements par flot.
+      L'ITEM NOMME : 'N-70 v2 contre-derivee et REPRODUITE AU BIT des deux
+      cotes' -- c'est une grandeur de BANC, et le banc est le seul de ses
+      scripts deposes qui charge le moteur.
+      Sa note d'exposition dit que la chaine constante A a tenu au bit partout
+      sauf 7|1.73 : c'est le FAIT. Ce qui manque est POURQUOI, et un rejeu du
+      banc sans le noyau le donne en un geste.
+
+========================================================================================
+mesures : 2 ; aucune n'est un verdict de gel
+========================================================================================

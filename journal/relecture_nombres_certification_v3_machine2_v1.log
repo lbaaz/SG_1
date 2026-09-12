@@ -1,0 +1,62 @@
+====================================================================================
+RELECTURE DES NOMBRES DE MA NOTE DE CERTIFICATION v3
+====================================================================================
+
+[1] LES TROIS COMPTEURS, CONTRE MES PROPRES LOGS
+  [OK  ] bilan de reception : 52 controles, 0 mordent             
+  [OK  ] bilan de acte : 66/71                                    71 controles, 66 tenus, 5 mordent
+  [OK  ] le diff : 10 hunks, +55 / -11                            
+
+[2] LES EMPREINTES CITEES DANS MA NOTE
+  [OK  ] fadc1c4f4c91b353 = MANIFEST_lot_machine1_R4R5_acte_v3.tx lu fadc1c4f4c91b353
+  [OK  ] eaaacadd99fb468d = journal_delta_nn_R4R5_v3.md           lu eaaacadd99fb468d
+  [OK  ] ce07e533176441a5 = journal_delta_nn_R4R5_v2.md           lu ce07e533176441a5
+  [OK  ] 86d6ee29d27938ff = journal_delta_nn_R4R5_v1.md           lu 86d6ee29d27938ff
+  [OK  ] 187c723064996059 = D2_premier_ordre_2_1_pair_machine1_v1 lu 187c723064996059
+  [OK  ] enveloppe 5db99356792064fd                               5db99356792064fd
+  [OK  ] la v3 fait 34028 octets                                  
+
+[3] LES NOMBRES DE MESURE
+  [OK  ] s*(26) = 0.477418                                        0.477418
+  [OK  ] s*(26|400) = 0.484219                                    0.484219
+  [OK  ] s*(30) = 0.472090                                        0.47209
+  [OK  ] s*(40|400) = 0.465235                                    0.465235
+  [OK  ] s*(40|1600) = 0.458701                                   0.458701
+  [OK  ] K*(26) = 9.830e-10                                       9.82966e-10
+  [OK  ] K*(30) = 3.730e-11                                       3.72959e-11
+  [OK  ] 1.42 % d'ecart entre les deux fenetres a p = 40          1.4245 %
+  [OK  ] p=26 : (a-b1)/a et min F/a                               
+  [OK  ] p=30 : (a-b1)/a et min F/a                               
+  [OK  ] b1/a = 1.01062 a p = 26                                  
+  [OK  ] min F > 0 jusqu'a p = 80                                 
+  [OK  ] S_c(4) = 6.1471                                          
+  [OK  ] S_c(6) = 2.3627                                          
+  [OK  ] S_c(26) = 1.1140                                         
+  [OK  ] S_c(30) = 1.1015                                         
+  [OK  ] -ln(7/3) = -0.84730                                      
+  [OK  ] pente mesuree = -0.87777                                 -0.877768
+  [OK  ] 4^(-1/24) = 0.943874                                     
+  [OK  ] 4.0837 pas, pas_ln = 0.014144576                         
+
+[4] LES SIX ENVELOPPES, DEPUIS MON LOG DE LA SECTION 3
+  [OK  ] six colonnes dans mon log                                6
+  [OK  ] les periodes citees : 4.3, 4.2, 4.2, 4.7, 5.0, 5.5       [4.3, 4.2, 4.2, 4.7, 5.0, 5.5]
+  [OK  ] le maximum est bien 5.5 (et non 5)                       
+  [OK  ] les six s sont cites et sont TOUS sous le seuil          
+  [OK  ] les six P_env citees : 210.5, 502.6, 2284.1, 189.7, 400. [210.5, 502.6, 2284.1, 189.7, 400.1, 1464.4]
+  [OK  ] aucune des six n'est a s* (ce qui fonde l'erratum (b))   
+
+[5] LA TABLE DU POINT 6 == LE REJEU DE SA FEUILLE
+  [OK  ] sept lignes de sa table citees dans ma note              8 lues
+  [OK  ] p=6 : 0.0897 0.91026 0.91026 reproduits dans ma note     
+  [OK  ] p=8 : 0.2139 0.78609 0.78609 reproduits dans ma note     
+  [OK  ] p=12 : 0.4606 0.53937 0.54129 reproduits dans ma note    
+  [OK  ] p=20 : 0.8265 0.17353 0.22275 reproduits dans ma note    
+  [OK  ] p=26 : 1.0106 -0.01062 0.10804 reproduits dans ma note   
+  [OK  ] p=30 : 1.1054 -0.10539 0.06569 reproduits dans ma note   
+  [OK  ] p=40 : 1.2795 -0.27948 0.01830 reproduits dans ma note   
+  [OK  ] les 16 lignes de table de ma note ne portent que des nom 
+
+====================================================================================
+BILAN : 45 controles, 0 mordent
+====================================================================================

@@ -1,0 +1,81 @@
+============================================================================================
+LES DEUX SORTIES DU GESTE (2), NOMBRE PAR NOMBRE
+============================================================================================
+
+[0] LES DEUX PLATEFORMES
+      m1 : python 3.12.3 ; numpy 2.4.4 ; Linux-6.18.44-fc-v32-x86_64-with-glibc2.39
+      m2 : python 3.11.9 ; numpy 2.2.6 ; Windows-10-10.0.26200-SP0
+
+[1] BILAN BRUT : 35 grandeurs identiques AU BIT, 42 differentes
+
+[2] LE FAIT CENTRAL -- LA TRONCATURE DECROIT EN dt^4, L'ECART NE SUIT PAS
+      pas      troncature attendue    e mesure     part plancher  les deux machines
+      dt2/1    <=   79.890 plancher     79.8903      0.0 % plancher   4.16e-03
+      dt2/2    <=    4.993 plancher      6.0869     18.0 % plancher   9.89e-02
+      dt2/4    <=    0.312 plancher      1.4116     77.9 % plancher   3.60e-02
+      dt2/8    <=    0.020 plancher      1.2600     98.5 % plancher   IDENTIQUE AU BIT
+
+[3] LE PAS LE PLUS DOMINE PAR LE PLANCHER (dt2/8), GRANDEUR PAR GRANDEUR
+      e                        1.6530853961382515e-08   IDENTIQUE AU BIT
+      R_composantes            59087466.25901179   IDENTIQUE AU BIT
+      plancher_composantes     1.312005310150339e-08   IDENTIQUE AU BIT
+      ratio_seuil_du_flot      0.14162436915048562   IDENTIQUE AU BIT
+      tau_au_max               0.00015638885675542218   IDENTIQUE AU BIT
+      => les cinq au bit : True
+
+[4] CE QUE CELA CONTREDIT, ET CE QUE CELA NE TOUCHE PAS
+      CONTREDIT : sa section 4.3 -- 'une grandeur qui vit a quelques plancher
+                  n'est reproductible entre plateformes qu'a quelques plancher
+                  pres'. Mesure : la grandeur la PLUS de plancher (98.5 %) est
+                  reproduite AU BIT sur deux OS, deux python, deux numpy ; et
+                  c'est le pas le MOINS de plancher des trois fins qui porte
+                  tout l'ecart. L'inverse de ce que le mecanisme predit.
+      NE TOUCHE PAS : son verdict. E-A tient, la paire du gel est hors regime
+                  RK4 des deux cotes, 0.759 et 0.684 sont tous deux sous 1,
+                  l'ecart reste plus petit que le plateau. C'est l'EXPLICATION
+                  qui tombe, pas la CONCLUSION.
+      NON PROPOSE : aucun mecanisme de remplacement. Je mesure, je ne modelise pas.
+
+[5] LES ECARTS, TOUS, PAR ORDRE DECROISSANT
+      /flots[2]/err_rel_fin                          8.98e-01   m1=9.757847861e-09  m2=1.852074847e-08
+      /flots[2]/R_au_max                             2.94e-01   m1=45665957.59  m2=59087466.88
+      /attentes/E-C/p_obs                            2.44e-01   m1=0.2168214981  m2=0.1639811484
+      /paires[2]/p_obs                               2.44e-01   m1=0.2168214981  m2=0.1639811484
+      /flots[2]/tau_au_max                           1.21e-01   m1=0.0001778923246  m2=0.0001563888568
+      /flots[1]/e                                    9.89e-02   m1=8.862395333e-08  m2=7.986105272e-08
+      /flots[1]/err_rel_fin                          9.89e-02   m1=8.862395333e-08  m2=7.986105272e-08
+      /paires[0]/e_fin                               9.89e-02   m1=8.862395333e-08  m2=7.986105272e-08
+      /paires[1]/e_base                              9.89e-02   m1=8.862395333e-08  m2=7.986105272e-08
+      /flots[1]/ratio_seuil_du_flot                  9.89e-02   m1=0.7592658962  m2=0.6841917056
+      /paires[0]/lecture_5_4_sur_flot_fin/ratio_seuil 9.89e-02   m1=0.7592658962  m2=0.6841917056
+      /references_deux_machines/ratio_seuil_ici      9.89e-02   m1=0.7592658962  m2=0.6841917056
+      /attentes/E-B/valeur                           9.89e-02   m1=6.754848318  m2=6.086946898
+      /flots[1]/e_sur_plancher                       9.89e-02   m1=6.754848318  m2=6.086946898
+      /paires[1]/p_obs                               4.41e-02   m1=2.205713932  m2=2.108349687
+      /paires[0]/p_obs                               4.04e-02   m1=3.570038707  m2=3.71422522
+      /flots[2]/e_sur_plancher                       3.60e-02   m1=1.464298013  m2=1.411636685
+      /flots[2]/ratio_seuil_du_flot                  3.60e-02   m1=0.1645916372  m2=0.1586723406
+      /paires[1]/lecture_5_4_sur_flot_fin/ratio_seuil 3.60e-02   m1=0.1645916372  m2=0.1586723406
+      /flots[2]/e                                    3.60e-02   m1=1.92116676e-08  m2=1.852074847e-08
+      /paires[1]/e_fin                               3.60e-02   m1=1.92116676e-08  m2=1.852074847e-08
+      /paires[2]/e_base                              3.60e-02   m1=1.92116676e-08  m2=1.852074847e-08
+      /flots[0]/e_sur_plancher                       4.16e-03   m1=80.22426244  m2=79.89030851
+      /flots[0]/ratio_seuil_du_flot                  4.16e-03   m1=9.017455855  m2=8.979918399
+      /flots[0]/e                                    4.16e-03   m1=1.05254302e-06  m2=1.04816157e-06
+      /flots[0]/err_rel_fin                          4.16e-03   m1=1.05254302e-06  m2=1.04816157e-06
+      /paires[0]/e_base                              4.16e-03   m1=1.05254302e-06  m2=1.04816157e-06
+      /flots[0]/R_au_max                             2.68e-08   m1=59087266.24  m2=59087267.82
+      /flots[0]/R_composantes                        2.68e-08   m1=59087266.24  m2=59087267.82
+      /flots[0]/plancher_composantes                 2.68e-08   m1=1.312000869e-08  m2=1.312000904e-08
+      /flots[0]/seuil_5_4_du_flot                    2.68e-08   m1=1.167228359e-07  m2=1.16722839e-07
+      /flots[2]/R_composantes                        1.54e-08   m1=59087465.97  m2=59087466.88
+      /flots[2]/plancher_composantes                 1.54e-08   m1=1.312005304e-08  m2=1.312005324e-08
+      /flots[2]/seuil_5_4_du_flot                    1.54e-08   m1=1.167232305e-07  m2=1.167232323e-07
+      /paires[1]/lecture_5_4_sur_flot_fin/seuil      1.54e-08   m1=1.167232305e-07  m2=1.167232323e-07
+      /flots[1]/R_au_max                             2.24e-10   m1=59087456.06  m2=59087456.05
+      /flots[1]/R_composantes                        2.24e-10   m1=59087456.06  m2=59087456.05
+      /flots[1]/plancher_composantes                 2.24e-10   m1=1.312005084e-08  m2=1.312005083e-08
+      /flots[1]/seuil_5_4_du_flot                    2.24e-10   m1=1.167232109e-07  m2=1.167232109e-07
+      /paires[0]/lecture_5_4_sur_flot_fin/seuil      2.24e-10   m1=1.167232109e-07  m2=1.167232109e-07
+      /cellule/tol_ordre                             2.22e-16   m1=0.1720234673  m2=0.1720234673
+============================================================================================

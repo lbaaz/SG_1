@@ -1,0 +1,117 @@
+====================================================================================
+DIFF v2 -> v3, CONTEXTE 0, REJOUE PAR machine 2
+====================================================================================
+v2 : 422 lignes, 30523 octets, fin de fichier LF
+v3 : 466 lignes, 34028 octets, fin de fichier LF
+
+HUNKS : 10      +55 / -11 lignes
+annonce machine 1 : 10 hunks, +55 / -10
+  [OK  ] compte de hunks
+  [OK  ] +55
+  [MORD] -10
+
+------------------------------------------------------------------------------------
+HUNK 1/10  replace  v2[9:9] -> v3[9:9]   (-1 / +1)
+------------------------------------------------------------------------------------
+  - (redaction machine 1, depot operateur, 2026-09-11) -- PROJET, VERSION 2
+  + (redaction machine 1, depot operateur, 2026-09-11) -- PROJET, VERSION 3
+
+------------------------------------------------------------------------------------
+HUNK 2/10  insert  v2[11:10] -> v3[11:16]   (-0 / +6)
+------------------------------------------------------------------------------------
+  + v3 = v2 (ce07e533176441a5, certifiee 9ead3f431059c056, non deposee, REMPLACEE
+  + non editee) + les hunks H5 a H8 : le p_c de A-5 etait FAUX par troncature
+  + (un seul harmonique garde la ou la parite en admet plusieurs), re-derive par
+  + machine 2 (aa80c310ec92a3f0) et verifie par machine 1 sur son propre code
+  + (2abf5b1b66888586) ; les runs p = 26 et p = 30 (iles) et le defaut D-R4-10
+  + entrent ; les hunks sont comptes au manifeste. Re-certification m2 demandee.
+
+------------------------------------------------------------------------------------
+HUNK 3/10  insert  v2[90:89] -> v3[96:101]   (-0 / +6)
+------------------------------------------------------------------------------------
+  +   11/09  [H5 bis] RUN p = 26 (P3) m2 1c66dadbdbb19b5a [d1e6aa2b53bb6ae6] (gel de deux
+  +          plumes 1b2643d2d9f33936, run 2895cb03634f7592) ; RUN p = 30 m2
+  +          fa31d44679868e5c [7b660e5c41728f6b] (448f041b0d13ee37) ; lecture m1
+  +          fd9cf3301877bf9d ; RE-DERIVATION m2 aa80c310ec92a3f0 (tous les
+  +          harmoniques ; gel de profondeur b56369d48ae87723 tenu 6/6 a 26 et 30) ;
+  +          verification m1 2abf5b1b66888586 ; resynchronisation m2 87550aa7ac593dd2
+
+------------------------------------------------------------------------------------
+HUNK 4/10  replace  v2[185:188] -> v3[197:211]   (-4 / +15)
+------------------------------------------------------------------------------------
+  -        initial vaut 0, 0.094, 0.219, 0.346, 0.465, 0.572 pour p = 4 a 14, et
+  -        atteint 1 a p = 26 : ILE au premier ordre pour tout p pair <= 24 (ce qui
+  -        re-derive et etend "degres pairs fermes au premier ordre, p <= 14" de
+  -        D1). Mesure, 6|2.00 : s*(400) = s*(1600) = 1.012586 (noeud 85, les deux
+  +        initial vaut 0, 0.094, 0.219, 0.346, 0.465, 0.572 pour p = 4 a 14 et
+  +        depasse 1 a p = 26. [H5] MAIS ce rapport ne decide pas de l'ouverture : la
+  +        2:1 a degre pair admet TOUS les harmoniques (4L, 2L) = cos 2L phi (j + k =
+  +        6L, toujours pair), et la derivation ne gardait que L = 1 (D-R4-10). Avec
+  +        tous les harmoniques, F(phi) = <S^p> sur l'orbite rapide a phi fixe reste
+  +        STRICTEMENT POSITIVE a tout degre (moyenne d'une puissance paire) : la
+  +        troncature rendait (a - b1)/a negatif a p >= 26 (-0.01062 a 26, -0.10539
+  +        a 30) la ou min F/a reste positif (0.10804, 0.06569). ILE au premier ordre
+  +        a TOUT degre pair, AUCUN p_c (re-derivation m2 aa80c310ec92a3f0, verifiee
+  +        m1 sur ses fonctions 2abf5b1b66888586). A p = 6 et 8 un seul harmonique
+  +        est admis : la derivation y est exacte, et c'est pourquoi A-6 tient. Mesure
+  +        : iles a 26|2.00 (s* = 0.477418 au noeud 85 de 1600 a 25600, 0.484219 a
+  +        400 ; lot 1c66dadbdbb19b5a) et 30|2.00 (0.472090 au noeud 85 aux quatre
+  +        fenetres ; lot fa31d44679868e5c), zero explosion nouvelle sur un facteur
+  +        16 et 64 en temps ; K* = 9.83e-10 et 3.73e-11. Mesure, 6|2.00 : s*(400) = s*(1600) = 1.012586 (noeud 85, les deux
+
+------------------------------------------------------------------------------------
+HUNK 5/10  replace  v2[284:285] -> v3[307:315]   (-2 / +9)
+------------------------------------------------------------------------------------
+  -           ordre, machinerie D1 non detenue par m1) ; K* = 0.347 (p = 4) et
+  -           0.052565 (p = 6) sans loi.
+  +           ordre, machinerie D1 non detenue par m1) ; K* = 0.347 (p = 4),
+  +           0.052565 (6), 9.83e-10 (26), 3.73e-11 (30) sans loi. [H7] Lecture
+  +           post hoc, non gelee : a haut degre le seuil est le point ou
+  +           l'excursion LIBRE, (3 + w2^2)/Delta s = 2.3333 s, touche le bord du
+  +           puits -g S^p/(p Delta) (S_c = 2.3333 s* : 6.15, 2.36, 1.11, 1.10) ;
+  +           s*(p) -> 0.4286 quand p -> inf ; ln K* descend comme -p ln 2.3333 =
+  +           -0.847 par unite de p (mesure -0.878 de 6 a 30). Deux regimes du
+  +           seuil (shift a bas degre, mur a haut degre), un seul premier ordre,
+  +           qui decrit la modulation sous le seuil aux quatre degres.
+
+------------------------------------------------------------------------------------
+HUNK 6/10  insert  v2[320:319] -> v3[350:358]   (-0 / +9)
+------------------------------------------------------------------------------------
+  +   D-R4-10 [H6] derivation tronquee a un harmonique (L = 1) la ou la parite en
+  +           admet plusieurs (A-5) : un p_c = 26 fictif, une prediction annexe (P3)
+  +           falsifiee deux fois (26, 30) avant d'etre reconnue mal derivee ; le
+  +           controle qui l'aurait pris, le signe de min F, s'ecrit AVANT d'en tirer
+  +           un critere. Prose de la note D2 : "4^(-1/24) = 0.944 : un pas de
+  +           grille" pour 4.08 pas (facteur 4, sens prudent) ; "1/eps = Delta/(g
+  +           s^(p-2)) hors de portee" a haut degre, qui omettait a'(J~0) : la
+  +           periode du premier ordre y vaut pi p Delta/(g a' s^(p-2)) = 117 a 180
+  +           unites, mesuree dans les enveloppes (4 a 5 periodes par fenetre).
+
+------------------------------------------------------------------------------------
+HUNK 7/10  replace  v2[348:348] -> v3[387:390]   (-1 / +4)
+------------------------------------------------------------------------------------
+  -   (c) Jambes D et S de P-4 (toujours non jouees) ; P1 a p = 8 (seuil vierge) ;
+  +   (c) [H8] Un gel de SEUIL nomme sa fenetre : s* a T = 400 (premiers passages)
+  +       et la clause ile <= 1 noeud jusqu'a T = 25600 sont deux clauses, pas
+  +       une ; la lecture du mur (R-R4-2) porte sur la premiere. Jambes D et S de
+  +       P-4 (toujours non jouees) ; P1 a p = 8 (seuil vierge) ;
+
+------------------------------------------------------------------------------------
+HUNK 8/10  replace  v2[399:399] -> v3[441:442]   (-1 / +2)
+------------------------------------------------------------------------------------
+  -   journal_delta_nn_R4R5_v2.md                    cet acte (v1 86d6ee29d27938ff conservee)
+  +   journal_delta_nn_R4R5_v3.md                    cet acte (v1 86d6ee29d27938ff, v2
+  +                                                  ce07e533176441a5 conservees)
+
+------------------------------------------------------------------------------------
+HUNK 9/10  replace  v2[411:411] -> v3[454:455]   (-1 / +2)
+------------------------------------------------------------------------------------
+  -   D2_premier_ordre_2_1_pair_machine1_v1.py       r1(p), p_c (A-5)
+  +   D2_premier_ordre_2_1_pair_machine1_v1.py       r1(p) (A-5 ; son p_c est mort)
+  +   verification_harmoniques_machine1_v1.py        tous les harmoniques, min F (A-5)
+
+------------------------------------------------------------------------------------
+HUNK 10/10  replace  v2[422:422] -> v3[466:466]   (-1 / +1)
+------------------------------------------------------------------------------------
+  - -- FIN journal_delta_nn_R4R5_v2 --
+  + -- FIN journal_delta_nn_R4R5_v3 --

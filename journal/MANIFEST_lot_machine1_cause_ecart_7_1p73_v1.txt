@@ -1,0 +1,19 @@
+MANIFESTE lot_machine1_2026-09-12_cause_ecart_7_1p73_v1 -- GESTE (2), SUITE : LE REJEU m2 LU, LA CAUSE DE L'ECART NOMMEE ; machine 1, classe 3
+colonnes : empreinte_B (sha256 NFC+LF, 16 hex)  empreinte_brute  octets_B  octets_bruts  fichier
+entrants : lot m2 eb7fb1cefbf2cec4 (10/10 au canon, garde conforme a sa ligne 'colonnes :') ; note m2 43d6fbbb5477e33a ; rejeu1 m2 ed09e29e91b6eb00 ;
+  ma note v1 a826546552c3ae77 (NON EDITEE, corrigee par erratum de l'exterieur) ; instrument v8 4d8882a2223a5c74 et temoin v11 a2e7ef3e237c5acf (lot a4c35a2ee691c9a7) ;
+  moteur c8ed357b120352c4 sur clone frais lbaaz/SG_1 HEAD d037d21 (charge par le rejeu sans X86_V4 seulement). Rien n'est edite (PB-1).
+ENCODAGE MESURE : 0 des 6 pieces non-ASCII ; CONVENTION MESUREE : 0 des 6 pieces avec B != brut (ASCII pur, LF) ; les deux tailles sont portees.
+les deux pieces 'sansX86V4' sont les sorties du script du geste (c48f49b92078ff69) rejoue avec NPY_DISABLE_CPU_FEATURES="X86_V4 AVX512_ICL AVX512_SPR",
+  copiees sous un nom qui dit ce qu'elles sont, contenu INTOUCHE (leur ligne PLATEFORME ne porte pas la variable : lire cette note, 4.6).
+lecture : point de m2 ACCORDE ; erratum a la note v1 4.3 ; cause nommee (noyau SIMD AVX512 X86_V4 de l'ufunc power numpy 2.4.4, non CR sur 5 pour cent des appels) ;
+  machine 1 = machine 2 au bit (44/44) sans ce noyau. Aucun verdict de gel ; tenaille non lue ; aucune regle neuve ((X) jusqu'au 28/09), une candidate a arbitrer.
+
+eb056e4e844f29a3 eb056e4e844f29a3    16604    16604  note_machine1_cause_ecart_7_1p73_v1.md
+a808e7a8635b0ced a808e7a8635b0ced    19652    19652  diagnostic_pow_cas_durs_machine1_v1.py
+8d8ffaad3558b054 8d8ffaad3558b054   354517   354517  diagnostic_pow_cas_durs_machine1_v1.log
+8e4206b6c41c9b00 8e4206b6c41c9b00   735208   735208  diagnostic_pow_cas_durs_machine1_v1.json
+7bd9e9875be34b81 7bd9e9875be34b81     5450     5450  convergence_dt_7_1p73_machine1_sansX86V4_v1.json
+5089a7963f21814c 5089a7963f21814c     3860     3860  convergence_dt_7_1p73_machine1_sansX86V4_v1.log
+
+pieces : 6 (compte etabli APRES le dernier ajout) ; canon du lot = empreinte B de CE manifeste, calculee sur le fichier, jamais ecrite dedans.

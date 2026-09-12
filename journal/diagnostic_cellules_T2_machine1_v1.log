@@ -1,0 +1,20 @@
+[10:05:57Z] PLATEFORME   python 3.12.3 ; numpy 2.4.4 ; Linux-6.18.44-fc-v32-x86_64-with-glibc2.39 ; NPY_DISABLE_CPU_FEATURES='' ; TEMOIN tableau 0x1.a483018a169c5p+64 (noyau SIMD)
+[10:05:57Z] CELL-4|1.73-dt2 fidele=True appels K1=1520 cas durs=74 (4.87 pour cent) bascules seules=1 ; tout CR : x_fin -1.0 ulp(x1)  <-- LA CELLULE DIFFERE ENTRE NOYAU ET CR
+[10:05:58Z] CELL-4|1.73-dt2/2 fidele=True appels K1=3040 cas durs=167 (5.49 pour cent) bascules seules=3 ; tout CR : x_fin -1.0 ulp(x1)  <-- LA CELLULE DIFFERE ENTRE NOYAU ET CR
+[10:05:59Z] CELL-4|2.27-dt2 fidele=True appels K1=1520 cas durs=72 (4.74 pour cent) bascules seules=1 ; tout CR : x_fin -1.0 ulp(x1)  <-- LA CELLULE DIFFERE ENTRE NOYAU ET CR
+[10:06:00Z] CELL-4|2.27-dt2/2 fidele=True appels K1=3040 cas durs=173 (5.69 pour cent) bascules seules=1 ; tout CR : x_fin +0.0 ulp(x1)
+[10:06:00Z] CELL-4|2.80-dt2 fidele=True appels K1=1520 cas durs=96 (6.32 pour cent) bascules seules=0 ; tout CR : x_fin +0.0 ulp(x1)
+[10:06:01Z] CELL-4|2.80-dt2/2 fidele=True appels K1=3040 cas durs=170 (5.59 pour cent) bascules seules=1 ; tout CR : x_fin +2.0 ulp(x1)  <-- LA CELLULE DIFFERE ENTRE NOYAU ET CR
+[10:06:01Z] CELL-5|1.73-dt2 fidele=True appels K1=1520 cas durs=60 (3.95 pour cent) bascules seules=0 ; tout CR : x_fin +0.0 ulp(x1)
+[10:06:02Z] CELL-5|1.73-dt2/2 fidele=True appels K1=3040 cas durs=152 (5.00 pour cent) bascules seules=0 ; tout CR : x_fin +0.0 ulp(x1)
+[10:06:03Z] CELL-5|2.27-dt2 fidele=True appels K1=1520 cas durs=78 (5.13 pour cent) bascules seules=0 ; tout CR : x_fin +0.0 ulp(x1)
+[10:06:04Z] CELL-5|2.27-dt2/2 fidele=True appels K1=3040 cas durs=150 (4.93 pour cent) bascules seules=0 ; tout CR : x_fin +0.0 ulp(x1)
+[10:06:04Z] CELL-5|2.80-dt2 fidele=True appels K1=1520 cas durs=73 (4.80 pour cent) bascules seules=1 ; tout CR : x_fin -1.0 ulp(x1)  <-- LA CELLULE DIFFERE ENTRE NOYAU ET CR
+[10:06:05Z] CELL-5|2.80-dt2/2 fidele=True appels K1=3040 cas durs=186 (6.12 pour cent) bascules seules=0 ; tout CR : x_fin +0.0 ulp(x1)
+[10:06:05Z] CELL-7|1.73-dt2 fidele=True appels K1=1520 cas durs=83 (5.46 pour cent) bascules seules=0 ; tout CR : x_fin +1.0 ulp(x1)  <-- LA CELLULE DIFFERE ENTRE NOYAU ET CR
+[10:06:07Z] CELL-7|1.73-dt2/2 fidele=True appels K1=3040 cas durs=161 (5.30 pour cent) bascules seules=1 ; tout CR : x_fin +2.0 ulp(x1)  <-- LA CELLULE DIFFERE ENTRE NOYAU ET CR
+[10:06:07Z] CELL-7|2.27-dt2 fidele=True appels K1=1520 cas durs=66 (4.34 pour cent) bascules seules=0 ; tout CR : x_fin +0.0 ulp(x1)
+[10:06:08Z] CELL-7|2.27-dt2/2 fidele=True appels K1=3040 cas durs=160 (5.26 pour cent) bascules seules=0 ; tout CR : x_fin +0.0 ulp(x1)
+[10:06:08Z] CELL-7|2.80-dt2 fidele=True appels K1=1520 cas durs=73 (4.80 pour cent) bascules seules=1 ; tout CR : x_fin +0.0 ulp(x1)
+[10:06:09Z] CELL-7|2.80-dt2/2 fidele=True appels K1=3040 cas durs=167 (5.49 pour cent) bascules seules=0 ; tout CR : x_fin +0.0 ulp(x1)
+[10:06:09Z] FIN          12.6 s

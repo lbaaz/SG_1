@@ -1,0 +1,36 @@
+MANIFESTE lot_machine2_2026-09-12_rejeu_convergence_dt_v1 -- GESTE (2) : REJEU BOCAL4 DE LA CONVERGENCE EN dt A 7|1.73 ; machine 2, classe 3
+SES SEPT LECTURES SONT TENUES, TOUTES. n_pas 380/760/1520/3040 exacts et les quatre sur TAU_FIN ; R = 59087466.259 (forme fermee 59087466.747) ; e(dt2) a 0.42 pour cent de la sienne ; e/seuil a la paire du gel = 0.6842 -- MON nombre, et 0.7593 exclu, ce qui est l'objet meme du geste ; e/plancher a dt2/4 et dt2/8 = 1.4116 et 1.2600 ; p_obs raffines 2.1083 et 0.1640, SOUS 3.8280. E-A TENUE.
+  L'ISSUE QU'ELLE AVAIT ECRITE COMME MORDANTE (un p_obs raffine DANS la bande RK4) NE S'EST PAS PRODUITE. Son residu R-G2-1 est leve : 0.684 est desormais produit par SON script, sur MA plateforme, depuis le meme moteur authentifie.
+MAIS SA SECTION 4.3 EST CONTREDITE PAR LA COMPARAISON DE NOS DEUX SORTIES, ET DE FACON STRUCTUREE :
+    pas      troncature attendue      e mesure    part de plancher    nos deux machines
+    dt2      <= 79.890 plancher        79.8903        0.0 pour cent    4.16e-03
+    dt2/2    <=  4.993 plancher         6.0869       18.0 pour cent    9.89e-02   <-- TOUT l'ecart
+    dt2/4    <=  0.312 plancher         1.4116       77.9 pour cent    3.60e-02
+    dt2/8    <=  0.020 plancher         1.2600       98.5 pour cent    IDENTIQUE AU BIT
+  A dt2/8, ou 98.5 pour cent de e est du plancher, les CINQ grandeurs sont identiques AU BIT (e = 1.6530853961382515e-08 ; R = 59087466.25901179 ; plancher ; ratio_seuil ; tau_au_max) entre Linux/python 3.12.3/numpy 2.4.4 et Windows/python 3.11.9/numpy 2.2.6 -- trois versions differentes sur le chemin meme qu'elle incrimine.
+  Et c'est dt2/2, DOMINE A 82 POUR CENT PAR LA TRONCATURE, qui porte la totalite des 9.89 pour cent. C'EST L'EXACT INVERSE DE CE QUE SON MECANISME PREDIT : il predit un ecart croissant avec la part de plancher et avec le nombre de pas ; on mesure un ecart NUL la ou le plancher domine (et ou les pas sont les plus nombreux, 3040), MAXIMAL la ou la troncature domine.
+ET LE MOT 'BRUIT' EST FAUX : deux rejeux au meme poste sont IDENTIQUES AU BIT (quatre flots x six grandeurs, plus les trois p_obs). Mon poste est DETERMINISTE sur ce calcul ; ce qui separe les deux machines est une difference DETERMINISTE entre plateformes, reproductible de chaque cote. Une difference deterministe demande une CAUSE, pas une tolerance. L'issue mordante etait ecrite la aussi : si mes deux rejeux avaient differe d'un seul ulp, son mot etait justifie et cette feuille ne concluait rien.
+PORTEE EXACTE -- SON VERDICT N'EST PAS TOUCHE : E-A tient ; la paire du gel est hors regime RK4 des deux cotes ; 0.759 et 0.684 sont tous deux SOUS 1 (W-plancher MORD, ordre NON LU aux deux postes) ; l'ecart reste plus petit que le plateau ; la non-reproduction a 7|1.73 N'EST PAS UN DEFAUT DE CHAINE. C'est l'EXPLICATION qui tombe, pas la CONCLUSION.
+  AUCUN MECANISME DE REMPLACEMENT N'EST PROPOSE : je n'ai pas cherche la cause et je ne sais pas ou elle est. Rien sur la tenaille, rien sur alpha, rien sur ses trois autres points NON LUS ; R-G2-2, R-G2-3 et R-G2-4 sont intacts. Aucun verdict de gel.
+QUESTION OUVERTE, NOMMEE : pourquoi l'ecart s'annule-t-il au pas fin ?
+UN FAUX DEPART PAYE ICI, ET LA REGLE QUI EN SORT : son manifeste porte les colonnes 'brut | B | octets | fichier', l'inverse de l'ordre courant, et ma garde de reception a rendu 0/0 avant que je lise la ligne 'colonnes :'. TROISIEME FOIS EN DEUX JOURS. UNE GARDE LIT LA LIGNE 'colonnes :' DU MANIFESTE ET S'Y CONFORME -- ELLE NE SUPPOSE JAMAIS L'ORDRE.
+LES SORTIES SONT CELLES DE SON SCRIPT, NON EDITEES : rejeu1/rejeu2_*.json et .log portent AU BIT ce que son script a ecrit sous le nom convergence_dt_7_1p73_machine1_v1.json/.log ; seul le NOM dit de qui elles sont, et les deux noms sont ici.
+colonnes : empreinte_B (sha256 NFC+LF, 16 hex)  empreinte_brute  octets_B  octets_bruts  fichier
+ENCODAGE MESURE : 1 des 10 pieces sont UTF-8 non-ASCII : POUR_MACHINE1_rejeu_convergence_dt_machine2_v1.md. L'empreinte B les normalise en NFC ; la colonne brute les compte tels quels.
+CONVENTION MESUREE LIGNE PAR LIGNE : 3 des 10 pieces ont B != brut (les .log : CRLF). Les DEUX tailles sont portees.
+Feuilles de MESURE (les deux rejeux, la comparaison, le determinisme, la relecture) et feuille de LECTURE (la note) : separees. Le CANON du lot est l'empreinte de CE manifeste ; le brut du ZIP est donne a cote.
+
+43d6fbbb5477e33a 43d6fbbb5477e33a     7783     7783  POUR_MACHINE1_rejeu_convergence_dt_machine2_v1.md
+ed09e29e91b6eb00 ed09e29e91b6eb00     5612     5612  rejeu1_convergence_dt_machine2_v1.json
+aad2a3606b6f70df aad2a3606b6f70df     4027     4027  rejeu1_convergence_dt_machine2_v1.log
+14b2c9020f238b05 14b2c9020f238b05     5613     5613  rejeu2_convergence_dt_machine2_v1.json
+4466fe1912db7bc9 4466fe1912db7bc9     4525     4525  comparaison_deux_machines_machine2_v1.py
+a0c44969724b8f0d 8bada7143b2a921b     6508     6589  comparaison_deux_machines_machine2_v1.log
+191716003090216c 191716003090216c     2760     2760  controle_determinisme_machine2_v1.py
+f2db2c06e033c87a dbb1a2adc3074645     1278     1301  controle_determinisme_machine2_v1.log
+1208176d9ba7b635 1208176d9ba7b635     7481     7481  relecture_nombres_rejeu_machine2_v1.py
+691f38e927a3c0a5 38ff4d4ec4102558     3189     3244  relecture_nombres_rejeu_machine2_v1.log
+
+entrants : son lot canon 2b155abffbe4f6ff (enveloppe e98c01d7116f7bb4, 4/4) ; son script convergence_dt_7_1p73_machine1_v1.py c48f49b92078ff69 et son JSON c8d86e5e5b4fd745 -- joues et compares, JAMAIS edites ; instrument v8 4d8882a2223a5c74 et temoin v11 a2e7ef3e237c5acf du lot a4c35a2ee691c9a7 ; moteur c8ed357b120352c4 sur clone frais lbaaz/SG_1 HEAD d037d21
+pieces : 10 (compte etabli APRES le dernier ajout)
+garde de reception : verifiees + absentes + ecarts == 10

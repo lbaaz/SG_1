@@ -1,0 +1,55 @@
+====================================================================================
+RELECTURE DES NOMBRES DE MA NOTE DE REJEU
+====================================================================================
+
+[1] LES SEPT LECTURES, CONTRE MON JSON
+  [OK  ] n_pas 380/760/1520/3040                                
+  [OK  ] les quatre finissent sur TAU_FIN                       
+  [OK  ] R = 59087466.259, a 1e-06 de 59087466.747              59087466.259
+  [OK  ] e(dt2) = 1.048162e-06, a 0.42 % de la sienne           1.048162e-06 ; ecart 0.4163 %
+  [OK  ] e/seuil a la paire du gel = 0.6842                     0.684192
+  [OK  ] et 0.7593 est exclu (c'est SON nombre, pas le mien)    
+  [OK  ] e/plancher a dt2/4 et dt2/8 = 1.4116 et 1.2600         
+  [OK  ] p_obs raffines 2.1083 et 0.1640, sous 3.8280           
+
+[2] LA TABLE DU FAIT CENTRAL -- TOUT RECALCULE
+  [OK  ] dt2/1   : troncature 79.890, e 79.8903, plancher 0.0 % calcule : 79.890 / 79.8903 / 0.0 %
+  [OK  ] dt2/2   : troncature 4.993, e 6.0869, plancher 18.0 %  calcule : 4.993 / 6.0869 / 18.0 %
+  [OK  ] dt2/4   : troncature 0.312, e 1.4116, plancher 77.9 %  calcule : 0.312 / 1.4116 / 77.9 %
+  [OK  ] dt2/8   : troncature 0.020, e 1.2600, plancher 98.5 %  calcule : 0.020 / 1.2600 / 98.5 %
+  [OK  ] les ecarts 4.16e-03, 9.89e-02, 3.60e-02, et 0 au derni 4.163e-03 9.888e-02 3.596e-02 0.0e+00
+  [OK  ] 'domine a 82 % par la TRONCATURE' a dt2/2 == 18.0 % pl 
+
+[3] L'IDENTITE AU BIT A dt2/8, LES CINQ GRANDEURS
+  [OK  ] dt2/8 : e identique au bit                             
+  [OK  ] dt2/8 : R_composantes identique au bit                 
+  [OK  ] dt2/8 : plancher_composantes identique au bit          
+  [OK  ] dt2/8 : ratio_seuil_du_flot identique au bit           
+  [OK  ] dt2/8 : tau_au_max identique au bit                    
+  [OK  ] cite en pleine precision : 1.6530853961382515e-08      
+  [OK  ] cite en pleine precision : 59087466.25901179           
+  [OK  ] cite en pleine precision : 0.00015638885675542218      
+
+[4] LES DEUX PLATEFORMES, CITEES
+  [OK  ] m1 : python 3.12.3, numpy 2.4.4, Linux                 
+  [OK  ] m2 : python 3.11.9, numpy 2.2.6, Windows               
+  [OK  ] 'trois versions differentes' : python, numpy, OS       
+
+[5] LE DETERMINISME, RECALCULE ICI
+  [OK  ] deux rejeux : quatre flots x six grandeurs + trois p_o 
+
+[6] LES EMPREINTES CITEES
+  [OK  ] canon de son lot = 2b155abffbe4f6ff                    
+  [OK  ] enveloppe e98c01d7116f7bb4                             e98c01d7116f7bb4
+  [OK  ] cite : a4c35a2ee691c9a7                                
+  [OK  ] cite : c8ed357b120352c4                                
+  [OK  ] cite : d037d21                                         
+
+[7] MES SORTIES SONT BIEN CELLES DE SON SCRIPT, INTOUCHEES
+  [OK  ] rejeu1_*.json == la sortie du script, au bit           5612 octets
+  [OK  ] rejeu1_*.log == la sortie du script, au bit            4027 octets
+  [OK  ] rejeu2_*.json == la sortie du second run, au bit       5613 octets
+
+====================================================================================
+BILAN : 34 controles, 0 mordent
+====================================================================================

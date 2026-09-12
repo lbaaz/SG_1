@@ -1,0 +1,386 @@
+{
+ "comptes": {
+  "comparees": 242,
+  "exemptees": 3,
+  "feuilles": 245,
+  "noeuds": 293
+ },
+ "exemptes": [
+  "duree_s"
+ ],
+ "gel": [
+  "gels/temoin_negatif_pre_enregistrement_v11.md",
+  "a2e7ef3e237c5acf"
+ ],
+ "hors_perimetre_par_construction": [
+  "meta",
+  "reglage",
+  "prevol",
+  "mode",
+  "verdict",
+  "branche",
+  "comptes",
+  "attendus",
+  "banc_gardes",
+  "ne_joue_pas",
+  "T2"
+ ],
+ "nom": "depot_9bis_temoin_delta_prime_v1",
+ "perimetre": [
+  "T1",
+  "T1b",
+  "T3a",
+  "T3b"
+ ],
+ "profondeur": 5,
+ "reference": {
+  "T1": {
+   "A": {
+    "D_max": 330.22863738794933,
+    "H1_0": 2.0,
+    "N_0": 0.75,
+    "R": [
+     1.9528358208955223,
+     2.0299602568022013,
+     1.959036144578313,
+     2.0076875768757687
+    ],
+    "T_0": 400.0,
+    "T_MAX": 643.2,
+    "W_croissance": "MUETTE",
+    "W_integrales": {
+     "W_integrales": "MORD",
+     "b": 0.012,
+     "integrales": {
+      "H1": {
+       "derive_dt": 1.6143005154845014e-08,
+       "derive_dt2": 9.451071036892245e-10,
+       "ecart_a_4": 0.09428753194944761,
+       "q_int": 4.094287531949448,
+       "statut": "MORD"
+      },
+      "N": {
+       "derive_dt": 8.97172410437482e-10,
+       "derive_dt2": 2.913817335562877e-11,
+       "q_int": null,
+       "statut": "NON LUE (plancher, LD-16)"
+      }
+     },
+     "n_pas_dt2": 214400,
+     "omega_max": 2.0,
+     "plafond_int": 0.25,
+     "plancher_dt2": 4.760636329592671e-10,
+     "resolution_ok": true,
+     "tol_int": 0.008578984888782988,
+     "tol_int_sur_1": 0.008578984888782988
+    },
+    "caps": [
+     10.0,
+     20.0,
+     40.0,
+     80.0,
+     160.0
+    ],
+    "derive_H1_dt": 1.6143005154845014e-08,
+    "derive_H1_dt2": 9.451071036892245e-10,
+    "derive_N_dt": 8.97172410437482e-10,
+    "derive_N_dt2": 2.913817335562877e-11,
+    "disp_y": 0.0297736594257938,
+    "etat": [
+     1.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    "fenetre_1": false,
+    "fenetre_q": true,
+    "n_pas": 107200,
+    "n_pas_dt2": 214400,
+    "non_fini": null,
+    "pics": [
+     [
+      200.0,
+      199.08,
+      102.32769860888119
+     ],
+     [
+      400.0,
+      399.33,
+      205.24857326816888
+     ]
+    ],
+    "plafond_R": 0.25,
+    "prediction_tc4": 321.6,
+    "resolution_ok": true,
+    "saturation": false,
+    "t_c": [
+     20.1,
+     39.252,
+     79.68,
+     156.096,
+     313.392
+    ],
+    "tol_R": 0.0595473188515876,
+    "tol_R_sur_q_moins_1": 0.0595473188515876,
+    "x_max": 1.0,
+    "y": [
+     2.0100000000000002,
+     1.9626000000000001,
+     1.9920000000000002,
+     1.9512,
+     1.9586999999999999
+    ]
+   },
+   "B": {
+    "D_max": 510.8231315322101,
+    "H1_0": 10.0,
+    "N_0": 6.0,
+    "R": [
+     1.9385593220338981,
+     1.966848816029144,
+     1.9372105945545472,
+     2.012333875131466
+    ],
+    "T_0": 400.0,
+    "T_MAX": 271.872,
+    "W_croissance": "MUETTE",
+    "W_integrales": {
+     "W_integrales": "MORD",
+     "b": 0.021633307652783935,
+     "integrales": {
+      "H1": {
+       "derive_dt": 2.6814182092493865e-07,
+       "derive_dt2": 1.5558362065348773e-08,
+       "ecart_a_4": 0.1072341566948678,
+       "q_int": 4.107234156694868,
+       "statut": "MORD"
+      },
+      "N": {
+       "derive_dt": 1.59583396867428e-08,
+       "derive_dt2": 5.127902547030772e-10,
+       "ecart_a_4": 0.9597979058728923,
+       "q_int": 4.959797905872892,
+       "statut": "MORD"
+      }
+     },
+     "n_pas_dt2": 133333,
+     "omega_max": 3.605551275463989,
+     "plafond_int": 0.25,
+     "plancher_dt2": 2.96058733084692e-10,
+     "resolution_ok": true,
+     "tol_int": 0.01535612729760824,
+     "tol_int_sur_1": 0.01535612729760824
+    },
+    "caps": [
+     10.0,
+     20.0,
+     40.0,
+     80.0,
+     160.0
+    ],
+    "derive_H1_dt": 2.6814182092493865e-07,
+    "derive_H1_dt2": 1.5558362065348773e-08,
+    "derive_N_dt": 1.59583396867428e-08,
+    "derive_N_dt2": 5.127902547030772e-10,
+    "disp_y": 0.08033130887342055,
+    "etat": [
+     2.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    "fenetre_1": false,
+    "fenetre_q": true,
+    "n_pas": 66667,
+    "n_pas_dt2": 133333,
+    "non_fini": null,
+    "pics": [
+     [
+      200.0,
+      199.536,
+      254.91553117936212
+     ],
+     [
+      400.0,
+      399.858,
+      510.8231315322101
+     ]
+    ],
+    "plafond_R": 0.25,
+    "prediction_tc4": 135.936,
+    "resolution_ok": true,
+    "saturation": false,
+    "t_c": [
+     8.496,
+     16.47,
+     32.394,
+     62.754,
+     126.282
+    ],
+    "tol_R": 0.1606626177468411,
+    "tol_R_sur_q_moins_1": 0.1606626177468411,
+    "x_max": 2.0,
+    "y": [
+     0.8496,
+     0.8234999999999999,
+     0.80985,
+     0.7844249999999999,
+     0.7892625
+    ]
+   }
+  },
+  "T1b": {
+   "k_attendu_0": true,
+   "loi1": 1.9999994397658496,
+   "loi2": 0.4985551924373701,
+   "osc_enveloppe": 0.0045999999999999375,
+   "plafond_loi1": 0.25,
+   "plafond_loi2": 0.125,
+   "recherches": {
+    "a": {
+     "CAP": 100.0,
+     "T_MAX": 200.0,
+     "controle_positif": true,
+     "detail": "pas=6.03e-07 attendu(k=0)=6.03e-07 den=9863185 encadrement=[0.05, 6] seuil=0.9772529765993441 coherent=True",
+     "duree_s": 5.986557499999435,
+     "encadrement": [
+      0.05,
+      6.0
+     ],
+     "k": 0,
+     "motif": "OK|pas=6.03e-07",
+     "seuil": 0.9772529765993441
+    },
+    "b": {
+     "CAP": 200.0,
+     "T_MAX": 200.0,
+     "controle_positif": true,
+     "detail": "pas=6.03e-07 attendu(k=0)=6.03e-07 den=9863185 encadrement=[0.05, 6] seuil=1.954505405708197 coherent=True",
+     "duree_s": 6.021177600000556,
+     "encadrement": [
+      0.05,
+      6.0
+     ],
+     "k": 0,
+     "motif": "OK|pas=6.03e-07",
+     "seuil": 1.954505405708197
+    },
+    "c": {
+     "CAP": 100.0,
+     "T_MAX": 400.0,
+     "controle_positif": true,
+     "detail": "pas=6.03e-07 attendu(k=0)=6.03e-07 den=9863185 encadrement=[0.05, 6] seuil=0.4872145458084787 coherent=True",
+     "duree_s": 11.962761499999942,
+     "encadrement": [
+      0.05,
+      6.0
+     ],
+     "k": 0,
+     "motif": "OK|pas=6.03e-07",
+     "seuil": 0.4872145458084787
+    }
+   },
+   "regime": "LOIS",
+   "resolution_ok": true,
+   "stable": false,
+   "suit_lois": true,
+   "tol_loi1": 0.00920185110735102,
+   "tol_loi2": 0.002300927341751989,
+   "transcription_positif": true
+  },
+  "T3a": {
+   "A": {
+    "W_integrales": "MORD",
+    "b": 0.012,
+    "integrales": {
+     "H1": {
+      "derive_dt": 1.6143005154845014e-08,
+      "derive_dt2": 9.451071036892245e-10,
+      "ecart_a_4": 0.09428753194944761,
+      "q_int": 4.094287531949448,
+      "statut": "MORD"
+     },
+     "N": {
+      "derive_dt": 8.97172410437482e-10,
+      "derive_dt2": 2.913817335562877e-11,
+      "q_int": null,
+      "statut": "NON LUE (plancher, LD-16)"
+     }
+    },
+    "n_pas_dt2": 214400,
+    "omega_max": 2.0,
+    "plafond_int": 0.25,
+    "plancher_dt2": 4.760636329592671e-10,
+    "resolution_ok": true,
+    "tol_int": 0.008578984888782988,
+    "tol_int_sur_1": 0.008578984888782988
+   },
+   "B": {
+    "W_integrales": "MORD",
+    "b": 0.021633307652783935,
+    "integrales": {
+     "H1": {
+      "derive_dt": 2.6814182092493865e-07,
+      "derive_dt2": 1.5558362065348773e-08,
+      "ecart_a_4": 0.1072341566948678,
+      "q_int": 4.107234156694868,
+      "statut": "MORD"
+     },
+     "N": {
+      "derive_dt": 1.59583396867428e-08,
+      "derive_dt2": 5.127902547030772e-10,
+      "ecart_a_4": 0.9597979058728923,
+      "q_int": 4.959797905872892,
+      "statut": "MORD"
+     }
+    },
+    "n_pas_dt2": 133333,
+    "omega_max": 3.605551275463989,
+    "plafond_int": 0.25,
+    "plancher_dt2": 2.96058733084692e-10,
+    "resolution_ok": true,
+    "tol_int": 0.01535612729760824,
+    "tol_int_sur_1": 0.01535612729760824
+   }
+  },
+  "T3b": {
+   "w1_lam1_x01": {
+    "Omega2": 2.0,
+    "PASSE": true,
+    "e": 4.391520050384123e-09,
+    "horizon": 47.680220291024604,
+    "m": 0.25,
+    "n_pas": 7947,
+    "periode": 4.76802202910246,
+    "x0_formule": 1.0
+   },
+   "w1_lam1_x02": {
+    "Omega2": 5.0,
+    "PASSE": true,
+    "e": 4.3503508954934045e-08,
+    "horizon": 31.79723316781715,
+    "m": 0.4,
+    "n_pas": 5300,
+    "periode": 3.179723316781715,
+    "x0_formule": 2.0
+   },
+   "w1_lam1_x04": {
+    "Omega2": 17.0,
+    "PASSE": true,
+    "e": 7.143470489301418e-07,
+    "horizon": 17.752905637749908,
+    "m": 0.47058823529411764,
+    "n_pas": 2959,
+    "periode": 1.775290563774991,
+    "x0_formule": 4.0
+   }
+  }
+ },
+ "reference_empreinte": "644240dc894c2733",
+ "reference_fichier": "runs/run_temoin_delta85/resultats_temoin.json",
+ "sites_exemptes": [
+  "/T1b/recherches/a/duree_s",
+  "/T1b/recherches/b/duree_s",
+  "/T1b/recherches/c/duree_s"
+ ]
+}

@@ -1,0 +1,155 @@
+
+1. LES CITATIONS DE L ACTE, ET LES DEUX INDEX PAR CANON
+  [PASSE] l acte est ASCII pur, LF, newline final                    42696 octets
+  [PASSE] l acte cite des empreintes (compte etabli apres extraction 95 jetons distincts de 16 hex
+  [PASSE] chaque VALEUR declaree est bien citee par l acte           3ef1660b5147653b, 0491b83e6893dbbf, f150f2685187b9d2
+  [PASSE] chaque lot de TRANSPORT declare est bien cite par l acte   d0ab94382e1b5808
+  [PASSE] releve : HEAD d037d21, plafond 89, aucun fichier delta_90  464 fichiers suivis
+  [ note] index du poste                                             3046 canons distincts (B et brut), 1024 noms de table
+
+2. RESOLUTION DE CHAQUE CITATION -- AU REGISTRE, AU POSTE, OU NULLE PART
+   registre  c0f0f4f3b5477310  journal/journal_delta_89_R4R5_v5.md
+   registre  c8ed357b120352c4  scripts/m9_replication_v1.py
+   registre  8b083e9f109b5a8e  gels/temoin_negatif_pre_enregistrement_v7.md
+   registre  5fae2a8c94cf8685  scripts/banc_qualification_machine1_v3.py
+   registre  644240dc894c2733  runs/run_temoin_delta85/resultats_temoin.json
+   registre  6d7d23130e9322f8  runs/run_alpha_delta85/resultats_alpha.json
+   registre  10a7ce5688f515d5  journal/m2_run_temoin_reel.log
+   registre  3833ba551a390945  journal/m2_run_temoin_reel.log
+   registre  0e7e56006d2e200a  journal/m2_run_alpha_reel.log
+   registre  717b61caa5921aaa  journal/m2_run_alpha_reel.log
+   registre  f7f8be507eb5e9cb  runs/run_temoin_delta85/temoin_champ_forces_tirage.txt
+   poste     d71770d5948fe1aa  constante_A_pre_enregistrement_v3.md
+   poste     011c923203fcdaef  chaine_constante_A_pour_machine1/constante_A_pre_enregistrement_v4.md
+   poste     2c0d2dc86054838c  entrant_machine1_2026-09-09_constante_A_v5/constante_A_pre_enregistrement_v5.md
+   poste     d5ace962a3a6e413  entrant_machine1_2026-09-09_constante_A_v5/MANIFEST_lot_machine1_constante_A_v5.txt
+   poste     9e6376f936708077  chaine_constante_A_pour_machine1/note_machine2_certification_constante_A_v4_v1.md
+   poste     a92f60f936a2f75a  chaine_constante_A_pour_machine1/certif_constante_A_v3_machine2_v1.log
+   poste     df0431a0a57cc2b6  certification_constante_A_v5/CERTIFICATION_machine2_constante_A_v5_v1.md
+   poste     13d2973b0e143a20  certification_constante_A_v5/MANIFEST_lot_machine2_certification_constante_A_v5_v1.txt
+   poste     403488b4f6c319e9  temoin_negatif_pre_enregistrement_v9.md
+   poste     a2e7ef3e237c5acf  chaine_constante_A_pour_machine1/temoin_negatif_pre_enregistrement_v11.md
+   poste     7fc5f2412b99ad50  note_machine1_certification_temoin_v11_v2.md
+   poste     c4310e33da6b9759  depot_9bis_temoin_v1.json
+   poste     13601ef21efdc024  chaine_constante_A_pour_machine1/erratum_temoin_v11_clause_7i_tolerance_v1.md
+   poste     35b9ff3b8e5b7ef0  construction_banc_v4_machine1_v1.py
+   poste     36a3f06f19871c38  banc_qualification_machine1_v4.py
+   poste     81730d2bf7095c1f  construction_banc_v5_machine1_v1.py
+   poste     b8a0f75323182e55  banc_qualification_machine1_v5.py
+   poste     56c2ebfcfd84671e  banc_qualification_machine1_v6.py
+   poste     9a6e8b6192d4f163  banc_qualification_machine1_v7.py
+   poste     4d8882a2223a5c74  chaine_constante_A_pour_machine1/banc_qualification_machine1_v8.py
+   poste     be633ae91ae295b5  note_machine1_livraison_banc_v5_v1.md
+   poste     2a618ffb180ea568  chaine_constante_A_pour_machine1/note_machine2_controle_instrument_v8_v1.md
+   poste     aa98fa8b4ba921d8  note_machine1_cloture_cycle_contre_derivation_N70_v1.md
+   poste     b6d13e6a1559e850  entrant_machine1_2026-09-12_lecture_acte/SUIVI_campagne_2026-08-28b.md
+   poste     d0747b01700e4ad8  SUIVI_campagne_2026-08-29a.md
+   poste     4ef8235b16f26210  enumeration_cles_prevol_N70_machine2_v1.md
+   poste     4867dffe3392dea6  chaine_constante_A_pour_machine1/enumeration_cles_prevol_N70_machine2_v2.md
+   poste     a4c35a2ee691c9a7  chaine_constante_A_pour_machine1/MANIFEST_lot_machine2_chaine_constante_A_v1.txt
+   poste     0a24121e441cc0c3  m2_v8_prevol_temoin_resultats.json
+   poste     1a66059068654b4b  m2_v8_prevol_temoin.log
+   poste     c45ac9f59907fbf4  prevol_temoin_v8_machine1.log
+   poste     d3417a81e03b2861  entrant_machine1_2026-09-12_reponse_globale/lot/resultats_temoin_prevol_noyau_machine1.json
+   poste     95acd5d9c844eacc  entrant_machine1_2026-09-12_reponse_globale/lot/resultats_temoin_prevol_libm_machine1.json
+   poste     ca5456d3b11df0be  entrant_machine1_2026-09-12_reponse_globale/lot/MANIFEST_lot_machine1_reponse_globale_v1.txt
+   poste     7b7e388a562e5a8b  G4_trois/derivation_fenetre_delta_machine2_v1.py
+   poste     7883311c6e363b02  G4_trois/MANIFEST_lot_machine2_comparaison_a_trois_v1.txt
+   poste     9d9e949ed876424f  ACTE_constante_A/derivation_fenetre_delta_machine2_v2.py
+   poste     e3b707c589e9d1d8  ACTE_constante_A/MANIFEST_lot_machine2_acte_constante_A_v1.txt
+   poste     4353c80e60cef87c  ACTE_constante_A/derivation_fenetre_delta_machine2_v3.py
+   poste     56378e0f371f9681  ACTE_constante_A/MANIFEST_lot_machine2_reponse_lecture_acte_v1.txt
+   poste     f60104c0c3ba7ec4  ACTE_constante_A/derivation_fenetre_delta_machine2_v3.log
+   poste     be5ee780388d1965  entrant_machine1_2026-09-12_rejeu_relivraison/lot/MANIFEST_lot_machine1_rejeu_relivraison_v1.txt
+   poste     5231ce763b007399  G5_cloture/precision_de_la_borne_machine2_v1.py
+   poste     cd70cda556d60380  G5_cloture/MANIFEST_lot_machine2_cloture_geste2_v1.txt
+   poste     cbf120b4113bc8b1  ACTE_constante_A/DOSSIER_ARBITRAGE_constante_A_operateur_v1.md
+   poste     2b155abffbe4f6ff  entrant_machine1_2026-09-12_convergence_dt/lot/MANIFEST_lot_machine1_convergence_dt_7_1p73_v1.txt
+   poste     c8d86e5e5b4fd745  entrant_machine1_2026-09-12_convergence_dt/lot/convergence_dt_7_1p73_machine1_v1.json
+   poste     a826546552c3ae77  entrant_machine1_2026-09-12_convergence_dt/lot/note_machine1_convergence_dt_7_1p73_v1.md
+   poste     117bcfaa1f283059  entrant_machine1_2026-09-12_cause_ecart/lot/MANIFEST_lot_machine1_cause_ecart_7_1p73_v1.txt
+   poste     5ea2fa8d7457a125  entrant_machine1_2026-09-12_reponse_cas_durs/lot/MANIFEST_lot_machine1_reponse_cas_durs_BOCAL4_v1.txt
+   poste     950feb280cbcd92e  entrant_machine1_2026-09-12_reponse_globale/lot/note_machine1_reponse_globale_v1.md
+   poste     4cb991ce22ca35d0  entrant_machine1_2026-09-12_cloture_geste2/MANIFEST_lot_machine1_cloture_geste2_v1.txt
+   poste     6fbd0785accc5689  entrant_machine1_2026-09-12_cloture_geste2/note_machine1_cloture_geste2_v1.md
+   poste     1859bbc126bb52c7  entrant_machine1_2026-09-12_accuse_final/lot/MANIFEST_lot_machine1_erratum_cloture_geste2_v1.txt
+   poste     1f80e0e9b88f2ff2  entrant_machine1_2026-09-12_accuse_final/lot/note_machine1_erratum_cloture_geste2_v1.md
+   poste     eb7fb1cefbf2cec4  G2_convergence_dt/MANIFEST_lot_machine2_rejeu_convergence_dt_v1.txt
+   poste     f9e1c1922e32220d  G2_cause_ecart/MANIFEST_lot_machine2_cas_durs_BOCAL4_v1.txt
+   poste     3675daba802cbc6c  G3_reponse/MANIFEST_lot_machine2_reponse_globale_v1.txt
+   poste     be8aad100ff77f52  G4_trois/comparaison_a_trois_machine2_v1.py
+   poste     19f6b47b930591cf  G4_trois/erratum_seul_point_machine2_v1.py
+   poste     6e1409b06e887d97  ACTE_constante_A/relecture_nombres_acte_machine2_v1.py
+   poste     15b0bc7915c82bd7  ACTE_constante_A/controle_croise_classes_machine2_v1.py
+   poste     9965d3795d226b9a  ACTE_constante_A/verification_28b_et_conventionB_machine2_v1.py
+   poste     1985ad4eea984bf5  ACTE_constante_A/MANIFEST_lot_machine2_reponse_R_G2_5_v1.txt
+   poste     2121738de50e2324  ACTE_constante_A/verifications_lecture_m1_machine2_v1.py
+   poste     2304eec6aba3545b  ACTE_constante_A/ERRATUM_manifeste_lot_reponse_R_G2_5_machine2_v1.md
+   poste     5c84c48e9a9c72eb  ACTE_constante_A/MANIFEST_lot_machine2_cloture_tour_v1.txt
+   poste     412c6bb0a4c6d7b7  ACTE_constante_A/verifications_lecture_m1_machine2_v2.py
+   poste     b228e0f5a0197494  entrant_machine1_2026-09-12_lecture_acte/MANIFEST_lot_machine1_lecture_ouverture_acte_constante_A_v1.txt
+   poste     25b6f78bdf2ddcff  entrant_machine1_2026-09-12_R_G2_5/MANIFEST_lot_machine1_lecture_reponse_et_R-G2-5_v1.txt
+   poste     990a8fe5cec6ef87  entrant_machine1_2026-09-12_R_G2_5_v2/MANIFEST_lot_machine1_R-G2-5_v2_et_reception_v2.txt
+   poste     1c93be84b611e43b  entrant_machine1_2026-09-12_R_G2_5_v2/r_g2_5_pow_tableau_machine1_v2.py
+   poste     be6bb447da1f4363  entrant_machine1_2026-09-12_R_G2_5_v2/garde_chk_constante_machine1_v1.py
+   poste     d0ab94382e1b5808  ACTE_constante_A/MANIFEST_lot_machine2_RELIVRAISON_v1.txt
+   poste     df3bd37cbca40c36  ACTE_constante_A/assemblage_relivraison_machine2_v2.py
+   poste     7ee2d2d4fc0b27a1  R2_etat_constante_A/MANIFEST_lot_machine2_R2_constante_A_v1.txt
+   poste     bdd00189e68b61dc  R4R5_certification/MANIFEST_lot_machine2_certification_v3_v1.txt
+   poste     704f2b6b84f4c6a0  R4R5_certification/MANIFEST_lot_machine2_certification_v4_v1.txt
+   poste     ed09e29e91b6eb00  G2_convergence_dt/rejeu1_convergence_dt_machine2_v1.json
+   poste     0c577a23d67586c8  R4R5_certification/controle_cause_du_moins_dix_machine2_v1.py
+  [PASSE] toute empreinte citee resout par canon (registre, poste, o 11 au registre, 80 au poste, 1 zip, 3 valeurs
+  [ note] ZIP cite en brut, NON depose (precedent non pris)          bb9a94f13a2ed2cc  lot_machine2_2026-09-12_RELIVRAISON_v1.zip
+
+3. LES LOTS CITES ENTRENT AVEC LEURS PIECES DE TABLE
+   lot d5ace962a3a6e413  table  5 / declare 5    entrant_machine1_2026-09-09_constante_A_v5/MANIFEST_lot_machine1_constante_A_v5.txt
+   lot 13d2973b0e143a20  table  3 / declare 3    certification_constante_A_v5/MANIFEST_lot_machine2_certification_constante_A_v5_v1.txt
+   lot a4c35a2ee691c9a7  table  8 / declare 8    chaine_constante_A_pour_machine1/MANIFEST_lot_machine2_chaine_constante_A_v1.txt
+   lot ca5456d3b11df0be  table 10 / declare 10   entrant_machine1_2026-09-12_reponse_globale/lot/MANIFEST_lot_machine1_reponse_globale_v1.txt
+   lot 7883311c6e363b02  table  9 / declare 9    G4_trois/MANIFEST_lot_machine2_comparaison_a_trois_v1.txt
+   lot e3b707c589e9d1d8  table  5 / declare 5    ACTE_constante_A/MANIFEST_lot_machine2_acte_constante_A_v1.txt
+   lot 56378e0f371f9681  table  7 / declare 7    ACTE_constante_A/MANIFEST_lot_machine2_reponse_lecture_acte_v1.txt
+   lot be5ee780388d1965  table  5 / declare 5    entrant_machine1_2026-09-12_rejeu_relivraison/lot/MANIFEST_lot_machine1_rejeu_relivraison_v1.txt
+   lot cd70cda556d60380  table  5 / declare 5    G5_cloture/MANIFEST_lot_machine2_cloture_geste2_v1.txt
+   lot 2b155abffbe4f6ff  table  4 / declare 4    entrant_machine1_2026-09-12_convergence_dt/lot/MANIFEST_lot_machine1_convergence_dt_7_1p73_v1.txt
+   lot 117bcfaa1f283059  table  6 / declare 6    entrant_machine1_2026-09-12_cause_ecart/lot/MANIFEST_lot_machine1_cause_ecart_7_1p73_v1.txt
+   lot 5ea2fa8d7457a125  table 16 / declare 16   entrant_machine1_2026-09-12_reponse_cas_durs/lot/MANIFEST_lot_machine1_reponse_cas_durs_BOCAL4_v1.txt
+   lot 4cb991ce22ca35d0  table  1 / declare 1    entrant_machine1_2026-09-12_cloture_geste2/MANIFEST_lot_machine1_cloture_geste2_v1.txt
+   lot 1859bbc126bb52c7  table  1 / declare 1    entrant_machine1_2026-09-12_accuse_final/lot/MANIFEST_lot_machine1_erratum_cloture_geste2_v1.txt
+   lot eb7fb1cefbf2cec4  table 10 / declare 10   G2_convergence_dt/MANIFEST_lot_machine2_rejeu_convergence_dt_v1.txt
+   lot f9e1c1922e32220d  table  9 / declare 9    G2_cause_ecart/MANIFEST_lot_machine2_cas_durs_BOCAL4_v1.txt
+   lot 3675daba802cbc6c  table 12 / declare 12   G3_reponse/MANIFEST_lot_machine2_reponse_globale_v1.txt
+   lot 1985ad4eea984bf5  table  3 / declare 3    ACTE_constante_A/MANIFEST_lot_machine2_reponse_R_G2_5_v1.txt
+   lot 5c84c48e9a9c72eb  table  4 / declare 4    ACTE_constante_A/MANIFEST_lot_machine2_cloture_tour_v1.txt
+   lot b228e0f5a0197494  table  2 / declare 2    entrant_machine1_2026-09-12_lecture_acte/MANIFEST_lot_machine1_lecture_ouverture_acte_constante_A_v1.txt
+   lot 25b6f78bdf2ddcff  table  3 / declare 3    entrant_machine1_2026-09-12_R_G2_5/MANIFEST_lot_machine1_lecture_reponse_et_R-G2-5_v1.txt
+   lot 990a8fe5cec6ef87  table  4 / declare 4    entrant_machine1_2026-09-12_R_G2_5_v2/MANIFEST_lot_machine1_R-G2-5_v2_et_reception_v2.txt
+  [ note] lot de TRANSPORT d0ab94382e1b5808 : manifeste seul         re-livraison du fond a machine 1, 158 pieces sous leurs chemins
+   lot 7ee2d2d4fc0b27a1  table  3 / declare 3    R2_etat_constante_A/MANIFEST_lot_machine2_R2_constante_A_v1.txt
+   lot bdd00189e68b61dc  table 10 / declare 10   R4R5_certification/MANIFEST_lot_machine2_certification_v3_v1.txt
+   lot 704f2b6b84f4c6a0  table  9 / declare 9    R4R5_certification/MANIFEST_lot_machine2_certification_v4_v1.txt
+  [PASSE] 25 lots cites a deposer, chacun au compte de table declare 0 faux compte
+  [PASSE] aucune piece de table ne s ecarte de son manifeste         0 ecart
+  [PASSE] aucune piece de table n est introuvable a cote de son mani 0 introuvable
+  [PASSE] aucune piece retenue n est deja au registre par canon      194 retenues
+
+4. LE MANIFESTE DE DEPOT -- DERIVE, JAMAIS ECRIT A LA MAIN
+  [ note] collision de nom, prefixe du lot applique                  diagnostic_pow_cas_durs_machine1_v1.json -> lot_117bcfaa1f283059__diagnostic_pow_cas_durs_machine1_v1.json
+  [ note] collision de nom, prefixe du lot applique                  diagnostic_pow_cas_durs_machine1_v1.json -> lot_f9e1c1922e32220d__diagnostic_pow_cas_durs_machine1_v1.json
+  [ note] collision de nom, prefixe du lot applique                  diagnostic_pow_cas_durs_machine1_v1.log -> lot_117bcfaa1f283059__diagnostic_pow_cas_durs_machine1_v1.log
+  [ note] collision de nom, prefixe du lot applique                  diagnostic_pow_cas_durs_machine1_v1.log -> lot_f9e1c1922e32220d__diagnostic_pow_cas_durs_machine1_v1.log
+  [PASSE] aucun chemin cible en double ni deja au registre           198 chemins cibles
+  [PASSE] aucun doublon de canon dans le depot                       198 pieces
+  [PASSE] toute collision resolue porte le prefixe de son LOT (aucun 4 prefixes
+  [PASSE] les .md/.py/.txt deposes sont B == brut (ASCII/LF)         123 pieces texte
+  [PASSE] le manifeste relu porte autant de lignes que de pieces     198 lignes, 198 pieces
+  [PASSE] chaque source du manifeste resout encore au canon ecrit    0 ecart
+  [PASSE] le manifeste declare son compte, egal aux lignes           pieces : 198
+  [PASSE] le manifeste est ASCII                                     47557 octets
+
+=====================================================================
+BILAN PERIMETRE : 18/18 controles PASSENT
+95 empreintes citees : 11 au registre, 80 au poste, 1 zip, 3 valeurs, 0 non resolues
+DEPOT : 198 pieces (gels 5, journal 186, scripts 7) ; manifeste d32ccd1be84d07f7
+=====================================================================

@@ -1,0 +1,144 @@
+
+A. LES PIECES CITEES -- resolvent-elles ?
+  [PASSE] entrant_machine1_2026-09-09_constante_A_v5\c           2c0d2dc86054838c  (empreinte du gel lui-meme, non citee en 13)
+  [PASSE] constante_A_pre_enregistrement_v4.md                   011c923203fcdaef
+  [PASSE] note_machine2_certification_constante_A_v4_v           9e6376f936708077
+  [PASSE] constante_A_pre_enregistrement_v3.md                   d71770d5948fe1aa
+  [PASSE] alpha_pre_enregistrement_v5.md                         045c2435aaf623ce
+  [PASSE] temoin_negatif_pre_enregistrement_v7.md                8b083e9f109b5a8e
+  [PASSE] temoin_negatif_pre_enregistrement_v8.md                7ba4af8140b7a385
+  [PASSE] temoin_negatif_pre_enregistrement_v9.md                403488b4f6c319e9
+  [PASSE] note_machine1_certification_temoin_v9_v1.md            b5da74783e5f97c6
+  [PASSE] note_machine1_certification_temoin_v8_v1.md            ded4a5721601bd1e
+  [PASSE] note_machine2_certification_constante_A_v3_v           52f76b9b82e7c861
+  [PASSE] certif_constante_A_v3_machine2_v1.py                   1fa0c0eb3a341e09
+  [PASSE] banc_qualification_machine1_v3.py                      5fae2a8c94cf8685
+
+B. SECTION 3 -- delta', J minimal, les trois planchers
+  [PASSE] J minimal = 5 (J = 4 echoue)                           J=5
+  [PASSE] delta' = 1/102400 au texte                             
+  [PASSE] delta'/delta_0 = 1/1024                                
+  [PASSE] temoin de minimalite 9/3328000                         
+  [PASSE] plancher(p=4) = 1/2048000                              
+  [PASSE] plancher(p=5) = 9/13312000                             
+  [PASSE] plancher(p=7) = 1/1089536                              
+
+C. LE PLANCHER EST-IL BIEN CELUI DU v5 10.3 ?
+  [PASSE] v5 10.3 porte delta / ((alpha_p + 2)(alpha_p + 3))     
+  [PASSE] v5 : plancher(p=4) = 1/2000 a delta_0                  
+  [PASSE] v5 : plancher(p=5) = 9/13000 a delta_0                 
+  [PASSE] v5 : plancher(p=7) = 1/1064 a delta_0                  
+  [PASSE] v5 10.3 : le facteur (p-2) est deja dans la comparaison 
+
+D. SECTION 4 -- les quatre tables, derivees puis cherchees
+  [PASSE] 4.3 tau_dom(w2=1.73) = 1.563889e-03                    
+  [PASSE] 4.3 tau_CAP(w2=1.73) = 1.563889e-04                    
+  [PASSE] 4.3 dt_2a(w2=1.73) = 1.563889e-04                      
+  [PASSE] 4.3 dt_2b(w2=1.73) = 7.819443e-06                      
+  [PASSE] 4.3 tau_dom(w2=2.27) = 1.259825e-03                    
+  [PASSE] 4.3 tau_CAP(w2=2.27) = 1.259825e-04                    
+  [PASSE] 4.3 dt_2a(w2=2.27) = 1.259825e-04                      
+  [PASSE] 4.3 dt_2b(w2=2.27) = 6.299123e-06                      
+  [PASSE] 4.3 tau_dom(w2=2.80) = 1.051051e-03                    
+  [PASSE] 4.3 tau_CAP(w2=2.80) = 1.051051e-04                    
+  [PASSE] 4.3 dt_2a(w2=2.80) = 1.051051e-04                      
+  [PASSE] 4.3 dt_2b(w2=2.80) = 5.255256e-06                      
+  [PASSE] 4.4 et 4.5 : les 18 valeurs derivees sont au texte     18/18
+  [PASSE] 4.5 debordement max g|x|^(p-1)                         
+
+E. SECTIONS 4.6 / 4.7 -- comptes nominaux et intervalles
+  [PASSE] n_2a nominal = 620 (derive)                            
+  [PASSE] n_2b nominal = 380 (derive)                            
+  [PASSE] n_2b' = M k / r = 400 (derive)                         
+  [PASSE] fenetre = M (1-r)/r = 180 (derive)                     
+  [PASSE] 4.6 intervalle n_2b = [360, 381]                       
+  [PASSE] 4.7 n_2s(w2=1.73) = 658                                
+  [PASSE] 4.7 intervalle [620, 659]                              
+  [PASSE] 4.6 intervalle [581, 621]                              
+  [PASSE] 4.7 n_2s(w2=2.27) = 631                                
+  [PASSE] 4.7 intervalle [620, 668]                              
+  [PASSE] 4.6 intervalle [572, 621]                              
+  [PASSE] 4.7 n_2s(w2=2.80) = 646                                
+  [PASSE] 4.7 intervalle [620, 678]                              
+  [PASSE] 4.6 intervalle [562, 621]                              
+
+F. LA MESURE REGLE 15 -- egaux en exact, pas au bit
+  [PASSE] k/400 == r/M en exact                                  1/200
+  [PASSE] orthographe (tau/10)/20 : ecart a 2.27 et 2.80 seulement ecart a 2.27, 2.80
+  [PASSE] orthographe (0.1 tau)/20 : ecart aux TROIS w2          ecart a 1.73, 2.27, 2.80
+  [PASSE] 4.7 ecrit que le verdict dependrait de l ORTHOGRAPHE   
+
+G. SECTION 9 -- les dix-huit denominateurs, cites VERBATIM
+  [PASSE] les 18 denominateurs du 85 sont au texte, AU BIT       18/18
+  [PASSE] 9 bruit_R(p=4) et son rapport                          
+  [PASSE] 9 bruit_R(p=5) et son rapport                          
+  [PASSE] 9 bruit_R(p=7) et son rapport                          
+
+H. SECTION 1 -- les citations du v5, contre le TEXTE du v5
+  [PASSE] 2  : K exacts et A_p identiques au v5 2.3              
+  [PASSE] 4  : comptes + sautes == 90 identique au v5 4.5        
+  [PASSE] 5.2: dt_1 = 0.006 et T_MAX = 400 sont au v5 5.2        
+  [PASSE] 5.6: le v5 qualifie l indice ("la ou il est accessible") 
+  [PASSE] 5.6: la citation REPREND le qualificatif (R-A-2)       sinon la citation DURCIT la garde
+  [PASSE] 5.7: le v5 dit "l etat complet a la bascule", au SINGULIER 
+  [PASSE] 5.7: la citation revient a la lettre du v5 (R-A-1)     
+  [PASSE] 5.7: la citation n AJOUTE plus rien (R-A-1)            AJOUTE 'et a chaque depart d etage'
+  [PASSE] 8  : les huit gardes nommees existent au v5 8          
+  [PASSE] 9  : le v5 porte bien les branches 0 a 7               
+  [PASSE] 10 : la forme de 10.3 est citee sans alteration        
+
+I. LE GEL TEMOIN CITE PAR LA PORTE -- R-A-3
+  [PASSE] le gel temoin CERTIFIE est bien la v9                  
+  [PASSE] le gel cite la v9 avec son empreinte                   
+  [PASSE] le v4 cite la certification croisee de la v9           
+  [PASSE] 5 : la porte ne depend plus de la v8                   
+  [PASSE] 5 : la porte porte la v9                               
+  [PASSE] 11 : les comptes du volet T sont ceux de la v9         
+  [PASSE] les 3 mentions de v8 restantes sont HISTORIQUES        
+
+J. SECTION 4.8 -- les comptes de la jumelle -- R-A-4
+  [PASSE] 4.8 porte desormais des intervalles de compte          
+  [PASSE] 4.8 n_2a jumelle w2=1.73 = [1162, 1242]                
+  [PASSE] 4.8 n_2s jumelle w2=1.73 = [1240, 1318]                
+  [PASSE] 4.8 n_2a jumelle w2=2.27 = [1144, 1242]                
+  [PASSE] 4.8 n_2s jumelle w2=2.27 = [1240, 1336]                
+  [PASSE] 4.8 n_2a jumelle w2=2.80 = [1124, 1242]                
+  [PASSE] 4.8 n_2s jumelle w2=2.80 = [1240, 1356]                
+  [PASSE] 4.8 n_2b jumelle = [720, 762]                          
+  [PASSE] 4.8 n_2b' jumelle = 800 exact                          
+
+K. SECTION 4.7 -- t_start se LIT-il desormais ? -- R-A-5
+  [PASSE] 4.7 dit que t_start est LU du journal de phase 1       
+  [PASSE] 4.7 dit qu il ne se RE-calcule jamais                  
+  [PASSE] la formule reste, declaree comme le POINT VISE         
+  [PASSE] la mesure citee est la mienne, et elle tient           accumulee 399.893999999333 contre recalcul 399.894000000000
+
+L. SECTION 4.9 -- l'exigence est-elle declaree NEUVE ? -- R-A-1
+  [PASSE] 4.9 existe                                             
+  [PASSE] 4.9 se declare EXIGENCE NEUVE et PAS une citation      
+  [PASSE] 4.9 rappelle ce que le v5 5.7 exige vraiment (A LA BASCULE) 
+  [PASSE] 4.9 enumere les quatre etages                          
+
+M. SECTION 13 -- les empreintes portent-elles leur CONVENTION ?
+  [PASSE] 13 se declare en convention B (sauf mention brut)      
+  [PASSE] aucune empreinte BRUTE non signalee dans un bloc convention B 
+
+N. LE CONTROLE REECRIT EST-IL DISCRIMINANT ? (v4 contre v5)
+  [PASSE] le M reecrit MORD encore sur le v4                     certif_constante_A_v3_machine2_v1.log cite a92f60f936a2f75a sans nommer sa convention
+  [PASSE] le M reecrit PASSE sur le v5                           le v5 nomme la convention de chaque brute citee
+  [PASSE] il SEPARE donc les deux versions                       un controle qui ne les separerait plus ne certifierait rien
+
+O. LE DIFF v4 -> v5, COMPTE PUIS NOMME
+   5 hunks, +12 / -3 lignes
+      @@ -1 +1 @@
+      @@ -3,0 +4,5 @@
+      @@ -572 +577 @@
+      @@ -578,0 +584,3 @@
+      @@ -586,2 +594,2 @@
+  [PASSE] elle annonce CINQ hunks, +12 / -3 : le diff les rend   5 hunks, +12/-3
+  [PASSE] un seul hunk touche le fond, et c est la ligne de la morsure certif_constante_A_v3_machine2_v1.log              a92f60f936a2f75
+  [PASSE] ce hunk ne change ni nombre ni tolerance ni perimetre  il ne fait que nommer la convention d une empreinte deja juste
+
+======================================================================
+CONTROLES : 104 ; PASSENT : 104 ; MORDENT : 0
+======================================================================

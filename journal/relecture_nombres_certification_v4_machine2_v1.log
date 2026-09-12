@@ -1,0 +1,38 @@
+====================================================================================
+RELECTURE DES NOMBRES DE MA NOTE v4
+====================================================================================
+
+[1] LES COMPTEURS, CONTRE MES LOGS
+  [OK  ] 33 controles, 32 tenus, 1 mord                         33 / 32 tenus / 1 mord
+  [OK  ] 6 hunks, +17 / -7, et -6 par prefixe                   
+  [OK  ] l'erratum : 10 par prefixe, 11 par position            
+
+[2] LES SIX COLONNES : TOUTE BORNE EST CALCULEE, JAMAIS LUE
+  [OK  ] six colonnes                                           6
+  [OK  ] borne basse de P_env = min(mesures) = 189.7            189.7
+  [OK  ] borne haute de P_env = max(mesures) = 2284.1           2284.1
+  [OK  ] 210.5 est bien le PREMIER de ma liste, pas le minimum  
+  [OK  ] 2284.1 est le troisieme ET le maximum (ma note le dit) 
+  [OK  ] periodes : min 4.2, max 5.5                            
+  [OK  ] s : 0.424881 a 0.467870, cites                         
+  [OK  ] les six sont sous s*(30) = 0.472090                    
+  [OK  ] le tableau des six lignes de ma note est celui du log  
+  [OK  ] la ligne marquee 'borne basse' est bien celle de 189.7 
+
+[3] LES EMPREINTES ET LES TAILLES
+  [OK  ] d467a239c3555737 = journal_delta_nn_R4R5_v4.md         lu d467a239c3555737
+  [OK  ] 7b4918f7837511dd = MANIFEST_lot_machine1_R4R5_acte_v4. lu 7b4918f7837511dd
+  [OK  ] 34728 octets                                           34728
+  [OK  ] enveloppe e44aa27c81335eb1                             e44aa27c81335eb1
+
+[4] LES COMPTES DE PIECES ET LE DEPOT
+  [OK  ] 22 pieces, 20 au bit, 2 neuves                         
+  [OK  ] la piece de depot : 34728 octets, ZERO different       
+  [OK  ] 18 reperes 'nn', et c'est le compte de la v2 deposee   18 et 18
+  [OK  ] plus longue ligne hors table = 97 caracteres           
+  [OK  ] table localisee l. 294-304                             
+  [OK  ] 23 mots contre 23 dans H10                             
+
+====================================================================================
+BILAN : 23 controles, 0 mordent
+====================================================================================

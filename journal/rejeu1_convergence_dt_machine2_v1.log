@@ -1,0 +1,24 @@
+[2026-09-12T00:24:33Z] CANON      instrument v8 4d8882a2223a5c74 (193651 o, CRLF False) ; temoin v11 a2e7ef3e237c5acf (72281 o, CRLF False) -- authentifies
+[2026-09-12T00:24:33Z] IMPORT     instrument importe en lecture : VERSION=banc_qualification_machine1_v8 ; DELTA=1/102400 ; R_CAP=1/10 ; M_PAS=20 ; K_BASC=2
+[2026-09-12T00:24:36Z] MOTEUR     C:/Users/bazil/AppData/Local/Temp/claude/d--devs-bocal/679de419-e3bc-4cde-a3dd-eb127386eb66/scratchpad/SG_1/scripts/m9_replication_v1.py sha256 brut c8ed357b120352c4 -- charge par charger_moteur de l'instrument (registre C:/Users/bazil/AppData/Local/Temp/claude/d--devs-bocal/679de419-e3bc-4cde-a3dd-eb127386eb66/scratchpad/SG_1) ; P=5 DT=0.006
+[2026-09-12T00:24:36Z] PLATEFORME python 3.11.9 ; numpy 2.2.6 ; Windows-10-10.0.26200-SP0 ; AMD64
+[2026-09-12T00:24:36Z] CELLULE    p=7 w2=1.73 alpha=4/5 A=3.142438761846983 tau_dom=0.001563888567554228 tau_CAP=0.00015638885675542283 dt2=7.819442837771142e-06 tau0=k*tau_dom=0.003127777135108456
+[2026-09-12T00:24:36Z] REGLE-5.4  tol_ordre(7)=0.17202346732631016 C_eff(7)=8.896551724137932 eps=2.220446049250313e-16 ; bande de lecture de p_obs [3.8280, 4.1720]
+[2026-09-12T00:24:36Z] ATTENTE    compte attendu des flots : 4 (dt2/2^k, k=0..3), n_pas attendu 380 x 2^k ; chaque flot doit finir sur TAU_FIN
+[2026-09-12T00:24:36Z] ATTENTE    E-A : aux deux paires raffinees (bases dt2/2 et dt2/4), p_obs HORS [3.8280, 4.1720] ; falsifiee si l'une y entre
+[2026-09-12T00:24:36Z] ATTENTE    E-B : e(dt2/2)/plancher a la paire du gel dans [4.35, 8.49] (0.684 et 0.759 x C_eff, elargis de 1.74 plancher) ; falsifiee sinon
+[2026-09-12T00:24:36Z] ATTENTE    E-C : aucune attente sur le signe de p_obs a la derniere paire ; consigne seulement
+[2026-09-12T00:24:36Z] FLOT-0     dt2 dt=7.819443e-06 n_pas=380 (attendu 380, conforme) TAU_FIN tau_fin=1.563889e-04 e=1.048162e-06 R=59087267.823 plancher=1.312001e-08 e/plancher=79.8903 tau_max=1.5639e-04 (R la 59087267.823) err_fin=1.048e-06
+[2026-09-12T00:24:36Z] FLOT-1     dt2/2 dt=3.909721e-06 n_pas=760 (attendu 760, conforme) TAU_FIN tau_fin=1.563889e-04 e=7.986105e-08 R=59087456.047 plancher=1.312005e-08 e/plancher=6.0869 tau_max=1.5639e-04 (R la 59087456.047) err_fin=7.986e-08
+[2026-09-12T00:24:36Z] FLOT-2     dt2/4 dt=1.954861e-06 n_pas=1520 (attendu 1520, conforme) TAU_FIN tau_fin=1.563889e-04 e=1.852075e-08 R=59087466.883 plancher=1.312005e-08 e/plancher=1.4116 tau_max=1.5639e-04 (R la 59087466.883) err_fin=1.852e-08
+[2026-09-12T00:24:37Z] FLOT-3     dt2/8 dt=9.774304e-07 n_pas=3040 (attendu 3040, conforme) TAU_FIN tau_fin=1.563889e-04 e=1.653085e-08 R=59087466.259 plancher=1.312005e-08 e/plancher=1.2600 tau_max=1.5639e-04 (R la 59087466.259) err_fin=1.653e-08
+[2026-09-12T00:24:37Z] PAIRE-0    (dt2, dt2/2) p_obs=3.7142 HORS bande ; 5.4 sur le flot fin : e/seuil=0.6842 C_eff=8.8966 W-plancher MORD W-pas NON LU (plancher, 5.4) [PAIRE DU GEL]
+[2026-09-12T00:24:37Z] PAIRE-1    (dt2/2, dt2/4) p_obs=2.1083 HORS bande ; 5.4 sur le flot fin : e/seuil=0.1587 C_eff=8.8966 W-plancher MORD W-pas NON LU (plancher, 5.4)
+[2026-09-12T00:24:37Z] PAIRE-2    (dt2/4, dt2/8) p_obs=0.1640 HORS bande ; 5.4 sur le flot fin : e/seuil=0.1416 C_eff=8.8966 W-plancher MORD W-pas NON LU (plancher, 5.4)
+[2026-09-12T00:24:37Z] VERDICT-E-A TENUE : p_obs raffines = ['2.1083', '0.1640'] ; bande [3.8280, 4.1720]
+[2026-09-12T00:24:37Z] VERDICT-E-B TENUE : e(dt2/2)/plancher = 6.0869 dans [4.35, 8.49] ; e/seuil (grandeur des deux machines) = 0.6842 contre 0.759 (m1 28/08) et 0.684 (m2)
+[2026-09-12T00:24:37Z] E-C        signe de p_obs a la derniere paire : positif (0.1640), consigne sans attente
+[2026-09-12T00:24:37Z] COMPTE     flots joues 4 + sautes 0 == attendus 4 : OK
+[2026-09-12T00:24:37Z] LECTURE    ECART DERIVE du plancher (E-A tenue) -- classe 3, aucun verdict de gel, la tenaille n'est pas lue ici
+[2026-09-12T00:24:37Z] JSON       d:/devs/bocal/BOCAL4/G2_convergence_dt\convergence_dt_7_1p73_machine1_v1.json ecrit, empreinte B ed09e29e91b6eb00
+[2026-09-12T00:24:37Z] FIN        3.7 s

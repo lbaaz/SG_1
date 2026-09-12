@@ -1,0 +1,23 @@
+====================================================================================
+DEUX REJEUX AU MEME POSTE -- BRUIT OU DIFFERENCE DETERMINISTE ?
+====================================================================================
+      poste : python 3.11.9 ; numpy 2.2.6 ; Windows-10-10.0.26200-SP0
+
+[1] LES QUATRE FLOTS, SIX GRANDEURS CHACUN
+      dt2/1    e = 1.0481615698622637e-06   les six au bit
+      dt2/2    e = 7.986105272223979e-08   les six au bit
+      dt2/4    e = 1.8520748469025595e-08   les six au bit
+      dt2/8    e = 1.6530853961382515e-08   les six au bit
+
+[2] LES TROIS PAIRES
+      paire 0 : p_obs = 3.714225219800125   bit
+      paire 1 : p_obs = 2.1083496869577365   bit
+      paire 2 : p_obs = 0.16398114841879496   bit
+
+====================================================================================
+VERDICT : LES DEUX REJEUX SONT IDENTIQUES AU BIT.
+  Mon poste est DETERMINISTE sur ce calcul. Le mot 'bruit' ne decrit donc pas
+  ce qui separe les deux machines : c'est une difference DETERMINISTE entre
+  deux plateformes, reproductible de chaque cote. Elle demande une cause.
+  CE QUE CETTE FEUILLE NE DIT PAS : quelle cause. Aucune n'est proposee ici.
+====================================================================================

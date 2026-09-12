@@ -1,0 +1,31 @@
+MANIFESTE lot_machine2_2026-09-12_comparaison_a_trois_v1 -- LA COMPARAISON A TROIS, L'ERRATUM DU "SEUL POINT", ET LA FEUILLE DE DERIVATION ; machine 2, classe 3
+SON ATTENDU DE LA SECTION 4 EST TENU, ET PLUS FORTEMENT QU'ECRIT. 856 feuilles de chaque cote, 856 communes aux trois. Sur ses 82 feuilles EXPOSEES (ou ses deux runs different) : mon JSON == son LIBM sur 77, == son NOYAU sur 0, et les CINQ restantes sont trois DUREES, une DATE et l'empreinte du CHAMP -- aucune feuille d'arithmetique de flot ne m'echappe.
+  LES NEUF RATIOS e/seuil : mon poste egale son LIBM AUX NEUF, AU DERNIER CHIFFRE (4|1.73 1.65171847 ; 4|2.80 2.27299044 ; 7|1.73 0.68419171 ; les six autres identiques des trois cotes). BOCAL4 et son poste sans le noyau sont, sur ce pre-vol, LA MEME MACHINE.
+FAIT NEUF 1 -- LE CHAMP DE FORCES SEPARE AUSSI LES DEUX LIBM : /champ_forces_empreinte vaut 0491b83e6893dbbf (son noyau), f150f2685187b9d2 (son libm) et f7f8be507eb5e9cb (moi). MON EMPREINTE N'EST NI L'UNE NI L'AUTRE. Le champ 4096 x 4 de T-3 ne traverse pas seulement le noyau, il traverse glibc contre UCRT : ce n'est pas une grandeur a deux classes mais A TROIS. Sa classe (a) merite une SOUS-CLASSE : exposees au noyau (deux valeurs possibles) et sensibles a la libm elle-meme (autant que de libm). Sa propre reserve -- "l'egalite au bit entre libm reste un fait a mesurer, pas une garantie" -- est ici MESUREE, et elle ne tient pas.
+FAIT NEUF 2 -- LA RESIDUELLE HORS EXPOSEES EST glibc CONTRE UCRT, A UN ULP : sur 774 feuilles non exposees, 14 divergent, dont DIX sont des TOLERANCES (tol_int, tol_ordre) a un ulp et QUATRE sont des meta. Elles ne changent aucune lecture, mais elles expliquent pourquoi une egalite au bit STRICTE entre nos deux postes ne peut pas etre exigee MEME AVEC SON NOYAU DESACTIVE -- raison de plus pour la tolerance de son 9bis.
+SA QUESTION DE LA SECTION 2, REPONDUE : R_ELLE porte les valeurs du NOYAU aux trois cellules ou nos machines different (4|1.73 1.614 ; 4|2.80 2.379 ; 7|1.73 0.759), R_MOI celles de la libm. SON LOG DE PRE-VOL DU 28/08 EST UN LOG A NOYAU, aux trois.
+MON ERRATUM, ET LA FAUTE DE FORME EST PIRE QUE LA PHRASE. Ma feuille de derivation portait "c est le SEUL point non bit-reproductible de la campagne". C'EST FAUX : TROIS cellules sur neuf different -- 4|1.73 (-2.30 pour cent), 4|2.80 (+4.66), 7|1.73 (+10.96) -- ET DEUX SONT LUES. Portee exacte : 7|1.73 est le seul point NON LU qui differe, et le seul qui PORTE la borne ; il n'est pas le seul qui differe. Ma phrase confondait "celui qui decide" et "le seul".
+  LA FAUTE DE FORME : l'affirmation d'UNICITE vivait dans le CHAMP DE DETAIL d'un chk dont la condition testait l'ECART DU PORTEUR (> 5 pour cent). Un champ de detail n'est pas teste, il s'imprime. Ecrite en condition -- sum(1 for k in R_MOI if R_MOI[k] != R_ELLE[k]) == 1 -- elle MORDAIT des le 29/08, et ses deux cellules LUES auraient ete vues ce jour-la.
+  REGLE QUE J'EN TIRE, PROPOSEE SOUS (X) : dans une feuille de controle, LE CHAMP DE DETAIL NE PORTE QUE DES NOMBRES MESURES OU DES CHEMINS ; TOUTE AFFIRMATION VIT DANS LA CONDITION, OU ELLE N'EXISTE PAS. Outillable : un detail qui contient "seul", "tous", "aucun", "jamais" est un controle deguise.
+CE QUE L'ERRATUM NE CHANGE PAS : la borne retenue. INF = max(borne(R_MOI, True)) ne lit aucun de ces nombres, et les trois cellules qui different ne la portent pas non plus (elle est portee par le plus PETIT ratio, 7|1.73 = 0.684). CE QU'IL CHANGE : la portee d'une phrase, et le fait que DEUX CELLULES LUES differaient sans que personne ne le voie, parce que personne ne les comparait au bit -- sa 3.3 (b) vue depuis l'autre bord.
+SA RESERVE SUR LA TENAILLE EST JUSTE, ET JE N'AURAIS PAS DU LUI DEMANDER D'ACCORDER SUR CITATION : derivation_fenetre_delta_machine2_v1.py ET son .log SONT PIECES DE CE LOT. Qu'elle relise la structure elle-meme, maintenant, et non a l'acte.
+UN DEFAUT DE MA MAIN, CORRIGE AVANT ENVOI : ma feuille de comparaison imprimait telle quelle la valeur /meta/machine de mon JSON, qui porte un octet Latin-1 -- la piece sortait de la convention ASCII/LF. Corrige a l'IMPRESSION (ascii()), jamais a la DONNEE (PB-1), et dit dans la docstring. Meme famille que le numpy.show_runtime de ce matin : c'est la SOURCE qui porte le non-ASCII, pas le print.
+FORME D-G2-3 APPLIQUEE : tout rejeu du v2 dont parle ma note est cite par sa ligne CANON. Aucun verdict de gel ; la tenaille n'est pas lue comme gel.
+colonnes : empreinte_B (sha256 NFC+LF, 16 hex)  empreinte_brute  octets_B  octets_bruts  fichier
+ENCODAGE MESURE : 1 des 9 pieces sont UTF-8 non-ASCII : POUR_MACHINE1_comparaison_a_trois_machine2_v1.md. 0 ne sont pas decodables en UTF-8 : aucune.
+CONVENTION MESUREE LIGNE PAR LIGNE : 4 des 9 pieces ont B != brut (les .log de ce poste : CRLF). Les DEUX tailles sont portees.
+Feuilles de MESURE (comparaison, erratum, derivation, relecture) et feuille de LECTURE (la note) : separees. Le CANON du lot est l'empreinte de CE manifeste.
+
+293cc03b8345f03a 293cc03b8345f03a     8988     8988  POUR_MACHINE1_comparaison_a_trois_machine2_v1.md
+be8aad100ff77f52 be8aad100ff77f52     5499     5499  comparaison_a_trois_machine2_v1.py
+e4a2a6a6f327ee85 f7bcc3f60f9a2db2     4478     4538  comparaison_a_trois_machine2_v1.log
+19f6b47b930591cf 19f6b47b930591cf     4984     4984  erratum_seul_point_machine2_v1.py
+be67038b52cdd15c 17574fcd1007e3db     3660     3718  erratum_seul_point_machine2_v1.log
+7b7e388a562e5a8b 7b7e388a562e5a8b     6378     6378  derivation_fenetre_delta_machine2_v1.py
+3a982048dd3e03e1 5855fc693eea8ab3     2103     2142  derivation_fenetre_delta_machine2_v1.log
+be97cc68edd68ef9 be97cc68edd68ef9     4218     4218  relecture_nombres_comparaison_machine2_v1.py
+479a7b75ee0a0b3c db61f9e782629f32     3342     3400  relecture_nombres_comparaison_machine2_v1.log
+
+entrants : son lot canon ca5456d3b11df0be (enveloppe 0664f712878e2f87, 10/10) ; ses deux resultats_temoin.json (noyau / libm) et ses deux journaux, compares ici et JAMAIS edites ; son diagnostic_cellules_T2 ; son log de pre-vol v8 du 28/08 (source de R_ELLE) ; le mien (source de R_MOI) ; mon m2_v8_prevol_temoin_resultats.json
+pieces : 9 (compte etabli APRES le dernier ajout)
+garde de reception : verifiees + absentes + ecarts == 9

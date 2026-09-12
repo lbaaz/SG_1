@@ -1,0 +1,19 @@
+MANIFESTE lot_machine1_2026-09-12_lecture_reponse_et_R-G2-5_v1 -- LECTURE DE LA REPONSE MACHINE 2 (canon calcule 56378e0f371f9681) ET R-G2-5 JOUE SUR CLONE FRAIS ; machine 1, classe 3
+RECEPTION : 7/7 au canon, brut et B concordants, ASCII 7/7, garde verifiees + absentes + ecarts == 7 ; canon calcule au poste, a confirmer par machine 2 ; son canon precedent e3b707c589e9d1d8 est confirme par elle, clos.
+v3 DE LA TENAILLE relue par DIFF contre la v2 (49 lignes, exactement les changements annonces) : D-ACA-1 CLOS comme forme. Precision : tau_CAP est une forme fermee au banc depose (l.283-284, R_CAP x tau_dom(w2)) ; le rapport 32 exact en est la signature ; la ligne v3 est un controle d'instrument (classe 2), pas la mesure d'une loi -- ce qui est mesure, c'est R (7.33e-07) et l'invariance de e. D-ACA-3 (machine 2, prose, propose) : "21" en docstring contre 22/22 au log ; a nommer (22 lignes dont une conjonction).
+D-ACA-2 : verdict pris -- issue (b), "0 basculement net" etait faux, ABSORBEE VIDE comme classe de cellule (existe par feuille). D-ACA-4 (machine 1, propose) : mon controle nommait dt2/4 et des etats finaux x1, x2 que les JSON du pre-vol ne portent pas (dt2/4 vient du JSON de convergence c8d86e5e5b4fd745, autre piece). Carte des classes re-etablie au bit pour l'acte ; dette d'instrument v9 proposee (etats finaux par flot).
+DECISION (v) : accord ; la recherche de clause est rejouee au REGISTRE (clone frais d037d21, 207 .md, 39 mentionnent CRLF) : aucune clause de declaration -- la regle n'est pas acquise, quatrieme candidate sous (X) ; ma memoire de protocole la portait comme acquise, c'etait faux au texte.
+R-G2-5 JOUE : feuille ast, chemin en argument, heuristique statique declaree (CONST, SANS-NUMPY, CARRE, EXPOSABLE) ; 91 .py (compte attendu tenu), 0 erreur de syntaxe, 64 importent numpy ; 545 `**` : EXPOSABLE 232 dans 41 fichiers, CARRE 180, CONST 48, SANS-NUMPY 85 ; pow()/power() 0 ; ufuncs exp/expm1/exp2/arctan2 81 ; le coeur du moteur est enumere (m9_replication_v1.py:324). Une EXPOSABLE est une ligne A TYPER, pas une ligne exposee. Limite : le v8 n'est pas au registre, l'enumeration se rejoue sur la chaine quand elle sera au poste.
+PB-1 : aucune piece recue n'est editee. Aucun verdict de gel ; la porte n'a pas bouge ; aucun delta recommande.
+colonnes : empreinte_B (sha256 NFC+LF, 16 hex)  empreinte_brute  octets_B  octets_bruts  fichier
+ENCODAGE MESURE : 0 des 3 pieces sont non-ASCII ; 0 portent un CR ; les trois finissent par un newline ; la note ne porte aucun signe pour cent (les feuilles python en portent, en format).
+Feuille de MESURE (R-G2-5 .py/.log) et feuille de LECTURE (la note) : separees. Le CANON du lot est l'empreinte B de CE manifeste ; il ne se porte pas lui-meme.
+
+a37c86b0e9b80833 a37c86b0e9b80833    11114    11114  note_machine1_lecture_reponse_et_R-G2-5_v1.md
+507911a496a47fd3 507911a496a47fd3     7451     7451  r_g2_5_pow_tableau_machine1_v1.py
+715b2428e4d98f7b 715b2428e4d98f7b    27515    27515  r_g2_5_pow_tableau_machine1_v1.log
+
+entrants, recus le 12/09 en pieces detachees et verifies au canon : lot machine 2 reponse (7 pieces, manifeste 56378e0f371f9681) ; lot machine 2 acte constante A v1 (manifeste e3b707c589e9d1d8, dont derivation v2 9d9e949ed876424f pour le diff) ; clone frais lbaaz/SG_1 HEAD d037d21 (91 .py, 207 .md)
+pieces : 3 (compte etabli APRES le dernier ajout)
+garde de reception : verifiees + absentes + ecarts == 3
+bilan de la feuille de mesure : R-G2-5 4/4 (compte relu dans le .log de ce lot)

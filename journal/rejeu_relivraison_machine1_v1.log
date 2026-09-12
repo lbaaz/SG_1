@@ -1,0 +1,43 @@
+racine /home/claude/reliv
+  [PASSE] le manifeste du lot resout a d0ab94382e1b5808                
+  [PASSE] le banc v8 certifie est au poste, meme canon a la racine et  4d8882a2223a5c74
+
+== derivation v3 ==
+  [PASSE] feuille authentifiee par canon avant execution : 4353c80e60c ACTE_constante_A/derivation_fenetre_delta_machine2_v3.py
+  [PASSE] rejeu termine, code de retour 0                              rejeu_derivation_v3_machine1_v1.log
+   bilan du rejeu : BILAN : 22/22 controles PASSENT
+  [PASSE] log machine 2 authentifie par canon avant comparaison : f601 ACTE_constante_A/derivation_fenetre_delta_machine2_v3.log
+  [PASSE] meme nombre de lignes                                        73 / 73
+   lignes differentes : 0
+  [PASSE] toute difference est un chemin (separateur ou emplacement),  identique au bit
+
+== relecture v1 ==
+  [PASSE] feuille authentifiee par canon avant execution : 6e1409b06e8 ACTE_constante_A/relecture_nombres_acte_machine2_v1.py
+  [PASSE] rejeu termine, code de retour 0                              rejeu_relecture_v1_machine1_v1.log
+   bilan du rejeu : BILAN RELECTURE : 39/39 controles PASSENT
+  [PASSE] log machine 2 authentifie par canon avant comparaison : 484d ACTE_constante_A/relecture_nombres_acte_machine2_v1.log
+  [PASSE] meme nombre de lignes                                        58 / 58
+   lignes differentes : 6
+      l.3    m2 | [PASSE] gel v5, le LOT                     d5ace962a3a6e413  d5ace962a3a6e413  entrant_machine1_2026-09-09_constante_A_v
+             m1 | [PASSE] gel v5, le LOT                     d5ace962a3a6e413  d5ace962a3a6e413  entrant_machine1_2026-09-09_constante_A_v
+      l.4    m2 | [PASSE] gel v5, le FICHIER (GEL COURANT)   2c0d2dc86054838c  2c0d2dc86054838c  entrant_machine1_2026-09-09_constante_A_v
+             m1 | [PASSE] gel v5, le FICHIER (GEL COURANT)   2c0d2dc86054838c  2c0d2dc86054838c  entrant_machine1_2026-09-09_constante_A_v
+      l.5    m2 | [PASSE] ma certification du v5             13d2973b0e143a20  13d2973b0e143a20  certification_constante_A_v5\MANIFEST_lot
+             m1 | [PASSE] ma certification du v5             13d2973b0e143a20  13d2973b0e143a20  certification_constante_A_v5/MANIFEST_lot
+      l.6    m2 | [PASSE] la chaine, 8 pieces                a4c35a2ee691c9a7  a4c35a2ee691c9a7  chaine_constante_A_pour_machine1\MANIFEST
+             m1 | [PASSE] la chaine, 8 pieces                a4c35a2ee691c9a7  a4c35a2ee691c9a7  chaine_constante_A_pour_machine1/MANIFEST
+      l.7    m2 | [PASSE] le lot qui porte la tenaille v1    7883311c6e363b02  7883311c6e363b02  G4_trois\MANIFEST_lot_machine2_comparaiso
+             m1 | [PASSE] le lot qui porte la tenaille v1    7883311c6e363b02  7883311c6e363b02  G4_trois/MANIFEST_lot_machine2_comparaiso
+      l.48   m2 | [PASSE] et il est ABSENT des deux emplacements cherches      D:\devs\bocal\BOCAL4\SUIVI_campagne_2026-08-28b.md ; C:\Use
+             m1 | [PASSE] et il est ABSENT des deux emplacements cherches      /home/claude/reliv/SUIVI_campagne_2026-08-28b.md ; /root/Do
+  [PASSE] toute difference est un chemin (separateur ou emplacement),  6 ligne(s), toutes des chemins
+
+== R-G2-5 v2 sur le v8 ==
+  [PASSE] feuille authentifiee par canon avant execution : 1c93be84b61 entrant_machine1_2026-09-12_R_G2_5_v2/r_g2_5_pow_tableau_machine1_v2.py
+  [PASSE] rejeu termine, code de retour 0                              rejeu_R_G2_5_v2_sur_le_v8_machine1_v1.log
+   bilan du rejeu : BILAN : 2/2 controles PASSENT ; 2 non joue(s) : compte de fichiers attendu, ligne du coeur du moteur
+  [PASSE] comptes de machine 2 reproduits : EXPOSABLE 42, CARRE 9, CON EXPOSABLE 42, CARRE 9, CONST 6, SANS-NUMPY 0
+
+=====================================================================
+BILAN DU DRIVER : 15/15 controles PASSENT
+=====================================================================

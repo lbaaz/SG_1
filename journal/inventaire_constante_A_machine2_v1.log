@@ -1,0 +1,69 @@
+registre lu : 418 fichiers a origin/main
+
+====================================================================================================
+A. LES HUIT PIECES QUE MACHINE 1 CITE (recherche par PREFIXE, son etat ne porte que 8 hex)
+====================================================================================================
+  EXISTE        d71770d5948fe1aa  gel constante A v3                            constante_A_pre_enregistrement_v3.md            28724 o
+  EXISTE        a2e7ef3e237c5acf  temoin v11                                    temoin_negatif_pre_enregistrement_v11.md        72281 o
+  EXISTE        a2e7ef3e237c5acf  temoin v11                                    registre\gels\temoin_negatif_pre_enregistrement_v11.md  72281 o
+  EXISTE        13601ef21efdc024  erratum 7(i)                                  erratum_temoin_v11_clause_7i_tolerance_v1.md     7989 o
+  EXISTE        4d8882a2223a5c74  instrument v8                                 banc_qualification_machine1_v8.py              193651 o
+  EXISTE        2a618ffb180ea568  note m2 de certification de l'instrument v8   note_machine2_controle_instrument_v8_v1.md       8085 o
+  EXISTE        4867dffe3392dea6  N-70 v2                                       enumeration_cles_prevol_N70_machine2_v2.md      12588 o
+  N'EXISTE PAS  128d0c0a...  derivation fenetre T-2                        cherchee par empreinte dans 2212 fichiers
+  N'EXISTE PAS  a6415de8...  lot v9                                        cherchee par empreinte dans 2212 fichiers
+  existent : 6 sur 8
+
+====================================================================================================
+B. CHAQUE FAMILLE ENUMEREE EN ENTIER -- la version la plus recente n'est pas supposee
+====================================================================================================
+  gel constante A -- 4 versions
+     a860ad06e481a1ec   18514  constante_A_pre_enregistrement_v1.md                 
+     69dd3c6a1e8a21f4   24038  constante_A_pre_enregistrement_v2.md                 
+     d71770d5948fe1aa   28724  constante_A_pre_enregistrement_v3.md                   <<< CITEE PAR M1
+     011c923203fcdaef   30988  constante_A_pre_enregistrement_v4.md                   <<< LA PLUS RECENTE
+
+  temoin negatif (volet T) -- 11 versions
+     7c6d958e829a4ec1   13280  temoin_negatif_pre_enregistrement_v1.md              
+     7275931b305ad5f1   18940  temoin_negatif_pre_enregistrement_v2.md              
+     26da379a551f06ea   25237  temoin_negatif_pre_enregistrement_v3.md              
+     46f462e361d225fd   31212  temoin_negatif_pre_enregistrement_v4.md              
+     0905a9b78ba40349   34961  temoin_negatif_pre_enregistrement_v5.md                <<< AU REGISTRE
+     e9a7e7e2e2ed0354   37703  temoin_negatif_pre_enregistrement_v6.md                <<< AU REGISTRE
+     8b083e9f109b5a8e   39750  temoin_negatif_pre_enregistrement_v7.md                <<< AU REGISTRE
+     7ba4af8140b7a385   52661  temoin_negatif_pre_enregistrement_v8.md              
+     403488b4f6c319e9   57914  temoin_negatif_pre_enregistrement_v9.md              
+     aa88b67d42393155   66651  temoin_negatif_pre_enregistrement_v10.md             
+     a2e7ef3e237c5acf   72281  temoin_negatif_pre_enregistrement_v11.md               <<< LA PLUS RECENTE, CITEE PAR M1
+
+  instrument (banc) -- 8 versions
+     3a932eabfaaf4307  116438  banc_qualification_machine1_v1.py                      <<< AU REGISTRE
+     d74928ef093c96d0  133202  banc_qualification_machine1_v2.py                      <<< AU REGISTRE
+     5fae2a8c94cf8685  144725  banc_qualification_machine1_v3.py                      <<< AU REGISTRE
+     36a3f06f19871c38  174315  banc_qualification_machine1_v4.py                    
+     b8a0f75323182e55  184866  banc_qualification_machine1_v5.py                    
+     56c2ebfcfd84671e  190655  banc_qualification_machine1_v6.py                    
+     9a6e8b6192d4f163  191869  banc_qualification_machine1_v7.py                    
+     4d8882a2223a5c74  193651  banc_qualification_machine1_v8.py                      <<< LA PLUS RECENTE, CITEE PAR M1
+
+  N-70 (enumeration des cles) -- 2 versions
+     4ef8235b16f26210   11313  enumeration_cles_prevol_N70_machine2_v1.md           
+     4867dffe3392dea6   12588  enumeration_cles_prevol_N70_machine2_v2.md             <<< LA PLUS RECENTE, CITEE PAR M1
+
+====================================================================================================
+C. LES STATUTS, ETABLIS PAR DES FAITS
+====================================================================================================
+  GEL : le v4 existe et dit de lui-meme : "La v3 (d71770d5948fe1aa, 28724 o) est REMPLACEE"
+        -> le v3 d71770d5948fe1aa est SUPERSEDED par le v4 011c923203fcdaef.
+        statut du v4, lu dans son en-tete : BROUILLON MACHINE 1 -- DEVIENT GEL A LA CERTIFICATION MACHINE 2
+        certification machine 2 du v4 : 9e6376f936708077  note_machine2_certification_constante_A_v4_v1.md  (11359 o)
+        verdict du controle : CONTROLES : 96 ; PASSENT : 95 ; MORDENT : 1
+
+  TEMOIN v12 ("attendu a la plume m2") : N'EXISTE PAS. La plus recente du temoin est la v11.
+        (les fichiers 'v12' du depot appartiennent a M17, pas a la constante A :
+         par exemple banc_leger_v12_machine1.txt, certif_gel_v12b2_machine2_v1.log, certif_gel_v12b2_machine2_v1.py, certif_gel_v12b2_machine2_v2.log)
+
+  D-I-3 (le banc ne pouvait pas passer : compteur fige avant le dernier ajout) :
+     banc_qualification_machine1_v5.py      l.3069  n_ok = sum(1 for _, ok in S if ok)
+     banc_qualification_machine1_v8.py      l.3188  n_ok = sum(1 for _, ok in S if ok)        # D-I-3 (1) : APRES le dernier ajout
+     -> le v8 calcule le compte APRES le dernier ajout et le declare : D-I-3 est LEVE.

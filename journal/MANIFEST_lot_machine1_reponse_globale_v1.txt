@@ -1,0 +1,23 @@
+MANIFESTE lot_machine1_2026-09-12_reponse_globale_v1 -- GESTE (2), REPONSE AU LOT m2 3675daba802cbc6c ; le rejeu du banc sans noyau ; machine 1, classe 3
+colonnes : empreinte_B (sha256 NFC+LF, 16 hex)  empreinte_brute  octets_B  octets_bruts  fichier
+entrants : lot m2 3675daba802cbc6c (12/12) ; instrument v8 4d8882a2223a5c74, temoin v11 a2e7ef3e237c5acf, gel constante A v4 011c923203fcdaef (lot a4c35a2ee691c9a7) ;
+  moteur c8ed357b120352c4 (clone frais HEAD d037d21, charge par l'instrument) ; gels de base v7 8b083e9f109b5a8e et alpha v5 045c2435aaf623ce au registre.
+lecture : D-G2-3 verse (troisieme inversion de paire en prose ; forme adoptee : citer la ligne CANON) ; tenaille : structure citee accordee, feuille non relue, question sur R_ELLE
+  aux cellules LUES 4|1.73 et 4|2.80 ; rejeu du banc v8 --mode temoin --prevol avec et sans noyau sur ce poste : 856 feuilles, 774 identiques, 82 differentes (78 reelles,
+  toutes sous /T2/points et champ_forces_empreinte) ; neuf cellules T-2 classees exposees-differentes / tenues par absorption / non separees. Aucun verdict de gel ; tenaille non lue comme gel.
+les deux pre-vols : sorties de l'instrument, non editees, renommees _noyau (NPY_DISABLE_CPU_FEATURES vide) et _libm ("X86_V4 AVX512_ICL AVX512_SPR") ; la variable n'est pas dans
+  leurs journaux (l'instrument v8 ne la porte pas) : lire la note 3.1 et le temoin d'arrondi du diagnostic des cellules.
+ENCODAGE MESURE : 0 des 10 pieces non-ASCII [] ; CONVENTION MESUREE : 0 des 10 pieces avec CR [] ; les deux tailles sont portees.
+
+950feb280cbcd92e 950feb280cbcd92e     9356     9356  note_machine1_reponse_globale_v1.md
+a115098e4fc7b03c a115098e4fc7b03c     1244     1244  diff_prevol_noyau_libm.py
+b2ab4d4bf105b2a0 b2ab4d4bf105b2a0    11417    11417  diff_prevol_noyau_libm.log
+d3417a81e03b2861 d3417a81e03b2861    27732    27732  resultats_temoin_prevol_noyau_machine1.json
+4b4de72726050941 4b4de72726050941    17865    17865  journal_temoin_prevol_noyau_machine1.txt
+95acd5d9c844eacc 95acd5d9c844eacc    27717    27717  resultats_temoin_prevol_libm_machine1.json
+a3c80bba492ac04f a3c80bba492ac04f    17862    17862  journal_temoin_prevol_libm_machine1.txt
+95d7861e937e12de 95d7861e937e12de    11548    11548  diagnostic_cellules_T2_machine1_v1.py
+b4c560e1f86fb33d b4c560e1f86fb33d     2927     2927  diagnostic_cellules_T2_machine1_v1.log
+8ffca09b72642334 8ffca09b72642334     5245     5245  diagnostic_cellules_T2_machine1_v1.json
+
+pieces : 10 (compte etabli APRES le dernier ajout) ; canon du lot = empreinte B de CE manifeste, calculee sur le fichier, jamais ecrite dedans.

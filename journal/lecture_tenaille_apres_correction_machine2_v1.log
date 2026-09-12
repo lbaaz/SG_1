@@ -1,0 +1,59 @@
+============================================================================================
+LA TENAILLE APRES LA CAUSE : LA BORNE RETENUE EST-ELLE TOUCHEE ?
+============================================================================================
+
+[1] QUI ALIMENTE LA BORNE RETENUE -- pris dans la STRUCTURE, pas dans la prose
+  [OK  ] la ligne qui definit INF est trouvee                     
+      INF = max(borne(R_MOI, True).values())
+  [OK  ] INF est construit sur MES ratios (R_MOI), non sur les si table = R_MOI
+  [OK  ] et avec la lecture conservatrice                         cons = True
+      PRE = m2_v8_prevol_temoin_resultats.json
+      REF = registre/runs/run_temoin_delta85/resultats_temoin.json
+  [OK  ] 'conservatrice' combine DEUX RUNS A MOI (pre-vol et refe 
+      les 4 occurrences de R_ELLE, une par une :
+        l.42   R_MOI, R_ELLE = ratios('m2_v8_prevol_temoin.log'), ratios('prevol_temoin_v8_ma
+        l.89   for etq, rt, cons in (('machine 1 (ses ratios)', R_ELLE, False),
+        l.100  for r, c in ((R_ELLE, False), (R_MOI, False), (R_MOI, True))), PORTEUR)
+        l.119  em, ee = R_MOI[PORTEUR], R_ELLE[PORTEUR]
+  [OK  ] aucune occurrence de R_ELLE n'est sur la ligne qui calcu 
+  [OK  ] et aucune ne sert a AFFECTER une borne (elles affichent, affichage l.89 ; controle du porteur l.100 ; diagnostic de fragilite l.119
+
+[2] LES TROIS LECTURES, RELUES DANS LE LOG
+  [OK  ] les trois lectures sont lues                             3
+      machine 1 (ses ratios)             delta >= 1.286644e-05  (x1.318)  porte par 7|1.73
+      machine 2 (mes ratios)             delta >= 1.427723e-05  (x1.462)  porte par 7|1.73
+      CONSERVATRICE (e = min des deux)   delta >= 1.659726e-05  (x1.700)  porte par 7|1.73
+  [OK  ] les trois sont portees par 7|1.73                        
+  [OK  ] la borne retenue est la CONSERVATRICE                    1.659726e-05
+
+[3] CE QUI EST TOUCHE, ET CE QUI NE L'EST PAS
+      SA lecture (ses ratios, e/seuil = 0.759) -> 1.286644e-05
+        => CADUQUE : 0.759 est la valeur du noyau SIMD non CR. Son propre run
+           sans X86_V4 rend 0.684, mon nombre. Cette ligne est informative.
+      MA lecture (mes ratios, 0.684)          -> 1.427723e-05
+        => CONFIRMEE des deux cotes depuis le 12/09 (44/44 au bit).
+      LA RETENUE (mes ratios, e conservative) -> 1.659726e-05
+  [OK  ] LA BORNE RETENUE N'EST PAS TOUCHEE : elle ne lit aucun n 
+
+[4] LA CARTE DES MARGES -- INCHANGEE, ET JE LE MONTRE
+      kT     |       m=1        m=2        m=3
+      1.00   |     x2.08      x1.04       VIDE
+      1.15   |     x1.81       VIDE       VIDE
+      1.30   |     x1.60       VIDE       VIDE
+      1.50   |     x1.39       VIDE       VIDE
+      1.74   |     x1.20       VIDE       VIDE
+  [OK  ] m=2, kT=1 rend bien x1.04, comme au log d'origine        x1.0415
+  [OK  ] et le plateau mesure par machine 1 (1.26 a 1.46) tient d son plateau confirme l'intervalle de b, il ne le deplace pas
+
+[5] CE QUE LE GESTE (2) REND VRAIMENT AU CHANTIER
+      La feuille d'origine porte, en section 6, ce constat :
+        " le point porteur 7|1.73 differe de 11.0 pour cent entre nos deux
+          mesures, c'est le SEUL point non bit-reproductible de la campagne "
+      et la fenetre a m=2 vaut x1.04, soit 4 % : l'ecart faisait pres de TROIS
+      FOIS la largeur de la fenetre. C'est ce qui empechait de conclure.
+      => CET ECART EST RESOLU, ET EN FAVEUR DE LA VALEUR DEJA UTILISEE.
+         La borne ne bouge pas ; ce qui disparait, c'est le DOUTE sur elle.
+
+============================================================================================
+BILAN : 12 controles, 0 mordent
+============================================================================================

@@ -1,0 +1,30 @@
+D:\devs\bocal\BOCAL4\G2_cause_ecart\niveau_dispatch_numpy_machine2_v1.py:35: DeprecationWarning: numpy.core._multiarray_umath is deprecated and has been renamed to numpy._core._multiarray_umath. The numpy._core namespace contains private NumPy internals and its use is discouraged, as NumPy internals can change without warning in any release. In practice, most real-world usage of numpy.core is to access functionality in the public NumPy API. If that is the case, use the public NumPy API. If not, you are using NumPy internals. If you would still like to access an internal attribute, use numpy._core._multiarray_umath.__cpu_features__.
+  from numpy.core._multiarray_umath import __cpu_features__ as feats
+====================================================================================
+NIVEAU DE DISPATCH numpy SUR BOCAL4
+====================================================================================
+  (numpy.show_runtime() n'est pas appele : il imprime le nom de machine, non-ASCII
+   sur ce poste, ce qui sortirait une piece de la convention ASCII/LF. Les memes
+   champs sont repris ci-dessous ; seul le nom de machine est omis.)
+
+[1] CE QUE numpy TROUVE SUR CE CPU
+      numpy   : 2.2.6
+      python  : 3.11.9
+      platform: Windows-10-10.0.26200-SP0
+      machine : AMD64
+      AVX512 actives : AVX512BITALG, AVX512BW, AVX512CD, AVX512DQ, AVX512F, AVX512IFMA, AVX512VBMI, AVX512VBMI2, AVX512VL, AVX512VNNI, AVX512VPOPCNTDQ, AVX512_CLX, AVX512_CNL, AVX512_ICL, AVX512_SKX
+      niveaux X86_Vn actifs : aucun nomme ainsi
+
+[2] LE POINT QUI MORD CONTRE SA 5.1
+  [OK  ] ce poste A AVX512 et numpy le trouve
+  [OK  ] et il est CORRECTEMENT ARRONDI : le diagnostic mesure numpy != python
+         sur 0 appel K1 des quatre flots (0 / 22800), et 0 basculement.
+
+  => LA PRESENCE D'AVX512 N'EST PAS CE QUI DECIDE. Les deux postes ont AVX512 ;
+     l'un est CR sur ces flots, l'autre non. Ce qui les separe est le NOYAU que
+     la version de numpy embarque (2.4.4 nomme un niveau X86_V4 que 2.2.6 ne
+     nomme pas), pas le jeu d'instructions du CPU.
+  => SA REGLE CANDIDATE demande donc un mot de plus : la ligne de plateforme
+     nomme le niveau de dispatch ACTIF **et la version de numpy**, car c'est
+     leur couple qui choisit le noyau -- pas le CPU seul.
+====================================================================================

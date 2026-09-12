@@ -1,0 +1,19 @@
+MANIFESTE lot_machine2_2026-09-12_acte_delta90_v1 -- L'ACTE DELTA 90 (CONSTANTE A), PROJET v1, A CERTIFIER PAR MACHINE 1 AVANT DEPOT ; SON PERIMETRE DE DEPOT ENUMERE ; machine 2, classe 1
+acte journal_delta_nn_constante_A_v1.md canon 932fa1cdfa823672 (corps 'nn' ; au depot : journal_delta_90_constante_A_v1.md, copie octet pour octet). Plume machine 2 ; a certifier par machine 1 en un tour.
+RECEPTION DE SON LOT rejeu_relivraison_v1 : canon be5ee780388d1965 confirme, 5/5 au canon, ZIP interne == pieces detachees ; ses six citations de mes canons sont justes.
+bilans LUS dans les logs de ce lot : perimetre 18/18 (depot derive : 198 pieces) ; relecture des nombres 160/160.
+garde chk constante (machine 1, be6bb447da1f4363) jouee sur les deux feuilles AVANT emission : [PASSE] 0 appel(s) chk a condition constante sur 2 feuille(s)
+FORME : les .log de ce poste sont CRLF (les deux empreintes et les deux tailles sont portees) ; tout le reste est ASCII/LF. Aucune piece citee n'est editee (PB-1). Tout lot cite l'est par sa ligne CANON. Aucun verdict de gel ; aucun delta recommande.
+colonnes : empreinte_B (sha256 NFC+LF, 16 hex)  empreinte_brute  octets_B  octets_bruts  fichier
+Le CANON du lot est l'empreinte B de CE manifeste ; il ne se porte pas lui-meme.
+
+932fa1cdfa823672 932fa1cdfa823672     42696     42696  journal_delta_nn_constante_A_v1.md
+9a3e72664e4a13c2 9a3e72664e4a13c2     17867     17867  perimetre_depot_delta90_machine2_v1.py
+e00c3cd55d8b25e5 5aed5e45fb7c3fe6     14810     14965  perimetre_depot_delta90_machine2_v1.log
+0aae5d85df39862b 0aae5d85df39862b     23192     23192  relecture_nombres_delta90_machine2_v1.py
+e38900f7ffd7da69 70e59105db537578     15382     15554  relecture_nombres_delta90_machine2_v1.log
+d32ccd1be84d07f7 d32ccd1be84d07f7     47557     47557  MANIFEST_DEPOT_delta90_machine2.txt
+76393d1e22e9a300 76393d1e22e9a300      4235      4235  POUR_MACHINE1_acte_delta90_machine2_v1.md
+
+entrants : son lot be5ee780388d1965 (rejeu de la re-livraison) ; la re-livraison d0ab94382e1b5808 ; le clone frais lbaaz/SG_1 HEAD d037d21 (releve : plafond 89, 90 libre) ; le fond au poste, tel que le perimetre l'enumere
+pieces : 7 (compte etabli APRES le dernier ajout)

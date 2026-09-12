@@ -1,0 +1,58 @@
+============================================================================================
+ERRATUM : LES NEUF CELLULES, ET NON UNE SEULE
+============================================================================================
+
+[1] R_ELLE CONTRE R_MOI, LES NEUF
+      cellule       R_ELLE      R_MOI   ecart %   lue ?
+      4|1.73      1.614000   1.652000     -2.30   LUE
+      4|2.27      2.121000   2.121000      0.00   LUE
+      4|2.80      2.379000   2.273000      4.66   LUE
+      5|1.73      0.991000   0.991000      0.00   NON LUE (sous 1)
+      5|2.27      1.259000   1.259000      0.00   LUE
+      5|2.80      1.469000   1.469000      0.00   LUE
+      7|1.73      0.759000   0.684000     10.96   NON LUE (sous 1)
+      7|2.27      0.853000   0.853000      0.00   NON LUE (sous 1)
+      7|2.80      0.957000   0.957000      0.00   NON LUE (sous 1)
+
+      cellules qui DIFFERENT : 3 / 9  -> ['4|1.73', '4|2.80', '7|1.73']
+      dont LUES              : 2        -> ['4|1.73', '4|2.80']
+
+[2] L'AFFIRMATION QUE MA FEUILLE PORTAIT
+      "c est le SEUL point non bit-reproductible de la campagne"
+  [MORD] cette affirmation est VRAIE (elle exigerait 1 seule cell FAUSSE : 3 cellules different, dont 2 LUES
+  [OK  ] elle serait vraie si on la restreignait aux cellules NON parmi les quatre NON LUES, 7|1.73 est bien la seule qui differe
+      => LA PORTEE EXACTE : 7|1.73 est le seul point NON LU qui differe, et le
+         seul qui PORTE la borne. Il n'est pas le seul qui differe.
+
+[3] SA QUESTION : R_ELLE EST-IL CLASSE NOYAU OU CLASSE libm ?
+      4|1.73   R_ELLE = 1.614000 -> classe NOYAU   R_MOI = 1.652000 -> classe libm
+  [OK  ] 4|1.73 : R_ELLE est classe NOYAU                         
+  [OK  ] 4|1.73 : R_MOI est classe libm                           
+      4|2.80   R_ELLE = 2.379000 -> classe NOYAU   R_MOI = 2.273000 -> classe libm
+  [OK  ] 4|2.80 : R_ELLE est classe NOYAU                         
+  [OK  ] 4|2.80 : R_MOI est classe libm                           
+      7|1.73   R_ELLE = 0.759000 -> classe NOYAU   R_MOI = 0.684000 -> classe libm
+  [OK  ] 7|1.73 : R_ELLE est classe NOYAU                         
+  [OK  ] 7|1.73 : R_MOI est classe libm                           
+      => REPONSE : R_ELLE porte les valeurs du NOYAU aux trois cellules ou les
+         deux machines different. Son log du 28/08 est un log a noyau.
+
+[4] CE QUE CELA CHANGE, ET CE QUE CELA NE CHANGE PAS
+      NE CHANGE PAS : la borne retenue (INF = max(borne(R_MOI, True))) ne lit
+        aucun de ces nombres ; les trois cellules qui different ne la portent
+        pas non plus (elle est portee par le plus PETIT ratio, 7|1.73 = 0.684).
+      CHANGE : la PORTEE de ma phrase, et la lecture de la campagne qui s'y
+        appuyait. Deux cellules LUES -- 4|1.73 et 4|2.80 -- differaient entre les
+        machines sans que personne ne le remarque, parce que PERSONNE NE LES
+        COMPARAIT AU BIT : elles passaient leur lecture des deux cotes.
+      LA FAUTE DE FORME, qui est la vraie : l'affirmation vivait dans le CHAMP
+        DE DETAIL d'un chk dont la condition testait l'ECART DU PORTEUR. Un
+        champ de detail n'est pas teste. Ecrite en condition --
+        sum(1 for k in R_MOI if R_MOI[k] != R_ELLE[k]) == 1 -- elle MORDAIT.
+
+============================================================================================
+BILAN : 8 controles, 1 mordent
+   MORD  cette affirmation est VRAIE (elle exigerait 1 seule cellule differente)
+         FAUSSE : 3 cellules different, dont 2 LUES
+(le premier mordant est l'erratum lui-meme : il DOIT mordre)
+============================================================================================

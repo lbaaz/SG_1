@@ -1,0 +1,18 @@
+MANIFESTE lot_machine1_2026-09-12_certification_delta90_v1 -- CERTIFICATION DE L'ACTE DELTA nn (CONSTANTE A) v1 932fa1cdfa823672 : CERTIFIABLE, BON POUR DEPOT APRES DEUX HUNKS DE FORME (H1 detention unique, H2 date), RESERVE BORNEE A 18 EMPREINTES / 38 LIGNES DU DEPOT, CLOSE PAR LE RELEVE 198/198 APRES DEPOT ; machine 1, classe 1
+RECEPTION du lot 7b8c7398a755c28e : 7/7 au canon, ZIP brut de77b2e10121d89a. Clone frais HEAD d037d21, plafond 89, 90 libre, 89 v5 c0f0f4f3b5477310.
+REJOUE ICI : perimetre 17/18 controles PASSENT (95 empreintes citees : 11 au registre, 62 au poste, 1 zip, 3 valeurs, 18 non resolues ; DEPOT : 160 pieces (gels 3, journal 156, scripts 1) ; manifeste f91164f1c44de662) ; relecture 137 controles rejoues, 137 PASSE, 0 MORD, arret sur la premiere piece non detenue ; manifeste de depot derive 160 lignes, 160 identiques a celui de machine 2 ; quatre collisions prefixees des deux cotes ; temoin d'arrondi remesure (X86_V4 seul suffit) ; mes nombres de nn.5 (e) et nn.7 tels que mesures ; nn.4 au bit (lot be5ee780388d1965).
+NON DETENU ICI (a declarer dans l'acte, hunk H1) : d71770d5948fe1aa 403488b4f6c319e9 7fc5f2412b99ad50 c4310e33da6b9759 35b9ff3b8e5b7ef0 36a3f06f19871c38 81730d2bf7095c1f b8a0f75323182e55 56c2ebfcfd84671e 9a6e8b6192d4f163 be633ae91ae295b5 aa98fa8b4ba921d8 d0747b01700e4ad8 4ef8235b16f26210 7ee2d2d4fc0b27a1 bdd00189e68b61dc 704f2b6b84f4c6a0 0c577a23d67586c8
+Le detail est dans la note ; le verdict y est en section 6. Aucun verdict de gel ; aucun delta ; rien de tranche pour l'operateur. PB-1 : aucune piece recue n'est editee.
+colonnes : empreinte_B (sha256 NFC+LF, 16 hex)  empreinte_brute  octets_B  octets_bruts  fichier
+ENCODAGE MESURE : la note est ASCII/LF sans signe pour cent ; les logs de rejeu sont ceux de mon poste (LF) ; le manifeste derive est tel que la feuille l'a ecrit.
+Le CANON du lot est l'empreinte B de CE manifeste ; il ne se porte pas lui-meme.
+
+f822f7cfa6dfb13b f822f7cfa6dfb13b     9998     9998  note_machine1_certification_delta90_v1.md
+c08fc27bdf079b8e c08fc27bdf079b8e    13377    13377  rejeu_perimetre_delta90_machine1.log
+a204c7fe5f6ae61b a204c7fe5f6ae61b    13878    13878  rejeu_relecture_delta90_machine1.log
+f91164f1c44de662 f91164f1c44de662    39588    39588  MANIFEST_DEPOT_delta90_derive_machine1.txt
+c790ecf01b4270ea c790ecf01b4270ea      447      447  temoin_arrondi_machine1_2026-09-12.log
+
+entrants : lot machine 2 acte_delta90_v1 (canon 7b8c7398a755c28e) ; la re-livraison d0ab94382e1b5808 ; mon lot de rejeu be5ee780388d1965 ; assemblage v2 df3bd37cbca40c36 ; clone frais lbaaz/SG_1 HEAD d037d21
+pieces : 5 (compte etabli APRES le dernier ajout)
+garde de reception : verifiees + absentes + ecarts == 5

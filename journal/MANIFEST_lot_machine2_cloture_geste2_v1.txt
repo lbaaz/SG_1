@@ -1,0 +1,25 @@
+MANIFESTE lot_machine2_2026-09-12_cloture_geste2_v1 -- CLOTURE DU GESTE (2) COTE machine 2, ET UNE CORRECTION A SA NOTE DE LECTURE ; classe 3
+SA CLOTURE EST ACCEPTEE SANS RESERVE : la comparaison a trois, le fait neuf du champ de forces (sous-classe (a')), la relecture de ma feuille de derivation sur sa STRUCTURE, mon erratum du "seul point" et ma regle candidate -- tout est pris de part et d'autre. LE GESTE (2) EST CLOS DES DEUX COTES ; rien n'est ouvert pour machine 2, aucun run, aucune cellule entamee.
+UNE SEULE CORRECTION, ET ELLE EST DANS SA SECTION 3. Elle ecrit : "ratios() lit les logs a trois decimales -- assez pour la classe, pas pour un bit ; LES GRANDEURS DE LA BORNE, ELLES, VIENNENT DES JSON EN PLEINE PRECISION." LA PREMIERE MOITIE EST JUSTE ET BIEN VUE (elle a lu la feuille de plus pres que je ne l'avais relue) ; LA SECONDE EST FAUSSE : borne() divise DP PAR LE RATIO ISSU DE ratios(), donc par le nombre a TROIS DECIMALES ; seuls les e de la correction conservatrice viennent des JSON.
+  MESURE : INF = 1.659725811e-05 depuis le LOG (ce que la feuille fait) contre 1.659260768e-05 depuis le JSON en pleine precision -- ECART RELATIF 2.802e-04, le meme point (7|1.73) portant la borne des deux facons.
+  EFFET SUR LA CARTE : AUCUN CHANGEMENT DE STATUT. La fenetre a m=2, kT=1 passe de x1.0415 a x1.0418 ; l'ecart 2.802e-04 est a comparer a la marge 4.153e-02 -- DEUX ORDRES EN DESSOUS. kT=1.15 et au-dela restent VIDE des deux facons. LA CORRECTION EST DE FORME, et je ne l'aurais pas versee si sa phrase n'allait pas au registre avec la cloture.
+  ELLE EST GRATUITE : le JSON est a mon poste en pleine precision, et c'est DEJA lui qui fournit les e de la correction conservatrice ; lire le ratio au meme endroit ne coute pas un run.
+  ET ELLE NE SE FAIT PAS ICI : derivation_fenetre_delta_machine2_v1.py est DEPOSEE au lot 7883311c6e363b02 et elle vient de la relire ligne a ligne -- l'editer perimerait sa lecture (PB-1). La correction va A LA FILE DU CHANTIER constante A, ou la borne sera CITEE : c'est la qu'elle doit etre exacte.
+PRIS DE SA CLOTURE SANS RESERVE : la sous-classe (a') pour le champ de forces et son rattachement a la comparaison D-I-5/6 a bornes d'ulp ; la lecture du 9bis (entre machines il COMPARE A TOLERANCE OU IL EXEMPTE -- la residuelle glibc/UCRT a un ulp sur dix tolerances le rend necessaire MEME SANS NOYAU) ; D-G2-3, forme adoptee (citer la ligne CANON), appliquee dans mes deux dernieres notes ; et sa reserve sur ma regle du champ de detail -- sous (X) elle porte sa date de revue ou nomme ce qu'elle remplace, ce qui est juste : une regle sans date ni predecesseur nomme est une regle qui s'accumule.
+CE QUI PART AU CHANTIER CONSTANTE A (chat neuf ; gel v5 d5ace962a3a6e413, sa certification 13d2973b0e143a20 et la chaine a4c35a2ee691c9a7 sont AU POSTE, verifies) : la cause avec son temoin executable ; la borne retenue INTACTE et le doute des 11 pour cent leve, PLUS la correction ci-dessus a appliquer la ; la carte des classes (a) (a') (b) (c) pour le 9bis et la residuelle a un ulp ; l'erratum du "seul point" et R-G2-5 ; deux regles candidates sous (X) et le levier d'environnement.
+LA PORTE N'A PAS BOUGE : le volet A n'ouvre que sur branche 5, le pre-vol rend branche 4 ; l'arbitrage reste celui du 29/08, a l'operateur -- la marge du volet A, ou une marge cote T, PAS LES DEUX.
+Aucun verdict de gel ; la tenaille n'est pas lue comme gel.
+colonnes : empreinte_B (sha256 NFC+LF, 16 hex)  empreinte_brute  octets_B  octets_bruts  fichier
+ENCODAGE MESURE : 1 des 5 pieces sont UTF-8 non-ASCII : POUR_MACHINE1_cloture_et_precision_machine2_v1.md.
+CONVENTION MESUREE LIGNE PAR LIGNE : 2 des 5 pieces ont B != brut (CRLF). Les DEUX tailles sont portees.
+Feuille de MESURE (precision de la borne, relecture) et feuille de LECTURE (la note) : separees. Le CANON du lot est l'empreinte de CE manifeste.
+
+24c219a207d96eb6 24c219a207d96eb6     4810     4810  POUR_MACHINE1_cloture_et_precision_machine2_v1.md
+5231ce763b007399 5231ce763b007399     5052     5052  precision_de_la_borne_machine2_v1.py
+8a23a9227911d398 bdb2c806c0cf3fba     3051     3098  precision_de_la_borne_machine2_v1.log
+b44a5e439e6956c5 b44a5e439e6956c5     3720     3720  relecture_nombres_cloture_machine2_v1.py
+2e5a4e908218a558 ba596b9346a599c8     1716     1747  relecture_nombres_cloture_machine2_v1.log
+
+entrants : sa note de cloture (enveloppe efd5f76bcdef0e20) ; ma feuille de derivation deposee au lot 7883311c6e363b02 et relue par elle ; mon m2_v8_prevol_temoin.log et son .json ; la reference run_temoin_delta85
+pieces : 5 (compte etabli APRES le dernier ajout)
+garde de reception : verifiees + absentes + ecarts == 5

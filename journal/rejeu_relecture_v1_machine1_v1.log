@@ -1,0 +1,57 @@
+
+1. LES CINQ EMPREINTES DU DOSSIER -- RECALCULEES, PAS CITEES
+  [PASSE] gel v5, le LOT                     d5ace962a3a6e413  d5ace962a3a6e413  entrant_machine1_2026-09-09_constante_A_v5/MANIFEST_lot_machine1_constante_A_v5.txt
+  [PASSE] gel v5, le FICHIER (GEL COURANT)   2c0d2dc86054838c  2c0d2dc86054838c  entrant_machine1_2026-09-09_constante_A_v5/constante_A_pre_enregistrement_v5.md
+  [PASSE] ma certification du v5             13d2973b0e143a20  13d2973b0e143a20  certification_constante_A_v5/MANIFEST_lot_machine2_certification_constante_A_v5_v1.txt
+  [PASSE] la chaine, 8 pieces                a4c35a2ee691c9a7  a4c35a2ee691c9a7  chaine_constante_A_pour_machine1/MANIFEST_lot_machine2_chaine_constante_A_v1.txt
+  [PASSE] le lot qui porte la tenaille v1    7883311c6e363b02  7883311c6e363b02  G4_trois/MANIFEST_lot_machine2_comparaison_a_trois_v1.txt
+
+2. LA BORNE ET LA FENETRE -- RELUES DANS LE LOG DE LA FEUILLE DE MESURE
+  [PASSE] INF pleine precision                   1.659260768e- note oui ; log oui
+  [PASSE] INF v1, depuis le log                  1.659725811e- note oui ; log oui
+  [PASSE] borne superieure a m=2                 1.728646463e- note oui ; log oui
+  [PASSE] lecture NOYAU                          1.286193025e- note oui ; log oui
+  [PASSE] lecture LIBM et la mienne              1.427322916e- note oui ; log oui
+  [PASSE] ecart JSON/log                         2.8027e-04    note oui ; log oui
+  [PASSE] marge de la fenetre                    4.1817e-02    note oui ; log oui
+  [PASSE] empreinte bit de INF sous mutation     3ef1660b51476 note oui ; log oui
+  [PASSE] lecture NOYAU mutee                    4.287310084e- note oui ; log oui
+  [PASSE] fenetre a m=2, kT=1                    x1.0418       note oui ; log oui
+  [PASSE] fenetre a m=1, kT=1                    x2.0836       note oui ; log oui
+  [PASSE] bilan de la feuille de mesure          21/21         note oui ; log oui
+
+3. LE PORTEUR ET LES SIX CELLULES -- RELUS DANS LES JSON
+  [PASSE] le ratio du porteur 7|1.73, au format de la note     recalcul '0.68419170555697806' vs annonce '0.68419170555697806'
+  [PASSE] et la chaine de la note relit le double AU BIT       0.68419170555697806
+  [PASSE] SIX cellules different au bit, et la note dit six    4|1.73,4|2.27,4|2.80,5|1.73,5|2.80,7|1.73
+  [PASSE] TROIS a la resolution du journal                     4|1.73,4|2.80,7|1.73
+  [PASSE] mes ratios == son LIBM au bit (9/9)                  0 ecart
+  [PASSE] la note porte la valeur de 4|1.73                    1.6517184720338571
+  [PASSE] la note porte la valeur de 4|2.27                    2.1211818941156584
+  [PASSE] la note porte la valeur de 4|2.80                    2.2729904350723991
+  [PASSE] la note porte la valeur de 5|1.73                    0.9914845667750477
+  [PASSE] la note porte la valeur de 5|2.80                    1.4686543965472436
+  [PASSE] la note porte la valeur de 7|1.73                    0.68419170555697806
+  [PASSE] quatre des six sont LUES, et la note dit quatre      4|1.73,4|2.27,4|2.80,5|2.80
+
+4. LA PORTE ET LE REGLAGE
+  [PASSE] delta-prime                                          recalcul '9.765625e-06' vs annonce '9.765625e-06'
+  [PASSE] delta-prime / INF                                    recalcul '0.589' vs annonce '0.589'
+  [PASSE] la note dit que le pre-vol rend branche 4            porte inchangee
+
+5. N-70 -- LA VALEUR DEPOSEE, RELUE AU REGISTRE
+  [PASSE] les cles tol_int du run depose portent UNE seule val 0.008578984888782988
+  [PASSE] et c est la valeur machine 2                         recalcul '0.008578984888782988' vs annonce '0.008578984888782988'
+
+6. LA PIECE DE LA DECISION (v) -- ABSENTE, ET CITEE AU GEL COURANT
+  [PASSE] SUIVI_campagne_2026-08-28b est cite au GEL COURANT ( b6d13e6a1559e850
+  [PASSE] et il est ABSENT des deux emplacements cherches      /home/claude/reliv/SUIVI_campagne_2026-08-28b.md ; /root/Downloads/SUIVI_campagne_2026-08-28b.md
+  [PASSE] la note le declare INTROUVABLE                       decision (v) non tranchable
+
+7. FORME DES DEUX PIECES DE CE LOT
+  [PASSE] DOSSIER_ARBITRAGE_constante_A_operateur_v1.md  ASCII 18225 octets
+  [PASSE] derivation_fenetre_delta_machine2_v2.py        ASCII 15174 octets
+
+=====================================================================
+BILAN RELECTURE : 39/39 controles PASSENT
+=====================================================================

@@ -1,0 +1,78 @@
+====================================================================================
+RECEPTION DU LOT machine 1 -- ACTE R4/R5 v3
+====================================================================================
+
+[1] LE CANON (empreinte du MANIFESTE, pas du ZIP)
+      CANON (B)  = fadc1c4f4c91b353   2074 octets
+      manifeste brut = fadc1c4f4c91b353
+      ZIP brut (indicatif, ne fait PAS canon) = c76b1c21d04ef110
+      enveloppe recue brut = 5db99356792064fd
+  [OK  ] le manifeste ne porte pas sa propre empreinte        
+
+[2] LES PIECES DU MANIFESTE, EMPREINTE ET TAILLE
+  [OK  ] 21 lignes de pieces extraites de la STRUCTURE        21
+  [OK  ] le manifeste annonce 21 pieces                       
+  [OK  ] 21 fichiers au lot hors manifeste                    21
+  [OK  ] aucun fichier hors manifeste                         
+  [OK  ] journal_delta_nn_R4R5_v3.md                          
+  [OK  ] journal_delta_nn_R4R5_v2.md                          
+  [OK  ] journal_delta_nn_R4R5_v1.md                          
+  [OK  ] POUR_MACHINE2_v3_acte_R4R5_machine1_v1.md            
+  [OK  ] verification_harmoniques_machine1_v1.py              
+  [OK  ] rederive_acte_R4R5_machine1_v1.py                    
+  [OK  ] rederive_acte_R4R5_machine1_v1.log                   
+  [OK  ] lecture_R4_machine1_v1.py                            
+  [OK  ] rederive_D_6400_machine1_v1.py                       
+  [OK  ] rederive_R5_machine1_v1.py                           
+  [OK  ] capture_2_1_p7_machine1_v1.py                        
+  [OK  ] enveloppes_apex_machine1_v1.py                       
+  [OK  ] lecture_periode_libration_machine1_v1.py             
+  [OK  ] lecture_resolution_machine1_v1.py                    
+  [OK  ] D2_premier_ordre_2_1_pair_machine1_v1.py             
+  [OK  ] D2_prediction_P_D1_5_machine1_v1.py                  
+  [OK  ] lecture_voletB_machine1_v1.py                        
+  [OK  ] correction_action_P2_machine1_v1.py                  
+  [OK  ] prediction_P2_p8_machine1_v1.py                      
+  [OK  ] lecture_P2_p8_machine1_v1.py                         
+  [OK  ] direction_flanc_machine1_v1.py                       
+
+[3] LA CONVENTION B == brut (tout ASCII / LF)
+  [OK  ] B == brut pour les 21 pieces                         
+
+[4] LES PIECES DITES INCHANGEES, AU BIT CONTRE MES COPIES
+  [OK  ] au bit : D2_prediction_P_D1_5_machine1_v1.py         
+  [OK  ] au bit : D2_premier_ordre_2_1_pair_machine1_v1.py    
+  [OK  ] au bit : capture_2_1_p7_machine1_v1.py               
+  [OK  ] au bit : correction_action_P2_machine1_v1.py         
+  [OK  ] au bit : direction_flanc_machine1_v1.py              
+  [OK  ] au bit : enveloppes_apex_machine1_v1.py              
+  [OK  ] au bit : journal_delta_nn_R4R5_v1.md                 
+  [OK  ] au bit : journal_delta_nn_R4R5_v2.md                 
+  [OK  ] au bit : lecture_P2_p8_machine1_v1.py                
+  [OK  ] au bit : lecture_R4_machine1_v1.py                   
+  [OK  ] au bit : lecture_periode_libration_machine1_v1.py    
+  [OK  ] au bit : lecture_resolution_machine1_v1.py           
+  [OK  ] au bit : lecture_voletB_machine1_v1.py               
+  [OK  ] au bit : prediction_P2_p8_machine1_v1.py             
+  [OK  ] au bit : rederive_D_6400_machine1_v1.py              
+  [OK  ] au bit : rederive_R5_machine1_v1.py                  
+  [OK  ] au bit : rederive_acte_R4R5_machine1_v1.log          
+  [OK  ] au bit : rederive_acte_R4R5_machine1_v1.py           
+      inchangees confrontees : 18
+      NEUVES (a verifier au fond) : POUR_MACHINE2_v3_acte_R4R5_machine1_v1.md, journal_delta_nn_R4R5_v3.md, verification_harmoniques_machine1_v1.py
+
+[5] LES DEUX ANCRES CITEES PAR LE MANIFESTE
+  [OK  ] v2 du lot == ce07e533176441a5 (annoncee)             ce07e533176441a5
+  [OK  ] v2 du lot == la v2 que j'ai CERTIFIEE 89/89          
+  [OK  ] v1 du lot == 86d6ee29d27938ff (annoncee)             86d6ee29d27938ff
+  [OK  ] v3 == eaaacadd99fb468d (annoncee dans la note)       eaaacadd99fb468d
+  [OK  ] v3 fait 34028 octets                                 
+
+[6] LA NOTE DE COUVERTURE, HORS LOT ET DANS LE LOT
+  [OK  ] note hors lot == note du lot, au bit                 
+  [OK  ] journal v3 hors lot == journal v3 du lot, au bit     
+
+====================================================================================
+BILAN : 52 controles, 0 mordent
+CANON DU LOT RECU : fadc1c4f4c91b353
+====================================================================================

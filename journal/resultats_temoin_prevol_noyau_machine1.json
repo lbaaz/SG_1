@@ -1,0 +1,1182 @@
+{
+ "T1": {
+  "A": {
+   "D_max": 1.0,
+   "H1_0": 2.0,
+   "N_0": 0.75,
+   "R": [
+    1.955665024630542,
+    2.0226700251889165,
+    1.9887920298879203,
+    2.0056355666875394
+   ],
+   "T_0": 400.0,
+   "T_MAX": 649.6,
+   "W_croissance": "MUETTE",
+   "W_integrales": {
+    "W_integrales": "PASSE",
+    "b": 0.012,
+    "integrales": {
+     "H1": {
+      "derive_dt": 1e-06,
+      "derive_dt2": 6.25e-08,
+      "ecart_a_4": 0.0,
+      "q_int": 4.0,
+      "statut": "PASSE"
+     },
+     "N": {
+      "derive_dt": 1e-06,
+      "derive_dt2": 6.25e-08,
+      "ecart_a_4": 0.0,
+      "q_int": 4.0,
+      "statut": "PASSE"
+     }
+    },
+    "n_pas_dt2": 216533,
+    "omega_max": 2.0,
+    "plafond_int": 0.25,
+    "plancher_dt2": 4.80799844382318e-10,
+    "resolution_ok": true,
+    "tol_int": 0.008578984888782986,
+    "tol_int_sur_1": 0.008578984888782986
+   },
+   "caps": [
+    10.0,
+    20.0,
+    40.0,
+    80.0,
+    160.0
+   ],
+   "derive_H1_dt": 1e-06,
+   "derive_H1_dt2": 6.25e-08,
+   "derive_N_dt": 1e-06,
+   "derive_N_dt2": 6.25e-08,
+   "disp_y": 0.022453689265889178,
+   "etat": [
+    1.0,
+    0.0,
+    1.0,
+    0.0
+   ],
+   "fenetre_1": false,
+   "fenetre_q": true,
+   "n_pas": 108267,
+   "n_pas_dt2": 216533,
+   "non_fini": null,
+   "pics": [
+    [
+     200.0,
+     199.3,
+     100.0
+    ],
+    [
+     400.0,
+     399.3,
+     200.0
+    ]
+   ],
+   "plafond_R": 0.25,
+   "prediction_tc4": 324.8,
+   "resolution_ok": true,
+   "saturation": false,
+   "t_c": [
+    20.3,
+    39.7,
+    80.3,
+    159.7,
+    320.3
+   ],
+   "tol_R": 0.044907378531778355,
+   "tol_R_sur_q_moins_1": 0.044907378531778355,
+   "x_max": 1.0,
+   "y": [
+    2.0300000000000002,
+    1.985,
+    2.0075,
+    1.9962499999999999,
+    2.001875
+   ]
+  },
+  "B": {
+   "D_max": 1.0,
+   "H1_0": 2.0,
+   "N_0": 0.75,
+   "R": [
+    1.955665024630542,
+    2.0226700251889165,
+    1.9887920298879203,
+    2.0056355666875394
+   ],
+   "T_0": 400.0,
+   "T_MAX": 649.6,
+   "W_croissance": "MUETTE",
+   "W_integrales": {
+    "W_integrales": "PASSE",
+    "b": 0.021633307652783935,
+    "integrales": {
+     "H1": {
+      "derive_dt": 1e-06,
+      "derive_dt2": 6.25e-08,
+      "ecart_a_4": 0.0,
+      "q_int": 4.0,
+      "statut": "PASSE"
+     },
+     "N": {
+      "derive_dt": 1e-06,
+      "derive_dt2": 6.25e-08,
+      "ecart_a_4": 0.0,
+      "q_int": 4.0,
+      "statut": "PASSE"
+     }
+    },
+    "n_pas_dt2": 216533,
+    "omega_max": 3.605551275463989,
+    "plafond_int": 0.25,
+    "plancher_dt2": 4.80799844382318e-10,
+    "resolution_ok": true,
+    "tol_int": 0.01535612729760824,
+    "tol_int_sur_1": 0.01535612729760824
+   },
+   "caps": [
+    10.0,
+    20.0,
+    40.0,
+    80.0,
+    160.0
+   ],
+   "derive_H1_dt": 1e-06,
+   "derive_H1_dt2": 6.25e-08,
+   "derive_N_dt": 1e-06,
+   "derive_N_dt2": 6.25e-08,
+   "disp_y": 0.022453689265889178,
+   "etat": [
+    2.0,
+    0.0,
+    1.0,
+    0.0
+   ],
+   "fenetre_1": false,
+   "fenetre_q": true,
+   "n_pas": 108267,
+   "n_pas_dt2": 216533,
+   "non_fini": null,
+   "pics": [
+    [
+     200.0,
+     199.3,
+     100.0
+    ],
+    [
+     400.0,
+     399.3,
+     200.0
+    ]
+   ],
+   "plafond_R": 0.25,
+   "prediction_tc4": 324.8,
+   "resolution_ok": true,
+   "saturation": false,
+   "t_c": [
+    20.3,
+    39.7,
+    80.3,
+    159.7,
+    320.3
+   ],
+   "tol_R": 0.044907378531778355,
+   "tol_R_sur_q_moins_1": 0.044907378531778355,
+   "x_max": 2.0,
+   "y": [
+    2.0300000000000002,
+    1.985,
+    2.0075,
+    1.9962499999999999,
+    2.001875
+   ]
+  }
+ },
+ "T1b": {
+  "k_attendu_0": true,
+  "loi1": 1.9999994393699407,
+  "loi2": 0.5000002803150296,
+  "osc_enveloppe": 0.0,
+  "plafond_loi1": 0.25,
+  "plafond_loi2": 0.125,
+  "recherches": {
+   "a": {
+    "CAP": 100.0,
+    "T_MAX": 200.0,
+    "controle_positif": true,
+    "detail": "pas=6.03e-07 attendu(k=0)=6.03e-07 den=9863185 encadrement=[0.05, 6] seuil=0.9765628546965307 coherent=True",
+    "duree_s": 0.00014645999999629566,
+    "encadrement": [
+     0.05,
+     6.0
+    ],
+    "k": 0,
+    "motif": "OK|pas=6.03e-07",
+    "seuil": 0.9765628546965307
+   },
+   "b": {
+    "CAP": 200.0,
+    "T_MAX": 200.0,
+    "controle_positif": true,
+    "detail": "pas=6.03e-07 attendu(k=0)=6.03e-07 den=9863185 encadrement=[0.05, 6] seuil=1.9531251619025702 coherent=True",
+    "duree_s": 4.333900000119684e-05,
+    "encadrement": [
+     0.05,
+     6.0
+    ],
+    "k": 0,
+    "motif": "OK|pas=6.03e-07",
+    "seuil": 1.9531251619025702
+   },
+   "c": {
+    "CAP": 100.0,
+    "T_MAX": 400.0,
+    "controle_positif": true,
+    "detail": "pas=6.03e-07 attendu(k=0)=6.03e-07 den=9863185 encadrement=[0.05, 6] seuil=0.48828170109351093 coherent=True",
+    "duree_s": 3.940499999544045e-05,
+    "encadrement": [
+     0.05,
+     6.0
+    ],
+    "k": 0,
+    "motif": "OK|pas=6.03e-07",
+    "seuil": 0.48828170109351093
+   }
+  },
+  "regime": "LOIS",
+  "resolution_ok": true,
+  "stable": false,
+  "suit_lois": true,
+  "tol_loi1": 1.8524155002722908e-06,
+  "tol_loi2": 9.262073174197674e-07,
+  "transcription_positif": true
+ },
+ "T2": {
+  "T2a": {
+   "PASSE": true,
+   "a": 1.0,
+   "b": 1.0,
+   "dt": 0.006,
+   "e": 2.0328769223532106e-09,
+   "horizon": 6.283185307179586,
+   "n_pas": 1048,
+   "w2": 2.27
+  },
+  "T2b": {
+   "4": {
+    "PASSE": true,
+    "dt": 6.299123129563429e-06,
+    "e": 9.891047572866876e-06,
+    "n_pas": 380
+   },
+   "5": {
+    "PASSE": true,
+    "dt": 6.299123129563429e-06,
+    "e": 3.3605725288009e-06,
+    "n_pas": 380
+   },
+   "7": {
+    "PASSE": true,
+    "dt": 6.299123129563429e-06,
+    "e": 1.0486766223209858e-06,
+    "n_pas": 380
+   }
+  },
+  "points": {
+   "4|1.73": {
+    "A": 48.98979485566356,
+    "CAP_p": 2003060243.2427926,
+    "C_effectif": 7.714285714285706,
+    "R_composantes": 246197600.64392182,
+    "W_bascule": "PASSE",
+    "W_pas": "PASSE",
+    "W_plancher": "PASSE",
+    "alpha": 2.0,
+    "bascule": {
+     "e_avec": 0.010775791250321949,
+     "e_avec_sur_e_sans": 1085.128729760246,
+     "err_rel_bascule": 0.0005384001287953488,
+     "g2_dans_intervalle": true,
+     "intervalle_g2": [
+      581,
+      621
+     ],
+     "n_g1": 17,
+     "n_g2": 608,
+     "n_pas_phase2": 376,
+     "tau_b": 0.003093311739644125,
+     "x_b_num": 5117105.301025391
+    },
+    "conversion_ok": true,
+    "dt2": 7.819442837771142e-06,
+    "e_dt2s2_sur_plancher_comp": 12.449593259245548,
+    "e_sur_ln10": 4.312729494490629e-06,
+    "err": {
+     "dt2": {
+      "e": 9.93042664412987e-06,
+      "evenement": "TAU_FIN",
+      "n_pas": 380,
+      "tau_fin": 0.00015638885675542218
+     },
+     "dt2/2": {
+      "e": 6.805800344220617e-07,
+      "evenement": "TAU_FIN",
+      "n_pas": 760,
+      "tau_fin": 0.00015638885675542218
+     }
+    },
+    "p_obs": 3.867018968097872,
+    "plafond_ordre": 0.25,
+    "plancher_accum": 1.687538997430238e-13,
+    "plancher_composantes": 5.4666848968470255e-08,
+    "ratio_seuil": 1.6138361632355356,
+    "seuil_5_4": 4.217156920424844e-07,
+    "tau_CAP": 0.00015638885675542283,
+    "tau_dom": 0.001563888567554228,
+    "tol_ordre": 0.20029865048583131,
+    "tol_ordre_sur_1": 0.20029865048583131,
+    "x_bascule": 5007650.608106983
+   },
+   "4|2.27": {
+    "A": 48.98979485566356,
+    "CAP_p": 3086636121.7783017,
+    "C_effectif": 7.714285714285706,
+    "R_composantes": 182057799.35111365,
+    "W_bascule": "PASSE",
+    "W_pas": "PASSE",
+    "W_plancher": "PASSE",
+    "alpha": 2.0,
+    "bascule": {
+     "e_avec": 0.02563265533305793,
+     "e_avec_sur_e_sans": 2592.204131914856,
+     "err_rel_bascule": 0.0013448834444785057,
+     "g2_dans_intervalle": true,
+     "intervalle_g2": [
+      572,
+      621
+     ],
+     "n_g1": 14,
+     "n_g2": 594,
+     "n_pas_phase2": 365,
+     "tau_b": 0.0024239693376102295,
+     "x_b_num": 8326584.784912109
+    },
+    "conversion_ok": true,
+    "dt2": 6.299123129563429e-06,
+    "e_dt2s2_sur_plancher_comp": 16.363403412989964,
+    "e_sur_ln10": 4.294461470305481e-06,
+    "err": {
+     "dt2": {
+      "e": 9.888362963962694e-06,
+      "evenement": "TAU_FIN",
+      "n_pas": 380,
+      "tau_fin": 0.00012598246259126842
+     },
+     "dt2/2": {
+      "e": 6.614897996611757e-07,
+      "evenement": "TAU_FIN",
+      "n_pas": 760,
+      "tau_fin": 0.00012598246259126842
+     }
+    },
+    "p_obs": 3.9019408849598323,
+    "plafond_ordre": 0.25,
+    "plancher_accum": 1.687538997430238e-13,
+    "plancher_composantes": 4.042495213043865e-08,
+    "ratio_seuil": 2.1211819239061085,
+    "seuil_5_4": 3.118496307205264e-07,
+    "tau_CAP": 0.00012598246259126858,
+    "tau_dom": 0.0012598246259126857,
+    "tol_ordre": 0.20029865048583131,
+    "tol_ordre_sur_1": 0.20029865048583131,
+    "x_bascule": 7716590.304445757
+   },
+   "4|2.80": {
+    "A": 48.98979485566356,
+    "CAP_p": 4434634614.006434,
+    "C_effectif": 7.714285714285706,
+    "R_composantes": 158809720.24219796,
+    "W_bascule": "PASSE",
+    "W_pas": "PASSE",
+    "W_plancher": "PASSE",
+    "alpha": 2.0,
+    "bascule": {
+     "e_avec": 0.055277433407297814,
+     "e_avec_sur_e_sans": 5584.708242956056,
+     "err_rel_bascule": 0.002800617720373864,
+     "g2_dans_intervalle": true,
+     "intervalle_g2": [
+      562,
+      621
+     ],
+     "n_g1": 12,
+     "n_g2": 575,
+     "n_pas_phase2": 380,
+     "tau_b": 0.0020991124636562802,
+     "x_b_num": 11087055.130371094
+    },
+    "conversion_ok": true,
+    "dt2": 5.2552562030961915e-06,
+    "e_dt2s2_sur_plancher_comp": 18.35302778153551,
+    "e_sur_ln10": 4.298646098987057e-06,
+    "err": {
+     "dt2": {
+      "e": 9.897998427584604e-06,
+      "evenement": "TAU_FIN",
+      "n_pas": 380,
+      "tau_fin": 0.0001051051240619238
+     },
+     "dt2/2": {
+      "e": 6.471799113467606e-07,
+      "evenement": "TAU_FIN",
+      "n_pas": 760,
+      "tau_fin": 0.0001051051240619238
+     }
+    },
+    "p_obs": 3.9348980811149685,
+    "plafond_ordre": 0.25,
+    "plancher_accum": 1.687538997430238e-13,
+    "plancher_composantes": 3.5262841589433594e-08,
+    "ratio_seuil": 2.379096193902754,
+    "seuil_5_4": 2.7202763511848745e-07,
+    "tau_CAP": 0.00010510512406192382,
+    "tau_dom": 0.0010510512406192382,
+    "tol_ordre": 0.20029865048583131,
+    "tol_ordre_sur_1": 0.20029865048583131,
+    "x_bascule": 11086586.535016088
+   },
+   "5|1.73": {
+    "A": 9.650477151091371,
+    "CAP_p": 1145357.4551818673,
+    "C_effectif": 8.315789473684212,
+    "R_composantes": 127658061.31671496,
+    "W_bascule": "PASSE",
+    "W_pas": "NON LU (plancher, 5.4)",
+    "W_plancher": "MORD",
+    "alpha": 1.3333333333333333,
+    "bascule": {
+     "e_avec": 0.0036374811905338054,
+     "e_avec_sur_e_sans": 1078.9303905906786,
+     "err_rel_bascule": 0.00018094286262746503,
+     "g2_dans_intervalle": true,
+     "intervalle_g2": [
+      581,
+      621
+     ],
+     "n_g1": 17,
+     "n_g2": 608,
+     "n_pas_phase2": 376,
+     "tau_b": 0.003093311739644125,
+     "x_b_num": 21407.79533624649
+    },
+    "conversion_ok": true,
+    "dt2": 7.819442837771142e-06,
+    "e_dt2s2_sur_plancher_comp": 8.244976957884097,
+    "e_sur_ln10": 1.4641704625734459e-06,
+    "err": {
+     "dt2": {
+      "e": 3.371377080723813e-06,
+      "evenement": "TAU_FIN",
+      "n_pas": 380,
+      "tau_fin": 0.00015638885675542218
+     },
+     "dt2/2": {
+      "e": 2.337103342063762e-07,
+      "evenement": "TAU_FIN",
+      "n_pas": 760,
+      "tau_fin": 0.00015638885675542218
+     }
+    },
+    "p_obs": null,
+    "plafond_ordre": 0.25,
+    "plancher_accum": 1.687538997430238e-13,
+    "plancher_composantes": 2.8345783790565395e-08,
+    "ratio_seuil": 0.9914845708847962,
+    "seuil_5_4": 2.3571757046891227e-07,
+    "tau_CAP": 0.00015638885675542283,
+    "tau_dom": 0.001563888567554228,
+    "tol_ordre": 0.18483967545359553,
+    "tol_ordre_sur_1": 0.18483967545359553,
+    "x_bascule": 21097.66471046298
+   },
+   "5|2.27": {
+    "A": 9.650477151091371,
+    "CAP_p": 1528042.132288354,
+    "C_effectif": 8.315789473684212,
+    "R_composantes": 94400372.29879291,
+    "W_bascule": "PASSE",
+    "W_pas": "PASSE",
+    "W_plancher": "PASSE",
+    "alpha": 1.3333333333333333,
+    "bascule": {
+     "e_avec": 0.008773134708181791,
+     "e_avec_sur_e_sans": 2612.0355161355574,
+     "err_rel_bascule": 0.00045526305268025623,
+     "g2_dans_intervalle": true,
+     "intervalle_g2": [
+      572,
+      621
+     ],
+     "n_g1": 14,
+     "n_g2": 594,
+     "n_pas_phase2": 365,
+     "tau_b": 0.0024239693376102295,
+     "x_b_num": 29624.306639671326
+    },
+    "conversion_ok": true,
+    "dt2": 6.299123129563429e-06,
+    "e_dt2s2_sur_plancher_comp": 10.472035145026446,
+    "e_sur_ln10": 1.4586800099847924e-06,
+    "err": {
+     "dt2": {
+      "e": 3.358734846439389e-06,
+      "evenement": "TAU_FIN",
+      "n_pas": 380,
+      "tau_fin": 0.00012598246259126842
+     },
+     "dt2/2": {
+      "e": 2.1950530646831285e-07,
+      "evenement": "TAU_FIN",
+      "n_pas": 760,
+      "tau_fin": 0.00012598246259126842
+     }
+    },
+    "p_obs": 3.935590185293406,
+    "plafond_ordre": 0.25,
+    "plancher_accum": 1.687538997430238e-13,
+    "plancher_composantes": 2.0961093371861342e-08,
+    "ratio_seuil": 1.2592953655411545,
+    "seuil_5_4": 1.7430803961863645e-07,
+    "tau_CAP": 0.00012598246259126858,
+    "tau_dom": 0.0012598246259126857,
+    "tol_ordre": 0.18483967545359553,
+    "tol_ordre_sur_1": 0.18483967545359553,
+    "x_bascule": 28146.776732999595
+   },
+   "5|2.80": {
+    "A": 9.650477151091371,
+    "CAP_p": 1945585.2625902807,
+    "C_effectif": 8.315789473684212,
+    "R_composantes": 82345806.60286376,
+    "W_bascule": "PASSE",
+    "W_pas": "PASSE",
+    "W_plancher": "PASSE",
+    "alpha": 1.3333333333333333,
+    "bascule": {
+     "e_avec": 0.019329006733375842,
+     "e_avec_sur_e_sans": 5760.568397295925,
+     "err_rel_bascule": 0.0009559174883689467,
+     "g2_dans_intervalle": true,
+     "intervalle_g2": [
+      562,
+      621
+     ],
+     "n_g1": 12,
+     "n_g2": 575,
+     "n_pas_phase2": 380,
+     "tau_b": 0.0020991124636562802,
+     "x_b_num": 35871.74432516098
+    },
+    "conversion_ok": true,
+    "dt2": 5.2552562030961915e-06,
+    "e_dt2s2_sur_plancher_comp": 12.213020776501441,
+    "e_sur_ln10": 1.457231367813702e-06,
+    "err": {
+     "dt2": {
+      "e": 3.3553992245711537e-06,
+      "evenement": "TAU_FIN",
+      "n_pas": 380,
+      "tau_fin": 0.0001051051240619238
+     },
+     "dt2/2": {
+      "e": 2.2330827118522848e-07,
+      "evenement": "TAU_FIN",
+      "n_pas": 760,
+      "tau_fin": 0.0001051051240619238
+     }
+    },
+    "p_obs": 3.909375834439857,
+    "plafond_ordre": 0.25,
+    "plancher_accum": 1.687538997430238e-13,
+    "plancher_composantes": 1.8284442094365918e-08,
+    "ratio_seuil": 1.4686543971742234,
+    "seuil_5_4": 1.5204957110051663e-07,
+    "tau_CAP": 0.00010510512406192382,
+    "tau_dom": 0.0010510512406192382,
+    "tol_ordre": 0.18483967545359553,
+    "tol_ordre_sur_1": 0.18483967545359553,
+    "x_bascule": 35837.986953365624
+   },
+   "7|1.73": {
+    "A": 3.142438761846983,
+    "CAP_p": 3482.5886417706447,
+    "C_effectif": 8.896551724137932,
+    "R_composantes": 59087456.06057529,
+    "W_bascule": "PASSE",
+    "W_pas": "NON LU (plancher, 5.4)",
+    "W_plancher": "MORD",
+    "alpha": 0.8,
+    "bascule": {
+     "e_avec": 0.0011274527667987225,
+     "e_avec_sur_e_sans": 1071.1702469138402,
+     "err_rel_bascule": 5.5993778905584194e-05,
+     "g2_dans_intervalle": true,
+     "intervalle_g2": [
+      581,
+      621
+     ],
+     "n_g1": 17,
+     "n_g2": 608,
+     "n_pas_phase2": 376,
+     "tau_b": 0.003093311739644125,
+     "x_b_num": 319.8184784948826
+    },
+    "conversion_ok": true,
+    "dt2": 7.819442837771142e-06,
+    "e_dt2s2_sur_plancher_comp": 6.754848318113389,
+    "e_sur_ln10": 4.5711362562390495e-07,
+    "err": {
+     "dt2": {
+      "e": 1.0525430201660647e-06,
+      "evenement": "TAU_FIN",
+      "n_pas": 380,
+      "tau_fin": 0.00015638885675542218
+     },
+     "dt2/2": {
+      "e": 8.86239533298418e-08,
+      "evenement": "TAU_FIN",
+      "n_pas": 760,
+      "tau_fin": 0.00015638885675542218
+     }
+    },
+    "p_obs": null,
+    "plafond_ordre": 0.25,
+    "plancher_accum": 1.687538997430238e-13,
+    "plancher_composantes": 1.3120050836995587e-08,
+    "ratio_seuil": 0.7592658962220475,
+    "seuil_5_4": 1.1672321089465041e-07,
+    "tau_CAP": 0.00015638885675542283,
+    "tau_dom": 0.001563888567554228,
+    "tol_ordre": 0.17202346732631013,
+    "tol_ordre_sur_1": 0.17202346732631013,
+    "x_bascule": 317.01381075364264
+   },
+   "7|2.27": {
+    "A": 3.142438761846983,
+    "CAP_p": 4140.175475874175,
+    "C_effectif": 8.896551724137932,
+    "R_composantes": 43693893.306369714,
+    "W_bascule": "PASSE",
+    "W_pas": "NON LU (plancher, 5.4)",
+    "W_plancher": "MORD",
+    "alpha": 0.8,
+    "bascule": {
+     "e_avec": 0.002742092788178116,
+     "e_avec_sur_e_sans": 2601.565114552879,
+     "err_rel_bascule": 0.0001416851548998568,
+     "g2_dans_intervalle": true,
+     "intervalle_g2": [
+      572,
+      621
+     ],
+     "n_g1": 14,
+     "n_g2": 594,
+     "n_pas_phase2": 365,
+     "tau_b": 0.0024239693376102295,
+     "x_b_num": 388.6722981221974
+    },
+    "conversion_ok": true,
+    "dt2": 6.299123129563429e-06,
+    "e_dt2s2_sur_plancher_comp": 7.592513615208037,
+    "e_sur_ln10": 4.5775358844982407e-07,
+    "err": {
+     "dt2": {
+      "e": 1.0540165890290963e-06,
+      "evenement": "TAU_FIN",
+      "n_pas": 380,
+      "tau_fin": 0.00012598246259126842
+     },
+     "dt2/2": {
+      "e": 7.36625160491354e-08,
+      "evenement": "TAU_FIN",
+      "n_pas": 760,
+      "tau_fin": 0.00012598246259126842
+     }
+    },
+    "p_obs": null,
+    "plafond_ordre": 0.25,
+    "plancher_accum": 1.687538997430238e-13,
+    "plancher_composantes": 9.701993276849333e-09,
+    "ratio_seuil": 0.8534220730272597,
+    "seuil_5_4": 8.631428501472857e-08,
+    "tau_CAP": 0.00012598246259126858,
+    "tau_dom": 0.0012598246259126857,
+    "tol_ordre": 0.17202346732631013,
+    "tol_ordre_sur_1": 0.17202346732631013,
+    "x_bascule": 376.87276328114956
+   },
+   "7|2.80": {
+    "A": 3.142438761846983,
+    "CAP_p": 4785.945092608521,
+    "C_effectif": 8.896551724137932,
+    "R_composantes": 38114350.26757644,
+    "W_bascule": "PASSE",
+    "W_pas": "NON LU (plancher, 5.4)",
+    "W_plancher": "MORD",
+    "alpha": 0.8,
+    "bascule": {
+     "e_avec": 0.006112744368554467,
+     "e_avec_sur_e_sans": 5834.862174160761,
+     "err_rel_bascule": 0.00029940543524706315,
+     "g2_dans_intervalle": true,
+     "intervalle_g2": [
+      562,
+      621
+     ],
+     "n_g1": 12,
+     "n_g2": 575,
+     "n_pas_phase2": 380,
+     "tau_b": 0.0020991124636562802,
+     "x_b_num": 436.0218042731285
+    },
+    "conversion_ok": true,
+    "dt2": 5.2552562030961915e-06,
+    "e_dt2s2_sur_plancher_comp": 8.509897145159576,
+    "e_sur_ln10": 4.5497752462854305e-07,
+    "err": {
+     "dt2": {
+      "e": 1.0476244658570147e-06,
+      "evenement": "TAU_FIN",
+      "n_pas": 380,
+      "tau_fin": 0.0001051051240619238
+     },
+     "dt2/2": {
+      "e": 7.201999008980239e-08,
+      "evenement": "TAU_FIN",
+      "n_pas": 760,
+      "tau_fin": 0.0001051051240619238
+     }
+    },
+    "p_obs": null,
+    "plafond_ordre": 0.25,
+    "plancher_accum": 1.687538997430238e-13,
+    "plancher_composantes": 8.463085847138272e-09,
+    "ratio_seuil": 0.9565388263939056,
+    "seuil_5_4": 7.529228098488533e-08,
+    "tau_CAP": 0.00010510512406192382,
+    "tau_dom": 0.0010510512406192382,
+    "tol_ordre": 0.17202346732631013,
+    "tol_ordre_sur_1": 0.17202346732631013,
+    "x_bascule": 435.6560156625706
+   }
+  }
+ },
+ "T3a": {
+  "A": {
+   "W_integrales": "PASSE",
+   "b": 0.012,
+   "integrales": {
+    "H1": {
+     "derive_dt": 1e-06,
+     "derive_dt2": 6.25e-08,
+     "ecart_a_4": 0.0,
+     "q_int": 4.0,
+     "statut": "PASSE"
+    },
+    "N": {
+     "derive_dt": 1e-06,
+     "derive_dt2": 6.25e-08,
+     "ecart_a_4": 0.0,
+     "q_int": 4.0,
+     "statut": "PASSE"
+    }
+   },
+   "n_pas_dt2": 216533,
+   "omega_max": 2.0,
+   "plafond_int": 0.25,
+   "plancher_dt2": 4.80799844382318e-10,
+   "resolution_ok": true,
+   "tol_int": 0.008578984888782986,
+   "tol_int_sur_1": 0.008578984888782986
+  },
+  "B": {
+   "W_integrales": "PASSE",
+   "b": 0.021633307652783935,
+   "integrales": {
+    "H1": {
+     "derive_dt": 1e-06,
+     "derive_dt2": 6.25e-08,
+     "ecart_a_4": 0.0,
+     "q_int": 4.0,
+     "statut": "PASSE"
+    },
+    "N": {
+     "derive_dt": 1e-06,
+     "derive_dt2": 6.25e-08,
+     "ecart_a_4": 0.0,
+     "q_int": 4.0,
+     "statut": "PASSE"
+    }
+   },
+   "n_pas_dt2": 216533,
+   "omega_max": 3.605551275463989,
+   "plafond_int": 0.25,
+   "plancher_dt2": 4.80799844382318e-10,
+   "resolution_ok": true,
+   "tol_int": 0.01535612729760824,
+   "tol_int_sur_1": 0.01535612729760824
+  }
+ },
+ "T3b": {
+  "w1_lam1_x01": {
+   "Omega2": 2.0,
+   "PASSE": true,
+   "e": 4.391520050384123e-09,
+   "horizon": 47.680220291024604,
+   "m": 0.25,
+   "n_pas": 7947,
+   "periode": 4.76802202910246,
+   "x0_formule": 1.0
+  },
+  "w1_lam1_x02": {
+   "Omega2": 5.0,
+   "PASSE": true,
+   "e": 4.3503508954934045e-08,
+   "horizon": 31.79723316781715,
+   "m": 0.4,
+   "n_pas": 5300,
+   "periode": 3.179723316781715,
+   "x0_formule": 2.0
+  },
+  "w1_lam1_x04": {
+   "Omega2": 17.0,
+   "PASSE": true,
+   "e": 7.143470489301418e-07,
+   "horizon": 17.752905637749908,
+   "m": 0.47058823529411764,
+   "n_pas": 2959,
+   "periode": 1.775290563774991,
+   "x0_formule": 4.0
+  }
+ },
+ "W_comptes": "PASSE",
+ "W_transcription_nombres": {
+  "resume": "seconde transcription non fournie -- fichier LIVRE, la comparaison se joue sur les nombres (bornes 2 / 2 ulp -- x'' libm inter-machines, D'' re-association inter-plumes)",
+  "verdict": "A COMPARER"
+ },
+ "algorithme_vs_moteur": {
+  "detail": [
+   {
+    "depose": [
+     0.4872000677266015,
+     "OK|pas=6.03e-07"
+    ],
+    "ok": true,
+    "theta": 0.4872,
+    "transcrit": [
+     0.4872000677266015,
+     "OK|pas=6.03e-07",
+     0
+    ]
+   },
+   {
+    "depose": [
+     0.977300030365445,
+     "OK|pas=6.03e-07"
+    ],
+    "ok": true,
+    "theta": 0.9773,
+    "transcrit": [
+     0.977300030365445,
+     "OK|pas=6.03e-07",
+     0
+    ]
+   },
+   {
+    "depose": [
+     1.9545005796809045,
+     "OK|pas=6.03e-07"
+    ],
+    "ok": true,
+    "theta": 1.9545,
+    "transcrit": [
+     1.9545005796809045,
+     "OK|pas=6.03e-07",
+     0
+    ]
+   },
+   {
+    "depose": [
+     5.990000471450145,
+     "OK|pas=6.03e-07"
+    ],
+    "ok": true,
+    "theta": 5.99,
+    "transcrit": [
+     5.990000471450145,
+     "OK|pas=6.03e-07",
+     0
+    ]
+   },
+   {
+    "depose": [
+     6.0,
+     "OK|pas=6.03e-07"
+    ],
+    "ok": true,
+    "theta": 6.0,
+    "transcrit": [
+     6.0,
+     "OK|pas=6.03e-07",
+     0
+    ]
+   },
+   {
+    "depose": [
+     7.460000192635543,
+     "OK|pas=1.82e-06"
+    ],
+    "ok": true,
+    "theta": 7.46,
+    "transcrit": [
+     7.460000192635543,
+     "OK|pas=1.82e-06",
+     1
+    ]
+   },
+   {
+    "depose": [
+     30.000006691550446,
+     "OK|pas=7.30e-06"
+    ],
+    "ok": true,
+    "theta": 30.0,
+    "transcrit": [
+     30.000006691550446,
+     "OK|pas=7.30e-06",
+     2
+    ]
+   },
+   {
+    "depose": [
+     0.030000001267339097,
+     "OK|pas=3.80e-09"
+    ],
+    "ok": true,
+    "theta": 0.03,
+    "transcrit": [
+     0.030000001267339097,
+     "OK|pas=3.80e-09",
+     -1
+    ]
+   },
+   {
+    "depose": [
+     null,
+     "ECHEC_HAUT"
+    ],
+    "ok": true,
+    "theta": 1000000000.0,
+    "transcrit": [
+     null,
+     "ECHEC_HAUT",
+     8
+    ]
+   }
+  ],
+  "n": 9,
+  "n_ok": 9,
+  "ok": true
+ },
+ "attendus": {
+  "T1": 4,
+  "T1b": 3,
+  "T2": 18,
+  "T2a": 1,
+  "T2b": 3,
+  "T3a": 0,
+  "T3b": 3,
+  "W_bascule": 9
+ },
+ "attendus_total": 41,
+ "banc_gardes": {
+  "demontrees": [
+   "9bis",
+   "D-M17-58",
+   "G-compte-etage",
+   "G-comptes",
+   "G-dt",
+   "G-fen",
+   "G-k",
+   "G-lignee",
+   "G-plancher",
+   "G-s",
+   "G-seuil",
+   "G-w2",
+   "W-bascule",
+   "W-comptes",
+   "W-croissance",
+   "W-integrales",
+   "W-mirage",
+   "W-pas",
+   "W-plancher",
+   "W-transcription"
+  ],
+  "n": 28,
+  "ok": true
+ },
+ "branche": "branche 4 : W-plancher 5|1.73, W-plancher 7|1.73, W-plancher 7|2.27, W-plancher 7|2.80 MORD",
+ "champ_forces_empreinte": "0491b83e6893dbbf",
+ "comptes": {
+  "comptes": 41,
+  "sautes": 0,
+  "sautes_noms": []
+ },
+ "lectures_non_lues": [
+  "W-pas 5|1.73 NON LU (plancher de composition, 5.4)",
+  "W-pas 7|1.73 NON LU (plancher de composition, 5.4)",
+  "W-pas 7|2.27 NON LU (plancher de composition, 5.4)",
+  "W-pas 7|2.80 NON LU (plancher de composition, 5.4)",
+  "controle 9bis NON JOUE (pas de reference deposee)"
+ ],
+ "meta": {
+  "carte": [
+   "runs/m12_results.json",
+   "fa109da92e582520cfcb63b46bc41fa7d4b62295891f413bb97c6095b2fe59b1",
+   130856
+  ],
+  "cert_alpha": [
+   "journal/note_machine2_certification_constante_A_v4_v1.md",
+   "9e6376f936708077"
+  ],
+  "cert_alpha_base": [
+   "journal/note_machine1_certification_gel_alpha_v5.md",
+   "fe43f7c4d142bcdb"
+  ],
+  "cert_temoin": [
+   "journal/note_machine1_certification_temoin_v11_v2.md",
+   "7fc5f2412b99ad50"
+  ],
+  "cert_temoin_base": [
+   "journal/note_machine1_certification_gels_v7_v4.md",
+   "6b2425dbf906205b"
+  ],
+  "date_utc": "2026-09-12T09:59:46Z",
+  "files_maximum_cite": "E42, N-69, D-M17-45 (registre 37ad1b6, pieces .md/.txt)",
+  "gel_alpha": [
+   "gels/constante_A_pre_enregistrement_v4.md",
+   "011c923203fcdaef",
+   30988
+  ],
+  "gel_alpha_base": [
+   "gels/alpha_pre_enregistrement_v5.md",
+   "045c2435aaf623ce",
+   28998
+  ],
+  "gel_temoin": [
+   "gels/temoin_negatif_pre_enregistrement_v11.md",
+   "a2e7ef3e237c5acf",
+   72281
+  ],
+  "gel_temoin_base": [
+   "gels/temoin_negatif_pre_enregistrement_v7.md",
+   "8b083e9f109b5a8e",
+   39750
+  ],
+  "lectures_declarees": [
+   "LD-1",
+   "LD-2",
+   "LD-3",
+   "LD-4",
+   "LD-5",
+   "LD-6",
+   "LD-7",
+   "LD-8",
+   "LD-9",
+   "LD-10",
+   "LD-11",
+   "LD-12",
+   "LD-13",
+   "LD-14"
+  ],
+  "machine": "vm",
+  "mode": "temoin",
+  "moteur": [
+   "scripts/m9_replication_v1.py",
+   "c8ed357b120352c4d1078307add3eaac285940c8bec00acc2ddc9ff386ab2c5c",
+   36325
+  ],
+  "numpy": "2.4.4",
+  "opposable": "seulement si joue par machine 2 sur BOCAL4 (N-62, pre-vol E19)",
+  "plateforme": "Linux-6.18.44-fc-v32-x86_64-with-glibc2.39",
+  "python": "3.12.3",
+  "script_sha256_brut": "4d8882a2223a5c74067f064f812da673e6452d72425821e515d62b1b2d0caa09",
+  "script_taille": 193651,
+  "statut": "PREVOL",
+  "version": "banc_qualification_machine1_v8"
+ },
+ "mode": "temoin",
+ "ne_joue_pas": {
+  "gardes_sans_morsure": [],
+  "lectures_non_lues": [
+   "W-pas 5|1.73 NON LU (plancher de composition, 5.4)",
+   "W-pas 7|1.73 NON LU (plancher de composition, 5.4)",
+   "W-pas 7|2.27 NON LU (plancher de composition, 5.4)",
+   "W-pas 7|2.80 NON LU (plancher de composition, 5.4)",
+   "controle 9bis NON JOUE (pas de reference deposee)"
+  ],
+  "runs_non_joues": []
+ },
+ "prevol": true,
+ "prevol_fautes": [],
+ "reglage": {
+  "CAP_depose": 10000.0,
+  "J": 5,
+  "M": 20,
+  "T_MAX_depose": 400.0,
+  "b": 4,
+  "c_0": 10,
+  "c_T": 2,
+  "delta": "1/102400",
+  "delta_0": "1/100",
+  "dt1": 0.006,
+  "eta": "1/4",
+  "eta_R": "1/4",
+  "k": 2,
+  "k_prime": 4,
+  "m": 2,
+  "q": 2,
+  "r": "1/10"
+ },
+ "statut": "PREVOL",
+ "symbolique": {
+  "a_bis_acc_code_egale_polynome": true,
+  "a_hamilton_2.10_vers_2.11": true,
+  "b_crochet_N_H1_nul": true,
+  "c_p4_K=120": true,
+  "c_p4_exposant_alpha(p-1)=alpha+4": true,
+  "c_p4_gA^(p-2)=K_num": true,
+  "c_p4_reste_egale_forcage_f": true,
+  "c_p5_K=3640/81": true,
+  "c_p5_exposant_alpha(p-1)=alpha+4": true,
+  "c_p5_gA^(p-2)=K_num": true,
+  "c_p5_reste_egale_forcage_f": true,
+  "c_p7_K=9576/625": true,
+  "c_p7_exposant_alpha(p-1)=alpha+4": true,
+  "c_p7_gA^(p-2)=K_num": true,
+  "c_p7_reste_egale_forcage_f": true,
+  "d_operateur_lineaire_factorise": true,
+  "e_duffing_Omega2=2_m=1/4_x0=1": true,
+  "f_plafond_R=eta_R(q-1)=1/4": true,
+  "f_plafond_alpha=2/15": true,
+  "f_plafond_loi2=eta(1-1/c_T)=1/8": true,
+  "g_etat_A_H1_0=2_N_0=3/4": true,
+  "g_etat_B_H1_0=10_N_0=6": true
+ },
+ "tirage_empreinte": "a8905b9b501b5601",
+ "transcription_ok": true,
+ "verdict": "NON CONCLUANT D'INTEGRATEUR"
+}

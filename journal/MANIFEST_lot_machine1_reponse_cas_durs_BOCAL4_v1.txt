@@ -1,0 +1,30 @@
+MANIFESTE lot_machine1_2026-09-12_reponse_cas_durs_BOCAL4_v1 -- GESTE (2), REPONSE AU LOT m2 f9e1c1922e32220d ET REPONSE A L'OPERATEUR (exposition) ; machine 1, classe 3
+colonnes : empreinte_B (sha256 NFC+LF, 16 hex)  empreinte_brute  octets_B  octets_bruts  fichier
+entrants : lot m2 cas durs f9e1c1922e32220d (9/9) ; lot m2 certification acte 89 v5 ca9b3bb13a20e7c3 (10/10, lu : ce n'est pas le gel constante A v5) ;
+  instrument v8 4d8882a2223a5c74 et temoin v11 a2e7ef3e237c5acf (lot a4c35a2ee691c9a7) ; moteur c8ed357b120352c4 (clone HEAD d037d21, charge en lecture par seuils_moteur) ;
+  rejeu1 m2 ed09e29e91b6eb00 ; JSON du geste m1 c8d86e5e5b4fd745 ; numpy 2.2.6 installe a part (pip, cible /home/claude/np226) pour test_version_numpy seulement.
+lecture : D-G2-1 et D-G2-2 verses et corriges par le diagnostic v2 (v1 a808e7a8635b0ced non editee) ; 'pas le CPU seul' accorde ; 'la version de numpy' refute
+  (numpy 2.2.6 sur Linux : 985/20000) ; ce qui decide = roue x dispatch ; regle candidate = temoin executable (1765.6704444885254)**6 ; exposition : moteur et scripts
+  exposes sur machine 1, runs deposes BOCAL4 non exposes, seuils et masques identiques au bit avec/sans noyau sur quatre cellules. Aucun verdict de gel ; tenaille non lue.
+les sorties du diagnostic v2 sont celles du script, non editees, copiees sous un nom qui dit contre quel JSON elles ont ete produites ; les .json de seuils portent
+  la variable d'environnement dans leur cle 'variable' ; les .log de mesure sont les sorties brutes des scripts (python -u, stdout).
+ENCODAGE MESURE : 0 des 16 pieces non-ASCII [] ; CONVENTION MESUREE : 0 des 16 pieces avec CR [] ; les deux tailles sont portees.
+
+dc87dd194b607ca7 dc87dd194b607ca7     6679     6679  note_machine1_reponse_cas_durs_BOCAL4_v1.md
+5fa7fd971547b171 5fa7fd971547b171     9300     9300  note_machine1_exposition_noyau_simd_v1.md
+e13e590d384da058 e13e590d384da058    22552    22552  diagnostic_pow_cas_durs_machine1_v2.py
+dcf4b1c4ddd1e379 dcf4b1c4ddd1e379   355062   355062  diagnostic_v2_contre_rejeu1_m2_machine1.log
+9dc66b9808465078 9dc66b9808465078   735631   735631  diagnostic_v2_contre_rejeu1_m2_machine1.json
+638f99b585fbd60a 638f99b585fbd60a   355081   355081  diagnostic_v2_contre_json_m1_degenere_machine1.log
+9693e974f78be7c1 9693e974f78be7c1     3797     3797  mesure_ufuncs_cr.py
+2a5c9345dba343d3 2a5c9345dba343d3     1454     1454  mesure_ufuncs_cr_avecV4.log
+8cee8be359b26ebf 8cee8be359b26ebf     1491     1491  mesure_ufuncs_cr_sansV4.log
+7cf8738b9415ca2c 7cf8738b9415ca2c     1579     1579  test_version_numpy.py
+80309ba62c7ae669 80309ba62c7ae669      958      958  test_version_numpy_226_linux.log
+3b417c4cc3cf0e4b 3b417c4cc3cf0e4b     1302     1302  seuils_moteur_avec_sans_V4.py
+911ead4e9f14cbe2 911ead4e9f14cbe2      570      570  seuils_avecV4.log
+911ead4e9f14cbe2 911ead4e9f14cbe2      570      570  seuils_sansV4.log
+ac7e81c0d8fe728e ac7e81c0d8fe728e     1012     1012  seuils_avecV4.json
+09d097fae367016f 09d097fae367016f     1040     1040  seuils_sansV4.json
+
+pieces : 16 (compte etabli APRES le dernier ajout) ; canon du lot = empreinte B de CE manifeste, calculee sur le fichier, jamais ecrite dedans.

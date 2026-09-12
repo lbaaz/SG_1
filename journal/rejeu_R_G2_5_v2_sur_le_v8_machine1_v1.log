@@ -1,0 +1,84 @@
+repertoire /home/claude/reliv/chaine_constante_A_pour_machine1, HEAD sans git, 1 fichiers .py
+  [NON JOUE] compte de fichiers attendu                             aucun --attendu declare ; 1 mesures
+  [PASSE] tous les fichiers analyses (0 erreur de syntaxe)           0 non analyse
+  [NON JOUE] ligne du coeur du moteur                               aucun --moteur declare ; 0 ligne(s) m9_replication vue(s)
+
+1. COMPTE PAR CLASSE (heuristique statique declaree en tete)
+   EXPOSABLE     42
+   CARRE          9
+   CONST          6
+   SANS-NUMPY     0
+   TOTAL         57   (sur 1 fichiers, dont 1 importent numpy)
+  [PASSE] compte : somme des classes == total                        57
+
+2. LES EXPOSABLES, UNE PAR LIGNE (fichier:ligne  base ** exposant  [genre de la base])
+   banc_qualification_machine1_v8.py:293  B_DESC ** J_DESC  [NAME]
+   banc_qualification_machine1_v8.py:351  float(K_de(p) / Fraction(repr(g))) ** (1.0 / (p - 2))  [CALL]
+   banc_qualification_machine1_v8.py:367  tau_cap(w2) ** (-float(alpha_de(p)))  [CALL]
+   banc_qualification_machine1_v8.py:371  (k * tau_dom(w2)) ** (-float(alpha_de(p)))  [BINOP]
+   banc_qualification_machine1_v8.py:382  (k * tau_dom_0(w2)) ** (-float(alpha_de(p)))  [BINOP]
+   banc_qualification_machine1_v8.py:412  B_DESC ** J_DESC  [NAME]
+   banc_qualification_machine1_v8.py:413  Fraction(B_DESC) ** J_DESC  [CALL]
+   banc_qualification_machine1_v8.py:632  (a1 + a2) ** (p - 1)  [BINOP]
+   banc_qualification_machine1_v8.py:709  (a1 + a2) ** (p - 1)  [BINOP]
+   banc_qualification_machine1_v8.py:795  (C['NGRID'] - 1) ** C['NPASSES']  [BINOP]
+   banc_qualification_machine1_v8.py:843  x ** 4  [NAME]
+   banc_qualification_machine1_v8.py:847  x ** 3  [NAME]
+   banc_qualification_machine1_v8.py:994  tau ** (-a)  [NAME]
+   banc_qualification_machine1_v8.py:994  tau ** (-a - 1)  [NAME]
+   banc_qualification_machine1_v8.py:995  tau ** (-a - 2)  [NAME]
+   banc_qualification_machine1_v8.py:995  tau ** (-a - 3)  [NAME]
+   banc_qualification_machine1_v8.py:1002  tau ** (-a - 2)  [NAME]
+   banc_qualification_machine1_v8.py:1002  tau ** (-a)  [NAME]
+   banc_qualification_machine1_v8.py:1081  Fraction(x) ** e  [CALL]
+   banc_qualification_machine1_v8.py:1095  x ** 3  [NAME]
+   banc_qualification_machine1_v8.py:1097  x ** 4  [NAME]
+   banc_qualification_machine1_v8.py:1141  A ** (pd - 2)  [NAME]
+   banc_qualification_machine1_v8.py:1155  Fraction(x0) ** 3  [CALL]
+   banc_qualification_machine1_v8.py:1156  Fraction(x0) ** 4  [CALL]
+   banc_qualification_machine1_v8.py:1470  Q_ECH ** j  [NAME]
+   banc_qualification_machine1_v8.py:1652  tau ** (-a)  [NAME]
+   banc_qualification_machine1_v8.py:1687  tau2 ** (-a)  [NAME]
+   banc_qualification_machine1_v8.py:1704  tau_b ** (-a)  [NAME]
+   banc_qualification_machine1_v8.py:1704  tau_b ** (-a)  [NAME]
+   banc_qualification_machine1_v8.py:1739  v[0] ** (p - 1)  [SUBSCRIPT]
+   banc_qualification_machine1_v8.py:1744  tau ** (-a)  [NAME]
+   banc_qualification_machine1_v8.py:2102  math.exp(aj['lnA_II']) ** (p - 2)  [CALL]
+   banc_qualification_machine1_v8.py:2168  math.exp(aj['lnA_II']) ** (p - 2)  [CALL]
+   banc_qualification_machine1_v8.py:2435  (t_star - t) ** (-a)  [BINOP]
+   banc_qualification_machine1_v8.py:2452  B_DESC ** J_DESC  [NAME]
+   banc_qualification_machine1_v8.py:2524  math.exp(aj['lnA_II']) ** (p - 2)  [CALL]
+   banc_qualification_machine1_v8.py:2586  (dt / DT1) ** 4  [BINOP]
+   banc_qualification_machine1_v8.py:2597  (-1) ** j  [UNARYOP]
+   banc_qualification_machine1_v8.py:2685  (A / abs(x0)) ** (1.0 / a)  [BINOP]
+   banc_qualification_machine1_v8.py:2689  (ts - t) ** (-a)  [BINOP]
+   banc_qualification_machine1_v8.py:2695  (ts - t) ** (-a)  [BINOP]
+   banc_qualification_machine1_v8.py:2921  tau_r ** (-float(alpha_de(p26)))  [NAME]
+
+   fichiers portant au moins une EXPOSABLE : 1
+     42  banc_qualification_machine1_v8.py
+
+3. APPELS pow() / power() / math.pow()
+   total : 0
+
+4. UFUNCS exp / expm1 / exp2 / arctan2 (noyaux SIMD sur machine 1 eux aussi), modules numpy seulement
+   banc_qualification_machine1_v8.py:1340  exp  np.exp(np.linspace(math.log(1e-06), 0.0, n_scan))
+   banc_qualification_machine1_v8.py:2102  exp  math.exp(aj['lnA_II'])
+   banc_qualification_machine1_v8.py:2168  exp  math.exp(aj['lnA_II'])
+   banc_qualification_machine1_v8.py:2487  exp  math.exp(0.0002 / 1024)
+   banc_qualification_machine1_v8.py:2487  exp  math.exp(0.0002)
+   banc_qualification_machine1_v8.py:2524  exp  math.exp(aj['lnA_II'])
+   banc_qualification_machine1_v8.py:2678  exp  math.exp(+self.bruit_lnA)
+   banc_qualification_machine1_v8.py:2680  exp  math.exp(-self.bruit_lnA)
+   total : 8 (et 0 dans des modules sans numpy, non listes)
+
+5. LES CARRES ET LES CONSTANTES, PAR FICHIER (comptes seulement)
+   CARRE       banc_qualification_machine1_v8.py:9
+   CONST       banc_qualification_machine1_v8.py:6
+   SANS-NUMPY  
+
+=====================================================================
+BILAN : 2/2 controles PASSENT ; 2 non joue(s) : compte de fichiers attendu, ligne du coeur du moteur
+R-G2-5 : 57 `**` enumeres sur 1 .py (HEAD sans git) ; EXPOSABLES 42 dans 1 fichiers ; ce que la
+feuille ne decide pas : le TYPE de la base a l execution -- une EXPOSABLE est une ligne A TYPER.
+=====================================================================

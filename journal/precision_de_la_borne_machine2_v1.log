@@ -1,0 +1,47 @@
+============================================================================================
+D'OU VIENNENT LES NOMBRES DE LA BORNE
+============================================================================================
+
+[1] LES DEUX SOURCES, CELLULE PAR CELLULE
+      cellule     log (3 dec.)  JSON (pleine prec.)   ecart rel.
+      4|1.73             1.652     1.65171847203386   1.70e-04
+      4|2.27             2.121     2.12118189411566   8.58e-05
+      4|2.80             2.273     2.27299043507240   4.21e-06
+      5|1.73             0.991     0.99148456677505   4.89e-04
+      5|2.27             1.259     1.25929536554115   2.35e-04
+      5|2.80             1.469     1.46865439654724   2.35e-04
+      7|1.73             0.684     0.68419170555698   2.80e-04
+      7|2.27             0.853     0.85342207302726   4.95e-04
+      7|2.80             0.957     0.95653882639391   4.82e-04
+  [OK  ] le log tronque bien a trois decimales                    
+
+[2] INF, CALCULE DES DEUX FACONS
+      depuis le LOG  (ce que la feuille fait) : 1.659725811e-05  porte par 7|1.73
+      depuis le JSON (pleine precision)       : 1.659260768e-05  porte par 7|1.73
+      ecart relatif                            : 2.802e-04
+  [OK  ] le meme point porte la borne dans les deux               7|1.73
+  [MORD] SA PHRASE 'les grandeurs de la borne viennent des JSON'  FAUSSE : le RATIO vient du log a 3 decimales ; seuls les e de la correction conservatrice viennent des JSON. Ecart sur INF : 2.802e-04
+
+[3] L'EFFET SUR LA CARTE -- de forme, ou de fond ?
+      fenetre a m=2, kT=1 : x1.0415 (log)   x1.0418 (JSON)
+  [OK  ] l'ecart reste tres inferieur a la largeur de la fenetre  2.802e-04 contre une marge de 4.153e-02 -- la correction est de FORME
+      kT=1.00, m=2 : x1.0415  (log)   x1.0418  (JSON)   DIFFERE
+      kT=1.15, m=2 : VIDE     (log)   VIDE     (JSON)   identique
+      kT=1.30, m=2 : VIDE     (log)   VIDE     (JSON)   identique
+  [OK  ] aucune cellule de la carte ne change de statut           
+
+[4] CE QUE J'EN TIRE
+      La correction est GRATUITE : le JSON est a mon poste, en pleine precision,
+      et c'est deja lui qui fournit les e de la correction conservatrice. Lire
+      le ratio au meme endroit ne coute pas un run.
+      MAIS elle ne se fait pas ici : la feuille de derivation est DEPOSEE au lot
+      7883311c6e363b02 et relue par machine 1 ; l'editer perimerait sa lecture.
+      Elle se fait a l'acte constante A, avec le reste -- et c'est la que la
+      borne sera CITEE, donc le bon endroit pour qu'elle soit exacte.
+
+============================================================================================
+BILAN : 5 controles, 1 mordent
+   MORD  SA PHRASE 'les grandeurs de la borne viennent des JSON' est JUSTE
+         FAUSSE : le RATIO vient du log a 3 decimales ; seuls les e de la correction conservatrice viennent des JSON. Ecart sur INF : 2.802e-04
+(le mordant de [2] est la correction elle-meme : il DOIT mordre)
+============================================================================================

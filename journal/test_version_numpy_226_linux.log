@@ -1,0 +1,4 @@
+numpy 2.2.6 ; python 3.12.3 ; NPY_DISABLE_CPU_FEATURES='' ; dispatch found : 'SSSE3',                                 'SSE41',                                 'POPCNT',                                 'SSE42',                                 'AVX',                                 'F16C',                                 'FMA3',                                 'AVX2',                                 'AVX512F',                                 'AVX512CD',                                 'AVX512_SKX',                                 'AVX512_CLX',                                 'AVX512_CNL',                                 'AVX512_ICL'
+  power x**6         non-CR   985 / 20000 = 4.92 pour cent ; differe du pow/exp de Python (glibc) sur 988
+  power x**(-0.8)    non-CR  1080 / 20000 = 5.40 pour cent ; differe du pow/exp de Python (glibc) sur 1079
+  exp                non-CR   912 / 20000 = 4.56 pour cent ; differe du pow/exp de Python (glibc) sur 914

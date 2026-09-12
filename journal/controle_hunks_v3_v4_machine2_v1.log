@@ -1,0 +1,62 @@
+====================================================================================
+DIFF v3 -> v4, CONTEXTE 0, REJOUE PAR machine 2
+====================================================================================
+v3 : 466 lignes, 34028 octets
+v4 : 476 lignes, 34728 octets
+
+OPCODES BRUTS        : 6 hunks, +17 / -7
+UNIFIED, PAR POSITION: +17 / -7
+UNIFIED, PAR PREFIXE : -6   <-- la faute, si l'ecart n'est pas nul
+annonce machine 1    : 6 hunks, +17 / -7
+  [OK  ] 6 hunks
+  [OK  ] +17
+  [OK  ] -7
+  [OK  ] position == opcodes
+
+------------------------------------------------------------------------------------
+HUNK 1/6  replace  v3[9:9] -> v4[9:9]  (-1 / +1)
+------------------------------------------------------------------------------------
+  - (redaction machine 1, depot operateur, 2026-09-11) -- PROJET, VERSION 3
+  + (redaction machine 1, depot operateur, 2026-09-11) -- PROJET, VERSION 4
+
+------------------------------------------------------------------------------------
+HUNK 2/6  insert  v3[11:10] -> v4[11:14]  (-0 / +4)
+------------------------------------------------------------------------------------
+  + v4 = v3 (eaaacadd99fb468d, certifiee bdd00189e68b61dc, REMPLACEE non editee)
+  + + H9 : les deux phrases de D-R4-10 qui transcrivaient une prose de machine 2
+  + deviennent ce qui est mesure (errata m2 (a) et (b) de sa certification) ;
+  + + H10, forme seule : la ligne recollee au hunk H5 est refluee. Rien d'autre.
+
+------------------------------------------------------------------------------------
+HUNK 3/6  replace  v3[211:211] -> v4[215:216]  (-1 / +2)
+------------------------------------------------------------------------------------
+  -        16 et 64 en temps ; K* = 9.83e-10 et 3.73e-11. Mesure, 6|2.00 : s*(400) = s*(1600) = 1.012586 (noeud 85, les deux
+  +        16 et 64 en temps ; K* = 9.83e-10 et 3.73e-11. [H10] Mesure, 6|2.00 :
+  +        s*(400) = s*(1600) = 1.012586 (noeud 85, les deux
+
+------------------------------------------------------------------------------------
+HUNK 4/6  replace  v3[357:358] -> v4[362:367]  (-2 / +6)
+------------------------------------------------------------------------------------
+  -           periode du premier ordre y vaut pi p Delta/(g a' s^(p-2)) = 117 a 180
+  -           unites, mesuree dans les enveloppes (4 a 5 periodes par fenetre).
+  +           periode du premier ordre y vaut pi p Delta/(g a' s^(p-2)), soit,
+  +           DERIVEE au seuil s*, 116.8 / 119.5 / 180.1 unites a p = 26 / 30 / 40 ;
+  +           ce qui est MESURE (six colonnes de m2 sous le seuil, s de 0.4249 a
+  +           0.4679) est la modulation elle-meme -- au moins 4 periodes par fenetre
+  +           (4.2 a 5.5), P_env de 210.5 a 2284.1, profondeur a 0.1 pour cent du
+  +           premier ordre complet [H9] : une derivation n'est pas une mesure.
+
+------------------------------------------------------------------------------------
+HUNK 5/6  replace  v3[441:442] -> v4[450:452]  (-2 / +3)
+------------------------------------------------------------------------------------
+  -   journal_delta_nn_R4R5_v3.md                    cet acte (v1 86d6ee29d27938ff, v2
+  -                                                  ce07e533176441a5 conservees)
+  +   journal_delta_nn_R4R5_v4.md                    cet acte (v1 86d6ee29d27938ff, v2
+  +                                                  ce07e533176441a5, v3
+  +                                                  eaaacadd99fb468d conservees)
+
+------------------------------------------------------------------------------------
+HUNK 6/6  replace  v3[466:466] -> v4[476:476]  (-1 / +1)
+------------------------------------------------------------------------------------
+  - -- FIN journal_delta_nn_R4R5_v3 --
+  + -- FIN journal_delta_nn_R4R5_v4 --

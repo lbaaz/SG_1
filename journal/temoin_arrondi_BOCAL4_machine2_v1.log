@@ -1,0 +1,37 @@
+========================================================================================
+LE TEMOIN D'ARRONDI DE MACHINE 1, JOUE SUR BOCAL4
+========================================================================================
+      python 3.11.9 ; numpy 2.2.6 ; Windows-10-10.0.26200-SP0
+
+[1] SON TEMOIN, AU CARACTERE
+      x                    = 1765.6704444885254
+      numpy TABLEAU ** 6   = 0x1.a483018a169c6p+64
+      pow de Python ** 6   = 0x1.a483018a169c6p+64
+      correctement arrondi = 0x1.a483018a169c6p+64
+      son noyau SIMD rend  = 0x1.a483018a169c5p+64  (non CR, -1 ulp)
+  [OK  ] le tableau numpy rend ...9c6                           0x1.a483018a169c6p+64
+  [OK  ] le pow de Python rend ...9c6                           
+  [OK  ] les deux EGALENT le correctement arrondi               
+  [OK  ] SA PREDICTION EST TENUE : la roue Windows n'a pas ce n sinon : elle en a un que 0/22 800 n'avait pas montre
+
+[2] CE QU'AUCUNE NOTE N'A ENCORE MESURE DE CE COTE :
+    LES DEUX AUTRES ufuncs QU'ELLE TROUVE NON CR CHEZ ELLE
+    (sa table : exp 4.56 %% non CR, arctan2 5.92 %% -- ici ?)
+      x ** 6       non CR :    10 / 20000  (0.05 pour cent)
+  [OK  ] power x**6 : la classe libm (moins de 0.5 pour cent),  0.05 pour cent ; sa mesure avec noyau : 4.92
+      exp          non CR :    97 / 20000  (0.48 pour cent)
+  [OK  ] exp : la classe libm, pas la classe SIMD (sa mesure av 0.48 pour cent
+      arctan2      non CR :    21 / 20000  (0.10 pour cent)
+  [OK  ] arctan2 : la classe libm, pas la classe SIMD (sa mesur 0.10 pour cent
+
+[3] CE QUE CELA AJOUTE A SON INVENTAIRE
+      Sa table des ufuncs est mesuree SUR SON POSTE, avec et sans le noyau.
+      Elle n'avait pas le meme compte DE CE COTE pour exp et arctan2 : mon
+      lot precedent ne mesurait que K1/K2/K3 des flots du geste. Les voici,
+      sur le meme etalon (mpmath 200 bits) et le meme volume (20 000).
+      => la roue Windows n'embarque de noyau SIMD ni pour power, ni pour exp,
+         ni pour arctan2 : les trois restent dans la classe de la libm.
+
+========================================================================================
+BILAN : 7 controles, 0 mordent
+========================================================================================

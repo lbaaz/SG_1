@@ -1,0 +1,17 @@
+MANIFESTE lot_machine1_2026-09-12_lecture_ouverture_acte_constante_A_v1 -- LECTURE DU LOT MACHINE 2 (canon calcule e3b707c589e9d1d8) ET RE-EMISSION DU SUIVI 28b RETROUVE ; machine 1, classe 3
+RECEPTION DU LOT MACHINE 2 : 5/5 au canon (convention B), les deux .log au brut CRLF aussi ; ASCII 5/5 ; garde verifiees + absentes + ecarts == 5 ; canon du manifeste recu calcule au poste, non annonce par le lot -- a confirmer par machine 2.
+TENAILLE v2 : ACCORDEE sur sa structure (INF = max(borne(R_MOI, True)), jambe de mutation) et sur ses nombres re-derives depuis les valeurs imprimees ; NON REJOUEE (JSON non detenus) ; le 21/21 et le 39/39 restent des comptes de machine 2 jusqu'au rejeu.
+DEUX DEFAUTS VERSES, NUMEROS PROPOSES : D-ACA-1 (machine 2) -- un chk a condition True dans derivation v2 section 2, compte dans le 21/21, ne peut pas mordre ; D-ACA-2 (machine 1) -- la carte des classes du geste (2) etablie a deux resolutions (journal pour e/seuil, basculements de x1 pour l'absorption), 5|1.73 differe au bit (4.1e-09) alors qu'elle etait classee absorbee. Controle croise ecrit, a jouer sur les JSON avant l'acte. Les classes prennent des noms sans lettres (EXPOSEE, EXPOSEE-LIBM, ABSORBEE, NON SEPAREE) ; les issues de N-70 gardent (a) (b) (c).
+DECISION (v) : L'OBJET EST RETROUVE. SUIVI_campagne_2026-08-28b.md reconstruit depuis le transcript du chat du 28/08 (appel create_file), entites HTML de-echappees, AUTHENTIFIE PAR CANON AVANT LECTURE : b6d13e6a1559e850, 5639 octets, ASCII/LF, identiques a l'annonce du 28/08 ; joint octet pour octet. Objet de (v) = section 2 du 28b (captures CRLF du 85 citees sous convention B ; lectures (a) conforme / (b) fait de forme numerote a l'acte + regle d'ecriture). Tranchable seule des maintenant.
+PB-1 : aucune piece recue n'est editee ; le 28b est une re-emission, pas une piece nouvelle.
+FORME D-G2-3 : tout lot cite l'est par sa ligne CANON. Aucun verdict de gel.
+colonnes : empreinte_B (sha256 NFC+LF, 16 hex)  empreinte_brute  octets_B  octets_bruts  fichier
+ENCODAGE MESURE : 0 des 2 pieces sont non-ASCII ; 0 portent un CR ; les deux finissent par un newline ; aucun signe pour cent.
+Le CANON du lot est l'empreinte B de CE manifeste ; il ne se porte pas lui-meme.
+
+a1b4bab69cff979c a1b4bab69cff979c    13347    13347  note_machine1_lecture_ouverture_acte_constante_A_v1.md
+b6d13e6a1559e850 b6d13e6a1559e850     5639     5639  SUIVI_campagne_2026-08-28b.md
+
+entrants, recus le 12/09 en pieces detachees et verifies au canon : DOSSIER_ARBITRAGE_constante_A_operateur_v1.md cbf120b4113bc8b1 ; derivation_fenetre_delta_machine2_v2.py 9d9e949ed876424f ; derivation_fenetre_delta_machine2_v2.log d0c3ec95eeb9f4b8 (brut f64d6f41df5adf16) ; relecture_nombres_acte_machine2_v1.py 6e1409b06e887d97 ; relecture_nombres_acte_machine2_v1.log 484da81013182f02 (brut f7a8edd1455e81b6) ; MANIFEST_lot_machine2_acte_constante_A_v1.txt e3b707c589e9d1d8
+pieces : 2 (compte etabli APRES le dernier ajout)
+garde de reception : verifiees + absentes + ecarts == 2

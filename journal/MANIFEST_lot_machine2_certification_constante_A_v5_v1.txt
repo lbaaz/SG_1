@@ -1,0 +1,16 @@
+MANIFESTE lot_machine2_2026-09-10_certification_constante_A_v5_v1 -- machine 2, classe 1
+VERDICT : CERTIFIE. constante_A_pre_enregistrement_v5.md 2c0d2dc86054838c, 31722 o : 104 controles, 104 passent, 0 mord.
+La morsure P-A-1 est SOLDEE ; le v5 est le GEL COURANT de la constante A ; la situation batarde de R2 B-1 est CLOSE.
+DEFAUT TROUVE DANS MON PROPRE INSTRUMENT : le controle M du v4 testait la PRESENCE de l empreinte brute, jamais son
+  SIGNALEMENT -- aucun texte n aurait pu le satisfaire. Reecrit pour mesurer ce qu il annonce, PUIS rejoue sur les deux
+  versions (section N) : il MORD sur le v4 et PASSE sur le v5. Il separe encore : ce n est pas un tampon.
+Le diff v4 -> v5 annonce par machine 1 (5 hunks, +12/-3) est recalcule et confirme (section O) ; un seul hunk de fond.
+CETTE CERTIFICATION NE ROUVRE PAS LE RUN : la constante A reste SUSPENDUE sur la convergence en dt en 7|1.73.
+E19 : elle porte sur cette empreinte et sur elle seule.
+convention B (sha256 NFC+LF, 16 hex) ; tous ASCII/LF, donc B == brut. Colonnes : empreinte_B  octets  fichier.
+
+df0431a0a57cc2b6     6554  CERTIFICATION_machine2_constante_A_v5_v1.md
+e06e278dcf7c612e     8822  certif_constante_A_v5_machine2_v1.log
+193f7650f40001b3    17177  certif_constante_A_v5_machine2_v1.py
+
+pieces : 3 (compte etabli apres le dernier ajout)

@@ -1,0 +1,196 @@
+{
+ "attentes": {
+  "E-A": {
+   "enonce": "p_obs hors [4-tol, 4+tol] aux deux paires raffinees",
+   "verdict": "TENUE"
+  },
+  "E-B": {
+   "enonce": "e(dt2/2)/plancher dans [4.3452, 8.4925]",
+   "valeur": 6.754848318113389,
+   "verdict": "TENUE"
+  },
+  "E-C": {
+   "enonce": "aucune attente ; signe de p_obs a la derniere paire consigne",
+   "p_obs": 0.2168214981278601
+  }
+ },
+ "cellule": {
+  "A": 3.142438761846983,
+  "C_effectif": 8.896551724137932,
+  "alpha": "4/5",
+  "dt2": 7.819442837771142e-06,
+  "eps": 2.220446049250313e-16,
+  "n_pas_attendu_base": 380,
+  "p": 7,
+  "tau0": 0.003127777135108456,
+  "tau_CAP": 0.00015638885675542283,
+  "tau_dom": 0.001563888567554228,
+  "tol_ordre": 0.17202346732631013,
+  "w2": 1.73
+ },
+ "classe": 3,
+ "compte": {
+  "attendus": 4,
+  "joues": 4,
+  "sautes": 0
+ },
+ "duree_s": 1.0456825830000014,
+ "flots": [
+  {
+   "R_au_max": 59087266.239202365,
+   "R_composantes": 59087266.239202365,
+   "dt": 7.819442837771142e-06,
+   "e": 1.0525430201660647e-06,
+   "e_sur_plancher": 80.22426243619856,
+   "err_rel_fin": 1.0525430201660647e-06,
+   "evenement": "TAU_FIN",
+   "indice_max": 380,
+   "k": 0,
+   "n_pas": 380,
+   "n_pas_attendu": 380,
+   "n_pas_conforme": true,
+   "pas": "dt2",
+   "plancher_composantes": 1.312000868818383e-08,
+   "ratio_seuil_du_flot": 9.017455855231619,
+   "seuil_5_4_du_flot": 1.167228359155665e-07,
+   "tau_au_max": 0.00015638885675542218,
+   "tau_fin": 0.00015638885675542218
+  },
+  {
+   "R_au_max": 59087456.06057529,
+   "R_composantes": 59087456.06057529,
+   "dt": 3.909721418885571e-06,
+   "e": 8.86239533298418e-08,
+   "e_sur_plancher": 6.754848318113389,
+   "err_rel_fin": 8.86239533298418e-08,
+   "evenement": "TAU_FIN",
+   "indice_max": 760,
+   "k": 1,
+   "n_pas": 760,
+   "n_pas_attendu": 760,
+   "n_pas_conforme": true,
+   "pas": "dt2/2",
+   "plancher_composantes": 1.3120050836995587e-08,
+   "ratio_seuil_du_flot": 0.7592658962220475,
+   "seuil_5_4_du_flot": 1.1672321089465041e-07,
+   "tau_au_max": 0.00015638885675542218,
+   "tau_fin": 0.00015638885675542218
+  },
+  {
+   "R_au_max": 45665957.59477184,
+   "R_composantes": 59087465.97318763,
+   "dt": 1.9548607094427854e-06,
+   "e": 1.9211667599036427e-08,
+   "e_sur_plancher": 1.4642980133798187,
+   "err_rel_fin": 9.757847861423567e-09,
+   "evenement": "TAU_FIN",
+   "indice_max": 1509,
+   "k": 2,
+   "n_pas": 1520,
+   "n_pas_attendu": 1520,
+   "n_pas_conforme": true,
+   "pas": "dt2/4",
+   "plancher_composantes": 1.3120053038037678e-08,
+   "ratio_seuil_du_flot": 0.1645916371628478,
+   "seuil_5_4_du_flot": 1.1672323047633523e-07,
+   "tau_au_max": 0.00017789232455929288,
+   "tau_fin": 0.00015638885675542218
+  },
+  {
+   "R_au_max": 59087466.25901179,
+   "R_composantes": 59087466.25901179,
+   "dt": 9.774303547213927e-07,
+   "e": 1.6530853961382515e-08,
+   "e_sur_plancher": 1.2599685255457,
+   "err_rel_fin": 1.6530853961382515e-08,
+   "evenement": "TAU_FIN",
+   "indice_max": 3040,
+   "k": 3,
+   "n_pas": 3040,
+   "n_pas_attendu": 3040,
+   "n_pas_conforme": true,
+   "pas": "dt2/8",
+   "plancher_composantes": 1.312005310150339e-08,
+   "ratio_seuil_du_flot": 0.14162436915048562,
+   "seuil_5_4_du_flot": 1.1672323104096121e-07,
+   "tau_au_max": 0.00015638885675542218,
+   "tau_fin": 0.00015638885675542218
+  }
+ ],
+ "geste": "convergence en dt de e(dt2/2), cellule 7|1.73, machine 1",
+ "journal_instrument": [
+  "[0001] MOTEUR         scripts/m9_replication_v1.py charge, sha256 c8ed357b120352c4..., gel jumeau M9 v2 conforme, P=5 T_MAX=400.0 CAP=10000.0"
+ ],
+ "lecture": "ECART DERIVE du plancher (E-A tenue)",
+ "paires": [
+  {
+   "base": "dt2",
+   "dans_bande_ordre": false,
+   "e_base": 1.0525430201660647e-06,
+   "e_fin": 8.86239533298418e-08,
+   "fin": "dt2/2",
+   "lecture_5_4_sur_flot_fin": {
+    "C_effectif": 8.896551724137932,
+    "W_pas": "NON LU (plancher, 5.4)",
+    "W_plancher": "MORD",
+    "lu": false,
+    "ratio_seuil": 0.7592658962220475,
+    "seuil": 1.1672321089465041e-07
+   },
+   "p_obs": 3.5700387070855406,
+   "paire_du_gel": true
+  },
+  {
+   "base": "dt2/2",
+   "dans_bande_ordre": false,
+   "e_base": 8.86239533298418e-08,
+   "e_fin": 1.9211667599036427e-08,
+   "fin": "dt2/4",
+   "lecture_5_4_sur_flot_fin": {
+    "C_effectif": 8.896551724137932,
+    "W_pas": "NON LU (plancher, 5.4)",
+    "W_plancher": "MORD",
+    "lu": false,
+    "ratio_seuil": 0.1645916371628478,
+    "seuil": 1.1672323047633523e-07
+   },
+   "p_obs": 2.205713931535661,
+   "paire_du_gel": false
+  },
+  {
+   "base": "dt2/4",
+   "dans_bande_ordre": false,
+   "e_base": 1.9211667599036427e-08,
+   "e_fin": 1.6530853961382515e-08,
+   "fin": "dt2/8",
+   "lecture_5_4_sur_flot_fin": {
+    "C_effectif": 8.896551724137932,
+    "W_pas": "NON LU (plancher, 5.4)",
+    "W_plancher": "MORD",
+    "lu": false,
+    "ratio_seuil": 0.14162436915048562,
+    "seuil": 1.1672323104096121e-07
+   },
+   "p_obs": 0.2168214981278601,
+   "paire_du_gel": false
+  }
+ ],
+ "pieces": {
+  "instrument_v8_B": "4d8882a2223a5c74",
+  "moteur_chemin": "/home/claude/SG_1/scripts/m9_replication_v1.py",
+  "moteur_sha256_brut": "c8ed357b120352c4d1078307add3eaac285940c8bec00acc2ddc9ff386ab2c5c",
+  "registre": "/home/claude/SG_1",
+  "temoin_v11_B": "a2e7ef3e237c5acf"
+ },
+ "plateforme": {
+  "machine": "x86_64",
+  "numpy": "2.4.4",
+  "platform": "Linux-6.18.44-fc-v32-x86_64-with-glibc2.39",
+  "python": "3.12.3"
+ },
+ "references_deux_machines": {
+  "ratio_seuil_ici": 0.7592658962220475,
+  "ratio_seuil_m1_28_08": 0.759,
+  "ratio_seuil_m2": 0.684
+ }
+}

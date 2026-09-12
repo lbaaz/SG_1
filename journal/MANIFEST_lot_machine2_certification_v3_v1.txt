@@ -1,0 +1,33 @@
+MANIFESTE lot_machine2_2026-09-11_certification_v3_v1 -- RE-CERTIFICATION DE L'ACTE R4/R5 v3 (delta nn), demandee par machine 1 ; machine 2, classe 3
+VERDICT : LA v3 EST CERTIFIEE -- 71 controles, 66 tenus, 5 mordent, ET AUCUN DES CINQ NE PORTE SUR UN NOMBRE MESURE. Les cinq hunks de fond (H5, H5 bis, H6, H7, H8) sont exacts au chiffre contre mes .json.
+  CE QUI COUVRE LES 89 CONTROLES DE LA v2 SANS LES REJOUER : hors des dix hunks, la v3 est MOT POUR MOT la v2 certifiee 89/89 (verifie segment par segment sur toutes les plages egales). C'est ce qui autorise le passage unique.
+  LE DIFF, REJOUE DE MA MAIN : 10 hunks, +55 / -11. Son annonce dit -10. La ligne perdue est la suppression de '-- FIN journal_delta_nn_R4R5_v2 --' : difflib.unified_diff(n=0) PERD LA DERNIERE SUPPRESSION DU FICHIER. Famille D-CERT-4, declaree corrigee ce matin -- la correction portait sur le saut de ligne final, pas sur la ligne finale.
+  PORTEE : ce compte n'est PAS dans l'acte (il renvoie au manifeste, l. 16 et 22). Le defaut vit au manifeste du lot v3 et dans sa note, pas dans la piece a deposer.
+LES DEUX MORDANTS QUI SONT DANS LE CORPS DE L'ACTE SONT DE MA PROSE EN ORIGINE -- ma note de resynchro 87550aa7ac593dd2, qu'elle a transcrite fidelement. Je les rends comme errata de machine 2 :
+  (a) '4 a 5 periodes par fenetre' : mes six colonnes font 4.3, 4.2, 4.2, 4.7, 5.0 et 5.5. La borne haute est fausse ; forme juste : 'au moins 4 periodes (4.2 a 5.5)'.
+  (b) '117 a 180 unites, MESUREE dans les enveloppes' : 116.8 / 119.5 / 180.1 sont calculees AU SEUIL s*, et AUCUNE de mes six colonnes n'est a s* (elles sont a 0.462648, 0.448485, 0.424881, 0.467870, 0.453547, 0.429676, toutes dessous ; P_env mesurees 210.5 a 2284.1). Ce qui est MESURE est la MODULATION, son nombre de periodes et sa profondeur a 0.1 pour cent -- pas la valeur au seuil. La conclusion ne bouge pas ; le mot si.
+  C'est la regle 1 de la journee qui mord contre moi : une derivation n'est pas une mesure.
+LES TROIS AUTRES : le compte du diff (ci-dessus) ; la l. 211 de la v3, 120 caracteres la ou l'acte en tient 76 (fin de phrase RECOLLEE au hunk H5, forme seule) ; et sa feuille neuve verification_harmoniques_machine1_v1.py, qui porte le chemin du moteur EN DUR -- sa propre regle.
+SA FEUILLE NEUVE A TOURNE ICI SANS AUCUNE RETOUCHE (arborescence recreee plutot que piece modifiee) ET REDONNE MA TABLE ENTIERE AU CINQUIEME CHIFFRE : -0.01062 / 0.10804 (p=26), -0.10539 / 0.06569 (p=30), jusqu'a -0.27948 / 0.01830 a p=40. Deux derivations, deux implementations, deux postes, le meme nombre.
+CE QUE JE NE PEUX PAS VERIFIER, DIT A LA PORTEE EXACTE : ses derivations D1 (r1, S_c, le mur, s* -> 3/7) sont controlees en COHERENCE ARITHMETIQUE, pas re-derivees -- la machinerie D1 n'est pas detenue ici. Le releve du registre est a l'operateur : aucune machine ne peut le faire.
+CE QUE JE RECOMMANDE : une v4 d'UN hunk sur nn.5 D-R4-10 (les deux phrases), le compte corrige au manifeste de depot, et -- si l'operateur depose tel quel -- les deux errata NOMMES DANS LE CORPS de l'acte.
+MES QUATRE FEUILLES SE SONT CERTIFIEES ELLES-MEMES D'ABORD : trois controles ont d'abord rendu de FAUX ECHECS et un avait d'abord PASSE POUR LA MAUVAISE RAISON (tolerance de 20 unites la ou 189.7 tombait a portee de 180 : rien n'aurait pu le faire mordre). C'est en le reecrivant sur le POINT et non sur la valeur qu'il a mordu -- et c'est de la qu'est sorti l'erratum (b).
+colonnes : empreinte_B (sha256 NFC+LF, 16 hex)  empreinte_brute  octets_B  octets_bruts  fichier
+ENCODAGE MESURE : 1 des 10 pieces sont UTF-8 non-ASCII (guillemets typographiques) : CERTIFICATION_acte_R4R5_v3_machine2_v1.md. L'empreinte B les normalise en NFC ; la colonne brute les compte tels quels.
+CONVENTION MESUREE LIGNE PAR LIGNE : 5 des 10 pieces ont B != brut (les .log : CRLF). Les DEUX tailles sont portees.
+Feuilles de MESURE (reception, diff, certification, relecture) et feuille de LECTURE (la note) : separees, comme le veut la regle. Le CANON du lot est l'empreinte de CE manifeste ; le brut du ZIP est donne a cote.
+
+5a3992e06b13a1f1 5a3992e06b13a1f1    11974    11974  CERTIFICATION_acte_R4R5_v3_machine2_v1.md
+b89f210c860218f0 b89f210c860218f0     6803     6803  controle_reception_v3_machine2_v1.py
+4dd6417879aa8be1 6abacdc980b1714f     4469     4547  controle_reception_v3_machine2_v1.log
+225eb5694e99bdd2 225eb5694e99bdd2     2327     2327  controle_hunks_v2_v3_machine2_v1.py
+cccda2a524842e09 378e0aa69563220d     8028     8145  controle_hunks_v2_v3_machine2_v1.log
+27b1e850df8e9795 27b1e850df8e9795    16539    16539  certification_acte_R4R5_v3_machine2_v1.py
+826d9ce8d2499738 f344e717670efcfb     8240     8346  certification_acte_R4R5_v3_machine2_v1.log
+db5e26e0a97f0bb4 b19319bfd7572cc1      810      821  rejeu_verification_harmoniques_m1_machine2_v1.log
+8def3e9f68908754 8def3e9f68908754     9578     9578  relecture_nombres_certification_v3_machine2_v1.py
+79ccd2e620d73ad6 f6194d9b37e14128     3968     4030  relecture_nombres_certification_v3_machine2_v1.log
+
+entrants : acte v3 eaaacadd99fb468d (lot machine 1 canon fadc1c4f4c91b353, enveloppe 5db99356792064fd) ; acte v2 ce07e533176441a5 (certifie 89/89 par 9ead3f431059c056) ; acte v1 86d6ee29d27938ff ; sa feuille neuve verification_harmoniques_machine1_v1.py 2727430c00d377ae ; son moteur D2_premier_ordre_2_1_pair_machine1_v1.py 187c723064996059
+pieces : 10 (compte etabli APRES le dernier ajout)
+garde de reception : verifiees + absentes + ecarts == 10

@@ -1,0 +1,35 @@
+MANIFESTE lot_machine2_2026-09-09_chaine_constante_A_v1 -- transit materiel ; machine 2, classe 3
+repond au PREREQUIS MATERIEL de machine 1 (reponse R2 052fcea402c0e579, section 1.d) : les HUIT pieces
+de la chaine constante A qu'elle nomme par empreinte et ne detient plus. Rien n'est edite (PB-1) :
+les huit partent OCTET POUR OCTET, resolues PAR EMPREINTE sur tout le depot, jamais par nom.
+colonnes : empreinte_brute  empreinte_B(sha256 NFC+LF)  octets  fichier  -- convention CITEE par m1 en fin de ligne
+ATTENTION : 1 piece(s) a fins de ligne CRLF, ou brut != B. C est le cas du log certif v3, et
+c'est precisement la morsure du v4 : elle est citee en BRUT dans un bloc declare convention B.
+
+011c923203fcdaef  011c923203fcdaef    30988  constante_A_pre_enregistrement_v4.md                  [cite en B]
+9e6376f936708077  9e6376f936708077    11359  note_machine2_certification_constante_A_v4_v1.md      [cite en B]
+a92f60f936a2f75a  a98b21ecd7c56d95     7385  certif_constante_A_v3_machine2_v1.log                 [cite en brut]
+4d8882a2223a5c74  4d8882a2223a5c74   193651  banc_qualification_machine1_v8.py                     [cite en B]
+2a618ffb180ea568  2a618ffb180ea568     8085  note_machine2_controle_instrument_v8_v1.md            [cite en B]
+a2e7ef3e237c5acf  a2e7ef3e237c5acf    72281  temoin_negatif_pre_enregistrement_v11.md              [cite en B]
+4867dffe3392dea6  4867dffe3392dea6    12588  enumeration_cles_prevol_N70_machine2_v2.md            [cite en B]
+13601ef21efdc024  13601ef21efdc024     7989  erratum_temoin_v11_clause_7i_tolerance_v1.md          [cite en B]
+
+  constante_A_pre_enregistrement_v4.md                 gel constante A v4 (brouillon, certifie 95/96)
+                                                         geste (1) : le texte a amender par UN hunk
+  note_machine2_certification_constante_A_v4_v1.md     certification m2 du v4
+                                                         geste (1) : dit OU mord la 96e -- la citation brute
+  certif_constante_A_v3_machine2_v1.log                log certif_constante_A_v3 (empreinte BRUTE, 119 CR)
+                                                         geste (1) : la piece citee dans le bloc B ; c est ELLE la morsure
+  banc_qualification_machine1_v8.py                    instrument v8 (certifie, D-I-3 leve)
+                                                         geste (2) : le banc qui produit e(dt2/2)
+  note_machine2_controle_instrument_v8_v1.md           note m2 de certification de l instrument v8
+                                                         geste (2) : ce que le v8 corrige et ce qu il ne corrige pas
+  temoin_negatif_pre_enregistrement_v11.md             temoin v11 = GEL DU VOLET T
+                                                         geste (2) : la definition de e(dt2/2), la cellule 7|1.73, le dt
+  enumeration_cles_prevol_N70_machine2_v2.md           N-70 v2 (contresignee)
+                                                         geste (2) : l enumeration des cles de pre-vol
+  erratum_temoin_v11_clause_7i_tolerance_v1.md         erratum 7(i) tolerance
+                                                         geste (2) : la clause de tolerance du v11
+
+pieces : 8 (compte etabli apres le dernier ajout)

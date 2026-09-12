@@ -1,0 +1,72 @@
+
+0. D-G2-4 -- LE JSON PORTE-T-IL LA GRANDEUR QUE LE LOG TRONQUE ?
+  [PASSE] ratio_seuil == e(dt2/2) / seuil_5_4 AU BIT (9/9)         0 ecart
+  [PASSE] mon JSON arrondi a 3 dec == mon log (9/9)                0 ecart
+  [PASSE] son JSON NOYAU arrondi a 3 dec == son log du 28/08 (9/9) 0 ecart
+   porteur 7|1.73 :  log 0.684  ->  JSON 0.68419170555697806
+
+1. LE PLANCHER VA-T-IL EN 1/delta ? -- forme fermee contre R MESURE
+  [PASSE] R mesure == forme fermee aux 9 points                    ecart max 7.33e-07 ; tau_CAP ~ sqrt(delta) -> R ~ 1/delta
+
+2. L'ERREUR e EST-ELLE INVARIANTE EN delta ? -- deux runs, x1024
+  [PASSE] e(delta-prime)/e(delta_0) dans [0.8, 1.25] pour delta x1 mesure [0.9367, 1.1625] ; la dispersion fixe la marge
+  [PASSE] tau_CAP(delta_0)/tau_CAP(delta-prime) == sqrt(1024) aux  ecart max 0.00e+00 ; rapport R mesure 1024.000000
+  [PASSE] donc ratio = e/(C x plancher) est PROPORTIONNEL a delta  R x 1024 et e invariante -> ratio x 1024
+
+3. BORNE SUPERIEURE -- volet A (exacte, aucune extrapolation)
+   m=1 : delta <= 3.457292925e-05   (portee par p=5)
+   m=2 : delta <= 1.728646463e-05   (portee par p=5)
+   m=3 : delta <= 1.152430975e-05   (portee par p=5)
+
+4. BORNE INFERIEURE -- volet T (quatre lectures, la plus dure retenue)
+   machine 1 -- son run a NOYAU       delta >= 1.286193025e-05  (x1.3171)  porte par 7|1.73
+   machine 1 -- son run a LIBM        delta >= 1.427322916e-05  (x1.4616)  porte par 7|1.73
+   machine 2 -- mes ratios            delta >= 1.427322916e-05  (x1.4616)  porte par 7|1.73
+   CONSERVATRICE (e = min des deux)   delta >= 1.659260768e-05  (x1.6991)  porte par 7|1.73
+  [PASSE] la borne est portee par le MEME point dans les 4 lecture 7|1.73
+   RETENUE : INF = 1.659260768e-05   (v1, depuis le log : 1.659725811e-05)
+
+5. D-G2-4 -- CE QUE LA CORRECTION DEPLACE, ET CE QU'ELLE NE DEPLACE PAS
+  [PASSE] l ecart JSON/log est DEUX ORDRES sous la marge de la fen ecart 2.8027e-04  marge 4.1817e-02  rapport 149.2
+  [PASSE] aucune des 15 cellules de la carte ne change de statut   0 changement
+
+   m  = marge volet A (plancher <= disp/m) ; kT = marge volet T (ratio >= kT)
+   D-t-25 a MESURE b = 1.15 a 1.74 x plancher_comp : le critere est
+   une CONDITION NECESSAIRE, donc kT = 1 est le cas le plus permissif.
+
+   kT    |      m=1       m=2       m=3
+   1.00  |  x2.0836   x1.0418      VIDE
+   1.15  |  x1.8119      VIDE      VIDE
+   1.30  |  x1.6028      VIDE      VIDE
+   1.50  |  x1.3891      VIDE      VIDE
+   1.74  |  x1.1975      VIDE      VIDE
+
+6. LA BORNE RETENUE LIT-ELLE UN NOMBRE DE MACHINE 1 ? -- jambe de MUTATION
+  [PASSE] INF INCHANGE AU BIT quand ses DEUX JSON entrent mutes (x 3ef1660b5147653b / 3ef1660b5147653b
+  [PASSE] le PORTEUR est inchange sous la meme mutation            7|1.73 / 7|1.73
+  [PASSE] la mutation DEPLACE bien la lecture affichee de machine  recu 1.286193025e-05 -> mute 4.287310084e-06
+
+7. L'ERRATUM DU "SEUL POINT" -- EN CONDITION, PLUS EN DETAIL
+  [PASSE] GEL NR -- au bit, elles different sur 6 cellules         4|1.73,4|2.27,4|2.80,5|1.73,5|2.80,7|1.73
+  [PASSE] GEL NR -- a 3 decimales, sur 3 : le compte de l erratum  4|1.73,4|2.80,7|1.73
+  [PASSE] mes ratios == son LIBM AU BIT (9/9)                      0 ecart
+   4|1.73   moi 1.6517184720338571   noyau 1.6138361632355356   (2.3e-02)  PASSE
+   4|2.27   moi 2.1211818941156584   noyau 2.1211819239061085   (1.4e-08)  PASSE
+   4|2.80   moi 2.2729904350723991   noyau 2.379096193902754   (4.7e-02)  PASSE
+   5|1.73   moi 0.9914845667750477   noyau 0.99148457088479625   (4.1e-09)  MORD
+   5|2.80   moi 1.4686543965472436   noyau 1.4686543971742234   (4.3e-10)  PASSE
+   7|1.73   moi 0.68419170555697806   noyau 0.75926589622204754   (1.1e-01)  MORD
+  [PASSE] la separation gros/fin est NETTE : aucune cellule entre  gros 3  fin 3  total 6
+  [PASSE] les 3 GROSSIERES sont celles que le log rendait visibles 4|1.73,4|2.80,7|1.73
+  [PASSE] GEL NR -- parmi les 3 GROSSIERES, 2 sont LUES            4|1.73,4|2.80
+  [PASSE] GEL NR -- parmi les 6 AU BIT, 4 sont LUES                4|1.73,4|2.27,4|2.80,5|2.80
+  [PASSE] le PORTEUR est la seule GROSSIERE qui ne soit PAS lue    7|1.73
+
+8. LA PORTE -- le reglage courant est-il dans la fenetre ?
+  [PASSE] delta-prime = 9.765625000e-06 est SOUS la borne inferieu delta-prime / INF = 0.5886
+
+=====================================================================
+BILAN : 22/22 controles PASSENT
+borne inf (conservatrice, JSON) 1.659260768e-05   borne sup (m=2) 1.728646463e-05
+fenetre a m=2, kT=1 : x1.0418     porteur : 7|1.73
+=====================================================================

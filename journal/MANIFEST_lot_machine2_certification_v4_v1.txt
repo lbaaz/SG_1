@@ -1,0 +1,27 @@
+MANIFESTE lot_machine2_2026-09-12_certification_v4_v1 -- ACTE R4/R5 v4 ET PIECE DE DEPOT, verification demandee par machine 1 ; machine 2, classe 3
+VERDICT : 33 controles, 32 tenus, 1 MORD. Les six hunks sont ceux qu'elle annonce (+17 / -7, compte PAR POSITION) ; hors hunks la v4 est MOT POUR MOT la v3 certifiee, qui etait hors ses dix hunks la v2 certifiee 89/89 -- LA CHAINE TIENT PAR TRANSITIVITE, verifiee sur les deux maillons. Mes deux errata sont pris exactement.
+LE SEUL MORDANT : H9 ecrit 'P_env mesurees de 210.5 a 2284.1'. LA BORNE BASSE EST 189.7 (p=26, s=0.467870). 210.5 est le PREMIER de ma liste, qui est rangee par degre et NON TRIEE ; la borne haute 2284.1 est juste. Forme juste : 'de 189.7 a 2284.1'.
+  LA REGLE QUI SORT DES TROIS TOURS : UN INTERVALLE CITE DANS UN ACTE NE SE LIT PAS SUR UNE LISTE, IL SE CALCULE (min/max) DE LA STRUCTURE QUI PORTE LES MESURES. Sur trois versions, chaque nombre de prose transcrit a la main a coute un defaut par tour ; aucun nombre sorti d'un .json par une feuille n'en a coute un.
+LA PIECE DE DEPOT EST AU BIT L'ACTE v4 : 34728 octets, ZERO different. C'est la propriete forte, meilleure qu'une substitution reussie. Le numero vit dans le NOM du fichier et au manifeste. Le corps garde 18 reperes 'nn' -- EXACTEMENT le compte de la piece de depot v2 que j'ai verifiee 7/7 hier : convention stable des deux cotes, constatee, non rouverte.
+ERRATUM DE MACHINE 2, A VERSER AU REGISTRE AVEC L'ACTE : ma note d'hier (bdd00189e68b61dc) impute le '-10' a difflib.unified_diff, qui 'perdrait la derniere suppression'. C'EST FAUX ; le diagnostic de machine 1 est le bon. Mesure : la sortie contient les 11 suppressions ; le compte par PREFIXE en rend 10 ; l'ecart vaut exactement la ligne avalee, '--- FIN journal_delta_nn_R4R5_v2 --'. MON PROPRE SCRIPT PORTAIT LE MEME FILTRE -- j'ai accuse l'outil d'un defaut qui etait dans ma feuille. Le COMPTE rendu (-11) etait juste, la CAUSE etait fausse. La note livree ne s'edite pas : l'erratum vit dans le lot suivant, celui-ci.
+  COROLLAIRE, pris a la racine par machine 1 : dans un format a prefixes, LE CADRE S'EXCLUT PAR POSITION, JAMAIS PAR PREFIXE.
+CE QUE JE RECOMMANDE : une v5 d'UN hunk d'UNE LIGNE (210.5 -> 189.7), ou le depot de la v4 avec la borne NOMMEE dans le corps -- sans preference forte : le nombre est descriptif et la conclusion n'en depend pas, mais il est faux et il va au registre. Le releve du registre reste ENTIER a l'operateur.
+QUATRE DE MES CONTROLES ONT D'ABORD RENDU DE FAUX ECHECS : trois nes d'une convention de depot QUE J'AVAIS INVENTEE (j'attendais une substitution nn -> 89 dans le corps), un d'une fenetre de table DECALEE A LA MAIN au lieu d'etre localisee par sa structure -- la meme faute que celle que je relevais chez elle, commise dans ma propre feuille.
+colonnes : empreinte_B (sha256 NFC+LF, 16 hex)  empreinte_brute  octets_B  octets_bruts  fichier
+ENCODAGE MESURE : 2 des 9 pieces sont UTF-8 non-ASCII (guillemets typographiques) : CERTIFICATION_acte_R4R5_v4_machine2_v1.md, controle_cause_du_moins_dix_machine2_v1.py. L'empreinte B les normalise en NFC ; la colonne brute les compte tels quels.
+CONVENTION MESUREE LIGNE PAR LIGNE : 4 des 9 pieces ont B != brut (les .log : CRLF). Les DEUX tailles sont portees.
+Feuilles de MESURE (diff, verification, erratum, relecture) et feuille de LECTURE (la note) : separees, comme le veut la regle. Le CANON du lot est l'empreinte de CE manifeste ; le brut du ZIP est donne a cote.
+
+871ef24e3f28704c 871ef24e3f28704c     8051     8051  CERTIFICATION_acte_R4R5_v4_machine2_v1.md
+0b88987859fae632 0b88987859fae632     2706     2706  controle_hunks_v3_v4_machine2_v1.py
+5b3d5840911b2359 7e3ae630941cc79a     3772     3834  controle_hunks_v3_v4_machine2_v1.log
+0b6671f4751f044b 0b6671f4751f044b    12573    12573  certification_acte_R4R5_v4_et_depot_machine2_v1.py
+194eafb2ceb07191 9e8461043eebf225     3845     3902  certification_acte_R4R5_v4_et_depot_machine2_v1.log
+0c577a23d67586c8 0c577a23d67586c8     2833     2833  controle_cause_du_moins_dix_machine2_v1.py
+7a984ffa619e300c 9160499044cf4cb1     1162     1185  controle_cause_du_moins_dix_machine2_v1.log
+85a91ee919ef8087 85a91ee919ef8087     6335     6335  relecture_nombres_certification_v4_machine2_v1.py
+8d419c62320822c1 34aeac3176adac32     2176     2214  relecture_nombres_certification_v4_machine2_v1.log
+
+entrants : acte v3 eaaacadd99fb468d (lot machine 1 canon fadc1c4f4c91b353, enveloppe 5db99356792064fd) ; acte v2 ce07e533176441a5 (certifie 89/89 par 9ead3f431059c056) ; acte v1 86d6ee29d27938ff ; sa feuille neuve verification_harmoniques_machine1_v1.py 2727430c00d377ae ; son moteur D2_premier_ordre_2_1_pair_machine1_v1.py 187c723064996059
+pieces : 9 (compte etabli APRES le dernier ajout)
+garde de reception : verifiees + absentes + ecarts == 9

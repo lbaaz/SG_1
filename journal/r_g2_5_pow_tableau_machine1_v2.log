@@ -1,0 +1,387 @@
+repertoire /home/claude/SG_1, HEAD d037d21, 91 fichiers .py
+  [PASSE] 91 fichiers .py, compte attendu 91                         
+  [PASSE] tous les fichiers analyses (0 erreur de syntaxe)           0 non analyse
+  [PASSE] la ligne du coeur du moteur est dans l enumeration         scripts/m9_replication_v1.py:324 (x1 + x2) ** (P - 1)
+
+1. COMPTE PAR CLASSE (heuristique statique declaree en tete)
+   EXPOSABLE    232
+   CARRE        180
+   CONST         48
+   SANS-NUMPY    85
+   TOTAL        545   (sur 91 fichiers, dont 64 importent numpy)
+  [PASSE] compte : somme des classes == total                        545
+
+2. LES EXPOSABLES, UNE PAR LIGNE (fichier:ligne  base ** exposant  [genre de la base])
+   journal/D2_prediction_P_D1_5_machine1_v1.py:25  s ** (p - 2)  [NAME]
+   journal/D2_prediction_P_D1_5_machine1_v1.py:25  s ** (p - 2)  [NAME]
+   journal/D2_premier_ordre_2_1_pair_machine1_v1.py:23  Y2 ** j  [NAME]
+   journal/D2_premier_ordre_2_1_pair_machine1_v1.py:23  X2 ** i  [NAME]
+   journal/D2_premier_ordre_2_1_pair_machine1_v1.py:25  Y2 ** j  [NAME]
+   journal/D2_premier_ordre_2_1_pair_machine1_v1.py:25  X2 ** (i - 1)  [NAME]
+   journal/D2_premier_ordre_2_1_pair_machine1_v1.py:25  Y2 ** (j - 1)  [NAME]
+   journal/D2_premier_ordre_2_1_pair_machine1_v1.py:25  X2 ** i  [NAME]
+   journal/capture_2_1_p7_machine1_v1.py:19  Y ** (n / 2)  [NAME]
+   journal/capture_2_1_p7_machine1_v1.py:19  X ** (m / 2)  [NAME]
+   journal/capture_2_1_p7_machine1_v1.py:30  (abs(nu) * Delta / (g * b * dc_canal(J20, I))) ** (1.0 / (p - 2))  [BINOP]
+   journal/capture_2_1_p7_machine1_v1.py:35  s0 ** (p - 2)  [NAME]
+   journal/certif_instrument_bancs_machine2_v2.py:183  float(K[p] / g) ** (1.0 / (p - 2))  [CALL]
+   journal/certif_instrument_bancs_machine2_v2.py:203  (float(r) * td[w]) ** (-float(alpha[p]))  [BINOP]
+   journal/certif_instrument_bancs_machine2_v2.py:212  (2 * td[w]) ** (-float(alpha[p]))  [BINOP]
+   journal/certif_instrument_bancs_machine2_v2.py:231  (float(r) * td[w]) ** (-float(alpha[p]))  [BINOP]
+   journal/certif_instrument_bancs_machine2_v2.py:233  (k * td[w]) ** (-float(alpha[p]))  [BINOP]
+   journal/certification_acte_R4R5_machine2_v1.py:216  cp['s1600'] ** 4  [SUBSCRIPT]
+   journal/certification_acte_R4R5_machine2_v1.py:309  s ** 3  [NAME]
+   journal/certification_acte_R4R5_machine2_v1.py:310  s ** 3  [NAME]
+   journal/certification_acte_R4R5_v2_machine2_v1.py:220  cp['s1600'] ** 4  [SUBSCRIPT]
+   journal/certification_acte_R4R5_v2_machine2_v1.py:314  s ** 3  [NAME]
+   journal/certification_acte_R4R5_v2_machine2_v1.py:315  s ** 3  [NAME]
+   journal/correction_action_P2_machine1_v1.py:20  s ** (p - 2)  [NAME]
+   journal/correction_action_P2_machine1_v1.py:29  s ** 4  [NAME]
+   journal/enveloppes_apex_machine1_v1.py:6  s0 ** (p - 2)  [NAME]
+   journal/lecture_periode_libration_machine1_v1.py:9  s0 ** (p - 2)  [NAME]
+   journal/lecture_resolution_machine1_v1.py:9  s0 ** (p - 2)  [NAME]
+   journal/lecture_voletB_machine1_v1.py:20  s ** 4  [NAME]
+   journal/prediction_P2_p8_machine1_v1.py:13  s ** (p - 2)  [NAME]
+   journal/prediction_P2_p8_machine1_v1.py:21  s ** (p - 2)  [NAME]
+   journal/prediction_P2_p8_machine1_v1.py:22  s ** (p - 2)  [NAME]
+   journal/prediction_P2_p8_machine1_v1.py:23  s ** (p - 2)  [NAME]
+   journal/rederive_P4_acte_machine1_v1.py:15  (delta * kappa / G) ** (1.0 / (p - 2))  [BINOP]
+   journal/rederive_P4_acte_machine1_v1.py:18  (sgn * s) ** p  [BINOP]
+   journal/rederive_P4_acte_machine1_v1.py:23  (2 * Q * delta / (G * (p - 1))) ** (1.0 / (p - 2))  [BINOP]
+   journal/rederive_complements_acte_machine1_v1.py:15  (sgn * s) ** p  [BINOP]
+   journal/rederive_complements_acte_machine1_v1.py:31  (2 * Q_(w2) / G) ** (1.0 / (p - 2))  [BINOP]
+   journal/rederive_complements_acte_machine1_v1.py:49  (2 * Qm1 / G) ** (1.0 / (pc - 2))  [BINOP]
+   journal/relecture_nombres_certification_machine2_v1.py:56  s ** 3  [NAME]
+   quartic-bundle/bocal_ab.py:9  x ** 4  [NAME]
+   quartic-bundle/bocal_ab.py:10  z2 ** 4  [NAME]
+   quartic-bundle/bocal_ab.py:10  z1 ** 4  [NAME]
+   quartic-bundle/bocal_ab.py:32  q1 ** 3  [NAME]
+   quartic-bundle/bocal_critere.py:31  q1 ** 3  [NAME]
+   quartic-bundle/bocal_critere.py:76  (w2 - w1) ** 3  [BINOP]
+   quartic-bundle/bocal_critere.py:99  q1 ** 3  [NAME]
+   quartic-bundle/bocal_normale.py:33  q1 ** 3  [NAME]
+   quartic-bundle/bocal_normale.py:65  q1 ** 3  [NAME]
+   quartic-bundle/bocal_paysage.py:12  q1 ** 3  [NAME]
+   quartic-bundle/bocal_phases.py:14  q1 ** 3  [NAME]
+   quartic-bundle/bocal_q_run.py:45  q1 ** 3  [NAME]
+   quartic-bundle/k3_run.py:54  (gs3[1] / gs3[0]) ** (x - 1)  [BINOP]
+   quartic-bundle/k3_run.py:55  x ** 3  [NAME]
+   quartic-bundle/kill_k1.py:60  (r[0] / r[-1]) ** 0.25  [BINOP]
+   quartic-bundle/kill_k6.py:17  q1 ** 3  [NAME]
+   quartic-bundle/pu_plot.py:9  q1 ** 3  [NAME]
+   quartic-bundle/pu_test.py:12  q1 ** 3  [NAME]
+   quartic-bundle/tir2_fin.py:47  (sf / 0.5) ** 6.8  [BINOP]
+   quartic-bundle/tir2_fin.py:57  (gf / 0.05) ** 4  [BINOP]
+   scripts/banc_qualification_machine1_v1.py:222  float(K_de(p) / Fraction(repr(g))) ** (1.0 / (p - 2))  [CALL]
+   scripts/banc_qualification_machine1_v1.py:238  tau_cap(w2) ** (-float(alpha_de(p)))  [CALL]
+   scripts/banc_qualification_machine1_v1.py:242  (k * tau_dom(w2)) ** (-float(alpha_de(p)))  [BINOP]
+   scripts/banc_qualification_machine1_v1.py:408  (a1 + a2) ** (p - 1)  [BINOP]
+   scripts/banc_qualification_machine1_v1.py:483  (a1 + a2) ** (p - 1)  [BINOP]
+   scripts/banc_qualification_machine1_v1.py:569  (C['NGRID'] - 1) ** C['NPASSES']  [BINOP]
+   scripts/banc_qualification_machine1_v1.py:617  x ** 4  [NAME]
+   scripts/banc_qualification_machine1_v1.py:621  x ** 3  [NAME]
+   scripts/banc_qualification_machine1_v1.py:764  tau ** (-a)  [NAME]
+   scripts/banc_qualification_machine1_v1.py:764  tau ** (-a - 1)  [NAME]
+   scripts/banc_qualification_machine1_v1.py:765  tau ** (-a - 2)  [NAME]
+   scripts/banc_qualification_machine1_v1.py:765  tau ** (-a - 3)  [NAME]
+   scripts/banc_qualification_machine1_v1.py:772  tau ** (-a - 2)  [NAME]
+   scripts/banc_qualification_machine1_v1.py:772  tau ** (-a)  [NAME]
+   scripts/banc_qualification_machine1_v1.py:851  Fraction(x) ** e  [CALL]
+   scripts/banc_qualification_machine1_v1.py:865  x ** 3  [NAME]
+   scripts/banc_qualification_machine1_v1.py:867  x ** 4  [NAME]
+   scripts/banc_qualification_machine1_v1.py:911  A ** (pd - 2)  [NAME]
+   scripts/banc_qualification_machine1_v1.py:925  Fraction(x0) ** 3  [CALL]
+   scripts/banc_qualification_machine1_v1.py:926  Fraction(x0) ** 4  [CALL]
+   scripts/banc_qualification_machine1_v1.py:1186  Q_ECH ** j  [NAME]
+   scripts/banc_qualification_machine1_v1.py:1328  tau ** (-a)  [NAME]
+   scripts/banc_qualification_machine1_v1.py:1342  tau2 ** (-a)  [NAME]
+   scripts/banc_qualification_machine1_v1.py:1353  tau_b ** (-a)  [NAME]
+   scripts/banc_qualification_machine1_v1.py:1353  tau_b ** (-a)  [NAME]
+   scripts/banc_qualification_machine1_v1.py:1383  v[0] ** (p - 1)  [SUBSCRIPT]
+   scripts/banc_qualification_machine1_v1.py:1388  tau ** (-a)  [NAME]
+   scripts/banc_qualification_machine1_v1.py:1627  math.exp(aj['lnA_II']) ** (p - 2)  [CALL]
+   scripts/banc_qualification_machine1_v1.py:1663  math.exp(aj['lnA_II']) ** (p - 2)  [CALL]
+   scripts/banc_qualification_machine1_v1.py:1869  (t_star - t) ** (-a)  [BINOP]
+   scripts/banc_qualification_machine1_v1.py:1917  math.exp(aj['lnA_II']) ** (p - 2)  [CALL]
+   scripts/banc_qualification_machine1_v1.py:1966  (-1) ** j  [UNARYOP]
+   scripts/banc_qualification_machine1_v1.py:2027  (A / abs(x0)) ** (1.0 / a)  [BINOP]
+   scripts/banc_qualification_machine1_v1.py:2031  (ts - t) ** (-a)  [BINOP]
+   scripts/banc_qualification_machine1_v1.py:2037  (ts - t) ** (-a)  [BINOP]
+   scripts/banc_qualification_machine1_v2.py:236  float(K_de(p) / Fraction(repr(g))) ** (1.0 / (p - 2))  [CALL]
+   scripts/banc_qualification_machine1_v2.py:252  tau_cap(w2) ** (-float(alpha_de(p)))  [CALL]
+   scripts/banc_qualification_machine1_v2.py:256  (k * tau_dom(w2)) ** (-float(alpha_de(p)))  [BINOP]
+   scripts/banc_qualification_machine1_v2.py:422  (a1 + a2) ** (p - 1)  [BINOP]
+   scripts/banc_qualification_machine1_v2.py:497  (a1 + a2) ** (p - 1)  [BINOP]
+   scripts/banc_qualification_machine1_v2.py:583  (C['NGRID'] - 1) ** C['NPASSES']  [BINOP]
+   scripts/banc_qualification_machine1_v2.py:631  x ** 4  [NAME]
+   scripts/banc_qualification_machine1_v2.py:635  x ** 3  [NAME]
+   scripts/banc_qualification_machine1_v2.py:782  tau ** (-a)  [NAME]
+   scripts/banc_qualification_machine1_v2.py:782  tau ** (-a - 1)  [NAME]
+   scripts/banc_qualification_machine1_v2.py:783  tau ** (-a - 2)  [NAME]
+   scripts/banc_qualification_machine1_v2.py:783  tau ** (-a - 3)  [NAME]
+   scripts/banc_qualification_machine1_v2.py:790  tau ** (-a - 2)  [NAME]
+   scripts/banc_qualification_machine1_v2.py:790  tau ** (-a)  [NAME]
+   scripts/banc_qualification_machine1_v2.py:869  Fraction(x) ** e  [CALL]
+   scripts/banc_qualification_machine1_v2.py:883  x ** 3  [NAME]
+   scripts/banc_qualification_machine1_v2.py:885  x ** 4  [NAME]
+   scripts/banc_qualification_machine1_v2.py:929  A ** (pd - 2)  [NAME]
+   scripts/banc_qualification_machine1_v2.py:943  Fraction(x0) ** 3  [CALL]
+   scripts/banc_qualification_machine1_v2.py:944  Fraction(x0) ** 4  [CALL]
+   scripts/banc_qualification_machine1_v2.py:1204  Q_ECH ** j  [NAME]
+   scripts/banc_qualification_machine1_v2.py:1346  tau ** (-a)  [NAME]
+   scripts/banc_qualification_machine1_v2.py:1360  tau2 ** (-a)  [NAME]
+   scripts/banc_qualification_machine1_v2.py:1371  tau_b ** (-a)  [NAME]
+   scripts/banc_qualification_machine1_v2.py:1371  tau_b ** (-a)  [NAME]
+   scripts/banc_qualification_machine1_v2.py:1401  v[0] ** (p - 1)  [SUBSCRIPT]
+   scripts/banc_qualification_machine1_v2.py:1406  tau ** (-a)  [NAME]
+   scripts/banc_qualification_machine1_v2.py:1659  math.exp(aj['lnA_II']) ** (p - 2)  [CALL]
+   scripts/banc_qualification_machine1_v2.py:1695  math.exp(aj['lnA_II']) ** (p - 2)  [CALL]
+   scripts/banc_qualification_machine1_v2.py:1914  (t_star - t) ** (-a)  [BINOP]
+   scripts/banc_qualification_machine1_v2.py:1962  math.exp(aj['lnA_II']) ** (p - 2)  [CALL]
+   scripts/banc_qualification_machine1_v2.py:2018  (-1) ** j  [UNARYOP]
+   scripts/banc_qualification_machine1_v2.py:2091  (A / abs(x0)) ** (1.0 / a)  [BINOP]
+   scripts/banc_qualification_machine1_v2.py:2095  (ts - t) ** (-a)  [BINOP]
+   scripts/banc_qualification_machine1_v2.py:2101  (ts - t) ** (-a)  [BINOP]
+   scripts/banc_qualification_machine1_v3.py:276  float(K_de(p) / Fraction(repr(g))) ** (1.0 / (p - 2))  [CALL]
+   scripts/banc_qualification_machine1_v3.py:292  tau_cap(w2) ** (-float(alpha_de(p)))  [CALL]
+   scripts/banc_qualification_machine1_v3.py:296  (k * tau_dom(w2)) ** (-float(alpha_de(p)))  [BINOP]
+   scripts/banc_qualification_machine1_v3.py:462  (a1 + a2) ** (p - 1)  [BINOP]
+   scripts/banc_qualification_machine1_v3.py:539  (a1 + a2) ** (p - 1)  [BINOP]
+   scripts/banc_qualification_machine1_v3.py:625  (C['NGRID'] - 1) ** C['NPASSES']  [BINOP]
+   scripts/banc_qualification_machine1_v3.py:673  x ** 4  [NAME]
+   scripts/banc_qualification_machine1_v3.py:677  x ** 3  [NAME]
+   scripts/banc_qualification_machine1_v3.py:824  tau ** (-a)  [NAME]
+   scripts/banc_qualification_machine1_v3.py:824  tau ** (-a - 1)  [NAME]
+   scripts/banc_qualification_machine1_v3.py:825  tau ** (-a - 2)  [NAME]
+   scripts/banc_qualification_machine1_v3.py:825  tau ** (-a - 3)  [NAME]
+   scripts/banc_qualification_machine1_v3.py:832  tau ** (-a - 2)  [NAME]
+   scripts/banc_qualification_machine1_v3.py:832  tau ** (-a)  [NAME]
+   scripts/banc_qualification_machine1_v3.py:911  Fraction(x) ** e  [CALL]
+   scripts/banc_qualification_machine1_v3.py:925  x ** 3  [NAME]
+   scripts/banc_qualification_machine1_v3.py:927  x ** 4  [NAME]
+   scripts/banc_qualification_machine1_v3.py:971  A ** (pd - 2)  [NAME]
+   scripts/banc_qualification_machine1_v3.py:985  Fraction(x0) ** 3  [CALL]
+   scripts/banc_qualification_machine1_v3.py:986  Fraction(x0) ** 4  [CALL]
+   scripts/banc_qualification_machine1_v3.py:1286  Q_ECH ** j  [NAME]
+   scripts/banc_qualification_machine1_v3.py:1468  tau ** (-a)  [NAME]
+   scripts/banc_qualification_machine1_v3.py:1482  tau2 ** (-a)  [NAME]
+   scripts/banc_qualification_machine1_v3.py:1493  tau_b ** (-a)  [NAME]
+   scripts/banc_qualification_machine1_v3.py:1493  tau_b ** (-a)  [NAME]
+   scripts/banc_qualification_machine1_v3.py:1523  v[0] ** (p - 1)  [SUBSCRIPT]
+   scripts/banc_qualification_machine1_v3.py:1528  tau ** (-a)  [NAME]
+   scripts/banc_qualification_machine1_v3.py:1789  math.exp(aj['lnA_II']) ** (p - 2)  [CALL]
+   scripts/banc_qualification_machine1_v3.py:1825  math.exp(aj['lnA_II']) ** (p - 2)  [CALL]
+   scripts/banc_qualification_machine1_v3.py:2057  (t_star - t) ** (-a)  [BINOP]
+   scripts/banc_qualification_machine1_v3.py:2114  math.exp(aj['lnA_II']) ** (p - 2)  [CALL]
+   scripts/banc_qualification_machine1_v3.py:2160  (dt / DT1) ** 4  [BINOP]
+   scripts/banc_qualification_machine1_v3.py:2171  (-1) ** j  [UNARYOP]
+   scripts/banc_qualification_machine1_v3.py:2244  (A / abs(x0)) ** (1.0 / a)  [BINOP]
+   scripts/banc_qualification_machine1_v3.py:2248  (ts - t) ** (-a)  [BINOP]
+   scripts/banc_qualification_machine1_v3.py:2254  (ts - t) ** (-a)  [BINOP]
+   scripts/m10_exposant_v3.py:1052  a['s'] ** 3  [SUBSCRIPT]
+   scripts/m10_exposant_v3.py:1053  b['s'] ** 3  [SUBSCRIPT]
+   scripts/m10_exposant_v3.py:1076  v[k]['s'] ** (p - 1)  [SUBSCRIPT]
+   scripts/m10_exposant_v3.py:1259  (w * w - 1.0) ** 0.93  [BINOP]
+   scripts/m11_exposant_v3.py:1277  (w * w - 1.0) ** 0.95  [BINOP]
+   scripts/m11_exposant_v3.py:1533  av['s'] ** (DEGRE - 2)  [SUBSCRIPT]
+   scripts/m11_exposant_v3.py:1534  b['s'] ** (DEGRE - 2)  [SUBSCRIPT]
+   scripts/m11_exposant_v3.py:1550  v[k]['s'] ** (DEGRE - 1)  [SUBSCRIPT]
+   scripts/m12_pilote_v3.py:872  (1 - mid) ** (n - i)  [BINOP]
+   scripts/m12_pilote_v3.py:872  mid ** i  [NAME]
+   scripts/m12_pilote_v3.py:884  (1.0 - q) ** 3  [BINOP]
+   scripts/m12_pilote_v3.py:886  (1 - s) ** (n - i)  [BINOP]
+   scripts/m12_pilote_v3.py:886  s ** i  [NAME]
+   scripts/m12_pilote_v3.py:1173  v[k]['s'] ** (p - 1)  [SUBSCRIPT]
+   scripts/m12_ponctuel_v2.py:1145  (r2['s'] / base['s']) ** (p - 2)  [BINOP]
+   scripts/m12_ponctuel_v2.py:1168  v[k]['s'] ** (p - 1)  [SUBSCRIPT]
+   scripts/m13_saturation_v1.py:969  (r2['s'] / base['s']) ** (DEGRE - 2)  [BINOP]
+   scripts/m13_saturation_v1.py:986  v['sP']['s'] ** (DEGRE - 1)  [SUBSCRIPT]
+   scripts/m13_saturation_v1c.py:938  (r2['s'] / base['s']) ** (DEGRE - 2)  [BINOP]
+   scripts/m13_saturation_v1c.py:955  v['sP']['s'] ** (DEGRE - 1)  [SUBSCRIPT]
+   scripts/m14_p1a_v1.py:927  (r2['s'] / base['s']) ** (p2 - 2)  [BINOP]
+   scripts/m14_p1a_v1.py:942  v['sF'] ** (p - 1)  [SUBSCRIPT]
+   scripts/m15_site83_v1.py:1159  q ** (n - i)  [NAME]
+   scripts/m15_site83_v1.py:1159  b ** i  [NAME]
+   scripts/m15_site83_v1.py:1336  (m.G_REF / g) ** (1.0 / (m.P - 2))  [BINOP]
+   scripts/m15_site83_v1.py:1609  v[k]['s'] ** (p - 1)  [SUBSCRIPT]
+   scripts/m15_site83_v1.py:1654  (r2['s'] / base['s']) ** (7 - 2)  [BINOP]
+   scripts/m15_site83_v1.py:1892  (s2g7 / s1g) ** 5  [BINOP]
+   scripts/m15_site83_v2.py:1175  q ** (n - i)  [NAME]
+   scripts/m15_site83_v2.py:1175  b ** i  [NAME]
+   scripts/m15_site83_v2.py:1357  (m.G_REF / g) ** (1.0 / (m.P - 2))  [BINOP]
+   scripts/m15_site83_v2.py:1637  v[k]['s'] ** (p - 1)  [SUBSCRIPT]
+   scripts/m15_site83_v2.py:1682  (r2['s'] / base['s']) ** (7 - 2)  [BINOP]
+   scripts/m15_site83_v2.py:1923  (s2g7 / s1g) ** 5  [BINOP]
+   scripts/m17_chaine_v17.py:441  (2.0 * Delta_norm * float(W1)) ** (-0.5)  [BINOP]
+   scripts/m17_chaine_v17.py:442  (2.0 * Delta_norm * float(w2)) ** (-0.5)  [BINOP]
+   scripts/m17_chaine_v17.py:460  l2 ** jj  [NAME]
+   scripts/m17_chaine_v17.py:460  l1 ** j  [NAME]
+   scripts/m17_chaine_v17.py:470  l2 ** 3  [NAME]
+   scripts/m17_chaine_v17.py:470  l1 ** 4  [NAME]
+   scripts/m17_chaine_v17.py:537  l2 ** jj  [NAME]
+   scripts/m17_chaine_v17.py:537  l1 ** j  [NAME]
+   scripts/m17_chaine_v17.py:546  ((P - 2) / P) ** ((P - 2) / 2)  [BINOP]
+   scripts/m17_chaine_v17.py:550  s_ff(w2, g) ** (P - 2)  [CALL]
+   scripts/m17_chaine_v17.py:557  (d_abs / (g * coeff_homogene_X_s(w2))) ** (2.0 / (P - 2))  [BINOP]
+   scripts/m17_chaine_v17.py:827  np.abs(vals) ** p  [CALL]
+   scripts/m17_chaine_v17.py:838  a1 ** n  [NAME]
+   scripts/m17_chaine_v17.py:840  a2 ** n  [NAME]
+   scripts/m17_chaine_v17.py:1071  va ** ((P - 2) / 2)  [NAME]
+   scripts/m17_chaine_v17.py:1077  nu ** 2.5  [NAME]
+   scripts/m17_chaine_v17.py:1332  seuil['s_star_Q'] ** (P - 2)  [SUBSCRIPT]
+   scripts/m17_chaine_v17.py:1442  fac ** (2 * M_e)  [NAME]
+   scripts/m17_chaine_v17.py:1979  sQ ** (P - 2)  [NAME]
+   scripts/m9_replication_v1.py:318  x2 ** b  [NAME]
+   scripts/m9_replication_v1.py:318  x1 ** (a - 1)  [NAME]
+   scripts/m9_replication_v1.py:320  x2 ** (b - 1)  [NAME]
+   scripts/m9_replication_v1.py:320  x1 ** a  [NAME]
+   scripts/m9_replication_v1.py:324  (x1 + x2) ** (P - 1)  [BINOP]
+   scripts/m9_replication_v1.py:414  (-1.0) ** n  [UNARYOP]
+   scripts/m9_replication_v1.py:491  s_c ** 3  [NAME]
+   scripts/m9_replication_v1.py:491  sF ** 3  [NAME]
+   scripts/m9_replication_v1.py:529  sF ** 3  [NAME]
+   scripts/m9_replication_v1.py:568  min(s2p, s2m) ** 3  [CALL]
+   scripts/m9_replication_v1.py:583  s_c ** 3  [NAME]
+   scripts/m9_replication_v1.py:595  FACTEUR_H_S ** 3  [NAME]
+   scripts/m9_replication_v1.py:606  R['carte'][key(w)]['sF'] ** 4  [SUBSCRIPT]
+
+   fichiers portant au moins une EXPOSABLE : 41
+     36  scripts/banc_qualification_machine1_v3.py
+     35  scripts/banc_qualification_machine1_v1.py
+     35  scripts/banc_qualification_machine1_v2.py
+     19  scripts/m17_chaine_v17.py
+     13  scripts/m9_replication_v1.py
+      6  journal/D2_premier_ordre_2_1_pair_machine1_v1.py
+      6  scripts/m12_pilote_v3.py
+      6  scripts/m15_site83_v1.py
+      6  scripts/m15_site83_v2.py
+      5  journal/certif_instrument_bancs_machine2_v2.py
+      4  journal/capture_2_1_p7_machine1_v1.py
+      4  journal/prediction_P2_p8_machine1_v1.py
+      4  quartic-bundle/bocal_ab.py
+      4  scripts/m10_exposant_v3.py
+      4  scripts/m11_exposant_v3.py
+      3  journal/certification_acte_R4R5_machine2_v1.py
+      3  journal/certification_acte_R4R5_v2_machine2_v1.py
+      3  journal/rederive_P4_acte_machine1_v1.py
+      3  journal/rederive_complements_acte_machine1_v1.py
+      3  quartic-bundle/bocal_critere.py
+      2  journal/D2_prediction_P_D1_5_machine1_v1.py
+      2  journal/correction_action_P2_machine1_v1.py
+      2  quartic-bundle/bocal_normale.py
+      2  quartic-bundle/k3_run.py
+      2  quartic-bundle/tir2_fin.py
+      2  scripts/m12_ponctuel_v2.py
+      2  scripts/m13_saturation_v1.py
+      2  scripts/m13_saturation_v1c.py
+      2  scripts/m14_p1a_v1.py
+      1  journal/enveloppes_apex_machine1_v1.py
+      1  journal/lecture_periode_libration_machine1_v1.py
+      1  journal/lecture_resolution_machine1_v1.py
+      1  journal/lecture_voletB_machine1_v1.py
+      1  journal/relecture_nombres_certification_machine2_v1.py
+      1  quartic-bundle/bocal_paysage.py
+      1  quartic-bundle/bocal_phases.py
+      1  quartic-bundle/bocal_q_run.py
+      1  quartic-bundle/kill_k1.py
+      1  quartic-bundle/kill_k6.py
+      1  quartic-bundle/pu_plot.py
+      1  quartic-bundle/pu_test.py
+
+3. APPELS pow() / power() / math.pow()
+   total : 0
+
+4. UFUNCS exp / expm1 / exp2 / arctan2 (noyaux SIMD sur machine 1 eux aussi), modules numpy seulement
+   journal/certif_instrument_bancs_machine2_v2.py:521  exp  math.exp(r2['lnA'])
+   journal/certif_instrument_bancs_machine2_v2.py:522  exp  math.exp(r2['lnA'])
+   journal/certif_instrument_bancs_machine2_v2.py:524  exp  math.exp(r3['lnA'])
+   journal/certif_instrument_bancs_machine2_v2.py:525  exp  math.exp(r3['lnA'])
+   journal/lecture_R4_machine1_v1.py:56  exp  math.exp(abs(A7) * 5)
+   journal/lecture_R4_machine1_v1.py:56  exp  math.exp(abs(A7) * 6)
+   journal/lecture_R4_machine1_v1.py:56  exp  math.exp(abs(A7) * 6)
+   journal/lecture_R4_machine1_v1.py:56  exp  math.exp(abs(A9) * 7)
+   journal/lecture_R4_machine1_v1.py:56  exp  math.exp(abs(A9) * 8)
+   journal/lecture_R4_machine1_v1.py:56  exp  math.exp(abs(A9) * 8)
+   quartic-bundle/bocal_g_run.py:6  exp  np.exp(1j * n * np.angle(al))
+   quartic-bundle/bocal_g_run.py:6  exp  np.exp(lc)
+   quartic-bundle/bocal_g_run.py:21  exp  np.exp(-1j * E * t)
+   quartic-bundle/bocal_gamma.py:17  exp  np.exp(1j * n * np.angle(al))
+   quartic-bundle/bocal_gamma.py:17  exp  np.exp(lc)
+   quartic-bundle/bocal_gamma.py:45  exp  np.exp(-1j * E * t)
+   quartic-bundle/bocal_q_run.py:16  exp  np.exp(1j * n * np.angle(alpha))
+   quartic-bundle/bocal_q_run.py:16  exp  np.exp(lc)
+   quartic-bundle/bocal_q_run.py:22  exp  np.exp(-1j * E * t)
+   quartic-bundle/bocal_q_salvage.py:18  exp  np.exp(1j * n * np.angle(al))
+   quartic-bundle/bocal_q_salvage.py:18  exp  np.exp(lc)
+   quartic-bundle/bocal_q_salvage.py:40  exp  np.exp(-1j * E * t)
+   quartic-bundle/k2_run.py:6  exp  np.exp(1j * n * np.angle(al))
+   quartic-bundle/k2_run.py:6  exp  np.exp(lc)
+   quartic-bundle/k2_run.py:11  exp  np.exp(-1j * E * t)
+   quartic-bundle/k2_run.py:25  exp  np.exp((np.maximum(n1, n2) - 48.0) / 3.0)
+   quartic-bundle/k3_run.py:8  exp  np.exp(1j * n * np.angle(al))
+   quartic-bundle/k3_run.py:8  exp  np.exp(lc)
+   quartic-bundle/k3_run.py:17  exp  np.exp(-1j * E * t)
+   quartic-bundle/kill_k1.py:19  exp  np.exp(1j * n * np.angle(al))
+   quartic-bundle/kill_k1.py:19  exp  np.exp(lc)
+   quartic-bundle/kill_k1.py:30  exp  np.exp(-1j * E * t)
+   quartic-bundle/kill_k1.py:52  exp  np.exp(-1j * E * t)
+   quartic-bundle/kill_k4.py:12  exp  np.exp(1j * n * np.angle(al))
+   quartic-bundle/kill_k4.py:12  exp  np.exp(lc)
+   quartic-bundle/kill_k4.py:27  exp  np.exp(-1j * E * t)
+   quartic-bundle/kill_k6.py:8  exp  np.exp(1j * n * np.angle(al))
+   quartic-bundle/kill_k6.py:8  exp  np.exp(lc)
+   quartic-bundle/kill_k6.py:32  exp  np.exp(-1j * E * t)
+   quartic-bundle/tir1_gammas.py:12  exp  np.exp(1j * n * np.angle(al))
+   quartic-bundle/tir1_gammas.py:12  exp  np.exp(lc)
+   quartic-bundle/tir1_gammas.py:25  exp  np.exp(-1j * E * t)
+   quartic-bundle/tir1_gammas.py:48  exp  np.exp(1j * n * np.angle(al))
+   quartic-bundle/tir1_gammas.py:48  exp  np.exp(lc)
+   quartic-bundle/tir1_partB2.py:7  exp  np.exp(1j * n * np.angle(al))
+   quartic-bundle/tir1_partB2.py:7  exp  np.exp(lc)
+   quartic-bundle/tir1_partB2.py:16  exp  np.exp(-1j * E * t)
+   quartic-bundle/tir1_partB2.py:59  exp  np.exp(max(abs(np.log(r['ge'] / r['g'])), abs(np.log(r['hr'])), abs(np.log(r['g64'] / r['g
+   quartic-bundle/tir1_plancher.py:7  exp  np.exp(1j * n * np.angle(al))
+   quartic-bundle/tir1_plancher.py:7  exp  np.exp(lc)
+   quartic-bundle/tir1_plancher.py:21  exp  np.exp(-1j * E * t)
+   quartic-bundle/tir2_fin.py:9  exp  np.exp(1j * n * np.angle(al))
+   quartic-bundle/tir2_fin.py:9  exp  np.exp(lc)
+   quartic-bundle/tir2_fin.py:25  exp  np.exp(-1j * E * t)
+   quartic-bundle/tir2_fin.py:46  exp  np.exp(-1.18 * (1 / sf ** 2 - 4))
+   quartic-bundle/tir2_fin.py:58  exp  np.exp(-0.369 * (1 / gf - 20))
+   quartic-bundle/tir2_gcut.py:9  exp  np.exp(1j * n * np.angle(al))
+   quartic-bundle/tir2_gcut.py:9  exp  np.exp(lc)
+   quartic-bundle/tir2_gcut.py:23  exp  np.exp(-1j * E * t)
+   scripts/banc_qualification_machine1_v1.py:1056  exp  np.exp(np.linspace(math.log(1e-06), 0.0, n_scan))
+   scripts/banc_qualification_machine1_v1.py:1627  exp  math.exp(aj['lnA_II'])
+   scripts/banc_qualification_machine1_v1.py:1663  exp  math.exp(aj['lnA_II'])
+   scripts/banc_qualification_machine1_v1.py:1917  exp  math.exp(aj['lnA_II'])
+   scripts/banc_qualification_machine1_v2.py:1074  exp  np.exp(np.linspace(math.log(1e-06), 0.0, n_scan))
+   scripts/banc_qualification_machine1_v2.py:1659  exp  math.exp(aj['lnA_II'])
+   scripts/banc_qualification_machine1_v2.py:1695  exp  math.exp(aj['lnA_II'])
+   scripts/banc_qualification_machine1_v2.py:1962  exp  math.exp(aj['lnA_II'])
+   scripts/banc_qualification_machine1_v3.py:1156  exp  np.exp(np.linspace(math.log(1e-06), 0.0, n_scan))
+   scripts/banc_qualification_machine1_v3.py:1789  exp  math.exp(aj['lnA_II'])
+   scripts/banc_qualification_machine1_v3.py:1825  exp  math.exp(aj['lnA_II'])
+   scripts/banc_qualification_machine1_v3.py:2114  exp  math.exp(aj['lnA_II'])
+   scripts/m11_exposant_v3.py:969  exp  math.exp(A_COEF * ls(5, w) + B_COEF * ls(7, w))
+   scripts/m13_saturation_v1.py:385  exp  math.exp(-((w - 3.0) / 0.04) ** 2)
+   scripts/m13_saturation_v1.py:387  exp  math.exp(-((w - 2.9) / 0.03) ** 2)
+   scripts/m13_saturation_v1.py:638  exp  math.exp(k)
+   scripts/m13_saturation_v1c.py:574  exp  math.exp(k)
+   scripts/m14_p1a_v1.py:697  exp  math.exp((E_t[w] - math.log(interp(4, w)) + 2.25 * math.log(interp(5, w))) / 1.25)
+   scripts/m17_chaine_v17.py:838  exp  math.exp(-n1m / 2)
+   scripts/m17_chaine_v17.py:840  exp  math.exp(-n2m / 2)
+   scripts/m17_chaine_v17.py:1471  exp  np.exp(-1j * vals * t)
+   scripts/m9_replication_v1.py:412  exp  np.exp(lc)
+   total : 81 (et 9 dans des modules sans numpy, non listes)
+
+5. LES CARRES ET LES CONSTANTES, PAR FICHIER (comptes seulement)
+   CARRE       D2_prediction_P_D1_5_machine1_v1.py:1, D2_premier_ordre_2_1_pair_machine1_v1.py:1, capture_2_1_p7_machine1_v1.py:1, certification_acte_R4R5_machine2_v1.py:2, certification_acte_R4R5_v2_machine2_v1.py:2, correction_action_P2_machine1_v1.py:1, lecture_R4_machine1_v1.py:2, prediction_P2_p8_machine1_v1.py:1, rederive_P4_acte_machine1_v1.py:1, rederive_complements_acte_machine1_v1.py:1, relecture_nombres_certification_machine2_v1.py:2, bocal_ab.py:3, bocal_critere.py:23, bocal_g_run.py:5, bocal_gamma.py:5, bocal_normale.py:23, bocal_paysage.py:9, bocal_phases.py:7, bocal_q_build.py:2, bocal_q_run.py:5, bocal_q_salvage.py:2, k2_run.py:2, k3_run.py:2, kill_k1.py:3, kill_k4.py:5, kill_k6.py:5, pu_plot.py:1, pu_test.py:1, spotcheck_reformulation.py:6, tir1_gammas.py:3, tir1_partB2.py:2, tir1_plancher.py:2, tir2_fin.py:4, tir2_gcut.py:2, banc_qualification_machine1_v1.py:7, banc_qualification_machine1_v2.py:7, banc_qualification_machine1_v3.py:7, m10_exposant_v3.py:2, m11_exposant_v3.py:3, m13_saturation_v1.py:2, m17_chaine_v17.py:12, m9_replication_v1.py:3
+   CONST       D2_premier_ordre_2_1_pair_machine1_v1.py:4, capture_2_1_p7_machine1_v1.py:1, certif_instrument_bancs_machine2_v2.py:1, certification_acte_R4R5_machine2_v1.py:2, certification_acte_R4R5_v2_machine2_v1.py:2, lecture_resolution_machine1_v1.py:2, bocal_critere.py:1, k3_run.py:1, banc_qualification_machine1_v1.py:4, banc_qualification_machine1_v2.py:4, banc_qualification_machine1_v3.py:4, m12_pilote_v3.py:3, m12_ponctuel_v2.py:2, m13_saturation_v1.py:1, m13_saturation_v1c.py:1, m14_p1a_v1.py:1, m16_crible_v6_M2.py:6, m16_crible_v7.py:6, m9_replication_v1.py:2
+   SANS-NUMPY  audit_controle_v2_delta65_machine2_v1.py:4, certification_acte_P4_machine2_v1.py:3, inventaire_fenetre_site83_machine2_v2.py:3, m15_certification_croisee_v2.py:18, m15_certification_croisee_v3.py:18, perimetre_et_sCAP_machine2_v1.py:2, rederive_R5_machine1_v1.py:1, bocal_dictionnaire.py:28, m16_crible_v6_M2.py:4, m16_crible_v7.py:4
+
+=====================================================================
+BILAN : 4/4 controles PASSENT ; 0 non joue(s) : aucun
+R-G2-5 : 545 `**` enumeres sur 91 .py (HEAD d037d21) ; EXPOSABLES 232 dans 41 fichiers ; ce que la
+feuille ne decide pas : le TYPE de la base a l execution -- une EXPOSABLE est une ligne A TYPER.
+=====================================================================

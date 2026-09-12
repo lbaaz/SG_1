@@ -1,0 +1,57 @@
+========================================================================================
+ACTE R4/R5 v4 ET PIECE DE DEPOT -- verification machine 2
+========================================================================================
+
+[REC] LE LOT DE L'ACTE v4
+  [OK  ] REC    le manifeste de l'acte v4 existe                  
+      CANON du lot acte : 7b4918f7837511dd
+  [OK  ] REC    22 pieces annoncees et extraites                  22
+  [OK  ] REC    aucun fichier hors manifeste                      set()
+  [OK  ] REC    le manifeste ne porte pas sa propre empreinte     
+  [OK  ] REC    les 22 pieces a l'empreinte et a la taille        []
+  [OK  ] REC    les pieces communes au lot v3 sont AU BIT         []
+      inchangees : 20 ; neuves : journal_delta_nn_R4R5_v4.md, POUR_MACHINE2_v4_acte_R4R5_machine1_v1.md
+  [OK  ] REC    v4 = d467a239c3555737, 34728 o (annonce)          ('d467a239c3555737', 34728)
+  [OK  ] REC    la v3 conservee au lot est celle que j'ai certifi 
+
+[DIFF] SIX HUNKS, ET SIX SEULEMENT
+  [OK  ] DIFF   6 hunks, +17 / -7 (compte PAR POSITION)           6 hunks, +17 / -7
+  [OK  ] DIFF   hors hunks, la v4 est mot pour mot la v3 certifie 
+  [OK  ] DIFF   et la v3 l'etait de la v2 : la chaine tient par t 
+
+[H9] LES DEUX ERRATA, RELUS CONTRE MES .json
+  [OK  ] H9     six colonnes dans mon log de mesure               6
+  [OK  ] H9     erratum (a) : 'au moins 4 periodes par fenetre (4 mesure : 4.2 a 5.5
+  [OK  ] H9     la borne haute fautive '4 a 5' a disparu          
+  [OK  ] H9     erratum (b) : les trois valeurs sont dites DERIVE 
+  [OK  ] H9     le mot 'mesuree' ne s'applique plus a ces trois v 
+  [OK  ] H9     ce qui est dit MESURE est bien la modulation      
+  [OK  ] H9     et la phrase se clot sur la regle                 
+  [OK  ] H9     's de 0.4249 a 0.4679' encadre mes six colonnes   mesure : 0.424881 a 0.467870
+  [OK  ] H9     les six colonnes sont TOUTES sous le seuil        max 0.467870 < s*(30) = 0.472090
+  [MORD] H9     'P_env de 210.5 a 2284.1' encadre mes six colonne MESURE : 189.7 a 2284.1 -- la borne BASSE est 189.7 (p=26, s=0.467870), pas 210.5 ; 210.5 est le premier de ma LISTE, qui n'est pas triee
+  [OK  ] H9     'profondeur a 0.1 pour cent du premier ordre comp 
+
+[H10] LA FORME
+  [OK  ] H10    la ligne de 120 caracteres est refluee            table localisee l. 294-304 ; plus longue ligne hors table : 97 car. (l. 135)
+  [OK  ] H10    aucun mot n'a change dans ce hunk                 v3 : 23 mots ; v4 : 23 mots
+
+[DEPOT] LA PIECE DEPOSEE CONTRE L'ACTE CERTIFIE
+  [OK  ] DEPOT  la piece deposee est AU BIT l'acte v4 certifie    34728 octets, 0 differents
+  [OK  ] DEPOT  le numero 89 vit dans le NOM du fichier           
+  [OK  ] DEPOT  convention identique a celle du depot v2, deja ve le corps garde 18 reperes 'nn' (v2 deposee : 18) -- CONSTAT, non defaut : l'acte s'annonce lui-meme 'numero nn au depot'
+
+[DEPOT] LE MANIFESTE DE DEPOT
+      empreinte de la piece deposee : d467a239c3555737 (34728 o)
+  [OK  ] DEPOT  le manifeste de depot cite l'empreinte de la piec d467a239c3555737
+  [OK  ] DEPOT  il porte le compte du diff v2->v3 CORRIGE (+55 /  
+  [OK  ] DEPOT  et tout '-10' restant y est cite comme le compte  1 occurrence(s) de -10
+  [OK  ] DEPOT  il nomme D-CERT-4 et D-CERT-5                     
+  [OK  ] DEPOT  il ne porte pas sa propre empreinte               
+  [OK  ] DEPOT  il cite le canon de MA certification v3           
+
+========================================================================================
+BILAN : 33 controles, 1 mordent
+   MORD  [H9] 'P_env de 210.5 a 2284.1' encadre mes six colonnes
+         MESURE : 189.7 a 2284.1 -- la borne BASSE est 189.7 (p=26, s=0.467870), pas 210.5 ; 210.5 est le premier de ma LISTE, qui n'est pas triee
+========================================================================================

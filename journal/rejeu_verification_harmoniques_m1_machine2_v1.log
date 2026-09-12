@@ -1,0 +1,11 @@
+  p L admis     b1/a  (a-b1)/a   min F/a  F>0 ?       b2/a     b3/a
+  6       1   0.0897   0.91026   0.91026    oui     0.0000   0.0000
+  8       1   0.2139   0.78609   0.78609    oui     0.0000   0.0000
+ 12       2   0.4606   0.53937   0.54129    oui     0.0019   0.0000
+ 16       2   0.6646   0.33539   0.35259    oui     0.0172   0.0000
+ 20       3   0.8265   0.17353   0.22275    oui     0.0494   0.0002
+ 26       4   1.0106  -0.01062   0.10804    oui     0.1213   0.0026
+ 30       5   1.1054  -0.10539   0.06569    oui     0.1781   0.0071
+ 40       6   1.2795  -0.27948   0.01830    oui     0.3285   0.0317
+p = 26 et 30 : ma troncature a L = 1 rend (a - b1)/a NEGATIF (un point fixe fictif, une 'ouverture') ; F complete reste POSITIVE : ile.
+Verification que mon b (L = 1) est bien coeffs_L(p, 1) : True

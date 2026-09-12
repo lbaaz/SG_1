@@ -1,0 +1,23 @@
+====================================================================================
+LA CAUSE DU '-10' -- ERRATUM DE MACHINE 2, MESURE
+====================================================================================
+
+en-tete de la sortie unified : ['--- ', '+++ ']
+
+suppressions, opcodes bruts (la reference) : 11
+suppressions, unified compte par POSITION   : 11
+suppressions, unified compte par PREFIXE    : 10   <-- le compte rendu hier
+
+ligne(s) presente(s) dans la sortie ET ecartee(s) par le filtre de prefixe :
+    '--- FIN journal_delta_nn_R4R5_v2 --'
+
+VERDICT :
+  [OK  ] la sortie de unified_diff CONTIENT toutes les suppressions (11 == 11)
+  [OK  ] l'ecart vient donc du COMPTAGE, pas de l'outil (10 != 11)
+  [OK  ] et il vaut exactement le nombre de lignes avalees (1)
+
+  => MA NOTE D'HIER EST FAUSSE SUR LA CAUSE. Le compte rendu (-11) etait juste.
+  => Le correctif de machine 1 est le bon : exclure l'en-tete PAR POSITION.
+  => Et mon propre script de comptage portait le meme filtre : c'est pourquoi
+     j'ai reproduit son -10 et conclu que l'outil fautait.
+====================================================================================

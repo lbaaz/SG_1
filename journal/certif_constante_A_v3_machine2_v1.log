@@ -1,0 +1,119 @@
+
+A. LES PIECES CITEES EN 13 -- resolvent-elles ?
+  [PASSE] empreinte constante_A_pre_enregistrement_v3.md       d71770d5948fe1aa
+  [PASSE] empreinte alpha_pre_enregistrement_v5.md             045c2435aaf623ce
+  [PASSE] empreinte temoin_negatif_pre_enregistrement_v7.m     8b083e9f109b5a8e
+  [PASSE] empreinte banc_qualification_machine1_v3.py          5fae2a8c94cf8685
+  [PASSE] empreinte journal_delta_85_deux_bancs_alpha_veri     9c7ee2578464c94a
+
+B. SECTION 3 -- delta', J minimal, les trois planchers
+  [PASSE] J minimal = 5 (J=4 echoue)                           J=5
+  [PASSE] delta' = 1/102400 present au texte                   1/102400
+  [PASSE] delta'/delta_0 = 1/1024                              
+  [PASSE] temoin de minimalite 9/3328000 au texte              
+  [PASSE] plancher(p=4) = 1/2048000    au texte                
+  [PASSE] plancher(p=5) = 9/13312000   au texte                
+  [PASSE] plancher(p=7) = 1/1089536    au texte                
+
+C. LE PLANCHER EST-IL BIEN CELUI DU v5 10.3 ?
+  [PASSE] v5 10.3 porte delta / ((alpha_p + 2)(alpha_p + 3))   
+  [PASSE] v5 10.3 : plancher(p=4) = 1/2000 a delta_0           
+  [PASSE] v5 10.3 : plancher(p=5) = 9/13000 a delta_0          
+  [PASSE] v5 10.3 : plancher(p=7) = 1/1064 a delta_0           
+  [PASSE] v5 10.3 : la comparaison porte le facteur (p-2)      
+
+D. SECTION 4 -- les quatre tables, derivees puis cherchees
+  [PASSE] 4.3 tau_dom(w2=1.73) = 1.563889e-03                  
+  [PASSE] 4.3 tau_CAP(w2=1.73) = 1.563889e-04                  
+  [PASSE] 4.3 dt_2a(w2=1.73) = 1.563889e-04                    
+  [PASSE] 4.3 dt_2b(w2=1.73) = 7.819443e-06                    
+  [PASSE] 4.3 tau_dom(w2=2.27) = 1.259825e-03                  
+  [PASSE] 4.3 tau_CAP(w2=2.27) = 1.259825e-04                  
+  [PASSE] 4.3 dt_2a(w2=2.27) = 1.259825e-04                    
+  [PASSE] 4.3 dt_2b(w2=2.27) = 6.299123e-06                    
+  [PASSE] 4.3 tau_dom(w2=2.80) = 1.051051e-03                  
+  [PASSE] 4.3 tau_CAP(w2=2.80) = 1.051051e-04                  
+  [PASSE] 4.3 dt_2a(w2=2.80) = 1.051051e-04                    
+  [PASSE] 4.3 dt_2b(w2=2.80) = 5.255256e-06                    
+  [PASSE] 4.4 bascule 2b p=4 w2=1.73                           
+  [PASSE] 4.5 CAP' p=4 w2=1.73                                 
+  [PASSE] 4.4 bascule 2b p=4 w2=2.27                           
+  [PASSE] 4.5 CAP' p=4 w2=2.27                                 
+  [PASSE] 4.4 bascule 2b p=4 w2=2.80                           
+  [PASSE] 4.5 CAP' p=4 w2=2.80                                 
+  [PASSE] 4.4 bascule 2b p=5 w2=1.73                           
+  [PASSE] 4.5 CAP' p=5 w2=1.73                                 
+  [PASSE] 4.4 bascule 2b p=5 w2=2.27                           
+  [PASSE] 4.5 CAP' p=5 w2=2.27                                 
+  [PASSE] 4.4 bascule 2b p=5 w2=2.80                           
+  [PASSE] 4.5 CAP' p=5 w2=2.80                                 
+  [PASSE] 4.4 bascule 2b p=7 w2=1.73                           
+  [PASSE] 4.5 CAP' p=7 w2=1.73                                 
+  [PASSE] 4.4 bascule 2b p=7 w2=2.27                           
+  [PASSE] 4.5 CAP' p=7 w2=2.27                                 
+  [PASSE] 4.4 bascule 2b p=7 w2=2.80                           
+  [PASSE] 4.5 CAP' p=7 w2=2.80                                 
+  [PASSE] 4.5 debordement max g|x|^(p-1)                       
+
+E. SECTIONS 4.6 / 4.7 -- comptes nominaux et intervalles
+  [PASSE] n_2a nominal = 620 (derive)                          
+  [PASSE] n_2b nominal = 380 (derive)                          
+  [PASSE] n_2b' = M k / r = 400 (derive)                       
+  [PASSE] fenetre = M (1-r)/r = 180 (derive)                   
+  [PASSE] 4.6 intervalle n_2b = [360, 381]                     
+  [PASSE] 4.7 n_2s(w2=1.73) = 658 au texte                     
+  [PASSE] 4.7 intervalle [620, 659]                            
+  [PASSE] 4.6 intervalle [581, 621]                            
+  [PASSE] 4.7 n_2s(w2=2.27) = 631 au texte                     
+  [PASSE] 4.7 intervalle [620, 668]                            
+  [PASSE] 4.6 intervalle [572, 621]                            
+  [PASSE] 4.7 n_2s(w2=2.80) = 646 au texte                     
+  [PASSE] 4.7 intervalle [620, 678]                            
+  [PASSE] 4.6 intervalle [562, 621]                            
+
+F. LA MESURE REGLE 15 (4.7) -- egaux en exact, pas au bit
+  [PASSE] k/400 == r/M en exact                                1/200
+  [PASSE] les deux derivations flottantes DIFFERENT (au moins une) differe a w2 = 2.27, 2.80 ; egal ailleurs
+
+G. SECTION 9 -- les dix-huit denominateurs, cites VERBATIM
+  [PASSE] les 18 denominateurs du 85 sont au texte, au bit     18/18
+  [PASSE] 9 bruit_R(p=4) = 1.7624e-02                          
+  [PASSE] 9 rapport bruit/signal p=4                           
+  [PASSE] 9 bruit_R(p=5) = 2.0866e-02                          
+  [PASSE] 9 rapport bruit/signal p=5                           
+  [PASSE] 9 bruit_R(p=7) = 5.0582e-02                          
+  [PASSE] 9 rapport bruit/signal p=7                           
+
+H. SECTION 1 -- les citations du v5, confrontees au TEXTE du v5
+  [PASSE] 2  : K exacts et A_p identiques au v5 2.3            
+  [PASSE] 4  : comptes + sautes == 90 identique au v5 4.5      
+  [PASSE] 4  : amplitudes {1.05, 1.20} et 0.95 sous le seuil, au v5 4.3/4.4 
+  [PASSE] 5.2: dt_1 = 0.006 et T_MAX = 400 sont au v5 5.2      
+  [PASSE] 5.6: le v5 qualifie l indice par "la ou il est accessible" 
+  [MORD ] 5.6: la citation du v3 REPREND ce qualificatif       ABSENTE -> la citation DURCIT la garde
+  [PASSE] 5.7: le v5 dit "l'etat complet a la bascule" (singulier) 
+  [PASSE] 5.7: le v5 ignore la notion de depart d etage        
+  [MORD ] 5.7: la citation du v3 n AJOUTE rien au v5           AJOUTE 'et a chaque depart d etage'
+  [PASSE] 8  : les huit gardes nommees existent au v5 8        
+  [PASSE] 9  : le v5 porte bien les branches 0 a 7             
+  [PASSE] 10 : la forme de 10.3 est citee sans alteration      
+
+I. LE GEL TEMOIN CITE PAR LA PORTE (5, 11)
+  [PASSE] le v3 cite un temoin v8                              occurrences "v8" : 10
+  [PASSE] le gel temoin CERTIFIE est la v9                     
+  [MORD ] le v3 ne cite PAS la v9                              aucune mention de la v9
+
+J. SECTION 4.8 -- la jumelle a pas moitie a-t-elle ses intervalles ?
+  [PASSE] 4.8 divise par 2 le pas de CHAQUE etage              
+  [PASSE] 10 (iii) renvoie toute garde de compte a 4.6/4.7     
+  [MORD ] 4.8 parle-t-il des COMPTES de la jumelle ?           non : 4.8 ne porte aucun compte ni intervalle
+  [MORD ] un intervalle DOUBLE (celui de la jumelle) figure au gel aucun des 7 intervalles du gel n a son double ; la jumelle compte ~1240/760, hors [620,678] et [562,621]
+
+K. SECTION 4.7 -- t_start se LIT-il, ou se RE-CALCULE-t-il ?
+  [PASSE] 4.7 ecrit t_start comme un RECALCUL                  
+  [PASSE] 4.7 l annote pourtant comme une LECTURE              
+  [PASSE] les deux ne designent pas le meme double             grille accumulee 399.893999999333 contre recalcul 399.894000000000
+
+==================================================================
+CONTROLES : 93 ; PASSENT : 88 ; MORDENT : 5
+==================================================================

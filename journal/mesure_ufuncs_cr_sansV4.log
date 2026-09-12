@@ -1,0 +1,21 @@
+variable NPY_DISABLE_CPU_FEATURES = 'X86_V4 AVX512_ICL AVX512_SPR'
+ufunc (tableau)              non-CR    sur N   p.cent  biais (nb -1ulp / +1ulp / autres)
+power x**6 (entier)              16    20000     0.08  9 / 7 / 0
+power x**(-0.8)                  16    20000     0.08  9 / 7 / 0
+power (-x)**6 == x**6 ?          16    20000     0.08  9 / 7 / 0
+sqrt                              0    20000     0.00  0 / 0 / 0
+exp                              16    20000     0.08  9 / 7 / 0
+log                               5    20000     0.03  1 / 4 / 0
+log2                             19    20000     0.10  12 / 7 / 0
+log10                          2050    20000    10.25  1065 / 983 / 2
+sin                              30    20000     0.15  21 / 9 / 0
+cos                              25    20000     0.12  9 / 16 / 0
+tan                              46    20000     0.23  15 / 31 / 0
+arctan                            2    20000     0.01  1 / 1 / 0
+tanh                           4251    20000    21.25  2140 / 2111 / 0
+expm1                          2305    20000    11.53  1169 / 1136 / 0
+log1p                          1731    20000     8.65  832 / 899 / 0
+cbrt                          10383    20000    51.91  4204 / 5182 / 997
+arctan2(y,1.7)                   26    20000     0.13  15 / 11 / 0
+python x**6 (libm)               16    20000     0.08  (pow de la libm par Python, meme entrees)
+math.log (libm)                   5    20000     0.03  (log de la libm par Python, meme entrees)

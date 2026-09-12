@@ -1,0 +1,48 @@
+
+0. CE QUE SON CONTROLE NOMME ET QUE LES PIECES NE PORTENT PAS
+  [PASSE] les pieces ne portent PAS de pas dt2/4                 err porte : dt2,dt2/2
+  [PASSE] les pieces ne portent PAS d etats finaux x1, x2 par ce etats presents : x_bascule, x_b_num
+  [PASSE] champ_forces_empreinte est GLOBAL, donc ne discrimine  0491b83e6893dbbf / f150f2685187b9d2
+
+1. SON CONTROLE, AUX TROIS CELLULES FINES QU'ELLE NOMME
+   4|2.27   41 feuilles | ETAT 3 : R_composantes,plancher_composantes,seuil_5_4 | ERREUR 7
+   5|1.73   41 feuilles | ETAT 4 : R_composantes,x_b_num,plancher_composantes,seuil_5_4 | ERREUR 5
+   5|2.80   41 feuilles | ETAT 4 : R_composantes,x_b_num,plancher_composantes,seuil_5_4 | ERREUR 8
+  [PASSE] aux 3 FINES, des grandeurs d ETAT different            4|2.27,5|1.73,5|2.80
+  [PASSE] donc son issue (b) mord : "0 basculement net" etait FA ce n est pas l issue (a)
+
+2. ET LE RESULTAT VA PLUS LOIN QUE SA QUESTION -- LES NEUF CELLULES
+   -- GROSSIERES
+      4|1.73   ETAT 4  ERREUR 9   x_b_num DIFFERE
+      4|2.80   ETAT 3  ERREUR 6   x_b_num identique
+      7|1.73   ETAT 4  ERREUR 8   x_b_num DIFFERE
+   -- FINES
+      4|2.27   ETAT 3  ERREUR 7   x_b_num identique
+      5|1.73   ETAT 4  ERREUR 5   x_b_num DIFFERE
+      5|2.80   ETAT 4  ERREUR 8   x_b_num DIFFERE
+   -- RATIO EGAL AU BIT
+      5|2.27   ETAT 1  ERREUR 3   x_b_num DIFFERE
+      7|2.27   ETAT 1  ERREUR 3   x_b_num DIFFERE
+      7|2.80   ETAT 1  ERREUR 3   x_b_num DIFFERE
+  [PASSE] AUCUNE des 9 cellules n est integralement identique    0 cellule intacte
+  [PASSE] x_b_num differe sur 7 des 9 cellules                   4|1.73,5|1.73,5|2.27,5|2.80,7|1.73,7|2.27,7|2.80
+  [PASSE] ratio_seuil ne differe que sur 6 -- l absorption est E 4|1.73,4|2.27,4|2.80,5|1.73,5|2.80,7|1.73
+  [PASSE] les 3 cellules a ratio EGAL portent quand meme un ecar 5|2.27,7|2.27,7|2.80
+
+3. CE QUE LA CLASSE 'ABSORBEE' DEVIENT
+  [PASSE] la classe ABSORBEE (aucun ecart au bit) est VIDE a T2  0 membre sur 9 ; l absorption vaut par FEUILLE, pas par CELLULE
+  [PASSE] tau_CAP est identique noyau/libm aux 9 points          le pas n est pas touche
+
+4. LA RESIDUELLE ENTRE MON POSTE ET SON RUN SANS NOYAU
+  [PASSE] mon poste == son LIBM sur les 9 ratio_seuil AU BIT     9/9
+  [PASSE] mais seulement 6 des 9 POINTS ENTIERS sont identiques  differents : 7|1.73,7|2.27,7|2.80
+  [PASSE] et la residuelle est UNE seule grandeur, une tolerance tol_ordre,tol_ordre_sur_1
+      tol_ordre          3 cellules (7|1.73,7|2.27,7|2.80) ecart 1.6e-16
+      tol_ordre_sur_1    3 cellules (7|1.73,7|2.27,7|2.80) ecart 1.6e-16
+  [PASSE] elle est degre-selective : tout p=7, aucun p=4 ni p=5  meme famille que tol_int
+
+=====================================================================
+BILAN : 15/15 controles PASSENT
+VERDICT D-ACA-2 : son issue (b) -- les etats DIFFERENT, "0 basculement net"
+etait faux ; et la classe ABSORBEE est VIDE a T2 (0 cellule intacte sur 9).
+=====================================================================

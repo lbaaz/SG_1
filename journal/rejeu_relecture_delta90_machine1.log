@@ -1,0 +1,154 @@
+
+1. LA TENAILLE -- RELUE DANS LE LOG DE MESURE, REPRODUIT AU BIT PAR MACHINE 1
+  [PASSE] source derivation v3 .log           f60104c0c3ba7ec4     ACTE_constante_A/derivation_fenetre_delta_machine2_v3.log
+  [PASSE] source rejeu m1 du meme log         f60104c0c3ba7ec4     12_rejeu_relivraison/lot/rejeu_derivation_v3_machine1_v1.log
+  [PASSE] les deux logs sont IDENTIQUES (CRLF normalise)           72 lignes
+  [PASSE] INF retenue                      1.659260768e-05         1.659260768e-05
+  [PASSE] INF v1 depuis le log             1.659725811e-05         1.659725811e-05
+  [PASSE] SUP m=1                          3.457292925e-05         3.457292925e-05
+  [PASSE] SUP m=2                          1.728646463e-05         1.728646463e-05
+  [PASSE] SUP m=3                          1.152430975e-05         1.152430975e-05
+  [PASSE] lecture NOYAU                    1.286193025e-05         1.286193025e-05
+  [PASSE] lecture LIBM et la mienne        1.427322916e-05         1.427322916e-05
+  [PASSE] facteur NOYAU                    x1.3171                 x1.3171
+  [PASSE] facteur LIBM                     x1.4616                 x1.4616
+  [PASSE] facteur conservatrice            x1.6991                 x1.6991
+  [PASSE] carte m=1 kT=1                   x2.0836                 x2.0836
+  [PASSE] carte m=2 kT=1                   x1.0418                 x1.0418
+  [PASSE] carte m=1 kT=1.15                x1.8119                 x1.8119
+  [PASSE] carte m=1 kT=1.30                x1.6028                 x1.6028
+  [PASSE] carte m=1 kT=1.50                x1.3891                 x1.3891
+  [PASSE] carte m=1 kT=1.74                x1.1975                 x1.1975
+  [PASSE] forme fermee, ecart max          7.33e-07                7.33e-07
+  [PASSE] invariance de e                  [0.9367, 1.1625]        [0.9367, 1.1625]
+  [PASSE] bits de INF sous mutation        3ef1660b5147653b        3ef1660b5147653b
+  [PASSE] lecture mutee                    4.287310084e-06         4.287310084e-06
+  [PASSE] ecart JSON/log                   2.8027e-04              2.8027e-04
+  [PASSE] marge                            4.1817e-02              4.1817e-02
+  [PASSE] rapport                          149                     149
+  [PASSE] bilan de la feuille              22/22                   22/22
+  [PASSE] rapport tau_CAP exact            0.00e+00                0.00e+00
+  [PASSE] 0 changement de statut                                   0 changement
+  [PASSE] source precision de la borne .log   8a23a9227911d398     G5_cloture/precision_de_la_borne_machine2_v1.log
+  [PASSE] fenetre v1 depuis le log             x1.0415             x1.0415
+  [PASSE] 0.589 (acte) est l arrondi du 0.5886 du log              0.589
+  [PASSE] l acte dit 15 cellules, le log en compte 15 (3 m x 5 kT) 5 lignes kT x 3 colonnes m
+
+2. LES JSON -- LE PORTEUR, LES SIX CELLULES, LES QUATRE LUES, LA PORTE, tol_int
+  [PASSE] source pre-vol m2 v8 JSON           0a24121e441cc0c3     m2_v8_prevol_temoin_resultats.json
+  [PASSE] source pre-vol m1 NOYAU JSON        d3417a81e03b2861     onse_globale/lot/resultats_temoin_prevol_noyau_machine1.json
+  [PASSE] source pre-vol m1 LIBM JSON         95acd5d9c844eacc     ponse_globale/lot/resultats_temoin_prevol_libm_machine1.json
+  [PASSE] porteur 7|1.73 chez m2, a trois decimales                recalcul '0.684' vs annonce '0.684'
+  [PASSE] porteur 7|1.73 chez m1 (noyau), a trois decimales        recalcul '0.759' vs annonce '0.759'
+  [PASSE] 5|1.73 sur le fil                                        recalcul '0.991' vs annonce '0.991'
+  [PASSE] ecart au porteur, pour cent                              recalcul '11.0' vs annonce '11.0'
+  [PASSE] SIX cellules different au bit                            4|1.73,4|2.27,4|2.80,5|1.73,5|2.80,7|1.73
+  [PASSE] TROIS a la resolution du journal                         4|1.73,4|2.80,7|1.73
+  [PASSE] QUATRE lues sur six, DEUX sur trois                      4|1.73,4|2.27,4|2.80,5|2.80 | 4|1.73,4|2.80
+  [PASSE] mes ratios == son LIBM au bit (9/9)                      0 ecart
+  [PASSE] ecart relatif 4|1.73                                     recalcul '2.3e-02' vs annonce '2.3e-02'
+  [PASSE] ecart relatif 4|2.27                                     recalcul '1.4e-08' vs annonce '1.4e-08'
+  [PASSE] ecart relatif 4|2.80                                     recalcul '4.7e-02' vs annonce '4.7e-02'
+  [PASSE] ecart relatif 5|1.73                                     recalcul '4.1e-09' vs annonce '4.1e-09'
+  [PASSE] ecart relatif 5|2.80                                     recalcul '4.3e-10' vs annonce '4.3e-10'
+  [PASSE] ecart relatif 7|1.73                                     recalcul '1.1e-01' vs annonce '1.1e-01'
+  [PASSE] separation nette : 3 grossieres, 3 fines, rien entre 1e- 4|1.73,4|2.80,7|1.73 | 4|2.27,5|1.73,5|2.80
+  [PASSE] le porteur est la seule grossiere NON LUE                7|1.73
+  [PASSE] trois cellules a ratio egal au bit : 5|2.27, 7|2.27, 7|2 5|2.27,7|2.27,7|2.80
+  [PASSE] x_b_num differe sur 7 des 9                              4|1.73,5|1.73,5|2.27,5|2.80,7|1.73,7|2.27,7|2.80
+  [PASSE] tau_CAP identique noyau/libm 9/9                         9/9
+  [PASSE] tol_ordre differe BOCAL4/libm sur les trois cellules p = 7|1.73 1.6e-16,7|2.27 1.6e-16,7|2.80 1.6e-16
+  [PASSE] a un ulp, ecart RELATIF                                  recalcul '1.6e-16' vs annonce '1.6e-16'
+  [PASSE] champ de forces BOCAL4                                   recalcul 'f7f8be507eb5e9cb' vs annonce 'f7f8be507eb5e9cb'
+  [PASSE] champ de forces noyau                                    recalcul '0491b83e6893dbbf' vs annonce '0491b83e6893dbbf'
+  [PASSE] champ de forces libm                                     recalcul 'f150f2685187b9d2' vs annonce 'f150f2685187b9d2'
+  [PASSE] verdict du pre-vol                                       recalcul "NON CONCLUANT D'INTEGRATEUR" vs annonce "NON CONCLUANT D'INTEGRATEUR"
+  [PASSE] branche 4, les quatre points                             recalcul 'branche 4 : W-plancher 5|1.73, W-plancher 7|1.73, W-plancher 7|2.27, W-plancher 7|2.80 MORD' vs annonce 'branche 4 : W-plancher 5|1.73, W-plancher 7|1.73, W-plancher 7|2.27, W-plancher 7|2.80 MORD'
+  [PASSE] source pre-vol m1 .log 28/08        c45ac9f59907fbf4     prevol_temoin_v8_machine1.log
+  [PASSE] le pre-vol m1 du 28/08 rend la meme branche 4 (des deux  branche 4
+  [PASSE] 41 comptes, 0 saute                                      recalcul (41, 0, 41) vs annonce (41, 0, 41)
+  [PASSE] 0 faute de pre-vol                                       []
+  [PASSE] C(p = 4)                                                 recalcul '7.7143' vs annonce '7.7143'
+  [PASSE] C(p = 5)                                                 recalcul '8.3158' vs annonce '8.3158'
+  [PASSE] C(p = 7)                                                 recalcul '8.8966' vs annonce '8.8966'
+  [PASSE] delta-prime = 1/102400                                   recalcul '1/102400' vs annonce '1/102400'
+  [PASSE] delta-prime en flottant                                  recalcul '9.765625e-06' vs annonce '9.765625e-06'
+  [PASSE] delta-prime / INF                                        recalcul '0.589' vs annonce '0.589'
+  [PASSE] source run_temoin_delta85 (registre) 644240dc894c2733    registre/runs/run_temoin_delta85/resultats_temoin.json
+  [PASSE] tol_int deposee = valeur machine 2                       recalcul ['0.008578984888782988'] vs annonce ['0.008578984888782988']
+  [PASSE] et c est la valeur du pre-vol BOCAL4                     0.008578984888782988
+
+3. LES COMPTES DU GESTE (2) ET DES TOURS -- RELUS DANS LES LOGS ET LES NOTES
+  [PASSE] source comparaison a trois .log     e4a2a6a6f327ee85     G4_trois/comparaison_a_trois_machine2_v1.log
+  [PASSE] 856 feuilles de chaque cote                              856
+  [PASSE] 82 exposees                                              82 feuilles
+  [PASSE] 77 == LIBM, 0 == NOYAU                                   77 / 82
+  [PASSE] 0 / 82 dans le log                                       0 / 82
+  [PASSE] 14 sur 774 hors exposees                                 14 / 774
+  [PASSE] source controle croise .log         0d0f10fe5c406787     ACTE_constante_A/controle_croise_classes_machine2_v1.log
+  [PASSE] 15/15                                                    15/15
+  [PASSE] 0 des 9 intacte                                          0 cellule intacte
+  [PASSE] x_b_num 7 des 9                                          7 des 9
+  [PASSE] ratio_seuil 6 des 9                                      ne differe que sur 6
+  [PASSE] source verification 28b .log        755c4c9ad79fb54b     _constante_A/verification_28b_et_conventionB_machine2_v1.log
+  [PASSE] 91 et 154 CR                                             91, 154
+  [PASSE] 19/19                                                    19/19
+  [PASSE] 0 texte sur 771 .md                                      0 / 771
+  [PASSE] 5639 octets                                              5639 octets
+  [PASSE] brut de la capture temoin                                3833ba551a390945
+  [PASSE] brut de la capture alpha                                 717b61caa5921aaa
+  [PASSE] B des captures                                           10a7ce5688f515d5
+  [PASSE] B des captures (alpha)                                   0e7e56006d2e200a
+  [PASSE] source garde chk constante .log (m1) 28306881ecf4e557    ne1_2026-09-12_R_G2_5_v2/garde_chk_constante_machine1_v1.log
+  [PASSE] 5 appels a condition constante sur 7 feuilles            5 / 7
+  [PASSE] les trois lignes de D-ACA-7                              recalcul [69, 126, 180] vs annonce [69, 126, 180]
+  [PASSE] le False de la l.69 de verification_28b est sous conditi l.69
+  [PASSE] source R-G2-5 v2 sur le registre (m1) aa801b13ca41846f   ine1_2026-09-12_R_G2_5_v2/r_g2_5_pow_tableau_machine1_v2.log
+  [PASSE] 91 .py                           91 fichiers .py         91 fichiers .py
+  [PASSE] 545 puissances                   TOTAL        545        TOTAL        545
+  [PASSE] 232 exposables                   EXPOSABLE    232        EXPOSABLE    232
+  [PASSE] 41 fichiers                      fichiers portant au moi fichiers portant au moins une EXPOSABLE : 41
+  [PASSE] coeur du moteur                  m9_replication_v1.py:32 m9_replication_v1.py:324
+  [PASSE] HEAD d037d21                     HEAD d037d21            HEAD d037d21
+  [PASSE] source R-G2-5 v2 sur le v8 (m1)     e14b84d82da3bc47     eu_relivraison/lot/rejeu_R_G2_5_v2_sur_le_v8_machine1_v1.log
+  [PASSE] 42 / 9 / 6 sur le v8                                     recalcul (42, 9, 6) vs annonce (42, 9, 6)
+  [PASSE] 57 puissances sur le v8                                  57
+  [PASSE] source note m1 lecture reponse (lot 25b6f78bdf2ddcff) a3 6-09-12_R_G2_5/note_machine1_lecture_reponse_et_R-G2-5_v1.md
+  [PASSE] 36 exposables au v3 depose                               36
+  [PASSE] 207 .md au registre, 0 clause                            207
+  [PASSE] source manifeste rejeu m1           be5ee780388d1965     livraison/lot/MANIFEST_lot_machine1_rejeu_relivraison_v1.txt
+  [PASSE] 158/158                          158/158                 158 + absentes 0 + ecarts 0 == 158
+  [PASSE] driver 15/15                     15/15                   15/15
+  [PASSE] 73 lignes, 0 differente          73 lignes, 0 differente 73 lignes, 0 differente
+  [PASSE] relecture 39/39                  39/39                   39/39
+  [PASSE] 6 chemins                        six chemins             6 differentes, TOUTES des chemins
+  [PASSE] source assemblage re-livraison v2 .log d08c1d1999a6cd08  ACTE_constante_A/assemblage_relivraison_machine2_v2.log
+  [PASSE] re-livraison 158 pieces                                  158 pieces
+  [PASSE] source note m1 cause de l ecart (lot 117bcfaa1f283059) e 09-12_cause_ecart/lot/note_machine1_cause_ecart_7_1p73_v1.md
+  [PASSE] 5.2 a 5.5 pour cent              5.2 a 5.5 pour cent     5.2 a 5.5 pour cent
+  [PASSE] 1, 2, 2, 0                       1, 2, 2, 0              1, 2, 2, 0
+  [PASSE] 44 grandeurs de flot             44                      44
+  [PASSE] temoin x                         1765.6704444885254      1765.6704444885254
+  [PASSE] pas 707 sur 760                  pas 707 sur 760         pas 707 sur 760
+  [PASSE] 633 a dt2/8                      633                     633
+  [PASSE] X86_V4                           X86_V4                  X86_V4
+  [PASSE] ...9c5                           9c5                     9c5
+  [PASSE] ...9c6                           9c6                     9c6
+  [PASSE] numpy 2.2.6 sur BOCAL4           2.2.6                   2.2.6
+  [PASSE] numpy 2.4.4 sur machine 1                                2.4.4
+  [PASSE] source N-70 v2                      4867dffe3392dea6     e_A_pour_machine1/enumeration_cles_prevol_N70_machine2_v2.md
+  [PASSE] 245 au run                       245                     **245**
+  [PASSE] 238 identiques                   238 predites identiques PREDITES IDENTIQUES ....... 238
+  [PASSE] 2 absentes                       2 predites absentes     PREDITES ABSENTES** ..... 2
+  [PASSE] 16 groupes                       16 groupes sur 16       16 groupes
+Traceback (most recent call last):
+  File "/home/claude/reliv/ACTE_constante_A/relecture_nombres_delta90_machine2_v1.py", line 248, in <module>
+    N70v1 = source('N-70 v1', ('enumeration_cles_prevol_N70_machine2_v1.md',), '4ef8235b16f26210')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/claude/reliv/ACTE_constante_A/relecture_nombres_delta90_machine2_v1.py", line 57, in source
+    c = canon(p)
+        ^^^^^^^^
+  File "/home/claude/reliv/ACTE_constante_A/relecture_nombres_delta90_machine2_v1.py", line 38, in canon
+    raw = open(p, 'rb').read()
+          ^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/claude/reliv/enumeration_cles_prevol_N70_machine2_v1.md'

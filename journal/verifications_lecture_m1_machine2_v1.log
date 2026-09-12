@@ -1,0 +1,54 @@
+
+(a) SA CORRECTION SUR tau_CAP -- AU BANC DEPOSE ET AU BANC CERTIFIE
+   banc DEPOSE (v3, sa citation)        tau_cap = float(R_CAP) * tau_dom(w2)
+                                        tau_dom = math.sqrt(float(DELTA) / (1.0 + w2 * w2))
+  [PASSE] banc DEPOSE (v3, sa citation)  tau_cap est une FORME F aucune lecture de trajectoire
+  [PASSE] banc DEPOSE (v3, sa citation)  et sqrt(DELTA) y est ex math.sqrt(float(DELTA) / (1.0 + w2 * w2))
+   banc CERTIFIE (v8, celui qui joue)   tau_cap = float(R_CAP) * tau_dom(w2)
+                                        tau_dom = math.sqrt(float(DELTA) / (1.0 + w2 * w2))
+  [PASSE] banc CERTIFIE (v8, celui qui j tau_cap est une FORME F aucune lecture de trajectoire
+  [PASSE] banc CERTIFIE (v8, celui qui j et sqrt(DELTA) y est ex math.sqrt(float(DELTA) / (1.0 + w2 * w2))
+  [PASSE] SA CORRECTION EST JUSTE : sqrt(delta) est PAR CONSTRUC le rapport 32 exact en est la signature, pas une mesure
+  [PASSE] CE QUI RESTE MESURE : R suit la forme fermee D-t-22    ecart max 7.33e-07 -- c est une mesure, elle
+
+(b) SA QUESTION -- UNE RACINE OU TROIS ? DECIDE AU BIT
+  [PASSE] plancher_composantes == eps x R_composantes AU BIT (9/ 0 ecart
+  [PASSE] seuil_5_4 == C_effectif x plancher_composantes AU BIT  0 ecart
+  [PASSE] REPONSE : UNE racine (R_composantes), TROIS feuilles   l acte inscrit des FEUILLES, elle a raison de le demander
+
+   LE COMPTE HONNETE -- racines d ETAT INDEPENDANTES par cellule :
+      4|1.73   2 racine(s) : R_composantes,x_b_num
+      4|2.27   1 racine(s) : R_composantes
+      4|2.80   1 racine(s) : R_composantes
+      5|1.73   2 racine(s) : R_composantes,x_b_num
+      5|2.27   1 racine(s) : x_b_num
+      5|2.80   2 racine(s) : R_composantes,x_b_num
+      7|1.73   2 racine(s) : R_composantes,x_b_num
+      7|2.27   1 racine(s) : x_b_num
+      7|2.80   1 racine(s) : x_b_num
+  [PASSE] CHAQUE cellule garde au moins UNE racine d ETAT        9/9 -- le verdict de D-ACA-2 tient au compte honnete
+  [PASSE] 4|2.27 et 4|2.80 se reduisent a la SEULE racine R_comp leurs "ETAT 3" etaient 3 feuilles, 1 racine
+
+(c) D-ACA-3 -- MA DOCSTRING CONTRE MON LOG
+  [PASSE] ma docstring de v3 annonce 21                          ligne 22 de la docstring
+  [PASSE] mon log rend 22                                        les deux ne peuvent pas etre vrais
+  [PASSE] D-ACA-3 EST JUSTE, ET C EST UN COMPTE NON NOMME        22 lignes, toutes capables de mordre, dont UNE conjonction
+
+(d) D-ACA-4 -- SA PIECE, ET SA CITATION
+  [PASSE] sa citation c8d86e5e5b4fd745 RESOUT au poste           c8d86e5e5b4fd745
+  [PASSE] cette piece porte bien QUATRE flots (dt2 .. dt2/8)     k = 0,1,2,3
+  [PASSE] et elle ne porte AUCUN etat final x1, x2               R_au_max,R_composantes,dt,e,e_sur_plancher,err_rel_fin
+  [PASSE] le PRE-VOL, lui, ne porte que dt2 et dt2/2             sa lecture de sa propre faute est exacte
+  [PASSE] PIEGE A MON POSTE : un fichier sous SON nom ne porte P ed09e29e91b6eb00
+  [PASSE] il porte en fait MON rejeu1, au bit                    ed09e29e91b6eb00 == ed09e29e91b6eb00
+
+(e) R-G2-5 -- SA FEUILLE, REJOUEE SUR LE v8 CERTIFIE (absent du registre)
+   v3 (au registre, perime de cinq) EXPOSABLES 36 | CARRE 7 | CONST 4
+   v8 (CERTIFIE, celui qui joue)    EXPOSABLES 42 | CARRE 9 | CONST 6
+  [PASSE] le v8 certifie porte PLUS d exposables que le v3 depos 42 contre 36
+  [PASSE] son compte de 36 pour le v3 est reproduit ici          36
+  [PASSE] CE QUE R-G2-5 NE DIT PAS : le TYPE de la base a l exec une EXPOSABLE est une ligne A TYPER, pas une ligne exposee
+
+=====================================================================
+BILAN : 23/23 controles PASSENT
+=====================================================================
