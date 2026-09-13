@@ -1,0 +1,20 @@
+
+1. LES SIX JSON DE RUN -- VERDICTS ET IDENTITE
+  [PASSE] source m2 temoin v12                  8d4c76d38726baf1   out_run_delta91/temoin_v12/resultats_temoin.json
+  [PASSE] source m2 alpha v12                   presente           out_run_delta91/alpha_v12/resultats_alpha.json
+  [NON J] source m2 temoin v13                                     ABSENTE : out_run_delta91/temoin_v13/resultats_temoin.json
+  [NON J] source m2 alpha v13                                      ABSENTE : out_run_delta91/alpha_v13/resultats_alpha.json
+  [PASSE] source m1 temoin v13                  152da1af8286f6e0   on_run/lot/out13_m1/temoin_v13/resultats_temoin.json
+  [PASSE] source m1 alpha v13                   94d56d39afdff689   tion_run/lot/out13_m1/alpha_v13/resultats_alpha.json
+  [PASSE] le verdict du volet T                                    recalcul 'REGLAGE QUALIFIE (bonus T-3 retire)' vs acte 'REGLAGE QUALIFIE (bonus T-3 retire)'
+  [PASSE] sa branche                                               recalcul 'branche 6 : T-3 mord seul (W-integrales, T-3a)' vs acte 'branche 6 : T-3 mord seul (W-integrales, T-3a)'
+  [PASSE] le verdict du volet A                                    recalcul 'NON CONCLUANT DE PLANCHER' vs acte 'NON CONCLUANT DE PLANCHER'
+  [PASSE] sa branche                                               recalcul 'branche 3b : G-plancher MORD aux degres [4, 5, ' vs acte 'branche 3b : G-plancher MORD aux degres [4, 5, '
+Traceback (most recent call last):
+  File "/home/claude/poste91/ACTE_delta91/relecture_nombres_delta91_machine2_v1.py", line 105, in <module>
+    all(J['meta']['gel_alpha'][1] == 'a2b8463372e1f906' and J['reglage']['delta'] == '1/44100' for J in (T12, A12, T13, A13)), '4/4')
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/claude/poste91/ACTE_delta91/relecture_nombres_delta91_machine2_v1.py", line 105, in <genexpr>
+    all(J['meta']['gel_alpha'][1] == 'a2b8463372e1f906' and J['reglage']['delta'] == '1/44100' for J in (T12, A12, T13, A13)), '4/4')
+        ~^^^^^^^^
+TypeError: 'NoneType' object is not subscriptable

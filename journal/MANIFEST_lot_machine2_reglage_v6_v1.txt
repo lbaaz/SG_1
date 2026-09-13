@@ -1,0 +1,16 @@
+MANIFESTE lot_machine2_2026-09-12_reglage_v6_v1 -- LE REGLAGE QUI OUVRE LA PORTE EST MESURE (delta = 1/32400, n = 18 : REGLAGE QUALIFIE au pre-vol, T-2 reel) ; LA FENETRE m = 2 EST VIDE EN FAIT ; CAHIER ET NOMBRES DU GEL v6 (plume machine 1) ; MESSAGE DE L'OPERATEUR ; DEUX TOURS JUSQU'AU RUN ; machine 2, classe 3 (exploration, N-62)
+verdicts LUS dans les logs : n=24 : NON CONCLUANT D'INTEGRATEUR -- branche 4 : W-plancher 7|1.73 MORD | n=20 : NON CONCLUANT D'INTEGRATEUR -- branche 4 : W-pas 7|2.27 MORD | n=18 : REGLAGE QUALIFIE -- branche 5 : T-1 R = q, T-1b les deux lois, T-2 p_obs = 4 sous la conversion
+Les brouillons sont le v8 certifie (4d8882a2223a5c74) avec DEUX remplacements asseres (construction jointe) ; ils ne sont ancres sur aucun gel, non emis, non opposables. Les pieces v8 deposees sont intactes (verifie au canon).
+FORME : .log CRLF de ce poste ; le reste ASCII/LF. PB-1 : rien d'edite. Aucun verdict de gel ; aucun numero pris.
+colonnes : empreinte_B (sha256 NFC+LF, 16 hex)  empreinte_brute  octets_B  octets_bruts  fichier
+Le CANON du lot est l'empreinte B de CE manifeste ; il ne se porte pas lui-meme.
+
+f0bfbc62d1735469 f0bfbc62d1735469      8095      8095  POUR_MACHINE1_reglage_v6_machine2_v1.md
+6da7e39b93e22627 6da7e39b93e22627      1317      1317  construction_brouillon_v9_machine2_v1.py
+f19f0724120fa084 d6196ac1db0a8742     11342     11464  brouillon_n20_selftest.log
+790f09dc760ef05d 965bf1121a5be0f8     15114     15209  brouillon_n24_prevol_temoin.log
+f19e34e1a49efb4a f9311003ed32dd83     15415     15511  brouillon_n20_prevol_temoin.log
+51d2e0c2ad7702e0 507f2b6ca6fd8e2b     15158     15253  brouillon_n18_prevol_temoin.log
+
+entrants : v8 4d8882a2223a5c74 ; gel v5 2c0d2dc86054838c ; le delta 90 depose (e68341f) ; registre local pour le pre-vol
+pieces : 6 (compte etabli APRES le dernier ajout)

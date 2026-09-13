@@ -1,0 +1,14 @@
+MANIFESTE lot_machine1_2026-09-12_releve_cloture_delta90_v1 -- RELEVE DE CLOTURE DU DELTA 90 SUR CLONE FRAIS (HEAD e68341f) : 212/212 AU BIT, L'ACTE DEPOSE = L'ACTE v2 CERTIFIE, PERIMETRE v2 : 101 CITATIONS RESOLUES (97 au registre, 3 valeurs, 1 ZIP), 0 NON RESOLUE ; ses deux MORD post-depot sont ses assertions d'etat d'avant depot, attendues et nommees ; LA RESERVE DE MA CERTIFICATION EST CLOSE ; machine 1, classe 1
+RECEPTION du lot de depot 27e15bfbb99c661c : 6/6 au canon, ZIP brut fd001d4068211442 ; son erratum (-12, pas -11 ; D-CERT-5 rejouee) est pris. Il confirme mon lot a19687f0fd304a0a.
+RELEVE : 9/9 controles PASSENT ; 101 empreintes citees : 97 au registre, 0 au poste, 1 zip, 3 valeurs, 0 non resolues. Aucun numero de serie pris ; rien de tranche pour l'operateur ; aucun delta recommande ; aucun verdict de gel. PB-1 : rien d'edite.
+colonnes : empreinte_B (sha256 NFC+LF, 16 hex)  empreinte_brute  octets_B  octets_bruts  fichier
+Le CANON du lot est l'empreinte B de CE manifeste ; il ne se porte pas lui-meme.
+
+f1f463f7a34de17f f1f463f7a34de17f     4126     4126  note_machine1_releve_cloture_delta90_v1.md
+3b04262c64031f9c 3b04262c64031f9c     3500     3500  releve_depot_delta90_machine1_v1.py
+df64606c6892a9d6 df64606c6892a9d6      887      887  releve_depot_delta90_machine1_v1.log
+cbd23684bcc75839 cbd23684bcc75839    10388    10388  rejeu_perimetre_v2_HEAD_e68341f_machine1.log
+
+entrants : lot machine 2 depot_delta90_v1 (27e15bfbb99c661c) ; manifeste de depot v2 672b06b2686d3a82 (lot b952880bbed0de2c) ; clone frais lbaaz/SG_1 HEAD e68341f (676 fichiers)
+pieces : 4 (compte etabli APRES le dernier ajout)
+garde de reception : verifiees + absentes + ecarts == 4

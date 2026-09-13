@@ -1,0 +1,23 @@
+MANIFESTE lot_machine1_2026-09-13_certification_v11_v12_v13_run_delta91_v1 -- v11 ET v12 CERTIFIES (constructions au bit, selftest 103/103, banc 56/56) ; LE RUN SOUS v12 SUR MACHINE 1 REND NON CONCLUANT D'INSTRUMENT (9bis : 7 ecarts a UN ulp entre libm, D-v12-1) ; v13 = v12 + 9bis A 2 ULP (1ac295648490a86c, pin v7 inchange) : LE RUN EST REPRODUIT -- TEMOIN REGLAGE QUALIFIE (bonus T-3 retire), ALPHA NON CONCLUANT DE PLANCHER, memes verdicts que BOCAL4 ; PLUME : LA CLAUSE (T) A 1.15 NE SE RELACHE PAS, LE CHEMIN EST LE SECOND ORDRE ; machine 1, classe 1
+Lot m2 41208ad7ac1293cc recu 23/23 au canon ; arbre recu restaure apres versionnage D-I-2 (mon rejeu v12 lance dans son arbre : fait verse). Detail et plume dans la note. Aucun numero pris ; aucun delta recommande.
+colonnes : empreinte_B (sha256 NFC+LF, 16 hex)  empreinte_brute  octets_B  octets_bruts  fichier
+Le CANON du lot est l'empreinte B de CE manifeste ; il ne se porte pas lui-meme.
+
+8e83c216ce50f140 8e83c216ce50f140      6686      6686  note_machine1_certification_v11_v12_v13_run_delta91_v1.md
+2e262012cf542b9c 2e262012cf542b9c      4315      4315  construction_banc_v13_machine1_v1.py
+1ac295648490a86c 1ac295648490a86c    196862    196862  banc_qualification_machine1_v13.py
+10f29a6ffeae1667 10f29a6ffeae1667     11371     11371  m1_v12_selftest.log
+946db519b15cd86d 946db519b15cd86d     24840     24840  m1_v12_banc.log
+11f8845b10ecb3bb 11f8845b10ecb3bb     18517     18517  m1_run_temoin_v12.log
+2e5f0677e1f91ad5 2e5f0677e1f91ad5     11373     11373  m1_v13_selftest.log
+a4eb91146c7788a6 a4eb91146c7788a6     24842     24842  m1_v13_banc.log
+39f590a93fb2b8a7 39f590a93fb2b8a7     18774     18774  m1_run_temoin_v13.log
+a62c728df2794fe6 a62c728df2794fe6     29706     29706  m1_run_alpha_v13.log
+56c4e8684d99fce8 56c4e8684d99fce8     29509     29509  out13_m1/alpha_v13/journal_alpha.txt
+94d56d39afdff689 94d56d39afdff689    163650    163650  out13_m1/alpha_v13/resultats_alpha.json
+a57b23fc2c89d803 a57b23fc2c89d803     18567     18567  out13_m1/temoin_v13/journal_temoin.txt
+152da1af8286f6e0 152da1af8286f6e0     28954     28954  out13_m1/temoin_v13/resultats_temoin.json
+
+entrants : lot m2 run_delta91 41208ad7ac1293cc (v11 a9f3fa1d639107d2, v12 2c4345515bb02325, JSON 8d4c76d38726baf1 et edec88c7a9f3faf2) ; gel v7 a2b8463372e1f906 ; clone e68341f (9bis c4310e33da6b9759, run 85)
+pieces : 14 (compte etabli APRES le dernier ajout)
+garde de reception : verifiees + absentes + ecarts == 14

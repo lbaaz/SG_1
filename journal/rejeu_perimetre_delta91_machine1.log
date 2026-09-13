@@ -1,0 +1,74 @@
+
+1. LES CITATIONS DE L ACTE, ET LES DEUX INDEX PAR CANON
+  [ note] acte                                                       journal_delta_nn_constante_A_run_v1.md (version 1)
+  [PASSE] l acte est ASCII pur, LF, newline final                    25351 octets
+  [PASSE] l acte cite des empreintes (compte etabli apres extraction 23 jetons distincts de 16 hex
+  [PASSE] chaque VALEUR declaree est bien citee par l acte           
+  [PASSE] chaque lot de TRANSPORT declare est bien cite par l acte   
+  [PASSE] releve : HEAD e68341f, plafond 90, aucun fichier delta_91  676 fichiers suivis
+  [ note] index du poste                                             515 canons distincts (B et brut), 440 noms de table
+  [ note] balayage : tout BOCAL4 hors .git et __pycache__ ; exclues, MANIFEST_DEPOT_delta91_machine2_v1.txt, perimetre_depot_delta91_machine2_v1.log
+
+2. RESOLUTION DE CHAQUE CITATION -- AU REGISTRE, AU POSTE, OU NULLE PART
+   registre  11f86226cf4aa612  journal/journal_delta_90_constante_A_v2.md
+   registre  c8ed357b120352c4  scripts/m9_replication_v1.py
+   registre  4d8882a2223a5c74  scripts/banc_qualification_machine1_v8.py
+   registre  a2e7ef3e237c5acf  gels/temoin_negatif_pre_enregistrement_v11.md
+   registre  13601ef21efdc024  journal/erratum_temoin_v11_clause_7i_tolerance_v1.md
+   registre  c4310e33da6b9759  journal/depot_9bis_temoin_v1.json
+   registre  6d7d23130e9322f8  runs/run_alpha_delta85/resultats_alpha.json
+   registre  644240dc894c2733  runs/run_temoin_delta85/resultats_temoin.json
+   poste     847bb3bb2dd19f87  v6/constante_A_pre_enregistrement_v6.md
+   poste     a2b8463372e1f906  m2v7/constante_A_pre_enregistrement_v7.md
+   poste     9b3ec0b0c4978158  v6/banc_qualification_machine1_v9.py
+   poste     f65eccbfcdea91c1  m2v7/banc_qualification_machine1_v10.py
+   poste     a9f3fa1d639107d2  run91/banc_qualification_machine1_v11.py
+   poste     2c4345515bb02325  run91/banc_qualification_machine1_v12.py
+   poste     1ac295648490a86c  lot10/banc_qualification_machine1_v13.py
+   poste     bbd23a2ee3421da4  m2v7/enumeration_cles_prevol_N70_machine2_v3.md
+   poste     f65529ea706a60d2  m2v7/MANIFEST_lot_machine2_gel_v7_banc_v10_v1.txt
+   poste     41208ad7ac1293cc  run91/MANIFEST_lot_machine2_run_delta91_v1.txt
+   poste     e0dce16570a048cc  v6/MANIFEST_lot_machine1_gel_v6_banc_v9_v1.txt
+   poste     18e4fad746ece324  lot9/MANIFEST_lot_machine1_contreseing_v7_certification_v10_v1.txt
+   poste     ddf2070bece83d93  lot10/MANIFEST_lot_machine1_certification_v11_v12_v13_run_delta91_v1.txt
+   poste     5baebae5a0ad22c5  lot8/MANIFEST_lot_machine1_releve_cloture_delta90_v1.txt
+  [MORD ] toute empreinte citee resout par canon (registre, poste, o 435302fae671f4f8
+
+3. LES LOTS CITES ENTRENT AVEC LEURS PIECES DE TABLE
+   lot f65529ea706a60d2  table 24 / declare 24   m2v7/MANIFEST_lot_machine2_gel_v7_banc_v10_v1.txt
+   lot 41208ad7ac1293cc  table 23 / declare 23   run91/MANIFEST_lot_machine2_run_delta91_v1.txt
+   lot e0dce16570a048cc  table 16 / declare 16   v6/MANIFEST_lot_machine1_gel_v6_banc_v9_v1.txt
+   lot 18e4fad746ece324  table  9 / declare 9    lot9/MANIFEST_lot_machine1_contreseing_v7_certification_v10_v1.txt
+   lot ddf2070bece83d93  table 14 / declare 14   lot10/MANIFEST_lot_machine1_certification_v11_v12_v13_run_delta91_v1.txt
+   lot 5baebae5a0ad22c5  table  4 / declare 4    lot8/MANIFEST_lot_machine1_releve_cloture_delta90_v1.txt
+  [PASSE] 6 lots cites a deposer, chacun au compte de table declare  0 faux compte
+  [PASSE] aucune piece de table ne s ecarte de son manifeste         0 ecart
+  [PASSE] aucune piece de table n est introuvable a cote de son mani 0 introuvable
+  [PASSE] aucune piece retenue n est deja au registre par canon      95 retenues
+
+4. LE MANIFESTE DE DEPOT -- DERIVE, JAMAIS ECRIT A LA MAIN
+  [ note] collision de nom, prefixe applique                         MANIFEST.sha256 -> lot_41208ad7ac1293cc__MANIFEST.sha256
+  [ note] collision de nom, prefixe applique                         MANIFEST.sha256 -> lot_41208ad7ac1293cc__MANIFEST.sha256
+  [ note] collision de nom, prefixe applique                         journal_alpha.txt -> lot_41208ad7ac1293cc__journal_alpha.txt
+  [ note] collision de nom, prefixe applique                         journal_alpha.txt -> lot_ddf2070bece83d93__journal_alpha.txt
+  [ note] collision de nom, prefixe applique                         journal_temoin.txt -> lot_41208ad7ac1293cc__journal_temoin.txt
+  [ note] collision de nom, prefixe applique                         journal_temoin.txt -> lot_ddf2070bece83d93__journal_temoin.txt
+  [ note] collision de nom, prefixe applique                         resultats_alpha.json -> lot_41208ad7ac1293cc__resultats_alpha.json
+  [ note] collision de nom, prefixe applique                         resultats_alpha.json -> lot_ddf2070bece83d93__resultats_alpha.json
+  [ note] collision de nom, prefixe applique                         resultats_temoin.json -> lot_41208ad7ac1293cc__resultats_temoin.json
+  [ note] collision de nom, prefixe applique                         resultats_temoin.json -> lot_ddf2070bece83d93__resultats_temoin.json
+  [ note] collision de nom, prefixe applique                         journal/lot_41208ad7ac1293cc__MANIFEST.sha256 -> canon_adba792cc0b76e59__lot_41208ad7ac1293cc__MANIFEST.sha256 (meme lot, meme nom)
+  [PASSE] aucun chemin cible en double ni deja au registre           98 chemins cibles
+  [PASSE] aucun doublon de canon dans le depot                       98 pieces
+  [PASSE] toute collision resolue porte le prefixe de son LOT (aucun 11 prefixes
+  [PASSE] les .md/.py/.txt deposes sont B == brut (ASCII/LF)         42 pieces texte
+  [PASSE] le manifeste relu porte autant de lignes que de pieces     98 lignes, 98 pieces
+  [PASSE] chaque source du manifeste resout encore au canon ecrit    0 ecart
+  [PASSE] le manifeste declare son compte, egal aux lignes           pieces : 98
+  [PASSE] le manifeste est ASCII                                     22299 octets
+
+=====================================================================
+BILAN PERIMETRE : 17/18 controles PASSENT
+23 empreintes citees : 8 au registre, 14 au poste, 0 zip, 0 valeurs, 1 non resolues
+DEPOT : 98 pieces (gels 2, journal 90, scripts 6) ; manifeste MANIFEST_DEPOT_delta91_machine2_v1.txt f9b5c9de30c06691
+=====================================================================

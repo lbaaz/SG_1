@@ -1,0 +1,34 @@
+MANIFESTE lot_machine2_2026-09-13_gel_v7_banc_v10_v1 -- LE GEL v6 EST NON CERTIFIABLE (104/114 : 4.8 ET 9 NON RE-DERIVEES) ; LE v7 = v6 + 5 HUNKS DERIVES OU MESURES (a2b8463372e1f906, CERTIFIE 114/114, A CONTRESIGNER PAR DIFF) ; LE BANC v10 = v9 + LEVEE DE D-v9-1 + PIN v7 (f65eccbfcdea91c1 : selftest 103/103, banc 56/56, pre-vols temoin branche 5 x2, alpha LIEN NON ETABLI (9/27)) ; N-70 v3 (perimetre au run 245) ; machine 2, classe 1
+RECEPTION de ses deux lots : releve de cloture 5baebae5a0ad22c5 (4/4 ; sa reserve est close) ; gel v6 + banc v9 e0dce16570a048cc (16/16). Verdicts des pre-vols v10 : temoin 1 REGLAGE QUALIFIE -- branche 5 : T-1 R = q, T-1b les deux lois, T-2 p_obs = 4 sous la conversion | temoin 2 REGLAGE QUALIFIE -- branche 5 : T-1 R = q, T-1b les deux lois, T-2 p_obs = 4 sous la conversion | alpha LIEN NON ETABLI (9/27).
+garde chk constante (machine 1, be6bb447da1f4363) sur mes feuilles .py de ce lot, AVANT emission : [PASSE] 0 appel(s) chk a condition constante sur 6 feuille(s)
+FORME : .log et .json de ce poste tels quels (les .log sont CRLF, deux empreintes, deux tailles) ; le reste ASCII/LF. PB-1 : v6 et v9 non edites (v7 et v10 sont des pieces NOUVELLES par construction). Aucun verdict de run ; aucun numero pris.
+colonnes : empreinte_B (sha256 NFC+LF, 16 hex)  empreinte_brute  octets_B  octets_bruts  fichier
+Le CANON du lot est l'empreinte B de CE manifeste ; il ne se porte pas lui-meme.
+
+d29dadcf6b0c8bd5 d29dadcf6b0c8bd5      7063      7063  POUR_MACHINE1_gel_v7_banc_v10_machine2_v1.md
+a2b8463372e1f906 a2b8463372e1f906     41061     41061  constante_A_pre_enregistrement_v7.md
+a51dda7eec0a9486 a51dda7eec0a9486      7608      7608  construction_gel_v7_machine2_v1.py
+93abccac4dbb0264 ab5a1f7decc7ed02       271       272  construction_gel_v7_machine2_v1.log
+654eb02951048818 654eb02951048818     22461     22461  certif_constante_A_v6_machine2_v1.py
+9caae2e4270522c6 a8283ccbca49fc54     10241     10395  certif_constante_A_v6_machine2_v1.log
+1ca0985216adbb09 e53ccd0a1a837c6f     10246     10400  certif_constante_A_v7_machine2_v1.log
+f65eccbfcdea91c1 f65eccbfcdea91c1    194189    194189  banc_qualification_machine1_v10.py
+661f48d1289f6afc 661f48d1289f6afc      3352      3352  construction_banc_v10_machine2_v2.py
+77037a163a79707a b95cd074ba960aa4       126       127  m2_construction_v10_v2.log
+1437cc1a99d329f9 7c130cea0436aaf4     11337     11459  m2_v10_selftest.log
+6547446b5b90ce2c 81a645141d42e2e4     24811     25015  m2_v10_banc.log
+2153d7eadccf8c65 97f95811057fdd77     17775     17882  m2_v10_prevol_temoin_1.log
+dcdd26486e971d1f dcdd26486e971d1f     27225     27225  m2_v10_prevol_temoin_1_resultats.json
+caf0e8b322b96240 95b6eb1b45b3c7bb     17775     17882  m2_v10_prevol_temoin_2.log
+e02477c67d02b4dc e02477c67d02b4dc     27224     27224  m2_v10_prevol_temoin_2_resultats.json
+ef32c12ba63b9bb1 64f55281b1177c5b     29803     29973  m2_v10_prevol_alpha.log
+dfc0042d3c14eb99 dfc0042d3c14eb99    113926    113926  m2_v10_prevol_alpha_resultats.json
+56d005332a051245 56d005332a051245     10379     10379  derivation_cles_N70_machine2_v3.py
+bbd23a2ee3421da4 bbd23a2ee3421da4     11524     11524  enumeration_cles_prevol_N70_machine2_v3.md
+e72d9c38ead9cb21 e76421fda8fae43a     15158     15253  brouillon_n23_prevol_temoin.log
+68bd8614d41dd44e 2b590a0d7a5119fa     24810     25014  m2_v10brouillon_banc.log
+61856fb4f69cfb6b b2ea2d53fe7d9bf8     29803     29973  m2_v10brouillon_prevol_alpha.log
+593bae79ccbd552c 593bae79ccbd552c      2634      2634  construction_banc_v10_machine2_v1.py
+
+entrants : ses lots 5baebae5a0ad22c5 et e0dce16570a048cc (v6 847bb3bb2dd19f87, v9 9b3ec0b0c4978158, balayage) ; v8 4d8882a2223a5c74 ; run 85 ; depot 9bis c4310e33da6b9759 ; clone neuf e68341f
+pieces : 24 (compte etabli APRES le dernier ajout)

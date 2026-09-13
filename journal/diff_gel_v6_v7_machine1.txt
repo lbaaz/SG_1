@@ -1,0 +1,50 @@
+1c1
+< # PRE-ENREGISTREMENT constante A v6 -- LA FENETRE DESCEND JUSQU'A CE QUE
+---
+> # PRE-ENREGISTREMENT constante A v7 -- LA FENETRE DESCEND JUSQU'A CE QUE
+4a5,12
+> # v7 = v6 (847bb3bb2dd19f87, 40158 o, NON CERTIFIEE par machine 2 -- D-v6-3 : 4.8 non re-derivee,
+> # D-v6-4 : section 9 non re-derivee -- REMPLACEE, non editee) + cinq hunks derives ou mesures,
+> # appliques par construction_gel_v7_machine2_v1.py (machine 2 ; plume machine 1 conservee, a
+> # contresigner par diff) : H6 4.8 re-derivee au reglage v6 (2 x 400) ; H7 section 9, colonnes
+> # bruit/signal re-derivees au signal 1/441 ; H8 3.2, la ligne n = 23 MESUREE sur BOCAL4 (branche 5,
+> # min e/seuil 1.113 < 1.15 : exclue par la clause (T), mesuree) et 3.5 le dit ; H9 11, le volet T
+> # se compte sous la v11 ; H10 cette provenance. Fait de forme du v6 (D-v6-1) : sa table 3.2 etait
+> # un hunk MANUEL, hors du script de construction qu'il declarait comme provenance.
+203c211
+<     23  1/52900    1.139  1.829  (pre-vol non joue a ce n)
+---
+>     23  1/52900    1.139  1.829  REGLAGE QUALIFIE -- branche 5 : T-1 R = q, T-1 1.113         0.72   (BOCAL4)
+234c242,243
+<         ne passe la porte sur cette echelle (n = 22 et n = 24 mordent) :
+---
+>         ne passe la porte sur cette echelle (n = 22 et n = 24 mordent ; n = 23
+>         ouvre mais a e/seuil = 1.113 < 1.15, clause (T) mesuree) :
+388c397
+<     n_2a jumelle : [1162, 1242] / [1144, 1242] / [1124, 1242]
+---
+>     n_2a jumelle : [748, 802] / [736, 802] / [724, 802]
+390c399
+<     n_2s jumelle : [1240, 1318] / [1240, 1336] / [1240, 1356]
+---
+>     n_2s jumelle : [800, 852] / [800, 864] / [800, 876]
+563,565c572,574
+<     4    1.7624e-02        18.0x             7.4x               4.3x
+<     5    2.0866e-02        21.4x             8.7x               5.0x
+<     7    5.0582e-02        51.8x            21.1x              12.2x
+---
+>     4    1.7624e-02          7.8x              3.2x                1.8x
+>     5    2.0866e-02          9.2x              3.8x                2.2x
+>     7    5.0582e-02         22.3x              9.1x                5.3x
+567c576
+< **L-desc REFUTE R ~ 1 (structure persistante) a 18 a 52 fois le bruit ;
+---
+> **L-desc REFUTE R ~ 1 (structure persistante) a 8 a 22 fois le bruit ;
+629c638
+< **v9** -- ATTENDUS = 41 (voie A), en forme derivee. Chaque compte en
+---
+> **v11** (et son erratum 7 (i)) -- ATTENDUS = 41 (voie A), en forme derivee. Chaque compte en
+707c716
+< -- FIN constante_A_pre_enregistrement_v6 --
+---
+> -- FIN constante_A_pre_enregistrement_v7 --

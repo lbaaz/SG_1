@@ -1,0 +1,85 @@
+
+1. LES DEUX VERDICTS, ET LA PORTE ENTRE EUX
+  [ note] volet T                                                    REGLAGE QUALIFIE (bonus T-3 retire) -- branche 6 : T-3 mord seul (W-integrales, T-3a)
+  [ note] volet A                                                    NON CONCLUANT DE PLANCHER -- branche 3b : G-plancher MORD aux degres [4, 5, 7] (tol_lnA <= plancher : le modele fixe encore la tolerance ; v4 7)
+  [PASSE] temoin : instrument v12, gel v7 a2b8463372e1f906, delta =  banc_qualification_machine1_v12
+  [PASSE] temoin : ce n est PAS un pre-vol                           REEL
+  [PASSE] alpha : instrument v12, gel v7 a2b8463372e1f906, delta = 1 banc_qualification_machine1_v12
+  [PASSE] alpha : ce n est PAS un pre-vol                            REEL
+  [PASSE] le volet T rend un REGLAGE QUALIFIE (la porte du volet A)  REGLAGE QUALIFIE (bonus T-3 retire)
+  [PASSE] le volet A a lu CE fichier temoin comme porte              8d4c76d38726baf1
+  [PASSE] et la porte declare le verdict du temoin, statut REEL      REEL / REGLAGE QUALIFIE (bonus T-3 retire)
+  [PASSE] les deux volets tournent au MEME reglage                   delta 1/44100, r 1/10, M 20, k 2
+
+2. LE VOLET T -- LES NEUF CELLULES, ET LE BONUS RETIRE
+  [PASSE] les 9 cellules rendent W-pas PASSE et W-plancher PASSE     9/9
+  [PASSE] les 9 ratios e/seuil sont au-dessus de 1.15 (clause (T) du min 1.433 a 7|1.73
+  [PASSE] les 9 ordres observes sont a moins de tol_ordre de 4       max |p_obs-4|/tol = 0.79
+  [PASSE] le controle de reproductibilite 9bis passe a ZERO ecart    0 ecart ; custody 4/4
+  [PASSE] W-comptes : comptes + sautes == attendus                   PASSE
+  [PASSE] le bonus T-3 est retire par W-integrales a T-3a, et par el T-3 mord seul (W-integrales, T-3a)
+  [ note] T-3a, etat A                                               q_int H1 = 4.094287531949448 ; N = None
+  [ note] T-3a, etat B                                               q_int H1 = 4.107234156694868 ; N = 4.959797905872892
+  [PASSE] la dette du 28/08 se reproduit : q_int(N) a l etat B vaut  4.959798
+  [PASSE] a l etat A, N est NON LUE (plancher machine, LD-16)        W-integrales N etat A NON LUE (plancher machine, LD-
+
+3. LE VOLET A -- CE QUI EST EXPLOITABLE, P-alpha, P-A
+  [PASSE] plan : les 18 trajectoires rendent un POINT FIXE           {'POINT_FIXE': 18}
+  [PASSE] G_dt : les 18 trajectoires rendent un POINT FIXE           {'POINT_FIXE': 18}
+  [PASSE] G_k : les 18 trajectoires rendent un POINT FIXE            {'POINT_FIXE': 18}
+  [PASSE] seuil : les 9 trajectoires sous le seuil sont AJUSTEES     {'AJUSTE': 9}
+  [ note] D-v11-1 est levee                                          avant correction, les 18 jumelles rendaient G-fen et aucun degre n etait exploitable
+  [PASSE] les trois degres sont EXPLOITABLES                         4, 5, 7
+  [PASSE] aucune garde de resolution ne mord (G-dt, G-k, conversion  3/3
+  [PASSE] aucune garde de dependance ne mord (G-s, G-w2)             3/3
+   P-alpha, degre par degre (alpha mesure contre 4/(p-2), tolerance tol) :
+     p = 4 : alpha de 2.0000025 a 2.0000028 ; 4/(p-2) = 2.0000000 ; ecart max 2.77e-06 ; tol 2.38e-05 -> P-alpha True
+     p = 5 : alpha de 1.3333340 a 1.3333341 ; 4/(p-2) = 1.3333333 ; ecart max 8.06e-07 ; tol 8.75e-06 -> P-alpha True
+     p = 7 : alpha de 0.7999999 a 0.8000005 ; 4/(p-2) = 0.8000000 ; ecart max 4.50e-07 ; tol 2.98e-06 -> P-alpha True
+  [PASSE] P-alpha est VRAIE aux TROIS degres                         4, 5, 7
+   P-A, degre par degre (|ln(gA^(p-2)/K)| contre (p-2) x tol_lnA) :
+     p = 4 : ecart max 2.571e-06 ; borne 2.268e-06 ; rapport 1.13 -> P-A False
+     p = 5 : ecart max 1.808e-06 ; borne 4.710e-06 ; rapport 0.38 -> P-A True
+     p = 7 : ecart max 1.843e-06 ; borne 1.066e-05 ; rapport 0.17 -> P-A True
+  [PASSE] P-A est VRAIE a p = 5 et p = 7                             p = 5, p = 7
+  [PASSE] P-A est FAUSSE a p = 4, et de peu : 1.13 fois sa borne     ecart 2.571e-06 contre borne 2.268e-06
+
+4. G-plancher -- LA QUESTION MEME DU BANC : QUI FIXE LA TOLERANCE ?
+   p    dispersion mesuree   plancher du modele   dispersion/plancher   qui fixe tol_lnA
+   4    9.8534e-07           1.1338e-06            0.869                le MODELE
+   5    3.2607e-07           1.5699e-06            0.208                le MODELE
+   7    8.9160e-08           2.1312e-06            0.042                le MODELE
+  [PASSE] G-plancher MORD aux trois degres : le MODELE fixe encore l 4, 5, 7
+  [PASSE] et tol_lnA vaut exactement le plancher aux trois degres    1.0, 1.0, 1.0
+  [PASSE] p = 4 : le plancher derive du gel 3.3 est celui du run     1.133787e-06
+  [PASSE] p = 5 : le plancher derive du gel 3.3 est celui du run     1.569859e-06
+  [PASSE] p = 7 : le plancher derive du gel 3.3 est celui du run     2.131178e-06
+  [ note] le sens de la branche 3b                                   l'instrument est DEVENU plus fin que le plancher du modele : c'est le contraire d'une panne, mais la mesure de A reste bornee par le modele, donc non concluante
+
+5. DE COMBIEN LA TENAILLE EST FERMEE -- LE NOMBRE CHERCHE DEPUIS LE 29/08
+   p    delta-prime maximal pour que l INSTRUMENT fixe tol_lnA   (dispersion x (a+2)(a+3))
+   4    1.9707e-05                                          (facteur 20.0000)
+   5    4.7099e-06                                          (facteur 14.4444)
+   7    9.4867e-07                                          (facteur 10.6400)
+  [ note] le degre qui contraint le plus                             p = 7, delta-prime < 9.4867e-07
+  [ note] ce que le volet T exige                                    delta-prime >= INF = 1.659261e-05 (tenaille, delta 90 nn.4)
+  [PASSE] la tenaille est FERMEE : le delta requis par A est PLUS PE facteur 17.5 entre les deux
+  [ note] LE NOMBRE                                                  il faudrait un delta-prime 17.5 fois plus petit que ce que le volet T autorise pour que l instrument fixe la tolerance AUX TROIS DEGRES
+  [PASSE] a p = 4 SEUL, la fenetre existe : 1.9707e-05 > INF         delta-prime dans [1.6593e-05, 1.9707e-05] rendrait p = 4 instrument-limite ET la porte T ouverte
+  [PASSE] et l echelle en n^2 y place n = 23 (1/52900 = 1.8904e-05)  n = 23 a rendu branche 5 sur BOCAL4, a e/seuil 1.113 -- sous la clause (T) du gel, 1.15
+  [ note] ce que cela ouvre pour l arbitrage                         relacher la clause (T) de 1.15 a 1.10 rendrait p = 4 instrument-limite ; p = 5 et p = 7 resteraient modele-limites (il y faudrait 3.5 et 17.5 fois moins)
+  [PASSE] la cascade 3.5 du gel avait PRE-ENREGISTRE cette issue     branche 3b -> aucun delta plus petit ne passe la porte : arbitrage de l operateur
+
+6. CE QUE LE RUN NE DIT PAS
+  [ note] il ne refute pas P-A                                       P-A est FAUSSE a p = 4 sous une tolerance FIXEE PAR LE MODELE : la branche 3b est prononcee AVANT toute lecture de P-A, et le gel v5 10.3 dit que cette tolerance n est pas la bonne
+  [ note] il ne confirme pas 1/441                                   L-desc garde sa portee a un seul sens (gel v7 9) : elle refute R ~ 1, rien de plus
+  [ note] il ne mesure pas A                                         la constante A reste non mesuree : le banc rend une porte, pas une valeur
+  [ note] il ne tranche rien                                         aucun numero de serie, aucun delta recommande, aucune regle nouvelle
+
+=====================================================================
+BILAN : 35/35 controles PASSENT
+VOLET T : REGLAGE QUALIFIE (bonus T-3 retire)
+VOLET A : NON CONCLUANT DE PLANCHER
+P-alpha VRAIE aux trois degres ; P-A vraie a p = 5 et 7, fausse a p = 4 sous tolerance de MODELE.
+La tenaille est fermee d un facteur 17.5 : c est le nombre que la campagne cherchait.
+=====================================================================

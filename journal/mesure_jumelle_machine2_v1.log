@@ -1,0 +1,51 @@
+
+1. JAMBE (1) -- QUI TOMBE, ET QUI TIENT
+   plan   POINT_FIXE : 18
+   G_dt   G-fen (compte n_2b = 721 hors [360, 381]) : 1, G-fen (compte n_2b = 722 hors [360, 381]) : 1, G-fen (compte n_2b = 724 hors [360, 381]) : 1, G-fen (compte n_2b = 727 hors [360, 381]) : 1, G-fen (compte n_2b = 731 hors [360, 381]) : 1, G-fen (compte n_2b = 734 hors [360, 381]) : 1, G-fen (compte n_2b = 735 hors [360, 381]) : 3, G-fen (compte n_2b = 736 hors [360, 381]) : 1, G-fen (compte n_2b = 741 hors [360, 381]) : 1, G-fen (compte n_2b = 749 hors [360, 381]) : 1, G-fen (compte n_2b = 750 hors [360, 381]) : 2, G-fen (compte n_2b = 755 hors [360, 381]) : 1, G-fen (compte n_2b = 756 hors [360, 381]) : 2, G-fen (compte n_2b = 760 hors [360, 381]) : 1
+   G_k    POINT_FIXE : 18
+   seuil  AJUSTE : 9
+  [PASSE] les 18 trajectoires du PLAN rendent toutes un POINT FIXE   18/18
+  [PASSE] les 18 trajectoires a k = 4 (G-k) aussi                    18/18
+  [PASSE] les 9 trajectoires sous le seuil sont AJUSTEES             9/9
+  [PASSE] les 18 trajectoires de la JUMELLE (G-dt) rendent toutes G- 18/18 ; seule la jumelle tombe
+  [PASSE] le verdict est branche 3, aucun degre exploitable          s de point fixe (degres exploitables [])
+
+2. JAMBE (2) -- SUR QUOI LA JUMELLE MORD : FENETRE, OU COMPTE D ETAGE ?
+  [PASSE] les 18 morsures portent sur un COMPTE D ETAGE, pas sur la  n_2b : 18
+  [PASSE] l intervalle oppose est le meme pour les 18 : [360, 381]   l intervalle du PAS NOMINAL (gel 4.6)
+  [ note] les 18 comptes mesures                                     de 721 a 760
+  [PASSE] tous les comptes mesures sont a peu pres DOUBLES de la bor ~2 x 381
+
+3. JAMBE (3) -- LE GEL v7 4.8 : L INTERVALLE DE LA JUMELLE
+  [PASSE] le gel v7 4.8 dit que la jumelle divise par 2 le pas de CH 4.8
+  [PASSE] et que ses DEUX bornes sont multipliees par 2              forme derivee, jamais recopiee
+  [PASSE] n_2b jumelle au gel = [720, 762] = 2 x [360, 381]          derive
+  [PASSE] les 18 comptes mesures tombent DANS l intervalle de la jum 18/18 dans [720, 762]
+  [ note] portee exacte                                              la mesure est conforme au gel ; c est la COMPARAISON qui ne l est pas
+
+4. JAMBE (4) -- LA CAUSE DANS LE CODE : LE MECANISME EXISTE, IL N EST PAS ARME
+  [PASSE] trajectoire_plan a un parametre jumelle, par defaut False  signature
+  [PASSE] et il commande le facteur des intervalles                  fac
+  [PASSE] le run REEL appelle la jumelle a dt2 / 2 SANS armer jumell w2, p, s, dt2 / 2, K_BASC, compteur, sortie, "p%d_w%.2f_c%.2f_dt2s2_k2" % (p, w2, c), synth, sgn
+  [PASSE] aucun appel du fichier n arme jumelle=True                 0 occurrence
+  [PASSE] le PRE-VOL ne pouvait pas l attraper : son synthetique dec une phase, pas d etages
+  [ note] consequence                                                G-dt rend G-fen a tout run reel : exploitable = False aux trois degres, branche 3, AUCUN run ne pouvait conclure -- meme famille que D-v10-1
+
+5. CE QUE LES ENREGISTREMENTS PORTENT DEJA, QUOIQUE LA CASCADE N AIT RIEN PU LIRE
+   plan  p = 4 : alpha de 2.000002 a 2.000003  (4/(p-2) = 2.000000)  ecart max 2.77e-06 sur 6 trajectoires
+   plan  p = 5 : alpha de 1.333334 a 1.333334  (4/(p-2) = 1.333333)  ecart max 8.06e-07 sur 6 trajectoires
+   plan  p = 7 : alpha de 0.800000 a 0.800000  (4/(p-2) = 0.800000)  ecart max 4.50e-07 sur 6 trajectoires
+   G_k   p = 4 : alpha de 2.000003 a 2.000003  (4/(p-2) = 2.000000)  ecart max 2.81e-06 sur 6 trajectoires
+   G_k   p = 5 : alpha de 1.333334 a 1.333334  (4/(p-2) = 1.333333)  ecart max 7.78e-07 sur 6 trajectoires
+   G_k   p = 7 : alpha de 0.800000 a 0.800000  (4/(p-2) = 0.800000)  ecart max 4.77e-07 sur 6 trajectoires
+  [PASSE] p = 4 : les 6 alpha du plan collent a 4/(p-2) a mieux que  ecart max 2.77e-06
+  [PASSE] p = 5 : les 6 alpha du plan collent a 4/(p-2) a mieux que  ecart max 8.06e-07
+  [PASSE] p = 7 : les 6 alpha du plan collent a 4/(p-2) a mieux que  ecart max 4.50e-07
+  [ note] gA^(p-2)/K au plan (II)                                    de 1.000001 a 1.000003 sur 18 trajectoires
+  [ note] ce que cela ne dit PAS                                     P-alpha et P-A sont des lectures de la cascade, sur des grandeurs que G-dt alimente : elles ne se prononcent pas ici. Le run se REJOUE apres correction, il ne se lit pas a la main.
+
+=====================================================================
+BILAN : 20/20 controles PASSENT
+D-v11-1 : la jumelle G-dt est jouee a pas moitie et ses comptes d etage sont compares aux
+intervalles du pas NOMINAL ; le mecanisme (jumelle=True) existe et n est jamais arme.
+=====================================================================

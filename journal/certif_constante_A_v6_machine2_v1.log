@@ -1,0 +1,154 @@
+
+A. LES PIECES CITEES -- resolvent-elles, et le gel les cite-t-il ?
+  [PASSE] le brouillon cible resout a 847bb3bb2dd19f87           constante_A_pre_enregistrement_v6.md 847bb3bb2dd19f87
+  [PASSE] constante_A_pre_enregistrement_v5.md                   2c0d2dc86054838c
+  [PASSE] constante_A_pre_enregistrement_v4.md                   011c923203fcdaef
+  [PASSE] constante_A_pre_enregistrement_v3.md                   d71770d5948fe1aa
+  [PASSE] alpha_pre_enregistrement_v5.md                         045c2435aaf623ce
+  [PASSE] temoin_negatif_pre_enregistrement_v7.md                8b083e9f109b5a8e
+  [PASSE] temoin_negatif_pre_enregistrement_v9.md                403488b4f6c319e9
+  [PASSE] temoin_negatif_pre_enregistrement_v11.md               a2e7ef3e237c5acf
+  [PASSE] note_machine1_certification_temoin_v11_v2.md           7fc5f2412b99ad50
+  [PASSE] erratum_temoin_v11_clause_7i_tolerance_v1.md           13601ef21efdc024
+  [PASSE] enumeration_cles_prevol_N70_machine2_v2.md             4867dffe3392dea6
+  [PASSE] banc_qualification_machine1_v8.py                      4d8882a2223a5c74
+  [PASSE] note_machine2_controle_instrument_v8_v1.md             2a618ffb180ea568
+  [PASSE] derivation_fenetre_delta_machine2_v3.py                4353c80e60cef87c
+  [PASSE] m2_v8_prevol_temoin_resultats.json                     0a24121e441cc0c3
+  [PASSE] prevol_temoin_v8_machine1.log                          c45ac9f59907fbf4
+  [PASSE] journal_delta_nn_constante_A_v2.md                     11f86226cf4aa612
+  [PASSE] SUIVI_campagne_2026-08-28b.md                          b6d13e6a1559e850
+  [PASSE] note_machine2_certification_constante_A_v4_v1.         9e6376f936708077
+  [PASSE] banc_qualification_machine1_v3.py                      5fae2a8c94cf8685
+  [PASSE] le gel ne porte pas sa propre empreinte                
+  [PASSE] le gel cite le v8 comme base REMPLACE PAR LE v9, et le 
+
+B. SECTION 3 -- trois machoires, descente en n^2, regle 3.2 rejouee sur le balayage
+  [PASSE] 3.1 : les trois conditions (A), (T), (O) sont ecrites  
+  [PASSE] 3.1 : INF de la tenaille cite                          
+  [PASSE] SUP(1) = 3.457292925e-05, porte par p = 5 (derive du r 3.457292925e-05
+  [PASSE] le balayage de machine 1 porte 6 pre-vols lus (n = 23  
+  [PASSE] n qui ouvrent la porte avec e/seuil >= 1.15 : 18, 19,  [18, 19, 21]
+  [PASSE] regle 3.2 : le plus grand est n = 21                   
+  [PASSE] 3.2 ligne n = 18 : kT 1.860, m 1.120, verdict, min e/s lue
+  [PASSE] 3.2 ligne n = 19 : kT 1.669, m 1.248, verdict, min e/s lue
+  [PASSE] 3.2 ligne n = 20 : kT 1.507, m 1.383, verdict, min e/s lue
+  [PASSE] 3.2 ligne n = 21 : kT 1.367, m 1.525, verdict, min e/s lue
+  [PASSE] 3.2 ligne n = 22 : kT 1.245, m 1.673, verdict, min e/s lue
+  [PASSE] 3.2 ligne n = 24 : kT 1.046, m 1.991, verdict, min e/s lue
+  [PASSE] delta' = 1/44100 = 2.267574e-05                        
+  [PASSE] delta'/delta_0 = 1/441                                 
+  [PASSE] kT = 1.3666, m = 1.5247                                
+  [PASSE] plancher(p=4) = 1/882000   1.133787e-06  ratio 0.5734  
+  [PASSE] plancher(p=5) = 1/637000   1.569859e-06  ratio 0.6559  
+  [PASSE] plancher(p=7) = 1/469224   2.131178e-06  ratio 0.2867  
+  [PASSE] les trois planchers sont SOUS les dispersions (m > 1 a 
+  [PASSE] 3.5 : cascade de reglage pre-enregistree, un seul pas  
+
+C. LE PLANCHER EST-IL BIEN CELUI DU v5 10.3 ?
+  [PASSE] v5 10.3 porte delta / ((alpha_p + 2)(alpha_p + 3))     
+  [PASSE] v5 10.3 : le facteur (p-2) est deja dans la comparaiso 
+
+D. SECTION 4 -- les quatre tables, derivees puis cherchees
+  [PASSE] 4.3 tau_dom(w2=1.73) = 2.383068e-03                    
+  [PASSE] 4.3 tau_CAP(w2=1.73) = 2.383068e-04                    
+  [PASSE] 4.3 dt_2a(w2=1.73) = 2.383068e-04                      
+  [PASSE] 4.3 dt_2b(w2=1.73) = 1.191534e-05                      
+  [PASSE] 4.3 tau_dom(w2=2.27) = 1.919733e-03                    
+  [PASSE] 4.3 tau_CAP(w2=2.27) = 1.919733e-04                    
+  [PASSE] 4.3 dt_2a(w2=2.27) = 1.919733e-04                      
+  [PASSE] 4.3 dt_2b(w2=2.27) = 9.598664e-06                      
+  [PASSE] 4.3 tau_dom(w2=2.80) = 1.601602e-03                    
+  [PASSE] 4.3 tau_CAP(w2=2.80) = 1.601602e-04                    
+  [PASSE] 4.3 dt_2a(w2=2.80) = 1.601602e-04                      
+  [PASSE] 4.3 dt_2b(w2=2.80) = 8.008009e-06                      
+  [PASSE] 4.4 et 4.5 : les 18 valeurs derivees sont au texte     18/18
+  [PASSE] 4.5 debordement max g|x|^(p-1)                         
+
+E. SECTIONS 4.6 / 4.7 -- comptes nominaux et intervalles
+  [PASSE] n_2a nominal = M (n - 1) = 400 (derive)                
+  [PASSE] n_2b nominal = 380 ; n_2b' = 400 ; fenetre = 180 (deri 
+  [PASSE] 4.6 intervalle n_2b = [360, 381]                       
+  [PASSE] 4.7 n_2s(w2=1.73) = 425                                
+  [PASSE] 4.7 intervalle [400, 426]                              
+  [PASSE] 4.6 intervalle [374, 401]                              
+  [PASSE] 4.7 n_2s(w2=2.27) = 408                                
+  [PASSE] 4.7 intervalle [400, 432]                              
+  [PASSE] 4.6 intervalle [368, 401]                              
+  [PASSE] 4.7 n_2s(w2=2.80) = 418                                
+  [PASSE] 4.7 intervalle [400, 438]                              
+  [PASSE] 4.6 intervalle [362, 401]                              
+
+F. LA MESURE REGLE 15 -- egaux en exact, pas au bit
+  [PASSE] k/400 == r/M en exact                                  
+  [PASSE] 4.7 ecrit que le verdict dependrait de l ORTHOGRAPHE   
+
+G. SECTION 9 -- les dix-huit denominateurs, cites VERBATIM ; le signal 1/441
+  [PASSE] les 18 denominateurs du 85 sont au texte, AU BIT       18/18
+  [PASSE] signal_R = 1/441 = 2.268e-03                           
+  [MORD ] 9 bruit_R(p=4) et ses trois rapports au signal 1/441   1.7624e-02, 7.8x, 3.2x, 1.8x
+  [MORD ] 9 bruit_R(p=5) et ses trois rapports au signal 1/441   2.0866e-02, 9.2x, 3.8x, 2.2x
+  [MORD ] 9 bruit_R(p=7) et ses trois rapports au signal 1/441   5.0582e-02, 22.3x, 9.1x, 5.3x
+  [PASSE] 9 : L-desc ne decide RIEN                              
+
+H. SECTION 1 -- les citations du v5 alpha, contre le TEXTE (inchangee depuis la v5)
+  [PASSE] la section 1 est IDENTIQUE a celle de la v5 certifiee  2346 / 2346 caracteres
+  [PASSE] 2  : K exacts et A_p identiques au v5 2.3              
+  [PASSE] 5.6/5.7 : citations a la lettre (R-A-1, R-A-2)         
+  [PASSE] 8  : les huit gardes nommees existent au v5 8          
+
+I. LA PORTE (section 5) -- le temoin v11, son erratum, l instrument v9, LD-16, 9bis en ulp
+  [PASSE] la porte porte la v11 CERTIFIEE et sa certification    
+  [PASSE] la porte porte l erratum 7 (i)                         
+  [PASSE] la porte dit la v9 du temoin SUPERSEDEE                
+  [PASSE] l instrument est le v9, re-parametre depuis le v8 CERT 
+  [PASSE] 9bis entre machines : tolerance EN ULP pour EXPOSEE-LI 
+  [PASSE] temoin d arrondi executable sur la ligne de plateforme 
+  [PASSE] LD-16 re-ancree sur /reglage/c_pl = 10 du run 85 (deci 
+  [PASSE] /reglage/c_pl vaut bien 10 dans le run 85 depose       10
+  [MORD ] 11 : les comptes du volet T sont ceux de la v11, pas d 
+
+J. SECTION 4.8 -- les comptes de la jumelle
+  [MORD ] 4.8 n_2a jumelle w2=1.73 = [748, 802]                  D-v6-3 si absent
+  [MORD ] 4.8 n_2s jumelle w2=1.73 = [800, 852]                  D-v6-3 si absent
+  [MORD ] 4.8 n_2a jumelle w2=2.27 = [736, 802]                  D-v6-3 si absent
+  [MORD ] 4.8 n_2s jumelle w2=2.27 = [800, 864]                  D-v6-3 si absent
+  [MORD ] 4.8 n_2a jumelle w2=2.80 = [724, 802]                  D-v6-3 si absent
+  [MORD ] 4.8 n_2s jumelle w2=2.80 = [800, 876]                  D-v6-3 si absent
+  [PASSE] 4.8 n_2b jumelle = [720, 762] ; n_2b' jumelle = 800    
+
+K. SECTIONS 4.7 (t_start) ET 4.9 -- inchangees
+  [PASSE] 4.7 : t_start LU du journal, jamais RE-calcule, POINT  
+  [PASSE] 4.9 : exigence NEUVE, A LA BASCULE, quatre etages      
+
+M. SECTION 13 -- les empreintes brutes portent-elles leur CONVENTION ?
+  [PASSE] 13 se declare en convention B (sauf mention brut)      
+  [PASSE] la seule brute citee (log certif v3) nomme sa conventi 
+
+O. LE DIFF v5 -> v6, COMPTE PUIS NOMME
+   32 hunks, +208 / -95 lignes
+  [ note] le diff est compte en sautant les DEUX en-tetes (D-CER 32 hunks, +208/-95
+  [PASSE] les hunks ne touchent pas la section 1 (citations du v sections touchees : 0,3,4,5,6,7,9,10,12,13
+  [PASSE] la section 4.9 est IDENTIQUE a celle de la v5 certifie 539 caracteres
+
+P. LA RECONSTRUCTION -- le script de construction rejoue ici (D-v6-1)
+  [PASSE] le script de construction s execute (v5 et v8 en argum canons : v6 73434f58656c77f2 ; banc v9 ea583dbc8ee4c843
+  [PASSE] D-v6-1 : le gel v6 EMIS differe de la sortie du script 1 hunk(s)
+  [PASSE] D-v6-1 : ce hunk est la table du balayage collee en 3. 8 lignes ajoutees
+  [PASSE] D-v6-1 : le v9 emis differe du v9 reconstruit par le s GEL_ALPHA
+  [ note] D-v6-1 (forme, non bloquant)                           la provenance declaree ("les hunks enumeres par le script") est incomplete : un hunk manuel
+
+Q. LE TROU DU BALAYAGE -- n = 23 joue sur BOCAL4 (T-2 deterministe)
+  [PASSE] le pre-vol n = 23 a ete joue sur BOCAL4 (log present)  brouillon_n23_prevol_temoin.log
+  [PASSE] n = 23 : le pre-vol rend branche 5 sur BOCAL4          REGLAGE QUALIFIE -- branche 5 : T-1 R = q, T-1b les deux lois, T-2 p_o
+  [PASSE] n = 23 : min e/seuil = 1.113 < 1.15 -> EXCLU par la cl la regle 3.2 rend bien 21 ; la ligne 23 de la table se complete au v7 (D-v6-2)
+  [ note] D-v6-2 (forme, non bloquant)                           la table 3.2 porte n = 23 "non joue" ; joue ici : branche 5, min e/seuil 1.113
+  [PASSE] pre-vol v9 n = 21 sur BOCAL4 : les 9 cellules T-2 iden 9/9
+
+R. LES PIECES AJOUTEES PAR LA v6 SONT AU REGISTRE (clone neuf e68341f)
+  [PASSE] un clone frais du registre est donne en argument       C:/Users/bazil/AppData/Local/Temp/claude/d--devs-bocal/8598e4c7-2309-4aa8-8d46-a7f85a53e3fa/scratchpad/verif90
+  [PASSE] les 10 pieces ajoutees par la v6 resolvent au registre clone e68341f
+
+======================================================================
+CONTROLES : 114 ; PASSENT : 104 ; MORDENT : 10
+======================================================================

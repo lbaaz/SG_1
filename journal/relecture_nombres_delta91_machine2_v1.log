@@ -1,0 +1,128 @@
+
+1. LES SIX JSON DE RUN -- VERDICTS ET IDENTITE
+  [PASSE] source m2 temoin v12                  8d4c76d38726baf1   out_run_delta91\temoin_v12\resultats_temoin.json
+  [PASSE] source m2 alpha v12                   presente           out_run_delta91\alpha_v12\resultats_alpha.json
+  [PASSE] source m2 temoin v13                  presente           out_run_delta91\temoin_v13\resultats_temoin.json
+  [PASSE] source m2 alpha v13                   presente           out_run_delta91\alpha_v13\resultats_alpha.json
+  [PASSE] source m1 temoin v13                  152da1af8286f6e0   on_run\lot\out13_m1\temoin_v13\resultats_temoin.json
+  [PASSE] source m1 alpha v13                   94d56d39afdff689   tion_run\lot\out13_m1\alpha_v13\resultats_alpha.json
+  [PASSE] le verdict du volet T                                    recalcul 'REGLAGE QUALIFIE (bonus T-3 retire)' vs acte 'REGLAGE QUALIFIE (bonus T-3 retire)'
+  [PASSE] sa branche                                               recalcul 'branche 6 : T-3 mord seul (W-integrales, T-3a)' vs acte 'branche 6 : T-3 mord seul (W-integrales, T-3a)'
+  [PASSE] le verdict du volet A                                    recalcul 'NON CONCLUANT DE PLANCHER' vs acte 'NON CONCLUANT DE PLANCHER'
+  [PASSE] sa branche                                               recalcul 'branche 3b : G-plancher MORD aux degres [4, 5, ' vs acte 'branche 3b : G-plancher MORD aux degres [4, 5, '
+  [PASSE] les quatre runs de machine 2 portent le gel v7 et delta  4/4
+  [PASSE] les deux runs de machine 1 aussi                         2/2
+  [PASSE] LES DEUX MACHINES rendent les MEMES verdicts             T et A
+  [PASSE] les deux volets de machine 2 tournent au MEME reglage    delta 1/44100
+  [PASSE] le gel courant                                           recalcul 'a2b8463372e1f906' vs acte 'a2b8463372e1f906'
+  [PASSE] instrument v9                                            recalcul '9b3ec0b0c4978158' vs acte '9b3ec0b0c4978158'
+  [PASSE] instrument v10                                           recalcul 'f65eccbfcdea91c1' vs acte 'f65eccbfcdea91c1'
+  [PASSE] instrument v11                                           recalcul 'a9f3fa1d639107d2' vs acte 'a9f3fa1d639107d2'
+  [PASSE] instrument v12                                           recalcul '2c4345515bb02325' vs acte '2c4345515bb02325'
+  [PASSE] instrument v13                                           recalcul '1ac295648490a86c' vs acte '1ac295648490a86c'
+
+2. LE VOLET T -- LES NEUF CELLULES ET LE BONUS
+  [PASSE] e/seuil minimal                                          recalcul '1.433' vs acte '1.433'
+  [PASSE] e/seuil maximal                                          recalcul '5.750' vs acte '5.750'
+  [PASSE] le minimum est porte par 7|1.73                          7|1.73
+  [PASSE] le maximum est porte par 4|2.80                          4|2.80
+  [PASSE] max |p_obs - 4| / tol_ordre                              recalcul '0.79' vs acte '0.79'
+  [PASSE] les 9 cellules : W-pas PASSE et W-plancher PASSE         9/9
+  [PASSE] le 9bis a zero ecart                                     recalcul 0 vs acte 0
+  [PASSE] W-comptes                                                recalcul (41, 0, 41) vs acte (41, 0, 41)
+  [PASSE] q_int(N) a l etat B                                      recalcul '4.9598' vs acte '4.9598'
+  [PASSE] sur machine 1 : 7 feuilles tolerees a 1 ulp              7
+
+3. LE VOLET A -- P-alpha, P-A, G-plancher
+  [PASSE] plan 18, G-dt 18, G-k 18 POINT FIXE ; seuil 9 AJUSTE     18/18/18/9
+  [PASSE] les trois degres sont EXPLOITABLES                       3/3
+  [PASSE] p = 4 : alpha min                                        recalcul '2.0000025' vs acte '2.0000025'
+  [PASSE] p = 4 : alpha max                                        recalcul '2.0000028' vs acte '2.0000028'
+  [PASSE] p = 4 : ecart max a 4/(p-2)                              recalcul '2.77e-06' vs acte '2.77e-06'
+  [PASSE] p = 4 : la tolerance du degre                            recalcul '2.38e-05' vs acte '2.38e-05'
+  [PASSE] p = 5 : alpha min                                        recalcul '1.3333340' vs acte '1.3333340'
+  [PASSE] p = 5 : alpha max                                        recalcul '1.3333341' vs acte '1.3333341'
+  [PASSE] p = 5 : ecart max a 4/(p-2)                              recalcul '8.06e-07' vs acte '8.06e-07'
+  [PASSE] p = 5 : la tolerance du degre                            recalcul '8.75e-06' vs acte '8.75e-06'
+  [PASSE] p = 7 : alpha min                                        recalcul '0.7999999' vs acte '0.7999999'
+  [PASSE] p = 7 : alpha max                                        recalcul '0.8000005' vs acte '0.8000005'
+  [PASSE] p = 7 : ecart max a 4/(p-2)                              recalcul '4.50e-07' vs acte '4.50e-07'
+  [PASSE] p = 7 : la tolerance du degre                            recalcul '2.98e-06' vs acte '2.98e-06'
+  [PASSE] P-alpha est VRAIE aux trois degres, des DEUX cotes       6/6
+  [PASSE] p = 4 : ecart de P-A                                     recalcul '2.571e-06' vs acte '2.571e-06'
+  [PASSE] p = 4 : sa borne                                         recalcul '2.268e-06' vs acte '2.268e-06'
+  [PASSE] p = 4 : le rapport                                       recalcul '1.13' vs acte '1.13'
+  [PASSE] p = 5 : ecart de P-A                                     recalcul '1.808e-06' vs acte '1.808e-06'
+  [PASSE] p = 5 : sa borne                                         recalcul '4.710e-06' vs acte '4.710e-06'
+  [PASSE] p = 5 : le rapport                                       recalcul '0.38' vs acte '0.38'
+  [PASSE] p = 7 : ecart de P-A                                     recalcul '1.843e-06' vs acte '1.843e-06'
+  [PASSE] p = 7 : sa borne                                         recalcul '1.066e-05' vs acte '1.066e-05'
+  [PASSE] p = 7 : le rapport                                       recalcul '0.17' vs acte '0.17'
+  [PASSE] P-A vraie a p = 5 et 7, fausse a p = 4, des DEUX cotes   6/6
+  [PASSE] p = 4 : dispersion mesuree                               recalcul '9.8534e-07' vs acte '9.8534e-07'
+  [PASSE] p = 4 : plancher du modele                               recalcul '1.1338e-06' vs acte '1.1338e-06'
+  [PASSE] p = 4 : le rapport                                       recalcul '0.869' vs acte '0.869'
+  [PASSE] p = 5 : dispersion mesuree                               recalcul '3.2607e-07' vs acte '3.2607e-07'
+  [PASSE] p = 5 : plancher du modele                               recalcul '1.5699e-06' vs acte '1.5699e-06'
+  [PASSE] p = 5 : le rapport                                       recalcul '0.208' vs acte '0.208'
+  [PASSE] p = 7 : dispersion mesuree                               recalcul '8.9160e-08' vs acte '8.9160e-08'
+  [PASSE] p = 7 : plancher du modele                               recalcul '2.1312e-06' vs acte '2.1312e-06'
+  [PASSE] p = 7 : le rapport                                       recalcul '0.042' vs acte '0.042'
+  [PASSE] G-plancher mord aux trois degres et tol_lnA/plancher = 1 3/3
+  [PASSE] UNE SEULE cle numerique de degre differe entre les machi [(5, 'dispersion_lnA')]
+  [PASSE] son ecart relatif                                        recalcul '3.2e-03' vs acte '3.2e-03'
+
+4. LA TENAILLE CHIFFREE
+  [PASSE] p = 4 : delta maximal pour l instrument                  recalcul '1.9707e-05' vs acte '1.9707e-05'
+  [PASSE] p = 4 : le facteur (a+2)(a+3)                            recalcul '20.0000' vs acte '20.0000'
+  [PASSE] p = 5 : delta maximal pour l instrument                  recalcul '4.7099e-06' vs acte '4.7099e-06'
+  [PASSE] p = 5 : le facteur (a+2)(a+3)                            recalcul '14.4444' vs acte '14.4444'
+  [PASSE] p = 7 : delta maximal pour l instrument                  recalcul '9.4867e-07' vs acte '9.4867e-07'
+  [PASSE] p = 7 : le facteur (a+2)(a+3)                            recalcul '10.6400' vs acte '10.6400'
+  [PASSE] INF, la borne du volet T                                 recalcul '1.659261e-05' vs acte '1.659261e-05'
+  [PASSE] LE RAPPORT                                               recalcul '17.5' vs acte '17.5'
+  [PASSE] le degre qui contraint est p = 7                         p = 7
+  [PASSE] la fenetre a p = 4 existe : dmax(4) > INF                1.9707e-05
+  [PASSE] et n = 23 y tombe                                        1/52900 = 1.8904e-05
+  [PASSE] source run alpha du delta 85 (registre) 6d7d23130e9322f8 registre\runs\run_alpha_delta85\resultats_alpha.json
+  [PASSE] p = 4 : le rapport des dispersions 85 / 91               recalcul '2.01' vs acte '2.01'
+  [PASSE] p = 4 : la pente en delta                                recalcul '0.114' vs acte '0.114'
+  [PASSE] p = 5 : le rapport des dispersions 85 / 91               recalcul '7.34' vs acte '7.34'
+  [PASSE] p = 5 : la pente en delta                                recalcul '0.327' vs acte '0.327'
+  [PASSE] p = 7 : le rapport des dispersions 85 / 91               recalcul '83.36' vs acte '83.36'
+  [PASSE] p = 7 : la pente en delta                                recalcul '0.726' vs acte '0.726'
+  [PASSE] la dispersion extrapolee a n = 23                        recalcul '9.65e-07' vs acte '9.65e-07'
+  [PASSE] le plancher a n = 23                                     recalcul '9.45e-07' vs acte '9.45e-07'
+  [PASSE] la marge y vaut DEUX POUR CENT                           1.021
+  [PASSE] p = 4 : le residuel du second ordre                      recalcul '2.57e-11' vs acte '2.57e-11'
+  [PASSE] p = 4 : le gain sur la dispersion                        recalcul '3.8e+04' vs acte '3.8e+04'
+  [PASSE] p = 5 : le residuel du second ordre                      recalcul '3.56e-11' vs acte '3.56e-11'
+  [PASSE] p = 5 : le gain sur la dispersion                        recalcul '9.2e+03' vs acte '9.2e+03'
+  [PASSE] p = 7 : le residuel du second ordre                      recalcul '4.83e-11' vs acte '4.83e-11'
+  [PASSE] p = 7 : le gain sur la dispersion                        recalcul '1.8e+03' vs acte '1.8e+03'
+
+5. LE BALAYAGE, LES TROIS DEFAUTS, LES COMPTES DE L ACTE
+  [PASSE] le balayage porte n = 18 (1/32400) et son verdict        1/32400
+  [PASSE] le balayage porte n = 19 (1/36100) et son verdict        1/36100
+  [PASSE] le balayage porte n = 20 (1/40000) et son verdict        1/40000
+  [PASSE] le balayage porte n = 21 (1/44100) et son verdict        1/44100
+  [PASSE] le balayage porte n = 22 (1/48400) et son verdict        1/48400
+  [PASSE] le balayage porte n = 23 (1/52900) et son verdict        1/52900
+  [PASSE] le balayage porte n = 24 (1/57600) et son verdict        1/57600
+  [PASSE] source mesure de D-v11-1              presente           mesure_jumelle_machine2_v1.log
+  [PASSE] les comptes de la jumelle                                721 a 760
+  [PASSE] contre l intervalle du pas nominal                       [360, 381]
+  [PASSE] quand le gel en derive                                   [720, 762]
+  [PASSE] source mesure de D-v10-1              presente           mesure_9bis_tuple_machine2_v1.log
+  [PASSE] les neuf ecarts du 9bis                                  Neuf cles du perimetre
+  [PASSE] source certification du v13           presente           certif_banc_v13_machine2_v1.log
+  [PASSE] la tolerance du v13 mord des 3 ulp                       bornee
+  [PASSE] les quatre defauts d instrument sont nommes              4
+  [PASSE] les cinq defauts de gel et les deux de note aussi        7
+  [PASSE] quatre regles candidates neuves, numerotees 9 a 12       4
+  [PASSE] les six points a arbitrer sont numerotes (i) a (vi)      6
+  [PASSE] l acte est ASCII, LF, newline final, largeur <= 90       26246 octets, largeur 90
+
+=====================================================================
+BILAN RELECTURE : 114/114 controles PASSENT ; 0 NON JOUE(S)
+=====================================================================

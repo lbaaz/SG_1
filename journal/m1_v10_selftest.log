@@ -1,0 +1,122 @@
+[0001] DEBUT          banc_qualification_machine1_v10  --selftest --registre /home/claude/registre_v7 --sortie /home/claude/m2v7/out_selftest  UTC 2026-09-12T22:15:35Z
+[0002] FILES          E18 : aucun numero pris ; maximum cite E42, N-69, D-M17-45 (registre 37ad1b6, pieces .md/.txt)
+[0003] N-59           banc_qualification_machine1_v10.py  194189 o  sha256 brut f65eccbfcdea91c1  convention B f65eccbfcdea91c1  ASCII/LF True
+[0004] E19            gels/temoin_negatif_pre_enregistrement_v11.md  a2e7ef3e237c5acf  72281 o  attendu a2e7ef3e237c5acf 72281  -> CONCORDANT
+[0005] E19            gels/constante_A_pre_enregistrement_v7.md  a2b8463372e1f906  41061 o  attendu a2b8463372e1f906 41061  -> CONCORDANT
+[0006] E19            gels/temoin_negatif_pre_enregistrement_v7.md  8b083e9f109b5a8e  39750 o  attendu 8b083e9f109b5a8e 39750  -> CONCORDANT
+[0007] E19            gels/alpha_pre_enregistrement_v5.md  045c2435aaf623ce  28998 o  attendu 045c2435aaf623ce 28998  -> CONCORDANT
+[0008] E19            journal/note_machine1_certification_temoin_v11_v2.md  7fc5f2412b99ad50  attendu 7fc5f2412b99ad50  -> CONCORDANT
+[0009] E19            journal/note_machine2_certification_constante_A_v4_v1.md  9e6376f936708077  attendu 9e6376f936708077  -> CONCORDANT
+[0010] E19            journal/note_machine1_certification_gels_v7_v4.md  6b2425dbf906205b  attendu 6b2425dbf906205b  -> CONCORDANT
+[0011] E19            journal/note_machine1_certification_gel_alpha_v5.md  fe43f7c4d142bcdb  attendu fe43f7c4d142bcdb  -> CONCORDANT
+[0012] CUSTODY        scripts/m9_replication_v1.py  sha256 brut c8ed357b120352c4...  36325 o  -> CONCORDANT
+[0013] CUSTODY        runs/m12_results.json  sha256 brut fa109da92e582520...  130856 o  -> CONCORDANT
+[0014] MOTEUR         scripts/m9_replication_v1.py charge, sha256 c8ed357b120352c4..., gel jumeau M9 v2 conforme, P=5 T_MAX=400.0 CAP=10000.0
+[0015] SELFTEST       symbolique a_hamilton_2.10_vers_2.11                 OK  
+[0016] SELFTEST       symbolique b_crochet_N_H1_nul                        OK  
+[0017] SELFTEST       symbolique a_bis_acc_code_egale_polynome             OK  
+[0018] SELFTEST       symbolique c_p4_exposant_alpha(p-1)=alpha+4          OK  
+[0019] SELFTEST       symbolique c_p4_reste_egale_forcage_f                OK  
+[0020] SELFTEST       symbolique c_p4_K=120                                OK  
+[0021] SELFTEST       symbolique c_p4_gA^(p-2)=K_num                       OK  
+[0022] SELFTEST       symbolique c_p5_exposant_alpha(p-1)=alpha+4          OK  
+[0023] SELFTEST       symbolique c_p5_reste_egale_forcage_f                OK  
+[0024] SELFTEST       symbolique c_p5_K=3640/81                            OK  
+[0025] SELFTEST       symbolique c_p5_gA^(p-2)=K_num                       OK  
+[0026] SELFTEST       symbolique c_p7_exposant_alpha(p-1)=alpha+4          OK  
+[0027] SELFTEST       symbolique c_p7_reste_egale_forcage_f                OK  
+[0028] SELFTEST       symbolique c_p7_K=9576/625                           OK  
+[0029] SELFTEST       symbolique c_p7_gA^(p-2)=K_num                       OK  
+[0030] SELFTEST       symbolique d_operateur_lineaire_factorise            OK  
+[0031] SELFTEST       symbolique e_duffing_Omega2=2_m=1/4_x0=1             OK  
+[0032] SELFTEST       symbolique f_plafond_alpha=2/15                      OK  
+[0033] SELFTEST       symbolique f_plafond_R=eta_R(q-1)=1/4                OK  
+[0034] SELFTEST       symbolique f_plafond_loi2=eta(1-1/c_T)=1/8           OK  
+[0035] SELFTEST       symbolique g_etat_A_H1_0=2_N_0=3/4                   OK  
+[0036] SELFTEST       symbolique g_etat_B_H1_0=10_N_0=6                    OK  
+[0037] SELFTEST       delta' = 1/44100 et delta_0 = b^J delta' = 1/100 (EXACT, v6 3) OK  
+[0038] SELFTEST       plancher'(4) = 1/882000 exact (v6 3.3)               OK  1/882000
+[0039] SELFTEST       plancher'(5) = 1/637000 exact (v6 3.3)               OK  1/637000
+[0040] SELFTEST       plancher'(7) = 1/469224 exact (v6 3.3)               OK  1/469224
+[0041] SELFTEST       n_2b' = M k / r = 400 ; fenetre = 180 ; nominaux 400 / 380 (derives, v6 4.6-4.7) OK  
+[0042] SELFTEST       intervalles 4.6 : n_2a [374,401]/[368,401]/[362,401] ; n_2b [360,381] (derives, entiers) OK  
+[0043] SELFTEST       intervalles 4.7 : n_2s [400,426]/[400,432]/[400,438] ; jumelle 4.8 : bornes x2 OK  
+[0044] SELFTEST       tau_dom'(1.73) = 2.3831e-03 (v6 4.3)                 OK  
+[0045] SELFTEST       dt_2b(1.73) = 1.1915e-05 (v6 4.3)                    OK  
+[0046] SELFTEST       dt_2a(1.73) = 2.3831e-04 (v6 4.3)                    OK  
+[0047] SELFTEST       tau_dom_0(1.73) = 5.0044e-02 (repere, v5 6)          OK  
+[0048] SELFTEST       tau_dom'(2.27) = 1.9197e-03 (v6 4.3)                 OK  
+[0049] SELFTEST       dt_2b(2.27) = 9.5987e-06 (v6 4.3)                    OK  
+[0050] SELFTEST       dt_2a(2.27) = 1.9197e-04 (v6 4.3)                    OK  
+[0051] SELFTEST       tau_dom_0(2.27) = 4.0314e-02 (repere, v5 6)          OK  
+[0052] SELFTEST       tau_dom'(2.80) = 1.6016e-03 (v6 4.3)                 OK  
+[0053] SELFTEST       dt_2b(2.80) = 8.0080e-06 (v6 4.3)                    OK  
+[0054] SELFTEST       dt_2a(2.80) = 1.6016e-04 (v6 4.3)                    OK  
+[0055] SELFTEST       tau_dom_0(2.80) = 3.3634e-02 (repere, v5 6)          OK  
+[0056] SELFTEST       A_4 = 48.98979                                       OK  
+[0057] SELFTEST       CAP'_4(1.73) = 8.6265e+08 (v6 4.5)                   OK  
+[0058] SELFTEST       bascule2b_4(1.73) = 2.1566e+06 (v6 4.4)              OK  
+[0059] SELFTEST       bascule0_4(1.73) = 4.8903e+03 (v5 5.3, depart 2a)    OK  
+[0060] SELFTEST       CAP'_4(2.27) = 1.3293e+09 (v6 4.5)                   OK  
+[0061] SELFTEST       bascule2b_4(2.27) = 3.3233e+06 (v6 4.4)              OK  
+[0062] SELFTEST       bascule0_4(2.27) = 7.5357e+03 (v5 5.3, depart 2a)    OK  
+[0063] SELFTEST       CAP'_4(2.80) = 1.9098e+09 (v6 4.5)                   OK  
+[0064] SELFTEST       bascule2b_4(2.80) = 4.7746e+06 (v6 4.4)              OK  
+[0065] SELFTEST       bascule0_4(2.80) = 1.0827e+04 (v5 5.3, depart 2a)    OK  
+[0066] SELFTEST       A_5 = 9.65048                                        OK  
+[0067] SELFTEST       CAP'_5(1.73) = 6.5318e+05 (v6 4.5)                   OK  
+[0068] SELFTEST       bascule2b_5(1.73) = 1.2032e+04 (v6 4.4)              OK  
+[0069] SELFTEST       bascule0_5(1.73) = 2.0767e+02 (v5 5.3, depart 2a)    OK  
+[0070] SELFTEST       CAP'_5(2.27) = 8.7142e+05 (v6 4.5)                   OK  
+[0071] SELFTEST       bascule2b_5(2.27) = 1.6052e+04 (v6 4.4)              OK  
+[0072] SELFTEST       bascule0_5(2.27) = 2.7705e+02 (v5 5.3, depart 2a)    OK  
+[0073] SELFTEST       CAP'_5(2.80) = 1.1095e+06 (v6 4.5)                   OK  
+[0074] SELFTEST       bascule2b_5(2.80) = 2.0438e+04 (v6 4.4)              OK  
+[0075] SELFTEST       bascule0_5(2.80) = 3.5276e+02 (v5 5.3, depart 2a)    OK  
+[0076] SELFTEST       A_7 = 3.14244                                        OK  
+[0077] SELFTEST       CAP'_7(1.73) = 2.4863e+03 (v6 4.5)                   OK  
+[0078] SELFTEST       bascule2b_7(1.73) = 2.2633e+02 (v6 4.4)              OK  
+[0079] SELFTEST       bascule0_7(1.73) = 1.9813e+01 (v5 5.3, depart 2a)    OK  
+[0080] SELFTEST       CAP'_7(2.27) = 2.9558e+03 (v6 4.5)                   OK  
+[0081] SELFTEST       bascule2b_7(2.27) = 2.6906e+02 (v6 4.4)              OK  
+[0082] SELFTEST       bascule0_7(2.27) = 2.3555e+01 (v5 5.3, depart 2a)    OK  
+[0083] SELFTEST       CAP'_7(2.80) = 3.4168e+03 (v6 4.5)                   OK  
+[0084] SELFTEST       bascule2b_7(2.80) = 3.1103e+02 (v6 4.4)              OK  
+[0085] SELFTEST       bascule0_7(2.80) = 2.7229e+01 (v5 5.3, depart 2a)    OK  
+[0086] SELFTEST       9bis : mord au perimetre (x), muet sur exempte (duree_s) et hors perimetre (meta) OK  ['/T1/A/x (2.0 != 1.0)']
+[0087] SELFTEST       L-desc : ln(r')/ln(r) = 1/1024 sur un couple fabrique OK  
+[0088] SELFTEST       D-M17-58 : la table conforme PASSE la garde (0 faute) OK  
+[0089] SELFTEST       plancher_lnA(4) = 1/882000 exact (v6 3.3, delta')    OK  1/882000
+[0090] SELFTEST       plancher_lnA(5) = 1/637000 exact (v6 3.3, delta')    OK  1/637000
+[0091] SELFTEST       plancher_lnA(7) = 1/469224 exact (v6 3.3, delta')    OK  1/469224
+[0092] SELFTEST       carte : sF == min(sP, sM) et frag coherent, 9/9 ; p=4 sans sM OK  
+[0093] SELFTEST       signes joues : frag = -1 aux points enumeres de la carte OK  [(5, 2.27), (5, 2.8), (7, 2.27), (7, 2.8)]
+[0094] SELFTEST       tol_int (etat B, x_max=2) = log2((1+b)/(1+b/2)), b = sqrt(13) dt, sous le plafond 1/4 OK  0.01536
+[0095] SELFTEST       pas_signature(k=0) = 6.0325e-07, den 9863185         OK  6.0325e-07 enc=(0.05, 6.0)
+[0096] SELFTEST       pas_signature(k=1) = 1.8250e-06, den 9863185         OK  1.8250e-06 enc=(6.0, 24.0)
+[0097] SELFTEST       pas_signature(k=-1) = 3.8020e-09, den 9863185        OK  3.8020e-09 enc=(0.0125, 0.05)
+[0098] SELFTEST       comptes des motifs runs/m10_results.json = {'6.03e-07': 64} OK  {'6.03e-07': 64}
+[0099] SELFTEST       comptes des motifs runs/m11_results.json = {'6.03e-07': 26, '1.82e-06': 6} OK  {'6.03e-07': 26, '1.82e-06': 6}
+[0100] SELFTEST       comptes des motifs runs/m12_results.json = {'6.03e-07': 70, '1.82e-06': 4} OK  {'6.03e-07': 70, '1.82e-06': 4}
+[0101] SELFTEST       comptes des motifs runs/m14_results.json = {'6.03e-07': 37, '1.82e-06': 1} OK  {'1.82e-06': 1, '6.03e-07': 37}
+[0102] SELFTEST       comptes des motifs runs/m15_results.json = {'6.03e-07': 28, '1.82e-06': 8} OK  {'1.82e-06': 8, '6.03e-07': 28}
+[0103] SELFTEST       application d'etat, aller-retour w2=1.73             OK  
+[0104] SELFTEST       application d'etat, aller-retour w2=2.27             OK  
+[0105] SELFTEST       application d'etat, aller-retour w2=2.80             OK  
+[0106] SELFTEST       ajustements I/II retrouvent alpha, A, t* sur l'ansatz p=4 OK  POINT_FIXE alpha=2.00000000 t*=3.00000000
+[0107] SELFTEST       ajustements I/II retrouvent alpha, A, t* sur l'ansatz p=5 OK  POINT_FIXE alpha=1.33333333 t*=3.00000000
+[0108] SELFTEST       ajustements I/II retrouvent alpha, A, t* sur l'ansatz p=7 OK  POINT_FIXE alpha=0.80000000 t*=3.00000000
+[0109] SELFTEST       chercher_seuil transcrit == depose (9 thetas, au bit, motifs) OK  9/9
+[0110] SELFTEST       Duffing standard : cn(0)=1, x0(formule)=1.000000000000 OK  
+[0111] SELFTEST       pas_rk4 d'ordre 4 sur l'oscillateur harmonique       OK  p_obs=4.013
+[0112] SELFTEST       tol_ordre(alpha_4) sous le plafond 1/4               OK  0.2003
+[0113] SELFTEST       tol_ordre(alpha_5) sous le plafond 1/4               OK  0.1848
+[0114] SELFTEST       tol_ordre(alpha_7) sous le plafond 1/4               OK  0.1720
+[0115] SELFTEST       ecrire_ascii refuse un octet >= 128                  OK  
+[0116] SELFTEST       carte : neuf s* concordent avec la table 4.2 (regle 11) OK  ecart max 4.4e-13
+[0117] L-selftest     s=2.406602 sgn=+1 attendu EXPLOSE : instrument True (pas 2044), moteur True ; indice identique True -> OK
+[0118] SELFTEST       phase 1 transcrite == moteur (booleen ET indice) a p=4 w2=1.73 s=1.20 s* OK  indice 2044
+[0119] SELFTEST       v5 : C(p) = 7.7143 / 8.3158 / 8.8966 (pleine precision), lecture_5_4 trois branches, forme canonique -- PASSENT
+[0120] SELFTEST       v8 : ecart_ulp en PAS REPRESENTABLES (4 pas sous 1.0 = 4.0, D-I-9) ; BORNE_ULP unique = 2
+[0121] SELFTEST       bilan 103/103
+[0122] FIN            0.9 s

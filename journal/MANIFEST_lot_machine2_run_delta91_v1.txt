@@ -1,0 +1,35 @@
+MANIFESTE lot_machine2_2026-09-13_run_delta91_v1 -- LE RUN DE LA CONSTANTE A EST FAIT (gel v7, delta' = 1/44100, instrument v12 2c4345515bb02325) : VOLET T "REGLAGE QUALIFIE (bonus T-3 retire)" ; VOLET A "NON CONCLUANT DE PLANCHER" ; P-alpha VRAIE AUX TROIS DEGRES ; LA TENAILLE EST FERMEE D'UN FACTEUR 17.5 ; DEUX DEFAUTS D'INSTRUMENT QU'AUCUN PRE-VOL NE POUVAIT VOIR (D-v10-1 -> v11 a9f3fa1d639107d2 ; D-v11-1 -> v12) ; machine 2, classe 1
+RECEPTION de son lot 18e4fad746ece324 (9/9) : contreseing du v7 et certification du v10 PRIS ; sa jambe inter-machines de N-70 v3 rejouee ici avec son JSON : memes comptes (238/3/4/2).
+bilans LUS : selftest v12 103/103 ; banc qui tue 56/56 ; mesure D-v10-1 11/11 ; mesure D-v11-1 20/20 ; lecture du run 35/35. 9bis du run : 0 ecart. Les deux volets au MEME reglage, porte lue par empreinte.
+CHIFFRES DU RUN : e/seuil de 1.433 a 5.750 aux neuf cellules ; alpha = 4/(p-2) a 2.77e-06, 8.06e-07, 4.50e-07 (p = 4, 5, 7) ; P-A vraie a p = 5 et 7, fausse a p = 4 (rapport 1.13) SOUS TOLERANCE DE MODELE ; dispersion/plancher 0.869, 0.208, 0.042 ; delta' requis par l'instrument < 9.4867e-07 (p = 7) contre INF = 1.659261e-05 exige par le volet T.
+garde chk constante (machine 1, be6bb447da1f4363) sur mes feuilles, AVANT emission : [PASSE] 0 appel(s) chk a condition constante sur 5 feuille(s)
+FORME : .log et .json tels quels (les .log de ce poste sont CRLF ; deux empreintes, deux tailles) ; .md et .py ASCII/LF. PB-1 : v10 et v11 conservees, gel v7 non touche (le pin ne bouge pas). Aucun numero de serie pris ; aucun delta recommande ; rien de tranche pour l'operateur.
+colonnes : empreinte_B (sha256 NFC+LF, 16 hex)  empreinte_brute  octets_B  octets_bruts  fichier
+Le CANON du lot est l'empreinte B de CE manifeste ; il ne se porte pas lui-meme.
+
+da5fa129b97202c9 da5fa129b97202c9      9249      9249  POUR_MACHINE1_run_delta91_machine2_v1.md
+a9f3fa1d639107d2 a9f3fa1d639107d2    195478    195478  banc_qualification_machine1_v11.py
+6a4fdbcb0bb8b739 6a4fdbcb0bb8b739      4404      4404  construction_banc_v11_machine2_v1.py
+2c4345515bb02325 2c4345515bb02325    196016    196016  banc_qualification_machine1_v12.py
+7a4b32396afef6f0 7a4b32396afef6f0      4002      4002  construction_banc_v12_machine2_v1.py
+9fdf15d88d286df2 9fdf15d88d286df2      8128      8128  mesure_9bis_tuple_machine2_v1.py
+b390fa1dd9b461c4 07b55ec7228061ae      3728      3771  mesure_9bis_tuple_machine2_v1.log
+ff8ac461d6771ddb ff8ac461d6771ddb      8329      8329  mesure_jumelle_machine2_v1.py
+f79d7e0bcda80ba7 6c1716176a7fb476      4655      4706  mesure_jumelle_machine2_v1.log
+f6ad808e266c9470 f6ad808e266c9470     12089     12089  lecture_run_delta91_machine2_v1.py
+ad8eaff3aded648a 86315c7c6c9c592f      7779      7864  lecture_run_delta91_machine2_v1.log
+9ee7f4db92c5ede4 a5939389a0fa8e50     11337     11459  m2_v12_selftest.log
+012f371dbd7f886b 17b9e279cf3ff68d     24810     25014  m2_v12_banc.log
+9e1bbc0cd5105254 6260bbe60613152e     18208     18317  m2_run_temoin_v12.log
+1f229f46d4c389ef d202c690e8f3d974     29677     29843  m2_run_alpha_v12.log
+8d4c76d38726baf1 8d4c76d38726baf1     28360     28360  out_run_delta91/temoin_v12/resultats_temoin.json
+18f15e42d8ba4e56 18f15e42d8ba4e56     18011     18011  out_run_delta91/temoin_v12/journal_temoin.txt
+039c85b4ea4c11d7 039c85b4ea4c11d7       444       444  out_run_delta91/temoin_v12/MANIFEST.sha256
+edec88c7a9f3faf2 edec88c7a9f3faf2    163658    163658  out_run_delta91/alpha_v12/resultats_alpha.json
+2891dc88d67be9c9 2891dc88d67be9c9     29489     29489  out_run_delta91/alpha_v12/journal_alpha.txt
+adba792cc0b76e59 adba792cc0b76e59      6750      6750  out_run_delta91/alpha_v12/MANIFEST.sha256
+40d5429fa8d7be34 bd75db611e6d6414     18278     18387  m2_run_temoin_delta91.log
+8cf6e50b26174997 6ff5910b9167539f     28022     28188  m2_run_alpha_delta91_v11.log
+
+entrants : son lot 18e4fad746ece324 (contreseing v7, certification v10) ; gel v7 a2b8463372e1f906 ; banc v10 f65eccbfcdea91c1 ; N-70 v3 bbd23a2ee3421da4 ; depot 9bis c4310e33da6b9759 et run 85 du registre (clone e68341f)
+pieces : 23 (compte etabli APRES le dernier ajout)

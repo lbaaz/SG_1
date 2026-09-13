@@ -1,0 +1,43 @@
+
+1. LE VERDICT, ET CE QUE LE 9bis A DIT
+  [PASSE] le run rend NON CONCLUANT D INSTRUMENT, prononce par le  9bis : ecart sur cle du perimetre, prononce AVANT toute lecture de ver
+  [PASSE] la custody du 9bis est JOUEE et concordante (4/4)        JOUE : embarquee == registre 4/4 (fichier 644240dc894c2733)
+  [PASSE] le depot 9bis charge est bien c4310e33da6b9759           c4310e33da6b9759
+  [PASSE] 9 ecarts, tous dans /T1 et /T1b                          T1, T1b
+
+2. JAMBE (1) -- CHAQUE ECART : DES NOMBRES, OU DEUX TYPES ?
+   /T1/A/etat                         (...) contre [...]  contenu IDENTIQUE
+   /T1/A/pics[0]                      (...) contre [...]  contenu IDENTIQUE
+   /T1/A/pics[1]                      (...) contre [...]  contenu IDENTIQUE
+   /T1/B/etat                         (...) contre [...]  contenu IDENTIQUE
+   /T1/B/pics[0]                      (...) contre [...]  contenu IDENTIQUE
+   /T1/B/pics[1]                      (...) contre [...]  contenu IDENTIQUE
+   /T1b/recherches/a/encadrement      (...) contre [...]  contenu IDENTIQUE
+   /T1b/recherches/b/encadrement      (...) contre [...]  contenu IDENTIQUE
+   /T1b/recherches/c/encadrement      (...) contre [...]  contenu IDENTIQUE
+  [PASSE] aucun des 9 ecarts n oppose des nombres                  0 ecart de valeur
+  [PASSE] les 9 opposent une parenthese (tuple, memoire) a un croc 9/9
+  [ note] FAIT VERSE CONTRE MOI, et il est la meilleure preuve du  la premiere version de CETTE feuille ecrivait x == ('(', '[') ou x est une LISTE issue d un deballage : elle a MORDU sur son propre controle, par la meme faute exactement -- une liste comparee a un tuple. Le defaut n est pas une etourderie de l instrument : c est un piege de la langue, et il attrape aussi qui le mesure.
+
+3. JAMBE (2) -- LE JSON DE SORTIE CONTRE LA REFERENCE, MEME MARCHE
+  [PASSE] le JSON du run, contre la reference, par la MEME marche  0 ecart sur /T1, /T1b, /T3a, /T3b
+  [ note] ce que cela veut dire                                    la mesure EST reproduite sur le perimetre 9bis ; ce qui ne l est pas, c est la comparaison
+
+4. JAMBE (3) -- LE CONTROLE EST-IL SATISFIABLE PAR UN RUN QUELCONQUE ?
+  [PASSE] les 9 chemins portent, DANS LE JSON, la meme valeur des  9/9
+  [PASSE] un fichier JSON ne peut pas porter de tuple : le control json.dumps rend une liste ; aucune reference JSON ne rendra jamais un tuple
+  [ note] portee exacte                                            tout run dont une cle du perimetre vaut un tuple en memoire MORD, quelle que soit sa mesure
+  [ note] famille                                                  meme defaut que le controle M du gel v4 : une etiquette qu aucun objet ne peut satisfaire
+
+5. CE QUE LA PHYSIQUE DU RUN A RENDU, MALGRE LE VERDICT
+  [PASSE] les 9 cellules de T-2 rendent W-pas PASSE et W-plancher  9/9
+  [PASSE] W-comptes : comptes + sautes == attendus                 PASSE
+  [ note] les neuf ratios e/seuil                                  4|1.73 3.560 4|2.27 4.770 4|2.80 5.750 5|1.73 2.200 5|2.27 2.925 5|2.80 3.383 7|1.73 1.433 7|2.27 1.871 7|2.80 1.975
+  [ note] les neuf p_obs                                           4|1.73 3.9368 4|2.27 3.9484 4|2.80 3.8751 5|1.73 3.9097 5|2.27 3.9345 5|2.80 3.9235 7|1.73 3.8646 7|2.27 3.9151 7|2.80 4.0353
+  [ note] ce que le verdict serait sans le 9bis                    a re-derive par la cascade, apres correction de l instrument
+
+=====================================================================
+BILAN : 11/11 controles PASSENT
+D-v10-1 : le 9bis compare des objets Python a une reference JSON ; 9 cles du perimetre
+valent un tuple en memoire et une liste au JSON : le controle MORD A TOUT RUN.
+=====================================================================

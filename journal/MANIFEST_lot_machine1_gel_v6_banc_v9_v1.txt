@@ -1,0 +1,25 @@
+MANIFESTE lot_machine1_2026-09-12_gel_v6_banc_v9_v1 -- GEL constante A v6 (847bb3bb2dd19f87) ET BANC v9 (9b3ec0b0c4978158) : LE REGLAGE EST PRIS AU PRE-VOL SUR L'ECHELLE ENTIERE, n = 21, delta' = 1/44100 ; PRE-VOL TEMOIN BRANCHE 5 ; UN POINT OUVERT SUR L'INSTRUMENT (D-v9-1) ; machine 1, classe 3
+Le detail est dans la note ; le gel porte ses hunks en tete ; le script de construction les applique (v5 2c0d2dc86054838c et v8 4d8882a2223a5c74 en arguments, jamais edites) et re-derive toutes les tables. Selftest v9 103/103. Le balayage (7 pre-vols, feuille jointe) fonde le choix de n. Aucun run ; aucun verdict de gel ; rien de tranche pour l'operateur hors son veto sur n = 21.
+colonnes : empreinte_B (sha256 NFC+LF, 16 hex)  empreinte_brute  octets_B  octets_bruts  fichier
+Le CANON du lot est l'empreinte B de CE manifeste ; il ne se porte pas lui-meme.
+
+6c084093d31c8207 6c084093d31c8207     5527     5527  note_machine1_gel_v6_banc_v9_v1.md
+847bb3bb2dd19f87 847bb3bb2dd19f87    40158    40158  constante_A_pre_enregistrement_v6.md
+9b3ec0b0c4978158 9b3ec0b0c4978158   193875   193875  banc_qualification_machine1_v9.py
+6c941ad464ce5ba4 6c941ad464ce5ba4    29803    29803  construction_gel_v6_et_banc_v9_machine1_v1.py
+73653cc4e3f9a23e 73653cc4e3f9a23e     1509     1509  construction_gel_v6_et_banc_v9_machine1_v1.log
+91faf0fe06ef05c0 91faf0fe06ef05c0    11389    11389  selftest_v9_machine1.log
+1d58bf59b01f050b 1d58bf59b01f050b    15142    15142  prevol_temoin_v9_n21_machine1.log
+4882716fac87f650 4882716fac87f650     1120     1120  balayage_resume.txt
+3dd84d62fc9cd3c1 3dd84d62fc9cd3c1      853      853  balayage/balayage_prevol_echelle_machine1_v1.sh
+1331d3e928fb738d 1331d3e928fb738d    15178    15178  balayage/prevol_temoin_v9_n18_machine1.log
+fd5ded5f3168d8c7 fd5ded5f3168d8c7    15178    15178  balayage/prevol_temoin_v9_n19_machine1.log
+ab6d012e7a0f8d90 ab6d012e7a0f8d90    15304    15304  balayage/prevol_temoin_v9_n20_machine1.log
+1d58bf59b01f050b 1d58bf59b01f050b    15142    15142  balayage/prevol_temoin_v9_n21_machine1.log
+38796e429fb28812 38796e429fb28812    15107    15107  balayage/prevol_temoin_v9_n22_machine1.log
+dcde3df6077e7fa7 dcde3df6077e7fa7      120      120  balayage/prevol_temoin_v9_n23_machine1.log
+9c7c5c8cffeb4999 9c7c5c8cffeb4999    15134    15134  balayage/prevol_temoin_v9_n24_machine1.log
+
+entrants : v5 2c0d2dc86054838c ; v8 4d8882a2223a5c74 ; tenaille v3 4353c80e60cef87c ; clone frais e68341f ; run 85 (dispersions, A_p, c_pl)
+pieces : 16 (compte etabli APRES le dernier ajout)
+garde de reception : verifiees + absentes + ecarts == 16
