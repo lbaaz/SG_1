@@ -1,0 +1,84 @@
+RELECTURE MACHINE 2 DES NOMBRES DE L ACTE DELTA 92, AUX SOURCES
+python 3.11.9 ; relecture_nombres_delta92_machine2_v1.py
+acte : journal_delta_nn_constante_A_second_ordre_v1.md  (convention B 0a526d04fd9a8bda, 25705 octets)
+
+JAMBE 1 -- LES CANONS CITES, RESOLUS DANS CE QUE JE DETIENS
+  [note] 1.0 empreintes distinctes citees par l acte -- 73
+  [note] 1.1 resolues chez moi -- 73 / 73
+  [note] 1.2 non resolues -- 0 -- ce sont les pieces que machine 1 detient seule, plus les miennes qu elle cite sans que je les aie sous ce nom ; enumerees ci-dessus
+  [chk PASSE] 1.3 : TOUTES les pieces du run et de mes certifications que l acte cite se resolvent
+  [chk PASSE] 1.4 : le gel v9 et l instrument v15 cites sont bien les certifies
+  [chk PASSE] 1.5 : PB-1, l acte n edite rien -- les pieces citees que je detiens portent leur canon
+
+JAMBE 2 -- LES NOMBRES, RELUS DANS MES SOURCES
+
+2.1 LE RUN : comptes, etages, durees, verdicts
+  [chk PASSE] 2.1a : comptes 108 = 18 x 4 + 9 + 27 -- 108
+  [chk PASSE] 2.1b : plan 18 cellules, comme l acte l ecrit -- 18
+  [chk PASSE] 2.1b : G_dt 18 cellules, comme l acte l ecrit -- 18
+  [chk PASSE] 2.1b : G_dt4 18 cellules, comme l acte l ecrit -- 18
+  [chk PASSE] 2.1c : duree du volet temoin = 118.0 s -- mon journal rend 118.0 s
+  [chk PASSE] 2.1c : duree du volet alpha = 252.3 s -- mon journal rend 252.3 s
+  [chk PASSE] 2.1d : le verdict temoin de l acte est le mien, mot pour mot -- REGLAGE QUALIFIE (bonus T-3 retire) -- branche 6 : T-3 mord seul (W-in
+  [chk PASSE] 2.1e : le verdict alpha de l acte est le mien, mot pour mot -- VERIFIE -- branche 5 : P-alpha les six par degre ET P-A aux trois degr
+
+2.2 LA TABLE DE nn.5 : S(p), planchers, rapports, contraste v14
+  [chk PASSE] 2.2a p=4 : S(p) de l acte == le mien -- 4.467899e-09
+  [chk PASSE] 2.2b p=4 : le plancher de l acte == celui que JE re-derive -- 5.194891e-14
+  [chk PASSE] 2.2c p=4 : le rapport tol/plancher de l acte == le mien -- 8.60e+04
+  [chk PASSE] 2.2d p=4 : G-plancher corrige silencieux et P-A True, comme l acte l ecrit -- mord False, P-A True
+  [chk PASSE] 2.2e p=4 : le contraste v14 de l acte == le mien (dispersion / plancher) -- 1.0086e-06 / 1.5432e-06
+  [chk PASSE] 2.2f p=4 : et sous le v14 G-plancher aurait MORDU -- True
+  [chk PASSE] 2.2a p=5 : S(p) de l acte == le mien -- 3.715212e-09
+  [chk PASSE] 2.2b p=5 : le plancher de l acte == celui que JE re-derive -- 1.223649e-13
+  [chk PASSE] 2.2c p=5 : le rapport tol/plancher de l acte == le mien -- 3.04e+04
+  [chk PASSE] 2.2d p=5 : G-plancher corrige silencieux et P-A True, comme l acte l ecrit -- mord False, P-A True
+  [chk PASSE] 2.2e p=5 : le contraste v14 de l acte == le mien (dispersion / plancher) -- 3.2839e-07 / 2.1368e-06
+  [chk PASSE] 2.2f p=5 : et sous le v14 G-plancher aurait MORDU -- True
+  [chk PASSE] 2.2a p=7 : S(p) de l acte == le mien -- 3.518211e-09
+  [chk PASSE] 2.2b p=7 : le plancher de l acte == celui que JE re-derive -- 3.181768e-13
+  [chk PASSE] 2.2c p=7 : le rapport tol/plancher de l acte == le mien -- 1.11e+04
+  [chk PASSE] 2.2d p=7 : G-plancher corrige silencieux et P-A True, comme l acte l ecrit -- mord False, P-A True
+  [chk PASSE] 2.2e p=7 : le contraste v14 de l acte == le mien (dispersion / plancher) -- 8.6748e-08 / 2.9008e-06
+  [chk PASSE] 2.2f p=7 : et sous le v14 G-plancher aurait MORDU -- True
+
+2.3 LES BORNES DE q PAR DEGRE (nn.5)
+  [chk PASSE] 2.3 p=4 : q entre 3.792 et 3.964 -- 3.792 a 3.964
+  [chk PASSE] 2.3 p=5 : q entre 3.715 et 4.116 -- 3.715 a 4.116
+  [chk PASSE] 2.3 p=7 : q entre 3.779 et 4.050 -- 3.779 a 4.050
+  [chk PASSE] 2.3d : dix-huit points lus sur dix-huit, aucun hors [3, 5]
+
+2.4 LES DEUX PREDICTIONS (nn.6)
+  [chk PASSE] 2.4a : (a) TIENT a p = 4 et p = 5, NON a p = 7 -- {'4': 'TIENT', '5': 'TIENT', '7': 'NON'}
+  [chk PASSE] 2.4b : (b) tient 6/6 -- 6
+  [chk PASSE] 2.4c : les six ratios de (a) a p = 7 que l acte ecrit sont les miens -- 0.867 0.284 0.963 1.234 1.089 0.881
+  [chk PASSE] 2.4d : le facteur d amplitude et le decalage de phase du transport -- 1.4255 et -0.4465 rad
+
+2.5 LA DERIVATION (nn.2) -- EN EXACT, CHEZ MOI
+  [chk PASSE] 2.5a p=4 : c1 tau_dom^2 / plancher = 1/3, exact -- 1/3
+  [chk PASSE] 2.5a p=5 : c1 tau_dom^2 / plancher = 65/261, exact -- 65/261
+  [chk PASSE] 2.5a p=7 : c1 tau_dom^2 / plancher = 133/795, exact -- 133/795
+  [chk PASSE] 2.5b p=4 : Re beta = alpha + 3/2 = 7/2 -- 7/2
+  [chk PASSE] 2.5b p=5 : Re beta = alpha + 3/2 = 17/6 -- 17/6
+  [chk PASSE] 2.5b p=7 : Re beta = alpha + 3/2 = 23/10 -- 23/10
+  [chk PASSE] 2.5c p=4 : frequence en ln tau = 4.213075 -- 4.213075
+  [chk PASSE] 2.5c p=5 : frequence en ln tau = 3.492054 -- 3.492054
+  [chk PASSE] 2.5c p=7 : frequence en ln tau = 2.896550 -- 2.896550
+  [chk PASSE] 2.5d : c1 ET c2 exacts aux neuf (p, w2) contre ma derivation
+
+2.6 Q5 ET proj4
+  [chk PASSE] 2.6a : a p = 7, M2 reduit la somme des carres de 2.508e-07 a 4.378e-09 -- M1 2.5080e-07 -> M2 4.3775e-09 (x 57.3)
+  [chk PASSE] 2.6b : le facteur est bien x 57 -- 57.3
+  [chk PASSE] 2.6c : une frequence fausse ne reduit que de x 2.1 -- 2.10
+  [chk PASSE] 2.6d : proj4 de 0.2195 a 0.2238, comme l acte l ecrit -- ['0.219452', '0.223764']
+  [chk PASSE] 2.6e : proj2 de l instrument 0.6727 (0.6638 a un demi-pas)
+
+2.7 CE QUE L ACTE DIT DE MES PROPRES PIECES
+  [chk PASSE] 2.7a : ma certification du v9/v15 -- 69 controles
+  [chk PASSE] 2.7b : ma certification du run -- 45 controles, 0 morsure
+  [chk PASSE] 2.7c : selftest 103/103 et banc 58/58
+  [chk PASSE] 2.7d : l acte reprend MA consigne du facteur ~1.4 (transport optimiste)
+  [chk PASSE] 2.7e : l acte ecrit que A n est PAS mesuree
+  [chk PASSE] 2.7f : E18 -- aucun numero pris ; aucune regle adoptee
+
+BILAN : 58 controles, 0 mordent

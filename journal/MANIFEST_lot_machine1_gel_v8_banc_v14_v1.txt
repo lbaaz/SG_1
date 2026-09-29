@@ -1,0 +1,22 @@
+MANIFESTE lot_machine1_2026-09-18_gel_v8_banc_v14_v1 -- GEL constante A v8 (800fc6a9a8e56e49) ET INSTRUMENT v14 (dc91676c640d4323, pin v8 verifie) : LE TEST EN AVEUGLE DU PREMIER ORDRE A n = 18 (levier 441/324), MODELES M1/M2, RICHARDSON A ORDRE MESURE (etage dt/4), DEUX PREDICTIONS DEPOSEES AVANT LE RUN ; feuille de lecture deposee avec le gel ; machine 1, classe 3 (gel : classe 1 a la certification m2)
+Construit le 13/09, empaquete le 18/09 ; rien n'a change entre-temps (memes canons). Sur machine 1, levier X86_V4, sous le pin final : selftest 103/103 ; banc qui tue 103/103 ; pre-vol temoin "REGLAGE QUALIFIE -- branche 5 : T-1 R =" ; pre-vol alpha "LIEN NON ETABLI (9/27) -- VERIFIE -- bra". Base des modes libres (n = 21, q = 4 suppose) : lecture_v8 en mode --base sur les series BOCAL4 du 91, 75/75, reproduit la table S de Q5 au chiffre.
+A certifier par machine 2 en un passage : gel par diff (hunks enumeres par le script), v14 par construction depuis le v13, selftest, banc, pre-vols a n = 18 sur BOCAL4, base rejouee ; puis le run sous v14 et la lecture en mode --predictions des deux cotes. Aucun run n'a ete joue par machine 1 : les predictions restent aveugles.
+PB-1 : v7 (a2b8463372e1f906) et v13 (1ac295648490a86c) non edites. Aucun numero pris ; aucun delta recommande.
+colonnes : empreinte_B (sha256 NFC+LF, 16 hex)  empreinte_brute  octets_B  octets_bruts  fichier
+Le CANON du lot est l'empreinte B de CE manifeste ; il ne se porte pas lui-meme.
+
+61fd0c84ee93e005 61fd0c84ee93e005     3281     3281  note_machine1_gel_v8_banc_v14_v1.md
+800fc6a9a8e56e49 800fc6a9a8e56e49    46050    46050  constante_A_pre_enregistrement_v8.md
+dc91676c640d4323 dc91676c640d4323   197859   197859  banc_qualification_machine1_v14.py
+faf29c378ab88dda faf29c378ab88dda    28364    28364  construction_gel_v8_banc_v14_machine1_v1.py
+4f1679c48f68aa6f 4f1679c48f68aa6f    13897    13897  lecture_v8_machine1_v1.py
+79099ef4ea51adf6 79099ef4ea51adf6     5882     5882  base_modes_libres_n21_machine1_v1.json
+72a1873db4a7cb06 72a1873db4a7cb06     9098     9098  lecture_v8_base_n21_m1.log
+1aac717f04e4195b 1aac717f04e4195b    11368    11368  m1_v14_selftest.log
+8d98a63c4c9f590c 8d98a63c4c9f590c    24846    24846  m1_v14_banc.log
+eca5bb460a605ceb eca5bb460a605ceb    17894    17894  m1_v14_prevol_temoin.log
+b45eddf80bd621ce b45eddf80bd621ce    34025    34025  m1_v14_prevol_alpha.log
+
+entrants : gel v7 a2b8463372e1f906 ; banc v13 1ac295648490a86c ; derivation second ordre b70fca94d72822ad ; Q5 4634a795a008a562 et les series BOCAL4 du 91 (lot m2 4bb9da845608a7dd) ; clone frais 729f9a9
+pieces : 11 (compte etabli APRES le dernier ajout)
+garde de reception : verifiees + absentes + ecarts == 11

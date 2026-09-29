@@ -1,0 +1,351 @@
+[0001] DEBUT          banc_qualification_machine1_v15  --prevol --mode temoin --registre C:/Users/bazil/AppData/Local/Temp/reg729 --sortie out_prevol_v15_temoin  UTC 2026-09-21T21:19:28Z
+[0002] FILES          E18 : aucun numero pris ; maximum cite E42, N-69, D-M17-45 (registre 37ad1b6, pieces .md/.txt)
+[0003] N-59           banc_qualification_machine1_v15.py  206641 o  sha256 brut a1553f6eb5cc74b8  convention B a1553f6eb5cc74b8  ASCII/LF True
+[0004] E19            gels/temoin_negatif_pre_enregistrement_v11.md  a2e7ef3e237c5acf  72281 o  attendu a2e7ef3e237c5acf 72281  -> CONCORDANT
+[0005] E19            gels/constante_A_pre_enregistrement_v9.md  b515abc5a6da73c5  50206 o  attendu b515abc5a6da73c5 50206  -> CONCORDANT
+[0006] E19            gels/temoin_negatif_pre_enregistrement_v7.md  8b083e9f109b5a8e  39750 o  attendu 8b083e9f109b5a8e 39750  -> CONCORDANT
+[0007] E19            gels/alpha_pre_enregistrement_v5.md  045c2435aaf623ce  28998 o  attendu 045c2435aaf623ce 28998  -> CONCORDANT
+[0008] E19            journal/note_machine1_certification_temoin_v11_v2.md  7fc5f2412b99ad50  attendu 7fc5f2412b99ad50  -> CONCORDANT
+[0009] E19            journal/note_machine2_certification_constante_A_v4_v1.md  9e6376f936708077  attendu 9e6376f936708077  -> CONCORDANT
+[0010] E19            journal/note_machine1_certification_gels_v7_v4.md  6b2425dbf906205b  attendu 6b2425dbf906205b  -> CONCORDANT
+[0011] E19            journal/note_machine1_certification_gel_alpha_v5.md  fe43f7c4d142bcdb  attendu fe43f7c4d142bcdb  -> CONCORDANT
+[0012] CUSTODY        scripts/m9_replication_v1.py  sha256 brut c8ed357b120352c4...  36325 o  -> CONCORDANT
+[0013] CUSTODY        runs/m12_results.json  sha256 brut fa109da92e582520...  130856 o  -> CONCORDANT
+[0014] D-M17-58       garde de signe au pre-vol : table_factice[(p, w2, sgn)] == sF, 9 points -> PASSE
+[0015] MOTEUR         scripts/m9_replication_v1.py charge, sha256 c8ed357b120352c4..., gel jumeau M9 v2 conforme, P=5 T_MAX=400.0 CAP=10000.0
+[0016] PREVOL         moteur FACTICE substitue (integrer, chercher_seuil) apres verification de custody
+[0017] PREVOL         BANNIERE : PRE-VOL, sorties dans out_prevol_v15_temoin, aucune mesure n'existe ici (N-62)
+[0018] COMPTE         attendus (forme derivee) : {'T1': 4, 'T1b': 3, 'T2': 18, 'T2a': 1, 'T2b': 3, 'T3a': 0, 'T3b': 3, 'W_bascule': 9} = 41
+[0019] W-transcr.     controles symboliques 7 (ii) : 22/22 PASSE
+[0020] W-transcr.     algorithme transcrit contre chercher_seuil DEPOSE (integrer synthetique) : 9/9 PASSE
+[0021] W-transcr.     champ de forces (2.11), tirage declare : TIRAGE a8905b9b501b5601 (bit-reproductible, opposable) ; CHAMP f7f8be507eb5e9cb (NON bit-reproductible entre machines -- se compare sur les NOMBRES, D-I-5)
+[0022] W-transcr.     SUR LES NOMBRES : A COMPARER (seconde transcription non fournie ; le fichier est livre)
+[0023] T1-A           t_c(CAP_0=10) = 20.300000 ; PREDICTION t_c(CAP_4=160) = 324.800000 ; T_MAX = c_T x = 649.600000 (consigne AVANT verification)
+[0024] T1-A           t_c = ['20.3000', '39.7000', '80.3000', '159.7000', '320.3000']
+[0025] T1-A           y = t_c/CAP = ['2.03000', '1.98500', '2.00750', '1.99625', '2.00188'] ; R = ['1.95567', '2.02267', '1.98879', '2.00564'] ; disp = 0.02245 ; tol_R = 0.04491 ; tol_R/(q-1) = 0.04491 (plafond 0.2500) ; fenetre_q=True fenetre_1=False saturation=False
+[0026] T3a-A          derive relative sur le flot a dt=0.006 (108267 pas) : H1 1.000e-06 (H1_0=2), N 1.000e-06 (N_0=0.75)
+[0027] T3a-A          flot a dt/2 (216533 pas, W-integrales seule) : H1 6.250e-08, N 6.250e-08 ; omega_max=2.0000 b=0.01200 tol_int=0.00858 (plafond 0.25) ; q_int H1 = 4.0, N = 4.0 -> W-integrales PASSE
+[0028] T1-B           t_c(CAP_0=10) = 20.300000 ; PREDICTION t_c(CAP_4=160) = 324.800000 ; T_MAX = c_T x = 649.600000 (consigne AVANT verification)
+[0029] T1-B           t_c = ['20.3000', '39.7000', '80.3000', '159.7000', '320.3000']
+[0030] T1-B           y = t_c/CAP = ['2.03000', '1.98500', '2.00750', '1.99625', '2.00188'] ; R = ['1.95567', '2.02267', '1.98879', '2.00564'] ; disp = 0.02245 ; tol_R = 0.04491 ; tol_R/(q-1) = 0.04491 (plafond 0.2500) ; fenetre_q=True fenetre_1=False saturation=False
+[0031] T3a-B          derive relative sur le flot a dt=0.006 (108267 pas) : H1 1.000e-06 (H1_0=2), N 1.000e-06 (N_0=0.75)
+[0032] T3a-B          flot a dt/2 (216533 pas, W-integrales seule) : H1 6.250e-08, N 6.250e-08 ; omega_max=3.6056 b=0.02163 tol_int=0.01536 (plafond 0.25) ; q_int H1 = 4.0, N = 4.0 -> W-integrales PASSE
+[0033] T1b-a          CAP=100 T_MAX=200 -> seuil=0.9765628546965307 motif=OK|pas=6.03e-07 k=0 ; W-transcription (iii) PASSE : pas=6.03e-07 attendu(k=0)=6.03e-07 den=9863185 encadrement=[0.05, 6] seuil=0.9765628546965307 coherent=True
+[0034] T1b-b          CAP=200 T_MAX=200 -> seuil=1.9531251619025702 motif=OK|pas=6.03e-07 k=0 ; W-transcription (iii) PASSE : pas=6.03e-07 attendu(k=0)=6.03e-07 den=9863185 encadrement=[0.05, 6] seuil=1.9531251619025702 coherent=True
+[0035] T1b-c          CAP=100 T_MAX=400 -> seuil=0.48828170109351093 motif=OK|pas=6.03e-07 k=0 ; W-transcription (iii) PASSE : pas=6.03e-07 attendu(k=0)=6.03e-07 den=9863185 encadrement=[0.05, 6] seuil=0.48828170109351093 coherent=True
+[0036] T1b            loi 1 : s*(qCAP,T)/s*(CAP,T) = 1.999999 (attendu q=2, tol 1.852e-06, plafond 0.250) ; loi 2 : s*(CAP,c_T T)/s*(CAP,T) = 0.500000 (attendu 1/c_T=0.500, tol 9.262e-07, plafond 0.125) ; regime LOIS ; k=0 partout True
+[0037] T2-4|1.73      e(dt2)=9.9026e-06 (380 pas) e(dt2/2)=6.6914e-07 (760) p_obs=3.8874 tol_ordre=0.2003 (plafond 0.25) W-pas PASSE ; 5.4 e/seuil=5.015 (C_eff=7.7143) W-plancher PASSE ; e/ln10=4.301e-06 conversion(plafond 2/15) True
+[0038] Wb-4|1.73      VOIE A : g1 17 pas de dt1 (depuis tau=2.0018e-01, k'=4) ; g2 334 pas de dt_2a (intervalle [318,341] OK) ; bascule 2b a tau_b=5.3175e-03 (err 3.19e-04) ; e_avec(dt2)=6.2096e-03 (x627.1 de e_sans, lecture D-t-19) W-bascule PASSE
+[0039] T2-4|2.27      e(dt2)=9.8793e-06 (380 pas) e(dt2/2)=6.5983e-07 (760) p_obs=3.9042 tol_ordre=0.2003 (plafond 0.25) W-pas PASSE ; 5.4 e/seuil=6.687 (C_eff=7.7143) W-plancher PASSE ; e/ln10=4.291e-06 conversion(plafond 2/15) True
+[0040] Wb-4|2.27      VOIE A : g1 14 pas de dt1 (depuis tau=1.6126e-01, k'=4) ; g2 325 pas de dt_2a (intervalle [313,341] OK) ; bascule 2b a tau_b=4.4677e-03 (err 7.34e-04) ; e_avec(dt2)=1.4506e-02 (x1468.3 de e_sans, lecture D-t-19) W-bascule PASSE
+[0041] T2-4|2.80      e(dt2)=9.8951e-06 (380 pas) e(dt2/2)=6.5591e-07 (760) p_obs=3.9152 tol_ordre=0.2003 (plafond 0.25) W-pas PASSE ; 5.4 e/seuil=7.621 (C_eff=7.7143) W-plancher PASSE ; e/ln10=4.297e-06 conversion(plafond 2/15) True
+[0042] Wb-4|2.80      VOIE A : g1 12 pas de dt1 (depuis tau=1.3453e-01, k'=4) ; g2 315 pas de dt_2a (intervalle [307,341] OK) ; bascule 2b a tau_b=3.6757e-03 (err 1.61e-03) ; e_avec(dt2)=3.1762e-02 (x3209.9 de e_sans, lecture D-t-19) W-bascule PASSE
+[0043] T2-5|1.73      e(dt2)=3.3653e-06 (380 pas) e(dt2/2)=2.1797e-07 (760) p_obs=3.9486 tol_ordre=0.1848 (plafond 0.25) W-pas PASSE ; 5.4 e/seuil=2.922 (C_eff=8.3158) W-plancher PASSE ; e/ln10=1.462e-06 conversion(plafond 2/15) True
+[0044] Wb-5|1.73      VOIE A : g1 17 pas de dt1 (depuis tau=2.0018e-01, k'=4) ; g2 334 pas de dt_2a (intervalle [318,341] OK) ; bascule 2b a tau_b=5.3175e-03 (err 1.07e-04) ; e_avec(dt2)=2.0916e-03 (x621.5 de e_sans, lecture D-t-19) W-bascule PASSE
+[0045] T2-5|2.27      e(dt2)=3.3658e-06 (380 pas) e(dt2/2)=2.2763e-07 (760) p_obs=3.8862 tol_ordre=0.1848 (plafond 0.25) W-pas PASSE ; 5.4 e/seuil=4.127 (C_eff=8.3158) W-plancher PASSE ; e/ln10=1.462e-06 conversion(plafond 2/15) True
+[0046] Wb-5|2.27      VOIE A : g1 14 pas de dt1 (depuis tau=1.6126e-01, k'=4) ; g2 325 pas de dt_2a (intervalle [313,341] OK) ; bascule 2b a tau_b=4.4677e-03 (err 2.48e-04) ; e_avec(dt2)=4.9393e-03 (x1467.5 de e_sans, lecture D-t-19) W-bascule PASSE
+[0047] T2-5|2.80      e(dt2)=3.3630e-06 (380 pas) e(dt2/2)=2.2169e-07 (760) p_obs=3.9232 tol_ordre=0.1848 (plafond 0.25) W-pas PASSE ; 5.4 e/seuil=4.608 (C_eff=8.3158) W-plancher PASSE ; e/ln10=1.461e-06 conversion(plafond 2/15) True
+[0048] Wb-5|2.80      VOIE A : g1 12 pas de dt1 (depuis tau=1.3453e-01, k'=4) ; g2 315 pas de dt_2a (intervalle [307,341] OK) ; bascule 2b a tau_b=3.6757e-03 (err 5.48e-04) ; e_avec(dt2)=1.0985e-02 (x3266.3 de e_sans, lecture D-t-19) W-bascule PASSE
+[0049] T2-7|1.73      e(dt2)=1.0461e-06 (380 pas) e(dt2/2)=6.8971e-08 (760) p_obs=3.9229 tol_ordre=0.1720 (plafond 0.25) W-pas PASSE ; 5.4 e/seuil=1.868 (C_eff=8.8966) W-plancher PASSE ; e/ln10=4.543e-07 conversion(plafond 2/15) True
+[0050] Wb-7|1.73      VOIE A : g1 17 pas de dt1 (depuis tau=2.0018e-01, k'=4) ; g2 334 pas de dt_2a (intervalle [318,341] OK) ; bascule 2b a tau_b=5.3175e-03 (err 3.32e-05) ; e_avec(dt2)=6.4778e-04 (x619.2 de e_sans, lecture D-t-19) W-bascule PASSE
+[0051] T2-7|2.27      e(dt2)=1.0479e-06 (380 pas) e(dt2/2)=6.6828e-08 (760) p_obs=3.9709 tol_ordre=0.1720 (plafond 0.25) W-pas PASSE ; 5.4 e/seuil=2.447 (C_eff=8.8966) W-plancher PASSE ; e/ln10=4.551e-07 conversion(plafond 2/15) True
+[0052] Wb-7|2.27      VOIE A : g1 14 pas de dt1 (depuis tau=1.6126e-01, k'=4) ; g2 325 pas de dt_2a (intervalle [313,341] OK) ; bascule 2b a tau_b=4.4677e-03 (err 7.73e-05) ; e_avec(dt2)=1.5406e-03 (x1470.2 de e_sans, lecture D-t-19) W-bascule PASSE
+[0053] T2-7|2.80      e(dt2)=1.0482e-06 (380 pas) e(dt2/2)=6.9430e-08 (760) p_obs=3.9163 tol_ordre=0.1720 (plafond 0.25) W-pas PASSE ; 5.4 e/seuil=2.914 (C_eff=8.8966) W-plancher PASSE ; e/ln10=4.552e-07 conversion(plafond 2/15) True
+[0054] Wb-7|2.80      VOIE A : g1 12 pas de dt1 (depuis tau=1.3453e-01, k'=4) ; g2 315 pas de dt_2a (intervalle [307,341] OK) ; bascule 2b a tau_b=3.6757e-03 (err 1.72e-04) ; e_avec(dt2)=3.4585e-03 (x3299.4 de e_sans, lecture D-t-19) W-bascule PASSE
+[0055] T2a            g=0 f=0 w2=2.27 horizon=6.2832 dt=0.006 : e = 2.0329e-09 -> PASSE
+[0056] T2b-p4         tronquee x''''=g x^(p-1), fenetre [k tau_dom, tau_CAP] a w2=2.27, 380 pas : e = 9.8910e-06 -> PASSE
+[0057] T2b-p5         tronquee x''''=g x^(p-1), fenetre [k tau_dom, tau_CAP] a w2=2.27, 380 pas : e = 3.3606e-06 -> PASSE
+[0058] T2b-p7         tronquee x''''=g x^(p-1), fenetre [k tau_dom, tau_CAP] a w2=2.27, 380 pas : e = 1.0487e-06 -> PASSE
+[0059] T3b-w1_lam1_x01 Omega^2=2 m=0.25 x0(formule)=1.000000000000 periode=4.768022, 10 periodes, 7947 pas : e = 4.3915e-09 -> PASSE
+[0060] T3b-w1_lam1_x02 Omega^2=5 m=0.4 x0(formule)=2.000000000000 periode=3.179723, 10 periodes, 5300 pas : e = 4.3504e-08 -> PASSE
+[0061] T3b-w1_lam1_x04 Omega^2=17 m=0.470588 x0(formule)=4.000000000000 periode=1.775291, 10 periodes, 2959 pas : e = 7.1435e-07 -> PASSE
+[0062] W-comptes      comptes 41 + sautes 0 == attendus 41 -> PASSE
+[0063] VERDICT        REGLAGE QUALIFIE -- branche 5 : T-1 R = q, T-1b les deux lois, T-2 p_obs = 4 sous la conversion
+[0064] PREVOL         verdict CONSIGNE, jamais asserte (D-I-1) : REGLAGE QUALIFIE -- branche 5 : T-1 R = q, T-1b les deux lois, T-2 p_obs = 4 sous la conversion
+[0065] BANC           banc des gardes rejoue a la fin du run (D-b-3) :
+[0066] T1b-a          CAP=100 T_MAX=200 -> seuil=0.9765628546965307 motif=OK|pas=6.03e-07 k=0 ; W-transcription (iii) PASSE : pas=6.03e-07 attendu(k=0)=6.03e-07 den=9863185 encadrement=[0.05, 6] seuil=0.9765628546965307 coherent=True
+[0067] T1b-b          CAP=200 T_MAX=200 -> seuil=1.9531251619025702 motif=OK|pas=6.03e-07 k=0 ; W-transcription (iii) PASSE : pas=6.03e-07 attendu(k=0)=6.03e-07 den=9863185 encadrement=[0.05, 6] seuil=1.9531251619025702 coherent=True
+[0068] T1b-c          CAP=100 T_MAX=400 -> seuil=0.48828170109351093 motif=OK|pas=6.03e-07 k=0 ; W-transcription (iii) PASSE : pas=6.03e-07 attendu(k=0)=6.03e-07 den=9863185 encadrement=[0.05, 6] seuil=0.48828170109351093 coherent=True
+[0069] BANC           G1 W-pas seule -> NON CONCLUANT D'INTEGRATEUR branche 4, motif la nomme seule MORD NON CONCLUANT D'INTEGRATEUR / branche 4 : W-pas x MORD
+[0070] BANC           G2 W-plancher seule -> NON CONCLUANT D'INTEGRATEUR branche 4, motif la nomme seule MORD NON CONCLUANT D'INTEGRATEUR / branche 4 : W-plancher x MORD
+[0071] BANC           G3 W-bascule seule -> NON CONCLUANT D'INTEGRATEUR branche 4, motif la nomme seule MORD NON CONCLUANT D'INTEGRATEUR / branche 4 : W-bascule x MORD
+[0072] BANC           G4 W-croissance (CAP_0 jamais franchi) -> NON CONCLUANT DE TEMOIN branche 2 MORD NON CONCLUANT DE TEMOIN / branche 2 : W-croissance MORD
+[0073] BANC           G5 3bis (i) R hors des deux fenetres, tol_R sous plafond -> NON CONCLUANT DE REGIME MORD R=['1.800', '2.222', '1.800', '2.222'] tol_R=0.208 NON CONCLUANT DE REGIME
+[0074] T1b-a          CAP=100 T_MAX=200 -> seuil=0.0976564162590482 motif=OK|pas=6.03e-07 k=0 ; W-transcription (iii) PASSE : pas=6.03e-07 attendu(k=0)=6.03e-07 den=9863185 encadrement=[0.05, 6] seuil=0.0976564162590482 coherent=True
+[0075] T1b-b          CAP=200 T_MAX=200 -> seuil=0.13810697051713017 motif=OK|pas=6.03e-07 k=0 ; W-transcription (iii) PASSE : pas=6.03e-07 attendu(k=0)=6.03e-07 den=9863185 encadrement=[0.05, 6] seuil=0.13810697051713017 coherent=True
+[0076] T1b-c          CAP=100 T_MAX=400 -> seuil=0.0488281270198217 motif=OK|pas=3.80e-09 k=-1 ; W-transcription (iii) PASSE : pas=3.80e-09 attendu(k=-1)=3.80e-09 den=9863185 encadrement=[0.0125, 0.05] seuil=0.0488281270198217 coherent=True
+[0077] BANC           G6 3bis (ii) T-1b ni loi 1 ni stable (s* ~ sqrt(CAP)) -> NON CONCLUANT DE REGIME MORD loi1=1.4142 loi2=0.5000 NON CONCLUANT DE REGIME
+[0078] BANC           G7 4bis tol_ordre > plafond -> NON CONCLUANT DE RESOLUTION   MORD NON CONCLUANT DE RESOLUTION / branche 4bis : une tolerance depasse son plafond
+[0079] BANC           G8 4bis tol_R > eta_R (q-1) sans saturation -> NON CONCLUANT DE RESOLUTION MORD R=['1.500', '1.600', '1.667', '1.800'] tol_R/(q-1)=1.667 NON CONCLUANT DE RESOLUTION
+[0080] BANC           G9 W-comptes 40 + 0 != 41 -> BANC NON JOUE                   MORD W-comptes MORD (40 + 0 != 41)
+[0081] BANC           G10 etat tangent (1,0,0,1) : H1_0 = 0 -> ARRET declare (gel 4.3) MORD 
+[0082] BANC           G11 alpha(dt2) != alpha(dt2/2) -> G-dt MORD -> NON CONCLUANT DE RESOLUTION branche 2 MORD NON CONCLUANT DE RESOLUTION / branche 2 : G-dt p=4, plafond 10.2 p=4, G-dt p=5, plafond 10.2 p=5, G-dt p=7, plafond 10.2 p=7 MORD
+[0083] BANC           G12 alpha(k=4) != alpha(k=2) -> G-k MORD -> NON CONCLUANT DE RESOLUTION branche 2 MORD NON CONCLUANT DE RESOLUTION / branche 2 : G-k p=4, plafond 10.2 p=4, G-k p=5, plafond 10.2 p=5, G-k p=7, plafond 10.2 p=7 MORD
+[0084] BANC           G13 alpha depend de w2 -> G-w2 MORD -> REFUTE branche 4, motif G-w2 MORD REFUTE / branche 4 : G-w2 p=4, G-w2 p=5, G-w2 p=7 MORD (alpha depend de s ou de w2)
+[0085] BANC           G14 CAP_p jamais atteint -> G-fen -> NON CONCLUANT DE FENETRE branche 3, compte inchange MORD NON CONCLUANT DE FENETRE ; comptes=81
+[0086] A-s            bascule pas 3857 t=23.1420 |x|=7.6547e+05 ; phase 2 555 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=1.042e-04 ; II : gA^(p-2)/K=1.000000 t*=23.150000
+[0087] A-s            bascule pas 3857 t=23.1420 |x|=7.6547e+05 ; phase 2 1110 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=2.547e-04 ; II : gA^(p-2)/K=1.000004 t*=23.150000
+[0088] A-s            bascule pas 3856 t=23.1360 |x|=2.4995e+05 ; phase 2 987 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=9.573e-05 ; II : gA^(p-2)/K=0.999996 t*=23.150000
+[0089] A-s            bascule pas 3857 t=23.1420 |x|=7.6547e+05 ; phase 2 2221 pas -> CAP ; point fixe en 2 it., 720 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=6.458e-04 ; II : gA^(p-2)/K=1.000004 t*=23.150000
+[0090] A-s            bascule pas 3932 t=23.5920 |x|=7.6547e+05 ; phase 2 555 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=1.042e-04 ; II : gA^(p-2)/K=1.000000 t*=23.600000
+[0091] A-s            bascule pas 3932 t=23.5920 |x|=7.6547e+05 ; phase 2 1110 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=2.547e-04 ; II : gA^(p-2)/K=1.000004 t*=23.600000
+[0092] A-s            bascule pas 3931 t=23.5860 |x|=2.4995e+05 ; phase 2 987 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=9.573e-05 ; II : gA^(p-2)/K=0.999996 t*=23.600000
+[0093] A-s            bascule pas 3932 t=23.5920 |x|=7.6547e+05 ; phase 2 2221 pas -> CAP ; point fixe en 2 it., 720 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=6.458e-04 ; II : gA^(p-2)/K=1.000004 t*=23.600000
+[0094] S-s            sous seuil (s=1.905227) : |x|max phase 2 2.9961e+00 ; ajustement libre alpha=0.0006 t*=400.0056 (T_MAX=400) disp_loc=2.802e-04 ; II gA^(p-2)/K=7.867e-12
+[0095] A-s            bascule pas 3857 t=23.1420 |x|=7.6547e+05 ; phase 2 694 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=1.207e-04 ; II : gA^(p-2)/K=1.000000 t*=23.150000
+[0096] A-s            bascule pas 3857 t=23.1420 |x|=7.6547e+05 ; phase 2 1388 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=2.304e-04 ; II : gA^(p-2)/K=1.000004 t*=23.150000
+[0097] A-s            bascule pas 3856 t=23.1360 |x|=2.4995e+05 ; phase 2 1230 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=9.437e-05 ; II : gA^(p-2)/K=0.999996 t*=23.150000
+[0098] A-s            bascule pas 3857 t=23.1420 |x|=7.6547e+05 ; phase 2 2777 pas -> CAP ; point fixe en 2 it., 720 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=4.976e-04 ; II : gA^(p-2)/K=1.000004 t*=23.150000
+[0099] A-s            bascule pas 3932 t=23.5920 |x|=7.6547e+05 ; phase 2 694 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=1.207e-04 ; II : gA^(p-2)/K=1.000000 t*=23.600000
+[0100] A-s            bascule pas 3932 t=23.5920 |x|=7.6547e+05 ; phase 2 1388 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=2.304e-04 ; II : gA^(p-2)/K=1.000004 t*=23.600000
+[0101] A-s            bascule pas 3931 t=23.5860 |x|=2.4995e+05 ; phase 2 1230 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=9.437e-05 ; II : gA^(p-2)/K=0.999996 t*=23.600000
+[0102] A-s            bascule pas 3932 t=23.5920 |x|=7.6547e+05 ; phase 2 2777 pas -> CAP ; point fixe en 2 it., 720 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=4.976e-04 ; II : gA^(p-2)/K=1.000004 t*=23.600000
+[0103] S-s            sous seuil (s=2.772408) : |x|max phase 2 2.9961e+00 ; ajustement libre alpha=0.0005 t*=400.0045 (T_MAX=400) disp_loc=2.163e-04 ; II gA^(p-2)/K=3.313e-12
+[0104] A-s            bascule pas 3857 t=23.1420 |x|=7.6547e+05 ; phase 2 836 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=9.713e-05 ; II : gA^(p-2)/K=1.000000 t*=23.150000
+[0105] A-s            bascule pas 3857 t=23.1420 |x|=7.6547e+05 ; phase 2 1672 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=3.055e-04 ; II : gA^(p-2)/K=1.000004 t*=23.150000
+[0106] A-s            bascule pas 3857 t=23.1420 |x|=7.6547e+05 ; phase 2 836 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=9.713e-05 ; II : gA^(p-2)/K=0.999996 t*=23.150000
+[0107] A-s            bascule pas 3857 t=23.1420 |x|=7.6547e+05 ; phase 2 3345 pas -> CAP ; point fixe en 2 it., 720 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=5.327e-04 ; II : gA^(p-2)/K=1.000004 t*=23.150000
+[0108] A-s            bascule pas 3932 t=23.5920 |x|=7.6547e+05 ; phase 2 836 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=9.713e-05 ; II : gA^(p-2)/K=1.000000 t*=23.600000
+[0109] A-s            bascule pas 3932 t=23.5920 |x|=7.6547e+05 ; phase 2 1672 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=3.055e-04 ; II : gA^(p-2)/K=1.000004 t*=23.600000
+[0110] A-s            bascule pas 3932 t=23.5920 |x|=7.6547e+05 ; phase 2 836 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=9.713e-05 ; II : gA^(p-2)/K=0.999996 t*=23.600000
+[0111] A-s            bascule pas 3932 t=23.5920 |x|=7.6547e+05 ; phase 2 3345 pas -> CAP ; point fixe en 2 it., 720 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=5.327e-04 ; II : gA^(p-2)/K=1.000004 t*=23.600000
+[0112] S-s            sous seuil (s=7.722745) : |x|max phase 2 2.9961e+00 ; ajustement libre alpha=0.0004 t*=400.0037 (T_MAX=400) disp_loc=1.750e-04 ; II gA^(p-2)/K=1.605e-12
+[0113] A-s            bascule pas 3857 t=23.1420 |x|=6.0315e+03 ; phase 2 555 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=1.208e-04 ; II : gA^(p-2)/K=1.000000 t*=23.150000
+[0114] A-s            bascule pas 3857 t=23.1420 |x|=6.0315e+03 ; phase 2 1110 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=2.859e-04 ; II : gA^(p-2)/K=1.000006 t*=23.150000
+[0115] A-s            bascule pas 3856 t=23.1360 |x|=2.8601e+03 ; phase 2 987 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=1.145e-04 ; II : gA^(p-2)/K=0.999994 t*=23.150000
+[0116] A-s            bascule pas 3857 t=23.1420 |x|=6.0315e+03 ; phase 2 2221 pas -> CAP ; point fixe en 2 it., 720 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=5.232e-04 ; II : gA^(p-2)/K=1.000006 t*=23.150000
+[0117] A-s            bascule pas 3932 t=23.5920 |x|=6.0315e+03 ; phase 2 555 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=1.208e-04 ; II : gA^(p-2)/K=1.000000 t*=23.600000
+[0118] A-s            bascule pas 3932 t=23.5920 |x|=6.0315e+03 ; phase 2 1110 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=2.859e-04 ; II : gA^(p-2)/K=1.000006 t*=23.600000
+[0119] A-s            bascule pas 3931 t=23.5860 |x|=2.8601e+03 ; phase 2 987 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=1.145e-04 ; II : gA^(p-2)/K=0.999994 t*=23.600000
+[0120] A-s            bascule pas 3932 t=23.5920 |x|=6.0315e+03 ; phase 2 2221 pas -> CAP ; point fixe en 2 it., 720 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=5.232e-04 ; II : gA^(p-2)/K=1.000006 t*=23.600000
+[0121] S-s            sous seuil (s=0.623414) : |x|max phase 2 2.9961e+00 ; ajustement libre alpha=0.0006 t*=400.0056 (T_MAX=400) disp_loc=2.802e-04 ; II gA^(p-2)/K=6.293e-11
+[0122] A-s            bascule pas 3857 t=23.1420 |x|=6.0315e+03 ; phase 2 694 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=1.219e-04 ; II : gA^(p-2)/K=1.000000 t*=23.150000
+[0123] A-s            bascule pas 3857 t=23.1420 |x|=6.0315e+03 ; phase 2 1388 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=2.298e-04 ; II : gA^(p-2)/K=1.000006 t*=23.150000
+[0124] A-s            bascule pas 3856 t=23.1360 |x|=2.8601e+03 ; phase 2 1230 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=1.203e-04 ; II : gA^(p-2)/K=0.999994 t*=23.150000
+[0125] A-s            bascule pas 3857 t=23.1420 |x|=6.0315e+03 ; phase 2 2777 pas -> CAP ; point fixe en 2 it., 720 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=5.149e-04 ; II : gA^(p-2)/K=1.000006 t*=23.150000
+[0126] A-s            bascule pas 3932 t=23.5920 |x|=6.0315e+03 ; phase 2 694 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=1.219e-04 ; II : gA^(p-2)/K=1.000000 t*=23.600000
+[0127] A-s            bascule pas 3932 t=23.5920 |x|=6.0315e+03 ; phase 2 1388 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=2.298e-04 ; II : gA^(p-2)/K=1.000006 t*=23.600000
+[0128] A-s            bascule pas 3931 t=23.5860 |x|=2.8601e+03 ; phase 2 1230 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=1.203e-04 ; II : gA^(p-2)/K=0.999994 t*=23.600000
+[0129] A-s            bascule pas 3932 t=23.5920 |x|=6.0315e+03 ; phase 2 2777 pas -> CAP ; point fixe en 2 it., 720 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=5.149e-04 ; II : gA^(p-2)/K=1.000006 t*=23.600000
+[0130] S-s            sous seuil (s=1.337687) : |x|max phase 2 2.9961e+00 ; ajustement libre alpha=0.0005 t*=400.0045 (T_MAX=400) disp_loc=2.163e-04 ; II gA^(p-2)/K=2.651e-11
+[0131] A-s            bascule pas 3857 t=23.1420 |x|=6.0315e+03 ; phase 2 836 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=1.133e-04 ; II : gA^(p-2)/K=1.000000 t*=23.150000
+[0132] A-s            bascule pas 3857 t=23.1420 |x|=6.0315e+03 ; phase 2 1672 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=2.470e-04 ; II : gA^(p-2)/K=1.000006 t*=23.150000
+[0133] A-s            bascule pas 3857 t=23.1420 |x|=6.0315e+03 ; phase 2 836 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=1.133e-04 ; II : gA^(p-2)/K=0.999994 t*=23.150000
+[0134] A-s            bascule pas 3857 t=23.1420 |x|=6.0315e+03 ; phase 2 3345 pas -> CAP ; point fixe en 2 it., 720 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=5.967e-04 ; II : gA^(p-2)/K=1.000006 t*=23.150000
+[0135] A-s            bascule pas 3932 t=23.5920 |x|=6.0315e+03 ; phase 2 836 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=1.133e-04 ; II : gA^(p-2)/K=1.000000 t*=23.600000
+[0136] A-s            bascule pas 3932 t=23.5920 |x|=6.0315e+03 ; phase 2 1672 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=2.470e-04 ; II : gA^(p-2)/K=1.000006 t*=23.600000
+[0137] A-s            bascule pas 3932 t=23.5920 |x|=6.0315e+03 ; phase 2 836 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=1.133e-04 ; II : gA^(p-2)/K=0.999994 t*=23.600000
+[0138] A-s            bascule pas 3932 t=23.5920 |x|=6.0315e+03 ; phase 2 3345 pas -> CAP ; point fixe en 2 it., 720 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=5.967e-04 ; II : gA^(p-2)/K=1.000006 t*=23.600000
+[0139] S-s            sous seuil (s=2.463482) : |x|max phase 2 2.9961e+00 ; ajustement libre alpha=0.0004 t*=400.0037 (T_MAX=400) disp_loc=1.750e-04 ; II gA^(p-2)/K=1.284e-11
+[0140] A-s            bascule pas 3857 t=23.1420 |x|=1.4955e+02 ; phase 2 555 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=1.222e-04 ; II : gA^(p-2)/K=1.000000 t*=23.150000
+[0141] A-s            bascule pas 3857 t=23.1420 |x|=1.4955e+02 ; phase 2 1110 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=2.671e-04 ; II : gA^(p-2)/K=1.000010 t*=23.150000
+[0142] A-s            bascule pas 3856 t=23.1360 |x|=9.5579e+01 ; phase 2 987 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=1.101e-04 ; II : gA^(p-2)/K=0.999990 t*=23.150000
+[0143] A-s            bascule pas 3857 t=23.1420 |x|=1.4955e+02 ; phase 2 2221 pas -> CAP ; point fixe en 2 it., 720 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=5.594e-04 ; II : gA^(p-2)/K=1.000010 t*=23.150000
+[0144] A-s            bascule pas 3932 t=23.5920 |x|=1.4955e+02 ; phase 2 555 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=1.222e-04 ; II : gA^(p-2)/K=1.000000 t*=23.600000
+[0145] A-s            bascule pas 3932 t=23.5920 |x|=1.4955e+02 ; phase 2 1110 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=2.671e-04 ; II : gA^(p-2)/K=1.000010 t*=23.600000
+[0146] A-s            bascule pas 3931 t=23.5860 |x|=9.5579e+01 ; phase 2 987 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=1.101e-04 ; II : gA^(p-2)/K=0.999990 t*=23.600000
+[0147] A-s            bascule pas 3932 t=23.5920 |x|=1.4955e+02 ; phase 2 2221 pas -> CAP ; point fixe en 2 it., 720 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=5.594e-04 ; II : gA^(p-2)/K=1.000010 t*=23.600000
+[0148] S-s            sous seuil (s=0.470038) : |x|max phase 2 2.9961e+00 ; ajustement libre alpha=0.0006 t*=400.0056 (T_MAX=400) disp_loc=2.802e-04 ; II gA^(p-2)/K=1.657e-09
+[0149] A-s            bascule pas 3857 t=23.1420 |x|=1.4955e+02 ; phase 2 694 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=1.026e-04 ; II : gA^(p-2)/K=1.000000 t*=23.150000
+[0150] A-s            bascule pas 3857 t=23.1420 |x|=1.4955e+02 ; phase 2 1388 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=2.609e-04 ; II : gA^(p-2)/K=1.000010 t*=23.150000
+[0151] A-s            bascule pas 3856 t=23.1360 |x|=9.5579e+01 ; phase 2 1230 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=9.426e-05 ; II : gA^(p-2)/K=0.999990 t*=23.150000
+[0152] A-s            bascule pas 3857 t=23.1420 |x|=1.4955e+02 ; phase 2 2777 pas -> CAP ; point fixe en 2 it., 720 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=4.971e-04 ; II : gA^(p-2)/K=1.000010 t*=23.150000
+[0153] A-s            bascule pas 3932 t=23.5920 |x|=1.4955e+02 ; phase 2 694 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=1.026e-04 ; II : gA^(p-2)/K=1.000000 t*=23.600000
+[0154] A-s            bascule pas 3932 t=23.5920 |x|=1.4955e+02 ; phase 2 1388 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=2.609e-04 ; II : gA^(p-2)/K=1.000010 t*=23.600000
+[0155] A-s            bascule pas 3931 t=23.5860 |x|=9.5579e+01 ; phase 2 1230 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=9.426e-05 ; II : gA^(p-2)/K=0.999990 t*=23.600000
+[0156] A-s            bascule pas 3932 t=23.5920 |x|=1.4955e+02 ; phase 2 2777 pas -> CAP ; point fixe en 2 it., 720 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=4.971e-04 ; II : gA^(p-2)/K=1.000010 t*=23.600000
+[0157] S-s            sous seuil (s=0.856553) : |x|max phase 2 2.9961e+00 ; ajustement libre alpha=0.0005 t*=400.0045 (T_MAX=400) disp_loc=2.163e-04 ; II gA^(p-2)/K=6.977e-10
+[0158] A-s            bascule pas 3857 t=23.1420 |x|=1.4955e+02 ; phase 2 836 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=9.276e-05 ; II : gA^(p-2)/K=1.000000 t*=23.150000
+[0159] A-s            bascule pas 3857 t=23.1420 |x|=1.4955e+02 ; phase 2 1672 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=2.484e-04 ; II : gA^(p-2)/K=1.000010 t*=23.150000
+[0160] A-s            bascule pas 3857 t=23.1420 |x|=1.4955e+02 ; phase 2 836 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=9.276e-05 ; II : gA^(p-2)/K=0.999990 t*=23.150000
+[0161] A-s            bascule pas 3857 t=23.1420 |x|=1.4955e+02 ; phase 2 3345 pas -> CAP ; point fixe en 2 it., 720 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=5.104e-04 ; II : gA^(p-2)/K=1.000010 t*=23.150000
+[0162] A-s            bascule pas 3932 t=23.5920 |x|=1.4955e+02 ; phase 2 836 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=9.276e-05 ; II : gA^(p-2)/K=1.000000 t*=23.600000
+[0163] A-s            bascule pas 3932 t=23.5920 |x|=1.4955e+02 ; phase 2 1672 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=2.484e-04 ; II : gA^(p-2)/K=1.000010 t*=23.600000
+[0164] A-s            bascule pas 3932 t=23.5920 |x|=1.4955e+02 ; phase 2 836 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=9.276e-05 ; II : gA^(p-2)/K=0.999990 t*=23.600000
+[0165] A-s            bascule pas 3932 t=23.5920 |x|=1.4955e+02 ; phase 2 3345 pas -> CAP ; point fixe en 2 it., 720 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=5.104e-04 ; II : gA^(p-2)/K=1.000010 t*=23.600000
+[0166] S-s            sous seuil (s=1.524343) : |x|max phase 2 2.9961e+00 ; ajustement libre alpha=0.0004 t*=400.0037 (T_MAX=400) disp_loc=1.750e-04 ; II gA^(p-2)/K=3.380e-10
+[0167] BANC           G35 lecture corrigee : q = 4 MESURE aux 18 points et S_p = 0 -> G-plancher CORRIGE MORD -> branche 3b MORD NON CONCLUANT DE PLANCHER ; q ['4.000', '4.000', '4.000'] ; S_p ['-1.0e+00', '-1.0e+00', '-1.0e+00']
+[0168] A-s            bascule pas 3857 t=23.1420 |x|=7.6547e+05 ; phase 2 555 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=1.042e-04 ; II : gA^(p-2)/K=1.000000 t*=23.150000
+[0169] A-s            bascule pas 3857 t=23.1420 |x|=7.6547e+05 ; phase 2 1110 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=2.547e-04 ; II : gA^(p-2)/K=1.000004 t*=23.150000
+[0170] A-s            bascule pas 3856 t=23.1360 |x|=2.4995e+05 ; phase 2 987 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=9.573e-05 ; II : gA^(p-2)/K=0.999996 t*=23.150000
+[0171] A-s            bascule pas 3857 t=23.1420 |x|=7.6547e+05 ; phase 2 2221 pas -> CAP ; point fixe en 2 it., 720 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=6.458e-04 ; II : gA^(p-2)/K=1.000004 t*=23.150000
+[0172] A-s            bascule pas 3932 t=23.5920 |x|=7.6547e+05 ; phase 2 555 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=1.042e-04 ; II : gA^(p-2)/K=1.000000 t*=23.600000
+[0173] A-s            bascule pas 3932 t=23.5920 |x|=7.6547e+05 ; phase 2 1110 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=2.547e-04 ; II : gA^(p-2)/K=1.000004 t*=23.600000
+[0174] A-s            bascule pas 3931 t=23.5860 |x|=2.4995e+05 ; phase 2 987 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=9.573e-05 ; II : gA^(p-2)/K=0.999996 t*=23.600000
+[0175] A-s            bascule pas 3932 t=23.5920 |x|=7.6547e+05 ; phase 2 2221 pas -> CAP ; point fixe en 2 it., 720 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=6.458e-04 ; II : gA^(p-2)/K=1.000004 t*=23.600000
+[0176] S-s            sous seuil (s=1.905227) : |x|max phase 2 2.9961e+00 ; ajustement libre alpha=0.0006 t*=400.0056 (T_MAX=400) disp_loc=2.802e-04 ; II gA^(p-2)/K=7.867e-12
+[0177] A-s            bascule pas 3857 t=23.1420 |x|=7.6547e+05 ; phase 2 694 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=1.207e-04 ; II : gA^(p-2)/K=1.000000 t*=23.150000
+[0178] A-s            bascule pas 3857 t=23.1420 |x|=7.6547e+05 ; phase 2 1388 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=2.304e-04 ; II : gA^(p-2)/K=1.000004 t*=23.150000
+[0179] A-s            bascule pas 3856 t=23.1360 |x|=2.4995e+05 ; phase 2 1230 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=9.437e-05 ; II : gA^(p-2)/K=0.999996 t*=23.150000
+[0180] A-s            bascule pas 3857 t=23.1420 |x|=7.6547e+05 ; phase 2 2777 pas -> CAP ; point fixe en 2 it., 720 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=4.976e-04 ; II : gA^(p-2)/K=1.000004 t*=23.150000
+[0181] A-s            bascule pas 3932 t=23.5920 |x|=7.6547e+05 ; phase 2 694 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=1.207e-04 ; II : gA^(p-2)/K=1.000000 t*=23.600000
+[0182] A-s            bascule pas 3932 t=23.5920 |x|=7.6547e+05 ; phase 2 1388 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=2.304e-04 ; II : gA^(p-2)/K=1.000004 t*=23.600000
+[0183] A-s            bascule pas 3931 t=23.5860 |x|=2.4995e+05 ; phase 2 1230 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=9.437e-05 ; II : gA^(p-2)/K=0.999996 t*=23.600000
+[0184] A-s            bascule pas 3932 t=23.5920 |x|=7.6547e+05 ; phase 2 2777 pas -> CAP ; point fixe en 2 it., 720 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=4.976e-04 ; II : gA^(p-2)/K=1.000004 t*=23.600000
+[0185] S-s            sous seuil (s=2.772408) : |x|max phase 2 2.9961e+00 ; ajustement libre alpha=0.0005 t*=400.0045 (T_MAX=400) disp_loc=2.163e-04 ; II gA^(p-2)/K=3.313e-12
+[0186] A-s            bascule pas 3857 t=23.1420 |x|=7.6547e+05 ; phase 2 836 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=9.713e-05 ; II : gA^(p-2)/K=1.000000 t*=23.150000
+[0187] A-s            bascule pas 3857 t=23.1420 |x|=7.6547e+05 ; phase 2 1672 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=3.055e-04 ; II : gA^(p-2)/K=1.000004 t*=23.150000
+[0188] A-s            bascule pas 3857 t=23.1420 |x|=7.6547e+05 ; phase 2 836 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=9.713e-05 ; II : gA^(p-2)/K=0.999996 t*=23.150000
+[0189] A-s            bascule pas 3857 t=23.1420 |x|=7.6547e+05 ; phase 2 3345 pas -> CAP ; point fixe en 2 it., 720 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=5.327e-04 ; II : gA^(p-2)/K=1.000004 t*=23.150000
+[0190] A-s            bascule pas 3932 t=23.5920 |x|=7.6547e+05 ; phase 2 836 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=9.713e-05 ; II : gA^(p-2)/K=1.000000 t*=23.600000
+[0191] A-s            bascule pas 3932 t=23.5920 |x|=7.6547e+05 ; phase 2 1672 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=3.055e-04 ; II : gA^(p-2)/K=1.000004 t*=23.600000
+[0192] A-s            bascule pas 3932 t=23.5920 |x|=7.6547e+05 ; phase 2 836 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=9.713e-05 ; II : gA^(p-2)/K=0.999996 t*=23.600000
+[0193] A-s            bascule pas 3932 t=23.5920 |x|=7.6547e+05 ; phase 2 3345 pas -> CAP ; point fixe en 2 it., 720 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=5.327e-04 ; II : gA^(p-2)/K=1.000004 t*=23.600000
+[0194] S-s            sous seuil (s=7.722745) : |x|max phase 2 2.9961e+00 ; ajustement libre alpha=0.0004 t*=400.0037 (T_MAX=400) disp_loc=1.750e-04 ; II gA^(p-2)/K=1.605e-12
+[0195] A-s            bascule pas 3857 t=23.1420 |x|=6.0315e+03 ; phase 2 555 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=1.208e-04 ; II : gA^(p-2)/K=1.000000 t*=23.150000
+[0196] A-s            bascule pas 3857 t=23.1420 |x|=6.0315e+03 ; phase 2 1110 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=2.859e-04 ; II : gA^(p-2)/K=1.000006 t*=23.150000
+[0197] A-s            bascule pas 3856 t=23.1360 |x|=2.8601e+03 ; phase 2 987 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=1.145e-04 ; II : gA^(p-2)/K=0.999994 t*=23.150000
+[0198] A-s            bascule pas 3857 t=23.1420 |x|=6.0315e+03 ; phase 2 2221 pas -> CAP ; point fixe en 2 it., 720 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=5.232e-04 ; II : gA^(p-2)/K=1.000006 t*=23.150000
+[0199] A-s            bascule pas 3932 t=23.5920 |x|=6.0315e+03 ; phase 2 555 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=1.208e-04 ; II : gA^(p-2)/K=1.000000 t*=23.600000
+[0200] A-s            bascule pas 3932 t=23.5920 |x|=6.0315e+03 ; phase 2 1110 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=2.859e-04 ; II : gA^(p-2)/K=1.000006 t*=23.600000
+[0201] A-s            bascule pas 3931 t=23.5860 |x|=2.8601e+03 ; phase 2 987 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=1.145e-04 ; II : gA^(p-2)/K=0.999994 t*=23.600000
+[0202] A-s            bascule pas 3932 t=23.5920 |x|=6.0315e+03 ; phase 2 2221 pas -> CAP ; point fixe en 2 it., 720 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=5.232e-04 ; II : gA^(p-2)/K=1.000006 t*=23.600000
+[0203] S-s            sous seuil (s=0.623414) : |x|max phase 2 2.9961e+00 ; ajustement libre alpha=0.0006 t*=400.0056 (T_MAX=400) disp_loc=2.802e-04 ; II gA^(p-2)/K=6.293e-11
+[0204] A-s            bascule pas 3857 t=23.1420 |x|=6.0315e+03 ; phase 2 694 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=1.219e-04 ; II : gA^(p-2)/K=1.000000 t*=23.150000
+[0205] A-s            bascule pas 3857 t=23.1420 |x|=6.0315e+03 ; phase 2 1388 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=2.298e-04 ; II : gA^(p-2)/K=1.000006 t*=23.150000
+[0206] A-s            bascule pas 3856 t=23.1360 |x|=2.8601e+03 ; phase 2 1230 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=1.203e-04 ; II : gA^(p-2)/K=0.999994 t*=23.150000
+[0207] A-s            bascule pas 3857 t=23.1420 |x|=6.0315e+03 ; phase 2 2777 pas -> CAP ; point fixe en 2 it., 720 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=5.149e-04 ; II : gA^(p-2)/K=1.000006 t*=23.150000
+[0208] A-s            bascule pas 3932 t=23.5920 |x|=6.0315e+03 ; phase 2 694 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=1.219e-04 ; II : gA^(p-2)/K=1.000000 t*=23.600000
+[0209] A-s            bascule pas 3932 t=23.5920 |x|=6.0315e+03 ; phase 2 1388 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=2.298e-04 ; II : gA^(p-2)/K=1.000006 t*=23.600000
+[0210] A-s            bascule pas 3931 t=23.5860 |x|=2.8601e+03 ; phase 2 1230 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=1.203e-04 ; II : gA^(p-2)/K=0.999994 t*=23.600000
+[0211] A-s            bascule pas 3932 t=23.5920 |x|=6.0315e+03 ; phase 2 2777 pas -> CAP ; point fixe en 2 it., 720 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=5.149e-04 ; II : gA^(p-2)/K=1.000006 t*=23.600000
+[0212] S-s            sous seuil (s=1.337687) : |x|max phase 2 2.9961e+00 ; ajustement libre alpha=0.0005 t*=400.0045 (T_MAX=400) disp_loc=2.163e-04 ; II gA^(p-2)/K=2.651e-11
+[0213] A-s            bascule pas 3857 t=23.1420 |x|=6.0315e+03 ; phase 2 836 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=1.133e-04 ; II : gA^(p-2)/K=1.000000 t*=23.150000
+[0214] A-s            bascule pas 3857 t=23.1420 |x|=6.0315e+03 ; phase 2 1672 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=2.470e-04 ; II : gA^(p-2)/K=1.000006 t*=23.150000
+[0215] A-s            bascule pas 3857 t=23.1420 |x|=6.0315e+03 ; phase 2 836 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=1.133e-04 ; II : gA^(p-2)/K=0.999994 t*=23.150000
+[0216] A-s            bascule pas 3857 t=23.1420 |x|=6.0315e+03 ; phase 2 3345 pas -> CAP ; point fixe en 2 it., 720 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=5.967e-04 ; II : gA^(p-2)/K=1.000006 t*=23.150000
+[0217] A-s            bascule pas 3932 t=23.5920 |x|=6.0315e+03 ; phase 2 836 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=1.133e-04 ; II : gA^(p-2)/K=1.000000 t*=23.600000
+[0218] A-s            bascule pas 3932 t=23.5920 |x|=6.0315e+03 ; phase 2 1672 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=2.470e-04 ; II : gA^(p-2)/K=1.000006 t*=23.600000
+[0219] A-s            bascule pas 3932 t=23.5920 |x|=6.0315e+03 ; phase 2 836 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=1.133e-04 ; II : gA^(p-2)/K=0.999994 t*=23.600000
+[0220] A-s            bascule pas 3932 t=23.5920 |x|=6.0315e+03 ; phase 2 3345 pas -> CAP ; point fixe en 2 it., 720 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=5.967e-04 ; II : gA^(p-2)/K=1.000006 t*=23.600000
+[0221] S-s            sous seuil (s=2.463482) : |x|max phase 2 2.9961e+00 ; ajustement libre alpha=0.0004 t*=400.0037 (T_MAX=400) disp_loc=1.750e-04 ; II gA^(p-2)/K=1.284e-11
+[0222] A-s            bascule pas 3857 t=23.1420 |x|=1.4955e+02 ; phase 2 555 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=1.222e-04 ; II : gA^(p-2)/K=1.000000 t*=23.150000
+[0223] A-s            bascule pas 3857 t=23.1420 |x|=1.4955e+02 ; phase 2 1110 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=2.671e-04 ; II : gA^(p-2)/K=1.000010 t*=23.150000
+[0224] A-s            bascule pas 3856 t=23.1360 |x|=9.5579e+01 ; phase 2 987 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=1.101e-04 ; II : gA^(p-2)/K=0.999990 t*=23.150000
+[0225] A-s            bascule pas 3857 t=23.1420 |x|=1.4955e+02 ; phase 2 2221 pas -> CAP ; point fixe en 2 it., 720 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=5.594e-04 ; II : gA^(p-2)/K=1.000010 t*=23.150000
+[0226] A-s            bascule pas 3932 t=23.5920 |x|=1.4955e+02 ; phase 2 555 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=1.222e-04 ; II : gA^(p-2)/K=1.000000 t*=23.600000
+[0227] A-s            bascule pas 3932 t=23.5920 |x|=1.4955e+02 ; phase 2 1110 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=2.671e-04 ; II : gA^(p-2)/K=1.000010 t*=23.600000
+[0228] A-s            bascule pas 3931 t=23.5860 |x|=9.5579e+01 ; phase 2 987 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=1.101e-04 ; II : gA^(p-2)/K=0.999990 t*=23.600000
+[0229] A-s            bascule pas 3932 t=23.5920 |x|=1.4955e+02 ; phase 2 2221 pas -> CAP ; point fixe en 2 it., 720 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=5.594e-04 ; II : gA^(p-2)/K=1.000010 t*=23.600000
+[0230] S-s            sous seuil (s=0.470038) : |x|max phase 2 2.9961e+00 ; ajustement libre alpha=0.0006 t*=400.0056 (T_MAX=400) disp_loc=2.802e-04 ; II gA^(p-2)/K=1.657e-09
+[0231] A-s            bascule pas 3857 t=23.1420 |x|=1.4955e+02 ; phase 2 694 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=1.026e-04 ; II : gA^(p-2)/K=1.000000 t*=23.150000
+[0232] A-s            bascule pas 3857 t=23.1420 |x|=1.4955e+02 ; phase 2 1388 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=2.609e-04 ; II : gA^(p-2)/K=1.000010 t*=23.150000
+[0233] A-s            bascule pas 3856 t=23.1360 |x|=9.5579e+01 ; phase 2 1230 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=9.426e-05 ; II : gA^(p-2)/K=0.999990 t*=23.150000
+[0234] A-s            bascule pas 3857 t=23.1420 |x|=1.4955e+02 ; phase 2 2777 pas -> CAP ; point fixe en 2 it., 720 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=4.971e-04 ; II : gA^(p-2)/K=1.000010 t*=23.150000
+[0235] A-s            bascule pas 3932 t=23.5920 |x|=1.4955e+02 ; phase 2 694 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=1.026e-04 ; II : gA^(p-2)/K=1.000000 t*=23.600000
+[0236] A-s            bascule pas 3932 t=23.5920 |x|=1.4955e+02 ; phase 2 1388 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=2.609e-04 ; II : gA^(p-2)/K=1.000010 t*=23.600000
+[0237] A-s            bascule pas 3931 t=23.5860 |x|=9.5579e+01 ; phase 2 1230 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=9.426e-05 ; II : gA^(p-2)/K=0.999990 t*=23.600000
+[0238] A-s            bascule pas 3932 t=23.5920 |x|=1.4955e+02 ; phase 2 2777 pas -> CAP ; point fixe en 2 it., 720 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=4.971e-04 ; II : gA^(p-2)/K=1.000010 t*=23.600000
+[0239] S-s            sous seuil (s=0.856553) : |x|max phase 2 2.9961e+00 ; ajustement libre alpha=0.0005 t*=400.0045 (T_MAX=400) disp_loc=2.163e-04 ; II gA^(p-2)/K=6.977e-10
+[0240] A-s            bascule pas 3857 t=23.1420 |x|=1.4955e+02 ; phase 2 836 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=9.276e-05 ; II : gA^(p-2)/K=1.000000 t*=23.150000
+[0241] A-s            bascule pas 3857 t=23.1420 |x|=1.4955e+02 ; phase 2 1672 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=2.484e-04 ; II : gA^(p-2)/K=1.000010 t*=23.150000
+[0242] A-s            bascule pas 3857 t=23.1420 |x|=1.4955e+02 ; phase 2 836 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=9.276e-05 ; II : gA^(p-2)/K=0.999990 t*=23.150000
+[0243] A-s            bascule pas 3857 t=23.1420 |x|=1.4955e+02 ; phase 2 3345 pas -> CAP ; point fixe en 2 it., 720 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=5.104e-04 ; II : gA^(p-2)/K=1.000010 t*=23.150000
+[0244] A-s            bascule pas 3932 t=23.5920 |x|=1.4955e+02 ; phase 2 836 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=9.276e-05 ; II : gA^(p-2)/K=1.000000 t*=23.600000
+[0245] A-s            bascule pas 3932 t=23.5920 |x|=1.4955e+02 ; phase 2 1672 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=2.484e-04 ; II : gA^(p-2)/K=1.000010 t*=23.600000
+[0246] A-s            bascule pas 3932 t=23.5920 |x|=1.4955e+02 ; phase 2 836 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=9.276e-05 ; II : gA^(p-2)/K=0.999990 t*=23.600000
+[0247] A-s            bascule pas 3932 t=23.5920 |x|=1.4955e+02 ; phase 2 3345 pas -> CAP ; point fixe en 2 it., 720 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=5.104e-04 ; II : gA^(p-2)/K=1.000010 t*=23.600000
+[0248] S-s            sous seuil (s=1.524343) : |x|max phase 2 2.9961e+00 ; ajustement libre alpha=0.0004 t*=400.0037 (T_MAX=400) disp_loc=1.750e-04 ; II gA^(p-2)/K=3.380e-10
+[0249] A-s            bascule pas 3857 t=23.1420 |x|=7.6547e+05 ; phase 2 555 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=1.042e-04 ; II : gA^(p-2)/K=1.000000 t*=23.150000
+[0250] A-s            bascule pas 3857 t=23.1420 |x|=7.6547e+05 ; phase 2 1110 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=2.547e-04 ; II : gA^(p-2)/K=1.000004 t*=23.150000
+[0251] A-s            bascule pas 3856 t=23.1360 |x|=2.4995e+05 ; phase 2 987 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=9.573e-05 ; II : gA^(p-2)/K=0.999996 t*=23.150000
+[0252] A-s            bascule pas 3857 t=23.1420 |x|=7.6547e+05 ; phase 2 2221 pas -> CAP ; point fixe en 2 it., 720 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=6.458e-04 ; II : gA^(p-2)/K=1.000004 t*=23.150000
+[0253] A-s            bascule pas 3932 t=23.5920 |x|=7.6547e+05 ; phase 2 555 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=1.042e-04 ; II : gA^(p-2)/K=1.000000 t*=23.600000
+[0254] A-s            bascule pas 3932 t=23.5920 |x|=7.6547e+05 ; phase 2 1110 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=2.547e-04 ; II : gA^(p-2)/K=1.000004 t*=23.600000
+[0255] A-s            bascule pas 3931 t=23.5860 |x|=2.4995e+05 ; phase 2 987 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=9.573e-05 ; II : gA^(p-2)/K=0.999996 t*=23.600000
+[0256] A-s            bascule pas 3932 t=23.5920 |x|=7.6547e+05 ; phase 2 2221 pas -> CAP ; point fixe en 2 it., 720 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=6.458e-04 ; II : gA^(p-2)/K=1.000004 t*=23.600000
+[0257] S-s            sous seuil (s=1.905227) : |x|max phase 2 2.9961e+00 ; ajustement libre alpha=0.0006 t*=400.0056 (T_MAX=400) disp_loc=2.802e-04 ; II gA^(p-2)/K=7.867e-12
+[0258] A-s            bascule pas 3857 t=23.1420 |x|=7.6547e+05 ; phase 2 694 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=1.207e-04 ; II : gA^(p-2)/K=1.000000 t*=23.150000
+[0259] A-s            bascule pas 3857 t=23.1420 |x|=7.6547e+05 ; phase 2 1388 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=2.304e-04 ; II : gA^(p-2)/K=1.000004 t*=23.150000
+[0260] A-s            bascule pas 3856 t=23.1360 |x|=2.4995e+05 ; phase 2 1230 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=9.437e-05 ; II : gA^(p-2)/K=0.999996 t*=23.150000
+[0261] A-s            bascule pas 3857 t=23.1420 |x|=7.6547e+05 ; phase 2 2777 pas -> CAP ; point fixe en 2 it., 720 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=4.976e-04 ; II : gA^(p-2)/K=1.000004 t*=23.150000
+[0262] A-s            bascule pas 3932 t=23.5920 |x|=7.6547e+05 ; phase 2 694 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=1.207e-04 ; II : gA^(p-2)/K=1.000000 t*=23.600000
+[0263] A-s            bascule pas 3932 t=23.5920 |x|=7.6547e+05 ; phase 2 1388 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=2.304e-04 ; II : gA^(p-2)/K=1.000004 t*=23.600000
+[0264] A-s            bascule pas 3931 t=23.5860 |x|=2.4995e+05 ; phase 2 1230 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=9.437e-05 ; II : gA^(p-2)/K=0.999996 t*=23.600000
+[0265] A-s            bascule pas 3932 t=23.5920 |x|=7.6547e+05 ; phase 2 2777 pas -> CAP ; point fixe en 2 it., 720 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=4.976e-04 ; II : gA^(p-2)/K=1.000004 t*=23.600000
+[0266] S-s            sous seuil (s=2.772408) : |x|max phase 2 2.9961e+00 ; ajustement libre alpha=0.0005 t*=400.0045 (T_MAX=400) disp_loc=2.163e-04 ; II gA^(p-2)/K=3.313e-12
+[0267] A-s            bascule pas 3857 t=23.1420 |x|=7.6547e+05 ; phase 2 836 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=9.713e-05 ; II : gA^(p-2)/K=1.000000 t*=23.150000
+[0268] A-s            bascule pas 3857 t=23.1420 |x|=7.6547e+05 ; phase 2 1672 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=3.055e-04 ; II : gA^(p-2)/K=1.000004 t*=23.150000
+[0269] A-s            bascule pas 3857 t=23.1420 |x|=7.6547e+05 ; phase 2 836 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=9.713e-05 ; II : gA^(p-2)/K=0.999996 t*=23.150000
+[0270] A-s            bascule pas 3857 t=23.1420 |x|=7.6547e+05 ; phase 2 3345 pas -> CAP ; point fixe en 2 it., 720 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=5.327e-04 ; II : gA^(p-2)/K=1.000004 t*=23.150000
+[0271] A-s            bascule pas 3932 t=23.5920 |x|=7.6547e+05 ; phase 2 836 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=9.713e-05 ; II : gA^(p-2)/K=1.000000 t*=23.600000
+[0272] A-s            bascule pas 3932 t=23.5920 |x|=7.6547e+05 ; phase 2 1672 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=3.055e-04 ; II : gA^(p-2)/K=1.000004 t*=23.600000
+[0273] A-s            bascule pas 3932 t=23.5920 |x|=7.6547e+05 ; phase 2 836 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=9.713e-05 ; II : gA^(p-2)/K=0.999996 t*=23.600000
+[0274] A-s            bascule pas 3932 t=23.5920 |x|=7.6547e+05 ; phase 2 3345 pas -> CAP ; point fixe en 2 it., 720 pts ; alpha=2.000000 (4/(p-2)=2.000000) disp_loc=5.327e-04 ; II : gA^(p-2)/K=1.000004 t*=23.600000
+[0275] S-s            sous seuil (s=7.722745) : |x|max phase 2 2.9961e+00 ; ajustement libre alpha=0.0004 t*=400.0037 (T_MAX=400) disp_loc=1.750e-04 ; II gA^(p-2)/K=1.605e-12
+[0276] A-s            bascule pas 3857 t=23.1420 |x|=6.0315e+03 ; phase 2 555 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=1.208e-04 ; II : gA^(p-2)/K=1.000000 t*=23.150000
+[0277] A-s            bascule pas 3857 t=23.1420 |x|=6.0315e+03 ; phase 2 1110 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=2.859e-04 ; II : gA^(p-2)/K=1.000006 t*=23.150000
+[0278] A-s            bascule pas 3856 t=23.1360 |x|=2.8601e+03 ; phase 2 987 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=1.145e-04 ; II : gA^(p-2)/K=0.999994 t*=23.150000
+[0279] A-s            bascule pas 3857 t=23.1420 |x|=6.0315e+03 ; phase 2 2221 pas -> CAP ; point fixe en 2 it., 720 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=5.232e-04 ; II : gA^(p-2)/K=1.000006 t*=23.150000
+[0280] A-s            bascule pas 3932 t=23.5920 |x|=6.0315e+03 ; phase 2 555 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=1.208e-04 ; II : gA^(p-2)/K=1.000000 t*=23.600000
+[0281] A-s            bascule pas 3932 t=23.5920 |x|=6.0315e+03 ; phase 2 1110 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=2.859e-04 ; II : gA^(p-2)/K=1.000006 t*=23.600000
+[0282] A-s            bascule pas 3931 t=23.5860 |x|=2.8601e+03 ; phase 2 987 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=1.145e-04 ; II : gA^(p-2)/K=0.999994 t*=23.600000
+[0283] A-s            bascule pas 3932 t=23.5920 |x|=6.0315e+03 ; phase 2 2221 pas -> CAP ; point fixe en 2 it., 720 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=5.232e-04 ; II : gA^(p-2)/K=1.000006 t*=23.600000
+[0284] S-s            sous seuil (s=0.623414) : |x|max phase 2 2.9961e+00 ; ajustement libre alpha=0.0006 t*=400.0056 (T_MAX=400) disp_loc=2.802e-04 ; II gA^(p-2)/K=6.293e-11
+[0285] A-s            bascule pas 3857 t=23.1420 |x|=6.0315e+03 ; phase 2 694 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=1.219e-04 ; II : gA^(p-2)/K=1.000000 t*=23.150000
+[0286] A-s            bascule pas 3857 t=23.1420 |x|=6.0315e+03 ; phase 2 1388 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=2.298e-04 ; II : gA^(p-2)/K=1.000006 t*=23.150000
+[0287] A-s            bascule pas 3856 t=23.1360 |x|=2.8601e+03 ; phase 2 1230 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=1.203e-04 ; II : gA^(p-2)/K=0.999994 t*=23.150000
+[0288] A-s            bascule pas 3857 t=23.1420 |x|=6.0315e+03 ; phase 2 2777 pas -> CAP ; point fixe en 2 it., 720 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=5.149e-04 ; II : gA^(p-2)/K=1.000006 t*=23.150000
+[0289] A-s            bascule pas 3932 t=23.5920 |x|=6.0315e+03 ; phase 2 694 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=1.219e-04 ; II : gA^(p-2)/K=1.000000 t*=23.600000
+[0290] A-s            bascule pas 3932 t=23.5920 |x|=6.0315e+03 ; phase 2 1388 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=2.298e-04 ; II : gA^(p-2)/K=1.000006 t*=23.600000
+[0291] A-s            bascule pas 3931 t=23.5860 |x|=2.8601e+03 ; phase 2 1230 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=1.203e-04 ; II : gA^(p-2)/K=0.999994 t*=23.600000
+[0292] A-s            bascule pas 3932 t=23.5920 |x|=6.0315e+03 ; phase 2 2777 pas -> CAP ; point fixe en 2 it., 720 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=5.149e-04 ; II : gA^(p-2)/K=1.000006 t*=23.600000
+[0293] S-s            sous seuil (s=1.337687) : |x|max phase 2 2.9961e+00 ; ajustement libre alpha=0.0005 t*=400.0045 (T_MAX=400) disp_loc=2.163e-04 ; II gA^(p-2)/K=2.651e-11
+[0294] A-s            bascule pas 3857 t=23.1420 |x|=6.0315e+03 ; phase 2 836 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=1.133e-04 ; II : gA^(p-2)/K=1.000000 t*=23.150000
+[0295] A-s            bascule pas 3857 t=23.1420 |x|=6.0315e+03 ; phase 2 1672 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=2.470e-04 ; II : gA^(p-2)/K=1.000006 t*=23.150000
+[0296] A-s            bascule pas 3857 t=23.1420 |x|=6.0315e+03 ; phase 2 836 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=1.133e-04 ; II : gA^(p-2)/K=0.999994 t*=23.150000
+[0297] A-s            bascule pas 3857 t=23.1420 |x|=6.0315e+03 ; phase 2 3345 pas -> CAP ; point fixe en 2 it., 720 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=5.967e-04 ; II : gA^(p-2)/K=1.000006 t*=23.150000
+[0298] A-s            bascule pas 3932 t=23.5920 |x|=6.0315e+03 ; phase 2 836 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=1.133e-04 ; II : gA^(p-2)/K=1.000000 t*=23.600000
+[0299] A-s            bascule pas 3932 t=23.5920 |x|=6.0315e+03 ; phase 2 1672 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=2.470e-04 ; II : gA^(p-2)/K=1.000006 t*=23.600000
+[0300] A-s            bascule pas 3932 t=23.5920 |x|=6.0315e+03 ; phase 2 836 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=1.133e-04 ; II : gA^(p-2)/K=0.999994 t*=23.600000
+[0301] A-s            bascule pas 3932 t=23.5920 |x|=6.0315e+03 ; phase 2 3345 pas -> CAP ; point fixe en 2 it., 720 pts ; alpha=1.333333 (4/(p-2)=1.333333) disp_loc=5.967e-04 ; II : gA^(p-2)/K=1.000006 t*=23.600000
+[0302] S-s            sous seuil (s=2.463482) : |x|max phase 2 2.9961e+00 ; ajustement libre alpha=0.0004 t*=400.0037 (T_MAX=400) disp_loc=1.750e-04 ; II gA^(p-2)/K=1.284e-11
+[0303] A-s            bascule pas 3857 t=23.1420 |x|=1.4955e+02 ; phase 2 555 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=1.222e-04 ; II : gA^(p-2)/K=1.000000 t*=23.150000
+[0304] A-s            bascule pas 3857 t=23.1420 |x|=1.4955e+02 ; phase 2 1110 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=2.671e-04 ; II : gA^(p-2)/K=1.000010 t*=23.150000
+[0305] A-s            bascule pas 3856 t=23.1360 |x|=9.5579e+01 ; phase 2 987 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=1.101e-04 ; II : gA^(p-2)/K=0.999990 t*=23.150000
+[0306] A-s            bascule pas 3857 t=23.1420 |x|=1.4955e+02 ; phase 2 2221 pas -> CAP ; point fixe en 2 it., 720 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=5.594e-04 ; II : gA^(p-2)/K=1.000010 t*=23.150000
+[0307] A-s            bascule pas 3932 t=23.5920 |x|=1.4955e+02 ; phase 2 555 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=1.222e-04 ; II : gA^(p-2)/K=1.000000 t*=23.600000
+[0308] A-s            bascule pas 3932 t=23.5920 |x|=1.4955e+02 ; phase 2 1110 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=2.671e-04 ; II : gA^(p-2)/K=1.000010 t*=23.600000
+[0309] A-s            bascule pas 3931 t=23.5860 |x|=9.5579e+01 ; phase 2 987 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=1.101e-04 ; II : gA^(p-2)/K=0.999990 t*=23.600000
+[0310] A-s            bascule pas 3932 t=23.5920 |x|=1.4955e+02 ; phase 2 2221 pas -> CAP ; point fixe en 2 it., 720 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=5.594e-04 ; II : gA^(p-2)/K=1.000010 t*=23.600000
+[0311] S-s            sous seuil (s=0.470038) : |x|max phase 2 2.9961e+00 ; ajustement libre alpha=0.0006 t*=400.0056 (T_MAX=400) disp_loc=2.802e-04 ; II gA^(p-2)/K=1.657e-09
+[0312] A-s            bascule pas 3857 t=23.1420 |x|=1.4955e+02 ; phase 2 694 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=1.026e-04 ; II : gA^(p-2)/K=1.000000 t*=23.150000
+[0313] A-s            bascule pas 3857 t=23.1420 |x|=1.4955e+02 ; phase 2 1388 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=2.609e-04 ; II : gA^(p-2)/K=1.000010 t*=23.150000
+[0314] A-s            bascule pas 3856 t=23.1360 |x|=9.5579e+01 ; phase 2 1230 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=9.426e-05 ; II : gA^(p-2)/K=0.999990 t*=23.150000
+[0315] A-s            bascule pas 3857 t=23.1420 |x|=1.4955e+02 ; phase 2 2777 pas -> CAP ; point fixe en 2 it., 720 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=4.971e-04 ; II : gA^(p-2)/K=1.000010 t*=23.150000
+[0316] A-s            bascule pas 3932 t=23.5920 |x|=1.4955e+02 ; phase 2 694 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=1.026e-04 ; II : gA^(p-2)/K=1.000000 t*=23.600000
+[0317] A-s            bascule pas 3932 t=23.5920 |x|=1.4955e+02 ; phase 2 1388 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=2.609e-04 ; II : gA^(p-2)/K=1.000010 t*=23.600000
+[0318] A-s            bascule pas 3931 t=23.5860 |x|=9.5579e+01 ; phase 2 1230 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=9.426e-05 ; II : gA^(p-2)/K=0.999990 t*=23.600000
+[0319] A-s            bascule pas 3932 t=23.5920 |x|=1.4955e+02 ; phase 2 2777 pas -> CAP ; point fixe en 2 it., 720 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=4.971e-04 ; II : gA^(p-2)/K=1.000010 t*=23.600000
+[0320] S-s            sous seuil (s=0.856553) : |x|max phase 2 2.9961e+00 ; ajustement libre alpha=0.0005 t*=400.0045 (T_MAX=400) disp_loc=2.163e-04 ; II gA^(p-2)/K=6.977e-10
+[0321] A-s            bascule pas 3857 t=23.1420 |x|=1.4955e+02 ; phase 2 836 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=9.276e-05 ; II : gA^(p-2)/K=1.000000 t*=23.150000
+[0322] A-s            bascule pas 3857 t=23.1420 |x|=1.4955e+02 ; phase 2 1672 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=2.484e-04 ; II : gA^(p-2)/K=1.000010 t*=23.150000
+[0323] A-s            bascule pas 3857 t=23.1420 |x|=1.4955e+02 ; phase 2 836 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=9.276e-05 ; II : gA^(p-2)/K=0.999990 t*=23.150000
+[0324] A-s            bascule pas 3857 t=23.1420 |x|=1.4955e+02 ; phase 2 3345 pas -> CAP ; point fixe en 2 it., 720 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=5.104e-04 ; II : gA^(p-2)/K=1.000010 t*=23.150000
+[0325] A-s            bascule pas 3932 t=23.5920 |x|=1.4955e+02 ; phase 2 836 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=9.276e-05 ; II : gA^(p-2)/K=1.000000 t*=23.600000
+[0326] A-s            bascule pas 3932 t=23.5920 |x|=1.4955e+02 ; phase 2 1672 pas -> CAP ; point fixe en 2 it., 360 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=2.484e-04 ; II : gA^(p-2)/K=1.000010 t*=23.600000
+[0327] A-s            bascule pas 3932 t=23.5920 |x|=1.4955e+02 ; phase 2 836 pas -> CAP ; point fixe en 2 it., 180 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=9.276e-05 ; II : gA^(p-2)/K=0.999990 t*=23.600000
+[0328] A-s            bascule pas 3932 t=23.5920 |x|=1.4955e+02 ; phase 2 3345 pas -> CAP ; point fixe en 2 it., 720 pts ; alpha=0.800000 (4/(p-2)=0.800000) disp_loc=5.104e-04 ; II : gA^(p-2)/K=1.000010 t*=23.600000
+[0329] S-s            sous seuil (s=1.524343) : |x|max phase 2 2.9961e+00 ; ajustement libre alpha=0.0004 t*=400.0037 (T_MAX=400) disp_loc=1.750e-04 ; II gA^(p-2)/K=3.380e-10
+[0330] BANC           G36 lecture corrigee : q = 2 mesure -> 18 points NON LUS, lecture NON JOUEE, verdict du v14 inchange MORD VERIFIE == VERIFIE ; non lus [6, 6, 6]
+[0331] BANC           G15 G-comptes 107 + 0 != 108 -> MANCHE NON JOUEE             MORD G-comptes MORD (107 + 0 != 108)
+[0332] BANC           G16 W-transcription : NPASSES=2 et k incoherent -> controle positif MORD MORD pas=2.84e-05 attendu(k=0)=6.03e-07 den=9863185 encadrement=[0.05, 6] seuil=0.9765731100045271 coherent=True
+[0333] BANC           G17 sous le seuil, un faux blow-up -> G-seuil MORD -> INSTRUMENT REFUTE MORD INSTRUMENT REFUTE / branche 1 : G-seuil MORD (exposant convergent sous le seuil)
+[0334] BANC           G18 alpha depend de s -> G-s MORD -> REFUTE branche 4, motif G-s MORD REFUTE / branche 4 : G-s p=4, G-s p=5, G-s p=7 MORD (alpha depend de s ou de w2)
+[0335] BANC           G20 W-integrales q_int(H1) = 3 -> MORD -> branche 6, QUALIFIE bonus retire MORD REGLAGE QUALIFIE (bonus T-3 retire) / branche 6 : T-3 mord seul (W-integrales, T-3a)
+[0336] BANC           G21 derive(dt/2) sous le plancher machine -> NON LUE (LD-16), pas de morsure MORD N : NON LUE (plancher, LD-16) ; H1 : PASSE
+[0337] BANC           G22 decalage lnA nul : dispersion sous le plancher' du v14 (LD-12 ; la lecture corrigee y est NON JOUEE) -> G-plancher MORD -> branche 3b MORD NON CONCLUANT DE PLANCHER / branche 3b : G-plancher MORD aux degres [4, 5, 7] (tol_lnA <= plancher : le modele fixe encore la tolerance ; v4 7)
+[0338] BANC           G23 chaine 2a+2b manufacturee : comptes DANS les intervalles derives, CAP' atteint MORD n_2a=341 [318,341] n_2b=361 [360,381]
+[0339] BANC           G24 etage 2a ABSENT : n_2a = 0 hors [318, 341] -> la garde de compte MORD (G-fen) MORD un 340 asserte ne l'aurait pas vu
+[0340] BANC           G25 n_2s > 340 SANS morsure : 362 dans [340, 362] a w2=1.73 (un 340 asserte = banc mort) MORD n_2s derive = 362
+[0341] BANC           G26 W-bascule voie A : g2 absente -> la lecture D-t-19 de la chaine complete MORD MORD e_avec sans g2 = 9.614e-01 (lecture D-t-19 : tol = 3.070e-01)
+[0342] BANC           G27 D-M17-58 : table factice au signe inverse a (5, 2.27) -> la garde MORD MORD 
+[0343] BANC           G28 9bis : ecart au perimetre -> 1 ecart ; meta et duree_s -> 0 ecart MORD 
+[0344] L-banc-faux    s=2.406602 sgn=+1 attendu EXPLOSE : instrument True (pas 1074), moteur True ; indice identique False -> ECART
+[0345] BANC           G19 physique corrompue (exposant p) contre le moteur -> G-lignee ECART MORD booleen True indice False
+[0346] NE-JOUE-PAS    lectures NON LUES : ['controle 9bis NON JOUE (pas de reference deposee)']
+[0347] NE-JOUE-PAS    gardes sans morsure demontree dans ce journal (17 enumerees des gels, 17 demontrees) : aucune
+[0348] NE-JOUE-PAS    runs du gel non joues : aucun (0 sautes)
+[0349] JSON           out_prevol_v15_temoin\resultats_temoin.json  27227 o  empreinte B 30681ffff8b306cf
+[0350] MANIFEST       out_prevol_v15_temoin\MANIFEST.sha256 : 5 fichiers, empreinte B a5a93e052694a865, taille 444
+[0351] FIN            temoin : REGLAGE QUALIFIE -- 138.7 s

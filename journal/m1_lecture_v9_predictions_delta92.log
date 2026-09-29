@@ -1,0 +1,184 @@
+LECTURE v8 -- machine 1 -- mode --predictions -- run m1_out/alpha_v15
+python 3.12.3 ; numpy 2.4.4
+  [chk PASSE] derivation du second ordre a son empreinte -- b70fca94d72822ad
+  [note] instrument -- banc_qualification_machine1_v15.py a1553f6eb5cc74b8
+  [note] run -- resultats_alpha.json convention B 541252658a7af032 ; verdict VERIFIE
+  [chk PASSE] trois niveaux de pas presents (dt, dt/2, dt/4) -- 3 niveau(x) ; q MESURE
+
+1. AJUSTEMENTS PAR POINT ET PAR NIVEAU
+  [chk PASSE] C0 4|1.73|1.05 plan : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 4|1.73|1.05 plan : M2 de rang 3 -- cond 2.57
+  [chk PASSE] C0 4|1.73|1.05 G_dt : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 4|1.73|1.05 G_dt : M2 de rang 3 -- cond 2.56
+  [chk PASSE] C0 4|1.73|1.05 G_dt4 : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 4|1.73|1.05 G_dt4 : M2 de rang 3 -- cond 2.57
+  [chk PASSE] C0 4|1.73|1.20 plan : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 4|1.73|1.20 plan : M2 de rang 3 -- cond 2.58
+  [chk PASSE] C0 4|1.73|1.20 G_dt : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 4|1.73|1.20 G_dt : M2 de rang 3 -- cond 2.57
+  [chk PASSE] C0 4|1.73|1.20 G_dt4 : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 4|1.73|1.20 G_dt4 : M2 de rang 3 -- cond 2.56
+  [chk PASSE] C0 4|2.27|1.05 plan : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 4|2.27|1.05 plan : M2 de rang 3 -- cond 2.55
+  [chk PASSE] C0 4|2.27|1.05 G_dt : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 4|2.27|1.05 G_dt : M2 de rang 3 -- cond 2.56
+  [chk PASSE] C0 4|2.27|1.05 G_dt4 : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 4|2.27|1.05 G_dt4 : M2 de rang 3 -- cond 2.56
+  [chk PASSE] C0 4|2.27|1.20 plan : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 4|2.27|1.20 plan : M2 de rang 3 -- cond 2.56
+  [chk PASSE] C0 4|2.27|1.20 G_dt : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 4|2.27|1.20 G_dt : M2 de rang 3 -- cond 2.57
+  [chk PASSE] C0 4|2.27|1.20 G_dt4 : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 4|2.27|1.20 G_dt4 : M2 de rang 3 -- cond 2.56
+  [chk PASSE] C0 4|2.80|1.05 plan : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 4|2.80|1.05 plan : M2 de rang 3 -- cond 2.54
+  [chk PASSE] C0 4|2.80|1.05 G_dt : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 4|2.80|1.05 G_dt : M2 de rang 3 -- cond 2.55
+  [chk PASSE] C0 4|2.80|1.05 G_dt4 : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 4|2.80|1.05 G_dt4 : M2 de rang 3 -- cond 2.56
+  [chk PASSE] C0 4|2.80|1.20 plan : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 4|2.80|1.20 plan : M2 de rang 3 -- cond 2.55
+  [chk PASSE] C0 4|2.80|1.20 G_dt : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 4|2.80|1.20 G_dt : M2 de rang 3 -- cond 2.56
+  [chk PASSE] C0 4|2.80|1.20 G_dt4 : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 4|2.80|1.20 G_dt4 : M2 de rang 3 -- cond 2.56
+  [chk PASSE] C0 5|1.73|1.05 plan : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 5|1.73|1.05 plan : M2 de rang 3 -- cond 2.72
+  [chk PASSE] C0 5|1.73|1.05 G_dt : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 5|1.73|1.05 G_dt : M2 de rang 3 -- cond 2.73
+  [chk PASSE] C0 5|1.73|1.05 G_dt4 : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 5|1.73|1.05 G_dt4 : M2 de rang 3 -- cond 2.72
+  [chk PASSE] C0 5|1.73|1.20 plan : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 5|1.73|1.20 plan : M2 de rang 3 -- cond 2.73
+  [chk PASSE] C0 5|1.73|1.20 G_dt : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 5|1.73|1.20 G_dt : M2 de rang 3 -- cond 2.72
+  [chk PASSE] C0 5|1.73|1.20 G_dt4 : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 5|1.73|1.20 G_dt4 : M2 de rang 3 -- cond 2.72
+  [chk PASSE] C0 5|2.27|1.05 plan : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 5|2.27|1.05 plan : M2 de rang 3 -- cond 2.72
+  [chk PASSE] C0 5|2.27|1.05 G_dt : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 5|2.27|1.05 G_dt : M2 de rang 3 -- cond 2.73
+  [chk PASSE] C0 5|2.27|1.05 G_dt4 : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 5|2.27|1.05 G_dt4 : M2 de rang 3 -- cond 2.72
+  [chk PASSE] C0 5|2.27|1.20 plan : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 5|2.27|1.20 plan : M2 de rang 3 -- cond 2.74
+  [chk PASSE] C0 5|2.27|1.20 G_dt : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 5|2.27|1.20 G_dt : M2 de rang 3 -- cond 2.73
+  [chk PASSE] C0 5|2.27|1.20 G_dt4 : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 5|2.27|1.20 G_dt4 : M2 de rang 3 -- cond 2.73
+  [chk PASSE] C0 5|2.80|1.05 plan : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 5|2.80|1.05 plan : M2 de rang 3 -- cond 2.72
+  [chk PASSE] C0 5|2.80|1.05 G_dt : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 5|2.80|1.05 G_dt : M2 de rang 3 -- cond 2.73
+  [chk PASSE] C0 5|2.80|1.05 G_dt4 : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 5|2.80|1.05 G_dt4 : M2 de rang 3 -- cond 2.72
+  [chk PASSE] C0 5|2.80|1.20 plan : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 5|2.80|1.20 plan : M2 de rang 3 -- cond 2.73
+  [chk PASSE] C0 5|2.80|1.20 G_dt : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 5|2.80|1.20 G_dt : M2 de rang 3 -- cond 2.72
+  [chk PASSE] C0 5|2.80|1.20 G_dt4 : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 5|2.80|1.20 G_dt4 : M2 de rang 3 -- cond 2.73
+  [chk PASSE] C0 7|1.73|1.05 plan : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 7|1.73|1.05 plan : M2 de rang 3 -- cond 2.94
+  [chk PASSE] C0 7|1.73|1.05 G_dt : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 7|1.73|1.05 G_dt : M2 de rang 3 -- cond 2.94
+  [chk PASSE] C0 7|1.73|1.05 G_dt4 : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 7|1.73|1.05 G_dt4 : M2 de rang 3 -- cond 2.94
+  [chk PASSE] C0 7|1.73|1.20 plan : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 7|1.73|1.20 plan : M2 de rang 3 -- cond 2.93
+  [chk PASSE] C0 7|1.73|1.20 G_dt : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 7|1.73|1.20 G_dt : M2 de rang 3 -- cond 2.93
+  [chk PASSE] C0 7|1.73|1.20 G_dt4 : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 7|1.73|1.20 G_dt4 : M2 de rang 3 -- cond 2.94
+  [chk PASSE] C0 7|2.27|1.05 plan : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 7|2.27|1.05 plan : M2 de rang 3 -- cond 2.95
+  [chk PASSE] C0 7|2.27|1.05 G_dt : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 7|2.27|1.05 G_dt : M2 de rang 3 -- cond 2.94
+  [chk PASSE] C0 7|2.27|1.05 G_dt4 : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 7|2.27|1.05 G_dt4 : M2 de rang 3 -- cond 2.94
+  [chk PASSE] C0 7|2.27|1.20 plan : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 7|2.27|1.20 plan : M2 de rang 3 -- cond 2.93
+  [chk PASSE] C0 7|2.27|1.20 G_dt : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 7|2.27|1.20 G_dt : M2 de rang 3 -- cond 2.94
+  [chk PASSE] C0 7|2.27|1.20 G_dt4 : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 7|2.27|1.20 G_dt4 : M2 de rang 3 -- cond 2.94
+  [chk PASSE] C0 7|2.80|1.05 plan : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 7|2.80|1.05 plan : M2 de rang 3 -- cond 2.94
+  [chk PASSE] C0 7|2.80|1.05 G_dt : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 7|2.80|1.05 G_dt : M2 de rang 3 -- cond 2.94
+  [chk PASSE] C0 7|2.80|1.05 G_dt4 : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 7|2.80|1.05 G_dt4 : M2 de rang 3 -- cond 2.94
+  [chk PASSE] C0 7|2.80|1.20 plan : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 7|2.80|1.20 plan : M2 de rang 3 -- cond 2.93
+  [chk PASSE] C0 7|2.80|1.20 G_dt : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 7|2.80|1.20 G_dt : M2 de rang 3 -- cond 2.93
+  [chk PASSE] C0 7|2.80|1.20 G_dt4 : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 7|2.80|1.20 G_dt4 : M2 de rang 3 -- cond 2.94
+
+2. ORDRE MESURE ET RICHARDSON, PAR POINT ; S(p) PAR MODELE
+  [note] 4|1.73|1.05 II -- lnA dt 3.8916133849 dt/2 3.8916124180 dt/4 3.8916123526 ; q 3.886 ; lnA_R 3.8916123479 ; obs_R +3.3969e-07
+  [note] 4|1.73|1.20 II -- lnA dt 3.8916134123 dt/2 3.8916124178 dt/4 3.8916123551 ; q 3.987 ; lnA_R 3.8916123508 ; obs_R +3.4268e-07
+  [note] 4|2.27|1.05 II -- lnA dt 3.8916133043 dt/2 3.8916124194 dt/4 3.8916123545 ; q 3.770 ; lnA_R 3.8916123494 ; obs_R +3.4124e-07
+  [note] 4|2.27|1.20 II -- lnA dt 3.8916133369 dt/2 3.8916124175 dt/4 3.8916123568 ; q 3.922 ; lnA_R 3.8916123525 ; obs_R +3.4436e-07
+  [note] 4|2.80|1.05 II -- lnA dt 3.8916133021 dt/2 3.8916124159 dt/4 3.8916123540 ; q 3.841 ; lnA_R 3.8916123494 ; obs_R +3.4124e-07
+  [note] 4|2.80|1.20 II -- lnA dt 3.8916133146 dt/2 3.8916124168 dt/4 3.8916123538 ; q 3.834 ; lnA_R 3.8916123491 ; obs_R +3.4092e-07
+   p = 4 : S_II 4.676e-09  S_M1 3.543e-09  S_M2 6.839e-09  S_M2- 9.881e-09  S_M2+ 4.375e-09
+  [note] 5|1.73|1.05 II -- lnA dt 2.2670080282 dt/2 2.2670077343 dt/4 2.2670077132 ; q 3.805 ; lnA_R 2.2670077116 ; obs_R +3.5178e-07
+  [note] 5|1.73|1.20 II -- lnA dt 2.2670080477 dt/2 2.2670077350 dt/4 2.2670077156 ; q 4.013 ; lnA_R 2.2670077143 ; obs_R +3.5447e-07
+  [note] 5|2.27|1.05 II -- lnA dt 2.2670080297 dt/2 2.2670077313 dt/4 2.2670077126 ; q 3.995 ; lnA_R 2.2670077113 ; obs_R +3.5147e-07
+  [note] 5|2.27|1.20 II -- lnA dt 2.2670080590 dt/2 2.2670077325 dt/4 2.2670077139 ; q 4.132 ; lnA_R 2.2670077128 ; obs_R +3.5292e-07
+  [note] 5|2.80|1.05 II -- lnA dt 2.2670080400 dt/2 2.2670077343 dt/4 2.2670077156 ; q 4.025 ; lnA_R 2.2670077143 ; obs_R +3.5449e-07
+  [note] 5|2.80|1.20 II -- lnA dt 2.2670080513 dt/2 2.2670077356 dt/4 2.2670077150 ; q 3.937 ; lnA_R 2.2670077135 ; obs_R +3.5371e-07
+   p = 5 : S_II 3.020e-09  S_M1 3.715e-09  S_M2 6.371e-09  S_M2- 7.176e-09  S_M2+ 5.423e-09
+  [note] 7|1.73|1.05 II -- lnA dt 1.1449995450 dt/2 1.1449994652 dt/4 1.1449994579 ; q 3.450 ; lnA_R 1.1449994571 ; obs_R +2.8291e-07
+  [note] 7|1.73|1.20 II -- lnA dt 1.1449993455 dt/2 1.1449992721 dt/4 1.1449992672 ; q 3.895 ; lnA_R 1.1449992668 ; obs_R +9.2593e-08
+  [note] 7|2.27|1.05 II -- lnA dt 1.1449995797 dt/2 1.1449994931 dt/4 1.1449994889 ; q 4.372 ; lnA_R 1.1449994887 ; obs_R +3.1445e-07
+  [note] 7|2.27|1.20 II -- lnA dt 1.1449996646 dt/2 1.1449995848 dt/4 1.1449995777 ; q 3.493 ; lnA_R 1.1449995770 ; obs_R +4.0280e-07
+  [note] 7|2.80|1.05 II -- lnA dt 1.1449996193 dt/2 1.1449995341 dt/4 1.1449995300 ; q 4.356 ; lnA_R 1.1449995297 ; obs_R +3.5553e-07
+  [note] 7|2.80|1.20 II -- lnA dt 1.1449995431 dt/2 1.1449994684 dt/4 1.1449994623 ; q 3.612 ; lnA_R 1.1449994617 ; obs_R +2.8753e-07
+   p = 7 : S_II 3.102e-07  S_M1 3.108e-07  S_M2 3.518e-09  S_M2- 2.062e-07  S_M2+ 1.831e-07
+  [chk PASSE] p = 7 : M2 gagne sur M1 d'un facteur >= 3 sur S -- 3.518e-09 / 3.108e-07
+  [chk PASSE] p = 7 : les frequences fausses ne gagnent pas (S > S_M1/3) -- 2.062e-07 1.831e-07
+
+3. MODES LIBRES A p = 7 : (a, c) DE M2 APRES RICHARDSON
+  [note] 7|1.73|1.05 -- a +9.698971e-09 c +1.296776e-07 | amplitude 1.300398e-07 phase +1.4961 rad | amp dt 4.715e-07 dt/2 1.519e-07
+  [note] 7|1.73|1.20 -- a -1.376792e-07 c +5.625047e-07 | amplitude 5.791088e-07 phase +1.8108 rad | amp dt 8.907e-07 dt/2 5.997e-07
+  [note] 7|2.27|1.05 -- a +3.843005e-08 c +8.077783e-08 | amplitude 8.945349e-08 phase +1.1267 rad | amp dt 4.136e-07 dt/2 1.036e-07
+  [note] 7|2.27|1.20 -- a +1.435975e-07 c -6.901102e-08 | amplitude 1.593197e-07 phase -0.4480 rad | amp dt 2.102e-07 dt/2 1.423e-07
+  [note] 7|2.80|1.05 -- a +3.297314e-08 c -6.521907e-08 | amplitude 7.308047e-08 phase -1.1027 rad | amp dt 2.606e-07 dt/2 5.059e-08
+  [note] 7|2.80|1.20 -- a -7.179939e-08 c +1.704109e-08 | amplitude 7.379398e-08 phase +2.9086 rad | amp dt 3.719e-07 dt/2 8.947e-08
+
+4. PREDICTION (a) -- BIAIS DU PREMIER ORDRE x LEVIER 1.3611, SUR L'AJUSTEMENT II
+  [note] 4|1.73|1.05 -- obs_R +3.3969e-07 pred +3.4606e-07 obs/pred 0.9816
+  [note] 4|1.73|1.20 -- obs_R +3.4268e-07 pred +3.4606e-07 obs/pred 0.9902
+  [note] 4|2.27|1.05 -- obs_R +3.4124e-07 pred +3.4607e-07 obs/pred 0.9861
+  [note] 4|2.27|1.20 -- obs_R +3.4436e-07 pred +3.4607e-07 obs/pred 0.9951
+  [note] 4|2.80|1.05 -- obs_R +3.4124e-07 pred +3.4606e-07 obs/pred 0.9861
+  [note] 4|2.80|1.20 -- obs_R +3.4092e-07 pred +3.4606e-07 obs/pred 0.9851
+  [chk PASSE] (a) p = 4 : obs_R/pred dans [0.8, 1.2] aux six ET |obs_R - pred| <= 3 S(p) -- TIENT ; ratios 0.982 0.990 0.986 0.995 0.986 0.985 ; 3S 1.40e-08
+  [note] 5|1.73|1.05 -- obs_R +3.5178e-07 pred +3.5799e-07 obs/pred 0.9826
+  [note] 5|1.73|1.20 -- obs_R +3.5447e-07 pred +3.5799e-07 obs/pred 0.9902
+  [note] 5|2.27|1.05 -- obs_R +3.5147e-07 pred +3.5799e-07 obs/pred 0.9818
+  [note] 5|2.27|1.20 -- obs_R +3.5292e-07 pred +3.5799e-07 obs/pred 0.9858
+  [note] 5|2.80|1.05 -- obs_R +3.5449e-07 pred +3.5799e-07 obs/pred 0.9902
+  [note] 5|2.80|1.20 -- obs_R +3.5371e-07 pred +3.5799e-07 obs/pred 0.9880
+  [chk PASSE] (a) p = 5 : obs_R/pred dans [0.8, 1.2] aux six ET |obs_R - pred| <= 3 S(p) -- TIENT ; ratios 0.983 0.990 0.982 0.986 0.990 0.988 ; 3S 9.06e-09
+  [note] 7|1.73|1.05 -- obs_R +2.8291e-07 pred +3.2647e-07 obs/pred 0.8666
+  [note] 7|1.73|1.20 -- obs_R +9.2593e-08 pred +3.2647e-07 obs/pred 0.2836
+  [note] 7|2.27|1.05 -- obs_R +3.1445e-07 pred +3.2647e-07 obs/pred 0.9632
+  [note] 7|2.27|1.20 -- obs_R +4.0280e-07 pred +3.2647e-07 obs/pred 1.2338
+  [note] 7|2.80|1.05 -- obs_R +3.5553e-07 pred +3.2647e-07 obs/pred 1.0890
+  [note] 7|2.80|1.20 -- obs_R +2.8753e-07 pred +3.2647e-07 obs/pred 0.8807
+  [chk MORD ] (a) p = 7 : obs_R/pred dans [0.8, 1.2] aux six ET |obs_R - pred| <= 3 S(p) -- NON ; ratios 0.867 0.284 0.963 1.234 1.089 0.881 ; 3S 9.31e-07
+
+5. PREDICTION (b) -- TRANSPORT DES MODES LIBRES A p = 7 (base base_modes_libres_n21_machine1_v2.json)
+  [chk PASSE] (b) 7|1.73|1.05 : amplitude a 20 pour cent et phase a 0.3 rad de la base transportee -- amp 1.300e-07 attendu 1.375e-07 (0.946) ; phase +1.496 attendu +1.502 (-0.006 rad)
+  [chk PASSE] (b) 7|1.73|1.20 : amplitude a 20 pour cent et phase a 0.3 rad de la base transportee -- amp 5.791e-07 attendu 5.770e-07 (1.004) ; phase +1.811 attendu +1.812 (-0.001 rad)
+  [chk PASSE] (b) 7|2.27|1.05 : amplitude a 20 pour cent et phase a 0.3 rad de la base transportee -- amp 8.945e-08 attendu 9.327e-08 (0.959) ; phase +1.127 attendu +1.137 (-0.010 rad)
+  [chk PASSE] (b) 7|2.27|1.20 : amplitude a 20 pour cent et phase a 0.3 rad de la base transportee -- amp 1.593e-07 attendu 1.604e-07 (0.993) ; phase -0.448 attendu -0.456 (+0.008 rad)
+  [chk PASSE] (b) 7|2.80|1.05 : amplitude a 20 pour cent et phase a 0.3 rad de la base transportee -- amp 7.308e-08 attendu 7.183e-08 (1.017) ; phase -1.103 attendu -1.101 (-0.002 rad)
+  [chk PASSE] (b) 7|2.80|1.20 : amplitude a 20 pour cent et phase a 0.3 rad de la base transportee -- amp 7.379e-08 attendu 7.302e-08 (1.011) ; phase +2.909 attendu +2.944 (-0.036 rad)
+   (b) : 6 des six points tiennent
+
+BILAN : 121 controles, 1 mordent : (a) p = 7 : obs_R/pred dans [0.8, 1.2] aux six ET |obs_R - pred| <= 3 S(p)
+sortie m1_lecture_v9_predictions_delta92.json convention B af295b8a660d33e8

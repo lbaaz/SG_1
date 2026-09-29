@@ -1,0 +1,98 @@
+CERTIFICATION MACHINE 2 DU GEL v9 ET DE L INSTRUMENT v15
+python 3.11.9 ; certif_v9_v15_machine2_v1.py
+
+0. ANCRES ET PROVENANCE
+  [chk PASSE] canon banc_qualification_machine1_v14.py -- dc91676c640d4323
+  [chk PASSE] canon banc_qualification_machine1_v15.py -- a1553f6eb5cc74b8
+  [chk PASSE] canon constante_A_pre_enregistrement_v8.md -- 800fc6a9a8e56e49
+  [chk PASSE] canon constante_A_pre_enregistrement_v9.md -- b515abc5a6da73c5
+  [chk PASSE] canon construction_gel_v9_banc_v15_machine1_v1.py -- d6d7ac766b8f5ac6
+  [chk PASSE] canon derivation_second_ordre_machine2_v1.json -- b70fca94d72822ad
+  [chk PASSE] canon lecture_v9_machine1_v1.py -- 4144c0086a3a99e7
+  [chk PASSE] PB-1 : le v8 et le v14 ne sont pas edites
+
+1. RECONSTRUCTION : LE GEL v9 ET LE BANC v15 DEPUIS LE v8 ET LE v14
+  [chk PASSE] 1 constante_A_pre_enregistrement_v9.md reconstruit IDENTIQUE AU BIT depuis le depose -- canon reconstruit b515abc5a6da73c5
+  [chk PASSE] 1 banc_qualification_machine1_v15.py reconstruit IDENTIQUE AU BIT depuis le depose -- canon reconstruit a1553f6eb5cc74b8
+  [chk PASSE] 1 derives_v9.json : meme convention B malgre les fins de ligne -- 156f9a455f52313e / 156f9a455f52313e
+  [note] 1 derives_v9.json portee -- le brut differe (CRLF ici, LF chez machine 1) ; la convention B normalise et le manifeste porte bien l empreinte B -- aucun ecart de fond
+
+2. LE PLANCHER CORRIGE, RE-DERIVE PAR MES PROPRES FORMULES
+  [chk PASSE] 2.1 : la forme close de c1 ET c2 est EXACTE aux neuf (p, w2) contre ma derivation
+  [chk PASSE] 2.1 temoin : c2(7, 1.73) = 603151178891/25348416000000 -- 603151178891/25348416000000
+  [chk PASSE] 2.2 p=4 : plancher_corr re-derive == celui ECRIT au gel 7bis (5.1949e-14) -- 5.194891e-14
+  [chk PASSE] 2.2 p=5 : plancher_corr re-derive == celui ECRIT au gel 7bis (1.2236e-13) -- 1.223649e-13
+  [chk PASSE] 2.2 p=7 : plancher_corr re-derive == celui ECRIT au gel 7bis (3.1818e-13) -- 3.181768e-13
+  [chk PASSE] 2.3 : derives_v9.json porte les memes planchers que je re-derive
+  [chk PASSE] 2.4 : proj4 = 0.2238 est la BORNE HAUTE de MA mesure (0.2195 a 0.2238) -- 0.2238
+  [chk PASSE] 2.5 : le gel cite MA derivation du plancher par son canon (3b12117a58dde698)
+  [chk PASSE] 2.6 : la DETTE est declaree au gel -- machine 1 n a pas re-derive proj4
+  [note] 2.6 portee de la dette -- ma prescription demandait "le v15 re-derive proj4 chez lui" ; machine 1 cite par canon et l ECRIT au gel 7bis. La piece reste a une seule machine : je le consigne, je ne le fais pas mordre (quatre ordres sous S rendent l ecart sans portee)
+  [chk PASSE] 2.7 : le plancher corrige vaut de l ordre de 1e-07 fois celui du v7 -- {4: '3.4e-08', 5: '5.7e-08', 7: '1.1e-07'}
+
+3. R-v8-1 -- G-PLANCHER SUR LE COUPLE CORRIGE : LA PORTE PEUT-ELLE ENCORE MORDRE ?
+  [note] S(p) MESURE au 91 (n = 21, Q5, deux machines) -- {4: '5.8409e-09', 5: '3.7415e-09', 7: '4.3775e-09'}
+  [chk PASSE] 3.1 p=4 : le S du gel 7 est bien celui de MON Q5 (5.8e-09) -- 5.8409e-09
+  [chk PASSE] 3.1 p=5 : le S du gel 7 est bien celui de MON Q5 (3.7e-09) -- 3.7415e-09
+  [chk PASSE] 3.1 p=7 : le S du gel 7 est bien celui de MON Q5 (4.4e-09) -- 4.3775e-09
+  [note] 3.2 transport par pente mesuree 85 -> 91 -- tol/plancher_corr = {4: '1.2e+05', 5: '3.4e+04', 7: '1.7e+04'} ; degres mordus aucun
+  [chk PASSE] 3.2 pente mesuree 85 -> 91 : AUCUN degre mordu sur le couple corrige
+  [chk PASSE] 3.2 pente mesuree 85 -> 91 : rapport tol/plancher de 1e+04 a 1e+05 comme le gel l annonce -- {4: '1.2e+05', 5: '3.4e+04', 7: '1.7e+04'}
+  [note] 3.2 transport par troncature en dt^4 -- tol/plancher_corr = {4: '2.1e+05', 5: '5.7e+04', 7: '2.5e+04'} ; degres mordus aucun
+  [chk PASSE] 3.2 troncature en dt^4 : AUCUN degre mordu sur le couple corrige
+  [chk PASSE] 3.2 troncature en dt^4 : rapport tol/plancher de 1e+04 a 1e+05 comme le gel l annonce -- {4: '2.1e+05', 5: '5.7e+04', 7: '2.5e+04'}
+  [note] 3.3 contraste avec le v7 -- au 91 les grandeurs du v7 mordaient aux trois degres (0.869 / 0.208 / 0.042) : c est ce que ma certification du v8 avait etabli et qui fondait R-v8-1
+  [chk PASSE] 3.4 : le gel 7 conserve les grandeurs du v7 sous v14_* au lieu de les effacer
+  [chk PASSE] 3.5 : le gel dit qu une morsure de 3b est un defaut d INSTRUMENT, pas un reglage
+  [chk PASSE] 3.6 : l attendu de conception ne se calcule PLUS sur le 85
+
+4. LES CINQ REPRISES, UNE PAR UNE
+  [chk PASSE] R-v8-1 : la section 7 lit G-plancher sur le COUPLE CORRIGE
+  [chk PASSE] R-v8-1 : une section 7bis derive le plancher corrige
+  [chk PASSE] R-v8-2 : ce que 5bis annonce est IMPLEMENTE au v15 -- lnA_M a chaque cellule
+  [chk PASSE] R-v8-2 : ce que 5bis annonce est IMPLEMENTE au v15 -- q mesure (Richardson)
+  [chk PASSE] R-v8-2 : ce que 5bis annonce est IMPLEMENTE au v15 -- lnA_R
+  [chk PASSE] R-v8-2 : ce que 5bis annonce est IMPLEMENTE au v15 -- S(p)
+  [chk PASSE] R-v8-2 : ce que 5bis annonce est IMPLEMENTE au v15 -- tol_lnA sur le couple corrige
+  [chk PASSE] R-v8-2 : ce que 5bis annonce est IMPLEMENTE au v15 -- points non lus enumeres
+  [chk PASSE] R-v8-2 : ce que 5bis annonce est IMPLEMENTE au v15 -- plancher corrige
+  [chk PASSE] R-v8-2 : la P-A a deux regimes est CALCULEE (v14_* et couple corrige)
+  [chk PASSE] R-v8-3 : le compte du gel vaut 108 et egale celui que l instrument derive -- gel 108 | instrument 108
+  [chk PASSE] R-v8-3 : le quatrieme etage G_dt4 est NOMME dans les comptes
+  [chk PASSE] R-v8-4 : la feuille ne tape plus le biais arrondi (2.5425e-07 absent)
+  [chk PASSE] R-v8-4 : la feuille RE-DERIVE le biais du JSON de la derivation
+  [chk PASSE] R-v8-4 p=4 : la prediction (a) est re-derivee par (p, w2), pas tapee -- {'1.73': '3.460593e-07', '2.27': '3.460673e-07', '2.80': '3.460624e-07'}
+  [chk PASSE] R-v8-4 p=5 : la prediction (a) est re-derivee par (p, w2), pas tapee -- {'1.73': '3.579949e-07', '2.27': '3.579944e-07', '2.80': '3.579915e-07'}
+  [chk PASSE] R-v8-4 p=7 : la prediction (a) est re-derivee par (p, w2), pas tapee -- {'1.73': '3.264729e-07', '2.27': '3.264710e-07', '2.80': '3.264709e-07'}
+  [chk PASSE] R-v8-5 : aucun separateur colle a son titre -- 0 ligne(s)
+
+5. LES TROIS DEFAUTS DE MA PRESCRIPTION, DANS LE SOURCE DU v15
+  [chk PASSE] D-essai-1 : une lecture corrigee absente est une CONSIGNE, jamais une invalidation
+  [chk PASSE] D-essai-1 : le v15 CITE le log du premier essai qui l a revele (623bc17a04259d7d)
+  [chk PASSE] D-essai-2 : le banc porte un scenario ou le G-plancher CORRIGE mord (G35)
+  [chk PASSE] D-essai-2 : et un scenario ou q sort de [3, 5] et les points sont NON LUS (G36)
+  [chk PASSE] D-essai-3 : le v15 prend proj4 DERIVE, pas la borne <= 1
+  [chk PASSE] 5.4 : le v15 credite l essai de machine 2 par son canon
+  [chk PASSE] 5.5 : le pin GEL_ALPHA du v15 porte le chemin, le canon ET la taille du gel v9 -- GEL_ALPHA = ("gels/constante_A_pre_enregistrement_v9.md", "b515abc5a6da73c5", 50206)
+  [chk PASSE] 5.6 : la ligne FIN du gel figure une seule fois
+
+6. LES EPREUVES DE L INSTRUMENT v15, REJOUEES SUR BOCAL4
+  [chk PASSE] 6 selftest : 103/103 chez moi -- 103/103 (journal 7055fcb9a3ff33b9)
+  [chk PASSE] 6 selftest : mon resultat == celui de machine 1 -- moi 103/103 | machine 1 103/103
+  [chk PASSE] 6 banc qui tue : 58/58 chez moi -- 58/58 (journal 4e972d8de75095d1)
+  [chk PASSE] 6 banc qui tue : mon resultat == celui de machine 1 -- moi 58/58 | machine 1 58/58
+  [chk PASSE] 6 pre-vol temoin : mon resultat == celui de machine 1 -- moi REGLAGE QUALIFIE -- branche 5 : T-1 R = q, T-1b les deux loi | machine 1 REGLAGE QUALIFIE -- branche 5 : T-1 R = q, T-1b les deux loi
+  [chk PASSE] 6 pre-vol alpha : mon resultat == celui de machine 1 -- moi LIEN NON ETABLI (9/27) -- VERIFIE -- branche 5 : P-alpha les | machine 1 LIEN NON ETABLI (9/27) -- VERIFIE -- branche 5 : P-alpha les
+  [chk MORD ] 6.5 : le MANIFESTE du lot decrit correctement le compte du banc -- le banc rend 58/58 ; le manifeste et la note 0 annoncent "banc 103/103", qui est le compte du SELFTEST ; la note 3 annonce bien 58/58
+  [chk PASSE] 6.6 G35 : exerce la lecture corrigee et rend la meme chose sur les deux machines --        G35 lecture corrigee : q = 4 MESURE aux 18 points et S_p = 0 -> G-plancher CORRIGE MORD -> branche 3b MORD N
+  [chk PASSE] 6.6 G36 : exerce la lecture corrigee et rend la meme chose sur les deux machines --        G36 lecture corrigee : q = 2 mesure -> 18 points NON LUS, lecture NON JOUEE, verdict du v14 inchange MORD VE
+
+7. LA BASE DES MODES LIBRES, REJOUEE CHEZ MOI
+  [chk PASSE] 7.1 : ma lecture v9 en mode --base rend 0 morsure sur 75 controles -- BILAN : 75 controles, 0 mordent
+  [note] 7.1 portee -- le controle C0 exige l instrument QUI A PRODUIT le run : le 91 est un run du v13. Joue avec le v15 il rend 36 morsures a 1e-07 -- ce n est pas un ecart de machine, c est le mauvais instrument ; joue avec le v13 il rend 0/75
+  [chk PASSE] 7.2 : ma base rejouee == celle de machine 1 a 1e-15 ABSOLU sur (a, c) -- 1.942e-16
+  [chk PASSE] 7.3 : ma base v2 reproduit ma base v1 AU BIT (0a7d411197d0603d) -- 0a7d411197d0603d
+  [note] 7.4 canons croises -- machine 1 rend 79099ef4ea51adf6, moi 0a7d411197d0603d : le canon d une base AJUSTEE reste machine-dependant (etabli a la certification du v8) ; seule la table imprimee se reproduit
+
+BILAN : 69 controles, 1 mordent
+   MORD : 6.5 : le MANIFESTE du lot decrit correctement le compte du banc

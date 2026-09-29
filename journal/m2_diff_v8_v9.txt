@@ -1,0 +1,271 @@
+--- constante_A_pre_enregistrement_v8.md	2026-09-18 10:59:41.226621200 +0200
++++ constante_A_pre_enregistrement_v9.md	2026-09-21 23:15:00.426644300 +0200
+@@ -1,22 +1,21 @@
+-# PRE-ENREGISTREMENT constante A v8 -- LE TERME DU PREMIER ORDRE EST DERIVE ; CE
+-# GEL LE TESTE EN AVEUGLE PAR SA PROPORTIONNALITE A delta' (n = 18, levier 441/324)
+-# ET PRE-ENREGISTRE LES MODES LIBRES A p = 7 ; RICHARDSON A ORDRE MESURE
++# PRE-ENREGISTREMENT constante A v9 -- LE TERME DU PREMIER ORDRE EST DERIVE ; CE
++# GEL LE TESTE EN AVEUGLE PAR SA PROPORTIONNALITE A delta' (n = 18, levier 441/324),
++# PRE-ENREGISTRE LES MODES LIBRES A p = 7, ET PORTE LA P-A CORRIGEE DANS L'INSTRUMENT
+ # BROUILLON MACHINE 1 -- DEVIENT GEL A LA CERTIFICATION MACHINE 2
+-# v8 = v7 (a2b8463372e1f906, CERTIFIEE 114/114 par machine 2 et contresignee par
+-# machine 1, REMPLACEE, non editee) + les hunks enumeres par
+-# construction_gel_v8_banc_v14_machine1_v1.py :
+-#   H1  3.2 : regle d'ECHELLE -- n = 18 (delta' = 1/32400), le barreau de levier
+-#       maximal qui ouvre la porte (balayage machine 1 ; BOCAL4 a jouer avant tout run) ;
+-#       la regle du v7 (le plus grand n) est suspendue, ce gel ne mesure pas A.
+-#   H2  tous les nombres du reglage re-derives a n = 18 (3.3, 4.1, 4.3-4.8, 6, 7, 9,
+-#       10, 12 ; 1/441 -> 1/324) par les formules de la construction du v6.
+-#   H3  section 5bis : modeles M1 (p = 4, 5) et M2 (p = 7) a coefficients DERIVES,
+-#       tests negatifs, Richardson a ordre MESURE (troisieme niveau), et les deux
+-#       predictions en aveugle (biais x 441/324 ; transport des modes libres).
+-#   H4  section 10 : instrument v14 = v13 certifie + etage dt_2b/4, meme script.
+-#   H5  sections 12 et 13 : ce que ce gel ne dit pas ; les pieces du second ordre.
+-# Aucun nombre de fond du v7 ne change hors le reglage ; la phrase de 9 aux bornes
+-# non tracees (D-v7-1) est REMPLACEE par une phrase sourcee (H5).
++# v9 = v8 (800fc6a9a8e56e49, NON CERTIFIE par machine 2 -- 45de25ac61321661, cinq
++# reprises --, REMPLACE, non edite) + les reprises, appliquees par
++# construction_gel_v9_banc_v15_machine1_v1.py :
++#   R-v8-1  section 7 sur le COUPLE CORRIGE ; attendu sur les dispersions du 91 ;
++#           cascade 3.5 reprise ; section 7bis neuve : le plancher corrige (forme
++#           close de c2, proj4 mesure par machine 2, valeurs a n = 18).
++#   R-v8-2  5bis : la P-A est ce que l'instrument v15 calcule (arbitrage operateur du
++#           18/09 : la voie longue) ; v14_* conserves ; lecture absente = consigne.
++#   R-v8-3  section 11 : 108, le quatrieme etage nomme.
++#   R-v8-4  les biais du 91 RE-DERIVES du JSON de la derivation, par (p, w2).
++#   R-v8-5  le separateur de 5bis decolle de son titre.
++#   H       section 10 : instrument v15 ; section 13 : les pieces du 18/09.
++# Le reglage (n = 18), les modeles, Richardson a ordre mesure, les deux predictions
++# en aveugle et Q5 sont INCHANGES : rien de ce qui mordait ne les touchait.
+ # Banc de verification (N-69 : sans numero de manche ; numero du delta au
+ # depot, N-68). Plume machine 1 sur arbitrage operateur du 2026-08-28
+ # (ouverture de l'etape A, "go"). Aucun run avant certification croisee.
+@@ -100,7 +99,7 @@
+            c dans {0.95, 1.05, 1.20} sur s* de la carte ; sgn de 4.4 :
+            p = 4 a sgn = +1 ; p = 5, 7 au signe frag de leur seuil
+            (+1 a 1.73 ; -1 a 2.27 et 2.80, verifie au bit sur le run 85) ;
+-           comptes + sautes == 90
++           comptes + sautes == 108
+     5.2    phase 1 : dt_1 = 0.006, T_MAX = 400, schema depose
+     5.3    la bascule (k = 2), seuils par degre et par point -- elle
+            devient la bascule de l'ETAGE 2a (section 4 ci-dessous)
+@@ -462,7 +461,9 @@
+ Volet T non qualifie -> **ARRET DE PORTE**, le volet A ne se joue pas,
+ et le delta l'ecrit tel quel.
+ 
+-===================================================================5bis. LES MODELES D'AJUSTEMENT, RICHARDSON A ORDRE MESURE, ET LES DEUX
++=======================================================================
++
++5bis. LES MODELES D'AJUSTEMENT, RICHARDSON A ORDRE MESURE, ET LES DEUX
+       PREDICTIONS EN AVEUGLE (chantier du second ordre, delta 91 nn.5)
+ =======================================================================
+ 
+@@ -504,11 +505,15 @@
+ 
+ PREDICTION EN AVEUGLE (a) -- LE BIAIS DU PREMIER ORDRE EST PROPORTIONNEL A delta' :
+   lu sur l'ajustement II sans c1, apres Richardson a ordre mesure, contre
+-  ln(K/g)/(p-2) : pred(p) = biais(91) x 441/324 = 3.4606e-07 (p = 4), 3.5800e-07 (p = 5),
+-  3.2648e-07 (p = 7, lisible sous M2 seulement). TIENT au degre si obs_R/pred est dans
+-  [0.8, 1.2] aux six points ET |obs_R - pred| <= 3 S(p) ; NON sinon. Contre
+-  "biais constant" l'ecart est 36 pour cent ; contre une loi de modes libres
+-  delta'^((alpha+3/2)/2), 26 / 15 / 5 pour cent aux p = 4 / 5 / 7 (R3).
++  ln(K/g)/(p-2) : pred(p, w2) = biais_91(p, w2) x 441/324, biais_91 RE-DERIVE du JSON
++  de la derivation (C4, decalage 0.0, b70fca94d72822ad), jamais tape :
++    p = 4 : 3.460593e-07 (w2 1.73) / 3.460673e-07 (w2 2.27) / 3.460624e-07 (w2 2.80)
++    p = 5 : 3.579949e-07 (w2 1.73) / 3.579944e-07 (w2 2.27) / 3.579915e-07 (w2 2.80)
++    p = 7 : 3.264729e-07 (w2 1.73) / 3.264710e-07 (w2 2.27) / 3.264709e-07 (w2 2.80)   (lisible sous M2 seulement)
++  TIENT au degre si obs_R/pred est dans [0.8, 1.2] aux six points ET |obs_R - pred|
++  <= 3 S(p) ; NON sinon. Contre "biais constant" l'ecart est 36 pour cent ; contre
++  une loi de modes libres delta'^((alpha+3/2)/2), 26 / 15 / 5 pour cent aux
++  p = 4 / 5 / 7 (R3).
+ 
+ PREDICTION EN AVEUGLE (b) -- LE TRANSPORT DES MODES LIBRES A p = 7 : la trajectoire
+   est la meme jusqu'a la bascule, donc l'amplitude e du mode libre aussi ; dans la
+@@ -527,14 +532,23 @@
+   rad de l'ajustement a n = 18 (l'ecart de grille de Q5, F4, borne les deux) ;
+   la lecture rend le compte des six.
+ 
+-CE QUE CES PREDICTIONS NE SONT PAS : une mesure de A (la lecture P-A reste celle
+-de 10.3, a deux regimes : instrument-limite a p = 4 et 5 -- tolerance S(p) + residu
+-de Richardson --, et a p = 7 sous M2 ; le second ordre c2 et la puissance de M2
+-sur d'autres degres restent hors de ce gel). La feuille de lecture qui joue tout
+-cela est deposee avec ce gel (lecture_v8_machine1_v1.py) et se joue sur les series
+-que l'instrument depose, par les deux machines.
++CE QUE LA P-A DEVIENT, TELLE QUE L'INSTRUMENT v15 LA CALCULE (R-v8-2) : a chaque
++cellule, a cote de l'ajustement II conserve (lnA_II), l'ajustement CORRIGE
++(lnA_M : M1 a p = 4, 5 ; M2 a p = 7, coefficients derives) ; au depouillement,
++par point, q MESURE sur les trois niveaux et lnA_R par Richardson (q hors [3, 5]
++-> point NON LU, enumere avec son motif) ; par degre, S(p) = max - min des lnA_R,
++tol_lnA = max(S(p), plancher_corr(p)) (7bis), G-plancher et P-A lus sur le
++COUPLE CORRIGE : P-A vraie au degre si |lnA_R - ln(K/g)/(p-2)| <= tol_lnA aux
++points lus. Les grandeurs du v7 (LD-12 : dispersion, tol, G-plancher, P-A) sont
++CONSERVEES sous v14_*. Une lecture corrigee absente (moins de deux points lus)
++est une CONSIGNE : les grandeurs du v7 restent, le verdict est celui du v7
++(D-essai-1). Ce que ces predictions ne sont pas : une mesure de A au sens d'une
++valeur -- la P-A est un test ; le second ordre c2 n'entre que par le plancher
++7bis. La feuille de lecture deposee avec ce gel (lecture_v9_machine1_v1.py)
++joue les deux predictions sur les series que l'instrument depose, par les deux
++machines, et RE-DERIVE le biais du 91 du JSON de la derivation.
+ 
+-====
++=======================================================================
+ 6. LES NOMBRES DE CE GEL (regle 13) -- derives d'abord, tapes ensuite
+ =======================================================================
+ 
+@@ -547,35 +561,61 @@
+                         du run 85 (cle /reglage, 6d7d23130e9322f8)
+ 
+ ====
+-7. LA PORTE DU PLANCHER (G-plancher) -- la question meme du banc
++7. LA PORTE DU PLANCHER (G-plancher) -- la question meme du banc, sur le
++   COUPLE CORRIGE (R-v8-1)
+ =======================================================================
+ 
+-Au depouillement, par degre, sur les grandeurs DU RUN :
++Au depouillement du volet A, par degre : tol_lnA(p) = max(S(p), plancher_corr(p)),
++S(p) = max - min des six lnA_R (Richardson a ordre mesure sur l'ajustement
++corrige), plancher_corr(p) le plancher du terme suivant, derive en 7bis.
++G-plancher MORD au degre p si tol_lnA(p) <= plancher_corr(p) -- comparaison de
++bord exacte (regle 15). La branche 3b (NON CONCLUANT DE PLANCHER) est lue AVANT
++P-A, comme au v5 ; mais elle est lue sur le couple corrige.
++
++Attendu de conception, sur ce que le run 91 a MESURE (jamais sur le 85) : S_M1(4)
++= 5.8e-09, S_M1(5) = 3.7e-09, S_M2(7) = 4.4e-09 a n = 21 (Q5, deux machines) ;
++transportes a n = 18 par les deux lois (pente mesuree 85 -> 91 ; troncature en
++dt^4) ils restent entre 4e-09 et 1e-08. Contre des planchers corriges de
++5.2e-14 / 1.2e-13 / 3.2e-13, tol_lnA/plancher_corr vaut 1e+04 a 1e+05 : la porte ne
++peut mordre que si S(p) s'effondre sous 1e-13, ce qu'un double ne rend pas --
++elle redevient un CONTROLE (une morsure y serait un defaut d'instrument, pas
++un fait). Les grandeurs du v7 restent lisibles sous v14_* : au 91 elles
++mordaient aux trois degres (0.869, 0.208, 0.042), et elles mordraient encore
++a n = 18 sous les deux lois de transport (machine 2, certification du v8) --
++c'est pourquoi le plancher du v7 ne sert plus de porte.
++
++Cascade 3.5 (v8 3.5 reprise) : si 3b mord sur le couple corrige, le run est
++NON CONCLUANT DE PLANCHER et le defaut est d'INSTRUMENT (S sous le plancher
++corrige) : pas de v10 de reglage, une lecture du depouillement ; si le pre-vol
++BOCAL4 rend branche 4 a n = 18 (il a rendu branche 5, marge 1.868), la cascade
++du v7 3.5 s'applique. Un seul pas par run.
++
++7bis. LE PLANCHER CORRIGE -- forme, derivation, portee (machine 2, 18/09 ;
++      re-derive par construction ici)
++=======================================================================
++
++  Forme close du terme suivant (exacte, Fraction ; verifiee EXACTE aux neuf
++  (p, w2) contre la derivation b70fca94d72822ad par ce script) :
++    a = 4/(p-2) ; K = a(a+1)(a+2)(a+3) ; P2 = a(a+1)(a-1)(a-2) ;
++    P4 = (4-a)(3-a)(2-a)(1-a)
++    c1 = (1 + w2^2) a (a+1) / ((p-1) K - P2)
++    c2 = [ K (p-1)(p-2)/2 c1^2 - (1 + w2^2) c1 (2-a)(1-a) - w2^2 ] / [ P4 - (p-1) K ]
++  Plancher : plancher_corr(p) = proj4 x max_w2 |c2(p, w2)| tau_dom'(w2)^4,
++  proj4 le facteur de projection du terme tau^4 sur la fenetre d'ajustement,
++  MESURE en precision etendue par machine 2 (derivation_plancher_corrige v3,
++  3b12117a58dde698 : 0.2195 a 0.2238 selon le compte de points ; en double le
++  terme n'est pas mesurable, il pese 1e-13 contre un bruit de chaine 3e-14).
++  Valeur prise : proj4 = 0.2238, borne HAUTE de l'intervalle mesure ; machine 1
++  ne l'a pas re-derivee (dette declaree : la valeur est celle de machine 2,
++  citee par canon, et quatre ordres sous S rendent l'ecart sans portee).
++  A n = 18 (delta' = 1/32400) :
++    p = 4 : 5.1949e-14     p = 5 : 1.2236e-13     p = 7 : 3.1818e-13
++  soit 1e-07 fois le plancher du v7 et 1e-05 fois S(p) du 91. Portee : ce
++  plancher borne le terme ANALYTIQUE suivant ; a p = 7 le mode libre est
++  AJUSTE par M2, non borne, et ce qui reste apres lui se MESURE au run (S(p)
++  le porte). Rien ici ne promet davantage.
+ 
+-    G-plancher MORD au degre p si tol_lnA(p) <= plancher_lnA(p)
+-    (la dispersion de la grille ne depasse pas le plancher : le modele
+-    fixe encore la tolerance, P-A n'y est pas une mesure).
+-
+-JUSTIFICATION DE BORD (regle 15, ecrite) : tol_lnA = max(dispersion,
+-plancher) PROPAGE le double IDENTIQUE du plancher quand celui-ci
+-domine ; l'egalite du test est alors une egalite d'objet, pas une
+-coincidence d'arrondi -- la comparaison de bord est exacte par
+-construction. Au cas d'egalite au bit dispersion == plancher, max()
+-rend l'un des deux memes doubles et G-plancher MORD : cote
+-conservateur, le banc prefere se taire que mesurer au bord.
+-
+-Un degre mordu est **NON CONCLUANT DE PLANCHER**. S'il ne reste pas
+-TROIS degres exploitables et non mordus, le banc rend NON CONCLUANT DE
+-PLANCHER global. `tol_lnA(p)/plancher_lnA(p)` se CONSIGNE a chaque
+-degre, passe ou non (v5 10.3) -- attendu de conception : 1.28 / 1.12 / 2.56
+-aux p = 4 / 5 / 7 (3.3, m = 1.12 au plus contraint), mais c'est le run qui
+-parle, pas la conception.
+-
+-G-plancher se compare a une grandeur qui ne contient pas son ecart et
+-qui porte une echelle (le plancher, fixe par le modele et delta') : il
+-est conforme a la proposition non prise (a) du 85 sans la prejuger.
+-
+-=======================================================================
++====================
+ 8. LA CASCADE -- v5 section 9, une branche s'insere
+ =======================================================================
+ 
+@@ -642,22 +682,30 @@
+ au delta.
+ 
+ =======================================================================
+-10. L'INSTRUMENT v14 -- DU AVANT TOUT RUN
++10. L'INSTRUMENT v15 -- DU AVANT TOUT RUN
+ =======================================================================
+ 
+-Part du v13 CERTIFIE (banc_qualification_machine1_v13.py 1ac295648490a86c,
+-certification machine 2 24/24 ; v10-v13 : D-v9-1, D-v10-1, D-v11-1, D-v12-1
+-levees), construit par construction_gel_v8_banc_v14_machine1_v1.py -- le meme
+-script que ce gel -- qui ajoute UN etage : la jumelle a dt_2b/4 (cle G_dt4,
+-series _dt2s4_k2, intervalles x4), sans toucher aux verdicts (G-dt lit toujours
+-dt contre dt/2) ; et : les seuls remplacements sont
++Part du v14 CERTIFIE (banc_qualification_machine1_v14.py dc91676c640d4323,
++certification machine 2 45de25ac61321661 : selftest 103/103, banc 56/56, pre-vols
++branche 5 sur BOCAL4), construit par construction_gel_v9_banc_v15_machine1_v1.py
++-- le meme script que ce gel -- qui porte la lecture CORRIGEE dans l'instrument
++(prescription machine 2 du 18/09, essai hors depot 0dcfd901a0551d0f, ses trois
++remplacements repris tels quels) : c1 et c2 en forme close, ajuster_corrige
++(M1/M2, meme fenetre, meme t*), richardson_q a ordre MESURE, plancher_corrige a
++proj4 DERIVE (D-essai-3), lnA_M a chaque cellule, G-plancher et P-A sur le couple
++corrige, v14_* conserves, lecture absente consignee NON JOUEE (D-essai-1) ; et
++DEUX scenarios neufs du banc qui tue qui exercent ce chemin par MUTATION des lnA_M
++(D-essai-2 : les series synthetiques sont exactes en dt, q y est indefini, la
++lecture corrigee y est NON JOUEE et consignee -- le pre-vol ne l'exerce pas, le
++banc si) ; G22 nomme le plancher qu'il exerce (v14). Le v14 avait ajoute l'etage
++dt_2b/4 (G_dt4) ; et : les seuls remplacements sont
+ le reglage (DELTA = 1/32400 ; B_DESC, M_MARGE, J_DESC = 18, 1, 2 -- la racine
+ de descente vaut 18, PURE ; le selftest du reglage et ses attentes 3.3, 4.6,
+ 4.7 re-derivees ; les tables du gel ; la cle /reglage/delta du JSON) et les
+ mentions de 1/102400, 620 et 1/1024 des commentaires ; RIEN d'autre. Toutes les tables se re-derivent de DELTA au chargement, comme au
+-v8. Le v14 se re-certifie EN ENTIER par machine 2 (selftest, banc qui tue,
+-NE-JOUE-PAS) et son pre-vol se joue des deux cotes au reglage v8 avant tout
+-run. Les exigences du v4 ci-dessous restent celles du v9 (elles sont
++v8. Le v15 se re-certifie EN ENTIER par machine 2 (selftest, banc qui tue -- 58
++scenarios --, NE-JOUE-PAS) et son pre-vol se joue des deux cotes au reglage v9
++(= v8 : n = 18) avant tout run. Les exigences du v4 ci-dessous restent celles du v9 (elles sont
+ portees par le v8 depuis le 29/08, neuf defauts D-I leves) :
+ 
+     (i)   D-M17-51 : les deux en-tetes de code perimes de la v3,
+@@ -695,8 +743,9 @@
+ 11. LES COMPTES
+ =======================================================================
+ 
+-Volet A : identiques au v5 4.5 -- plan 18, G_dt 18, G_k 18, G_seuil 9,
+-G_lignee 27 ; `comptes + sautes == 90`. Volet T : les comptes de la
++Volet A : v5 4.5 plus le quatrieme etage -- plan 18, G_dt 18, G_k 18,
++G_dt4 18 (jumelle a dt_2b/4, v14), G_seuil 9, G_lignee 27 ; `comptes +
++sautes == 108`. Volet T : les comptes de la
+ **v11** (et son erratum 7 (i)) -- ATTENDUS = 41 (voie A), en forme derivee. Chaque compte en
+ forme derivee, jamais recopie.
+ 
+@@ -787,6 +836,13 @@
+     ajustement_modes_libres_Q5_machine2_v1.py / .json  e7ff0b5664efe1c2 / 4634a795a008a562
+     note_machine1_lecture_second_ordre_v1.md           c8390c986806649b
+     note_machine1_lecture_Q5_v1.md                     8640542955081128
+-    banc_qualification_machine1_v14.py, lecture_v8_machine1_v1.py, construction : empreintes au manifeste du lot v8
++    banc_qualification_machine1_v14.py, lecture_v9_machine1_v1.py, construction : empreintes au manifeste du lot v8
++
++    constante_A_pre_enregistrement_v8.md               800fc6a9a8e56e49  REMPLACE (non certifie)
++    note_machine2_certification_v8_v14_v1.md           0e3aa516ad021159  (lot 45de25ac61321661)
++    POUR_MACHINE1_prescription_PA_dans_instrument_machine2_v1.md  b86f25c573fd5b05  (lot 289ae2620e1d1063)
++    derivation_plancher_corrige_machine2_v3.py / .json b0e107f45e0bc17b / 3b12117a58dde698
++    essai_correctif_PA_hors_depot_machine2.py          0dcfd901a0551d0f  (les trois remplacements)
++    banc_qualification_machine1_v14.py                 dc91676c640d4323  CERTIFIE, REMPLACE PAR LE v15
+ 
+--- FIN constante_A_pre_enregistrement_v8 --
++-- FIN constante_A_pre_enregistrement_v9 --

@@ -1,0 +1,65 @@
+PLANCHER DE LA LECTURE CORRIGEE, v2 (precision etendue) -- machine 2
+python 3.11.9 ; mpmath 1.3.0 ; sympy 1.14.0
+
+0. ANCRES
+  [chk PASSE] derivation a son empreinte -- b70fca94d72822ad
+
+1. C0 -- c2 EN EXACT (inchange de la v1)
+  [chk PASSE] C0 4|1.73 : c2 exact = celui de la derivation -- 466191653/120000000000 | derivation 466191653/120000000000
+  [chk PASSE] C0 4|2.27 : c2 exact = celui de la derivation -- 455694053/120000000000 | derivation 455694053/120000000000
+  [chk PASSE] C0 4|2.80 : c2 exact = celui de la derivation -- 53/750000 | derivation 53/750000
+  [chk PASSE] C0 5|1.73 : c2 exact = celui de la derivation -- 3755600176813/410408000000000 | derivation 3755600176813/410408000000000
+  [chk PASSE] C0 5|2.27 : c2 exact = celui de la derivation -- 4481135407213/410408000000000 | derivation 4481135407213/410408000000000
+  [chk PASSE] C0 5|2.80 : c2 exact = celui de la derivation -- 18124513/2565050000 | derivation 18124513/2565050000
+  [chk PASSE] C0 7|1.73 : c2 exact = celui de la derivation -- 603151178891/25348416000000 | derivation 603151178891/25348416000000
+  [chk PASSE] C0 7|2.27 : c2 exact = celui de la derivation -- 883362751691/25348416000000 | derivation 883362751691/25348416000000
+  [chk PASSE] C0 7|2.80 : c2 exact = celui de la derivation -- 6486791/158427600 | derivation 6486791/158427600
+
+2. C1 / C2 -- LA PROJECTION, EN PRECISION ETENDUE
+  [note] C1 4|1.73 -- terme tau^2 : biais 1.387960e-07 ; c1 tau_dom^2 3.779289e-07 ; proj2 = 0.367254
+  [note] C1 4|2.27 -- terme tau^2 : biais 1.401171e-07 ; c1 tau_dom^2 3.779289e-07 ; proj2 = 0.370750
+  [note] C1 4|2.80 -- terme tau^2 : biais 1.401171e-07 ; c1 tau_dom^2 3.779289e-07 ; proj2 = 0.370750
+  [note] C1 5|1.73 -- terme tau^2 : biais 1.435820e-07 ; c1 tau_dom^2 3.909610e-07 ; proj2 = 0.367254
+  [note] C1 5|2.27 -- terme tau^2 : biais 1.449488e-07 ; c1 tau_dom^2 3.909610e-07 ; proj2 = 0.370750
+  [note] C1 5|2.80 -- terme tau^2 : biais 1.449488e-07 ; c1 tau_dom^2 3.909610e-07 ; proj2 = 0.370750
+  [note] C1 7|1.73 -- terme tau^2 : biais 1.309396e-07 ; c1 tau_dom^2 3.565367e-07 ; proj2 = 0.367254
+  [note] C1 7|2.27 -- terme tau^2 : biais 1.321860e-07 ; c1 tau_dom^2 3.565367e-07 ; proj2 = 0.370750
+  [note] C1 7|2.80 -- terme tau^2 : biais 1.321860e-07 ; c1 tau_dom^2 3.565367e-07 ; proj2 = 0.370750
+  [chk MORD ] C1 : mon outil rend le proj2 de l instrument (0.6727) a 1e-3 pres aux neuf points -- ecart max 3.05e-01 ; proj2 de 0.367254 a 0.370750
+  [chk PASSE] C2a 4|1.73 : la ligne de base (c2 = 0) est nulle a 1e-40 -- 0.0
+  [note] C2c 4|1.73 -- terme tau^4 : biais 2.749591e-14 ; c2 tau_dom^4 1.252937e-13 ; proj4 = 0.219452
+  [chk PASSE] C2a 4|2.27 : la ligne de base (c2 = 0) est nulle a 1e-40 -- 0.0
+  [note] C2c 4|2.27 -- terme tau^4 : biais 1.154106e-14 ; c2 tau_dom^4 5.157690e-14 ; proj4 = 0.223764
+  [chk PASSE] C2a 4|2.80 : la ligne de base (c2 = 0) est nulle a 1e-40 -- 0.0
+  [note] C2c 4|2.80 -- terme tau^4 : biais 1.040455e-16 ; c2 tau_dom^4 4.649785e-16 ; proj4 = 0.223764
+  [chk PASSE] C2a 5|1.73 : la ligne de base (c2 = 0) est nulle a 1e-40 -- 0.0
+  [note] C2c 5|1.73 -- terme tau^4 : biais 6.476620e-14 ; c2 tau_dom^4 2.951274e-13 ; proj4 = 0.219452
+  [chk PASSE] C2a 5|2.27 : la ligne de base (c2 = 0) est nulle a 1e-40 -- 0.0
+  [note] C2c 5|2.27 -- terme tau^4 : biais 3.318377e-14 ; c2 tau_dom^4 1.482980e-13 ; proj4 = 0.223764
+  [chk PASSE] C2a 5|2.80 : la ligne de base (c2 = 0) est nulle a 1e-40 -- 0.0
+  [note] C2c 5|2.80 -- terme tau^4 : biais 1.040349e-14 ; c2 tau_dom^4 4.649313e-14 ; proj4 = 0.223764
+  [chk PASSE] C2a 7|1.73 : la ligne de base (c2 = 0) est nulle a 1e-40 -- 0.0
+  [note] C2c 7|1.73 -- terme tau^4 : biais 1.684070e-13 ; c2 tau_dom^4 7.673991e-13 ; proj4 = 0.219452
+  [chk PASSE] C2a 7|2.27 : la ligne de base (c2 = 0) est nulle a 1e-40 -- 0.0
+  [note] C2c 7|2.27 -- terme tau^4 : biais 1.059112e-13 ; c2 tau_dom^4 4.733162e-13 ; proj4 = 0.223764
+  [chk PASSE] C2a 7|2.80 : la ligne de base (c2 = 0) est nulle a 1e-40 -- 0.0
+  [note] C2c 7|2.80 -- terme tau^4 : biais 6.028480e-14 ; c2 tau_dom^4 2.694123e-13 ; proj4 = 0.223764
+  [chk MORD ] C2c : proj4 est STABLE sur les neuf points (ecart <= 1e-3) -- de 0.219452 a 0.223764 (ecart 4.31e-03)
+  [note] C2b 4|1.73 -- mutation 2 c2 : biais x 2.000000000
+  [note] C2b 7|2.80 -- mutation 2 c2 : biais x 2.000000000
+  [chk PASSE] C2b : la mutation double le biais a 1e-6 pres (deux points)
+
+3. C3 -- LE PLANCHER CORRIGE, ET CE QU IL AUTORISE
+  [note] p=4 n = 21 -- plancher CORRIGE 2.7496e-14 (w2 = 1.73) ; plancher du v7 1.1338e-06 (rapport 2.43e-08) ; S(p) du 91 5.8409e-09 -> plancher/S = 4.71e-06 SOUS S
+  [note] p=4 n = 18 -- plancher CORRIGE 5.0940e-14 (w2 = 1.73) ; plancher du v7 1.5432e-06 (rapport 3.30e-08) ; S(p) du 91 5.8409e-09 -> plancher/S = 8.72e-06 SOUS S
+  [note] p=5 n = 21 -- plancher CORRIGE 6.4766e-14 (w2 = 1.73) ; plancher du v7 1.5699e-06 (rapport 4.13e-08) ; S(p) du 91 3.7415e-09 -> plancher/S = 1.73e-05 SOUS S
+  [note] p=5 n = 18 -- plancher CORRIGE 1.1999e-13 (w2 = 1.73) ; plancher du v7 2.1368e-06 (rapport 5.62e-08) ; S(p) du 91 3.7415e-09 -> plancher/S = 3.21e-05 SOUS S
+  [note] p=7 n = 21 -- plancher CORRIGE 1.6841e-13 (w2 = 1.73) ; plancher du v7 2.1312e-06 (rapport 7.90e-08) ; S(p) du 91 4.3775e-09 -> plancher/S = 3.85e-05 SOUS S
+  [note] p=7 n = 18 -- plancher CORRIGE 3.1199e-13 (w2 = 1.73) ; plancher du v7 2.9008e-06 (rapport 1.08e-07) ; S(p) du 91 4.3775e-09 -> plancher/S = 7.13e-05 SOUS S
+  [chk PASSE] C3 p=4 : a n = 18, plancher corrige < S(p) du 91 -- 5.0940e-14 vs 5.8409e-09 (rapport 8.72e-06)
+  [chk PASSE] C3 p=5 : a n = 18, plancher corrige < S(p) du 91 -- 1.1999e-13 vs 3.7415e-09 (rapport 3.21e-05)
+  [chk PASSE] C3 p=7 : a n = 18, plancher corrige < S(p) du 91 -- 3.1199e-13 vs 4.3775e-09 (rapport 7.13e-05)
+  [note] portee -- ce plancher borne le terme ANALYTIQUE suivant (c2 tau^4) ; a p = 7 le mode libre est AJUSTE par M2 et ce qui reste apres lui se MESURE au run -- il n entre pas dans ce nombre
+
+SORTIE derivation_plancher_corrige_machine2_v2.json convention B 7e535398abd38588
+BILAN : 25 controles, 2 mordent ['C1 : mon outil rend le proj2 de l instrument (0.6727) a 1e-3 pres aux neuf points', 'C2c : proj4 est STABLE sur les neuf points (ecart <= 1e-3)']

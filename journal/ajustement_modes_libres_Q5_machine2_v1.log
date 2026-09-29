@@ -1,0 +1,368 @@
+Q5 -- AJUSTEMENT DES MODES LIBRES SUR LES SERIES DU 91 -- machine 2 -- lecture fc6ca127f8eabc8b
+python 3.11.9 ; numpy 2.2.6
+  [chk PASSE] lecture Q5 a son empreinte -- fc6ca127f8eabc8b
+  [chk PASSE] instrument v13 a son empreinte -- 1ac295648490a86c
+  [chk PASSE] derivation v1 a son empreinte -- b70fca94d72822ad
+  [note] run -- resultats_alpha.json convention B b2c5f8cc47c6e611
+  [chk PASSE] p=4 : b = alpha + 3/2 = Re beta de la derivation -- b 3.500000 w 4.213075
+  [chk PASSE] p=5 : b = alpha + 3/2 = Re beta de la derivation -- b 2.833333 w 3.492054
+  [chk PASSE] p=7 : b = alpha + 3/2 = Re beta de la derivation -- b 2.300000 w 2.896550
+
+1. C0 / C0b -- LECTURE DES SERIES ET CONCORDANCE AVEC L'INSTRUMENT ; AJUSTEMENTS
+  [chk PASSE] C0 4|1.73|1.05 plan : fichier de serie = celui du JSON -- alpha_serie_p4_w1.73_c1.05_dt2_k2.txt
+  [chk PASSE] C0 4|1.73|1.05 plan : lnA_II rejoue = JSON a 1e-13 -- 0.00e+00
+  [chk PASSE] C0b 4|1.73|1.05 plan : M1 a c1 = 0 = ajustement II a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 4|1.73|1.05 plan M2 : rang 3 -- rang 3 cond 2.55
+  [chk PASSE] C0c 4|1.73|1.05 plan M2- : rang 3 -- rang 3 cond 3.28
+  [chk PASSE] C0c 4|1.73|1.05 plan M2+ : rang 3 -- rang 3 cond 1.82
+  [chk PASSE] C0 4|1.73|1.05 G_dt : fichier de serie = celui du JSON -- alpha_serie_p4_w1.73_c1.05_dt2s2_k2.txt
+  [chk PASSE] C0 4|1.73|1.05 G_dt : lnA_II rejoue = JSON a 1e-13 -- 0.00e+00
+  [chk PASSE] C0b 4|1.73|1.05 G_dt : M1 a c1 = 0 = ajustement II a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 4|1.73|1.05 G_dt M2 : rang 3 -- rang 3 cond 2.56
+  [chk PASSE] C0c 4|1.73|1.05 G_dt M2- : rang 3 -- rang 3 cond 3.3
+  [chk PASSE] C0c 4|1.73|1.05 G_dt M2+ : rang 3 -- rang 3 cond 1.83
+  [chk PASSE] C0 4|1.73|1.05 G_k : fichier de serie = celui du JSON -- alpha_serie_p4_w1.73_c1.05_dt2_k4.txt
+  [chk PASSE] C0 4|1.73|1.05 G_k : lnA_II rejoue = JSON a 1e-13 -- 0.00e+00
+  [chk PASSE] C0b 4|1.73|1.05 G_k : M1 a c1 = 0 = ajustement II a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 4|1.73|1.05 G_k M2 : rang 3 -- rang 3 cond 2.58
+  [chk PASSE] C0c 4|1.73|1.05 G_k M2- : rang 3 -- rang 3 cond 3.32
+  [chk PASSE] C0c 4|1.73|1.05 G_k M2+ : rang 3 -- rang 3 cond 1.84
+  [chk PASSE] C0 4|1.73|1.20 plan : fichier de serie = celui du JSON -- alpha_serie_p4_w1.73_c1.20_dt2_k2.txt
+  [chk PASSE] C0 4|1.73|1.20 plan : lnA_II rejoue = JSON a 1e-13 -- 0.00e+00
+  [chk PASSE] C0b 4|1.73|1.20 plan : M1 a c1 = 0 = ajustement II a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 4|1.73|1.20 plan M2 : rang 3 -- rang 3 cond 2.54
+  [chk PASSE] C0c 4|1.73|1.20 plan M2- : rang 3 -- rang 3 cond 3.28
+  [chk PASSE] C0c 4|1.73|1.20 plan M2+ : rang 3 -- rang 3 cond 1.82
+  [chk PASSE] C0 4|1.73|1.20 G_dt : fichier de serie = celui du JSON -- alpha_serie_p4_w1.73_c1.20_dt2s2_k2.txt
+  [chk PASSE] C0 4|1.73|1.20 G_dt : lnA_II rejoue = JSON a 1e-13 -- 0.00e+00
+  [chk PASSE] C0b 4|1.73|1.20 G_dt : M1 a c1 = 0 = ajustement II a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 4|1.73|1.20 G_dt M2 : rang 3 -- rang 3 cond 2.55
+  [chk PASSE] C0c 4|1.73|1.20 G_dt M2- : rang 3 -- rang 3 cond 3.29
+  [chk PASSE] C0c 4|1.73|1.20 G_dt M2+ : rang 3 -- rang 3 cond 1.83
+  [chk PASSE] C0 4|1.73|1.20 G_k : fichier de serie = celui du JSON -- alpha_serie_p4_w1.73_c1.20_dt2_k4.txt
+  [chk PASSE] C0 4|1.73|1.20 G_k : lnA_II rejoue = JSON a 1e-13 -- 0.00e+00
+  [chk PASSE] C0b 4|1.73|1.20 G_k : M1 a c1 = 0 = ajustement II a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 4|1.73|1.20 G_k M2 : rang 3 -- rang 3 cond 2.57
+  [chk PASSE] C0c 4|1.73|1.20 G_k M2- : rang 3 -- rang 3 cond 3.31
+  [chk PASSE] C0c 4|1.73|1.20 G_k M2+ : rang 3 -- rang 3 cond 1.84
+  [chk PASSE] C0 4|2.27|1.05 plan : fichier de serie = celui du JSON -- alpha_serie_p4_w2.27_c1.05_dt2_k2.txt
+  [chk PASSE] C0 4|2.27|1.05 plan : lnA_II rejoue = JSON a 1e-13 -- 0.00e+00
+  [chk PASSE] C0b 4|2.27|1.05 plan : M1 a c1 = 0 = ajustement II a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 4|2.27|1.05 plan M2 : rang 3 -- rang 3 cond 2.55
+  [chk PASSE] C0c 4|2.27|1.05 plan M2- : rang 3 -- rang 3 cond 3.28
+  [chk PASSE] C0c 4|2.27|1.05 plan M2+ : rang 3 -- rang 3 cond 1.82
+  [chk PASSE] C0 4|2.27|1.05 G_dt : fichier de serie = celui du JSON -- alpha_serie_p4_w2.27_c1.05_dt2s2_k2.txt
+  [chk PASSE] C0 4|2.27|1.05 G_dt : lnA_II rejoue = JSON a 1e-13 -- 0.00e+00
+  [chk PASSE] C0b 4|2.27|1.05 G_dt : M1 a c1 = 0 = ajustement II a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 4|2.27|1.05 G_dt M2 : rang 3 -- rang 3 cond 2.56
+  [chk PASSE] C0c 4|2.27|1.05 G_dt M2- : rang 3 -- rang 3 cond 3.29
+  [chk PASSE] C0c 4|2.27|1.05 G_dt M2+ : rang 3 -- rang 3 cond 1.83
+  [chk PASSE] C0 4|2.27|1.05 G_k : fichier de serie = celui du JSON -- alpha_serie_p4_w2.27_c1.05_dt2_k4.txt
+  [chk PASSE] C0 4|2.27|1.05 G_k : lnA_II rejoue = JSON a 1e-13 -- 0.00e+00
+  [chk PASSE] C0b 4|2.27|1.05 G_k : M1 a c1 = 0 = ajustement II a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 4|2.27|1.05 G_k M2 : rang 3 -- rang 3 cond 2.55
+  [chk PASSE] C0c 4|2.27|1.05 G_k M2- : rang 3 -- rang 3 cond 3.28
+  [chk PASSE] C0c 4|2.27|1.05 G_k M2+ : rang 3 -- rang 3 cond 1.82
+  [chk PASSE] C0 4|2.27|1.20 plan : fichier de serie = celui du JSON -- alpha_serie_p4_w2.27_c1.20_dt2_k2.txt
+  [chk PASSE] C0 4|2.27|1.20 plan : lnA_II rejoue = JSON a 1e-13 -- 0.00e+00
+  [chk PASSE] C0b 4|2.27|1.20 plan : M1 a c1 = 0 = ajustement II a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 4|2.27|1.20 plan M2 : rang 3 -- rang 3 cond 2.54
+  [chk PASSE] C0c 4|2.27|1.20 plan M2- : rang 3 -- rang 3 cond 3.28
+  [chk PASSE] C0c 4|2.27|1.20 plan M2+ : rang 3 -- rang 3 cond 1.82
+  [chk PASSE] C0 4|2.27|1.20 G_dt : fichier de serie = celui du JSON -- alpha_serie_p4_w2.27_c1.20_dt2s2_k2.txt
+  [chk PASSE] C0 4|2.27|1.20 G_dt : lnA_II rejoue = JSON a 1e-13 -- 0.00e+00
+  [chk PASSE] C0b 4|2.27|1.20 G_dt : M1 a c1 = 0 = ajustement II a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 4|2.27|1.20 G_dt M2 : rang 3 -- rang 3 cond 2.55
+  [chk PASSE] C0c 4|2.27|1.20 G_dt M2- : rang 3 -- rang 3 cond 3.29
+  [chk PASSE] C0c 4|2.27|1.20 G_dt M2+ : rang 3 -- rang 3 cond 1.83
+  [chk PASSE] C0 4|2.27|1.20 G_k : fichier de serie = celui du JSON -- alpha_serie_p4_w2.27_c1.20_dt2_k4.txt
+  [chk PASSE] C0 4|2.27|1.20 G_k : lnA_II rejoue = JSON a 1e-13 -- 0.00e+00
+  [chk PASSE] C0b 4|2.27|1.20 G_k : M1 a c1 = 0 = ajustement II a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 4|2.27|1.20 G_k M2 : rang 3 -- rang 3 cond 2.55
+  [chk PASSE] C0c 4|2.27|1.20 G_k M2- : rang 3 -- rang 3 cond 3.28
+  [chk PASSE] C0c 4|2.27|1.20 G_k M2+ : rang 3 -- rang 3 cond 1.82
+  [chk PASSE] C0 4|2.80|1.05 plan : fichier de serie = celui du JSON -- alpha_serie_p4_w2.80_c1.05_dt2_k2.txt
+  [chk PASSE] C0 4|2.80|1.05 plan : lnA_II rejoue = JSON a 1e-13 -- 0.00e+00
+  [chk PASSE] C0b 4|2.80|1.05 plan : M1 a c1 = 0 = ajustement II a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 4|2.80|1.05 plan M2 : rang 3 -- rang 3 cond 2.55
+  [chk PASSE] C0c 4|2.80|1.05 plan M2- : rang 3 -- rang 3 cond 3.29
+  [chk PASSE] C0c 4|2.80|1.05 plan M2+ : rang 3 -- rang 3 cond 1.82
+  [chk PASSE] C0 4|2.80|1.05 G_dt : fichier de serie = celui du JSON -- alpha_serie_p4_w2.80_c1.05_dt2s2_k2.txt
+  [chk PASSE] C0 4|2.80|1.05 G_dt : lnA_II rejoue = JSON a 1e-13 -- 0.00e+00
+  [chk PASSE] C0b 4|2.80|1.05 G_dt : M1 a c1 = 0 = ajustement II a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 4|2.80|1.05 G_dt M2 : rang 3 -- rang 3 cond 2.56
+  [chk PASSE] C0c 4|2.80|1.05 G_dt M2- : rang 3 -- rang 3 cond 3.3
+  [chk PASSE] C0c 4|2.80|1.05 G_dt M2+ : rang 3 -- rang 3 cond 1.83
+  [chk PASSE] C0 4|2.80|1.05 G_k : fichier de serie = celui du JSON -- alpha_serie_p4_w2.80_c1.05_dt2_k4.txt
+  [chk PASSE] C0 4|2.80|1.05 G_k : lnA_II rejoue = JSON a 1e-13 -- 0.00e+00
+  [chk PASSE] C0b 4|2.80|1.05 G_k : M1 a c1 = 0 = ajustement II a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 4|2.80|1.05 G_k M2 : rang 3 -- rang 3 cond 2.58
+  [chk PASSE] C0c 4|2.80|1.05 G_k M2- : rang 3 -- rang 3 cond 3.32
+  [chk PASSE] C0c 4|2.80|1.05 G_k M2+ : rang 3 -- rang 3 cond 1.84
+  [chk PASSE] C0 4|2.80|1.20 plan : fichier de serie = celui du JSON -- alpha_serie_p4_w2.80_c1.20_dt2_k2.txt
+  [chk PASSE] C0 4|2.80|1.20 plan : lnA_II rejoue = JSON a 1e-13 -- 0.00e+00
+  [chk PASSE] C0b 4|2.80|1.20 plan : M1 a c1 = 0 = ajustement II a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 4|2.80|1.20 plan M2 : rang 3 -- rang 3 cond 2.57
+  [chk PASSE] C0c 4|2.80|1.20 plan M2- : rang 3 -- rang 3 cond 3.31
+  [chk PASSE] C0c 4|2.80|1.20 plan M2+ : rang 3 -- rang 3 cond 1.84
+  [chk PASSE] C0 4|2.80|1.20 G_dt : fichier de serie = celui du JSON -- alpha_serie_p4_w2.80_c1.20_dt2s2_k2.txt
+  [chk PASSE] C0 4|2.80|1.20 G_dt : lnA_II rejoue = JSON a 1e-13 -- 0.00e+00
+  [chk PASSE] C0b 4|2.80|1.20 G_dt : M1 a c1 = 0 = ajustement II a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 4|2.80|1.20 G_dt M2 : rang 3 -- rang 3 cond 2.56
+  [chk PASSE] C0c 4|2.80|1.20 G_dt M2- : rang 3 -- rang 3 cond 3.3
+  [chk PASSE] C0c 4|2.80|1.20 G_dt M2+ : rang 3 -- rang 3 cond 1.83
+  [chk PASSE] C0 4|2.80|1.20 G_k : fichier de serie = celui du JSON -- alpha_serie_p4_w2.80_c1.20_dt2_k4.txt
+  [chk PASSE] C0 4|2.80|1.20 G_k : lnA_II rejoue = JSON a 1e-13 -- 0.00e+00
+  [chk PASSE] C0b 4|2.80|1.20 G_k : M1 a c1 = 0 = ajustement II a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 4|2.80|1.20 G_k M2 : rang 3 -- rang 3 cond 2.55
+  [chk PASSE] C0c 4|2.80|1.20 G_k M2- : rang 3 -- rang 3 cond 3.29
+  [chk PASSE] C0c 4|2.80|1.20 G_k M2+ : rang 3 -- rang 3 cond 1.83
+  [chk PASSE] C0 5|1.73|1.05 plan : fichier de serie = celui du JSON -- alpha_serie_p5_w1.73_c1.05_dt2_k2.txt
+  [chk PASSE] C0 5|1.73|1.05 plan : lnA_II rejoue = JSON a 1e-13 -- 0.00e+00
+  [chk PASSE] C0b 5|1.73|1.05 plan : M1 a c1 = 0 = ajustement II a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 5|1.73|1.05 plan M2 : rang 3 -- rang 3 cond 2.73
+  [chk PASSE] C0c 5|1.73|1.05 plan M2- : rang 3 -- rang 3 cond 3.65
+  [chk PASSE] C0c 5|1.73|1.05 plan M2+ : rang 3 -- rang 3 cond 1.9
+  [chk PASSE] C0 5|1.73|1.05 G_dt : fichier de serie = celui du JSON -- alpha_serie_p5_w1.73_c1.05_dt2s2_k2.txt
+  [chk PASSE] C0 5|1.73|1.05 G_dt : lnA_II rejoue = JSON a 1e-13 -- 0.00e+00
+  [chk PASSE] C0b 5|1.73|1.05 G_dt : M1 a c1 = 0 = ajustement II a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 5|1.73|1.05 G_dt M2 : rang 3 -- rang 3 cond 2.72
+  [chk PASSE] C0c 5|1.73|1.05 G_dt M2- : rang 3 -- rang 3 cond 3.65
+  [chk PASSE] C0c 5|1.73|1.05 G_dt M2+ : rang 3 -- rang 3 cond 1.9
+  [chk PASSE] C0 5|1.73|1.05 G_k : fichier de serie = celui du JSON -- alpha_serie_p5_w1.73_c1.05_dt2_k4.txt
+  [chk PASSE] C0 5|1.73|1.05 G_k : lnA_II rejoue = JSON a 1e-13 -- 0.00e+00
+  [chk PASSE] C0b 5|1.73|1.05 G_k : M1 a c1 = 0 = ajustement II a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 5|1.73|1.05 G_k M2 : rang 3 -- rang 3 cond 2.72
+  [chk PASSE] C0c 5|1.73|1.05 G_k M2- : rang 3 -- rang 3 cond 3.64
+  [chk PASSE] C0c 5|1.73|1.05 G_k M2+ : rang 3 -- rang 3 cond 1.89
+  [chk PASSE] C0 5|1.73|1.20 plan : fichier de serie = celui du JSON -- alpha_serie_p5_w1.73_c1.20_dt2_k2.txt
+  [chk PASSE] C0 5|1.73|1.20 plan : lnA_II rejoue = JSON a 1e-13 -- 0.00e+00
+  [chk PASSE] C0b 5|1.73|1.20 plan : M1 a c1 = 0 = ajustement II a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 5|1.73|1.20 plan M2 : rang 3 -- rang 3 cond 2.73
+  [chk PASSE] C0c 5|1.73|1.20 plan M2- : rang 3 -- rang 3 cond 3.65
+  [chk PASSE] C0c 5|1.73|1.20 plan M2+ : rang 3 -- rang 3 cond 1.9
+  [chk PASSE] C0 5|1.73|1.20 G_dt : fichier de serie = celui du JSON -- alpha_serie_p5_w1.73_c1.20_dt2s2_k2.txt
+  [chk PASSE] C0 5|1.73|1.20 G_dt : lnA_II rejoue = JSON a 1e-13 -- 0.00e+00
+  [chk PASSE] C0b 5|1.73|1.20 G_dt : M1 a c1 = 0 = ajustement II a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 5|1.73|1.20 G_dt M2 : rang 3 -- rang 3 cond 2.72
+  [chk PASSE] C0c 5|1.73|1.20 G_dt M2- : rang 3 -- rang 3 cond 3.65
+  [chk PASSE] C0c 5|1.73|1.20 G_dt M2+ : rang 3 -- rang 3 cond 1.9
+  [chk PASSE] C0 5|1.73|1.20 G_k : fichier de serie = celui du JSON -- alpha_serie_p5_w1.73_c1.20_dt2_k4.txt
+  [chk PASSE] C0 5|1.73|1.20 G_k : lnA_II rejoue = JSON a 1e-13 -- 0.00e+00
+  [chk PASSE] C0b 5|1.73|1.20 G_k : M1 a c1 = 0 = ajustement II a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 5|1.73|1.20 G_k M2 : rang 3 -- rang 3 cond 2.74
+  [chk PASSE] C0c 5|1.73|1.20 G_k M2- : rang 3 -- rang 3 cond 3.66
+  [chk PASSE] C0c 5|1.73|1.20 G_k M2+ : rang 3 -- rang 3 cond 1.9
+  [chk PASSE] C0 5|2.27|1.05 plan : fichier de serie = celui du JSON -- alpha_serie_p5_w2.27_c1.05_dt2_k2.txt
+  [chk PASSE] C0 5|2.27|1.05 plan : lnA_II rejoue = JSON a 1e-13 -- 0.00e+00
+  [chk PASSE] C0b 5|2.27|1.05 plan : M1 a c1 = 0 = ajustement II a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 5|2.27|1.05 plan M2 : rang 3 -- rang 3 cond 2.71
+  [chk PASSE] C0c 5|2.27|1.05 plan M2- : rang 3 -- rang 3 cond 3.64
+  [chk PASSE] C0c 5|2.27|1.05 plan M2+ : rang 3 -- rang 3 cond 1.89
+  [chk PASSE] C0 5|2.27|1.05 G_dt : fichier de serie = celui du JSON -- alpha_serie_p5_w2.27_c1.05_dt2s2_k2.txt
+  [chk PASSE] C0 5|2.27|1.05 G_dt : lnA_II rejoue = JSON a 1e-13 -- 0.00e+00
+  [chk PASSE] C0b 5|2.27|1.05 G_dt : M1 a c1 = 0 = ajustement II a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 5|2.27|1.05 G_dt M2 : rang 3 -- rang 3 cond 2.72
+  [chk PASSE] C0c 5|2.27|1.05 G_dt M2- : rang 3 -- rang 3 cond 3.64
+  [chk PASSE] C0c 5|2.27|1.05 G_dt M2+ : rang 3 -- rang 3 cond 1.89
+  [chk PASSE] C0 5|2.27|1.05 G_k : fichier de serie = celui du JSON -- alpha_serie_p5_w2.27_c1.05_dt2_k4.txt
+  [chk PASSE] C0 5|2.27|1.05 G_k : lnA_II rejoue = JSON a 1e-13 -- 0.00e+00
+  [chk PASSE] C0b 5|2.27|1.05 G_k : M1 a c1 = 0 = ajustement II a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 5|2.27|1.05 G_k M2 : rang 3 -- rang 3 cond 2.74
+  [chk PASSE] C0c 5|2.27|1.05 G_k M2- : rang 3 -- rang 3 cond 3.66
+  [chk PASSE] C0c 5|2.27|1.05 G_k M2+ : rang 3 -- rang 3 cond 1.91
+  [chk PASSE] C0 5|2.27|1.20 plan : fichier de serie = celui du JSON -- alpha_serie_p5_w2.27_c1.20_dt2_k2.txt
+  [chk PASSE] C0 5|2.27|1.20 plan : lnA_II rejoue = JSON a 1e-13 -- 0.00e+00
+  [chk PASSE] C0b 5|2.27|1.20 plan : M1 a c1 = 0 = ajustement II a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 5|2.27|1.20 plan M2 : rang 3 -- rang 3 cond 2.73
+  [chk PASSE] C0c 5|2.27|1.20 plan M2- : rang 3 -- rang 3 cond 3.65
+  [chk PASSE] C0c 5|2.27|1.20 plan M2+ : rang 3 -- rang 3 cond 1.9
+  [chk PASSE] C0 5|2.27|1.20 G_dt : fichier de serie = celui du JSON -- alpha_serie_p5_w2.27_c1.20_dt2s2_k2.txt
+  [chk PASSE] C0 5|2.27|1.20 G_dt : lnA_II rejoue = JSON a 1e-13 -- 0.00e+00
+  [chk PASSE] C0b 5|2.27|1.20 G_dt : M1 a c1 = 0 = ajustement II a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 5|2.27|1.20 G_dt M2 : rang 3 -- rang 3 cond 2.72
+  [chk PASSE] C0c 5|2.27|1.20 G_dt M2- : rang 3 -- rang 3 cond 3.65
+  [chk PASSE] C0c 5|2.27|1.20 G_dt M2+ : rang 3 -- rang 3 cond 1.9
+  [chk PASSE] C0 5|2.27|1.20 G_k : fichier de serie = celui du JSON -- alpha_serie_p5_w2.27_c1.20_dt2_k4.txt
+  [chk PASSE] C0 5|2.27|1.20 G_k : lnA_II rejoue = JSON a 1e-13 -- 0.00e+00
+  [chk PASSE] C0b 5|2.27|1.20 G_k : M1 a c1 = 0 = ajustement II a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 5|2.27|1.20 G_k M2 : rang 3 -- rang 3 cond 2.73
+  [chk PASSE] C0c 5|2.27|1.20 G_k M2- : rang 3 -- rang 3 cond 3.65
+  [chk PASSE] C0c 5|2.27|1.20 G_k M2+ : rang 3 -- rang 3 cond 1.9
+  [chk PASSE] C0 5|2.80|1.05 plan : fichier de serie = celui du JSON -- alpha_serie_p5_w2.80_c1.05_dt2_k2.txt
+  [chk PASSE] C0 5|2.80|1.05 plan : lnA_II rejoue = JSON a 1e-13 -- 0.00e+00
+  [chk PASSE] C0b 5|2.80|1.05 plan : M1 a c1 = 0 = ajustement II a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 5|2.80|1.05 plan M2 : rang 3 -- rang 3 cond 2.73
+  [chk PASSE] C0c 5|2.80|1.05 plan M2- : rang 3 -- rang 3 cond 3.65
+  [chk PASSE] C0c 5|2.80|1.05 plan M2+ : rang 3 -- rang 3 cond 1.9
+  [chk PASSE] C0 5|2.80|1.05 G_dt : fichier de serie = celui du JSON -- alpha_serie_p5_w2.80_c1.05_dt2s2_k2.txt
+  [chk PASSE] C0 5|2.80|1.05 G_dt : lnA_II rejoue = JSON a 1e-13 -- 0.00e+00
+  [chk PASSE] C0b 5|2.80|1.05 G_dt : M1 a c1 = 0 = ajustement II a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 5|2.80|1.05 G_dt M2 : rang 3 -- rang 3 cond 2.73
+  [chk PASSE] C0c 5|2.80|1.05 G_dt M2- : rang 3 -- rang 3 cond 3.65
+  [chk PASSE] C0c 5|2.80|1.05 G_dt M2+ : rang 3 -- rang 3 cond 1.9
+  [chk PASSE] C0 5|2.80|1.05 G_k : fichier de serie = celui du JSON -- alpha_serie_p5_w2.80_c1.05_dt2_k4.txt
+  [chk PASSE] C0 5|2.80|1.05 G_k : lnA_II rejoue = JSON a 1e-13 -- 0.00e+00
+  [chk PASSE] C0b 5|2.80|1.05 G_k : M1 a c1 = 0 = ajustement II a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 5|2.80|1.05 G_k M2 : rang 3 -- rang 3 cond 2.72
+  [chk PASSE] C0c 5|2.80|1.05 G_k M2- : rang 3 -- rang 3 cond 3.64
+  [chk PASSE] C0c 5|2.80|1.05 G_k M2+ : rang 3 -- rang 3 cond 1.89
+  [chk PASSE] C0 5|2.80|1.20 plan : fichier de serie = celui du JSON -- alpha_serie_p5_w2.80_c1.20_dt2_k2.txt
+  [chk PASSE] C0 5|2.80|1.20 plan : lnA_II rejoue = JSON a 1e-13 -- 0.00e+00
+  [chk PASSE] C0b 5|2.80|1.20 plan : M1 a c1 = 0 = ajustement II a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 5|2.80|1.20 plan M2 : rang 3 -- rang 3 cond 2.74
+  [chk PASSE] C0c 5|2.80|1.20 plan M2- : rang 3 -- rang 3 cond 3.66
+  [chk PASSE] C0c 5|2.80|1.20 plan M2+ : rang 3 -- rang 3 cond 1.91
+  [chk PASSE] C0 5|2.80|1.20 G_dt : fichier de serie = celui du JSON -- alpha_serie_p5_w2.80_c1.20_dt2s2_k2.txt
+  [chk PASSE] C0 5|2.80|1.20 G_dt : lnA_II rejoue = JSON a 1e-13 -- 0.00e+00
+  [chk PASSE] C0b 5|2.80|1.20 G_dt : M1 a c1 = 0 = ajustement II a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 5|2.80|1.20 G_dt M2 : rang 3 -- rang 3 cond 2.73
+  [chk PASSE] C0c 5|2.80|1.20 G_dt M2- : rang 3 -- rang 3 cond 3.65
+  [chk PASSE] C0c 5|2.80|1.20 G_dt M2+ : rang 3 -- rang 3 cond 1.9
+  [chk PASSE] C0 5|2.80|1.20 G_k : fichier de serie = celui du JSON -- alpha_serie_p5_w2.80_c1.20_dt2_k4.txt
+  [chk PASSE] C0 5|2.80|1.20 G_k : lnA_II rejoue = JSON a 1e-13 -- 0.00e+00
+  [chk PASSE] C0b 5|2.80|1.20 G_k : M1 a c1 = 0 = ajustement II a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 5|2.80|1.20 G_k M2 : rang 3 -- rang 3 cond 2.71
+  [chk PASSE] C0c 5|2.80|1.20 G_k M2- : rang 3 -- rang 3 cond 3.64
+  [chk PASSE] C0c 5|2.80|1.20 G_k M2+ : rang 3 -- rang 3 cond 1.89
+  [chk PASSE] C0 7|1.73|1.05 plan : fichier de serie = celui du JSON -- alpha_serie_p7_w1.73_c1.05_dt2_k2.txt
+  [chk PASSE] C0 7|1.73|1.05 plan : lnA_II rejoue = JSON a 1e-13 -- 0.00e+00
+  [chk PASSE] C0b 7|1.73|1.05 plan : M1 a c1 = 0 = ajustement II a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 7|1.73|1.05 plan M2 : rang 3 -- rang 3 cond 2.93
+  [chk PASSE] C0c 7|1.73|1.05 plan M2- : rang 3 -- rang 3 cond 4.15
+  [chk PASSE] C0c 7|1.73|1.05 plan M2+ : rang 3 -- rang 3 cond 1.97
+  [chk PASSE] C0 7|1.73|1.05 G_dt : fichier de serie = celui du JSON -- alpha_serie_p7_w1.73_c1.05_dt2s2_k2.txt
+  [chk PASSE] C0 7|1.73|1.05 G_dt : lnA_II rejoue = JSON a 1e-13 -- 0.00e+00
+  [chk PASSE] C0b 7|1.73|1.05 G_dt : M1 a c1 = 0 = ajustement II a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 7|1.73|1.05 G_dt M2 : rang 3 -- rang 3 cond 2.94
+  [chk PASSE] C0c 7|1.73|1.05 G_dt M2- : rang 3 -- rang 3 cond 4.15
+  [chk PASSE] C0c 7|1.73|1.05 G_dt M2+ : rang 3 -- rang 3 cond 1.98
+  [chk PASSE] C0 7|1.73|1.05 G_k : fichier de serie = celui du JSON -- alpha_serie_p7_w1.73_c1.05_dt2_k4.txt
+  [chk PASSE] C0 7|1.73|1.05 G_k : lnA_II rejoue = JSON a 1e-13 -- 0.00e+00
+  [chk PASSE] C0b 7|1.73|1.05 G_k : M1 a c1 = 0 = ajustement II a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 7|1.73|1.05 G_k M2 : rang 3 -- rang 3 cond 2.95
+  [chk PASSE] C0c 7|1.73|1.05 G_k M2- : rang 3 -- rang 3 cond 4.15
+  [chk PASSE] C0c 7|1.73|1.05 G_k M2+ : rang 3 -- rang 3 cond 1.99
+  [chk PASSE] C0 7|1.73|1.20 plan : fichier de serie = celui du JSON -- alpha_serie_p7_w1.73_c1.20_dt2_k2.txt
+  [chk PASSE] C0 7|1.73|1.20 plan : lnA_II rejoue = JSON a 1e-13 -- 0.00e+00
+  [chk PASSE] C0b 7|1.73|1.20 plan : M1 a c1 = 0 = ajustement II a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 7|1.73|1.20 plan M2 : rang 3 -- rang 3 cond 2.93
+  [chk PASSE] C0c 7|1.73|1.20 plan M2- : rang 3 -- rang 3 cond 4.15
+  [chk PASSE] C0c 7|1.73|1.20 plan M2+ : rang 3 -- rang 3 cond 1.97
+  [chk PASSE] C0 7|1.73|1.20 G_dt : fichier de serie = celui du JSON -- alpha_serie_p7_w1.73_c1.20_dt2s2_k2.txt
+  [chk PASSE] C0 7|1.73|1.20 G_dt : lnA_II rejoue = JSON a 1e-13 -- 0.00e+00
+  [chk PASSE] C0b 7|1.73|1.20 G_dt : M1 a c1 = 0 = ajustement II a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 7|1.73|1.20 G_dt M2 : rang 3 -- rang 3 cond 2.94
+  [chk PASSE] C0c 7|1.73|1.20 G_dt M2- : rang 3 -- rang 3 cond 4.15
+  [chk PASSE] C0c 7|1.73|1.20 G_dt M2+ : rang 3 -- rang 3 cond 1.98
+  [chk PASSE] C0 7|1.73|1.20 G_k : fichier de serie = celui du JSON -- alpha_serie_p7_w1.73_c1.20_dt2_k4.txt
+  [chk PASSE] C0 7|1.73|1.20 G_k : lnA_II rejoue = JSON a 1e-13 -- 0.00e+00
+  [chk PASSE] C0b 7|1.73|1.20 G_k : M1 a c1 = 0 = ajustement II a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 7|1.73|1.20 G_k M2 : rang 3 -- rang 3 cond 2.95
+  [chk PASSE] C0c 7|1.73|1.20 G_k M2- : rang 3 -- rang 3 cond 4.15
+  [chk PASSE] C0c 7|1.73|1.20 G_k M2+ : rang 3 -- rang 3 cond 1.98
+  [chk PASSE] C0 7|2.27|1.05 plan : fichier de serie = celui du JSON -- alpha_serie_p7_w2.27_c1.05_dt2_k2.txt
+  [chk PASSE] C0 7|2.27|1.05 plan : lnA_II rejoue = JSON a 1e-13 -- 0.00e+00
+  [chk PASSE] C0b 7|2.27|1.05 plan : M1 a c1 = 0 = ajustement II a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 7|2.27|1.05 plan M2 : rang 3 -- rang 3 cond 2.94
+  [chk PASSE] C0c 7|2.27|1.05 plan M2- : rang 3 -- rang 3 cond 4.15
+  [chk PASSE] C0c 7|2.27|1.05 plan M2+ : rang 3 -- rang 3 cond 1.98
+  [chk PASSE] C0 7|2.27|1.05 G_dt : fichier de serie = celui du JSON -- alpha_serie_p7_w2.27_c1.05_dt2s2_k2.txt
+  [chk PASSE] C0 7|2.27|1.05 G_dt : lnA_II rejoue = JSON a 1e-13 -- 0.00e+00
+  [chk PASSE] C0b 7|2.27|1.05 G_dt : M1 a c1 = 0 = ajustement II a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 7|2.27|1.05 G_dt M2 : rang 3 -- rang 3 cond 2.94
+  [chk PASSE] C0c 7|2.27|1.05 G_dt M2- : rang 3 -- rang 3 cond 4.15
+  [chk PASSE] C0c 7|2.27|1.05 G_dt M2+ : rang 3 -- rang 3 cond 1.98
+  [chk PASSE] C0 7|2.27|1.05 G_k : fichier de serie = celui du JSON -- alpha_serie_p7_w2.27_c1.05_dt2_k4.txt
+  [chk PASSE] C0 7|2.27|1.05 G_k : lnA_II rejoue = JSON a 1e-13 -- 0.00e+00
+  [chk PASSE] C0b 7|2.27|1.05 G_k : M1 a c1 = 0 = ajustement II a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 7|2.27|1.05 G_k M2 : rang 3 -- rang 3 cond 2.93
+  [chk PASSE] C0c 7|2.27|1.05 G_k M2- : rang 3 -- rang 3 cond 4.15
+  [chk PASSE] C0c 7|2.27|1.05 G_k M2+ : rang 3 -- rang 3 cond 1.97
+  [chk PASSE] C0 7|2.27|1.20 plan : fichier de serie = celui du JSON -- alpha_serie_p7_w2.27_c1.20_dt2_k2.txt
+  [chk PASSE] C0 7|2.27|1.20 plan : lnA_II rejoue = JSON a 1e-13 -- 0.00e+00
+  [chk PASSE] C0b 7|2.27|1.20 plan : M1 a c1 = 0 = ajustement II a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 7|2.27|1.20 plan M2 : rang 3 -- rang 3 cond 2.94
+  [chk PASSE] C0c 7|2.27|1.20 plan M2- : rang 3 -- rang 3 cond 4.15
+  [chk PASSE] C0c 7|2.27|1.20 plan M2+ : rang 3 -- rang 3 cond 1.98
+  [chk PASSE] C0 7|2.27|1.20 G_dt : fichier de serie = celui du JSON -- alpha_serie_p7_w2.27_c1.20_dt2s2_k2.txt
+  [chk PASSE] C0 7|2.27|1.20 G_dt : lnA_II rejoue = JSON a 1e-13 -- 0.00e+00
+  [chk PASSE] C0b 7|2.27|1.20 G_dt : M1 a c1 = 0 = ajustement II a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 7|2.27|1.20 G_dt M2 : rang 3 -- rang 3 cond 2.94
+  [chk PASSE] C0c 7|2.27|1.20 G_dt M2- : rang 3 -- rang 3 cond 4.15
+  [chk PASSE] C0c 7|2.27|1.20 G_dt M2+ : rang 3 -- rang 3 cond 1.98
+  [chk PASSE] C0 7|2.27|1.20 G_k : fichier de serie = celui du JSON -- alpha_serie_p7_w2.27_c1.20_dt2_k4.txt
+  [chk PASSE] C0 7|2.27|1.20 G_k : lnA_II rejoue = JSON a 1e-13 -- 0.00e+00
+  [chk PASSE] C0b 7|2.27|1.20 G_k : M1 a c1 = 0 = ajustement II a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 7|2.27|1.20 G_k M2 : rang 3 -- rang 3 cond 2.94
+  [chk PASSE] C0c 7|2.27|1.20 G_k M2- : rang 3 -- rang 3 cond 4.15
+  [chk PASSE] C0c 7|2.27|1.20 G_k M2+ : rang 3 -- rang 3 cond 1.98
+  [chk PASSE] C0 7|2.80|1.05 plan : fichier de serie = celui du JSON -- alpha_serie_p7_w2.80_c1.05_dt2_k2.txt
+  [chk PASSE] C0 7|2.80|1.05 plan : lnA_II rejoue = JSON a 1e-13 -- 0.00e+00
+  [chk PASSE] C0b 7|2.80|1.05 plan : M1 a c1 = 0 = ajustement II a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 7|2.80|1.05 plan M2 : rang 3 -- rang 3 cond 2.95
+  [chk PASSE] C0c 7|2.80|1.05 plan M2- : rang 3 -- rang 3 cond 4.15
+  [chk PASSE] C0c 7|2.80|1.05 plan M2+ : rang 3 -- rang 3 cond 1.98
+  [chk PASSE] C0 7|2.80|1.05 G_dt : fichier de serie = celui du JSON -- alpha_serie_p7_w2.80_c1.05_dt2s2_k2.txt
+  [chk PASSE] C0 7|2.80|1.05 G_dt : lnA_II rejoue = JSON a 1e-13 -- 0.00e+00
+  [chk PASSE] C0b 7|2.80|1.05 G_dt : M1 a c1 = 0 = ajustement II a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 7|2.80|1.05 G_dt M2 : rang 3 -- rang 3 cond 2.94
+  [chk PASSE] C0c 7|2.80|1.05 G_dt M2- : rang 3 -- rang 3 cond 4.15
+  [chk PASSE] C0c 7|2.80|1.05 G_dt M2+ : rang 3 -- rang 3 cond 1.98
+  [chk PASSE] C0 7|2.80|1.05 G_k : fichier de serie = celui du JSON -- alpha_serie_p7_w2.80_c1.05_dt2_k4.txt
+  [chk PASSE] C0 7|2.80|1.05 G_k : lnA_II rejoue = JSON a 1e-13 -- 0.00e+00
+  [chk PASSE] C0b 7|2.80|1.05 G_k : M1 a c1 = 0 = ajustement II a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 7|2.80|1.05 G_k M2 : rang 3 -- rang 3 cond 2.93
+  [chk PASSE] C0c 7|2.80|1.05 G_k M2- : rang 3 -- rang 3 cond 4.15
+  [chk PASSE] C0c 7|2.80|1.05 G_k M2+ : rang 3 -- rang 3 cond 1.97
+  [chk PASSE] C0 7|2.80|1.20 plan : fichier de serie = celui du JSON -- alpha_serie_p7_w2.80_c1.20_dt2_k2.txt
+  [chk PASSE] C0 7|2.80|1.20 plan : lnA_II rejoue = JSON a 1e-13 -- 0.00e+00
+  [chk PASSE] C0b 7|2.80|1.20 plan : M1 a c1 = 0 = ajustement II a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 7|2.80|1.20 plan M2 : rang 3 -- rang 3 cond 2.95
+  [chk PASSE] C0c 7|2.80|1.20 plan M2- : rang 3 -- rang 3 cond 4.15
+  [chk PASSE] C0c 7|2.80|1.20 plan M2+ : rang 3 -- rang 3 cond 1.98
+  [chk PASSE] C0 7|2.80|1.20 G_dt : fichier de serie = celui du JSON -- alpha_serie_p7_w2.80_c1.20_dt2s2_k2.txt
+  [chk PASSE] C0 7|2.80|1.20 G_dt : lnA_II rejoue = JSON a 1e-13 -- 0.00e+00
+  [chk PASSE] C0b 7|2.80|1.20 G_dt : M1 a c1 = 0 = ajustement II a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 7|2.80|1.20 G_dt M2 : rang 3 -- rang 3 cond 2.94
+  [chk PASSE] C0c 7|2.80|1.20 G_dt M2- : rang 3 -- rang 3 cond 4.15
+  [chk PASSE] C0c 7|2.80|1.20 G_dt M2+ : rang 3 -- rang 3 cond 1.98
+  [chk PASSE] C0 7|2.80|1.20 G_k : fichier de serie = celui du JSON -- alpha_serie_p7_w2.80_c1.20_dt2_k4.txt
+  [chk PASSE] C0 7|2.80|1.20 G_k : lnA_II rejoue = JSON a 1e-13 -- 0.00e+00
+  [chk PASSE] C0b 7|2.80|1.20 G_k : M1 a c1 = 0 = ajustement II a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 7|2.80|1.20 G_k M2 : rang 3 -- rang 3 cond 2.93
+  [chk PASSE] C0c 7|2.80|1.20 G_k M2- : rang 3 -- rang 3 cond 4.15
+  [chk PASSE] C0c 7|2.80|1.20 G_k M2+ : rang 3 -- rang 3 cond 1.97
+
+2. RICHARDSON (q = 4 suppose) ET DISPERSION ENTRE LES SIX POINTS
+  [note] p=4 M1  -- S = 5.8409e-09 ; lnA_R - ln(K/g)/(p-2) aux six : +7.941e-09 +3.372e-09 +3.440e-09 +7.997e-09 +6.609e-09 +2.156e-09 ; cond max 1
+  [note] p=4 M2  -- S = 9.9192e-09 ; lnA_R - ln(K/g)/(p-2) aux six : +1.289e-08 +6.359e-09 +7.121e-09 +1.320e-08 +1.207e-08 +3.277e-09 ; cond max 2.57
+  [note] p=4 M2- -- S = 1.4930e-08 ; lnA_R - ln(K/g)/(p-2) aux six : +1.813e-08 +1.020e-08 +1.185e-08 +1.938e-08 +1.842e-08 +4.445e-09 ; cond max 3.31
+  [note] p=4 M2+ -- S = 6.9194e-09 ; lnA_R - ln(K/g)/(p-2) aux six : +9.236e-09 +4.235e-09 +4.408e-09 +9.162e-09 +8.373e-09 +2.317e-09 ; cond max 1.84
+  [note] p=4 M2 / M1 -- S rapport 1.6982 ; SS moyen rapport 0.7284
+  [note] p=4 M2- / M1 -- S rapport 2.5561 ; SS moyen rapport 0.5620
+  [note] p=4 M2+ / M1 -- S rapport 1.1846 ; SS moyen rapport 0.8965
+  [note] p=5 M1  -- S = 3.7415e-09 ; lnA_R - ln(K/g)/(p-2) aux six : +1.067e-10 -1.880e-09 -7.473e-10 +2.296e-10 +9.545e-10 +1.861e-09 ; cond max 1
+  [note] p=5 M2  -- S = 5.8510e-09 ; lnA_R - ln(K/g)/(p-2) aux six : +3.309e-09 -2.542e-09 +9.914e-10 +7.261e-10 +9.426e-10 +2.028e-09 ; cond max 2.74
+  [note] p=5 M2- -- S = 8.9342e-09 ; lnA_R - ln(K/g)/(p-2) aux six : +5.367e-09 -3.567e-09 +1.822e-09 +1.240e-09 +1.388e-09 +2.557e-09 ; cond max 3.66
+  [note] p=5 M2+ -- S = 3.6737e-09 ; lnA_R - ln(K/g)/(p-2) aux six : +1.179e-09 -2.007e-09 +2.619e-10 +3.174e-10 +6.916e-10 +1.666e-09 ; cond max 1.91
+  [note] p=5 M2 / M1 -- S rapport 1.5638 ; SS moyen rapport 0.6228
+  [note] p=5 M2- / M1 -- S rapport 2.3878 ; SS moyen rapport 0.4566
+  [note] p=5 M2+ / M1 -- S rapport 0.9819 ; SS moyen rapport 0.8367
+  [note] p=7 M1  -- S = 2.5080e-07 ; lnA_R - ln(K/g)/(p-2) aux six : -3.943e-08 -2.039e-07 -1.851e-08 +4.693e-08 +2.614e-08 -1.805e-08 ; cond max 1
+  [note] p=7 M2  -- S = 4.3775e-09 ; lnA_R - ln(K/g)/(p-2) aux six : +2.881e-09 -8.185e-10 +1.980e-09 -1.201e-10 +2.620e-10 -1.496e-09 ; cond max 2.95
+  [note] p=7 M2- -- S = 1.1930e-07 ; lnA_R - ln(K/g)/(p-2) aux six : +3.181e-08 +1.081e-07 +2.134e-08 -8.091e-09 -1.116e-08 -2.003e-09 ; cond max 4.15
+  [note] p=7 M2+ -- S = 1.1768e-07 ; lnA_R - ln(K/g)/(p-2) aux six : -2.283e-08 -1.050e-07 -1.393e-08 +1.270e-08 +1.197e-08 -3.913e-09 ; cond max 1.98
+  [note] p=7 M2 / M1 -- S rapport 0.0175 ; SS moyen rapport 0.4177
+  [note] p=7 M2- / M1 -- S rapport 0.4757 ; SS moyen rapport 0.2888
+  [note] p=7 M2+ / M1 -- S rapport 0.4692 ; SS moyen rapport 0.7074
+
+3. REGLE DE LECTURE (ecrite avant, section 3)
+  [note] Q5-a -- S_M2(7) = 4.3775e-09 <= S_M1(7)/3 = 8.3601e-08 : True
+  [note] Q5-b -- S_M2-(7) = 1.1930e-07 , S_M2+(7) = 1.1768e-07 > 8.3601e-08 : True
+  [note] Q5-c p=4 -- S_M2 = 9.9192e-09 <= 2 S_M1 = 1.1682e-08 : True
+  [note] Q5-c p=5 -- S_M2 = 5.8510e-09 <= 2 S_M1 = 7.4831e-09 : True
+  [note] VERDICT DE LECTURE -- (i) TIENT A p = 7
+
+SORTIE ajustement_modes_libres_Q5_machine2_v1.json convention B 4634a795a008a562
+BILAN : 330 controles, 0 mordent []

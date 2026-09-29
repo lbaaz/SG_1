@@ -1,0 +1,52 @@
+CONTROLE MACHINE 2 DE L ERRATUM E-v9-1 ET DE LA CLOTURE DE LA DETTE proj4
+python 3.11.9 ; controle_erratum_proj4_machine2_v1.py
+
+0. LES PIECES DU LOT ENTRANT
+  [chk PASSE] 0 erratum present -- e9babf9830ebe308
+  [chk PASSE] 0 note de reponse present -- 2e080b7e19d30a01
+  [chk PASSE] 0 rejeu proj4 present -- 6194df14ffd3d12e
+
+1. E-v9-1 : LA CAUSE QUE L ERRATUM ALLEGUE, CHERCHEE DANS LE JOURNAL
+  [chk PASSE] 1.1 : l erratum dit bien que le VRAI compte du banc est 58/58
+  [chk PASSE] 1.2 : son journal du banc porte bien DEUX lignes "bilan", dans cet ordre -- ['103/103', '58/58']
+  [note] 1.2 la cause est donc exacte -- un motif "bilan N/N" non ancre prend la PREMIERE : celle du selftest que le banc rejoue avant ses scenarios. C est ce qu elle decrit.
+  [chk PASSE] 1.3 : MON journal du banc a la MEME structure -- c est une propriete de l instrument, pas un accident de sa machine -- moi ['103/103', '58/58'] | elle ['103/103', '58/58']
+  [chk PASSE] 1.4 : le motif ANCRE ("scenarios mordent") rend 58/58 des deux cotes, sans ambiguite -- moi ['58/58'] | elle ['58/58']
+  [chk PASSE] 1.5 : l erratum cite la ligne qui porte le vrai compte ([0447])
+  [chk PASSE] 1.6 : l erratum declare que sa portee est nulle et qu aucun canon ne bouge
+
+2. LA DETTE proj4 : SON REJEU DE MA DERIVATION, DIFFE LIGNE A LIGNE
+  [chk PASSE] 2.1 : les deux journaux ont le meme nombre de lignes -- moi 65 | elle 65
+  [DIFF ligne 2]
+      moi  : python 3.11.9 ; mpmath 1.3.0 ; sympy 1.14.0
+      elle : python 3.12.3 ; mpmath 1.3.0 ; sympy 1.14.0
+  [chk PASSE] 2.2 : UNE SEULE ligne differe -- 1 ligne(s)
+  [chk PASSE] 2.3 : et cette ligne est bien la ligne de PLATEFORME -- ligne 2
+  [chk PASSE] 2.4 : mpmath est la MEME version des deux cotes (la precision etendue ne change pas) -- moi 1.3.0 | elle 1.3.0
+  [note] 2.5 bilan moi -- BILAN : 25 controles, 1 mordent ['C1 : mon outil rend le proj2 de l instrument (0.6727) a 1e-3 pres aux neuf points']
+  [note] 2.5 bilan elle -- BILAN : 25 controles, 1 mordent ['C1 : mon outil rend le proj2 de l instrument (0.6727) a 1e-3 pres aux neuf points']
+  [chk PASSE] 2.6 : meme bilan, et la SEULE morsure est la meme (C1, la reserve sur proj2)
+  [note] 2.6 portee de C1 -- mon outil rend proj2 = 0.655-0.660 quand l instrument rend 0.6727 : 2.6 pour cent, de composition de fenetre. La reserve mord chez elle comme chez moi -- elle est donc REPRODUITE, pas seulement declaree. Sans portee devant quatre ordres.
+
+3. LES NEUF proj4 ET LES SIX PLANCHERS, VALEUR PAR VALEUR
+  [chk PASSE] 3.1 : les neuf points sont presents des deux cotes -- moi 9 | elle 9
+  [chk PASSE] 3.2 : les neuf (biais, c2 tau^4, proj4) coincident AU CHIFFRE IMPRIME -- points en ecart : []
+  [chk PASSE] 3.3 : proj4 ne prend que les deux valeurs qu elle cite (0.219452 et 0.223764) -- ['0.219452', '0.223764']
+  [chk PASSE] 3.4 : et elles encadrent bien l intervalle que MA prescription annoncait (0.2195 a 0.2238) -- ['0.219452', '0.223764']
+  [chk PASSE] 3.5 : les six planchers corriges (n = 18 et n = 21) coincident au chiffre -- 6 de chaque cote
+  [note] 3.6 planchers du log -- {'p=4 n=21': '2.7496e-14', 'p=4 n=18': '5.0940e-14', 'p=5 n=21': '6.4766e-14', 'p=5 n=18': '1.1999e-13', 'p=7 n=21': '1.6841e-13', 'p=7 n=18': '3.1199e-13'}
+  [note] 3.7 portee -- le log rend le plancher par w2 = 1.73 avec son proj4 propre (5.0940e-14 a p=4, n=18) ; le gel 7bis prend la BORNE HAUTE 0.2238 sur le max en w2 (5.1949e-14). Le rapport 1.0198 == 0.223764/0.219452 : les deux se deduisent l un de l autre, rien ne cloche.
+  [note] 3.8 ce qui N EST PAS verifie directement -- elle affirme que son JSON de sortie est IDENTIQUE AU BIT a mon 3b12117a58dde698, mais elle n a PAS joint le JSON. Je verifie le log, qui porte tous les nombres qui entrent dans ce JSON : l identite du JSON est donc etablie INDIRECTEMENT, et je l ecris ainsi plutot que de la donner pour mesuree.
+
+4. CE QUE L ERRATUM PROMET DE NE PAS TOUCHER
+  [chk PASSE] 4 banc_qualification_machine1_v14.py intact -- dc91676c640d4323
+  [chk PASSE] 4 banc_qualification_machine1_v15.py intact -- a1553f6eb5cc74b8
+  [chk PASSE] 4 constante_A_pre_enregistrement_v8.md intact -- 800fc6a9a8e56e49
+  [chk PASSE] 4 constante_A_pre_enregistrement_v9.md intact -- b515abc5a6da73c5
+  [chk PASSE] 4 derivation_plancher_corrige_machine2_v3.json intact -- 3b12117a58dde698
+  [chk PASSE] 4 note_machine1_gel_v9_banc_v15_v1.md intact -- 630be06efa686b38
+  [chk PASSE] 4.7 : elle reconnait que la ligne de 7bis qui declare la dette est PERIMEE
+  [chk PASSE] 4.8 : et qu elle ne peut PAS l editer dans le v9 certifie (PB-1)
+  [chk PASSE] 4.9 : la consigne --base est prise comme CONSIGNE, sans modifier la feuille
+
+BILAN : 28 controles, 0 mordent

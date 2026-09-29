@@ -1,0 +1,104 @@
+CERTIFICATION MACHINE 2 DU GEL v8 ET DE L INSTRUMENT v14
+python 3.11.9 ; certif_v8_v14_machine2_v1.py
+
+0. ANCRES ET PROVENANCE
+  [chk PASSE] canon constante_A_pre_enregistrement_v7.md -- a2b8463372e1f906
+  [chk PASSE] canon constante_A_pre_enregistrement_v8.md -- 800fc6a9a8e56e49
+  [chk PASSE] canon banc_qualification_machine1_v13.py -- 1ac295648490a86c
+  [chk PASSE] canon banc_qualification_machine1_v14.py -- dc91676c640d4323
+
+1. LE REGLAGE n = 18, RE-DERIVE PAR MES PROPRES FORMULES
+  [chk PASSE] delta' = 1/32400 exact -- 1/32400
+  [chk PASSE] levier delta'/delta_0 = 1/324 -- 1/324
+  [chk PASSE] 3.3 : decimale 3.086420e-05 -- 3.086420e-05
+  [chk PASSE] 3.3 : kT = 1.8601 -- 1.860117
+  [chk PASSE] 3.3 : m = 1.1202 -- 1.120163
+  [chk PASSE] 3.1 (T) : kT >= 1.15, la clause du v7 n est PAS relachee -- 1.8601
+  [chk PASSE] 3.3 : SUP(1) = 3.457292925e-05 -- 3.457292925e-05
+  [chk PASSE] 3.3 p=4 : plancher exact, decimal, rapport a disp_85 -- ('1/648000', '1.543210e-06', '0.7805') | gel ('1/648000', '1.543210e-06', '0.7805')
+  [chk PASSE] 3.3 p=5 : plancher exact, decimal, rapport a disp_85 -- ('1/468000', '2.136752e-06', '0.8927') | gel ('1/468000', '2.136752e-06', '0.8927')
+  [chk PASSE] 3.3 p=7 : plancher exact, decimal, rapport a disp_85 -- ('1/344736', '2.900770e-06', '0.3903') | gel ('1/344736', '2.900770e-06', '0.3903')
+  [chk PASSE] 4.3 w2=1.73 : tau_dom, tau_CAP, dt_2a, dt_2b -- ('2.780246e-03', '2.780246e-04', '2.780246e-04', '1.390123e-05') | gel ('2.780246e-03', '2.780246e-04', '2.780246e-04', '1.390123e-05')
+  [chk PASSE] 4.3 w2=2.27 : tau_dom, tau_CAP, dt_2a, dt_2b -- ('2.239688e-03', '2.239688e-04', '2.239688e-04', '1.119844e-05') | gel ('2.239688e-03', '2.239688e-04', '2.239688e-04', '1.119844e-05')
+  [chk PASSE] 4.3 w2=2.80 : tau_dom, tau_CAP, dt_2a, dt_2b -- ('1.868536e-03', '1.868536e-04', '1.868536e-04', '9.342678e-06') | gel ('1.868536e-03', '1.868536e-04', '1.868536e-04', '9.342678e-06')
+  [chk PASSE] 4.4 bascule 2b p=4 -- ('1.5845e+06', '2.4416e+06', '3.5079e+06') | gel ('1.5845e+06', '2.4416e+06', '3.5079e+06')
+  [chk PASSE] 4.4 bascule 2b p=5 -- ('9.7964e+03', '1.3069e+04', '1.6641e+04') | gel ('9.7964e+03', '1.3069e+04', '1.6641e+04')
+  [chk PASSE] 4.4 bascule 2b p=7 -- ('2.0007e+02', '2.3784e+02', '2.7494e+02') | gel ('2.0007e+02', '2.3784e+02', '2.7494e+02')
+  [chk PASSE] 4.5 CAP p=4 -- ('6.3378e+08', '9.7663e+08', '1.4031e+09') | gel ('6.3378e+08', '9.7663e+08', '1.4031e+09')
+  [chk PASSE] 4.5 CAP p=5 -- ('5.3183e+05', '7.0952e+05', '9.0340e+05') | gel ('5.3183e+05', '7.0952e+05', '9.0340e+05')
+  [chk PASSE] 4.5 CAP p=7 -- ('2.1979e+03', '2.6129e+03', '3.0204e+03') | gel ('2.1979e+03', '2.6129e+03', '3.0204e+03')
+  [chk PASSE] 4.5 : controle de debordement 1.381e+26 -- 1.3813e+26
+  [chk PASSE] 4.6 : n_2a nominal = 20 x 17 = 340 -- M (n-1) = 340
+  [chk PASSE] 9 : le signal L-desc vaut le levier 1/324 = 3.0864e-03 -- 3.0864e-03
+
+2. SECTION 5bis -- COEFFICIENTS DERIVES ET DEUX PREDICTIONS
+  [chk PASSE] la derivation citee est la mienne
+  [chk PASSE] 5bis (a) p=4 : c1 tau_dom^2 / plancher = 1/3 -- 1/3
+  [chk PASSE] 5bis (a) p=5 : c1 tau_dom^2 / plancher = 65/261 -- 65/261
+  [chk PASSE] 5bis (a) p=7 : c1 tau_dom^2 / plancher = 133/795 -- 133/795
+  [chk PASSE] 5bis (b) p=4 : Re beta = alpha + 3/2 = 7/2 -- 7/2
+  [chk PASSE] 5bis (b) p=4 : la frequence du gel est celle de ma derivation -- 4.213075
+  [chk PASSE] 5bis (b) p=5 : Re beta = alpha + 3/2 = 17/6 -- 17/6
+  [chk PASSE] 5bis (b) p=5 : la frequence du gel est celle de ma derivation -- 3.492054
+  [chk PASSE] 5bis (b) p=7 : Re beta = alpha + 3/2 = 23/10 -- 23/10
+  [chk PASSE] 5bis (b) p=7 : la frequence du gel est celle de ma derivation -- 2.896550
+  [chk PASSE] 5bis : levier = 441/324 exact -- 49/36
+  [chk PASSE] 5bis (a) p=4 : la prediction du gel = biais(91) x levier a 1e-4 pres -- gel 3.4606e-07 | re-derive 3.460593e-07 | ecart relatif 2.08e-06
+  [chk PASSE] 5bis (a) p=4 : et elle est RE-DERIVEE, non arrondie a la main -- gel 3.4606e-07 | 3.4606e-07 depuis le biais non arrondi 2.542476e-07
+  [chk PASSE] 5bis (a) p=5 : la prediction du gel = biais(91) x levier a 1e-4 pres -- gel 3.5800e-07 | re-derive 3.579949e-07 | ecart relatif 1.42e-05
+  [chk MORD ] 5bis (a) p=5 : et elle est RE-DERIVEE, non arrondie a la main -- gel 3.5800e-07 | 3.5799e-07 depuis le biais non arrondi 2.630167e-07
+  [chk PASSE] 5bis (a) p=7 : la prediction du gel = biais(91) x levier a 1e-4 pres -- gel 3.2648e-07 | re-derive 3.264729e-07 | ecart relatif 2.18e-05
+  [chk MORD ] 5bis (a) p=7 : et elle est RE-DERIVEE, non arrondie a la main -- gel 3.2648e-07 | 3.2647e-07 depuis le biais non arrondi 2.398576e-07
+  [chk PASSE] 5bis (b) : amplitude transportee x 1.4255 -- 1.425534
+  [chk PASSE] 5bis (b) : phase transportee -0.4465 rad -- -0.446505
+  [chk PASSE] 5bis (b) : base rejouee chez moi, ecart ABSOLU <= 1e-15 sur (a, c) -- 1.942e-16
+  [chk PASSE] 5bis (b) : la table du gel porte les SIX points -- 6
+  [chk MORD ] 5bis (b) : les 24 nombres de la table se reproduisent chez moi AU CHIFFRE
+  [note] 5bis (b) canon de la base -- le gel cite 79099ef4ea51adf6 (machine 1) ; ma base rejouee rend 0a7d411197d0603d : le canon d une base AJUSTEE est machine-dependant, seule la table imprimee se reproduit
+  [chk MORD ] 5bis (a) : la feuille RE-DERIVE le biais du 91 au lieu de le taper -- BIAIS_91 est tape en dur (BIAIS_91 = {4: 2.5425e-07, 5: 2.6302e-07, 7: 2.3986e-07}), arrondi a %.4e du dossier C4
+
+3. LES COMPTES -- LE GEL CONTRE CE QUE L INSTRUMENT DERIVE
+  [chk PASSE] v14 : le quatrieme etage G_dt4 entre dans les attendus de l instrument
+  [chk MORD ] gel 11 : le compte ECRIT au gel egale celui que l instrument derive -- gel 90 | instrument plan+G_dt+G_k+G_dt4+G_seuil+G_lignee = 108
+  [chk MORD ] gel 11 : le quatrieme etage est NOMME dans les comptes du gel -- enumeration du gel : <re.Match object; span=(122, 170), match='plan 18, G_dt 18, G_k 18, G_seuil 9, G_lignee 27'>
+
+4. G-PLANCHER CONTRE LE DISPOSITIF DU v8 -- LE POINT DE FOND
+  [note] dispersion LD-12 MESUREE au 91 (n = 21) -- {4: '9.853e-07', 5: '3.261e-07', 7: '8.916e-08'}
+  [note] dispersion du 85 dont le gel se sert en 3.3 et 7 -- {4: '1.977e-06', 5: '2.394e-06', 7: '7.432e-06'}
+  [note] transport par pente mesuree 85 -> 91, p=4 -- disp(18) 1.021e-06 | plancher 1.543e-06 | tol/plancher 1.000   -> G-PLANCHER MORD
+  [note] transport par pente mesuree 85 -> 91, p=5 -- disp(18) 3.607e-07 | plancher 2.137e-06 | tol/plancher 1.000   -> G-PLANCHER MORD
+  [note] transport par pente mesuree 85 -> 91, p=7 -- disp(18) 1.115e-07 | plancher 2.901e-06 | tol/plancher 1.000   -> G-PLANCHER MORD
+  [note] transport par troncature en dt^4 (delta'^2), p=4 -- disp(18) 1.825e-06 | plancher 1.543e-06 | tol/plancher 1.183
+  [note] transport par troncature en dt^4 (delta'^2), p=5 -- disp(18) 6.041e-07 | plancher 2.137e-06 | tol/plancher 1.000   -> G-PLANCHER MORD
+  [note] transport par troncature en dt^4 (delta'^2), p=7 -- disp(18) 1.652e-07 | plancher 2.901e-06 | tol/plancher 1.000   -> G-PLANCHER MORD
+  [chk MORD ] 4.1 : sous au moins une loi de transport il reste TROIS degres non mordus -- degres mordus : {'pente mesuree 85 -> 91': [4, 5, 7], "troncature en dt^4 (delta'^2)": [5, 7]}
+  [note] 4.2 attendu de conception -- le gel annonce en 7 les rapports 1.28 / 1.12 / 2.56, calcules sur les dispersions du 85, soit 2.0 / 7.3 / 83.4 fois celles que le run 91 a MESUREES
+  [chk MORD ] 4.3 : la P-A de l instrument lit la tolerance de 5bis (S + residu de Richardson) -- v14 calcule P_A ainsi : all(abs(math.log(v)) <= (p - 2) * D["tol_lnA"] for v in ratios.values())
+  [chk MORD ] 4.4 : la P-A de l instrument lit le lnA CORRIGE (M1/M2) -- v14 lit gA_II_sur_K, c est-a-dire l ajustement II NON corrige
+  [chk MORD ] 4.5 : la cascade de l instrument connait les modeles de 5bis -- les modeles vivent dans la feuille de lecture, hors cascade ; la branche 3b est lue avant eux
+
+5. FORME, STRUCTURE, PB-1
+  [chk MORD ] 5.1 : aucun separateur de section colle a son titre -- 1 ligne(s), dont : ===================================================================5bis. LES MODELES D'AJU
+  [chk PASSE] 5.2 : la ligne FIN figure une seule fois
+  [chk MORD ] 5.3 : le pin de l instrument v14 est le canon du gel v8 -- GEL_EMPREINTE absente
+  [chk PASSE] 5.4 : PB-1, le v7 et le v13 ne sont pas edites
+
+6. LES EPREUVES DE L INSTRUMENT v14, JOUEES SUR BOCAL4
+  [chk PASSE] 6 selftest : 103/103 -- 103/103 (journal b3be375fb9d1d5f0)
+  [chk PASSE] 6 banc qui tue : 56/56 -- 56/56 (journal e40ac1870f8c718a)
+  [note] 6 pre-vol temoin -- REGLAGE QUALIFIE -- branche 5 : T-1 R = q, T-1b les deux lois, T-2 p_obs = 4 sous la conve (journal c69d1b85cb271303)
+  [note] 6 pre-vol alpha -- LIEN NON ETABLI (9/27) -- VERIFIE -- branche 5 : P-alpha les six par degre ET P-A aux troi (journal 3e9327019295afb6)
+
+BILAN : 62 controles, 12 mordent
+   MORD : 5bis (a) p=5 : et elle est RE-DERIVEE, non arrondie a la main
+   MORD : 5bis (a) p=7 : et elle est RE-DERIVEE, non arrondie a la main
+   MORD : 5bis (b) : les 24 nombres de la table se reproduisent chez moi AU CHIFFRE
+   MORD : 5bis (a) : la feuille RE-DERIVE le biais du 91 au lieu de le taper
+   MORD : gel 11 : le compte ECRIT au gel egale celui que l instrument derive
+   MORD : gel 11 : le quatrieme etage est NOMME dans les comptes du gel
+   MORD : 4.1 : sous au moins une loi de transport il reste TROIS degres non mordus
+   MORD : 4.3 : la P-A de l instrument lit la tolerance de 5bis (S + residu de Richardson)
+   MORD : 4.4 : la P-A de l instrument lit le lnA CORRIGE (M1/M2)
+   MORD : 4.5 : la cascade de l instrument connait les modeles de 5bis
+   MORD : 5.1 : aucun separateur de section colle a son titre
+   MORD : 5.3 : le pin de l instrument v14 est le canon du gel v8

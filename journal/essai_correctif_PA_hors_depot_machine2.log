@@ -1,0 +1,42 @@
+CORRECTIF D ESSAI -- P-A CORRIGEE DANS L INSTRUMENT (hors depot)
+python 3.11.9
+
+0. ANCRES
+  [chk PASSE] le banc v14 a son empreinte -- dc91676c640d4323
+
+1. A1 -- LES ANCRES, COMPTEES
+  [chk PASSE] A1 H-a aides (c1, c2, ajustement corrige, Richardson) : ancre trouvee exactement une fois -- 1 occurrence(s)
+  [chk PASSE] A1 H-b lnA_M pose a cote de lnA_II, a chaque cellule : ancre trouvee exactement une fois -- 1 occurrence(s)
+  [chk PASSE] A1 H-c G-plancher et P-A portes sur le couple CORRIGE : ancre trouvee exactement une fois -- 1 occurrence(s)
+  [chk PASSE] A1 : le correctif est applique
+
+2. TEST NEGATIF DE CE SCRIPT -- une ancre fausse doit arreter avant ecriture
+  [chk PASSE] le script ARRETE sur une ancre absente (0 occurrence) -- [('H-a aides (c1, c2, ajustement corrige, Richardson)', 0)]
+  [chk PASSE] le script ARRETE sur une ancre multiple -- 177 occurrences
+
+  [note] copie ecrite -- essai_banc_PA_corrigee_hors_depot.py (203998 octets, convention B 8c83659ba48d67a1) -- HORS DEPOT, nom sans numero de version
+
+3. A3 -- IL NE CASSE RIEN : le selftest de la copie
+  [chk PASSE] A3 : selftest de la copie = 103/103 -- 103/103
+
+4. A2 -- IL GUERIT : le pre-vol alpha de la copie, chemin synthetique complet
+  [note] A2 verdict du pre-vol de la copie -- LIEN NON ETABLI (9/27) -- VERIFIE -- branche 5 : P-alpha les six par degre ET P-A aux trois degres
+  [chk PASSE] A2-1 : le chemin synthetique garde le verdict du v14 (la lecture corrigee ne l invalide pas) -- LIEN NON ETABLI (9/27) -- VERIFIE -- branche 5 : P-alpha les six par degre ET P-A aux trois degres
+  [note] A2-1 portee -- le pre-vol joue un moteur FACTICE : ses cellules ne portent pas d ajustement corrige, donc la lecture corrigee y est NON JOUEE et consignee -- c est le defaut que le premier essai a revele (log 623bc17a04259d7d) et que le v15 doit traiter a la source
+  [note] A2 trace -- q = [\d.]+ : 0 occurrence(s) au journal du pre-vol
+  [note] A2 trace -- S_p : 0 occurrence(s) au journal du pre-vol
+  [note] A2 trace -- plancher_corrige : 0 occurrence(s) au journal du pre-vol
+
+5. CE QUE LE BANC QUI TUE EN DIT -- scenario G22 (il encode le plancher ANCIEN)
+  [note] G22 de la copie -- [0173] BANC           G22 decalage lnA nul : dispersion sous le plancher' -> G-plancher MORD -> branche 3b MORD NON CONCLUANT DE PLANCHER / branche 3b
+  [chk PASSE] A3-2 : le banc qui tue de la copie reste 56/56 -- 56/56
+
+6. A2 -- IL GUERIT, MESURE SUR DES SERIES A TROIS NIVEAUX
+  [note] A2-2 p=4 -- q mesure de 4.000 a 4.000 ; 6/6 points lus ; S = 4.419e-13 ; plancher CORRIGE = 2.321e-13 ; G-plancher corrige mord : False ; ecart max a ln(K/g)/(p-2) = 4.445e-13
+  [chk PASSE] A2-2 p=4 : le plancher CORRIGE ne mord pas par construction (S > plancher) -- S 4.419e-13 vs plancher 2.321e-13
+  [note] A2-2 p=5 -- q mesure de 4.000 a 4.000 ; 6/6 points lus ; S = 7.701e-13 ; plancher CORRIGE = 5.468e-13 ; G-plancher corrige mord : False ; ecart max a ln(K/g)/(p-2) = 7.070e-13
+  [chk PASSE] A2-2 p=5 : le plancher CORRIGE ne mord pas par construction (S > plancher) -- S 7.701e-13 vs plancher 5.468e-13
+  [note] A2-2 p=7 -- q mesure de 4.000 a 4.000 ; 6/6 points lus ; S = 6.322e-13 ; plancher CORRIGE = 1.422e-12 ; G-plancher corrige mord : True ; ecart max a ln(K/g)/(p-2) = 5.966e-13
+  [chk MORD ] A2-2 p=7 : le plancher CORRIGE ne mord pas par construction (S > plancher) -- S 6.322e-13 vs plancher 1.422e-12
+
+BILAN : 13 controles, 1 mordent ['A2-2 p=7 : le plancher CORRIGE ne mord pas par construction (S > plancher)']

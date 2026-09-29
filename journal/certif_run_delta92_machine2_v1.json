@@ -1,0 +1,49 @@
+{
+ "bilan": {
+  "chk": 45,
+  "mord": 0,
+  "noms": []
+ },
+ "etages": {
+  "G_dt": 18,
+  "G_dt4": 18,
+  "G_k": 18,
+  "plan": 18
+ },
+ "par_degre": {
+  "4": {
+   "G_plancher_mord": false,
+   "P_A": true,
+   "S_p": 4.467898939708448e-09,
+   "plancher_corrige": 5.194891026474795e-14,
+   "points_non_lus": [],
+   "tol_lnA": 4.467898939708448e-09,
+   "v14_P_A": true
+  },
+  "5": {
+   "G_plancher_mord": false,
+   "P_A": true,
+   "S_p": 3.7152121379335767e-09,
+   "plancher_corrige": 1.2236486277104784e-13,
+   "points_non_lus": [],
+   "tol_lnA": 3.7152121379335767e-09,
+   "v14_P_A": true
+  },
+  "7": {
+   "G_plancher_mord": false,
+   "P_A": true,
+   "S_p": 3.518211277864225e-09,
+   "plancher_corrige": 3.181768292545168e-13,
+   "points_non_lus": [],
+   "tol_lnA": 3.518211277864225e-09,
+   "v14_P_A": true
+  }
+ },
+ "planchers_re_derives": {
+  "4": 5.194891026474795e-14,
+  "5": 1.2236486277104784e-13,
+  "7": 3.181768292545168e-13
+ },
+ "portee": "certification m2 du run delta 92 ; les deux predictions se lisent a part (lecture_v9 --predictions)",
+ "verdict_alpha": "VERIFIE"
+}

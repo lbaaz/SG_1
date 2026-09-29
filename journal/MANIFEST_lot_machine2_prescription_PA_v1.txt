@@ -1,0 +1,19 @@
+MANIFESTE lot_machine2_2026-09-18_prescription_PA_v1 -- PRESCRIPTION : PORTER LA P-A CORRIGEE DANS L INSTRUMENT (v15, gel v9), arbitrage operateur du 18/09. LE PLANCHER DE LA LECTURE CORRIGEE EST DERIVE : 5.1e-14 / 1.2e-13 / 3.1e-13 a n = 18, soit 1e-07 fois celui du v7 et 1e-05 fois S(p) -- R-v8-1 et R-v8-2 tombent. c2 en forme CLOSE, exacte aux neuf points ; proj4 mesure en precision etendue (0.2195-0.2238, non mesurable en double). CORRECTIF APPLIQUE A UNE COPIE HORS DEPOT (essai_banc_PA_corrigee_hors_depot.py, sans numero de version) : A1 trois ancres exactement une fois + test negatif, A2 q = 4.000 aux six points et plancher sous S, A3 selftest 103/103 et banc 56/56. Deux defauts que seule l execution montre : D-essai-1 (une lecture corrigee absente ne doit pas invalider le degre -- sinon le banc cesse de tuer), D-essai-2 (le moteur factice ne produit pas l ajustement corrige : le chemin neuf n est jamais exerce en pre-vol), D-essai-3 (la borne proj4 <= 1 est trop grossiere a p = 7). machine 2, classe C
+colonnes : empreinte_B (sha256 NFC+LF, 16 hex)  empreinte_brute  octets_B  octets_bruts  fichier
+Le CANON du lot est l'empreinte B de CE manifeste ; il ne se porte pas lui-meme.
+
+b86f25c573fd5b05 b86f25c573fd5b05     9218     9218  POUR_MACHINE1_prescription_PA_dans_instrument_machine2_v1.md
+b0e107f45e0bc17b b0e107f45e0bc17b    11474    11474  derivation_plancher_corrige_machine2_v3.py
+33a515251ac3311a 33a515251ac3311a     6187     6187  derivation_plancher_corrige_machine2_v3.log
+3b12117a58dde698 3b12117a58dde698     2579     2579  derivation_plancher_corrige_machine2_v3.json
+47fe6dbd7c990a09 47fe6dbd7c990a09     7235     7235  derivation_plancher_corrige_machine2_v1.log
+ea0162e714600504 ea0162e714600504     6221     6221  derivation_plancher_corrige_machine2_v2.log
+0dcfd901a0551d0f 0dcfd901a0551d0f    16330    16330  essai_correctif_PA_hors_depot_machine2.py
+5c2d8f88531fdc87 5c2d8f88531fdc87     3500     3500  essai_correctif_PA_hors_depot_machine2.log
+b020758f3bddb646 b020758f3bddb646    11371    11371  essai_correctif_selftest.log
+f5fe2087ed38173f f5fe2087ed38173f    24846    24846  essai_correctif_banc.log
+a72bf1b928b4f4b8 a72bf1b928b4f4b8    34113    34113  essai_correctif_prevol_alpha.log
+8c83659ba48d67a1 8c83659ba48d67a1   203998   203998  essai_banc_PA_corrigee_hors_depot.py
+
+entrants : ma certification 45de25ac61321661 (gel v8 NON CERTIFIE) ; gel v8 800fc6a9a8e56e49 ; banc v14 dc91676c640d4323 ; derivation b70fca94d72822ad ; Q5 4634a795a008a562
+pieces : 12 (compte etabli APRES le dernier ajout)

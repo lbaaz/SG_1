@@ -1,0 +1,10 @@
+point          a_mode        c_mode        biais_II total  biais_c1 seul  rapport predit  ratio observe (a)
+7|1.73|1.05   +8.8659e-09   +1.3124e-07   +2.8935e-07      +3.2647e-07     0.886           0.867   (phase+pi : 1.114)
+7|1.73|1.20   -1.3822e-07   +5.6379e-07   +9.2564e-08      +3.2647e-07     0.284           0.284   (phase+pi : 1.716)
+7|2.27|1.05   +3.7833e-08   +8.1888e-08   +3.1695e-07      +3.2648e-07     0.971           0.963   (phase+pi : 1.029)
+7|2.27|1.20   +1.4292e-07   -6.7622e-08   +4.0788e-07      +3.2648e-07     1.249           1.234   (phase+pi : 0.751)
+7|2.80|1.05   +3.2311e-08   -6.3855e-08   +3.6000e-07      +3.2647e-07     1.103           1.089   (phase+pi : 0.897)
+7|2.80|1.20   -7.2402e-08   +1.8468e-08   +2.9015e-07      +3.2647e-07     0.889           0.881   (phase+pi : 1.111)
+
+[chk PASSE] la projection du mode sur II reproduit les six ratios observes de (a) a 0.05 pres
+[chk PASSE] test negatif : la phase + pi ne les reproduit pas

@@ -1,0 +1,36 @@
+{
+ "bilan": {
+  "chk": 62,
+  "mord": 10,
+  "noms": [
+   "5bis (a) p=5 : et elle est RE-DERIVEE, non arrondie a la main",
+   "5bis (a) p=7 : et elle est RE-DERIVEE, non arrondie a la main",
+   "5bis (a) : la feuille RE-DERIVE le biais du 91 au lieu de le taper",
+   "gel 11 : le compte ECRIT au gel egale celui que l instrument derive",
+   "gel 11 : le quatrieme etage est NOMME dans les comptes du gel",
+   "4.1 : sous au moins une loi de transport il reste TROIS degres non mordus",
+   "4.3 : la P-A de l instrument lit la tolerance de 5bis (S + residu de Richardson)",
+   "4.4 : la P-A de l instrument lit le lnA CORRIGE (M1/M2)",
+   "4.5 : la cascade de l instrument connait les modeles de 5bis",
+   "5.1 : aucun separateur de section colle a son titre"
+  ]
+ },
+ "canons": {
+  "banc_qualification_machine1_v13.py": "1ac295648490a86c",
+  "banc_qualification_machine1_v14.py": "dc91676c640d4323",
+  "constante_A_pre_enregistrement_v7.md": "a2b8463372e1f906",
+  "constante_A_pre_enregistrement_v8.md": "800fc6a9a8e56e49"
+ },
+ "plancher_transport": {
+  "pente mesuree 85 -> 91": [
+   4,
+   5,
+   7
+  ],
+  "troncature en dt^4 (delta'^2)": [
+   5,
+   7
+  ]
+ },
+ "portee": "certification m2 du gel v8 et de l instrument v14 ; aucun run joue"
+}

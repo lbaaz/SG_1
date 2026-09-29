@@ -1,0 +1,84 @@
+CERTIFICATION MACHINE 2 DU RUN delta 92 (instrument v15, gel v9)
+python 3.11.9 ; certif_run_delta92_machine2_v1.py
+volet alpha : out_run_delta92/alpha_v15
+volet temoin : out_run_delta92/temoin_v15
+
+0. ANCRES, PROVENANCE, INTEGRITE DU DEPOT DU RUN
+  [chk PASSE] canon banc_qualification_machine1_v15.py -- a1553f6eb5cc74b8
+  [chk PASSE] canon constante_A_pre_enregistrement_v9.md -- b515abc5a6da73c5
+  [chk PASSE] canon derivation_second_ordre_machine2_v1.json -- b70fca94d72822ad
+  [chk PASSE] 0.1 : le volet alpha a depose son JSON -- out_run_delta92/alpha_v15\resultats_alpha.json
+  [note] 0.2 empreinte B du JSON alpha -- 5a1032b29d3f03c7
+  [chk PASSE] 0.3 journal alpha present -- 38d2c2885edc4e44
+  [chk PASSE] 0.3 MANIFEST du volet alpha present -- 81ee9c622716ff67
+  [chk PASSE] 0.4 : les 83 series du volet alpha sont au sha256 de son propre MANIFEST -- en ecart ou absentes : aucune
+  [chk PASSE] 0.5 : le journal du run declare l instrument v15 a son canon -- N-59           banc_qualification_machine1_v15.py  206641 o  sha256 brut a1553f6eb5cc74b8
+  [chk PASSE] 0.6 : et le gel v9 est CONCORDANT au pin -- E19            gels/constante_A_pre_enregistrement_v9.md  b515abc5a6da73c5
+
+1. LES TROIS NIVEAUX DE PAS -- LA CONDITION D EXISTENCE DE LA P-A CORRIGEE
+  [note] 1.1 etages deposes -- {'plan': 18, 'G_dt': 18, 'G_dt4': 18, 'G_k': 18}
+  [chk PASSE] 1.1 plan : 18 cellules -- 18
+  [chk PASSE] 1.1 G_dt : 18 cellules -- 18
+  [chk PASSE] 1.1 G_dt4 : 18 cellules -- 18
+  [chk PASSE] 1.2 : G_dt4 est PRESENT -- sans lui la lecture corrigee tombe en NON JOUEE -- 18 cellule(s)
+  [chk PASSE] 1.3 : les cellules du plan portent l ajustement corrige (lnA_M) -- 18/18 cellules du plan avec lnA_M
+
+2. LES COMPTES DU RUN CONTRE LES 108 DU GEL
+  [chk PASSE] 2.1 : le run derive bien 108 attendus (18x4 + 9 + 27), le compte que le gel ECRIT -- attendus_total du run 108 | je derive 108
+  [note] 2.2 comptes du run -- {'comptes': 108, 'sautes': 0, 'sautes_noms': []}
+  [note] 2.3 G_comptes -- PASSE
+  [chk PASSE] 2.4 : la garde de comptes du run ne mord pas -- PASSE
+
+3. LA LECTURE CORRIGEE EST-ELLE JOUEE ?
+  [chk PASSE] 3.0 : les trois degres sont depouilles -- ['4', '5', '7']
+  [chk PASSE] 3.1 p=4 : la lecture corrigee est JOUEE (S(p) existe) -- S_p = 4.4679e-09
+  [note] 3.2 p=4 q mesure -- 6 point(s) ; ['3.792', '3.857', '3.866', '3.915', '3.924', '3.964']
+  [chk PASSE] 3.2 p=4 : tout q mesure est dans [3, 5] -- hors bornes : []
+  [chk PASSE] 3.3 p=4 : les six points sont LUS (aucun non lu) -- 0 non lu(s) : []
+  [chk PASSE] 3.4 p=4 : lnA_R present aux six points -- 6 point(s)
+  [chk PASSE] 3.5 p=4 : le modele est celui que le gel ecrit (M1 aux degres 4 et 5, M2 au 7) -- M1
+  [chk PASSE] 3.1 p=5 : la lecture corrigee est JOUEE (S(p) existe) -- S_p = 3.7152e-09
+  [note] 3.2 p=5 q mesure -- 6 point(s) ; ['3.715', '3.895', '3.926', '4.034', '4.054', '4.116']
+  [chk PASSE] 3.2 p=5 : tout q mesure est dans [3, 5] -- hors bornes : []
+  [chk PASSE] 3.3 p=5 : les six points sont LUS (aucun non lu) -- 0 non lu(s) : []
+  [chk PASSE] 3.4 p=5 : lnA_R present aux six points -- 6 point(s)
+  [chk PASSE] 3.5 p=5 : le modele est celui que le gel ecrit (M1 aux degres 4 et 5, M2 au 7) -- M1
+  [chk PASSE] 3.1 p=7 : la lecture corrigee est JOUEE (S(p) existe) -- S_p = 3.5182e-09
+  [note] 3.2 p=7 q mesure -- 6 point(s) ; ['3.779', '3.833', '3.866', '3.926', '3.997', '4.050']
+  [chk PASSE] 3.2 p=7 : tout q mesure est dans [3, 5] -- hors bornes : []
+  [chk PASSE] 3.3 p=7 : les six points sont LUS (aucun non lu) -- 0 non lu(s) : []
+  [chk PASSE] 3.4 p=7 : lnA_R present aux six points -- 6 point(s)
+  [chk PASSE] 3.5 p=7 : le modele est celui que le gel ecrit (M1 aux degres 4 et 5, M2 au 7) -- M2
+
+4. G-PLANCHER SUR LE COUPLE CORRIGE -- CE QUE MA CERTIFICATION AVAIT PREDIT
+  [chk PASSE] 4.1 p=4 : le plancher corrige du run == celui que JE re-derive -- run 5.194891e-14 | moi 5.194891e-14
+  [note] 4.2 p=4 -- S(p) 4.4679e-09 ; plancher_corr 5.1949e-14 ; tol_lnA 4.4679e-09 ; tol/plancher 8.60e+04
+  [chk PASSE] 4.3 p=4 : G-plancher sur le couple corrige NE MORD PAS -- G_plancher_mord = False
+  [chk PASSE] 4.4 p=4 : le rapport tol/plancher tombe dans ce que ma certification PREDISAIT (1.2e+05 a 2.1e+05) -- mesure 8.60e+04
+  [note] 4.5 p=4 contraste v14 -- v14 : tol 1.5432e-06, G-plancher mord True, P-A True
+  [chk PASSE] 4.6 p=4 : les grandeurs du v14 sont CONSERVEES a cote (R-v8-1)
+  [chk PASSE] 4.1 p=5 : le plancher corrige du run == celui que JE re-derive -- run 1.223649e-13 | moi 1.223649e-13
+  [note] 4.2 p=5 -- S(p) 3.7152e-09 ; plancher_corr 1.2236e-13 ; tol_lnA 3.7152e-09 ; tol/plancher 3.04e+04
+  [chk PASSE] 4.3 p=5 : G-plancher sur le couple corrige NE MORD PAS -- G_plancher_mord = False
+  [chk PASSE] 4.4 p=5 : le rapport tol/plancher tombe dans ce que ma certification PREDISAIT (3.4e+04 a 5.7e+04) -- mesure 3.04e+04
+  [note] 4.5 p=5 contraste v14 -- v14 : tol 2.1368e-06, G-plancher mord True, P-A True
+  [chk PASSE] 4.6 p=5 : les grandeurs du v14 sont CONSERVEES a cote (R-v8-1)
+  [chk PASSE] 4.1 p=7 : le plancher corrige du run == celui que JE re-derive -- run 3.181768e-13 | moi 3.181768e-13
+  [note] 4.2 p=7 -- S(p) 3.5182e-09 ; plancher_corr 3.1818e-13 ; tol_lnA 3.5182e-09 ; tol/plancher 1.11e+04
+  [chk PASSE] 4.3 p=7 : G-plancher sur le couple corrige NE MORD PAS -- G_plancher_mord = False
+  [chk PASSE] 4.4 p=7 : le rapport tol/plancher tombe dans ce que ma certification PREDISAIT (1.7e+04 a 2.5e+04) -- mesure 1.11e+04
+  [note] 4.5 p=7 contraste v14 -- v14 : tol 2.9008e-06, G-plancher mord True, P-A True
+  [chk PASSE] 4.6 p=7 : les grandeurs du v14 sont CONSERVEES a cote (R-v8-1)
+
+5. LA P-A CORRIGEE ET LE VERDICT DU RUN
+  [note] 5.1 p=4 -- P-A corrigee True | P-A du v14 True
+  [note] 5.1 p=5 -- P-A corrigee True | P-A du v14 True
+  [note] 5.1 p=7 -- P-A corrigee True | P-A du v14 True
+  [note] 5.2 verdict du volet alpha -- VERIFIE
+  [note] 5.3 branche -- branche 5 : P-alpha les six par degre ET P-A aux trois degres
+  [note] 5.4 porte du temoin -- {'e_sur_ln10_max': {'4': 4.300652064000542e-06, '5': 1.4617268362639836e-06, '7': 4.5524247171192977e-07}, 'empreinte': '9f5cbd763fbcc0ee', 'fichier': 'out_run_delta92/temoin_v15/resultats_temoin.json
+  [note] 5.5 lectures non lues (global) -- []
+  [note] 5.6 verdict du volet temoin -- REGLAGE QUALIFIE (bonus T-3 retire)
+  [chk PASSE] 5.7 : le volet alpha a bien lu la porte du temoin REEL -- {'e_sur_ln10_max': {'4': 4.300652064000542e-06, '5': 1.4617268362639836e-06, '7': 4.5524247171192977
+
+BILAN : 45 controles, 0 mordent

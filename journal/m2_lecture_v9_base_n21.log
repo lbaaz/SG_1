@@ -1,0 +1,116 @@
+LECTURE v8 -- machine 1 -- mode --base -- run out_run_delta91/alpha_v13
+python 3.11.9 ; numpy 2.2.6
+  [chk PASSE] derivation du second ordre a son empreinte -- b70fca94d72822ad
+  [note] instrument -- banc_qualification_machine1_v13.py 1ac295648490a86c
+  [note] run -- resultats_alpha.json convention B b2c5f8cc47c6e611 ; verdict NON CONCLUANT DE PLANCHER
+  [note] niveaux de pas -- 2 niveau(x) ; q SUPPOSE = 4 (mode base, declare)
+
+1. AJUSTEMENTS PAR POINT ET PAR NIVEAU
+  [chk PASSE] C0 4|1.73|1.05 plan : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 4|1.73|1.05 plan : M2 de rang 3 -- cond 2.55
+  [chk PASSE] C0 4|1.73|1.05 G_dt : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 4|1.73|1.05 G_dt : M2 de rang 3 -- cond 2.56
+  [chk PASSE] C0 4|1.73|1.20 plan : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 4|1.73|1.20 plan : M2 de rang 3 -- cond 2.54
+  [chk PASSE] C0 4|1.73|1.20 G_dt : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 4|1.73|1.20 G_dt : M2 de rang 3 -- cond 2.55
+  [chk PASSE] C0 4|2.27|1.05 plan : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 4|2.27|1.05 plan : M2 de rang 3 -- cond 2.55
+  [chk PASSE] C0 4|2.27|1.05 G_dt : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 4|2.27|1.05 G_dt : M2 de rang 3 -- cond 2.56
+  [chk PASSE] C0 4|2.27|1.20 plan : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 4|2.27|1.20 plan : M2 de rang 3 -- cond 2.54
+  [chk PASSE] C0 4|2.27|1.20 G_dt : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 4|2.27|1.20 G_dt : M2 de rang 3 -- cond 2.55
+  [chk PASSE] C0 4|2.80|1.05 plan : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 4|2.80|1.05 plan : M2 de rang 3 -- cond 2.55
+  [chk PASSE] C0 4|2.80|1.05 G_dt : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 4|2.80|1.05 G_dt : M2 de rang 3 -- cond 2.56
+  [chk PASSE] C0 4|2.80|1.20 plan : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 4|2.80|1.20 plan : M2 de rang 3 -- cond 2.57
+  [chk PASSE] C0 4|2.80|1.20 G_dt : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 4|2.80|1.20 G_dt : M2 de rang 3 -- cond 2.56
+  [chk PASSE] C0 5|1.73|1.05 plan : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 5|1.73|1.05 plan : M2 de rang 3 -- cond 2.73
+  [chk PASSE] C0 5|1.73|1.05 G_dt : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 5|1.73|1.05 G_dt : M2 de rang 3 -- cond 2.72
+  [chk PASSE] C0 5|1.73|1.20 plan : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 5|1.73|1.20 plan : M2 de rang 3 -- cond 2.73
+  [chk PASSE] C0 5|1.73|1.20 G_dt : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 5|1.73|1.20 G_dt : M2 de rang 3 -- cond 2.72
+  [chk PASSE] C0 5|2.27|1.05 plan : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 5|2.27|1.05 plan : M2 de rang 3 -- cond 2.71
+  [chk PASSE] C0 5|2.27|1.05 G_dt : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 5|2.27|1.05 G_dt : M2 de rang 3 -- cond 2.72
+  [chk PASSE] C0 5|2.27|1.20 plan : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 5|2.27|1.20 plan : M2 de rang 3 -- cond 2.73
+  [chk PASSE] C0 5|2.27|1.20 G_dt : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 5|2.27|1.20 G_dt : M2 de rang 3 -- cond 2.72
+  [chk PASSE] C0 5|2.80|1.05 plan : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 5|2.80|1.05 plan : M2 de rang 3 -- cond 2.73
+  [chk PASSE] C0 5|2.80|1.05 G_dt : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 5|2.80|1.05 G_dt : M2 de rang 3 -- cond 2.73
+  [chk PASSE] C0 5|2.80|1.20 plan : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 5|2.80|1.20 plan : M2 de rang 3 -- cond 2.74
+  [chk PASSE] C0 5|2.80|1.20 G_dt : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 5|2.80|1.20 G_dt : M2 de rang 3 -- cond 2.73
+  [chk PASSE] C0 7|1.73|1.05 plan : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 7|1.73|1.05 plan : M2 de rang 3 -- cond 2.93
+  [chk PASSE] C0 7|1.73|1.05 G_dt : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 7|1.73|1.05 G_dt : M2 de rang 3 -- cond 2.94
+  [chk PASSE] C0 7|1.73|1.20 plan : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 7|1.73|1.20 plan : M2 de rang 3 -- cond 2.93
+  [chk PASSE] C0 7|1.73|1.20 G_dt : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 7|1.73|1.20 G_dt : M2 de rang 3 -- cond 2.94
+  [chk PASSE] C0 7|2.27|1.05 plan : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 7|2.27|1.05 plan : M2 de rang 3 -- cond 2.94
+  [chk PASSE] C0 7|2.27|1.05 G_dt : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 7|2.27|1.05 G_dt : M2 de rang 3 -- cond 2.94
+  [chk PASSE] C0 7|2.27|1.20 plan : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 7|2.27|1.20 plan : M2 de rang 3 -- cond 2.94
+  [chk PASSE] C0 7|2.27|1.20 G_dt : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 7|2.27|1.20 G_dt : M2 de rang 3 -- cond 2.94
+  [chk PASSE] C0 7|2.80|1.05 plan : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 7|2.80|1.05 plan : M2 de rang 3 -- cond 2.95
+  [chk PASSE] C0 7|2.80|1.05 G_dt : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 7|2.80|1.05 G_dt : M2 de rang 3 -- cond 2.94
+  [chk PASSE] C0 7|2.80|1.20 plan : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 7|2.80|1.20 plan : M2 de rang 3 -- cond 2.95
+  [chk PASSE] C0 7|2.80|1.20 G_dt : lnA_II rejoue = JSON a 1e-12 -- 0.00e+00
+  [chk PASSE] C0c 7|2.80|1.20 G_dt : M2 de rang 3 -- cond 2.94
+
+2. ORDRE MESURE ET RICHARDSON, PAR POINT ; S(p) PAR MODELE
+  [note] 4|1.73|1.05 II -- lnA dt 3.8916132186 dt/2 3.8916123273 ; q 4.000 ; lnA_R 3.8916122679 ; obs_R +2.5969e-07
+  [note] 4|1.73|1.20 II -- lnA dt 3.8916132100 dt/2 3.8916123230 ; q 4.000 ; lnA_R 3.8916122638 ; obs_R +2.5567e-07
+  [note] 4|2.27|1.05 II -- lnA dt 3.8916132154 dt/2 3.8916123230 ; q 4.000 ; lnA_R 3.8916122635 ; obs_R +2.5535e-07
+  [note] 4|2.27|1.20 II -- lnA dt 3.8916132090 dt/2 3.8916123271 ; q 4.000 ; lnA_R 3.8916122683 ; obs_R +2.6011e-07
+  [note] 4|2.80|1.05 II -- lnA dt 3.8916132348 dt/2 3.8916123265 ; q 4.000 ; lnA_R 3.8916122660 ; obs_R +2.5782e-07
+  [note] 4|2.80|1.20 II -- lnA dt 3.8916132934 dt/2 3.8916123264 ; q 4.000 ; lnA_R 3.8916122619 ; obs_R +2.5373e-07
+   p = 4 : S_II 6.382e-09  S_M1 5.841e-09  S_M2 9.919e-09  S_M2- 1.493e-08  S_M2+ 6.919e-09
+  [note] 5|1.73|1.05 II -- lnA dt 2.2670079552 dt/2 2.2670076410 ; q 4.000 ; lnA_R 2.2670076201 ; obs_R +2.6024e-07
+  [note] 5|1.73|1.20 II -- lnA dt 2.2670079550 dt/2 2.2670076390 ; q 4.000 ; lnA_R 2.2670076179 ; obs_R +2.5811e-07
+  [note] 5|2.27|1.05 II -- lnA dt 2.2670079322 dt/2 2.2670076393 ; q 4.000 ; lnA_R 2.2670076198 ; obs_R +2.5994e-07
+  [note] 5|2.27|1.20 II -- lnA dt 2.2670079549 dt/2 2.2670076408 ; q 4.000 ; lnA_R 2.2670076199 ; obs_R +2.6002e-07
+  [note] 5|2.80|1.05 II -- lnA dt 2.2670079579 dt/2 2.2670076413 ; q 4.000 ; lnA_R 2.2670076202 ; obs_R +2.6038e-07
+  [note] 5|2.80|1.20 II -- lnA dt 2.2670079626 dt/2 2.2670076412 ; q 4.000 ; lnA_R 2.2670076198 ; obs_R +2.5993e-07
+   p = 5 : S_II 2.267e-09  S_M1 3.742e-09  S_M2 5.851e-09  S_M2- 8.934e-09  S_M2+ 3.674e-09
+  [note] 7|1.73|1.05 II -- lnA dt 1.1449994494 dt/2 1.1449993760 ; q 4.000 ; lnA_R 1.1449993711 ; obs_R +1.9691e-07
+  [note] 7|1.73|1.20 II -- lnA dt 1.1449992916 dt/2 1.1449992126 ; q 4.000 ; lnA_R 1.1449992073 ; obs_R +3.3106e-08
+  [note] 7|2.27|1.05 II -- lnA dt 1.1449994795 dt/2 1.1449993968 ; q 4.000 ; lnA_R 1.1449993913 ; obs_R +2.1710e-07
+  [note] 7|2.27|1.20 II -- lnA dt 1.1449995429 dt/2 1.1449994642 ; q 4.000 ; lnA_R 1.1449994589 ; obs_R +2.8472e-07
+  [note] 7|2.80|1.05 II -- lnA dt 1.1449995298 dt/2 1.1449994425 ; q 4.000 ; lnA_R 1.1449994367 ; obs_R +2.6248e-07
+  [note] 7|2.80|1.20 II -- lnA dt 1.1449994826 dt/2 1.1449993980 ; q 4.000 ; lnA_R 1.1449993923 ; obs_R +2.1810e-07
+   p = 7 : S_II 2.516e-07  S_M1 2.508e-07  S_M2 4.378e-09  S_M2- 1.193e-07  S_M2+ 1.177e-07
+  [chk PASSE] p = 7 : M2 gagne sur M1 d'un facteur >= 3 sur S -- 4.378e-09 / 2.508e-07
+  [chk PASSE] p = 7 : les frequences fausses ne gagnent pas (S > S_M1/3) -- 1.193e-07 1.177e-07
+
+3. MODES LIBRES A p = 7 : (a, c) DE M2 APRES RICHARDSON
+  [note] 7|1.73|1.05 -- a -3.555054e-08 c +8.966695e-08 | amplitude 9.645726e-08 phase +1.9483 rad | amp dt 4.289e-07 dt/2 1.171e-07
+  [note] 7|1.73|1.20 -- a -2.568800e-07 c +3.128137e-07 | amplitude 4.047712e-07 phase +2.2583 rad | amp dt 7.263e-07 dt/2 4.247e-07
+  [note] 7|2.27|1.05 -- a -8.086490e-10 c +6.542649e-08 | amplitude 6.543149e-08 phase +1.5832 rad | amp dt 3.904e-07 dt/2 8.438e-08
+  [note] 7|2.27|1.20 -- a +1.124914e-07 c -1.102097e-09 | amplitude 1.124968e-07 phase -0.0098 rad | amp dt 3.106e-07 dt/2 1.038e-07
+  [note] 7|2.80|1.05 -- a +3.998164e-08 c -3.066809e-08 | amplitude 5.038912e-08 phase -0.6543 rad | amp dt 3.111e-07 dt/2 3.204e-08
+  [note] 7|2.80|1.20 -- a -4.963808e-08 c -1.264025e-08 | amplitude 5.122221e-08 phase -2.8922 rad | amp dt 3.803e-07 dt/2 6.063e-08
+
+BILAN : 75 controles, 0 mordent
+sortie m2_base_modes_libres_n21_v2.json convention B 0a7d411197d0603d

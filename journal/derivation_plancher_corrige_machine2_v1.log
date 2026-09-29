@@ -1,0 +1,80 @@
+PLANCHER DE LA LECTURE CORRIGEE -- machine 2, derivation_plancher_corrige_machine2_v1.py
+python 3.11.9 ; sympy 1.14.0
+
+0. ANCRES
+  [chk PASSE] instrument v14 a son empreinte -- dc91676c640d4323
+  [chk PASSE] derivation a son empreinte -- b70fca94d72822ad
+  [chk PASSE] reglage de l instrument v14 = 1/32400 -- 1/32400
+
+1. C0 -- c2 RE-DERIVE ICI, EN EXACT
+  [chk PASSE] C0 p=4 w2=1.73 : une solution exacte pour c2 -- [466191653/120000000000]
+  [chk PASSE] C0 p=4 w2=1.73 : c2 = celui de la derivation, en exact -- 466191653/120000000000 | derivation 466191653/120000000000
+  [chk PASSE] C0 negatif p=4 w2=1.73 : c2 x 1.001 -> coefficient de tau^4 non nul -- -1398574959/1000000000000
+  [chk PASSE] C0 p=4 w2=2.27 : une solution exacte pour c2 -- [455694053/120000000000]
+  [chk PASSE] C0 p=4 w2=2.27 : c2 = celui de la derivation, en exact -- 455694053/120000000000 | derivation 455694053/120000000000
+  [chk PASSE] C0 negatif p=4 w2=2.27 : c2 x 1.001 -> coefficient de tau^4 non nul -- -1367082159/1000000000000
+  [chk PASSE] C0 p=4 w2=2.80 : une solution exacte pour c2 -- [53/750000]
+  [chk PASSE] C0 p=4 w2=2.80 : c2 = celui de la derivation, en exact -- 53/750000 | derivation 53/750000
+  [chk PASSE] C0 negatif p=4 w2=2.80 : c2 x 1.001 -> coefficient de tau^4 non nul -- -159/6250000
+  [chk PASSE] C0 p=5 w2=1.73 : une solution exacte pour c2 -- [3755600176813/410408000000000]
+  [chk PASSE] C0 p=5 w2=1.73 : c2 = celui de la derivation, en exact -- 3755600176813/410408000000000 | derivation 3755600176813/410408000000000
+  [chk PASSE] C0 negatif p=5 w2=1.73 : c2 x 1.001 -> coefficient de tau^4 non nul -- -3755600176813/2270700000000000
+  [chk PASSE] C0 p=5 w2=2.27 : une solution exacte pour c2 -- [4481135407213/410408000000000]
+  [chk PASSE] C0 p=5 w2=2.27 : c2 = celui de la derivation, en exact -- 4481135407213/410408000000000 | derivation 4481135407213/410408000000000
+  [chk PASSE] C0 negatif p=5 w2=2.27 : c2 x 1.001 -> coefficient de tau^4 non nul -- -4481135407213/2270700000000000
+  [chk PASSE] C0 p=5 w2=2.80 : une solution exacte pour c2 -- [18124513/2565050000]
+  [chk PASSE] C0 p=5 w2=2.80 : c2 = celui de la derivation, en exact -- 18124513/2565050000 | derivation 18124513/2565050000
+  [chk PASSE] C0 negatif p=5 w2=2.80 : c2 x 1.001 -> coefficient de tau^4 non nul -- -18124513/14191875000
+  [chk PASSE] C0 p=7 w2=1.73 : une solution exacte pour c2 -- [603151178891/25348416000000]
+  [chk PASSE] C0 p=7 w2=1.73 : c2 = celui de la derivation, en exact -- 603151178891/25348416000000 | derivation 603151178891/25348416000000
+  [chk PASSE] C0 negatif p=7 w2=1.73 : c2 x 1.001 -> coefficient de tau^4 non nul -- -603151178891/280900000000000
+  [chk PASSE] C0 p=7 w2=2.27 : une solution exacte pour c2 -- [883362751691/25348416000000]
+  [chk PASSE] C0 p=7 w2=2.27 : c2 = celui de la derivation, en exact -- 883362751691/25348416000000 | derivation 883362751691/25348416000000
+  [chk PASSE] C0 negatif p=7 w2=2.27 : c2 x 1.001 -> coefficient de tau^4 non nul -- -883362751691/280900000000000
+  [chk PASSE] C0 p=7 w2=2.80 : une solution exacte pour c2 -- [6486791/158427600]
+  [chk PASSE] C0 p=7 w2=2.80 : c2 = celui de la derivation, en exact -- 6486791/158427600 | derivation 6486791/158427600
+  [chk PASSE] C0 negatif p=7 w2=2.80 : c2 x 1.001 -> coefficient de tau^4 non nul -- -6486791/1755625000
+
+2. C1 -- PROJECTION DU TERME c2 tau^4 SUR L AJUSTEMENT M1
+  [chk PASSE] C1a 4|1.73 : c2 = 0 -> |biais| <= 1e-12 -- -2.931e-14
+  [chk PASSE] C1b 4|1.73 : mutation 2 c2 -> biais x 2 a 1e-2 -- 8.403e-03
+  [note] C1c 4|1.73 -- biais 5.2847e-14 ; c2 tau_dom^4 = 2.3212e-13 ; proj4 = 0.2277
+  [chk PASSE] C1a 4|2.27 : c2 = 0 -> |biais| <= 1e-12 -- -4.574e-14
+  [chk PASSE] C1b 4|2.27 : mutation 2 c2 -> biais x 2 a 1e-2 -- 0.000e+00
+  [note] C1c 4|2.27 -- biais 2.1316e-14 ; c2 tau_dom^4 = 9.5553e-14 ; proj4 = 0.2231
+  [chk PASSE] C1a 4|2.80 : c2 = 0 -> |biais| <= 1e-12 -- -2.842e-14
+  [chk MORD ] C1b 4|2.80 : mutation 2 c2 -> biais x 2 a 1e-2 -- inf
+  [note] C1c 4|2.80 -- biais 0.0000e+00 ; c2 tau_dom^4 = 8.6143e-16 ; proj4 = 0.0000
+  [chk PASSE] C1a 5|1.73 : c2 = 0 -> |biais| <= 1e-12 -- -3.109e-14
+  [chk MORD ] C1b 5|1.73 : mutation 2 c2 -> biais x 2 a 1e-2 -- 2.193e+00
+  [note] C1c 5|1.73 -- biais 1.2301e-13 ; c2 tau_dom^4 = 5.4676e-13 ; proj4 = 0.2250
+  [chk PASSE] C1a 5|2.27 : c2 = 0 -> |biais| <= 1e-12 -- -4.263e-14
+  [chk PASSE] C1b 5|2.27 : mutation 2 c2 -> biais x 2 a 1e-2 -- 7.246e-03
+  [note] C1c 5|2.27 -- biais 6.1284e-14 ; c2 tau_dom^4 = 2.7474e-13 ; proj4 = 0.2231
+  [chk PASSE] C1a 5|2.80 : c2 = 0 -> |biais| <= 1e-12 -- -3.064e-14
+  [chk MORD ] C1b 5|2.80 : mutation 2 c2 -> biais x 2 a 1e-2 -- 3.333e-02
+  [note] C1c 5|2.80 -- biais 1.9984e-14 ; c2 tau_dom^4 = 8.6134e-14 ; proj4 = 0.2320
+  [chk PASSE] C1a 7|1.73 : c2 = 0 -> |biais| <= 1e-12 -- -2.620e-14
+  [chk PASSE] C1b 7|1.73 : mutation 2 c2 -> biais x 2 a 1e-2 -- 0.000e+00
+  [note] C1c 7|1.73 -- biais 6.4371e-13 ; c2 tau_dom^4 = 1.4217e-12 ; proj4 = 0.4528
+  [chk PASSE] C1a 7|2.27 : c2 = 0 -> |biais| <= 1e-12 -- -3.308e-14
+  [chk MORD ] C1b 7|2.27 : mutation 2 c2 -> biais x 2 a 1e-2 -- 3.355e-01
+  [note] C1c 7|2.27 -- biais 5.9930e-13 ; c2 tau_dom^4 = 8.7688e-13 ; proj4 = 0.6834
+  [chk PASSE] C1a 7|2.80 : c2 = 0 -> |biais| <= 1e-12 -- -2.598e-14
+  [chk MORD ] C1b 7|2.80 : mutation 2 c2 -> biais x 2 a 1e-2 -- 2.138e+00
+  [note] C1c 7|2.80 -- biais 1.1258e-13 ; c2 tau_dom^4 = 4.9912e-13 ; proj4 = 0.2256
+
+3. C2 -- LE PLANCHER CORRIGE, ET CE QU IL AUTORISE
+  [note] p=4 n = 21 -- plancher CORRIGE 2.8525e-14 (w2 = 1.73) ; plancher du v7 1.1338e-06 ; rapport 2.516e-08 ; S(p) mesure au 91 5.8409e-09 -> SOUS S
+  [note] p=4 n = 18 -- plancher CORRIGE 5.2847e-14 (w2 = 1.73) ; plancher du v7 1.5432e-06 ; rapport 3.424e-08 ; S(p) mesure au 91 5.8409e-09 -> SOUS S
+  [note] p=5 n = 21 -- plancher CORRIGE 6.6399e-14 (w2 = 1.73) ; plancher du v7 1.5699e-06 ; rapport 4.230e-08 ; S(p) mesure au 91 3.7415e-09 -> SOUS S
+  [note] p=5 n = 18 -- plancher CORRIGE 1.2301e-13 (w2 = 1.73) ; plancher du v7 2.1368e-06 ; rapport 5.757e-08 ; S(p) mesure au 91 3.7415e-09 -> SOUS S
+  [note] p=7 n = 21 -- plancher CORRIGE 3.4746e-13 (w2 = 1.73) ; plancher du v7 2.1312e-06 ; rapport 1.630e-07 ; S(p) mesure au 91 4.3775e-09 -> SOUS S
+  [note] p=7 n = 18 -- plancher CORRIGE 6.4371e-13 (w2 = 1.73) ; plancher du v7 2.9008e-06 ; rapport 2.219e-07 ; S(p) mesure au 91 4.3775e-09 -> SOUS S
+  [chk PASSE] C2 p=4 : a n = 18 le plancher corrige est SOUS S(p) du 91 -- 5.2847e-14 vs 5.8409e-09
+  [chk PASSE] C2 p=5 : a n = 18 le plancher corrige est SOUS S(p) du 91 -- 1.2301e-13 vs 3.7415e-09
+  [chk PASSE] C2 p=7 : a n = 18 le plancher corrige est SOUS S(p) du 91 -- 6.4371e-13 vs 4.3775e-09
+  [note] portee -- a p = 7 le mode libre est AJUSTE, pas borne : ce plancher borne le terme ANALYTIQUE suivant (c2 tau^4), et ce qui reste du mode libre apres ajustement se MESURE au run
+
+SORTIE derivation_plancher_corrige_machine2_v1.json convention B 4c05cbb05cf1edc7
+BILAN : 51 controles, 5 mordent ['C1b 4|2.80 : mutation 2 c2 -> biais x 2 a 1e-2', 'C1b 5|1.73 : mutation 2 c2 -> biais x 2 a 1e-2', 'C1b 5|2.80 : mutation 2 c2 -> biais x 2 a 1e-2', 'C1b 7|2.27 : mutation 2 c2 -> biais x 2 a 1e-2', 'C1b 7|2.80 : mutation 2 c2 -> biais x 2 a 1e-2']

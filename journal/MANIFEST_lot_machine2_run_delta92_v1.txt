@@ -1,0 +1,21 @@
+MANIFESTE lot_machine2_2026-09-29_run_delta92_v1 -- LE RUN delta 92 A ETE JOUE, LES DEUX VOLETS, SOUS L INSTRUMENT v15 (a1553f6eb5cc74b8) ET LE GEL v9 (b515abc5a6da73c5), sur BOCAL4 ; declenchement operateur du 29/09, E19 levee des deux cotes. TEMOIN : "REGLAGE QUALIFIE (bonus T-3 retire) -- branche 6 : T-3 mord seul (W-integrales, T-3a)". ALPHA : "VERIFIE -- branche 5 : P-alpha les six par degre ET P-A aux trois degres". LA LECTURE CORRIGEE EXISTE POUR LA PREMIERE FOIS : trois niveaux de pas deposes (plan 18, G_dt 18, G_dt4 18), comptes 108, six points lus sur six aux trois degres, q mesure partout dans [3, 5], S(p) = 4.4679e-09 / 3.7152e-09 / 3.5182e-09 et tol/plancher_corr = 8.60e+04 / 3.04e+04 / 1.11e+04 -- G-PLANCHER CORRIGE NE MORD A AUCUN DEGRE et P-A corrigee est True aux trois. LE CONTRASTE QUI JUSTIFIE LE TOUR : sous la lecture du v14 G-plancher aurait MORDU AUX TROIS DEGRES et le run aurait ete NON CONCLUANT DE PLANCHER comme le 91. LES DEUX PREDICTIONS, EN AVEUGLE JUSQU ICI : (a) TIENT a p = 4 et p = 5 a 2 pour cent, NE TIENT PAS a p = 7 (ratios 0.867 0.284 0.963 1.234 1.089 0.881) ; (b) TIENT 6/6, amplitudes a 5 pour cent pour 20 tolerees et phases a 0.036 rad pour 0.3. LE POINT 7|1.73|1.20 EST ANORMAL DANS DEUX RUNS INDEPENDANTS (0.284 ici, 0.138 au 91 apres correction du levier) : propriete du point, pas fluctuation ; aucune cause proposee. Reserves ecrites : le volet temoin rend branche 6 (T-3 / W-integrales mord) la ou le pre-vol rendait branche 5 ; et mes rapports tol/plancher predits (1.7e+04 a 2.1e+05) sont ~1.4x au-dessus des mesures -- mon transport etait optimiste a 40 pour cent pres. MA CERTIFICATION DU RUN : 45 controles, 0 morsure. A ne pas confondre avec une mesure de A : ce run ne la mesure pas. machine 2, classe B
+colonnes : empreinte_B (sha256 NFC+LF, 16 hex)  empreinte_brute  octets_B  octets_bruts  fichier
+Le CANON du lot est l'empreinte B de CE manifeste ; il ne se porte pas lui-meme.
+
+511f897547a84ba2 511f897547a84ba2     10539     10539  POUR_MACHINE1_run_delta92_machine2_v1.md
+7a693228a172cdad 7a693228a172cdad     13173     13173  certif_run_delta92_machine2_v1.py
+b09d4e0d0412742c b09d4e0d0412742c      6531      6531  certif_run_delta92_machine2_v1.log
+90d0f63215b33257 90d0f63215b33257      1072      1072  certif_run_delta92_machine2_v1.json
+7503c5a40aefcf7a bff801227796d729     70041     70395  m2_run_delta92_temoin.log
+a1b97554adf19cde 03f48ca61b759a26     85503     85932  m2_run_delta92_alpha.log
+9f5cbd763fbcc0ee 9f5cbd763fbcc0ee     28385     28385  out_run_delta92/temoin_v15/resultats_temoin.json
+6e4d2afc73a6bc6d 6e4d2afc73a6bc6d       444       444  out_run_delta92/temoin_v15/MANIFEST.sha256
+5a1032b29d3f03c7 5a1032b29d3f03c7    224282    224282  out_run_delta92/alpha_v15/resultats_alpha.json
+81ee9c622716ff67 81ee9c622716ff67      8658      8658  out_run_delta92/alpha_v15/MANIFEST.sha256
+d52e40dc52fd52e1 c6ffcb84d6b3661a     15183     15367  m2_lecture_v9_predictions_delta92.log
+4a880c934f8aacd2 4a880c934f8aacd2      6422      6422  m2_lecture_v9_predictions_delta92.json
+240836e9c5c0f1d3 ede7bb0ac4c8a6fb     12689     12837  m2_repetition_predictions_sur_91.log
+
+le volet alpha depose 83 series, toutes verifiees au sha256 de son propre MANIFEST (81ee9c622716ff67) ; elles ne sont pas portees ici une a une, le lot serait illisible : le MANIFEST du volet les porte, et il est dans le lot
+entrants : gel v9 b515abc5a6da73c5 ; instrument v15 a1553f6eb5cc74b8 ; lot machine 1 gel v9 / banc v15 1f1d56d351e352dc ; erratum machine 1 802a84bb706b6124 ; ma certification v9/v15 b5568d8f31f8492e ; mon contreseing 71d410cd531d06ab ; derivation b70fca94d72822ad ; plancher corrige 3b12117a58dde698 ; base du 91 (mienne) 0a7d411197d0603d, (machine 1) 79099ef4ea51adf6 ; clone du registre 729f9a9 restaure
+pieces : 13 (compte etabli APRES le dernier ajout)

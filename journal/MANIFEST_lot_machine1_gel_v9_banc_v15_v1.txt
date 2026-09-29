@@ -1,0 +1,22 @@
+MANIFESTE lot_machine1_2026-09-18_gel_v9_banc_v15_v1 -- GEL v9 (b515abc5a6da73c5) ET INSTRUMENT v15 (a1553f6eb5cc74b8, pin v9 verifie) : LES CINQ REPRISES DE LA CERTIFICATION m2 ET LA P-A CORRIGEE PORTEE DANS L'INSTRUMENT (arbitrage 18/09), PLANCHER CORRIGE DERIVE (5.19e-14 / 1.22e-13 / 3.18e-13 a n = 18) ; selftest 103/103 ; banc 103/103 (G35, G36 neufs) ; pre-vol temoin "REGLAGE QUALIFIE -- branche 5 : T-" ; pre-vol alpha "LIEN NON ETABLI (9/27) -- VERIFIE" ; machine 1, classe 3 (gel : classe 1 a la certification)
+v8 800fc6a9a8e56e49 et v14 dc91676c640d4323 non edites. Le script lit l'essai machine 2 0dcfd901a0551d0f par canon (joint). Aucun run ; les predictions restent aveugles. Detail dans la note.
+colonnes : empreinte_B (sha256 NFC+LF, 16 hex)  empreinte_brute  octets_B  octets_bruts  fichier
+Le CANON du lot est l'empreinte B de CE manifeste ; il ne se porte pas lui-meme.
+
+630be06efa686b38 630be06efa686b38     4523     4523  note_machine1_gel_v9_banc_v15_v1.md
+b515abc5a6da73c5 b515abc5a6da73c5    50206    50206  constante_A_pre_enregistrement_v9.md
+a1553f6eb5cc74b8 a1553f6eb5cc74b8   206641   206641  banc_qualification_machine1_v15.py
+d6d7ac766b8f5ac6 d6d7ac766b8f5ac6    21630    21630  construction_gel_v9_banc_v15_machine1_v1.py
+0dcfd901a0551d0f 0dcfd901a0551d0f    16330    16330  essai_correctif_PA_hors_depot_machine2.py
+4144c0086a3a99e7 4144c0086a3a99e7    13981    13981  lecture_v9_machine1_v1.py
+79099ef4ea51adf6 79099ef4ea51adf6     5882     5882  base_modes_libres_n21_machine1_v2.json
+8006176006423b04 8006176006423b04     9098     9098  lecture_v9_base_n21_m1.log
+156f9a455f52313e 156f9a455f52313e      513      513  derives_v9.json
+38e7dbf79595a649 38e7dbf79595a649    11368    11368  m1_v15_selftest.log
+f007d1ad0690ba12 f007d1ad0690ba12    76581    76581  m1_v15_banc.log
+efc640df8c593dab efc640df8c593dab    85766    85766  m1_v15_prevol_alpha.log
+b220599bb6b2a1af b220599bb6b2a1af    69635    69635  m1_v15_prevol_temoin.log
+
+entrants : lots m2 45de25ac61321661 (certification v8/v14) et 289ae2620e1d1063 (prescription) ; derivation b70fca94d72822ad ; series BOCAL4 du 91 ; clone frais 729f9a9
+pieces : 13 (compte etabli APRES le dernier ajout)
+garde de reception : verifiees + absentes + ecarts == 13

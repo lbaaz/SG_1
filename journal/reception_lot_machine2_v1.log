@@ -1,0 +1,34 @@
+GARDE DE RECEPTION D UN LOT MACHINE 1 -- machine 2
+source C:/Users/bazil/Downloads/files (74).zip
+
+0. LE MANIFESTE ET LE CANON DU LOT
+  [note] lot interne deplie -- lot_machine1_2026-09-29_erratum_v9_v15_proj4_v1.zip -> lot_interne/ (4 entrees)
+  [chk PASSE] 0.1 : un manifeste et un seul dans le lot -- ['MANIFEST_lot_machine1_erratum_v9_v15_proj4_v1.txt']
+  [note] canon du lot (empreinte B du manifeste) -- 802a84bb706b6124
+  [note] manifeste -- MANIFEST_lot_machine1_erratum_v9_v15_proj4_v1.txt
+
+1. LES PIECES ENUMEREES
+  [chk PASSE] 1.1 : le manifeste enumere au moins une piece -- 3 ligne(s)
+  [chk PASSE] 1.2 : le compte annonce egale le nombre de lignes enumerees -- annonce 3, enumere 3
+  [chk PASSE] 1.3 GARDE DE RECEPTION : verifiees + absentes + ecarts == 3 -- 3 + 0 + 0
+  [chk PASSE] 1.4 : aucune piece en ECART -- 0
+  [chk PASSE] 1.5 : aucune piece ABSENTE -- 0
+
+2. PB-1 -- AUCUNE PIECE QUE JE DETIENS DEJA N EST EDITEE EN SILENCE
+  [note] 2.1 homonymes -- 0 piece(s) du lot existent deja chez moi : aucune
+  [chk PASSE] 2.2 : aucune piece homonyme n est editee -- 0 editee(s)
+  [chk PASSE] 2.3 : banc_qualification_machine1_v14.py intact dans MON depot -- dc91676c640d4323
+  [chk PASSE] 2.3 : banc_qualification_machine1_v15.py intact dans MON depot -- a1553f6eb5cc74b8
+  [chk PASSE] 2.3 : constante_A_pre_enregistrement_v8.md intact dans MON depot -- 800fc6a9a8e56e49
+  [chk PASSE] 2.3 : constante_A_pre_enregistrement_v9.md intact dans MON depot -- b515abc5a6da73c5
+
+3. CE QUE L EN-TETE ANNONCE, CONFRONTE AUX JOURNAUX DU LOT (le controle qui a attrape E-v9-1)
+  [note] 3 selftest -- ni annonce ni journal dans ce lot
+  [note] 3 banc -- annonce "58/58" mais AUCUN journal du lot ne le porte : rien a confronter
+  [note] 3 bilan de m1_rejeu_derivation_plancher_corrige_v3.log -- 25 controles, 1 mordent
+
+CANON DU LOT : 802a84bb706b6124
+BILAN : 11 controles, 0 mordent (0 de PIECE, 0 de DESCRIPTION)
+
+LOT RECEVABLE -- les pieces sont la, au canon, et le lot se decrit juste : la lecture de fond peut commencer.
+Cette piece ne dit RIEN du fond : ni le gel, ni l instrument, ni un run ne sont juges ici.

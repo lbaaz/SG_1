@@ -1,0 +1,21 @@
+MANIFESTE lot_machine1_2026-09-29_certification_run_delta92_v1 -- LE RUN DELTA 92 EST CERTIFIE : rejoue sous v15 / gel v9 sur machine 1 (levier X86_V4), verdicts identiques a BOCAL4 (temoin branche 6, alpha VERIFIE branche 5), P-alpha et P-A corrigee True aux trois degres, G-plancher corrige silencieux, 17 lnA_R sur 18 AU BIT entre machines (4|2.27|1.20 differe de 9e-10, cellule EXPOSEE), predictions (a) TIENT p = 4, 5 / NON p = 7 et (b) 6/6 identiques ; CAUSE DE 7|1.73|1.20 MESUREE SUR LES DEUX RUNS : la projection du mode libre ajuste sur l'ajustement II reproduit les six ratios de (a) a 0.02 (0.284 au chiffre), test negatif (phase + pi) tenu ; T-3 au temoin attendu (deja au 91) ; machine 1, classe B
+Lot m2 fb456f007eab7c61 recu 13/13, 83 series au sha256. Aucun numero pris ; A n'est pas mesuree ; l'acte delta 92 suit, plume m1.
+colonnes : empreinte_B (sha256 NFC+LF, 16 hex)  empreinte_brute  octets_B  octets_bruts  fichier
+Le CANON du lot est l'empreinte B de CE manifeste ; il ne se porte pas lui-meme.
+
+990039aac7497586 990039aac7497586     6261     6261  note_machine1_certification_run_delta92_v1.md
+63b775988765c71c 63b775988765c71c    70520    70520  m1_run_delta92_temoin.log
+93010e493b614b67 93010e493b614b67    85505    85505  m1_run_delta92_alpha.log
+80feccfeac6b767f 80feccfeac6b767f    15180    15180  m1_lecture_v9_predictions_delta92.log
+af295b8a660d33e8 af295b8a660d33e8     6415     6415  m1_lecture_v9_predictions_delta92.json
+abe4c268551f0235 abe4c268551f0235     3765     3765  cause_7_1p73_1p20_machine1_v1.py
+399e6664cfe27182 399e6664cfe27182      973      973  cause_7_1p73_1p20_machine1_v1.log
+5af3647b91ee39cd 5af3647b91ee39cd     1681     1681  cause_7_1p73_1p20_machine1_v1.json
+4937ae428b062bd5 4937ae428b062bd5     8658     8658  m1_out_run_delta92/alpha_v15/MANIFEST.sha256
+541252658a7af032 541252658a7af032   224284   224284  m1_out_run_delta92/alpha_v15/resultats_alpha.json
+cc0f2c1d5d973f49 cc0f2c1d5d973f49      444      444  m1_out_run_delta92/temoin_v15/MANIFEST.sha256
+6c931574d30f50c8 6c931574d30f50c8    28942    28942  m1_out_run_delta92/temoin_v15/resultats_temoin.json
+
+le volet alpha rejoue ici depose 83 series au sha256 de son propre MANIFEST (joint) ; non portees une a une
+entrants : lot m2 run_delta92 fb456f007eab7c61 ; gel v9 b515abc5a6da73c5 ; v15 a1553f6eb5cc74b8 ; lecture v9 4144c0086a3a99e7 ; base m1 79099ef4ea51adf6 ; derivation b70fca94d72822ad ; clone frais 729f9a9
+pieces : 12 (compte etabli APRES le dernier ajout)
