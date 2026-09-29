@@ -1,0 +1,22 @@
+MANIFESTE lot_machine1_2026-09-29_gel_v10_banc_v16_v1 -- GEL v10 (130ba949482129a7) ET INSTRUMENT v16 (634c4aaa2aad7598, pin v10 verifie) : MESURER A -- n = 21 (regle du plus grand n restauree), la mesure definie avant le run, trois predictions en aveugle dont (c) neuve (c1 libre aux 18 points) ; v16 = v15 + ajuster_c1_libre + deux corrections du banc (D-v16-1 memoire, D-v16-2 G22 deterministe) ; sur machine 1 : selftest 103/103 ; banc 58/58 (motif ancre) ; pre-vol temoin "REGLAGE QUALIFIE -- branche 5 : T-" ; pre-vol alpha "LIEN NON ETABLI (9/27) -- VERIFIE" ; lecture_v10 a blanc sur le 92 reproduit la lecture v9 ; machine 1, classe 3 (gel : classe 1 a la certification)
+v9 b515abc5a6da73c5 et v15 a1553f6eb5cc74b8 non edites. Aucun run ; les predictions restent aveugles. Detail dans la note.
+colonnes : empreinte_B (sha256 NFC+LF, 16 hex)  empreinte_brute  octets_B  octets_bruts  fichier
+Le CANON du lot est l'empreinte B de CE manifeste ; il ne se porte pas lui-meme.
+
+3c246646db1cab59 3c246646db1cab59     3981     3981  note_machine1_gel_v10_banc_v16_v1.md
+130ba949482129a7 130ba949482129a7    52449    52449  constante_A_pre_enregistrement_v10.md
+634c4aaa2aad7598 634c4aaa2aad7598   209563   209563  banc_qualification_machine1_v16.py
+13e9be0e067fcdf8 13e9be0e067fcdf8    22304    22304  construction_gel_v10_banc_v16_machine1_v1.py
+a0bb221e40bdfec7 a0bb221e40bdfec7     8539     8539  machinerie_reglage.py
+c72c7348b863328b c72c7348b863328b    16934    16934  lecture_v10_machine1_v1.py
+32b058f0980e9003 32b058f0980e9003    17705    17705  lecture_v10_essai_sur_92.log
+160a4d12ee2f2749 160a4d12ee2f2749     7921     7921  lecture_v10_essai_sur_92.json
+c79c114595f9bba8 c79c114595f9bba8      571      571  derives_v10.json
+be0875510e2fc9ad be0875510e2fc9ad    11370    11370  m1_v16_selftest.log
+e8abeedc430c1d90 e8abeedc430c1d90    76598    76598  m1_v16_banc.log
+af907b3591f510ca af907b3591f510ca    69660    69660  m1_v16_prevol_temoin.log
+ed17854299e6c23b ed17854299e6c23b    85789    85789  m1_v16_prevol_alpha.log
+
+entrants : gel v9 b515abc5a6da73c5 ; banc v15 a1553f6eb5cc74b8 ; derivation b70fca94d72822ad ; base du 92 af295b8a660d33e8 ; construction du v8 faf29c378ab88dda (machinerie) ; clone frais 729f9a9
+pieces : 13 (compte etabli APRES le dernier ajout)
+garde de reception : verifiees + absentes + ecarts == 13

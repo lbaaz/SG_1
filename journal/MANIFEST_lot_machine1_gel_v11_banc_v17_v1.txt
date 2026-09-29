@@ -1,0 +1,18 @@
+MANIFESTE lot_machine1_2026-09-29_gel_v11_banc_v17_v1 -- GEL v11 (ac398dc92badbdc5) ET INSTRUMENT v17 (f914156a2c341f4b, pin v11 verifie ; aucun code) : E-v10-1 (base par table, reconstruit au bit avec l'une ou l'autre base) et E-v10-2 pris ; FAIT DE FOND ecrit -- S(p) est un systematique de fenetre, borne non retire, present aussi sous M2 a p = 4, 5 (mesure m1) ; prediction (d) sur son signe ; RELEVE DU DELTA 92 au HEAD 09baf5c : 73/73 citations au registre, reserve close ; selftest 103/103 ; banc 58/58 ; pre-vol temoin "REGLAGE QUALIFIE -- branche 5 : T-" ; pre-vol alpha "LIEN NON ETABLI (9/27) -- VERIFIE" ; machine 1, classe 3 (gel : classe 1 a la certification)
+Recommandation a l'operateur : run sous v17 maintenant, le chantier du biais de fenetre apres ; le troisieme c de machine 2 ferait un v18/v12. Aucun run ; aucun numero pris.
+colonnes : empreinte_B (sha256 NFC+LF, 16 hex)  empreinte_brute  octets_B  octets_bruts  fichier
+Le CANON du lot est l'empreinte B de CE manifeste ; il ne se porte pas lui-meme.
+
+33d19b7ecb54c9ca 33d19b7ecb54c9ca     3402     3402  note_machine1_gel_v11_banc_v17_v1.md
+ac398dc92badbdc5 ac398dc92badbdc5    54983    54983  constante_A_pre_enregistrement_v11.md
+f914156a2c341f4b f914156a2c341f4b   209608   209608  banc_qualification_machine1_v17.py
+e28749e8c84207f3 e28749e8c84207f3     9300     9300  construction_gel_v11_banc_v17_machine1_v1.py
+f471ec91b6cb681c f471ec91b6cb681c     8798     8798  releve_perimetre_delta92_HEAD_machine1.log
+6039b88e1aa0c9d7 6039b88e1aa0c9d7    11370    11370  m1_v17_selftest.log
+760fd24d5388e0e1 760fd24d5388e0e1    76598    76598  m1_v17_banc.log
+75549623238fb8d9 75549623238fb8d9    69513    69513  m1_v17_prevol_temoin.log
+910b3e7cab63591a 910b3e7cab63591a    85644    85644  m1_v17_prevol_alpha.log
+
+entrants : gel v10 130ba949482129a7 ; banc v16 634c4aaa2aad7598 ; lot m2 certification v10/v16 996dc8be7d245387 (dont ce_qui_borne_A fb4163b7893c5070 et sa base d6a0f2159c5c113c) ; erratum m2 cb0e7699af25aec1 ; ma lecture du 92 af295b8a660d33e8 ; clone frais 09baf5c
+pieces : 9 (compte etabli APRES le dernier ajout)
+garde de reception : verifiees + absentes + ecarts == 9

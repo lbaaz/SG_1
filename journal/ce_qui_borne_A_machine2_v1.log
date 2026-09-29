@@ -1,0 +1,55 @@
+CE QUI BORNE A(w2) APRES LE DELTA 92 -- machine 2
+python 3.11.9 ; ce_qui_borne_A_machine2_v1.py
+runs lus : 92 BOCAL4 5a1032b29d3f03c7 ; 92 machine 1 541252658a7af032 ; 91 (par ma repetition) d66cca2413394941
+
+Q1. S(p) EST-ELLE LE PLANCHER ANALYTIQUE ?
+  [note] p=4 -- S(p) 4.4679e-09 ; plancher corrige 5.1949e-14 ; S/plancher 8.60e+04
+  [note] p=5 -- S(p) 3.7152e-09 ; plancher corrige 1.2236e-13 ; S/plancher 3.04e+04
+  [note] p=7 -- S(p) 3.5182e-09 ; plancher corrige 3.1818e-13 ; S/plancher 1.11e+04
+  [chk PASSE] Q1 : S(p) est QUATRE A CINQ ORDRES au-dessus du plancher analytique, aux trois degres
+  [note] Q1 conclusion -- ce qui borne la lecture n est donc PAS le terme analytique suivant. Descendre delta' ne touche pas a ce qui domine : le plancher est deja hors jeu.
+
+Q2. LA DISPERSION EST-ELLE STRUCTUREE EN w2 -- EST-CE DEJA A(w2) ?
+  [note] p=4 -- etendue ENTRE w2 1.839 e-09 ; etendue INTRA w2 (l indice c) 3.771 e-09 ; rapport 0.49
+  [note] p=5 -- etendue ENTRE w2 2.423 e-09 ; etendue INTRA w2 (l indice c) 3.578 e-09 ; rapport 0.68
+  [note] p=7 -- etendue ENTRE w2 0.761 e-09 ; etendue INTRA w2 (l indice c) 3.518 e-09 ; rapport 0.22
+  [chk PASSE] Q2 : la dispersion N EST PAS structuree en w2 -- l etendue entre w2 est PLUS PETITE que celle entre les deux c, aux trois degres -- {4: '0.49', 5: '0.68', 7: '0.22'}
+  [note] Q2 conclusion -- A(w2) ne se lit pas encore : ce qu on voit dans les six points est domine par l INDICE DE FENETRE c, pas par w2. Une dependance en w2 plus petite que ~2e-09 resterait invisible sous cette structure.
+
+Q3. BRUIT, OU SYSTEMATIQUE ? -- LE TEST EST LA REPRODUCTION ENTRE MACHINES
+  [note] p=4 w2=1.73 -- effet de c : BOCAL4 +2.338 e-09 | machine 1 +2.338 e-09
+  [note] p=4 w2=2.27 -- effet de c : BOCAL4 +3.771 e-09 | machine 1 +2.846 e-09   <- differe
+  [note] p=4 w2=2.80 -- effet de c : BOCAL4 +0.608 e-09 | machine 1 +0.608 e-09
+  [note] p=5 w2=1.73 -- effet de c : BOCAL4 +3.578 e-09 | machine 1 +3.578 e-09
+  [note] p=5 w2=2.27 -- effet de c : BOCAL4 +2.130 e-09 | machine 1 +2.130 e-09
+  [note] p=5 w2=2.80 -- effet de c : BOCAL4 +0.183 e-09 | machine 1 +0.183 e-09
+  [note] p=7 w2=1.73 -- effet de c : BOCAL4 +3.518 e-09 | machine 1 +3.518 e-09
+  [note] p=7 w2=2.27 -- effet de c : BOCAL4 -0.641 e-09 | machine 1 -0.641 e-09
+  [note] p=7 w2=2.80 -- effet de c : BOCAL4 -0.203 e-09 | machine 1 -0.203 e-09
+  [chk PASSE] Q3 : l effet de c se reproduit AU BIT entre deux machines d arithmetiques differentes, 8 fois sur 9 -- 8/9 identiques ; exception : ['4|2.27 (9.250e-10)']
+  [note] Q3 l exception -- elle porte sur 4|2.27, exactement la cellule du seul lnA_R qui differe entre les machines (4|2.27|1.20, 9.15e-10, cellule EXPOSEE du geste (2) selon machine 1) : l exception confirme la regle plutot qu elle ne l entame.
+  [note] Q3 conclusion -- ce n est pas du bruit de chaine. C est un SYSTEMATIQUE DETERMINISTE de la composition de la fenetre d ajustement. Un systematique deterministe se modelise et se retire -- c est ce qu on a fait de c1.
+
+Q4. DEPEND-IL DE delta' ? -- AUTREMENT DIT, UN PLUS GRAND n LE REDUIRAIT-IL ?
+  [note] p=4 w2=1.73 -- effet de c sur l ajustement II : n=18 +2.989 e-09 ; n=21 -4.012 e-09 ; rapport -0.745
+  [note] p=4 w2=2.27 -- effet de c sur l ajustement II : n=18 +4.037 e-09 ; n=21 +4.759 e-09 ; rapport 0.848
+  [note] p=4 w2=2.80 -- effet de c sur l ajustement II : n=18 -0.313 e-09 ; n=21 -4.094 e-09 ; rapport 0.076
+  [note] p=5 w2=1.73 -- effet de c sur l ajustement II : n=18 +2.694 e-09 ; n=21 -2.127 e-09 ; rapport -1.267
+  [note] p=5 w2=2.27 -- effet de c sur l ajustement II : n=18 +1.450 e-09 ; n=21 +0.083 e-09 ; rapport 17.391
+  [note] p=5 w2=2.80 -- effet de c sur l ajustement II : n=18 -0.776 e-09 ; n=21 -0.450 e-09 ; rapport 1.727
+  [note] p=7 w2=1.73 -- effet de c sur l ajustement II : n=18 -190.321 e-09 ; n=21 -163.801 e-09 ; rapport 1.162
+  [note] p=7 w2=2.27 -- effet de c sur l ajustement II : n=18 +88.348 e-09 ; n=21 +67.617 e-09 ; rapport 1.307
+  [note] p=7 w2=2.80 -- effet de c sur l ajustement II : n=18 -68.005 e-09 ; n=21 -44.380 e-09 ; rapport 1.532
+  [chk PASSE] Q4a : sur l ajustement II, l effet de c a p = 7 est de 17 a 600 fois celui de p = 4 et 5 -- p=7 : 68 a 190 e-09 ; p=4,5 : 0.3 a 4.0 e-09 ; facteur 17 a 609
+  [chk PASSE] Q4b : a p = 7 le rapport n=18/n=21 est de l ordre du levier (1.361) : l effet y suit delta' -- ['1.162', '1.307', '1.532']
+  [chk PASSE] Q4c : a p = 4 et 5 le rapport est ERRATIQUE (signes opposes, valeurs hors echelle) : l effet n y suit PAS delta' -- ['-0.74', '0.85', '0.08', '-1.27', '17.39', '1.73']
+  [note] Q4 conclusion -- a p = 7 l effet de fenetre suit delta' et un plus grand n le reduirait ; a p = 4 et 5, la ou il borne DEJA la lecture corrigee, il ne le suit pas. RESERVE : la lecture corrigee n existe pas au 91 (deux niveaux, pas trois), la comparaison n=18/n=21 porte donc sur l ajustement II, pas sur M1/M2.
+
+CE QUE LE MODE LIBRE RETIRE DEJA, A p = 7
+  [note] 7|1.73 -- effet de c : 190.3 e-09 sur II -> 3.518 e-09 apres M2 (retire a 98.2 pour cent)
+  [note] 7|2.27 -- effet de c : 88.3 e-09 sur II -> 0.641 e-09 apres M2 (retire a 99.3 pour cent)
+  [note] 7|2.80 -- effet de c : 68.0 e-09 sur II -> 0.203 e-09 apres M2 (retire a 99.7 pour cent)
+  [chk PASSE] a p = 7, M2 retire plus de 90 pour cent de l effet de fenetre
+  [note] la piste -- a p = 7 le modele porte un terme LIBRE (le mode, deux coefficients ajustes) et il absorbe la dependance de fenetre. A p = 4 et 5, M1 n a que c1, FIXE, et n absorbe rien : c est la que la lecture reste bornee a ~3e-09. Le gel v9 le disait de son cote ("a p = 4 et 5 le mode n apporte rien, il absorbe la troncature") -- le 92 montre que "absorber la troncature" est precisement ce dont la mesure de A a besoin.
+
+BILAN : 7 controles, 0 mordent

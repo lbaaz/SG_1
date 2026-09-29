@@ -1,0 +1,18 @@
+MANIFESTE lot_machine1_2026-09-29_certification_run_delta93_v1 -- LE RUN D'OBSERVATION 93 (v16 / gel v10, n = 21) EST REPRODUIT sur machine 1 : verdicts identiques (temoin branche 6, alpha VERIFIE branche 5), (a) TIENT p = 4, 5 / NON p = 7, (b) 6/6, (c) 18/18 (rapports 0.961-1.037), A aux trois degres a 4e-10 de la forme auto-semblable, 15/18 lnA_R au bit ; MA PREDICTION (d) DU v11 EST REFUTEE A p = 4 (signes meles) et n'etait pas opposable : LE GEL v11 ET L'INSTRUMENT v17 SONT RETIRES avant certification, gel courant v10, instrument v16 ; recommandation : pas de rejeu, un acte 93 de run d'observation ; machine 1, classe B
+Lot m2 90a0b0ca445989ef recu 12/12. Aucun numero pris.
+colonnes : empreinte_B (sha256 NFC+LF, 16 hex)  empreinte_brute  octets_B  octets_bruts  fichier
+Le CANON du lot est l'empreinte B de CE manifeste ; il ne se porte pas lui-meme.
+
+e06cdb73aabc231a e06cdb73aabc231a     4400     4400  note_machine1_certification_run_delta93_v1.md
+054a1a3b07892ac7 054a1a3b07892ac7    70539    70539  m1_run_delta93_temoin.log
+e5757a6872866ea7 e5757a6872866ea7    85522    85522  m1_run_delta93_alpha.log
+3adb387f841ac60a 3adb387f841ac60a    18525    18525  m1_lecture_v10_predictions_delta93.log
+7376a0bc05151320 7376a0bc05151320    10960    10960  m1_lecture_v10_predictions_delta93.json
+91fc85380bb6dd77 91fc85380bb6dd77     8658     8658  m1_out_run_delta93/alpha_v16/MANIFEST.sha256
+0a8fadb16d6981fa 0a8fadb16d6981fa   244575   244575  m1_out_run_delta93/alpha_v16/resultats_alpha.json
+880f22789d8bd10c 880f22789d8bd10c      444      444  m1_out_run_delta93/temoin_v16/MANIFEST.sha256
+c718fec4a2d3ae66 c718fec4a2d3ae66    28955    28955  m1_out_run_delta93/temoin_v16/resultats_temoin.json
+
+le volet alpha rejoue ici depose 83 series au sha256 de son propre MANIFEST (joint) ; non portees une a une
+entrants : lot m2 run_delta93 90a0b0ca445989ef ; gel v10 130ba949482129a7 ; v16 634c4aaa2aad7598 ; lecture v10 (lot 26ecd16e21783e5e) ; base 92 af295b8a660d33e8 ; derivation b70fca94d72822ad ; clone frais 09baf5c
+pieces : 9 (compte etabli APRES le dernier ajout)

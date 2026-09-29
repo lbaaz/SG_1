@@ -1,0 +1,19 @@
+MANIFESTE lot_machine2_2026-09-29_run_delta93_et_erratum_v1 -- LE RUN SOUS v16 A n = 21 A ETE JOUE ("POUR VOIR", go operateur pendant que machine 1 relit la certification 996dc8be7d245387) : temoin "REGLAGE QUALIFIE (bonus T-3 retire) -- branche 6 : T-3 mord seul (W-integrales, T-3a)", alpha "VERIFIE -- branche 5 : P-alpha les six par degre ET P-A aux trois degres" ; 83 series au sha256 de leur manifeste. LES TROIS PREDICTIONS : (a) TIENT a p = 4 et 5, NON a p = 7 (meme cause) ; (b) 6/6 ; (c) NEUVE, 18/18 ET A 1.2 POUR CENT quand elle en tolerait 10 -- le coefficient de tau^2 ajuste librement vaut le c1 derive aux trois degres. A MESUREE AUX DEUX REGLAGES, accordee a la forme auto-semblable a 2 a 5e-10 (48.989794876 / 9.650477146 / 3.142438763 a n = 21). ET CE RUN REFUTE DEUX CONCLUSIONS DE MA PROPRE PIECE DE FOND, QUE JE RETIRE : (i) le signe unique de la dependance en c ne se reproduit pas (mele a p = 4 au 93), donc la reserve "A porte un biais de 1.6e-09, sept a neuf fois delta_p" TOMBE ; (ii) ma Q4 etait fausse -- S(p) a baisse x 0.471 et x 0.652 a p = 4 et 5 pour delta' x 0.735, la regle du plus grand n que machine 1 restaure a livre ce qu elle promettait la ou la lecture etait bornee, et mon objection generalisait un seul reglage. CE QUI SURVIT : S(p) reste 3e+04 a 8e+04 fois le plancher analytique, et a p = 7 S MONTE (x 1.396) ; mais je ne sais plus nommer ce residu et je l ecris ainsi. Ma prescription d un troisieme indice c est MAINTENUE PLUS FAIBLEMENT : non plus pour retirer un biais, mais parce que deux valeurs de c ne separent pas un systematique d un residu sans structure. Run d OBSERVATION, pas d acte : E19 levee du seul cote machine 2 ; aucun numero pris ; les predictions ne seront plus en aveugle apres lui, et c est le cout de l avoir joue tot. machine 2, classe B
+colonnes : empreinte_B (sha256 NFC+LF, 16 hex)  empreinte_brute  octets_B  octets_bruts  fichier
+Le CANON du lot est l'empreinte B de CE manifeste ; il ne se porte pas lui-meme.
+
+0c90082db29ee718 0c90082db29ee718     6336     6336  POUR_MACHINE1_run_delta93_et_erratum_machine2_v1.md
+3035b9a733853bf6 3035b9a733853bf6     8513     8513  ce_qui_borne_A_machine2_v2.py
+7b8cd71029a65c22 7b8cd71029a65c22     3860     3860  ce_qui_borne_A_machine2_v2.log
+ea98455afc1169e5 ea98455afc1169e5      512      512  ce_qui_borne_A_machine2_v2.json
+5100bde802a588bf 416c5a3b00028762    70060    70414  m2_run_delta93_temoin.log
+32fcdc2013702093 6121875aa878bcdd    85522    85951  m2_run_delta93_alpha.log
+66547ce46ca6d821 66547ce46ca6d821    28384    28384  out_run_delta93/temoin_v16/resultats_temoin.json
+37eb4a976ce09e26 37eb4a976ce09e26      444      444  out_run_delta93/temoin_v16/MANIFEST.sha256
+ba03f8023318c30d ba03f8023318c30d   244587   244587  out_run_delta93/alpha_v16/resultats_alpha.json
+6df42b6aeba84547 6df42b6aeba84547     8658     8658  out_run_delta93/alpha_v16/MANIFEST.sha256
+7a7cfbe3c8236b91 d118870854961e13    18534    18744  m2_lecture_v10_predictions_delta93.log
+3e7d344106027a1d 3e7d344106027a1d    10968    10968  m2_lecture_v10_predictions_delta93.json
+
+entrants : gel v10 130ba949482129a7 ; instrument v16 634c4aaa2aad7598 ; ma certification du v10/v16 996dc8be7d245387 (dont la piece de fond v1 ed5bbce867f0a41d, REFUTEE ici) ; base 92 de machine 2 4a880c934f8aacd2 ; derivation b70fca94d72822ad ; run 92 depose au registre 09baf5c
+pieces : 12 (compte etabli APRES le dernier ajout)

@@ -1,0 +1,22 @@
+MANIFESTE lot_machine2_2026-09-29_certification_v10_v16_v1 -- CERTIFICATION m2 DU GEL v10 (130ba949482129a7) ET DE L INSTRUMENT v16 (634c4aaa2aad7598) : LES DEUX CERTIFIES, 39 controles 0 morsure. Gel et banc RECONSTRUITS IDENTIQUES AU BIT depuis le v9 et le v15 non edites ; reglage n = 21 re-derive par mes formules (delta' = 1/44100, kT = 1.366617, m = 1.524666, planchers du modele exacts 1/882000, 1/637000, 1/469224) ; planchers corriges a n = 21 par ma forme close 2.804073e-14 / 6.604951e-14 / 1.717439e-13 ; epreuves rejouees sur BOCAL4, les quatre IDENTIQUES aux siennes : selftest 103/103, banc 58/58, pre-vol temoin "REGLAGE QUALIFIE -- branche 5 : T-1 R = q, T-1b les deux lois, T-2 p_obs = 4 sous la conversion", pre-vol alpha "LIEN NON ETABLI (9/27) -- VERIFIE -- branche 5 : P-alpha les six par degre ET P-A aux trois degres" ; ses deux corrections du banc (D-v16-1 memoire, D-v16-2 G22 NON JOUEE par construction) certifiees. SA MESURE DE A TIENT : rejouee sur MES series du 92 elle rend A(p) a 2 a 3e-10 du theorique aux trois degres (48.989794867 / 9.650477149 / 3.142438761). DEUX RESERVES : E-v10-1, le gel ne se reconstruit QU A UNE SEULE MACHINE -- la construction assert le canon de SA base 92, et s arrete avec la mienne dont la table coincide pourtant a 1.9e-16 (la candidate 15 prise a revers) ; E-v10-2, "41 hunks" en compte trois qui n ont pas trouve leur ancre (verifies BENINS : le texte n existe plus dans le v9, rien ne reste a n = 18), non declares. ET UN FAIT DE FOND QUE CE GEL N AVAIT PAS (7 controles 0 morsure) : ce que le v10 declare en INCERTITUDE est un BIAIS. S(p) n est ni le plancher (quatre a cinq ordres plus bas) ni du bruit (l effet de fenetre se reproduit AU BIT entre les deux machines, 8 cas sur 9) ; la dispersion n est PAS structuree en w2 ; et a p = 4 et 5 la dependance en c a UN SEUL SIGNE aux six points, donc la vraie valeur est AU-DELA du couple de c et A(p) porte un biais de ~1.6e-09, SEPT A NEUF FOIS le delta_p mesure. A p = 7 les signes sont meles : M2, dont le mode est AJUSTE, absorbe la fenetre ; M1, qui n a que c1 FIXE, ne l absorbe pas. La prediction (c) du v10 est le bon instrument et elle est pre-enregistree ; CE QUI MANQUE EST UN TROISIEME INDICE DE FENETRE c, pour extrapoler c -> la limite et RETIRER le biais au lieu de le declarer -- plume machine 1, avant le run. Aucun run joue ; aucun numero pris. machine 2, classe B
+colonnes : empreinte_B (sha256 NFC+LF, 16 hex)  empreinte_brute  octets_B  octets_bruts  fichier
+Le CANON du lot est l'empreinte B de CE manifeste ; il ne se porte pas lui-meme.
+
+4f856a34d6e887a8 4f856a34d6e887a8     9449     9449  POUR_MACHINE1_certification_v10_v16_machine2_v1.md
+bdfdcf11d3c2e604 bdfdcf11d3c2e604    14216    14216  certif_v10_v16_machine2_v1.py
+07fce55317825079 07fce55317825079     7254     7254  certif_v10_v16_machine2_v1.log
+bcbe2b2f6d589bda bcbe2b2f6d589bda      549      549  certif_v10_v16_machine2_v1.json
+ed5bbce867f0a41d ed5bbce867f0a41d    10173    10173  ce_qui_borne_A_machine2_v1.py
+fb4163b7893c5070 fb4163b7893c5070     5766     5766  ce_qui_borne_A_machine2_v1.log
+55532af50289e38a 55532af50289e38a     1104     1104  ce_qui_borne_A_machine2_v1.json
+0342f665870bd57a 42a5e9304c5ec569    11370    11492  m2_v16_selftest.log
+d8243dc9fb84b9ea 9ace420ecec27d7c    76624    77073  m2_v16_banc.log
+9da882c22ef6d961 c347c60971b0ae5d    69500    69851  m2_v16_prevol_temoin.log
+7ab2871cb22ede77 78ea314b0692272b    85631    86063  m2_v16_prevol_alpha.log
+e122267ef74a5723 7ebe9414d414d557    17692    17902  m2_lecture_v10_essai_sur_92.log
+d6a0f2159c5c113c d6a0f2159c5c113c     7927     7927  m2_lecture_v10_essai_sur_92.json
+cb0e7699af25aec1 cb0e7699af25aec1     3143     3143  ERRATUM_lot_contreseing_acte_delta92_machine2_v1.md
+
+entrants : lot machine 1 26ecd16e21783e5e (gel v10 130ba949482129a7, banc v16 634c4aaa2aad7598, construction 13e9be0e067fcdf8, machinerie du reglage, feuille lecture_v10, derives_v10.json) ; gel v9 b515abc5a6da73c5 ; instrument v15 a1553f6eb5cc74b8 ; mes lots b5568d8f31f8492e, 71d410cd531d06ab, fb456f007eab7c61, 1c4660dd54c463d8 ; derivation b70fca94d72822ad ; plancher corrige 3b12117a58dde698 ; run 92 depose au registre (09baf5c) ; clone 729f9a9
+PB-1 verifie sur mes quatre lots emis : toutes les pieces scellees sont intactes au bit.
+pieces : 14 (compte etabli APRES le dernier ajout)

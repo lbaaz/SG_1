@@ -1,0 +1,73 @@
+CERTIFICATION MACHINE 2 DU GEL v10 ET DE L INSTRUMENT v16 -- OBJET : MESURER A
+python 3.11.9 ; certif_v10_v16_machine2_v1.py
+
+0. ANCRES ET PB-1
+  [chk PASSE] canon banc_qualification_machine1_v15.py -- a1553f6eb5cc74b8
+  [chk PASSE] canon banc_qualification_machine1_v16.py -- 634c4aaa2aad7598
+  [chk PASSE] canon constante_A_pre_enregistrement_v10.md -- 130ba949482129a7
+  [chk PASSE] canon constante_A_pre_enregistrement_v9.md -- b515abc5a6da73c5
+  [note] canon construction_gel_v10_banc_v16_machine1_v1.py -- 13e9be0e067fcdf8
+  [chk PASSE] canon derivation_second_ordre_machine2_v1.json -- b70fca94d72822ad
+  [chk PASSE] PB-1 : le v9 et le v15 ne sont pas edites
+
+1. RECONSTRUCTION DEPUIS LE v9 ET LE v15
+  [chk PASSE] 1.1 constante_A_pre_enregistrement_v10.md reconstruit IDENTIQUE AU BIT -- canon 130ba949482129a7
+  [chk PASSE] 1.1 banc_qualification_machine1_v16.py reconstruit IDENTIQUE AU BIT -- canon 634c4aaa2aad7598
+  [chk PASSE] 1.2 : la construction EXIGE le canon de la base 92 DE MACHINE 1 (af295b8a660d33e8)
+  [note] 1.2 portee -- E-v10-1 -- le gel v10 ne se reconstruit QUE depuis la base 92 de machine 1 : avec la mienne (4a880c934f8aacd2), dont la table coincide pourtant a 1.9e-16, le script ARRETE sur son assert. C est la candidate 15 (une base ajustee se cite par sa table a tolerance declaree, jamais par son canon, qui est machine-dependant) prise a revers par la construction elle-meme. Le gel est reproductible, mais A UNE SEULE MACHINE.
+  [note] 1.3 les trois hunks non appliques -- la construction rend 'H2 h19 (0)', 'H2 h20 (0)', 'H2 s12 (0)' : trois fragments du reglage a n = 18 qu'elle ne trouve pas dans le v9
+  [chk PASSE] 1.3 : les trois sont BENINS -- le texte qu ils remplacent n existe plus dans le v9 -- 3/3 patrons absents du v9
+  [note] 1.3 mais -- la note de machine 1 annonce "41 hunks" sans dire que trois n ont pas trouve leur ancre. Rien ne reste a n = 18 (verifie en 2), mais un compte de hunks qui inclut des hunks non appliques se decrit faux -- meme famille que E-v9-1.
+
+2. LE REGLAGE n = 21, RE-DERIVE PAR MES FORMULES
+  [chk PASSE] 2.1 : delta' = 1/44100 et delta'/delta_0 = 1/441 -- 1/44100
+  [chk PASSE] 2.2 : kT = 1.3666 -- 1.366617
+  [chk PASSE] 2.3 : m = 1.5247 -- 1.524666
+  [chk PASSE] 2.4 : kT >= 1.15 -- la clause du volet T n est pas relachee -- 1.3666
+  [chk PASSE] 2.5 p=4 : plancher du modele = 1/882000, exact -- 1/882000
+  [chk PASSE] 2.5 p=5 : plancher du modele = 1/637000, exact -- 1/637000
+  [chk PASSE] 2.5 p=7 : plancher du modele = 1/469224, exact -- 1/469224
+  [chk PASSE] 2.6 : la regle du PLUS GRAND n (v7 3.2) est RESTAUREE et nommee
+
+3. LES PLANCHERS CORRIGES A n = 21, RE-DERIVES PAR MA FORME CLOSE
+  [chk PASSE] 3.1 p=4 : plancher corrige = 2.8041e-14 -- 2.804073e-14
+  [chk PASSE] 3.1 p=5 : plancher corrige = 6.6050e-14 -- 6.604951e-14
+  [chk PASSE] 3.1 p=7 : plancher corrige = 1.7174e-13 -- 1.717439e-13
+  [chk PASSE] 3.2 : derives_v10.json porte les memes planchers que je re-derive
+  [note] 3.3 le plancher n est plus le sujet -- a n = 21 il vaut 2.8e-14 a 1.7e-13 ; la dispersion du 92 vaut 3.5e-09 : quatre a cinq ordres au-dessus. Descendre delta' ne touche pas a ce qui borne la mesure (ce_qui_borne_A_machine2_v1, 7 controles 0 morsure).
+
+4. LA MESURE DE A, REJOUEE SUR MES SERIES DU 92
+  [chk PASSE] 4.1 : la feuille v10 rend la mesure aux trois degres -- [4, 5, 7]
+  [note] 4.2 p=4 -- delta_p +2.2790e-10 ; S(p) 4.4680e-09 ; A(p) 48.989794867 ; theorique 48.989794856 ; ecart relatif 2.25e-10
+  [chk PASSE] 4.3 p=4 : A(p) coincide avec (K/g)^(1/(p-2)) a mieux que 1e-08 relatif -- 2.25e-10
+  [note] 4.2 p=5 -- delta_p -1.9540e-10 ; S(p) 3.7150e-09 ; A(p) 9.650477149 ; theorique 9.650477151 ; ecart relatif 2.07e-10
+  [chk PASSE] 4.3 p=5 : A(p) coincide avec (K/g)^(1/(p-2)) a mieux que 1e-08 relatif -- 2.07e-10
+  [note] 4.2 p=7 -- delta_p -2.7200e-10 ; S(p) 3.5180e-09 ; A(p) 3.142438761 ; theorique 3.142438762 ; ecart relatif 3.18e-10
+  [chk PASSE] 4.3 p=7 : A(p) coincide avec (K/g)^(1/(p-2)) a mieux que 1e-08 relatif -- 3.18e-10
+  [chk PASSE] 4.4 : la moyenne delta_p est UN ORDRE sous la dispersion S(p), aux trois degres -- {4: '19.61', 5: '19.01', 7: '12.93'}
+  [chk PASSE] 4.5 : ma mesure reproduit celle de machine 1 a p = 5 et p = 7 (p = 4 porte la cellule divergente 4|2.27|1.20) -- moi {4: '2.3e-10', 5: '-2.0e-10', 7: '-2.7e-10'} | elle +7.4e-11 / -2.0e-10 / -2.7e-10
+
+5. CE QUE LE v10 APPELLE SON INCERTITUDE EST UN SYSTEMATIQUE DE FENETRE, MONOTONE
+  [note] 5.1 p=4 -- effet de c aux trois w2 : +2.338 +3.771 +0.608 -> tous positifs ; demi-etendue 1.581 e-09
+  [note] 5.1 p=5 -- effet de c aux trois w2 : +3.578 +2.130 +0.183 -> tous positifs ; demi-etendue 1.697 e-09
+  [note] 5.1 p=7 -- effet de c aux trois w2 : +3.518 -0.641 -0.203 -> meles ; demi-etendue 2.079 e-09
+  [chk PASSE] 5.2 : a p = 4 et p = 5, l effet de fenetre a UN SEUL SIGNE aux six points -- {4: 'tous positifs', 5: 'tous positifs', 7: 'meles'}
+  [chk PASSE] 5.3 : et sa demi-etendue est 7 a 9 fois la moyenne delta_p que le v10 appelle la mesure -- {4: '6.9', 5: '8.7'}
+  [note] 5.4 la consequence -- une dependance MONOTONE en c ne se centre pas en moyennant deux c : la valeur vraie est au-dela du couple, pas entre. A p = 4 et 5, A(p) tel que le v10 le definit porte donc un BIAIS de fenetre de l ordre de 1.6e-09, sept a neuf fois le delta_p qu il mesure -- et le v10 le declare en incertitude (S + plancher_corr) au lieu de le corriger. A p = 7 les signes sont MELES : M2, dont le mode est AJUSTE, absorbe la fenetre.
+  [note] 5.5 ce qui va dans le bon sens -- la prediction (c) du v10 -- le coefficient de tau^2 ajuste LIBREMENT contre le c1 derive -- est exactement l instrument qui mesure ce systematique. Elle est pre-enregistree, et c est bien.
+  [note] 5.6 ce que je prescris -- un TROISIEME indice de fenetre c. Avec deux points on constate une pente, on ne l extrapole pas ; avec trois on extrapole c -> la limite et le biais se retire au lieu de se declarer. C est le pas qui manque entre "A est bornee" et "A est mesuree", et il ne coute qu un tiers de series en plus.
+
+6. LES DEUX CORRECTIONS DU BANC (D-v16-1, D-v16-2)
+  [chk PASSE] 6.1 D-v16-1 : l horizon du synthetique sans CAP est borne
+  [chk PASSE] 6.2 D-v16-2 : G22 rend la lecture corrigee NON JOUEE PAR CONSTRUCTION (mutation q = 2)
+  [chk PASSE] 6.3 : chez moi G22 le DIT dans sa ligne --        G22 decalage lnA nul : dispersion sous le plancher' du v14 (LD-12 ; la lecture corrigee y est NON JOUEE par mutation q = 2) -> G
+
+7. LES EPREUVES DU v16, REJOUEES SUR BOCAL4 (n = 21)
+  [chk PASSE] 7 selftest : 103/103 chez moi -- 103/103
+  [chk PASSE] 7 selftest : mon resultat == celui de machine 1 -- moi 103/103 | elle 103/103
+  [chk PASSE] 7 banc qui tue : 58/58 chez moi -- 58/58
+  [chk PASSE] 7 banc qui tue : mon resultat == celui de machine 1 -- moi 58/58 | elle 58/58
+  [chk PASSE] 7 pre-vol temoin : mon resultat == celui de machine 1 -- moi REGLAGE QUALIFIE -- branche 5 : T-1 R = q, T-1b les deu | elle REGLAGE QUALIFIE -- branche 5 : T-1 R = q, T-1b les deu
+  [chk PASSE] 7 pre-vol alpha : mon resultat == celui de machine 1 -- moi LIEN NON ETABLI (9/27) -- VERIFIE -- branche 5 : P-alph | elle LIEN NON ETABLI (9/27) -- VERIFIE -- branche 5 : P-alph
+
+BILAN : 39 controles, 0 mordent

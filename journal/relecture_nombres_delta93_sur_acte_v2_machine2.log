@@ -1,0 +1,128 @@
+RELECTURE MACHINE 2 DES NOMBRES DE L ACTE DELTA 93, AUX SOURCES
+python 3.11.9 ; relecture_nombres_delta93_machine2_v2.py
+acte : journal_delta_nn_constante_A_mesure_v2.md  (convention B bd043b738d0f9d39, 19904 octets)
+
+JAMBE 1 -- LES CANONS CITES, RESOLUS DANS CE QUE JE DETIENS
+  [note] 1.0 empreintes distinctes citees par l acte -- 71
+  [note] 1.1 resolues chez moi -- 71 / 71
+  [note] 1.2 non resolues -- 0 -- l acte ne doit citer que ce qui existe ; ce qui ne resout pas chez moi est enumere ci-dessus
+  [chk PASSE] 1.3 : TOUTE empreinte citee par l acte resout dans ce que je detiens -- 71 / 71
+  [chk PASSE] 1.4 : le gel v10 et l instrument v16 cites sont ceux que J AI CERTIFIES
+  [chk PASSE] 1.5 : les pieces de MON lot du run 93 se resolvent toutes chez moi
+  [chk PASSE] 1.6 : les pieces du lot de machine 1 sur le run 93 se resolvent chez moi (lot recu)
+  [chk PASSE] 1.7 : le v11 et le v17, declares RETIRES, sont quand meme cites et detenus
+  [chk PASSE] 1.8 : PB-1, l acte n edite rien -- les pieces citees que je detiens portent leur canon
+
+JAMBE 2 -- LES NOMBRES, RELUS DANS MES SOURCES
+
+2.1 LE RUN 93 (nn.3) : comptes, etages, durees, verdicts, series
+  [chk PASSE] 2.1a : comptes 108 -- 108
+  [chk PASSE] 2.1b : plan 18 cellules -- les TROIS niveaux de pas sont la -- 18
+  [chk PASSE] 2.1b : G_dt 18 cellules -- les TROIS niveaux de pas sont la -- 18
+  [chk PASSE] 2.1b : G_dt4 18 cellules -- les TROIS niveaux de pas sont la -- 18
+  [chk PASSE] 2.1c : l acte ecrit "trois niveaux", et je les ai
+  [chk PASSE] 2.1d : duree BOCAL4 du volet temoin = 54.8 s -- mon journal rend 54.8 s
+  [chk PASSE] 2.1d : duree BOCAL4 du volet alpha = 161.8 s -- mon journal rend 161.8 s
+  [chk PASSE] 2.1e : le verdict temoin de l acte est le mien, mot pour mot -- REGLAGE QUALIFIE (bonus T-3 retire) -- branche 6 : T-3 mord seul (W-in
+  [chk PASSE] 2.1f : le verdict alpha de l acte est le mien, mot pour mot -- VERIFIE -- branche 5 : P-alpha les six par degre ET P-A aux trois degr
+  [chk PASSE] 2.1g : branche 6 au temoin, branche 5 a l alpha, comme l acte l ecrit -- temoin "branche 6 : T-3 mord", alpha "branche 5 : P-alpha "
+  [chk PASSE] 2.1h : 83 series au volet alpha, au sha256 de leur manifeste -- 83 lignes de manifeste
+  [chk PASSE] 2.1i : chacune des 83 series est au sha256 ecrit -- 0 ecart
+  [chk PASSE] 2.1j : G-plancher corrige silencieux aux trois degres, P-A vraie aux trois
+  [chk PASSE] 2.1k : lecture corrigee jouee 18/18, q dans [3, 5] partout -- q de 3.685 a 4.561
+
+2.2 LE REGLAGE (nn.2) : n = 21, delta', planchers, planchers corriges
+  [chk PASSE] 2.2a : delta' = 1/44100 et b = 21 dans MON run -- 1/44100
+  [chk PASSE] 2.2b : kT = 1.3666 et m = 1.5247 sont DANS LE GEL v10 que j ai certifie
+  [chk PASSE] 2.2c p=4 : le plancher 1/882000 est celui du gel v10
+  [chk PASSE] 2.2c p=5 : le plancher 1/637000 est celui du gel v10
+  [chk PASSE] 2.2c p=7 : le plancher 1/469224 est celui du gel v10
+  [chk PASSE] 2.2d p=4 : plancher corrige 2.804073e-14 == celui de MON run -- 2.804073e-14
+  [chk PASSE] 2.2d p=5 : plancher corrige 6.604951e-14 == celui de MON run -- 6.604951e-14
+  [chk PASSE] 2.2d p=7 : plancher corrige 1.717439e-13 == celui de MON run -- 1.717439e-13
+  [chk PASSE] 2.2e : proj4 = 0.2238, comme l acte l ecrit
+
+2.3 LA LECTURE v10 (nn.4) : bilan, (a), (b), (c)
+  [chk PASSE] 2.3a : lecture v10 = 139 controles, 1 morsure -- 139 controles, 1 morsure
+  [chk PASSE] 2.3b : la morsure unique est bien (a) a p = 7 -- (a) p = 7 : obs_R/pred dans [0.8, 1.2] aux six ET |obs_R - p
+  [chk PASSE] 2.3c : la meme morsure chez machine 1 (sa piece, livree) -- 1 morsure(s) chez elle
+  [chk PASSE] 2.3d : (a) p = 4 TIENT, p = 5 TIENT, p = 7 NON -- {'4': 'TIENT', '5': 'TIENT', '7': 'NON'}
+  [chk PASSE] 2.3e : (b) 6/6 -- 6
+  [chk PASSE] 2.3f : (c) 18/18 lus -- 18
+  [chk PASSE] 2.3g : (c) -- les 18 rapports c1_R/c1_derive tiennent dans la tolerance de 10 pour cent -- 0.9612 a 1.0370
+  [chk PASSE] 2.3h : les quatre premiers rapports que l acte m attribue sont les miens -- 1.0013 1.0072 0.9988 0.9884
+  [chk PASSE] 2.3i : "entre 0.961 et 1.037 chez machine 1" se relit dans SA piece -- 0.9612 a 1.0370
+  [chk PASSE] 2.3j : (c) tient aux 18 points des DEUX cotes
+  [chk PASSE] 2.3k : le facteur d amplitude et le decalage de phase du transport (b) -- 0.7015, +0.4465 rad
+
+2.4 LA TABLE A(p) DE nn.4 -- COLONNE PAR COLONNE, EXTRAITE DE L ACTE ET RECALCULEE CHEZ MOI
+  [chk PASSE] 2.4- : la table A(p) de nn.4 s extrait de l acte, trois lignes, six colonnes -- 3 ligne(s) extraite(s)
+  [chk PASSE] 2.4= : la borne relative est ecrite dans l acte, et la MEME a chaque emplacement -- 6e-10
+  [note] p=4 -- MES sources : A(92) 48.989794867 (6 pts) ; A(93) 48.989794876 (6 pts) ; machine 1 A(93) 48.989794873 (6 pts)
+  [chk PASSE] 2.4a p=4 : la colonne "A au 92" de l acte == MA valeur du 92, sous SA convention -- acte 48.989794867, je relis 48.989794867
+  [chk PASSE] 2.4b p=4 : la colonne "A au 93, BOCAL4" == ma valeur du 93 -- acte 48.989794876, je relis 48.989794876
+  [chk PASSE] 2.4c p=4 : la colonne "A au 93, machine 1" == la valeur de SA piece -- acte 48.989794873, sa piece rend 48.989794873
+  [chk PASSE] 2.4d p=4 : la colonne theorique == (K/g)^(1/(p-2)) de MA lecture -- 48.989794856
+  [chk PASSE] 2.4e p=4 : S(93) BOCAL4 == le mien -- 2.1065e-09
+  [chk PASSE] 2.4f p=4 : S(93) machine 1 == celui de SA piece -- 2.4851e-09
+  [note] 2.4g p=4 -- ecart relatif a la forme auto-semblable : BOCAL4 +4.143e-10, machine 1 +3.512e-10
+  [note] p=5 -- MES sources : A(92) 9.650477149 (6 pts) ; A(93) 9.650477146 (6 pts) ; machine 1 A(93) 9.650477146 (6 pts)
+  [chk PASSE] 2.4a p=5 : la colonne "A au 92" de l acte == MA valeur du 92, sous SA convention -- acte 9.650477149, je relis 9.650477149
+  [chk PASSE] 2.4b p=5 : la colonne "A au 93, BOCAL4" == ma valeur du 93 -- acte 9.650477146, je relis 9.650477146
+  [chk PASSE] 2.4c p=5 : la colonne "A au 93, machine 1" == la valeur de SA piece -- acte 9.650477146, sa piece rend 9.650477146
+  [chk PASSE] 2.4d p=5 : la colonne theorique == (K/g)^(1/(p-2)) de MA lecture -- 9.650477151
+  [chk PASSE] 2.4e p=5 : S(93) BOCAL4 == le mien -- 2.4235e-09
+  [chk PASSE] 2.4f p=5 : S(93) machine 1 == celui de SA piece -- 2.4235e-09
+  [note] 2.4g p=5 -- ecart relatif a la forme auto-semblable : BOCAL4 -5.137e-10, machine 1 -5.485e-10
+  [note] p=7 -- MES sources : A(92) 3.142438761 (6 pts) ; A(93) 3.142438763 (6 pts) ; machine 1 A(93) 3.142438763 (6 pts)
+  [chk PASSE] 2.4a p=7 : la colonne "A au 92" de l acte == MA valeur du 92, sous SA convention -- acte 3.142438761, je relis 3.142438761
+  [chk PASSE] 2.4b p=7 : la colonne "A au 93, BOCAL4" == ma valeur du 93 -- acte 3.142438763, je relis 3.142438763
+  [chk PASSE] 2.4c p=7 : la colonne "A au 93, machine 1" == la valeur de SA piece -- acte 3.142438763, sa piece rend 3.142438763
+  [chk PASSE] 2.4d p=7 : la colonne theorique == (K/g)^(1/(p-2)) de MA lecture -- 3.142438762
+  [chk PASSE] 2.4e p=7 : S(93) BOCAL4 == le mien -- 4.9116e-09
+  [chk PASSE] 2.4f p=7 : S(93) machine 1 == celui de SA piece -- 4.9177e-09
+  [note] 2.4g p=7 -- ecart relatif a la forme auto-semblable : BOCAL4 +4.220e-10, machine 1 +4.210e-10
+  [chk PASSE] 2.4h : la borne que l acte ecrit (6e-10) couvre le plus grand ecart des deux machines -- l acte ecrit 6e-10 ; je mesure au plus 5.48e-10 (p = 5), BOCAL4 5.14e-10 et machine 1 5.48e-10
+  [chk PASSE] 2.4j : la borne n est pas non plus trop LACHE (elle serre au 1e-10 pres) -- max 5.48e-10 contre une borne de 6e-10
+  [chk PASSE] 2.4i : l accord a la forme auto-semblable tient, lui, a mieux que 1e-09 partout -- au plus 5.48e-10
+  [note] 2.4 convention -- A(p) = exp de la moyenne des six lnA_R du degre, estimateur M1 a p = 4 et 5, M2 a p = 7 -- la convention que l acte ecrit lui-meme en nn.4
+
+2.5 LES ECARTS ENTRE MACHINES (nn.4)
+  [note] 2.5 estimateur II    -- 15 identiques au bit / 18, ecart max 4.2375e-10
+  [note] 2.5 estimateur M1    -- 15 identiques au bit / 18, ecart max 3.7857e-10
+  [note] 2.5 estimateur M2    -- 10 identiques au bit / 18, ecart max 2.6779e-09
+  [note] 2.5 estimateur mixte -- 14 identiques au bit / 18, ecart max 3.7857e-10
+  [note] 2.5 convention -- l acte ne nomme pas l estimateur sous lequel il compte : 15 sur 18 et 4.2e-10 sont les nombres de l ajustement II. Sous l estimateur de la MESURE (M1 a p = 4 et 5, M2 a p = 7) ce serait 14 sur 18 et 3.8e-10. Les deux sont vrais ; c est le meme defaut instrumental. Candidate : une comparaison entre machines se cite avec l estimateur.
+  [chk PASSE] 2.5a : 15 des 18 lnA_R sont identiques AU BIT entre les deux machines (sous II) -- 15 identiques, 3 en ecart
+  [chk PASSE] 2.5b : l ecart maximal vaut 4.2e-10 et il est a p = 4 -- 4.2375e-10 a 4|2.27|1.20
+  [chk PASSE] 2.5c : la cellule exposee est 4|2.27|1.20, le defaut instrumental deja releve au 92 -- 4|2.27|1.20
+  [chk PASSE] 2.5d : c est cet ecart qui fait differer S(4) entre machines, et S(4) seul
+
+2.6 LE 92 VERS LE 93 : CE QUE LE PLUS GRAND n A ACHETE (nn.4)
+  [chk PASSE] 2.6a p=4 : S(93)/S(92) = 0.471, comme l acte l ecrit -- 0.4715
+  [chk PASSE] 2.6a p=5 : S(93)/S(92) = 0.652, comme l acte l ecrit -- 0.6523
+  [chk PASSE] 2.6a p=7 : S(93)/S(92) = 1.396, comme l acte l ecrit -- 1.3961
+  [chk PASSE] 2.6b : delta' x 0.735 du 92 au 93 (324/441) -- 0.7347
+  [chk PASSE] 2.6c : le residu vaut 3e+04 a 8e+04 fois le plancher analytique -- 7.51e+04 3.67e+04 2.86e+04
+  [chk PASSE] 2.6d : le residu est de 2 a 5e-09 en lnA -- 2.107e-09 2.423e-09 4.912e-09
+
+2.7 LES DEUX REFUTATIONS (nn.5)
+  [chk PASSE] 2.7a : mes trois ecarts en c a p = 4 sont ceux que l acte m attribue -- +0.780 -2.107 +1.205 dans mon journal
+  [chk PASSE] 2.7b : signes MELES a p = 4, UNIQUE a p = 5, chez moi -- meles / tous positifs
+  [chk PASSE] 2.7c : au 92 le signe etait UNIQUE a p = 4 et 5 -- ce que la v1 avait mesure
+  [chk PASSE] 2.7d : ce que je retire est ce que l acte dit que je retire -- le biais de fenetre monotone (v1 section 5) ; Q4 : un plus grand n n achete rien a p = 4 et 5
+  [chk PASSE] 2.7e : ce_qui_borne_A v2 = 6 controles, 0 morsure -- 6 controles, 0 morsure
+  [note] 2.7 (d) chez elle -- ecarts en c a p = 4, relus dans SA piece : 1.73 +7.802e-10 2.27 -2.485e-09 2.80 +1.205e-09
+  [chk PASSE] 2.7f : (d) exigeait les SIX positifs a p = 4 et 5 ; a p = 4 elle ne les a pas -- 1 negatif(s) sur 3 chez elle
+  [chk PASSE] 2.7g : le point qui tombe est 4|2.27, et il est NEGATIF SUR LES DEUX MACHINES -- BOCAL4 -2.107e-09 ; machine 1 -2.485e-09
+  [chk PASSE] 2.7h : le v11 et le v17 sont declares RETIRES, et le gel courant reste le v10
+
+2.8 CE QUE L ACTE DIT DE MES PROPRES PIECES
+  [chk PASSE] 2.8a : ma certification du v10/v16 -- 39 controles, 0 morsure
+  [chk PASSE] 2.8b : selftest 103/103 et banc 58/58 sur BOCAL4
+  [chk PASSE] 2.8c : E18 -- aucun numero pris, aucune regle adoptee, aucun delta recommande
+  [chk PASSE] 2.8d : l acte ecrit que le residu N EST PAS NOMME
+  [chk PASSE] 2.8e : l acte consigne le run 93 comme run d OBSERVATION, E19 levee d un seul cote
+  [chk PASSE] 2.8f : l acte ne recommande PAS de rejouer le run
+
+BILAN : 87 controles, 0 mordent

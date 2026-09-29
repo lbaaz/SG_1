@@ -1,0 +1,36 @@
+CE QUI BORNE A(w2) -- v2, CONFRONTEE AU RUN 93
+python 3.11.9 ; ce_qui_borne_A_machine2_v2.py
+runs : 92 (n=18) 5a1032b29d3f03c7 ; 93 (n=21) ba03f8023318c30d
+
+1. CE QUI TOMBE (1) -- LE SIGNE UNIQUE DE LA DEPENDANCE EN c NE SE REPRODUIT PAS
+  [note] p=4 -- n=18 :  +2.338  +3.771  +0.608 -> tous positifs  | n=21 :  +0.780  -2.107  +1.205 -> meles
+  [note] p=5 -- n=18 :  +3.578  +2.130  +0.183 -> tous positifs  | n=21 :  +2.258  +0.107  +1.792 -> tous positifs
+  [note] p=7 -- n=18 :  +3.518  -0.641  -0.203 -> meles          | n=21 :  -2.920  -1.895  +1.855 -> meles
+  [chk PASSE] 1.1 : au 92, le signe etait UNIQUE a p = 4 et 5 (ce que la v1 a mesure, et c etait vrai la)
+  [chk PASSE] 1.2 : au 93, il ne l est PLUS a p = 4 -- la v1 avait generalise un seul reglage -- p=4 meles ; p=5 tous positifs ; p=7 meles
+  [note] 1.3 ce que je retire -- la reserve de fond de ma certification du v10 -- "A(p) porte un biais de fenetre de ~1.6e-09, sept a neuf fois le delta_p" -- reposait sur ce signe unique. Signes meles, la moyenne sur deux c est un centre defendable et l argument du biais tombe. Ce que j avais mesure au 92 etait exact ; ce que j en avais conclu pour tout reglage ne l etait pas.
+  [note] 1.4 ce qui reste vrai de la v1 -- l effet de c reste du meme ordre (demi-etendue 1.7 a 2.4e-09 au 93 contre 1.6 a 2.1 au 92) et il reste, au 92, reproduit AU BIT entre les deux machines : c est bien un systematique deterministe, pas du bruit. Ce n est pas sa nature qui est en cause, c est le BIAIS que j en deduisais.
+
+2. CE QUI TOMBE (2) -- MA Q4 : "UN PLUS GRAND n N ACHETE RIEN A p = 4 ET 5"
+  [note] p=4 -- S(p) 4.468e-09 -> 2.107e-09 ; rapport 0.471 ; attendu si S ~ delta' 0.735
+  [note] p=5 -- S(p) 3.715e-09 -> 2.423e-09 ; rapport 0.652 ; attendu si S ~ delta' 0.735
+  [note] p=7 -- S(p) 3.518e-09 -> 4.912e-09 ; rapport 1.396 ; attendu si S ~ delta' 0.735
+  [chk PASSE] 2.1 : a p = 4 et 5, S(p) a BAISSE autant ou plus que delta' -- ma Q4 est refutee -- 0.471 et 0.652 contre 0.735
+  [chk PASSE] 2.2 : a p = 7, S(p) a MONTE -- la regle du plus grand n n y achete rien -- 1.396
+  [note] 2.3 ce que je retire -- j avais ecrit que la regle du plus grand n, restauree par le v10, n achetait pas ce qu il fallait la ou la lecture etait bornee. C est faux a p = 4 et 5 : elle a divise la dispersion par 2.1 et 1.5. Machine 1 avait raison sur les deux degres ou son gel visait juste, et mon objection generalisait un diagnostic tire du seul 92.
+
+3. CE QUI SURVIT -- LE PLANCHER N EST TOUJOURS PAS LA LIMITE
+  [note] p=4 -- S(p) 2.107e-09 ; plancher corrige 2.804e-14 ; rapport 7.5e+04
+  [note] p=5 -- S(p) 2.423e-09 ; plancher corrige 6.605e-14 ; rapport 3.7e+04
+  [note] p=7 -- S(p) 4.912e-09 ; plancher corrige 1.717e-13 ; rapport 2.9e+04
+  [chk PASSE] 3.1 : a n = 21, S(p) reste 3e+04 a 8e+04 fois le plancher analytique
+  [note] 3.2 -- ce qui borne la mesure n est toujours pas le terme analytique suivant. Mais je ne sais plus dire ce que c est : la v1 le nommait (un systematique de fenetre monotone), le 93 refute cette forme-la. Ce qui reste est un residu de ~2e-09 a 5e-09, de meme ordre aux deux reglages, dont la structure m echappe.
+
+4. LA MESURE DE A, AUX DEUX REGLAGES
+  [note] p=4 -- A(92) 48.989794867 ; A(93) 48.989794876 ; theorique 48.989794856 ; ecarts relatifs 2.3e-10 et 4.1e-10
+  [note] p=5 -- A(92) 9.650477149 ; A(93) 9.650477146 ; theorique 9.650477151 ; ecarts relatifs 2.0e-10 et 5.1e-10
+  [note] p=7 -- A(92) 3.142438761 ; A(93) 3.142438763 ; theorique 3.142438762 ; ecarts relatifs 2.7e-10 et 4.2e-10
+  [chk PASSE] 4.1 : aux deux reglages, A(p) coincide avec (K/g)^(1/(p-2)) a mieux que 1e-08
+  [note] 4.2 -- les deux reglages donnent la meme valeur a 1e-09 pres et s accordent avec la forme auto-semblable. C est un resultat, et il ne depend d aucune des deux choses que je retire ci-dessus.
+
+BILAN : 6 controles, 0 mordent
