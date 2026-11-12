@@ -1,0 +1,108 @@
+--- banc_qui_tue_qualification_EB_machine1_v1.py	2026-11-11 14:56:44.853337654 +0100
++++ banc_qui_tue_qualification_EB_machine1_v2.py	2026-11-11 15:35:46.856247856 +0100
+@@ -1,5 +1,6 @@
+ # -*- coding: ascii -*-
+-# BANC QUI TUE DE LA QUALIFICATION E-B -- machine 1, v1 -- gel E-B v2
++# BANC QUI TUE DE LA QUALIFICATION E-B -- machine 1, v2 -- gel E-B v2
++# v2 = v1 (666e69f11bc1f72c) + D-3 (-P), temoins de D-1 et D-2, O-3.
+ # cde0cd11a763f26d, section 10. Six mutations ; chacune doit faire tomber ce
+ # qu'elle vise ; le banc affirme sa branche et compte : mordues == attendues.
+ # M-1, M-2, M-3 : mutations de DONNEES sur une sortie de sonde synthetique,
+@@ -171,48 +172,70 @@
+              (False, True, False, True, "QUALIFIE PAR POINT", "NON LISIBLE",
+               ["F2G20"]))
+     # --- M-4, M-5 : la sonde reelle en pre-vol, avec mutation ----------------
+-    commun = [sys.executable, "-I", a.sonde, "--moteur", a.moteur, "--run",
+-              a.run, "--manifeste", a.manifeste, "--prevol"]
++    # D-3 : la sonde se lance par -P et non par -I, qui ecarte les paquets
++    # utilisateur (numpy peut y vivre) : comme l'operateur la lance.
++    commun = [sys.executable, "-P", a.sonde, "--moteur", a.moteur, "--run",
++              a.run, "--manifeste", a.manifeste]
+ 
+-    def lancer(nom, extra):
++    def lancer(nom, extra, verdict=None, reprise=False):
+         d = os.path.join(a.sortie, nom)
+         shutil.rmtree(d, ignore_errors=True)
+         os.makedirs(d)
+-        for f in ("sonde_etage1.json", "verdict_etage1.json"):
+-            if os.path.exists(os.path.join(a.prevol, f)):
+-                shutil.copy(os.path.join(a.prevol, f), d)
++        shutil.copy(os.path.join(a.prevol, "sonde_etage1.json"), d)
++        if reprise:
++            shutil.copytree(os.path.join(a.prevol, "reprise"),
++                            os.path.join(d, "reprise"))
++        if verdict is not None:
++            json.dump(verdict, open(os.path.join(d, "v1.json"), "w"))
++            extra = extra + ["--verdict1", os.path.join(d, "v1.json")]
+         r = subprocess.run(commun + ["--sortie", d] + extra,
+                            capture_output=True, text=True)
+         return r.returncode, [l for l in r.stdout.splitlines()
+                               if l.startswith("ARRET")]
+-    code, arr = lancer("M4", ["--etage", "2", "--mutation", "M-4",
+-                              "--verdict1", os.path.join(
+-                                  a.prevol, "verdict_etage1.json"),
++    c1 = S.canon_b(open(os.path.join(a.prevol, "sonde_etage1.json"),
++                        "rb").read())
++    code, arr = lancer("M4", ["--prevol", "--etage", "2", "--mutation", "M-4",
+                               "--ancrage-ref", os.path.join(
+-                                  a.prevol, "ancrage_prevol.json")])
++                                  a.prevol, "ancrage_prevol.json")],
++                       verdict={"etage1": "TIENT", "prevol": True,
++                                "factice": True, "canon_sonde_etage1": c1})
+     affirmer("M-4", "ancrage sur le deuxieme recouvrement -> G-Q4 mord",
+              (code, bool(arr) and arr[0].startswith("ARRET G-Q4")), (3, True))
+-    code, arr = lancer("M5", ["--etage", "1", "--mutation", "M-5",
++    code, arr = lancer("M5", ["--prevol", "--etage", "1", "--mutation", "M-5",
+                               "--retenus", a.retenus])
+     affirmer("M-5", "un element de W_F1 deplace -> G-Q3 mord",
+              (code, bool(arr) and arr[0].startswith("ARRET G-Q3")), (3, True))
+-    # --- temoin de porte : un etage 1 qui ne tient pas ferme l'etage 2 ------
+-    reel = os.path.join(a.prevol, "verdict_etage1_reel.json")
+-    porte = None
+-    if os.path.exists(reel):
+-        code, arr = lancer("PORTE", ["--etage", "2", "--verdict1", reel])
+-        porte = (code == 2 and bool(arr) and "etage 2 refuse" in arr[0])
+-        print("PORTE verdict d'etage 1 %s -> etage 2 refuse (code %d) : %s" % (
+-            json.load(open(reel))["etage1"], code, "TIENT" if porte
+-            else "NE TIENT PAS"))
+-        base = base and porte
+-    else:
+-        print("PORTE : NON JOUEE (pas de verdict reel en pre-vol)")
+-    print("banc qui tue : %d mordues == 6 attendues ; base %s : %s" % (
+-        sum(R), "saine" if base else "MALSAINE",
+-        "PASSE" if (sum(R) == 6 and len(R) == 6 and base) else "ECHOUE"))
+-    sys.exit(0 if (sum(R) == 6 and len(R) == 6 and base) else 1)
++    # --- temoins hors gel : la porte (D-2) et la reprise (D-1) ---------------
++    T = []
+ 
++    def temoin(nom, vise, code, arr, motif):
++        ok = (code == 2 and bool(arr) and motif in arr[0])
++        T.append(ok)
++        print("%-8s %-60s %s" % (nom, vise, "REFUSE (code 2)" if ok else
++                                 "NON REFUSE : code %s, %s" % (code, arr)),
++              flush=True)
++    code, arr = lancer("PORTE1", ["--prevol", "--etage", "2"], verdict={
++        "etage1": "NE TIENT PAS", "prevol": True, "canon_sonde_etage1": c1})
++    temoin("PORTE-1", "etage 1 qui ne tient pas -> etage 2 ferme",
++           code, arr, "etage 2 refuse")
++    code, arr = lancer("PORTE2", ["--etage", "2"], verdict={
++        "etage1": "TIENT", "prevol": True, "canon_sonde_etage1": c1})
++    temoin("PORTE-2", "etage 2 REEL sous un verdict de pre-vol -> ferme (D-2)",
++           code, arr, "(D-2)")
++    code, arr = lancer("PORTE3", ["--etage", "2"], verdict={
++        "etage1": "TIENT", "prevol": False, "canon_sonde_etage1": c1})
++    temoin("PORTE-3", "etage 2 REEL sur un sonde_etage1.json de pre-vol (D-2)",
++           code, arr, "(D-2)")
++    code, arr = lancer("REPRISE", ["--etage", "1", "--retenus", a.retenus],
++                       reprise=True)
++    temoin("REPRISE", "etage 1 REEL dans une reprise de pre-vol -> refuse (D-1)",
++           code, arr, "reprise refusee (D-1)")
++    ok = (sum(R) == 6 and len(R) == 6 and base and all(T) and len(T) == 4)
++    print("banc qui tue : %d mordues == 6 attendues ; base %s ; temoins hors"
++          " gel : %d refus == 4 attendus : %s" % (
++              sum(R), "saine" if base else "MALSAINE", sum(T),
++              "PASSE" if ok else "ECHOUE"))
++    sys.exit(0 if ok else 1)
+ 
+ if __name__ == "__main__":
+     main()

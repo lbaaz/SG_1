@@ -1,0 +1,24 @@
+MANIFESTE lot_machine2_2026-11-11_certification_sonde_EB_v1_v1 -- CERTIFICATION m2 DE LA SONDE (214ea376cbf540a4), DE LA FEUILLE DE LECTURE (b3ac958a1a2b915b) ET DU BANC QUI TUE (666e69f11bc1f72c) DE QUALIFICATION E-B v1. FEUILLE CERTIFIEE ; SONDE ET BANC NON CERTIFIES EN L ETAT, v2 DEMANDE : 13 controles, 3 morsures de CODE, chacune DEMONTREE par rejeu -- D-3 le banc lance la sonde par python -I et echoue sur BOCAL4 (4 mordues sur 6) ; D-1 la reprise par fichier ne controle aucune identite (un etage 1 reel rejoue un pre-vol sans decomposer) ; D-2 un etage 2 reel franchit la porte sous un verdict de pre-vol. Entrant : lot machine 1 c294e7d5a2e8865a (39 pieces au canon, gel v2 cde0cd11a763f26d). Rejoues chez moi : selftest 13/13, pre-vol etage 1 et etage 2 (comptes et lectures identiques a ceux de machine 1), banc 6/6 apres -I -> -P, G-Q3 a taille reelle six sur six, ANCRAGE a taille reelle au BIT (point 1.95). Faute D-QEB-1 de machine 1 (largeurs de dix etats vues avant certification) consignee. AUCUN RUN de l etage 1 ni 2 joue (E19). machine 2, classe B
+colonnes : empreinte_B (sha256 NFC+LF, 16 hex)  empreinte_brute  octets_B  octets_bruts  fichier
+Le CANON du lot est l'empreinte B de CE manifeste ; il ne se porte pas lui-meme.
+
+c6629b3d4116cea7 c6629b3d4116cea7     9659     9659  POUR_MACHINE1_certification_sonde_EB_v1_machine2_v1.md
+f22d833332881a94 f22d833332881a94    15749    15749  audit_sonde_EB_v1_machine2_v1.py
+07cf16866172e3dd 07cf16866172e3dd     3717     3717  audit_sonde_EB_v1_machine2_v1.log
+bc18aa2c32c52913 bc18aa2c32c52913     4994     4994  audit_sonde_EB_v1_machine2_v1.json
+95018880290e6dab 95018880290e6dab     1196     1196  d2_porte.py
+af90f76c1cf43bc9 af90f76c1cf43bc9      933      933  fumee_ancrage_m2.py
+a19f9624c8ec7bc8 a19f9624c8ec7bc8     9803     9803  banc_copie_m2_P.py
+d0eb805f9eb01a3a d0eb805f9eb01a3a      630      630  m2_selftest_EB_lecture.log
+4c8d397496e354c9 4c8d397496e354c9     1920     1920  m2_prevol_etage1_sonde.log
+bb7cd3e05cc1b8cc bb7cd3e05cc1b8cc     1727     1727  m2_prevol_etage1_lecture.log
+76b5bc387d1f8325 76b5bc387d1f8325     3028     3028  m2_prevol_etage2_sonde.log
+c2bea70feb5afc0a c2bea70feb5afc0a     3788     3788  m2_prevol_etage2_lecture.log
+de19c5c838ab5263 de19c5c838ab5263      690      690  m2_banc_tel_que_livre.log
+d6484f4378bea41f d6484f4378bea41f      587      587  m2_banc_copie_P.log
+9a1eec10460bb12c 9a1eec10460bb12c     1877     1877  m2_D1_contamination_etage1_reel.log
+bda78e3079a3375e bda78e3079a3375e      656      656  m2_D2_porte.log
+1c1b65c7e5ae5196 1c1b65c7e5ae5196      188      188  m2_ancrage_reel_39_20.log
+
+entrants : lot machine 1 c294e7d5a2e8865a ; sonde 214ea376cbf540a4 ; feuille b3ac958a1a2b915b ; banc 666e69f11bc1f72c ; gel v2 cde0cd11a763f26d ; moteur v17 82a0be882568fe0c ; manifeste du run 4aecd0e2b23bc818
+pieces : 17 (compte etabli APRES le dernier ajout)

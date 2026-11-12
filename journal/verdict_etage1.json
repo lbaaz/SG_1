@@ -1,0 +1,55 @@
+{
+ "canon_reference": "4d51dd58ef456fe9",
+ "canon_sonde_etage1": "ab31334aea5c444a",
+ "detail": {
+  "TN": "NON JOUE",
+  "TP": {
+   "j06": {
+    "F1G20": {
+     "Gamma_pl": 5.053886618589505e-10,
+     "ecart_ln": null,
+     "etalement": 0.3846863204965365,
+     "k0": -2,
+     "statut": "PAS DE PLATEAU",
+     "tient": false
+    },
+    "F1G30": {
+     "Gamma_pl": 5.400918088205674e-10,
+     "ecart_ln": 0.005960735577077872,
+     "etalement": 0.0275554227563215,
+     "k0": -2,
+     "statut": "PLATEAU",
+     "tient": true
+    },
+    "Gamma_ref": 5.368820401556629e-10,
+    "u_ref": 0.002136226253575124
+   },
+   "j08": {
+    "F1G20": {
+     "Gamma_pl": 5.950125924633251e-09,
+     "ecart_ln": null,
+     "etalement": 0.42135673299387233,
+     "k0": -2,
+     "statut": "PAS DE PLATEAU",
+     "tient": false
+    },
+    "F1G30": {
+     "Gamma_pl": 6.377544424501378e-09,
+     "ecart_ln": 0.007865179601789625,
+     "etalement": 0.034409933400869175,
+     "k0": -2,
+     "statut": "PLATEAU",
+     "tient": true
+    },
+    "Gamma_ref": 6.4279027357986375e-09,
+    "u_ref": 0.00016374281720998862
+   }
+  }
+ },
+ "etage1": "NE TIENT PAS",
+ "motifs": [
+  "TP ne tient pas a j06",
+  "TP ne tient pas a j08"
+ ],
+ "prevol": false
+}

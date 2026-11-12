@@ -1,0 +1,177 @@
+{
+ "acte": "569ccbd0d1adb927",
+ "bilan": {
+  "chk": 33,
+  "mord": 0,
+  "noms": []
+ },
+ "controles": [
+  {
+   "id": "C01",
+   "ok": true,
+   "msg": "acte hors zip == membre du zip, canon 569ccbd0d1adb927 (annonce 569ccbd0d1adb927)"
+  },
+  {
+   "id": "C02",
+   "ok": true,
+   "msg": "13 pieces sur 13 au canon, a l empreinte brute et a la taille ; membres du zip 14 (attendu 14 avec le manifeste) ; ecarts [] ; CANON DU LOT d01cf16c3708f45a"
+  },
+  {
+   "id": "C03",
+   "ok": true,
+   "msg": "56 empreintes distinctes citees dans l acte (machine 1 annonce 56)"
+  },
+  {
+   "id": "C04",
+   "ok": true,
+   "msg": "la table nn.5 du temoin positif recalculee de ma sortie (plateau exact, ma table de reference) : 6 phrases attendues retrouvees dans l acte, accord avec mon verdict_etage1.json ; absentes : []"
+  },
+  {
+   "id": "C05",
+   "ok": true,
+   "msg": "verdict et motifs lus dans MON verdict_etage1.json retrouves mot pour mot : VERDICT DE L'ETAGE 1 : NE TIENT PAS, motifs 'TP ne tient pas a j06' ; 'TP ne tient pas a j08'."
+  },
+  {
+   "id": "C06",
+   "ok": true,
+   "msg": "G-Q5 : 30 valeurs, max |Gamma(H+)| = 1.330e-13 ; l acte dit 1.330e-13"
+  },
+  {
+   "id": "C07",
+   "ok": true,
+   "msg": "comptes recomptes dans mon JSON : 93 jouees (dont le plancher 30) + 12 sautees = 105 ; phrase de nn.4 retrouvee"
+  },
+  {
+   "id": "C08",
+   "ok": true,
+   "msg": "duree moyenne par decomposition du temoin positif : 30.1 s a N = 60 (30), 68.2 s a N = 70 (30) ; l acte dit environ 30 s et 68 s"
+  },
+  {
+   "id": "C09",
+   "ok": true,
+   "msg": "plateforme lue dans mon JSON == celle de nn.4"
+  },
+  {
+   "id": "C10",
+   "ok": true,
+   "msg": "temoin negatif : candidats [[50, 25], [55, 27], [45, 22]], Gamma a k = 3 ['0.898', '2.449', '0.669'], recouvrements k = 2 et 4 de 0.766 a 0.884, aucun suivi ; phrases absentes de l acte : []"
+  },
+  {
+   "id": "C11",
+   "ok": true,
+   "msg": "feuille b3ac958a1a2b915b : cascade(mon verdict, pas d etage 2) = NON CONCLUANT D'INSTRUMENT"
+  },
+  {
+   "id": "C12",
+   "ok": true,
+   "msg": "gel cde0cd11a763f26d : section 9 rang 1 (TP ne tient pas -> NON CONCLUANT D INSTRUMENT) et section 13 (consigner le meilleur etalement) relues ; l acte consigne 0.0276, 0.0344, 0.3847, 0.4214 : True"
+  },
+  {
+   "id": "C13",
+   "ok": true,
+   "msg": "tableau de nn.6 : 60 cellules lues dans l acte, 60 recalculees de mon JSON (Gamma / Gamma_ref ; \"-\" sous 1e-12) ; ecarts []"
+  },
+  {
+   "id": "C14",
+   "ok": true,
+   "msg": "paliers (plus longue suite de valeurs consecutives a 5 pour cent) recalcules : j = 6 G20 : quatre valeurs, k = -2 a 1, etalement 0.0397; j = 6 G30 : cinq valeurs, k = -2 a 2, etalement 0.0276; j = 8 G20 : trois valeurs, k = -2 a 0, etalement 0.0088; j = 8 G30 : cinq valeurs, k = -2 a 2, etalement 0.0344 ; absents de l acte : []"
+  },
+  {
+   "id": "C15",
+   "ok": true,
+   "msg": "(a) k = -2 : ecart maximal a la reference 0.54 pour cent (acte : 0.5) ; u_ref de j = 6 0.21 pour cent (acte : 0.2)"
+  },
+  {
+   "id": "C16",
+   "ok": true,
+   "msg": "(c) rapports de pas k = 9 a 12 : 0.499 a 0.507 (valeurs lisibles) ; avec les non lisibles 0.499 a 0.507 ; k = 3 : ['0.435', '1.249', '0.422', '0.892'] ; bosse a j = 6 G30 : 2.10 ; absents de l acte : []"
+  },
+  {
+   "id": "C17",
+   "ok": true,
+   "msg": "(d) pas de descente et portes recalcules (denominateur = pas precedent, plancher du moteur ~1e-19 negligeable) : j = 6 G20 : pas 0.038, 0.249, 0.410 -> REFUSE | j = 6 G30 : pas 0.003, 0.028, 0.218 -> REFUSE | j = 8 G20 : pas 0.062, 0.250, 0.406 -> REFUSE | j = 8 G30 : pas 0.005, 0.028, 0.078 -> REFUSE ; accepte (glisse) : j = 6 G20 : accepte k = 0, 1 (Gamma / Gamma_ref : 1.019, 0.980) | j = 6 G30 : accepte k = 0, 1, 2 (Gamma / Gamma_ref : 1.002, 0.998, 1.026) | j = 8 G20 : accepte k = 0 (Gamma / Gamma_ref : 1.009) | j = 8 G30 : accepte k = 0, 1, 2 (Gamma / Gamma_ref : 1.000, 0.994, 0.967) ; ecart maximal des acceptes 3.3 pour cent ; absents de l acte : []"
+  },
+  {
+   "id": "C18",
+   "ok": true,
+   "msg": "six points de M17 (pt_*_f070.json du run) : plus grand des deux derniers pas de descente 0.0469 (acte : 0.0469) ; L retenus [20, 20, 20, 20, 20, 20]"
+  },
+  {
+   "id": "C19",
+   "ok": true,
+   "msg": "nn.2 : six largeurs lues par M17 a eta0/8 : 2.162e-10, 1.298e-10, 8.442e-11, 6.562e-11, 9.008e-11, 2.661e-09 ; E_run = ln(max/min) = 3.7027"
+  },
+  {
+   "id": "C20",
+   "ok": true,
+   "msg": "nn.2 (constate) : poids total gauche 0.845 a 0.867, droite 0.998 a 0.998 ; recouvrement gauche 2.75 a 2.88 pour cent, droite 4.31 a 4.37 pour cent, lus dans les pt_*_f070.json du run"
+  },
+  {
+   "id": "C21",
+   "ok": true,
+   "msg": "rejeu de machine 1 : 6 lignes ; la colonne \"sonde m2\" == MES gamma a 10 chiffres, les ecarts relatifs recalcules a leur affichage ; pire 2.856e-04 (acte : 2.856e-04)"
+  },
+  {
+   "id": "C22",
+   "ok": true,
+   "msg": "mes 24 pieces et lots cites par l acte : tous detenus chez moi ET cites dans l acte ; manquants []"
+  },
+  {
+   "id": "C23",
+   "ok": true,
+   "msg": "comptes de controles et de morsures que l acte attribue a mes quatre certifications, relus dans mes notes : gel v1 ok; gel v2 ok; sonde v1 ok; sonde v2 ok"
+  },
+  {
+   "id": "C24",
+   "ok": true,
+   "msg": "la ligne de machine 2 que nn.7 dit \"reprise telle quelle\" se trouve dans mes pieces : ['POUR_MACHINE1_certification_sonde_EB_v1_machine2_v1.md']"
+  },
+  {
+   "id": "C25",
+   "ok": true,
+   "msg": "la meme ligne est citee dans l acte"
+  },
+  {
+   "id": "C26",
+   "ok": true,
+   "msg": "numeros des regles candidates relus dans MES copies des actes 90, 91, 92, 93 et dans mon contreseing du 93 : 21 regles, par piece [8, 4, 3, 3, 3], de 1 a 21 sans trou ni doublon : True ; les 4 nouvelles de l acte portent [22, 23, 24, 25]"
+  },
+  {
+   "id": "C27",
+   "ok": true,
+   "msg": "compte de la revue (X) : l acte dit \"vingt-cinq candidates\" ; mes pieces en comptent 21, plus les 4 de l acte = 25"
+  },
+  {
+   "id": "C28",
+   "ok": true,
+   "msg": "la parenthese \"Les vingt et une precedentes (huit du 90, quatre du 91, trois du 92, trois de l'acte 93, trois du contreseing du 93 par machine 2)\" somme a 21 ; le nombre annonce vaut 21 ; mes pieces donnent [8, 4, 3, 3, 3]"
+  },
+  {
+   "id": "C29",
+   "ok": true,
+   "msg": "diff v1 -> v2 recalcule par moi : sections touchees ['nn.1', 'nn.10', 'nn.12', 'nn.13', 'nn.14', 'nn.6', 'nn.8', 'nn.9', 'tete'] ; sections NON touchees parmi celles qui portent les nombres mesures (nn.0, nn.2, nn.3, nn.4, nn.5, nn.7, nn.11) : True ; dans nn.6 seules les 2 lignes du paragraphe (e) changent ; nombres decimaux AJOUTES absents du v1 : []"
+  },
+  {
+   "id": "C30",
+   "ok": true,
+   "msg": "R-1 amendee : la phrase de nn.13 (largeur rendue 0.435 et 0.422 fois la connue, ET refus de la porte de M17) est exacte sur mes donnees : k = 3 G20 0.435 et 0.422 ; les quatre portes REFUSENT (C17) ; l amendement est juste : M17 aurait rendu un arret de regle, pas un nombre faux"
+  },
+  {
+   "id": "C31",
+   "ok": true,
+   "msg": "R-2 prise : nn.10 (iv) dit que l operateur a laisse la question de cote, a machine 2 le 11/11"
+  },
+  {
+   "id": "C32",
+   "ok": true,
+   "msg": "detention : la certification de ma reference (7b64b1b7d86c0591) est chez moi (['lot_machine1_2026-11-11_certification_reference_TP_v1_recu.zip::MANIFEST_lot_machine1_certification_reference_TP_v1.txt']), copie de BOCAL4 == fichier de Downloads a l octet : True ; nn.1 le dit"
+  },
+  {
+   "id": "C33",
+   "ok": true,
+   "msg": "les 5 empreintes que le v2 ajoute au v1 (v1, son lot, mon lot de contreseing, ma note, ma note du 93) sont citees ET resolues chez moi ; 51 + 5 = 56 : True"
+  }
+ ],
+ "non_resolues": [],
+ "info": []
+}

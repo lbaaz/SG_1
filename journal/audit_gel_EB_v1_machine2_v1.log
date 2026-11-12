@@ -1,0 +1,44 @@
+=== 1. LES DEUX PIECES LIVREES ===
+  gel : B 8603af9d4f63e9dc  17381 o  CR=0  non-ASCII=0
+  wkb : B 3eeb30328f9c542c  1622 o  CR=0  non-ASCII=0
+OK    C01 gel : ASCII pur, LF seul, termine par -- FIN --
+OK    C02 script WKB : ASCII pur, LF seul
+=== 2. LES SOURCES CITEES PAR LE GEL (section 2) ===
+OK    C03 moteur au canon 82a0be882568fe0c et a la taille 103150 : lu 82a0be882568fe0c 103150 o
+OK    C04 gel M17 v12_b2 au canon 20950e52e7d63225 et a la taille 58507 : lu 20950e52e7d63225 58507 o
+OK    C05 manifeste du run au canon 4aecd0e2b23bc818 : lu 4aecd0e2b23bc818
+OK    C06 dossier du run : 36 pieces au canon et a la taille, comptees par le MANIFESTE : ecarts : aucun
+  consigne : le dossier contient 37 fichiers, dont 1 hors manifeste : ['pt_39_20_f100.zip']
+=== 3. LES NOMBRES DU GEL, RELUS DANS LES SIX PIECES f070 ===
+OK    C07 r0 = 40 a gauche (1.95 1.97 1.98), 41 a droite (2.02 2.03 2.05) ; N = r0 + 20 : r_c lus [40, 40, 40, 41, 41, 41]
+OK    C08 eta0 = |w2 - 2| (EB.eta) a 1e-12 aux six points : eta lus ['0.050000000000000044', '0.030000000000000027', '0.020000000000000018', '0.020000000000000018', '0.029999999999999805', '0.049999999999999822']
+OK    C09 la valeur du run G_run est a k = 3 (eta_final_facteur = 0.125 = 2^-3) aux six points : facteurs lus [0.125, 0.125, 0.125, 0.125, 0.125, 0.125]
+OK    C10 etendue E_run = ln(2.6614e-09 / 6.5625e-11) = 3.7027 : max 2.6614e-09  min 6.5625e-11  E_run 3.702655
+OK    C11 plancher : max |Gamma(H+)| = 7.550e-14 aux six points, dix fois = 7.55e-13 -> decade 1e-12 : max 7.5498e-14
+=== 4. LES DECOMPTES ET LE SCRIPT WKB ===
+OK    C12 echelle k = -2..12 : 15 valeurs ; sommes 180 + 180 + 90 + 30 + 60 = 540 : {'F1': 180, 'formes': 180, 'translation': 90, 'plancher': 30, 'TP': 60} total 540
+MORD  C13 la liste "Decompositions attendues" couvre le TEMOIN NEGATIF (5.2) : le texte declare "(declarees avant de compter) : trajectoires F1 180 (6 x 2 x 15), formes 180 (6 x 2 x 15), translation 90 (6 x 15), planc" ; le TN (15 decompositions, jusqu a 45 avec les replis a +5 puis -5) n y figure pas
+OK    C14 le script WKB de machine 1 tourne et rend j = 5..11 (7 sur 17) comme le gel l ecrit : rendu [5, 6, 7, 8, 9, 10, 11]
+=== 5. G-Q7 : "etalement 0.05 exactement -> PLATEAU" EN FLOTTANTS ===
+  consigne : serie (20.0, 21.0) -> {'etalement_litteral_flottant': '0.050000000000000044', 'litteral_<=_tau': False, 'forme_max<=(1+tau)*min_flottant': True, 'forme_exacte_Fraction': True}
+MORD  C15 etalement litteral e = max/min - 1 sur la serie (1.0 ... 1.05) rend <= tau = 0.05 : e = 0.050000000000000044 ; e <= 0.05 : False ; forme max <= (1+tau)*min : True
+=== 6. LA ROTATION COMPLEXE DU TEMOIN POSITIF (5.1) -- ESSAI, NON OPPOSABLE ===
+OK    C16 partie oscillateur du gel (cos2t n + (i/2) sin2t (a^2 + a+^2) + point zero) == 1/2 e^-2it p^2 + 1/2 w^2 e^2it x^2, matrices, bloc interieur : ecart max 3.58e-15
+OK    C17 x du moteur = (q1 + q2) / sqrt(Delta) : l_i = 1 / sqrt(2 Delta w_i), donc lineaire en q_i -> e^{i t} x et e^{5 i t} x^5 sous la rotation : l1 0.422388603096  l2 0.302478761301
+OK    C18 theta = 0 : H_rot == H_2D(N, w2, g, +1, "x5") du moteur, element par element : ecart max 3.55e-15 (max|H| 38.350)
+  N=30 theta=0.15  E=-0.0002107570  Gamma=-2 Im E = 6.4282e-09  recouvrement 0.9771  (1.4 s)
+  N=30 theta=0.20  E=-0.0002107570  Gamma=-2 Im E = 6.4281e-09  recouvrement 0.9588  (1.3 s)
+  N=30 theta=0.25  E=-0.0002107570  Gamma=-2 Im E = 6.4283e-09  recouvrement 0.9348  (1.2 s)
+  N=40 theta=0.15  E=-0.0002107570  Gamma=-2 Im E = 6.4282e-09  recouvrement 0.9771  (4.6 s)
+  N=40 theta=0.20  E=-0.0002107570  Gamma=-2 Im E = 6.4279e-09  recouvrement 0.9588  (4.4 s)
+  N=40 theta=0.25  E=-0.0002107570  Gamma=-2 Im E = 6.4280e-09  recouvrement 0.9348  (4.5 s)
+  N=50 theta=0.15  E=-0.0002107570  Gamma=-2 Im E = 6.4277e-09  recouvrement 0.9771  (15.9 s)
+  N=50 theta=0.20  E=-0.0002107570  Gamma=-2 Im E = 6.4282e-09  recouvrement 0.9588  (13.0 s)
+  N=50 theta=0.25  E=-0.0002107570  Gamma=-2 Im E = 6.4276e-09  recouvrement 0.9348  (12.7 s)
+OK    C19 la resonance fondamentale du jumeau H+ a g = 0.10 a une largeur POSITIVE, STABLE en theta (etalement max/min sur trois theta, a chaque N) -- une formule fausse ne rendrait pas de plateau en theta : etalements par N : ['1.000', '1.000', '1.000']
+=== 7. CE QUE LE GEL PREND DE L ETAPE 0 : CE QUE LES SIX PIECES PERMETTENT DE RELIRE ===
+OK    C20 aux six points, les portes (N + p, translation de p couches) et les deux derniers pas de descente sont sous tau_LS = 0.05 (gel, section 2, derniere phrase) : portes max 0.0308 ; derniers pas max 0.0469
+OK    C21 la premisse de l annonce A-2 est exacte : le dernier pas du run est plus grand que le precedent a 2.02 (et a lui seul) : dernier > precedent aux six points : [False, False, False, True, False, False]
+=== BILAN : 21 controles, 2 mordent ===
+  MORD : C13 la liste "Decompositions attendues" couvre le TEMOIN NEGATIF (5.2)
+  MORD : C15 etalement litteral e = max/min - 1 sur la serie (1.0 ... 1.05) rend <= tau = 0.05

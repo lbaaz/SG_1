@@ -1,0 +1,12 @@
+BASE synthetique : etage 1 TIENT, verdict ESTIMATEUR QUALIFIE : saine
+M-1  gamma = c eta -> six NON QUALIFIES, NON QUALIFIE     MORD
+M-2  Gamma_pl(G30) x 1.06 -> (b) echoue a ce point        MORD
+M-3  reference du TP x 1.07 -> NON CONCLUANT D'INSTRUMENT MORD
+M-6  vecteur remplace -> SUIVI PERDU, configuration NON LISIBLE MORD
+M-4  ancrage sur le deuxieme recouvrement -> G-Q4 mord    MORD
+M-5  un element de W_F1 deplace -> G-Q3 mord              MORD
+PORTE-1  etage 1 qui ne tient pas -> etage 2 ferme                    REFUSE (code 2)
+PORTE-2  etage 2 REEL sous un verdict de pre-vol -> ferme (D-2)       REFUSE (code 2)
+PORTE-3  etage 2 REEL sur un sonde_etage1.json de pre-vol (D-2)       REFUSE (code 2)
+REPRISE  etage 1 REEL dans une reprise de pre-vol -> refuse (D-1)     REFUSE (code 2)
+banc qui tue : 6 mordues == 6 attendues ; base saine ; temoins hors gel : 4 refus == 4 attendus : PASSE

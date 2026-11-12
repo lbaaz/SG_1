@@ -1,0 +1,551 @@
+{
+ "L1": {
+  "B": {
+   "1.95": 0.019584760456795972,
+   "1.97": 0.014229882060965739,
+   "1.98": 0.03552344359648176,
+   "2.02": 0.03077796187737473,
+   "2.03": 0.005615810911272899,
+   "2.05": 0.04970150084702717
+  },
+  "E": 3.7026552080258797,
+  "tient": true
+ },
+ "L2_L3": {
+  "L2": false,
+  "L3": true,
+  "hors": {
+   "2.02": {
+    "A": [],
+    "I": []
+   },
+   "2.05": {
+    "A": [],
+    "I": []
+   }
+  }
+ },
+ "L4": {
+  "rho_G_Gp": "19/35",
+  "rho_G_Lam": "1/35",
+  "rho_G_R": "33/35",
+  "rho_Gp_Lam": "-27/35",
+  "tient": false
+ },
+ "L5": {
+  "signes": {
+   "1.95": -1,
+   "1.97": 1,
+   "1.98": 1,
+   "2.02": -1,
+   "2.03": -1,
+   "2.05": -1
+  },
+  "tient": false
+ },
+ "autres": {
+  "pt_101_50_f050.json": {
+   "EB_cles": [],
+   "N_derive": null,
+   "essais": null,
+   "motifs": [
+    "stationnarite M operative 8.406e+00",
+    "descente non stationnaire (budget 8)"
+   ],
+   "statut": "ARRET DE REGLE"
+  },
+  "pt_101_50_f085.json": {
+   "EB_cles": [],
+   "N_derive": null,
+   "essais": null,
+   "motifs": [],
+   "statut": "EN DOMAINE"
+  },
+  "pt_101_50_f100.json": {
+   "EB_cles": [],
+   "N_derive": null,
+   "essais": null,
+   "motifs": [],
+   "statut": "EN DOMAINE"
+  },
+  "pt_101_50_f120.json": {
+   "EB_cles": [],
+   "N_derive": null,
+   "essais": null,
+   "motifs": [],
+   "statut": "EN DOMAINE"
+  },
+  "pt_197_100_f050.json": {
+   "EB_cles": [],
+   "N_derive": null,
+   "essais": null,
+   "motifs": [
+    "stationnarite M operative 2.081e+00",
+    "descente non stationnaire (budget 8)"
+   ],
+   "statut": "ARRET DE REGLE"
+  },
+  "pt_197_100_f085.json": {
+   "EB_cles": [],
+   "N_derive": null,
+   "essais": null,
+   "motifs": [],
+   "statut": "EN DOMAINE"
+  },
+  "pt_197_100_f100.json": {
+   "EB_cles": [],
+   "N_derive": null,
+   "essais": null,
+   "motifs": [],
+   "statut": "EN DOMAINE"
+  },
+  "pt_197_100_f120.json": {
+   "EB_cles": [],
+   "N_derive": null,
+   "essais": null,
+   "motifs": [],
+   "statut": "EN DOMAINE"
+  },
+  "pt_203_100_f050.json": {
+   "EB_cles": [],
+   "N_derive": null,
+   "essais": null,
+   "motifs": [
+    "stationnarite M operative 1.599e+01",
+    "descente non stationnaire (budget 8)"
+   ],
+   "statut": "ARRET DE REGLE"
+  },
+  "pt_203_100_f085.json": {
+   "EB_cles": [],
+   "N_derive": null,
+   "essais": null,
+   "motifs": [],
+   "statut": "EN DOMAINE"
+  },
+  "pt_203_100_f100.json": {
+   "EB_cles": [],
+   "N_derive": null,
+   "essais": null,
+   "motifs": [],
+   "statut": "EN DOMAINE"
+  },
+  "pt_203_100_f120.json": {
+   "EB_cles": [],
+   "N_derive": null,
+   "essais": null,
+   "motifs": [],
+   "statut": "EN DOMAINE"
+  },
+  "pt_2_site.json": {
+   "EB_cles": [],
+   "N_derive": null,
+   "essais": null,
+   "motifs": null,
+   "statut": "SITE EXACT"
+  },
+  "pt_39_20_P8_g0.0003.json": {
+   "EB_cles": [
+    "G4",
+    "L_essaye",
+    "N_derive",
+    "N_max",
+    "faisable"
+   ],
+   "N_derive": 206,
+   "essais": null,
+   "motifs": [
+    "stationnarite M operative 2.433e+287",
+    "descente non stationnaire (budget 8)"
+   ],
+   "statut": "ARRET DE REGLE"
+  },
+  "pt_39_20_P8_g0.001.json": {
+   "EB_cles": [
+    "G4",
+    "critere_absorbeur",
+    "descente_rejetee_L30",
+    "eta",
+    "faisable",
+    "r_c"
+   ],
+   "N_derive": null,
+   "essais": [
+    {
+     "L": 20,
+     "N": 90,
+     "accepte": false,
+     "pas": [
+      1.5573761280471117,
+      1.0640931243879495e+30,
+      2.2285441326092365e+30
+     ]
+    },
+    {
+     "L": 30,
+     "N": 100,
+     "accepte": false,
+     "pas": [
+      0.6976730051568641,
+      1.3325269650855391,
+      1.032385043672451e+30
+     ]
+    }
+   ],
+   "motifs": [
+    "stationnarite M operative 6.752e+01",
+    "descente non stationnaire (budget 8)",
+    "erratum 4.6 : descente rejetee a L = 30 (bord de fenetre)"
+   ],
+   "statut": "ARRET DE REGLE"
+  },
+  "pt_39_20_P8_g0.003.json": {
+   "EB_cles": [],
+   "N_derive": null,
+   "essais": null,
+   "motifs": [],
+   "statut": "EN DOMAINE"
+  },
+  "pt_39_20_f050.json": {
+   "EB_cles": [],
+   "N_derive": null,
+   "essais": null,
+   "motifs": [
+    "stationnarite M operative 3.091e+285",
+    "descente non stationnaire (budget 8)"
+   ],
+   "statut": "ARRET DE REGLE"
+  },
+  "pt_39_20_f085.json": {
+   "EB_cles": [],
+   "N_derive": null,
+   "essais": null,
+   "motifs": [],
+   "statut": "EN DOMAINE"
+  },
+  "pt_39_20_f100.json": {
+   "EB_cles": [],
+   "N_derive": null,
+   "essais": null,
+   "motifs": [],
+   "statut": "EN DOMAINE"
+  },
+  "pt_39_20_f120.json": {
+   "EB_cles": [],
+   "N_derive": null,
+   "essais": null,
+   "motifs": [],
+   "statut": "EN DOMAINE"
+  },
+  "pt_41_20_f050.json": {
+   "EB_cles": [],
+   "N_derive": null,
+   "essais": null,
+   "motifs": [
+    "stationnarite M operative 3.836e+00",
+    "descente non stationnaire (budget 8)"
+   ],
+   "statut": "ARRET DE REGLE"
+  },
+  "pt_41_20_f085.json": {
+   "EB_cles": [],
+   "N_derive": null,
+   "essais": null,
+   "motifs": [],
+   "statut": "EN DOMAINE"
+  },
+  "pt_41_20_f100.json": {
+   "EB_cles": [],
+   "N_derive": null,
+   "essais": null,
+   "motifs": [],
+   "statut": "EN DOMAINE"
+  },
+  "pt_41_20_f120.json": {
+   "EB_cles": [],
+   "N_derive": null,
+   "essais": null,
+   "motifs": [],
+   "statut": "EN DOMAINE"
+  },
+  "pt_99_50_f050.json": {
+   "EB_cles": [],
+   "N_derive": null,
+   "essais": null,
+   "motifs": [
+    "stationnarite M operative 1.746e+01",
+    "descente non stationnaire (budget 8)"
+   ],
+   "statut": "ARRET DE REGLE"
+  },
+  "pt_99_50_f085.json": {
+   "EB_cles": [],
+   "N_derive": null,
+   "essais": null,
+   "motifs": [],
+   "statut": "EN DOMAINE"
+  },
+  "pt_99_50_f100.json": {
+   "EB_cles": [],
+   "N_derive": null,
+   "essais": null,
+   "motifs": [],
+   "statut": "EN DOMAINE"
+  },
+  "pt_99_50_f120.json": {
+   "EB_cles": [],
+   "N_derive": null,
+   "essais": null,
+   "motifs": [],
+   "statut": "EN DOMAINE"
+  }
+ },
+ "points": {
+  "1.95": {
+   "G": 2.1623273017950654e-10,
+   "Gp": 0.0009891568944249227,
+   "Hp": -1.212601503803413e-14,
+   "L": 20,
+   "Lam": 1.2596592325183034,
+   "N": 60,
+   "R": 2.1575219424273022e-10,
+   "W": 0.8670563176954117,
+   "absres": 0.0022086182563345073,
+   "c": 0.9900347442939011,
+   "essais": [
+    {
+     "L": 20,
+     "N": 60,
+     "accepte": true,
+     "pas": [
+      0.02255996172651625,
+      0.023344528477624076,
+      0.006160582504318041
+     ]
+    }
+   ],
+   "eta": 0.050000000000000044,
+   "fichier": "pt_39_20_f070.json",
+   "g": 0.0018157365761674671,
+   "m": 0.15179889124911103,
+   "motifs_arret": [],
+   "n": 0.01557427627834933,
+   "nres": 136,
+   "p1": 0.02255996172651625,
+   "p2": 0.023344528477624076,
+   "p3": 0.006160582504318041,
+   "q": 4574501.249666366,
+   "r": 0.2638983481813741,
+   "r_c": 40,
+   "rec": 0.0288033349746152,
+   "res": 0.0022086182563345073,
+   "statut": "EN DOMAINE",
+   "t": 0.019584760456795972
+  },
+  "1.97": {
+   "G": 1.2976139867476588e-10,
+   "Gp": 0.00048378343804730974,
+   "Hp": 6.751661975622199e-15,
+   "L": 20,
+   "Lam": 1.1633333109270956,
+   "N": 60,
+   "R": 1.313884932136392e-10,
+   "W": 0.84957338896754,
+   "absres": 0.01271755636974671,
+   "c": 0.9901686094656296,
+   "essais": [
+    {
+     "L": 20,
+     "N": 60,
+     "accepte": true,
+     "pas": [
+      0.01711116938606147,
+      0.030151930100846172,
+      0.014229882060965739
+     ]
+    }
+   ],
+   "eta": 0.030000000000000027,
+   "fichier": "pt_197_100_f070.json",
+   "g": 0.0011765293904048427,
+   "m": 0.1713253245300494,
+   "motifs_arret": [],
+   "n": 0.0019008964968478584,
+   "nres": 120,
+   "p1": 0.01711116938606147,
+   "p2": 0.030151930100846172,
+   "p3": 0.014229882060965739,
+   "q": 3728253.879721697,
+   "r": 0.47193934230321116,
+   "r_c": 40,
+   "rec": 0.02795463817948453,
+   "res": 0.01271755636974671,
+   "statut": "EN DOMAINE",
+   "t": 0.003390044975481133
+  },
+  "1.98": {
+   "G": 8.442078568634348e-11,
+   "Gp": 0.00035395355655653404,
+   "Hp": 5.799172175065006e-14,
+   "L": 20,
+   "Lam": 1.1263218355237945,
+   "N": 60,
+   "R": 8.736049343895556e-11,
+   "W": 0.845029294940073,
+   "absres": 0.03552344359648176,
+   "c": 0.9902132361895762,
+   "essais": [
+    {
+     "L": 20,
+     "N": 60,
+     "accepte": true,
+     "pas": [
+      0.02640924840070836,
+      0.03156094209150658,
+      0.02014120826630118
+     ]
+    }
+   ],
+   "eta": 0.020000000000000018,
+   "fichier": "pt_99_50_f070.json",
+   "g": 0.0008147073138968284,
+   "m": 0.18232304293360205,
+   "motifs_arret": [],
+   "n": 0.005794449988421885,
+   "nres": 123,
+   "p1": 0.02640924840070836,
+   "p2": 0.03156094209150658,
+   "p3": 0.02014120826630118,
+   "q": 4192729.950081383,
+   "r": 0.6381687912833697,
+   "r_c": 40,
+   "rec": 0.027496636048573584,
+   "res": 0.03552344359648176,
+   "statut": "EN DOMAINE",
+   "t": 0.011148766997112883
+  },
+  "2.02": {
+   "G": 6.562453137549285e-11,
+   "Gp": 5.70301327535393e-06,
+   "Hp": -1.3217629554405452e-14,
+   "L": 20,
+   "Lam": 0.9944568073039627,
+   "N": 61,
+   "R": NaN,
+   "W": 0.9977866069822681,
+   "absres": NaN,
+   "c": 0.9904867774929376,
+   "essais": [
+    {
+     "L": 20,
+     "N": 61,
+     "accepte": true,
+     "pas": [
+      0.09036802356076114,
+      0.003942486674867865,
+      0.009111116013214857
+     ]
+    }
+   ],
+   "eta": 0.020000000000000018,
+   "fichier": "pt_101_50_f070.json",
+   "g": 0.0009454219894030103,
+   "m": 0.22044129084799727,
+   "motifs_arret": [],
+   "n": 0.0038702097880604076,
+   "nres": 82,
+   "p1": 0.09036802356076114,
+   "p2": 0.003942486674867865,
+   "p3": 0.009111116013214857,
+   "q": 86903.68000835266,
+   "r": 2.3110074337842175,
+   "r_c": 41,
+   "rec": 0.04368225672359035,
+   "res": NaN,
+   "statut": "EN DOMAINE",
+   "t": 0.03077796187737473
+  },
+  "2.03": {
+   "G": 9.007654704606157e-11,
+   "Gp": 8.606364687771874e-06,
+   "Hp": -6.503344461109683e-14,
+   "L": 20,
+   "Lam": 0.9630708201449454,
+   "N": 61,
+   "R": 9.00353082616129e-11,
+   "W": 0.9977405879645935,
+   "absres": 0.0004558048419081449,
+   "c": 0.9904855404750829,
+   "essais": [
+    {
+     "L": 20,
+     "N": 61,
+     "accepte": true,
+     "pas": [
+      0.11497700033814895,
+      0.046878017086592234,
+      0.004400182137542911
+     ]
+    }
+   ],
+   "eta": 0.029999999999999805,
+   "fichier": "pt_203_100_f070.json",
+   "g": 0.0014707903792215884,
+   "m": 0.09157128124105443,
+   "motifs_arret": [],
+   "n": 0.002672446663930483,
+   "nres": 82,
+   "p1": 0.11497700033814895,
+   "p2": 0.046878017086592234,
+   "p3": 0.004400182137542911,
+   "q": 95545.01110451003,
+   "r": 0.09386451072397053,
+   "r_c": 41,
+   "rec": 0.04344704764343891,
+   "res": 0.0004558048419081449,
+   "statut": "EN DOMAINE",
+   "t": 0.005615810911272899
+  },
+  "2.05": {
+   "G": 2.6613925716641374e-09,
+   "Gp": 1.358705338048684e-05,
+   "Hp": -7.549818488691539e-14,
+   "L": 20,
+   "Lam": 0.9023210929687012,
+   "N": 61,
+   "R": 2.525400825434758e-09,
+   "W": 0.9976943077510493,
+   "absres": 0.04970150084702717,
+   "c": 0.9904808265085872,
+   "essais": [
+    {
+     "L": 20,
+     "N": 61,
+     "accepte": true,
+     "pas": [
+      0.012715272006923467,
+      0.04235654652379792,
+      0.027329166494218744
+     ]
+    }
+   ],
+   "eta": 0.04999999999999982,
+   "fichier": "pt_41_20_f070.json",
+   "g": 0.0026344881067508195,
+   "m": 0.06211817288103636,
+   "motifs_arret": [],
+   "n": 0.0028625308754153165,
+   "nres": 82,
+   "p1": 0.012715272006923467,
+   "p2": 0.04235654652379792,
+   "p3": 0.027329166494218744,
+   "q": 5105.242092109326,
+   "r": 0.6452170617560599,
+   "r_c": 41,
+   "rec": 0.04306379086190684,
+   "res": 0.04970150084702717,
+   "statut": "EN DOMAINE",
+   "t": 0.0024600147809765737
+  }
+ }
+}

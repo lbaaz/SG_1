@@ -1,0 +1,183 @@
+reference TP par rotation complexe -- script 5fd3a1897ca0442a -- python 3.11.9 numpy 2.2.6 -- REEL
+travailleurs 1, fils de bibliotheque 2
+GARDE R0  moteur au canon 82a0be882568fe0c                           TIENT  canon lu 82a0be882568fe0c
+GARDE R1  H(theta = 0) == H_2D du moteur, N = 14, g = 0.10           TIENT  ecart max 3.553e-15
+GARDE R2  H(theta) complexe symetrique (H == H^T), theta = 0.20      TIENT  ecart max 2.979e-15
+GARDE R3  g = 0 : six premiers niveaux 0, 1, 1.95, 2, 2.95, 3 (N = 40) TIENT  ecart max 1.386e-13
+GARDE R6  la formule tient en theta (N = 30, g = 0.10)               TIENT  etalement 1.27e-05, Gamma ['6.4284e-09', '6.4283e-09', '6.4283e-09']
+GARDE R6b la phase fausse e^{4 i theta} MORD (u > 0.01)              TIENT  etalement inf, Gamma ['-1.2595e-04', '-1.6582e-04', '-2.0390e-04']
+GARDE R4  selection du gel sur une table synthetique -> [3, 4]       TIENT  obtenu [3, 4]
+GARDE R4b aucun u_ref <= 0.01 -> aucun retenu                        TIENT  obtenu []
+ETAPE A : 17 g_j a (N = 50, theta = 0.20)
+  j=00 g=0.050000 N=50 theta=0.20 : Gamma=5.030616e-13 E=-0.0000522247 -2.515e-13 i rec=0.9589 (2e: 1.53e-02)  repris
+  j=01 g=0.054525 N=50 theta=0.20 : Gamma=9.003739e-13 E=-0.0000621394 -4.502e-13 i rec=0.9589 (2e: 1.52e-02)  repris
+  j=02 g=0.059460 N=50 theta=0.20 : Gamma=1.648768e-12 E=-0.0000739440 -8.244e-13 i rec=0.9589 (2e: 1.52e-02)  repris
+  j=03 g=0.064842 N=50 theta=0.20 : Gamma=7.924040e-12 E=-0.0000880024 -3.962e-12 i rec=0.9589 (2e: 1.51e-02)  repris
+  j=04 g=0.070711 N=50 theta=0.20 : Gamma=3.286465e-11 E=-0.0001047495 -1.643e-11 i rec=0.9589 (2e: 1.50e-02)  repris
+  j=05 g=0.077111 N=50 theta=0.20 : Gamma=1.387985e-10 E=-0.0001247066 -6.940e-11 i rec=0.9589 (2e: 1.49e-02)  repris
+  j=06 g=0.084090 N=50 theta=0.20 : Gamma=5.377251e-10 E=-0.0001484994 -2.689e-10 i rec=0.9589 (2e: 1.48e-02)  repris
+  j=07 g=0.091700 N=50 theta=0.20 : Gamma=1.927281e-09 E=-0.0001768803 -9.636e-10 i rec=0.9589 (2e: 1.47e-02)  repris
+  j=08 g=0.100000 N=50 theta=0.20 : Gamma=6.428631e-09 E=-0.0002107570 -3.214e-09 i rec=0.9588 (2e: 1.45e-02)  repris
+  j=09 g=0.109051 N=50 theta=0.20 : Gamma=2.000387e-08 E=-0.0002512279 -1.000e-08 i rec=0.9588 (2e: 1.42e-02)  repris
+  j=10 g=0.118921 N=50 theta=0.20 : Gamma=5.831921e-08 E=-0.0002996284 -2.916e-08 i rec=0.9588 (2e: 1.39e-02)  repris
+  j=11 g=0.129684 N=50 theta=0.20 : Gamma=1.598593e-07 E=-0.0003575903 -7.993e-08 i rec=0.9588 (2e: 1.36e-02)  repris
+  j=12 g=0.141421 N=50 theta=0.20 : Gamma=4.134452e-07 E=-0.0004271183 -2.067e-07 i rec=0.9588 (2e: 1.31e-02)  repris
+  j=13 g=0.154221 N=50 theta=0.20 : Gamma=1.012168e-06 E=-0.0005106892 -5.061e-07 i rec=0.9588 (2e: 1.25e-02)  repris
+  j=14 g=0.168179 N=50 theta=0.20 : Gamma=2.352745e-06 E=-0.0006113758 -1.176e-06 i rec=0.9587 (2e: 1.17e-02)  repris
+  j=15 g=0.183401 N=50 theta=0.20 : Gamma=5.207598e-06 E=-0.0007329989 -2.604e-06 i rec=0.9587 (2e: 1.08e-02)  repris
+  j=16 g=0.200000 N=50 theta=0.20 : Gamma=1.100572e-05 E=-0.0008803033 -5.503e-06 i rec=0.9587 (2e: 9.79e-03)  repris
+A termine (0 s) : a raffiner (Gamma dans [1e-12, 1e-06]) : [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+ETAPE B : 132 calculs pour 11 g_j raffines
+  j=02 g=0.059460 N=70 theta=0.10 : Gamma=2.215128e-12 E=-0.0000739440 -1.108e-12 i rec=0.9899 (2e: 4.58e-03)  repris
+  j=02 g=0.059460 N=70 theta=0.15 : Gamma=1.110119e-12 E=-0.0000739440 -5.551e-13 i rec=0.9771 (2e: 9.53e-03)  repris
+  j=02 g=0.059460 N=70 theta=0.20 : Gamma=2.059541e-12 E=-0.0000739440 -1.030e-12 i rec=0.9589 (2e: 1.52e-02)  repris
+  j=02 g=0.059460 N=70 theta=0.25 : Gamma=1.469074e-12 E=-0.0000739440 -7.345e-13 i rec=0.9348 (2e: 2.06e-02)  repris
+  j=02 g=0.059460 N=70 theta=0.30 : Gamma=1.458649e-12 E=-0.0000739440 -7.293e-13 i rec=0.9043 (2e: 2.50e-02)  repris
+  j=03 g=0.064842 N=70 theta=0.10 : Gamma=6.734942e-12 E=-0.0000880024 -3.367e-12 i rec=0.9899 (2e: 4.55e-03)  repris
+  j=03 g=0.064842 N=70 theta=0.15 : Gamma=8.341384e-12 E=-0.0000880024 -4.171e-12 i rec=0.9771 (2e: 9.48e-03)  repris
+  j=03 g=0.064842 N=70 theta=0.20 : Gamma=5.635023e-12 E=-0.0000880024 -2.818e-12 i rec=0.9589 (2e: 1.51e-02)  repris
+  j=03 g=0.064842 N=70 theta=0.25 : Gamma=8.567861e-12 E=-0.0000880024 -4.284e-12 i rec=0.9348 (2e: 2.05e-02)  repris
+  j=03 g=0.064842 N=70 theta=0.30 : Gamma=8.789605e-12 E=-0.0000880024 -4.395e-12 i rec=0.9043 (2e: 2.49e-02)  repris
+  j=04 g=0.070711 N=70 theta=0.10 : Gamma=3.257206e-11 E=-0.0001047495 -1.629e-11 i rec=0.9899 (2e: 4.52e-03)  repris
+  j=04 g=0.070711 N=70 theta=0.15 : Gamma=3.323371e-11 E=-0.0001047495 -1.662e-11 i rec=0.9771 (2e: 9.42e-03)  repris
+  j=04 g=0.070711 N=70 theta=0.20 : Gamma=3.301922e-11 E=-0.0001047495 -1.651e-11 i rec=0.9589 (2e: 1.50e-02)  repris
+  j=04 g=0.070711 N=70 theta=0.25 : Gamma=3.001343e-11 E=-0.0001047495 -1.501e-11 i rec=0.9348 (2e: 2.04e-02)  repris
+  j=04 g=0.070711 N=70 theta=0.30 : Gamma=3.167673e-11 E=-0.0001047495 -1.584e-11 i rec=0.9043 (2e: 2.47e-02)  repris
+  j=05 g=0.077111 N=70 theta=0.10 : Gamma=1.380363e-10 E=-0.0001247066 -6.902e-11 i rec=0.9899 (2e: 4.49e-03)  repris
+  j=05 g=0.077111 N=70 theta=0.15 : Gamma=1.387961e-10 E=-0.0001247066 -6.940e-11 i rec=0.9771 (2e: 9.36e-03)  repris
+  j=05 g=0.077111 N=70 theta=0.20 : Gamma=1.375583e-10 E=-0.0001247066 -6.878e-11 i rec=0.9589 (2e: 1.49e-02)  repris
+  j=05 g=0.077111 N=70 theta=0.25 : Gamma=1.383855e-10 E=-0.0001247066 -6.919e-11 i rec=0.9348 (2e: 2.03e-02)  repris
+  j=05 g=0.077111 N=70 theta=0.30 : Gamma=1.385583e-10 E=-0.0001247066 -6.928e-11 i rec=0.9043 (2e: 2.46e-02)  repris
+  j=06 g=0.084090 N=70 theta=0.10 : Gamma=5.379928e-10 E=-0.0001484994 -2.690e-10 i rec=0.9899 (2e: 4.45e-03)  repris
+  j=06 g=0.084090 N=70 theta=0.15 : Gamma=5.365527e-10 E=-0.0001484994 -2.683e-10 i rec=0.9771 (2e: 9.27e-03)  repris
+  j=06 g=0.084090 N=70 theta=0.20 : Gamma=5.368820e-10 E=-0.0001484994 -2.684e-10 i rec=0.9589 (2e: 1.48e-02)  repris
+  j=06 g=0.084090 N=70 theta=0.25 : Gamma=5.370322e-10 E=-0.0001484994 -2.685e-10 i rec=0.9348 (2e: 2.01e-02)  repris
+  j=06 g=0.084090 N=70 theta=0.30 : Gamma=5.375586e-10 E=-0.0001484994 -2.688e-10 i rec=0.9043 (2e: 2.44e-02)  repris
+  j=07 g=0.091700 N=70 theta=0.10 : Gamma=1.926876e-09 E=-0.0001768803 -9.634e-10 i rec=0.9898 (2e: 4.40e-03)  repris
+  j=07 g=0.091700 N=70 theta=0.15 : Gamma=1.926338e-09 E=-0.0001768803 -9.632e-10 i rec=0.9771 (2e: 9.17e-03)  repris
+  j=07 g=0.091700 N=70 theta=0.20 : Gamma=1.929246e-09 E=-0.0001768803 -9.646e-10 i rec=0.9589 (2e: 1.47e-02)  repris
+  j=07 g=0.091700 N=70 theta=0.25 : Gamma=1.929793e-09 E=-0.0001768803 -9.649e-10 i rec=0.9348 (2e: 2.00e-02)  repris
+  j=07 g=0.091700 N=70 theta=0.30 : Gamma=1.929482e-09 E=-0.0001768803 -9.647e-10 i rec=0.9043 (2e: 2.42e-02)  repris
+  j=08 g=0.100000 N=70 theta=0.10 : Gamma=6.427829e-09 E=-0.0002107570 -3.214e-09 i rec=0.9898 (2e: 4.34e-03)  repris
+  j=08 g=0.100000 N=70 theta=0.15 : Gamma=6.427903e-09 E=-0.0002107570 -3.214e-09 i rec=0.9771 (2e: 9.05e-03)  repris
+  j=08 g=0.100000 N=70 theta=0.20 : Gamma=6.428007e-09 E=-0.0002107570 -3.214e-09 i rec=0.9588 (2e: 1.45e-02)  repris
+  j=08 g=0.100000 N=70 theta=0.25 : Gamma=6.427659e-09 E=-0.0002107570 -3.214e-09 i rec=0.9348 (2e: 1.97e-02)  repris
+  j=08 g=0.100000 N=70 theta=0.30 : Gamma=6.427907e-09 E=-0.0002107570 -3.214e-09 i rec=0.9043 (2e: 2.40e-02)  repris
+  j=09 g=0.109051 N=70 theta=0.10 : Gamma=2.000521e-08 E=-0.0002512279 -1.000e-08 i rec=0.9898 (2e: 4.26e-03)  repris
+  j=09 g=0.109051 N=70 theta=0.15 : Gamma=2.000474e-08 E=-0.0002512279 -1.000e-08 i rec=0.9771 (2e: 8.89e-03)  repris
+  j=09 g=0.109051 N=70 theta=0.20 : Gamma=2.000363e-08 E=-0.0002512279 -1.000e-08 i rec=0.9588 (2e: 1.42e-02)  repris
+  j=09 g=0.109051 N=70 theta=0.25 : Gamma=2.000703e-08 E=-0.0002512279 -1.000e-08 i rec=0.9348 (2e: 1.94e-02)  repris
+  j=09 g=0.109051 N=70 theta=0.30 : Gamma=2.000305e-08 E=-0.0002512279 -1.000e-08 i rec=0.9043 (2e: 2.37e-02)  repris
+  j=10 g=0.118921 N=70 theta=0.10 : Gamma=5.831733e-08 E=-0.0002996284 -2.916e-08 i rec=0.9898 (2e: 4.16e-03)  repris
+  j=10 g=0.118921 N=70 theta=0.15 : Gamma=5.831812e-08 E=-0.0002996284 -2.916e-08 i rec=0.9770 (2e: 8.70e-03)  repris
+  j=10 g=0.118921 N=70 theta=0.20 : Gamma=5.831848e-08 E=-0.0002996284 -2.916e-08 i rec=0.9588 (2e: 1.39e-02)  repris
+  j=10 g=0.118921 N=70 theta=0.25 : Gamma=5.831751e-08 E=-0.0002996284 -2.916e-08 i rec=0.9348 (2e: 1.91e-02)  repris
+  j=10 g=0.118921 N=70 theta=0.30 : Gamma=5.831888e-08 E=-0.0002996284 -2.916e-08 i rec=0.9043 (2e: 2.32e-02)  repris
+  j=11 g=0.129684 N=70 theta=0.10 : Gamma=1.598596e-07 E=-0.0003575903 -7.993e-08 i rec=0.9897 (2e: 4.04e-03)  repris
+  j=11 g=0.129684 N=70 theta=0.15 : Gamma=1.598605e-07 E=-0.0003575903 -7.993e-08 i rec=0.9770 (2e: 8.45e-03)  repris
+  j=11 g=0.129684 N=70 theta=0.20 : Gamma=1.598577e-07 E=-0.0003575903 -7.993e-08 i rec=0.9588 (2e: 1.36e-02)  repris
+  j=11 g=0.129684 N=70 theta=0.25 : Gamma=1.598612e-07 E=-0.0003575903 -7.993e-08 i rec=0.9348 (2e: 1.86e-02)  repris
+  j=11 g=0.129684 N=70 theta=0.30 : Gamma=1.598585e-07 E=-0.0003575903 -7.993e-08 i rec=0.9043 (2e: 2.27e-02)  repris
+  j=12 g=0.141421 N=70 theta=0.10 : Gamma=4.134450e-07 E=-0.0004271183 -2.067e-07 i rec=0.9897 (2e: 3.92e-03)  repris
+  j=12 g=0.141421 N=70 theta=0.15 : Gamma=4.134457e-07 E=-0.0004271183 -2.067e-07 i rec=0.9770 (2e: 8.13e-03)  repris
+  j=12 g=0.141421 N=70 theta=0.20 : Gamma=4.134445e-07 E=-0.0004271183 -2.067e-07 i rec=0.9588 (2e: 1.31e-02)  repris
+  j=12 g=0.141421 N=70 theta=0.25 : Gamma=4.134440e-07 E=-0.0004271183 -2.067e-07 i rec=0.9348 (2e: 1.80e-02)  repris
+  j=12 g=0.141421 N=70 theta=0.30 : Gamma=4.134466e-07 E=-0.0004271183 -2.067e-07 i rec=0.9044 (2e: 2.20e-02)  repris
+  j=02 g=0.059460 N=60 theta=0.15 : Gamma=1.359474e-12 E=-0.0000739440 -6.797e-13 i rec=0.9771 (2e: 9.53e-03)  repris
+  j=02 g=0.059460 N=60 theta=0.20 : Gamma=2.795157e-12 E=-0.0000739440 -1.398e-12 i rec=0.9589 (2e: 1.52e-02)  repris
+  j=02 g=0.059460 N=60 theta=0.25 : Gamma=1.905791e-12 E=-0.0000739440 -9.529e-13 i rec=0.9348 (2e: 2.06e-02)  repris
+  j=03 g=0.064842 N=60 theta=0.15 : Gamma=8.054218e-12 E=-0.0000880024 -4.027e-12 i rec=0.9771 (2e: 9.48e-03)  repris
+  j=03 g=0.064842 N=60 theta=0.20 : Gamma=6.691712e-12 E=-0.0000880024 -3.346e-12 i rec=0.9589 (2e: 1.51e-02)  repris
+  j=03 g=0.064842 N=60 theta=0.25 : Gamma=6.490462e-12 E=-0.0000880024 -3.245e-12 i rec=0.9348 (2e: 2.05e-02)  repris
+  j=04 g=0.070711 N=60 theta=0.15 : Gamma=3.265139e-11 E=-0.0001047495 -1.633e-11 i rec=0.9771 (2e: 9.42e-03)  repris
+  j=04 g=0.070711 N=60 theta=0.20 : Gamma=3.366794e-11 E=-0.0001047495 -1.683e-11 i rec=0.9589 (2e: 1.50e-02)  repris
+  j=04 g=0.070711 N=60 theta=0.25 : Gamma=3.251332e-11 E=-0.0001047495 -1.626e-11 i rec=0.9348 (2e: 2.04e-02)  repris
+  j=05 g=0.077111 N=60 theta=0.15 : Gamma=1.383835e-10 E=-0.0001247066 -6.919e-11 i rec=0.9771 (2e: 9.36e-03)  repris
+  j=05 g=0.077111 N=60 theta=0.20 : Gamma=1.379764e-10 E=-0.0001247066 -6.899e-11 i rec=0.9589 (2e: 1.49e-02)  repris
+  j=05 g=0.077111 N=60 theta=0.25 : Gamma=1.397721e-10 E=-0.0001247066 -6.989e-11 i rec=0.9348 (2e: 2.03e-02)  repris
+  j=06 g=0.084090 N=60 theta=0.15 : Gamma=5.365708e-10 E=-0.0001484994 -2.683e-10 i rec=0.9771 (2e: 9.27e-03)  repris
+  j=06 g=0.084090 N=60 theta=0.20 : Gamma=5.363973e-10 E=-0.0001484994 -2.682e-10 i rec=0.9589 (2e: 1.48e-02)  repris
+  j=06 g=0.084090 N=60 theta=0.25 : Gamma=5.380289e-10 E=-0.0001484994 -2.690e-10 i rec=0.9348 (2e: 2.01e-02)  repris
+  j=07 g=0.091700 N=60 theta=0.15 : Gamma=1.927343e-09 E=-0.0001768803 -9.637e-10 i rec=0.9771 (2e: 9.17e-03)  repris
+  j=07 g=0.091700 N=60 theta=0.20 : Gamma=1.928062e-09 E=-0.0001768803 -9.640e-10 i rec=0.9589 (2e: 1.47e-02)  repris
+  j=07 g=0.091700 N=60 theta=0.25 : Gamma=1.926075e-09 E=-0.0001768803 -9.630e-10 i rec=0.9348 (2e: 2.00e-02)  repris
+  j=08 g=0.100000 N=60 theta=0.15 : Gamma=6.428061e-09 E=-0.0002107570 -3.214e-09 i rec=0.9771 (2e: 9.05e-03)  repris
+  j=08 g=0.100000 N=60 theta=0.20 : Gamma=6.428821e-09 E=-0.0002107570 -3.214e-09 i rec=0.9588 (2e: 1.45e-02)  repris
+  j=08 g=0.100000 N=60 theta=0.25 : Gamma=6.426850e-09 E=-0.0002107570 -3.213e-09 i rec=0.9348 (2e: 1.97e-02)  repris
+  j=09 g=0.109051 N=60 theta=0.15 : Gamma=2.000381e-08 E=-0.0002512279 -1.000e-08 i rec=0.9771 (2e: 8.89e-03)  repris
+  j=09 g=0.109051 N=60 theta=0.20 : Gamma=2.000614e-08 E=-0.0002512279 -1.000e-08 i rec=0.9588 (2e: 1.42e-02)  repris
+  j=09 g=0.109051 N=60 theta=0.25 : Gamma=2.000447e-08 E=-0.0002512279 -1.000e-08 i rec=0.9348 (2e: 1.94e-02)  repris
+  j=10 g=0.118921 N=60 theta=0.15 : Gamma=5.831748e-08 E=-0.0002996284 -2.916e-08 i rec=0.9770 (2e: 8.70e-03)  repris
+  j=10 g=0.118921 N=60 theta=0.20 : Gamma=5.831920e-08 E=-0.0002996284 -2.916e-08 i rec=0.9588 (2e: 1.39e-02)  repris
+  j=10 g=0.118921 N=60 theta=0.25 : Gamma=5.831905e-08 E=-0.0002996284 -2.916e-08 i rec=0.9348 (2e: 1.91e-02)  repris
+  j=11 g=0.129684 N=60 theta=0.15 : Gamma=1.598590e-07 E=-0.0003575903 -7.993e-08 i rec=0.9770 (2e: 8.45e-03)  repris
+  j=11 g=0.129684 N=60 theta=0.20 : Gamma=1.598595e-07 E=-0.0003575903 -7.993e-08 i rec=0.9588 (2e: 1.36e-02)  repris
+  j=11 g=0.129684 N=60 theta=0.25 : Gamma=1.598590e-07 E=-0.0003575903 -7.993e-08 i rec=0.9348 (2e: 1.86e-02)  repris
+  j=12 g=0.141421 N=60 theta=0.15 : Gamma=4.134430e-07 E=-0.0004271183 -2.067e-07 i rec=0.9770 (2e: 8.13e-03)  repris
+  j=12 g=0.141421 N=60 theta=0.20 : Gamma=4.134467e-07 E=-0.0004271183 -2.067e-07 i rec=0.9588 (2e: 1.31e-02)  repris
+  j=12 g=0.141421 N=60 theta=0.25 : Gamma=4.134452e-07 E=-0.0004271183 -2.067e-07 i rec=0.9348 (2e: 1.80e-02)  repris
+  j=02 g=0.059460 N=50 theta=0.10 : Gamma=7.540867e-13 E=-0.0000739440 -3.770e-13 i rec=0.9899 (2e: 4.58e-03)  repris
+  j=02 g=0.059460 N=50 theta=0.15 : Gamma=1.229480e-12 E=-0.0000739440 -6.147e-13 i rec=0.9771 (2e: 9.53e-03)  repris
+  j=02 g=0.059460 N=50 theta=0.25 : Gamma=5.021773e-13 E=-0.0000739440 -2.511e-13 i rec=0.9348 (2e: 2.06e-02)  repris
+  j=02 g=0.059460 N=50 theta=0.30 : Gamma=1.660163e-12 E=-0.0000739440 -8.301e-13 i rec=0.9043 (2e: 2.50e-02)  repris
+  j=03 g=0.064842 N=50 theta=0.10 : Gamma=7.440326e-12 E=-0.0000880024 -3.720e-12 i rec=0.9899 (2e: 4.55e-03)  repris
+  j=03 g=0.064842 N=50 theta=0.15 : Gamma=6.664579e-12 E=-0.0000880024 -3.332e-12 i rec=0.9771 (2e: 9.48e-03)  repris
+  j=03 g=0.064842 N=50 theta=0.25 : Gamma=6.792009e-12 E=-0.0000880024 -3.396e-12 i rec=0.9348 (2e: 2.05e-02)  repris
+  j=03 g=0.064842 N=50 theta=0.30 : Gamma=7.616569e-12 E=-0.0000880024 -3.808e-12 i rec=0.9043 (2e: 2.49e-02)  repris
+  j=04 g=0.070711 N=50 theta=0.10 : Gamma=3.293323e-11 E=-0.0001047495 -1.647e-11 i rec=0.9899 (2e: 4.52e-03)  repris
+  j=04 g=0.070711 N=50 theta=0.15 : Gamma=3.309387e-11 E=-0.0001047495 -1.655e-11 i rec=0.9771 (2e: 9.42e-03)  repris
+  j=04 g=0.070711 N=50 theta=0.25 : Gamma=3.210284e-11 E=-0.0001047495 -1.605e-11 i rec=0.9348 (2e: 2.04e-02)  repris
+  j=04 g=0.070711 N=50 theta=0.30 : Gamma=3.316455e-11 E=-0.0001047495 -1.658e-11 i rec=0.9043 (2e: 2.47e-02)  repris
+  j=05 g=0.077111 N=50 theta=0.10 : Gamma=1.381875e-10 E=-0.0001247066 -6.909e-11 i rec=0.9899 (2e: 4.49e-03)  repris
+  j=05 g=0.077111 N=50 theta=0.15 : Gamma=1.376856e-10 E=-0.0001247066 -6.884e-11 i rec=0.9771 (2e: 9.36e-03)  repris
+  j=05 g=0.077111 N=50 theta=0.25 : Gamma=1.377296e-10 E=-0.0001247066 -6.886e-11 i rec=0.9348 (2e: 2.03e-02)  repris
+  j=05 g=0.077111 N=50 theta=0.30 : Gamma=1.379035e-10 E=-0.0001247066 -6.895e-11 i rec=0.9043 (2e: 2.46e-02)  repris
+  j=06 g=0.084090 N=50 theta=0.10 : Gamma=5.372728e-10 E=-0.0001484994 -2.686e-10 i rec=0.9899 (2e: 4.45e-03)  repris
+  j=06 g=0.084090 N=50 theta=0.15 : Gamma=5.372941e-10 E=-0.0001484994 -2.686e-10 i rec=0.9771 (2e: 9.27e-03)  repris
+  j=06 g=0.084090 N=50 theta=0.25 : Gamma=5.375141e-10 E=-0.0001484994 -2.688e-10 i rec=0.9348 (2e: 2.01e-02)  repris
+  j=06 g=0.084090 N=50 theta=0.30 : Gamma=5.373596e-10 E=-0.0001484994 -2.687e-10 i rec=0.9043 (2e: 2.44e-02)  repris
+  j=07 g=0.091700 N=50 theta=0.10 : Gamma=1.927551e-09 E=-0.0001768803 -9.638e-10 i rec=0.9898 (2e: 4.40e-03)  repris
+  j=07 g=0.091700 N=50 theta=0.15 : Gamma=1.926913e-09 E=-0.0001768803 -9.635e-10 i rec=0.9771 (2e: 9.17e-03)  repris
+  j=07 g=0.091700 N=50 theta=0.25 : Gamma=1.928099e-09 E=-0.0001768803 -9.640e-10 i rec=0.9348 (2e: 2.00e-02)  repris
+  j=07 g=0.091700 N=50 theta=0.30 : Gamma=1.928459e-09 E=-0.0001768803 -9.642e-10 i rec=0.9043 (2e: 2.42e-02)  repris
+  j=08 g=0.100000 N=50 theta=0.10 : Gamma=6.428640e-09 E=-0.0002107570 -3.214e-09 i rec=0.9898 (2e: 4.34e-03)  repris
+  j=08 g=0.100000 N=50 theta=0.15 : Gamma=6.427901e-09 E=-0.0002107570 -3.214e-09 i rec=0.9771 (2e: 9.05e-03)  repris
+  j=08 g=0.100000 N=50 theta=0.25 : Gamma=6.428992e-09 E=-0.0002107570 -3.214e-09 i rec=0.9348 (2e: 1.97e-02)  repris
+  j=08 g=0.100000 N=50 theta=0.30 : Gamma=6.428292e-09 E=-0.0002107570 -3.214e-09 i rec=0.9043 (2e: 2.40e-02)  repris
+  j=09 g=0.109051 N=50 theta=0.10 : Gamma=2.000329e-08 E=-0.0002512279 -1.000e-08 i rec=0.9898 (2e: 4.26e-03)  repris
+  j=09 g=0.109051 N=50 theta=0.15 : Gamma=2.000384e-08 E=-0.0002512279 -1.000e-08 i rec=0.9771 (2e: 8.89e-03)  repris
+  j=09 g=0.109051 N=50 theta=0.25 : Gamma=2.000336e-08 E=-0.0002512279 -1.000e-08 i rec=0.9348 (2e: 1.94e-02)  repris
+  j=09 g=0.109051 N=50 theta=0.30 : Gamma=2.000419e-08 E=-0.0002512279 -1.000e-08 i rec=0.9043 (2e: 2.37e-02)  repris
+  j=10 g=0.118921 N=50 theta=0.10 : Gamma=5.831812e-08 E=-0.0002996284 -2.916e-08 i rec=0.9898 (2e: 4.16e-03)  repris
+  j=10 g=0.118921 N=50 theta=0.15 : Gamma=5.831839e-08 E=-0.0002996284 -2.916e-08 i rec=0.9770 (2e: 8.70e-03)  repris
+  j=10 g=0.118921 N=50 theta=0.25 : Gamma=5.831880e-08 E=-0.0002996284 -2.916e-08 i rec=0.9348 (2e: 1.91e-02)  repris
+  j=10 g=0.118921 N=50 theta=0.30 : Gamma=5.831848e-08 E=-0.0002996284 -2.916e-08 i rec=0.9043 (2e: 2.32e-02)  repris
+  j=11 g=0.129684 N=50 theta=0.10 : Gamma=1.598607e-07 E=-0.0003575903 -7.993e-08 i rec=0.9897 (2e: 4.04e-03)  repris
+  j=11 g=0.129684 N=50 theta=0.15 : Gamma=1.598596e-07 E=-0.0003575903 -7.993e-08 i rec=0.9770 (2e: 8.45e-03)  repris
+  j=11 g=0.129684 N=50 theta=0.25 : Gamma=1.598603e-07 E=-0.0003575903 -7.993e-08 i rec=0.9348 (2e: 1.86e-02)  repris
+  j=11 g=0.129684 N=50 theta=0.30 : Gamma=1.598594e-07 E=-0.0003575903 -7.993e-08 i rec=0.9043 (2e: 2.27e-02)  repris
+  j=12 g=0.141421 N=50 theta=0.10 : Gamma=4.134446e-07 E=-0.0004271183 -2.067e-07 i rec=0.9897 (2e: 3.92e-03)  repris
+  j=12 g=0.141421 N=50 theta=0.15 : Gamma=4.134441e-07 E=-0.0004271183 -2.067e-07 i rec=0.9770 (2e: 8.13e-03)  repris
+  j=12 g=0.141421 N=50 theta=0.25 : Gamma=4.134448e-07 E=-0.0004271183 -2.067e-07 i rec=0.9348 (2e: 1.80e-02)  repris
+  j=12 g=0.141421 N=50 theta=0.30 : Gamma=4.134438e-07 E=-0.0004271183 -2.067e-07 i rec=0.9044 (2e: 2.20e-02)  repris
+TABLE (j, g, Gamma_ref, u_ref, raffine) :
+  j=00 g=0.050000 Gamma_ref=5.030616e-13 u_ref=1.00e+00 non raffine  theta=0.20 ReE=-0.0000522247 rec=0.9589
+  j=01 g=0.054525 Gamma_ref=9.003739e-13 u_ref=1.00e+00 non raffine  theta=0.20 ReE=-0.0000621394 rec=0.9589
+  j=02 g=0.059460 Gamma_ref=1.469074e-12 u_ref=9.03e-01 raffine  theta=0.25 ReE=-0.0000739440 rec=0.9348
+  j=03 g=0.064842 Gamma_ref=8.341384e-12 u_ref=3.24e-01 raffine  theta=0.15 ReE=-0.0000880024 rec=0.9771
+  j=04 g=0.070711 Gamma_ref=3.323371e-11 u_ref=9.69e-02 raffine  theta=0.15 ReE=-0.0001047495 rec=0.9771
+  j=05 g=0.077111 Gamma_ref=1.383855e-10 u_ref=1.00e-02 raffine  theta=0.25 ReE=-0.0001247066 rec=0.9348
+  j=06 g=0.084090 Gamma_ref=5.368820e-10 u_ref=2.14e-03 raffine  theta=0.20 ReE=-0.0001484994 rec=0.9589
+  j=07 g=0.091700 Gamma_ref=1.929793e-09 u_ref=1.93e-03 raffine  theta=0.25 ReE=-0.0001768803 rec=0.9348
+  j=08 g=0.100000 Gamma_ref=6.427903e-09 u_ref=1.64e-04 raffine  theta=0.15 ReE=-0.0002107570 rec=0.9771
+  j=09 g=0.109051 Gamma_ref=2.000474e-08 u_ref=1.14e-04 raffine  theta=0.15 ReE=-0.0002512279 rec=0.9771
+  j=10 g=0.118921 Gamma_ref=5.831812e-08 u_ref=1.86e-05 raffine  theta=0.15 ReE=-0.0002996284 rec=0.9770
+  j=11 g=0.129684 Gamma_ref=1.598605e-07 u_ref=1.75e-05 raffine  theta=0.15 ReE=-0.0003575903 rec=0.9770
+  j=12 g=0.141421 Gamma_ref=4.134457e-07 u_ref=6.55e-06 raffine  theta=0.15 ReE=-0.0004271183 rec=0.9770
+  j=13 g=0.154221 Gamma_ref=1.012168e-06 u_ref=1.00e+00 non raffine  theta=0.20 ReE=-0.0005106892 rec=0.9588
+  j=14 g=0.168179 Gamma_ref=2.352745e-06 u_ref=1.00e+00 non raffine  theta=0.20 ReE=-0.0006113758 rec=0.9587
+  j=15 g=0.183401 Gamma_ref=5.207598e-06 u_ref=1.00e+00 non raffine  theta=0.20 ReE=-0.0007329989 rec=0.9587
+  j=16 g=0.200000 Gamma_ref=1.100572e-05 u_ref=1.00e+00 non raffine  theta=0.20 ReE=-0.0008803033 rec=0.9587
+RETENUS (regle du gel, sur la table seule) : [6, 8]
+ECRIT : tp_retenus_machine2_v1.json, tp_reference_machine2_v1.json, tp_reference_machine2_v1_calculs.json (1 s au total)
+fin code 0

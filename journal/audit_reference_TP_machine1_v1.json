@@ -1,0 +1,240 @@
+{
+ "controles": [
+  {
+   "detail": "",
+   "nom": "C01 canons des quatre pieces de la reference",
+   "tient": true
+  },
+  {
+   "detail": "",
+   "nom": "C02 en-tetes : gel, moteur, canon du script, w2, p, prevol faux",
+   "tient": true
+  },
+  {
+   "detail": "cles ['g', 'j', 'p', 'prevol', 'retenus', 'w2']",
+   "nom": "C03 la liste des retenus ne porte que j et g",
+   "tient": true
+  },
+  {
+   "detail": "",
+   "nom": "C04 dix-sept lignes, j = 0..16, g_j == 0.05 * 2^(j/8) au bit",
+   "tient": true
+  },
+  {
+   "detail": "",
+   "nom": "C05 g des retenus == g de la table == echelle, au bit ; table.retenus == liste",
+   "tient": true
+  },
+  {
+   "detail": "raffines [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]",
+   "nom": "C06 Gamma_ref et u_ref : un nombre fini a chaque ligne ; non raffine -> u_ref = 1.0",
+   "tient": true
+  },
+  {
+   "detail": "149 points = 6 non raffines + 11 raffines x 13 ; grille par raffine : N = 50 et 70 aux 5 theta, N = 60 aux 3 centraux ; (60, 0.10) et (60, 0.30) non joues",
+   "nom": "C07 points bruts : sans doublon, 149, et tous ceux que Gamma_ref et u_ref consomment",
+   "tient": true
+  },
+  {
+   "detail": "ecart max 0.0e+00 ; theta differents []",
+   "nom": "C08 Gamma_ref, u_ref et theta des 11 raffines recalcules des points bruts",
+   "tient": true
+  },
+  {
+   "detail": "",
+   "nom": "C09 non raffines : Gamma_ref == Gamma(N = 50, theta = 0.20) du point brut, hors [1e-12, 1e-6]",
+   "tient": true
+  },
+  {
+   "detail": "",
+   "nom": "C10 aucune ligne raffinee ne porte de motif d'exclusion ajoute",
+   "tient": true
+  },
+  {
+   "detail": "candidats [6, 7, 8, 9, 10] -> [6, 8]",
+   "nom": "C11 selection rejouee par un code ecrit ici == liste",
+   "tient": true
+  },
+  {
+   "detail": "",
+   "nom": "C12 canon de la feuille de lecture certifiee",
+   "tient": true
+  },
+  {
+   "detail": "",
+   "nom": "C13 selection_gel de la feuille certifiee sur la table == liste",
+   "tient": true
+  },
+  {
+   "detail": "TIENT []",
+   "nom": "C14 la feuille lit la vraie table : etage 1 synthetique a Gamma_ref -> TIENT",
+   "tient": true
+  },
+  {
+   "detail": "['TP ne tient pas a j06']",
+   "nom": "C15 controle vivant : une largeur a j = 6 fausse de 6 pour cent -> NE TIENT PAS",
+   "tient": true
+  },
+  {
+   "detail": "['TP non concluant (retenus sonde [6, 8], reference [5, 8], regle du gel [6, 8])']",
+   "nom": "C16 controle vivant : une liste [5, 8] contre cette table -> NE TIENT PAS",
+   "tient": true
+  },
+  {
+   "detail": "u_ref = 0.010019582, depassement 1.96e-05, point (N = 60, theta = 0.25) ; second plus grand ecart 5.98e-03",
+   "nom": "C17 bord j = 5 : u_ref depasse 0.01 de moins de 1e-4, par un seul point",
+   "tient": true
+  },
+  {
+   "detail": "",
+   "nom": "C18 sans j = 5 le plus proche de 1e-10 est j = 6 ; avec lui ce serait j = 5",
+   "tient": true
+  },
+  {
+   "detail": "Gamma 5.3640e-10 a 5.3803e-10 (etalement 3.0e-03) ; Re E etalement 1.0e-12 ; recouvrement 0.904 a 0.990",
+   "nom": "C19 j = 6 : ses 13 points, Gamma a moins de 1 pour cent, Re E stable, etat du vide",
+   "tient": true
+  },
+  {
+   "detail": "Gamma 6.4269e-09 a 6.4290e-09 (etalement 3.3e-04) ; Re E etalement 1.5e-12 ; recouvrement 0.904 a 0.990",
+   "nom": "C19 j = 8 : ses 13 points, Gamma a moins de 1 pour cent, Re E stable, etat du vide",
+   "tient": true
+  },
+  {
+   "detail": "max 1.4e-14",
+   "nom": "C20 mon H(theta = 0) == H_2D du moteur (jumeau H+), aux deux tailles jouees",
+   "tient": true
+  },
+  {
+   "detail": "juste [6.4281e-09, 6.4283e-09, 6.4282e-09] ; fausse [-0.00012595, -0.00016582, -0.0002039]",
+   "nom": "C21 ma phase e^{5 i theta} est stationnaire en theta, la phase fausse e^{4 i theta} mord",
+   "tient": true
+  },
+  {
+   "detail": "j8 N50 t0.20 : -9.8e-06 (a Gamma_ref +1.0e-04) ; j6 N50 t0.20 : -1.7e-03 (a Gamma_ref -1.1e-04) ; j6 N50 t0.15 : +4.0e-04 (a Gamma_ref +1.2e-03) ; j6 N60 t0.20 : +3.1e-03 (a Gamma_ref +2.2e-03) ; j8 N60 t0.25 : +3.5e-04 (a Gamma_ref +1.8e-04)",
+   "nom": "C22 mes 5 points independants contre les points bruts de m2 : Gamma a 1e-2, Re E a 1e-11",
+   "tient": true
+  }
+ ],
+ "table": [
+  {
+   "Gamma_ref": 5.030616200264706e-13,
+   "g": 0.05,
+   "j": 0,
+   "raffine": false,
+   "u_ref": 1.0
+  },
+  {
+   "Gamma_ref": 9.003739069010685e-13,
+   "g": 0.05452538663326289,
+   "j": 1,
+   "raffine": false,
+   "u_ref": 1.0
+  },
+  {
+   "Gamma_ref": 1.4690738873205262e-12,
+   "g": 0.05946035575013606,
+   "j": 2,
+   "raffine": true,
+   "u_ref": 0.9026658417568036
+  },
+  {
+   "Gamma_ref": 8.34138412190813e-12,
+   "g": 0.06484197773255049,
+   "j": 3,
+   "raffine": true,
+   "u_ref": 0.32444992413506435
+  },
+  {
+   "Gamma_ref": 3.323371399539927e-11,
+   "g": 0.07071067811865477,
+   "j": 4,
+   "raffine": true,
+   "u_ref": 0.09689822132080417
+  },
+  {
+   "Gamma_ref": 1.3838550942924926e-10,
+   "g": 0.07711054127039704,
+   "j": 5,
+   "raffine": true,
+   "u_ref": 0.010019582162251961
+  },
+  {
+   "Gamma_ref": 5.368820401556629e-10,
+   "g": 0.08408964152537146,
+   "j": 6,
+   "raffine": true,
+   "u_ref": 0.002136226253575124
+  },
+  {
+   "Gamma_ref": 1.9297929986465013e-09,
+   "g": 0.09170040432046712,
+   "j": 7,
+   "raffine": true,
+   "u_ref": 0.0019268764678506134
+  },
+  {
+   "Gamma_ref": 6.4279027357986375e-09,
+   "g": 0.1,
+   "j": 8,
+   "raffine": true,
+   "u_ref": 0.00016374281720998862
+  },
+  {
+   "Gamma_ref": 2.0004742838028385e-08,
+   "g": 0.10905077326652578,
+   "j": 9,
+   "raffine": true,
+   "u_ref": 0.00011446797368575012
+  },
+  {
+   "Gamma_ref": 5.8318116198873976e-08,
+   "g": 0.11892071150027211,
+   "j": 10,
+   "raffine": true,
+   "u_ref": 1.8565257690283943e-05
+  },
+  {
+   "Gamma_ref": 1.5986049096696281e-07,
+   "g": 0.12968395546510098,
+   "j": 11,
+   "raffine": true,
+   "u_ref": 1.750541558620533e-05
+  },
+  {
+   "Gamma_ref": 4.134456837714877e-07,
+   "g": 0.14142135623730953,
+   "j": 12,
+   "raffine": true,
+   "u_ref": 6.5492931737853866e-06
+  },
+  {
+   "Gamma_ref": 1.012167997631735e-06,
+   "g": 0.15422108254079409,
+   "j": 13,
+   "raffine": false,
+   "u_ref": 1.0
+  },
+  {
+   "Gamma_ref": 2.3527453327813558e-06,
+   "g": 0.16817928305074292,
+   "j": 14,
+   "raffine": false,
+   "u_ref": 1.0
+  },
+  {
+   "Gamma_ref": 5.20759786059523e-06,
+   "g": 0.18340080864093425,
+   "j": 15,
+   "raffine": false,
+   "u_ref": 1.0
+  },
+  {
+   "Gamma_ref": 1.1005715861123933e-05,
+   "g": 0.2,
+   "j": 16,
+   "raffine": false,
+   "u_ref": 1.0
+  }
+ ]
+}

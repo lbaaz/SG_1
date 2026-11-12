@@ -1,0 +1,49 @@
+==========================================================================
+SONDE DE QUALIFICATION E-B v2 -- gel cde0cd11a763f26d -- etage 2 -- PRE-VOL (geometrie reduite, NON OPPOSABLE)
+==========================================================================
+plateforme : {"NPY_DISABLE_CPU_FEATURES": "X86_V4", "machine": "x86_64", "numpy": "2.5.3", "python": "3.13.18", "systeme": "Linux", "temoin_arrondi": "0x1.a483018a169c6p+64", "temoin_lecture": "CR"}
+G-Q1 moteur m17_chaine_v17.py canon 82a0be882568fe0c : OK
+G-Q2 run : 36 au canon et a la taille == 36 lignes du manifeste (attendu 36) ; hors manifeste, ni ouverts ni comptes : []
+G-Q4 39_20    gamma 1.6674430329e-07 reference None rapport None au bit None
+G-Q4 197_100  gamma 1.0257034884e-07 reference None rapport None au bit None
+G-Q4 99_50    gamma 6.9257702517e-08 reference None rapport None au bit None
+G-Q4 101_50   gamma 7.3057227202e-08 reference None rapport None au bit None
+G-Q4 203_100  gamma 1.1112136184e-07 reference None rapport None au bit None
+G-Q4 41_20    gamma 1.8662048426e-06 reference None rapport None au bit None
+point 39_20    F1G20 : fait (identite 1.0000)
+point 39_20    F2G20 : fait (identite 1.0000)
+point 39_20    F3G20 : fait (identite 1.0000)
+point 39_20    F1G30 : fait (identite 1.0000)
+point 39_20    F1GT : fait (identite 1.0000)
+point 197_100  F1G20 : fait (identite 1.0000)
+point 197_100  F2G20 : fait (identite 1.0000)
+point 197_100  F3G20 : fait (identite 1.0000)
+point 197_100  F1G30 : fait (identite 1.0000)
+point 197_100  F1GT : fait (identite 1.0000)
+point 99_50    F1G20 : fait (identite 1.0000)
+point 99_50    F2G20 : fait (identite 1.0000)
+point 99_50    F3G20 : fait (identite 1.0000)
+point 99_50    F1G30 : fait (identite 1.0000)
+point 99_50    F1GT : fait (identite 1.0000)
+point 101_50   F1G20 : fait (identite 1.0000)
+point 101_50   F2G20 : fait (identite 1.0000)
+point 101_50   F3G20 : fait (identite 1.0000)
+point 101_50   F1G30 : fait (identite 1.0000)
+point 101_50   F1GT : fait (identite 1.0000)
+point 203_100  F1G20 : fait (identite 1.0000)
+point 203_100  F2G20 : fait (identite 1.0000)
+point 203_100  F3G20 : fait (identite 1.0000)
+point 203_100  F1G30 : fait (identite 1.0000)
+point 203_100  F1GT : fait (identite 1.0000)
+point 41_20    F1G20 : fait (identite 1.0000)
+point 41_20    F2G20 : fait (identite 1.0000)
+point 41_20    F3G20 : fait (identite 1.0000)
+point 41_20    F1G30 : fait (identite 1.0000)
+point 41_20    F1GT : fait (identite 1.0000)
+G-Q10 F1           joues 174 + repris 6 + sautes 0 == 180 attendus : OK
+G-Q10 formes       joues 180 + repris 0 + sautes 0 == 180 attendus : OK
+G-Q10 ouverture    joues 6 + repris 0 + sautes 0 == 6 attendus : OK
+G-Q10 translation  joues 90 + repris 0 + sautes 0 == 90 attendus : OK
+sonde sonde_qualification_EB_machine1_v2.py canon facc7536ba4637cb (relu du disque)
+sortie sonde_etage2.json canon 3345e368d04fa476 (relu du disque)
+CE QUE CE LOG NE JOUE PAS : aucune routine de plateau, aucun statut, aucun verdict ; l'etage 1 (deja juge).

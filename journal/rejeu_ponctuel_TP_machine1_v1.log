@@ -1,0 +1,10 @@
+plateforme : Linux x86_64, python 3.13.18, numpy 2.5.3
+entrants : moteur 82a0be882568fe0c ; liste 69b3bab3bb8480b7 ; sortie de la sonde (m2) ab31334aea5c444a
+TP j06 g = 0.084089641525371461 G20 k = -2 eta = 0.2 : Gamma m1 = 5.3714265818e-10 ; sonde m2 = 5.3729610798e-10 ; m1/m2 - 1 = -2.856e-04 ; recouvrement 0.999912 ; 85 s
+TP j06 g = 0.084089641525371461 G20 k =  1 eta = 0.025 : Gamma m1 = 5.2649091475e-10 ; sonde m2 = 5.2641185057e-10 ; m1/m2 - 1 = +1.502e-04 ; recouvrement 0.999912 ; 101 s
+TP j06 g = 0.084089641525371461 G20 k =  3 eta = 0.00625 : Gamma m1 = 2.3329030513e-10 ; sonde m2 = 2.3328684074e-10 ; m1/m2 - 1 = +1.485e-05 ; recouvrement 0.999912 ; 94 s
+TP j08 g = 0.10000000000000001 G20 k = -2 eta = 0.2 : Gamma m1 = 6.4282121586e-09 ; sonde m2 = 6.4290214089e-09 ; m1/m2 - 1 = -1.259e-04 ; recouvrement 0.999875 ; 83 s
+TP j08 g = 0.10000000000000001 G20 k =  1 eta = 0.025 : Gamma m1 = 6.0848731709e-09 ; sonde m2 = 6.0848440460e-09 ; m1/m2 - 1 = +4.786e-06 ; recouvrement 0.999875 ; 98 s
+TP j08 g = 0.10000000000000001 G20 k =  3 eta = 0.00625 : Gamma m1 = 2.7104116637e-09 ; sonde m2 = 2.7104014136e-09 ; m1/m2 - 1 = +3.782e-06 ; recouvrement 0.999875 ; 98 s
+pire ecart relatif m1/m2 sur les six : 2.856e-04
+-- FIN rejeu_ponctuel_TP_machine1_v1 --

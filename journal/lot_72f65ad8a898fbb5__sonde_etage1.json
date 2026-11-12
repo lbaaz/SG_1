@@ -1,0 +1,2698 @@
+{
+ "GQ10": true,
+ "GQ3": {
+  "101_50": true,
+  "197_100": true,
+  "203_100": true,
+  "39_20": true,
+  "41_20": true,
+  "99_50": true
+ },
+ "GQ5": {
+  "101_50": {
+   "F1G20": -7.730068598104717e-15,
+   "F1G30": 1.6400521687439677e-14,
+   "F1GT": 1.7258949775061103e-14,
+   "F2G20": 1.3075055729489203e-14,
+   "F3G20": -1.2345503339473612e-13
+  },
+  "197_100": {
+   "F1G20": -4.1949131173191726e-15,
+   "F1G30": -1.918307163530381e-14,
+   "F1GT": 1.5624705947115988e-14,
+   "F2G20": 1.4696673630500265e-14,
+   "F3G20": 4.5859686731791286e-14
+  },
+  "203_100": {
+   "F1G20": -3.716561902301594e-15,
+   "F1G30": 3.5586608755042894e-14,
+   "F1GT": -4.9326805822057105e-15,
+   "F2G20": -6.547684925555114e-15,
+   "F3G20": 1.041788292509052e-13
+  },
+  "39_20": {
+   "F1G20": -1.2976577112988001e-14,
+   "F1G30": 8.249864195484434e-15,
+   "F1GT": 2.2873488222214378e-14,
+   "F2G20": -3.164929811300361e-14,
+   "F3G20": -8.749140168751487e-14
+  },
+  "41_20": {
+   "F1G20": -1.2581709282710673e-14,
+   "F1G30": 1.4887676467128663e-14,
+   "F1GT": -2.1435816156096777e-14,
+   "F2G20": -1.5076591825874122e-14,
+   "F3G20": 1.3296408326810492e-13
+  },
+  "99_50": {
+   "F1G20": 5.914093367214105e-16,
+   "F1G30": 3.8678847861698734e-14,
+   "F1GT": 3.3772416387630445e-15,
+   "F2G20": 1.7022711752809393e-15,
+   "F3G20": -5.830418519925528e-14
+  }
+ },
+ "TN": {
+  "candidats": [
+   [
+    50,
+    25
+   ],
+   [
+    55,
+    27
+   ],
+   [
+    45,
+    22
+   ]
+  ],
+  "traj": {
+   "-2": {
+    "eta": 0.20000000000000018,
+    "etats": [
+     {
+      "ov": null,
+      "suivi": false
+     },
+     {
+      "ov": null,
+      "suivi": false
+     },
+     {
+      "ov": null,
+      "suivi": false
+     }
+    ],
+    "identite_reprise": {
+     "L": 20,
+     "N": 60,
+     "cibles": "fock [50, 55, 45]",
+     "eta0": 0.050000000000000044,
+     "etage": 1,
+     "forme": "F1",
+     "g": 0.0018157365761674671,
+     "gel": "cde0cd11a763f26d",
+     "moteur": "82a0be882568fe0c",
+     "mutation": null,
+     "prevol": false,
+     "r_c": 40,
+     "signe": -1,
+     "sonde": "facc7536ba4637cb",
+     "trajet": "TN",
+     "w2": "39/20"
+    },
+    "k": -2,
+    "saute": true
+   },
+   "-1": {
+    "eta": 0.10000000000000009,
+    "etats": [
+     {
+      "ov": null,
+      "suivi": false
+     },
+     {
+      "ov": null,
+      "suivi": false
+     },
+     {
+      "ov": null,
+      "suivi": false
+     }
+    ],
+    "identite_reprise": {
+     "L": 20,
+     "N": 60,
+     "cibles": "fock [50, 55, 45]",
+     "eta0": 0.050000000000000044,
+     "etage": 1,
+     "forme": "F1",
+     "g": 0.0018157365761674671,
+     "gel": "cde0cd11a763f26d",
+     "moteur": "82a0be882568fe0c",
+     "mutation": null,
+     "prevol": false,
+     "r_c": 40,
+     "signe": -1,
+     "sonde": "facc7536ba4637cb",
+     "trajet": "TN",
+     "w2": "39/20"
+    },
+    "k": -1,
+    "saute": true
+   },
+   "0": {
+    "eta": 0.050000000000000044,
+    "etats": [
+     {
+      "ov": null,
+      "suivi": false
+     },
+     {
+      "ov": null,
+      "suivi": false
+     },
+     {
+      "ov": null,
+      "suivi": false
+     }
+    ],
+    "identite_reprise": {
+     "L": 20,
+     "N": 60,
+     "cibles": "fock [50, 55, 45]",
+     "eta0": 0.050000000000000044,
+     "etage": 1,
+     "forme": "F1",
+     "g": 0.0018157365761674671,
+     "gel": "cde0cd11a763f26d",
+     "moteur": "82a0be882568fe0c",
+     "mutation": null,
+     "prevol": false,
+     "r_c": 40,
+     "signe": -1,
+     "sonde": "facc7536ba4637cb",
+     "trajet": "TN",
+     "w2": "39/20"
+    },
+    "k": 0,
+    "saute": true
+   },
+   "1": {
+    "eta": 0.025000000000000022,
+    "etats": [
+     {
+      "ov": null,
+      "suivi": false
+     },
+     {
+      "ov": null,
+      "suivi": false
+     },
+     {
+      "ov": null,
+      "suivi": false
+     }
+    ],
+    "identite_reprise": {
+     "L": 20,
+     "N": 60,
+     "cibles": "fock [50, 55, 45]",
+     "eta0": 0.050000000000000044,
+     "etage": 1,
+     "forme": "F1",
+     "g": 0.0018157365761674671,
+     "gel": "cde0cd11a763f26d",
+     "moteur": "82a0be882568fe0c",
+     "mutation": null,
+     "prevol": false,
+     "r_c": 40,
+     "signe": -1,
+     "sonde": "facc7536ba4637cb",
+     "trajet": "TN",
+     "w2": "39/20"
+    },
+    "k": 1,
+    "saute": true
+   },
+   "2": {
+    "duree_s": 33.0,
+    "eta": 0.012500000000000011,
+    "etats": [
+     {
+      "ov": 0.833526828370038,
+      "suivi": false
+     },
+     {
+      "ov": 0.8656675962458267,
+      "suivi": false
+     },
+     {
+      "ov": 0.7660702853870943,
+      "suivi": false
+     }
+    ],
+    "identite_reprise": {
+     "L": 20,
+     "N": 60,
+     "cibles": "fock [50, 55, 45]",
+     "eta0": 0.050000000000000044,
+     "etage": 1,
+     "forme": "F1",
+     "g": 0.0018157365761674671,
+     "gel": "cde0cd11a763f26d",
+     "moteur": "82a0be882568fe0c",
+     "mutation": null,
+     "prevol": false,
+     "r_c": 40,
+     "signe": -1,
+     "sonde": "facc7536ba4637cb",
+     "trajet": "TN",
+     "w2": "39/20"
+    },
+    "k": 2,
+    "saute": false
+   },
+   "3": {
+    "duree_s": 32.3,
+    "eta": 0.0062500000000000056,
+    "etats": [
+     {
+      "E_im": -0.44883379379243316,
+      "E_re": -1.294724640295403,
+      "gamma": 0.8976675875848663,
+      "ov": null,
+      "suivi": true
+     },
+     {
+      "E_im": -1.224527880686151,
+      "E_re": -2.7351184147874954,
+      "gamma": 2.449055761372302,
+      "ov": null,
+      "suivi": true
+     },
+     {
+      "E_im": -0.3345997678230041,
+      "E_re": -2.590887350664111,
+      "gamma": 0.6691995356460082,
+      "ov": null,
+      "suivi": true
+     }
+    ],
+    "identite_reprise": {
+     "L": 20,
+     "N": 60,
+     "cibles": "fock [50, 55, 45]",
+     "eta0": 0.050000000000000044,
+     "etage": 1,
+     "forme": "F1",
+     "g": 0.0018157365761674671,
+     "gel": "cde0cd11a763f26d",
+     "moteur": "82a0be882568fe0c",
+     "mutation": null,
+     "prevol": false,
+     "r_c": 40,
+     "signe": -1,
+     "sonde": "facc7536ba4637cb",
+     "trajet": "TN",
+     "w2": "39/20"
+    },
+    "k": 3,
+    "recouvrements": [
+     0.03292732468828544,
+     0.06986354885259996,
+     0.1067348529759499
+    ],
+    "saute": false
+   },
+   "4": {
+    "duree_s": 29.8,
+    "eta": 0.0031250000000000028,
+    "etats": [
+     {
+      "ov": 0.8838371994629494,
+      "suivi": false
+     },
+     {
+      "ov": 0.7910685012090738,
+      "suivi": false
+     },
+     {
+      "ov": 0.8703778220368711,
+      "suivi": false
+     }
+    ],
+    "identite_reprise": {
+     "L": 20,
+     "N": 60,
+     "cibles": "fock [50, 55, 45]",
+     "eta0": 0.050000000000000044,
+     "etage": 1,
+     "forme": "F1",
+     "g": 0.0018157365761674671,
+     "gel": "cde0cd11a763f26d",
+     "moteur": "82a0be882568fe0c",
+     "mutation": null,
+     "prevol": false,
+     "r_c": 40,
+     "signe": -1,
+     "sonde": "facc7536ba4637cb",
+     "trajet": "TN",
+     "w2": "39/20"
+    },
+    "k": 4,
+    "saute": false
+   },
+   "5": {
+    "eta": 0.0015625000000000014,
+    "etats": [
+     {
+      "ov": null,
+      "suivi": false
+     },
+     {
+      "ov": null,
+      "suivi": false
+     },
+     {
+      "ov": null,
+      "suivi": false
+     }
+    ],
+    "identite_reprise": {
+     "L": 20,
+     "N": 60,
+     "cibles": "fock [50, 55, 45]",
+     "eta0": 0.050000000000000044,
+     "etage": 1,
+     "forme": "F1",
+     "g": 0.0018157365761674671,
+     "gel": "cde0cd11a763f26d",
+     "moteur": "82a0be882568fe0c",
+     "mutation": null,
+     "prevol": false,
+     "r_c": 40,
+     "signe": -1,
+     "sonde": "facc7536ba4637cb",
+     "trajet": "TN",
+     "w2": "39/20"
+    },
+    "k": 5,
+    "saute": true
+   },
+   "6": {
+    "eta": 0.0007812500000000007,
+    "etats": [
+     {
+      "ov": null,
+      "suivi": false
+     },
+     {
+      "ov": null,
+      "suivi": false
+     },
+     {
+      "ov": null,
+      "suivi": false
+     }
+    ],
+    "identite_reprise": {
+     "L": 20,
+     "N": 60,
+     "cibles": "fock [50, 55, 45]",
+     "eta0": 0.050000000000000044,
+     "etage": 1,
+     "forme": "F1",
+     "g": 0.0018157365761674671,
+     "gel": "cde0cd11a763f26d",
+     "moteur": "82a0be882568fe0c",
+     "mutation": null,
+     "prevol": false,
+     "r_c": 40,
+     "signe": -1,
+     "sonde": "facc7536ba4637cb",
+     "trajet": "TN",
+     "w2": "39/20"
+    },
+    "k": 6,
+    "saute": true
+   },
+   "7": {
+    "eta": 0.00039062500000000035,
+    "etats": [
+     {
+      "ov": null,
+      "suivi": false
+     },
+     {
+      "ov": null,
+      "suivi": false
+     },
+     {
+      "ov": null,
+      "suivi": false
+     }
+    ],
+    "identite_reprise": {
+     "L": 20,
+     "N": 60,
+     "cibles": "fock [50, 55, 45]",
+     "eta0": 0.050000000000000044,
+     "etage": 1,
+     "forme": "F1",
+     "g": 0.0018157365761674671,
+     "gel": "cde0cd11a763f26d",
+     "moteur": "82a0be882568fe0c",
+     "mutation": null,
+     "prevol": false,
+     "r_c": 40,
+     "signe": -1,
+     "sonde": "facc7536ba4637cb",
+     "trajet": "TN",
+     "w2": "39/20"
+    },
+    "k": 7,
+    "saute": true
+   },
+   "8": {
+    "eta": 0.00019531250000000017,
+    "etats": [
+     {
+      "ov": null,
+      "suivi": false
+     },
+     {
+      "ov": null,
+      "suivi": false
+     },
+     {
+      "ov": null,
+      "suivi": false
+     }
+    ],
+    "identite_reprise": {
+     "L": 20,
+     "N": 60,
+     "cibles": "fock [50, 55, 45]",
+     "eta0": 0.050000000000000044,
+     "etage": 1,
+     "forme": "F1",
+     "g": 0.0018157365761674671,
+     "gel": "cde0cd11a763f26d",
+     "moteur": "82a0be882568fe0c",
+     "mutation": null,
+     "prevol": false,
+     "r_c": 40,
+     "signe": -1,
+     "sonde": "facc7536ba4637cb",
+     "trajet": "TN",
+     "w2": "39/20"
+    },
+    "k": 8,
+    "saute": true
+   },
+   "9": {
+    "eta": 9.765625000000009e-05,
+    "etats": [
+     {
+      "ov": null,
+      "suivi": false
+     },
+     {
+      "ov": null,
+      "suivi": false
+     },
+     {
+      "ov": null,
+      "suivi": false
+     }
+    ],
+    "identite_reprise": {
+     "L": 20,
+     "N": 60,
+     "cibles": "fock [50, 55, 45]",
+     "eta0": 0.050000000000000044,
+     "etage": 1,
+     "forme": "F1",
+     "g": 0.0018157365761674671,
+     "gel": "cde0cd11a763f26d",
+     "moteur": "82a0be882568fe0c",
+     "mutation": null,
+     "prevol": false,
+     "r_c": 40,
+     "signe": -1,
+     "sonde": "facc7536ba4637cb",
+     "trajet": "TN",
+     "w2": "39/20"
+    },
+    "k": 9,
+    "saute": true
+   },
+   "10": {
+    "eta": 4.882812500000004e-05,
+    "etats": [
+     {
+      "ov": null,
+      "suivi": false
+     },
+     {
+      "ov": null,
+      "suivi": false
+     },
+     {
+      "ov": null,
+      "suivi": false
+     }
+    ],
+    "identite_reprise": {
+     "L": 20,
+     "N": 60,
+     "cibles": "fock [50, 55, 45]",
+     "eta0": 0.050000000000000044,
+     "etage": 1,
+     "forme": "F1",
+     "g": 0.0018157365761674671,
+     "gel": "cde0cd11a763f26d",
+     "moteur": "82a0be882568fe0c",
+     "mutation": null,
+     "prevol": false,
+     "r_c": 40,
+     "signe": -1,
+     "sonde": "facc7536ba4637cb",
+     "trajet": "TN",
+     "w2": "39/20"
+    },
+    "k": 10,
+    "saute": true
+   },
+   "11": {
+    "eta": 2.441406250000002e-05,
+    "etats": [
+     {
+      "ov": null,
+      "suivi": false
+     },
+     {
+      "ov": null,
+      "suivi": false
+     },
+     {
+      "ov": null,
+      "suivi": false
+     }
+    ],
+    "identite_reprise": {
+     "L": 20,
+     "N": 60,
+     "cibles": "fock [50, 55, 45]",
+     "eta0": 0.050000000000000044,
+     "etage": 1,
+     "forme": "F1",
+     "g": 0.0018157365761674671,
+     "gel": "cde0cd11a763f26d",
+     "moteur": "82a0be882568fe0c",
+     "mutation": null,
+     "prevol": false,
+     "r_c": 40,
+     "signe": -1,
+     "sonde": "facc7536ba4637cb",
+     "trajet": "TN",
+     "w2": "39/20"
+    },
+    "k": 11,
+    "saute": true
+   },
+   "12": {
+    "eta": 1.220703125000001e-05,
+    "etats": [
+     {
+      "ov": null,
+      "suivi": false
+     },
+     {
+      "ov": null,
+      "suivi": false
+     },
+     {
+      "ov": null,
+      "suivi": false
+     }
+    ],
+    "identite_reprise": {
+     "L": 20,
+     "N": 60,
+     "cibles": "fock [50, 55, 45]",
+     "eta0": 0.050000000000000044,
+     "etage": 1,
+     "forme": "F1",
+     "g": 0.0018157365761674671,
+     "gel": "cde0cd11a763f26d",
+     "moteur": "82a0be882568fe0c",
+     "mutation": null,
+     "prevol": false,
+     "r_c": 40,
+     "signe": -1,
+     "sonde": "facc7536ba4637cb",
+     "trajet": "TN",
+     "w2": "39/20"
+    },
+    "k": 12,
+    "saute": true
+   }
+  }
+ },
+ "TP": {
+  "j06": {
+   "g": 0.08408964152537146,
+   "j": 6,
+   "traj": {
+    "F1G20": {
+     "-2": {
+      "duree_s": 31.4,
+      "eta": 0.2,
+      "etats": [
+       {
+        "E_im": -2.686480539900018e-10,
+        "E_re": -0.00014849938305794302,
+        "gamma": 5.372961079800036e-10,
+        "ov": 0.9999999999982596,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 20,
+       "N": 60,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.08408964152537146,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j06_F1G20",
+       "w2": "39/20"
+      },
+      "k": -2,
+      "saute": false
+     },
+     "-1": {
+      "duree_s": 31.7,
+      "eta": 0.1,
+      "etats": [
+       {
+        "E_im": -2.6942426419650887e-10,
+        "E_re": -0.00014849938180614802,
+        "gamma": 5.388485283930177e-10,
+        "ov": 0.999999999993101,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 20,
+       "N": 60,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.08408964152537146,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j06_F1G20",
+       "w2": "39/20"
+      },
+      "k": -1,
+      "saute": false
+     },
+     "0": {
+      "duree_s": 32.3,
+      "eta": 0.05,
+      "etats": [
+       {
+        "E_im": -2.736569074944638e-10,
+        "E_re": -0.00014849937392732822,
+        "gamma": 5.473138149889277e-10,
+        "ov": 0.999999999978342,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 20,
+       "N": 60,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.08408964152537146,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j06_F1G20",
+       "w2": "39/20"
+      },
+      "k": 0,
+      "saute": false
+     },
+     "1": {
+      "duree_s": 32.7,
+      "eta": 0.025,
+      "etats": [
+       {
+        "E_im": -2.632059252857401e-10,
+        "E_re": -0.00014849934594039917,
+        "gamma": 5.264118505714802e-10,
+        "ov": 0.9999999999719302,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 20,
+       "N": 60,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.08408964152537146,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j06_F1G20",
+       "w2": "39/20"
+      },
+      "k": 1,
+      "saute": false
+     },
+     "2": {
+      "duree_s": 32.8,
+      "eta": 0.0125,
+      "etats": [
+       {
+        "E_im": -1.9763097493180464e-10,
+        "E_re": -0.00014849930830344472,
+        "gamma": 3.952619498636093e-10,
+        "ov": 0.9999999999843527,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 20,
+       "N": 60,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.08408964152537146,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j06_F1G20",
+       "w2": "39/20"
+      },
+      "k": 2,
+      "saute": false
+     },
+     "3": {
+      "duree_s": 34.2,
+      "eta": 0.00625,
+      "etats": [
+       {
+        "E_im": -1.16643420369732e-10,
+        "E_re": -0.00014849928743991162,
+        "gamma": 2.33286840739464e-10,
+        "ov": null,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 20,
+       "N": 60,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.08408964152537146,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j06_F1G20",
+       "w2": "39/20"
+      },
+      "k": 3,
+      "recouvrements": [
+       0.9999118985737989
+      ],
+      "saute": false
+     },
+     "4": {
+      "duree_s": 31.1,
+      "eta": 0.003125,
+      "etats": [
+       {
+        "E_im": -6.170559407427842e-11,
+        "E_re": -0.00014849928215788401,
+        "gamma": 1.2341118814855683e-10,
+        "ov": 0.9999999999942164,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 20,
+       "N": 60,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.08408964152537146,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j06_F1G20",
+       "w2": "39/20"
+      },
+      "k": 4,
+      "saute": false
+     },
+     "5": {
+      "duree_s": 28.8,
+      "eta": 0.0015625,
+      "etats": [
+       {
+        "E_im": -3.139885983072481e-11,
+        "E_re": -0.00014849928115333416,
+        "gamma": 6.279771966144961e-11,
+        "ov": 0.9999999999982417,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 20,
+       "N": 60,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.08408964152537146,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j06_F1G20",
+       "w2": "39/20"
+      },
+      "k": 5,
+      "saute": false
+     },
+     "6": {
+      "duree_s": 28.3,
+      "eta": 0.00078125,
+      "etats": [
+       {
+        "E_im": -1.5749421166518917e-11,
+        "E_re": -0.00014849928043424464,
+        "gamma": 3.1498842333037834e-11,
+        "ov": 0.9999999999995273,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 20,
+       "N": 60,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.08408964152537146,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j06_F1G20",
+       "w2": "39/20"
+      },
+      "k": 6,
+      "saute": false
+     },
+     "7": {
+      "duree_s": 28.4,
+      "eta": 0.000390625,
+      "etats": [
+       {
+        "E_im": -7.895488978947195e-12,
+        "E_re": -0.00014849928145647183,
+        "gamma": 1.579097795789439e-11,
+        "ov": 0.9999999999998791,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 20,
+       "N": 60,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.08408964152537146,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j06_F1G20",
+       "w2": "39/20"
+      },
+      "k": 7,
+      "saute": false
+     },
+     "8": {
+      "duree_s": 28.3,
+      "eta": 0.0001953125,
+      "etats": [
+       {
+        "E_im": -3.945654459628275e-12,
+        "E_re": -0.00014849928022807286,
+        "gamma": 7.89130891925655e-12,
+        "ov": 0.9999999999999716,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 20,
+       "N": 60,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.08408964152537146,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j06_F1G20",
+       "w2": "39/20"
+      },
+      "k": 8,
+      "saute": false
+     },
+     "9": {
+      "duree_s": 28.3,
+      "eta": 9.765625e-05,
+      "etats": [
+       {
+        "E_im": -1.968447603947793e-12,
+        "E_re": -0.00014849928059717962,
+        "gamma": 3.936895207895586e-12,
+        "ov": 0.9999999999999934,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 20,
+       "N": 60,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.08408964152537146,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j06_F1G20",
+       "w2": "39/20"
+      },
+      "k": 9,
+      "saute": false
+     },
+     "10": {
+      "duree_s": 28.2,
+      "eta": 4.8828125e-05,
+      "etats": [
+       {
+        "E_im": -9.8881901003128e-13,
+        "E_re": -0.00014849928067396984,
+        "gamma": 1.97763802006256e-12,
+        "ov": 1.0000000000000009,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 20,
+       "N": 60,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.08408964152537146,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j06_F1G20",
+       "w2": "39/20"
+      },
+      "k": 10,
+      "saute": false
+     },
+     "11": {
+      "duree_s": 29.1,
+      "eta": 2.44140625e-05,
+      "etats": [
+       {
+        "E_im": -4.942981665181807e-13,
+        "E_re": -0.00014849928010886884,
+        "gamma": 9.885963330363613e-13,
+        "ov": 1.0000000000000013,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 20,
+       "N": 60,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.08408964152537146,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j06_F1G20",
+       "w2": "39/20"
+      },
+      "k": 11,
+      "saute": false
+     },
+     "12": {
+      "duree_s": 28.5,
+      "eta": 1.220703125e-05,
+      "etats": [
+       {
+        "E_im": -2.4772231555449477e-13,
+        "E_re": -0.00014849928109065947,
+        "gamma": 4.954446311089895e-13,
+        "ov": 1.0000000000000007,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 20,
+       "N": 60,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.08408964152537146,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j06_F1G20",
+       "w2": "39/20"
+      },
+      "k": 12,
+      "saute": false
+     }
+    },
+    "F1G30": {
+     "-2": {
+      "duree_s": 70.3,
+      "eta": 0.2,
+      "etats": [
+       {
+        "E_im": -2.699010396070555e-10,
+        "E_re": -0.00014849938264693266,
+        "gamma": 5.39802079214111e-10,
+        "ov": 0.9999999999994832,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 30,
+       "N": 70,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.08408964152537146,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j06_F1G30",
+       "w2": "39/20"
+      },
+      "k": -2,
+      "saute": false
+     },
+     "-1": {
+      "duree_s": 71.3,
+      "eta": 0.1,
+      "etats": [
+       {
+        "E_im": -2.6827047151156883e-10,
+        "E_re": -0.0001484993818452024,
+        "gamma": 5.365409430231377e-10,
+        "ov": 0.9999999999989578,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 30,
+       "N": 70,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.08408964152537146,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j06_F1G30",
+       "w2": "39/20"
+      },
+      "k": -1,
+      "saute": false
+     },
+     "0": {
+      "duree_s": 73.2,
+      "eta": 0.05,
+      "etats": [
+       {
+        "E_im": -2.6887288235357946e-10,
+        "E_re": -0.00014849938137038467,
+        "gamma": 5.377457647071589e-10,
+        "ov": 0.9999999999964138,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 30,
+       "N": 70,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.08408964152537146,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j06_F1G30",
+       "w2": "39/20"
+      },
+      "k": 0,
+      "saute": false
+     },
+     "1": {
+      "duree_s": 74.7,
+      "eta": 0.025,
+      "etats": [
+       {
+        "E_im": -2.6793481169526866e-10,
+        "E_re": -0.00014849938063089254,
+        "gamma": 5.358696233905373e-10,
+        "ov": 0.9999999999859364,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 30,
+       "N": 70,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.08408964152537146,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j06_F1G30",
+       "w2": "39/20"
+      },
+      "k": 1,
+      "saute": false
+     },
+     "2": {
+      "duree_s": 75.0,
+      "eta": 0.0125,
+      "etats": [
+       {
+        "E_im": -2.753178687026672e-10,
+        "E_re": -0.00014849937758964555,
+        "gamma": 5.506357374053344e-10,
+        "ov": 0.9999999999476906,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 30,
+       "N": 70,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.08408964152537146,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j06_F1G30",
+       "w2": "39/20"
+      },
+      "k": 2,
+      "saute": false
+     },
+     "3": {
+      "duree_s": 75.3,
+      "eta": 0.00625,
+      "etats": [
+       {
+        "E_im": -3.352868822444674e-10,
+        "E_re": -0.0001484993540009585,
+        "gamma": 6.705737644889348e-10,
+        "ov": null,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 30,
+       "N": 70,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.08408964152537146,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j06_F1G30",
+       "w2": "39/20"
+      },
+      "k": 3,
+      "recouvrements": [
+       0.999911898376826
+      ],
+      "saute": false
+     },
+     "4": {
+      "duree_s": 74.7,
+      "eta": 0.003125,
+      "etats": [
+       {
+        "E_im": -4.677164548796211e-10,
+        "E_re": -0.00014849926236232435,
+        "gamma": 9.354329097592421e-10,
+        "ov": 0.9999999998296603,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 30,
+       "N": 70,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.08408964152537146,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j06_F1G30",
+       "w2": "39/20"
+      },
+      "k": 4,
+      "saute": false
+     },
+     "5": {
+      "duree_s": 73.0,
+      "eta": 0.0015625,
+      "etats": [
+       {
+        "E_im": -5.626430064023053e-10,
+        "E_re": -0.00014849900984482018,
+        "gamma": 1.1252860128046106e-09,
+        "ov": 0.9999999996176518,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 30,
+       "N": 70,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.08408964152537146,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j06_F1G30",
+       "w2": "39/20"
+      },
+      "k": 5,
+      "saute": false
+     },
+     "6": {
+      "duree_s": 68.1,
+      "eta": 0.00078125,
+      "etats": [
+       {
+        "E_im": -4.6430695522805727e-10,
+        "E_re": -0.0001484987035302422,
+        "gamma": 9.286139104561145e-10,
+        "ov": 0.9999999995693986,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 30,
+       "N": 70,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.08408964152537146,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j06_F1G30",
+       "w2": "39/20"
+      },
+      "k": 6,
+      "saute": false
+     },
+     "7": {
+      "duree_s": 63.9,
+      "eta": 0.000390625,
+      "etats": [
+       {
+        "E_im": -2.7970156757230885e-10,
+        "E_re": -0.00014849853978690446,
+        "gamma": 5.594031351446177e-10,
+        "ov": 0.9999999997755216,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 30,
+       "N": 70,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.08408964152537146,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j06_F1G30",
+       "w2": "39/20"
+      },
+      "k": 7,
+      "saute": false
+     },
+     "8": {
+      "duree_s": 63.5,
+      "eta": 0.0001953125,
+      "etats": [
+       {
+        "E_im": -1.4753040532885452e-10,
+        "E_re": -0.00014849848671236868,
+        "gamma": 2.9506081065770904e-10,
+        "ov": 0.9999999999276554,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 30,
+       "N": 70,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.08408964152537146,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j06_F1G30",
+       "w2": "39/20"
+      },
+      "k": 8,
+      "saute": false
+     },
+     "9": {
+      "duree_s": 63.5,
+      "eta": 9.765625e-05,
+      "etats": [
+       {
+        "E_im": -7.476444211905478e-11,
+        "E_re": -0.00014849847326735296,
+        "gamma": 1.4952888423810955e-10,
+        "ov": 0.9999999999805834,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 30,
+       "N": 70,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.08408964152537146,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j06_F1G30",
+       "w2": "39/20"
+      },
+      "k": 9,
+      "saute": false
+     },
+     "10": {
+      "duree_s": 63.4,
+      "eta": 4.8828125e-05,
+      "etats": [
+       {
+        "E_im": -3.752328661420433e-11,
+        "E_re": -0.00014849846964215953,
+        "gamma": 7.504657322840867e-11,
+        "ov": 0.9999999999950584,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 30,
+       "N": 70,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.08408964152537146,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j06_F1G30",
+       "w2": "39/20"
+      },
+      "k": 10,
+      "saute": false
+     },
+     "11": {
+      "duree_s": 63.5,
+      "eta": 2.44140625e-05,
+      "etats": [
+       {
+        "E_im": -1.879087109896932e-11,
+        "E_re": -0.0001484984688982827,
+        "gamma": 3.758174219793864e-11,
+        "ov": 0.9999999999987585,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 30,
+       "N": 70,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.08408964152537146,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j06_F1G30",
+       "w2": "39/20"
+      },
+      "k": 11,
+      "saute": false
+     },
+     "12": {
+      "duree_s": 63.1,
+      "eta": 1.220703125e-05,
+      "etats": [
+       {
+        "E_im": -9.401799304185517e-12,
+        "E_re": -0.0001484984684972714,
+        "gamma": 1.8803598608371034e-11,
+        "ov": 0.9999999999996885,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 30,
+       "N": 70,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.08408964152537146,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j06_F1G30",
+       "w2": "39/20"
+      },
+      "k": 12,
+      "saute": false
+     }
+    }
+   }
+  },
+  "j08": {
+   "g": 0.1,
+   "j": 8,
+   "traj": {
+    "F1G20": {
+     "-2": {
+      "duree_s": 31.2,
+      "eta": 0.2,
+      "etats": [
+       {
+        "E_im": -3.2145107044466865e-09,
+        "E_re": -0.0002107569822232041,
+        "gamma": 6.429021408893373e-09,
+        "ov": 0.9999999999779817,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 20,
+       "N": 60,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.1,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j08_F1G20",
+       "w2": "39/20"
+      },
+      "k": -2,
+      "saute": false
+     },
+     "-1": {
+      "duree_s": 31.9,
+      "eta": 0.1,
+      "etats": [
+       {
+        "E_im": -3.2210460745329467e-09,
+        "E_re": -0.00021075697839606958,
+        "gamma": 6.442092149065893e-09,
+        "ov": 0.9999999999129293,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 20,
+       "N": 60,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.1,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j08_F1G20",
+       "w2": "39/20"
+      },
+      "k": -1,
+      "saute": false
+     },
+     "0": {
+      "duree_s": 32.2,
+      "eta": 0.05,
+      "etats": [
+       {
+        "E_im": -3.2428459187833594e-09,
+        "E_re": -0.00021075694544151334,
+        "gamma": 6.485691837566719e-09,
+        "ov": 0.9999999997419807,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 20,
+       "N": 60,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.1,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j08_F1G20",
+       "w2": "39/20"
+      },
+      "k": 0,
+      "saute": false
+     },
+     "1": {
+      "duree_s": 32.7,
+      "eta": 0.025,
+      "etats": [
+       {
+        "E_im": -3.0424220229964752e-09,
+        "E_re": -0.00021075706398086848,
+        "gamma": 6.0848440459929505e-09,
+        "ov": 0.9999999996656226,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 20,
+       "N": 60,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.1,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j08_F1G20",
+       "w2": "39/20"
+      },
+      "k": 1,
+      "saute": false
+     },
+     "2": {
+      "duree_s": 32.4,
+      "eta": 0.0125,
+      "etats": [
+       {
+        "E_im": -2.2815144456752926e-09,
+        "E_re": -0.00021075755242348174,
+        "gamma": 4.563028891350585e-09,
+        "ov": 0.999999999806201,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 20,
+       "N": 60,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.1,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j08_F1G20",
+       "w2": "39/20"
+      },
+      "k": 2,
+      "saute": false
+     },
+     "3": {
+      "duree_s": 32.1,
+      "eta": 0.00625,
+      "etats": [
+       {
+        "E_im": -1.3552007067952555e-09,
+        "E_re": -0.0002107579381309406,
+        "gamma": 2.710401413590511e-09,
+        "ov": null,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 20,
+       "N": 60,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.1,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j08_F1G20",
+       "w2": "39/20"
+      },
+      "k": 3,
+      "recouvrements": [
+       0.999874630488032
+      ],
+      "saute": false
+     },
+     "4": {
+      "duree_s": 30.7,
+      "eta": 0.003125,
+      "etats": [
+       {
+        "E_im": -7.193734216959185e-10,
+        "E_re": -0.00021075808076071608,
+        "gamma": 1.438746843391837e-09,
+        "ov": 0.999999999929527,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 20,
+       "N": 60,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.1,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j08_F1G20",
+       "w2": "39/20"
+      },
+      "k": 4,
+      "saute": false
+     },
+     "5": {
+      "duree_s": 28.6,
+      "eta": 0.0015625,
+      "etats": [
+       {
+        "E_im": -3.690485914675168e-10,
+        "E_re": -0.00021075812264071506,
+        "gamma": 7.380971829350336e-10,
+        "ov": 0.9999999999744175,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 20,
+       "N": 60,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.1,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j08_F1G20",
+       "w2": "39/20"
+      },
+      "k": 5,
+      "saute": false
+     },
+     "6": {
+      "duree_s": 28.0,
+      "eta": 0.00078125,
+      "etats": [
+       {
+        "E_im": -1.8677783718097932e-10,
+        "E_re": -0.00021075813436643838,
+        "gamma": 3.7355567436195865e-10,
+        "ov": 0.9999999999897272,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 20,
+       "N": 60,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.1,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j08_F1G20",
+       "w2": "39/20"
+      },
+      "k": 6,
+      "saute": false
+     },
+     "7": {
+      "duree_s": 27.9,
+      "eta": 0.000390625,
+      "etats": [
+       {
+        "E_im": -9.378532029454023e-11,
+        "E_re": -0.00021075813855106633,
+        "gamma": 1.8757064058908046e-10,
+        "ov": 0.9999999999965847,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 20,
+       "N": 60,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.1,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j08_F1G20",
+       "w2": "39/20"
+      },
+      "k": 7,
+      "saute": false
+     },
+     "8": {
+      "duree_s": 27.8,
+      "eta": 0.0001953125,
+      "etats": [
+       {
+        "E_im": -4.695400109201749e-11,
+        "E_re": -0.00021075813996709623,
+        "gamma": 9.390800218403498e-11,
+        "ov": 0.9999999999990582,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 20,
+       "N": 60,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.1,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j08_F1G20",
+       "w2": "39/20"
+      },
+      "k": 8,
+      "saute": false
+     },
+     "9": {
+      "duree_s": 28.0,
+      "eta": 9.765625e-05,
+      "etats": [
+       {
+        "E_im": -2.3502546464224228e-11,
+        "E_re": -0.00021075813987885466,
+        "gamma": 4.7005092928448456e-11,
+        "ov": 0.9999999999997582,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 20,
+       "N": 60,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.1,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j08_F1G20",
+       "w2": "39/20"
+      },
+      "k": 9,
+      "saute": false
+     },
+     "10": {
+      "duree_s": 27.9,
+      "eta": 4.8828125e-05,
+      "etats": [
+       {
+        "E_im": -1.174583788950108e-11,
+        "E_re": -0.00021075813932561828,
+        "gamma": 2.349167577900216e-11,
+        "ov": 0.9999999999999379,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 20,
+       "N": 60,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.1,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j08_F1G20",
+       "w2": "39/20"
+      },
+      "k": 10,
+      "saute": false
+     },
+     "11": {
+      "duree_s": 28.1,
+      "eta": 2.44140625e-05,
+      "etats": [
+       {
+        "E_im": -5.8800714084719935e-12,
+        "E_re": -0.00021075813980057107,
+        "gamma": 1.1760142816943987e-11,
+        "ov": 0.9999999999999862,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 20,
+       "N": 60,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.1,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j08_F1G20",
+       "w2": "39/20"
+      },
+      "k": 11,
+      "saute": false
+     },
+     "12": {
+      "duree_s": 28.0,
+      "eta": 1.220703125e-05,
+      "etats": [
+       {
+        "E_im": -2.9352418107618364e-12,
+        "E_re": -0.00021075813991622083,
+        "gamma": 5.870483621523673e-12,
+        "ov": 0.9999999999999969,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 20,
+       "N": 60,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.1,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j08_F1G20",
+       "w2": "39/20"
+      },
+      "k": 12,
+      "saute": false
+     }
+    },
+    "F1G30": {
+     "-2": {
+      "duree_s": 69.0,
+      "eta": 0.2,
+      "etats": [
+       {
+        "E_im": -3.2143456507009934e-09,
+        "E_re": -0.00021075698157507303,
+        "gamma": 6.428691301401987e-09,
+        "ov": 0.9999999999939119,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 30,
+       "N": 70,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.1,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j08_F1G30",
+       "w2": "39/20"
+      },
+      "k": -2,
+      "saute": false
+     },
+     "-1": {
+      "duree_s": 69.9,
+      "eta": 0.1,
+      "etats": [
+       {
+        "E_im": -3.213825844119738e-09,
+        "E_re": -0.00021075698180145124,
+        "gamma": 6.427651688239476e-09,
+        "ov": 0.9999999999870738,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 30,
+       "N": 70,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.1,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j08_F1G30",
+       "w2": "39/20"
+      },
+      "k": -1,
+      "saute": false
+     },
+     "0": {
+      "duree_s": 71.3,
+      "eta": 0.05,
+      "etats": [
+       {
+        "E_im": -3.213624416682338e-09,
+        "E_re": -0.00021075698147812323,
+        "gamma": 6.427248833364676e-09,
+        "ov": 0.9999999999546252,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 30,
+       "N": 70,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.1,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j08_F1G30",
+       "w2": "39/20"
+      },
+      "k": 0,
+      "saute": false
+     },
+     "1": {
+      "duree_s": 72.3,
+      "eta": 0.025,
+      "etats": [
+       {
+        "E_im": -3.196005784853835e-09,
+        "E_re": -0.00021075698895358692,
+        "gamma": 6.39201156970767e-09,
+        "ov": 0.9999999998375381,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 30,
+       "N": 70,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.1,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j08_F1G30",
+       "w2": "39/20"
+      },
+      "k": 1,
+      "saute": false
+     },
+     "2": {
+      "duree_s": 73.1,
+      "eta": 0.0125,
+      "etats": [
+       {
+        "E_im": -3.107419550905767e-09,
+        "E_re": -0.00021075714249958256,
+        "gamma": 6.214839101811534e-09,
+        "ov": 0.999999999615551,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 30,
+       "N": 70,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.1,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j08_F1G30",
+       "w2": "39/20"
+      },
+      "k": 2,
+      "saute": false
+     },
+     "3": {
+      "duree_s": 74.5,
+      "eta": 0.00625,
+      "etats": [
+       {
+        "E_im": -2.8657626243622436e-09,
+        "E_re": -0.00021075785661023514,
+        "gamma": 5.731525248724487e-09,
+        "ov": null,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 30,
+       "N": 70,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.1,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j08_F1G30",
+       "w2": "39/20"
+      },
+      "k": 3,
+      "recouvrements": [
+       0.9998746316153165
+      ],
+      "saute": false
+     },
+     "4": {
+      "duree_s": 74.9,
+      "eta": 0.003125,
+      "etats": [
+       {
+        "E_im": -2.1976962928404367e-09,
+        "E_re": -0.00021075890451387224,
+        "gamma": 4.395392585680873e-09,
+        "ov": 0.9999999995254472,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 30,
+       "N": 70,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.1,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j08_F1G30",
+       "w2": "39/20"
+      },
+      "k": 4,
+      "saute": false
+     },
+     "5": {
+      "duree_s": 70.4,
+      "eta": 0.0015625,
+      "etats": [
+       {
+        "E_im": -1.3267645627441675e-09,
+        "E_re": -0.00021075954781844307,
+        "gamma": 2.653529125488335e-09,
+        "ov": 0.9999999997162302,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 30,
+       "N": 70,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.1,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j08_F1G30",
+       "w2": "39/20"
+      },
+      "k": 5,
+      "saute": false
+     },
+     "6": {
+      "duree_s": 65.5,
+      "eta": 0.00078125,
+      "etats": [
+       {
+        "E_im": -7.034418570144802e-10,
+        "E_re": -0.0002107597729181655,
+        "gamma": 1.4068837140289604e-09,
+        "ov": 0.9999999999005694,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 30,
+       "N": 70,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.1,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j08_F1G30",
+       "w2": "39/20"
+      },
+      "k": 6,
+      "saute": false
+     },
+     "7": {
+      "duree_s": 61.5,
+      "eta": 0.000390625,
+      "etats": [
+       {
+        "E_im": -3.5732570464320525e-10,
+        "E_re": -0.00021075983650024424,
+        "gamma": 7.146514092864105e-10,
+        "ov": 0.9999999999725088,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 30,
+       "N": 70,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.1,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j08_F1G30",
+       "w2": "39/20"
+      },
+      "k": 7,
+      "saute": false
+     },
+     "8": {
+      "duree_s": 61.0,
+      "eta": 0.0001953125,
+      "etats": [
+       {
+        "E_im": -1.7936309701055233e-10,
+        "E_re": -0.0002107598531033193,
+        "gamma": 3.5872619402110466e-10,
+        "ov": 0.9999999999929433,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 30,
+       "N": 70,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.1,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j08_F1G30",
+       "w2": "39/20"
+      },
+      "k": 8,
+      "saute": false
+     },
+     "9": {
+      "duree_s": 61.2,
+      "eta": 9.765625e-05,
+      "etats": [
+       {
+        "E_im": -8.977275531900242e-11,
+        "E_re": -0.0002107598572336098,
+        "gamma": 1.7954551063800484e-10,
+        "ov": 0.9999999999982251,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 30,
+       "N": 70,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.1,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j08_F1G30",
+       "w2": "39/20"
+      },
+      "k": 9,
+      "saute": false
+     },
+     "10": {
+      "duree_s": 61.6,
+      "eta": 4.8828125e-05,
+      "etats": [
+       {
+        "E_im": -4.489590204596331e-11,
+        "E_re": -0.00021075985776703238,
+        "gamma": 8.979180409192663e-11,
+        "ov": 0.9999999999995579,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 30,
+       "N": 70,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.1,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j08_F1G30",
+       "w2": "39/20"
+      },
+      "k": 10,
+      "saute": false
+     },
+     "11": {
+      "duree_s": 61.4,
+      "eta": 2.44140625e-05,
+      "etats": [
+       {
+        "E_im": -2.246117007485099e-11,
+        "E_re": -0.00021075985952369552,
+        "gamma": 4.492234014970198e-11,
+        "ov": 0.9999999999998916,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 30,
+       "N": 70,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.1,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j08_F1G30",
+       "w2": "39/20"
+      },
+      "k": 11,
+      "saute": false
+     },
+     "12": {
+      "duree_s": 61.1,
+      "eta": 1.220703125e-05,
+      "etats": [
+       {
+        "E_im": -1.1231637434705062e-11,
+        "E_re": -0.00021075985757324875,
+        "gamma": 2.2463274869410124e-11,
+        "ov": 0.999999999999973,
+        "suivi": true
+       }
+      ],
+      "identite_reprise": {
+       "L": 30,
+       "N": 70,
+       "cibles": "vide",
+       "eta0": 0.05,
+       "etage": 1,
+       "forme": "F1",
+       "g": 0.1,
+       "gel": "cde0cd11a763f26d",
+       "moteur": "82a0be882568fe0c",
+       "mutation": null,
+       "prevol": false,
+       "r_c": 40,
+       "signe": 1,
+       "sonde": "facc7536ba4637cb",
+       "trajet": "TP_j08_F1G30",
+       "w2": "39/20"
+      },
+      "k": 12,
+      "saute": false
+     }
+    }
+   }
+  }
+ },
+ "attendus": {
+  "TN": 15,
+  "TP": 60,
+  "plancher": 30
+ },
+ "comptes": {
+  "TN": {
+   "joues": 3,
+   "repris": 0,
+   "sautes": 12
+  },
+  "TP": {
+   "joues": 60,
+   "repris": 0,
+   "sautes": 0
+  },
+  "plancher": {
+   "joues": 30,
+   "repris": 0,
+   "sautes": 0
+  }
+ },
+ "etage": 1,
+ "gel": "cde0cd11a763f26d",
+ "hors_manifeste": [
+  "pt_39_20_f100.zip"
+ ],
+ "moteur": "82a0be882568fe0c",
+ "mutation": null,
+ "plateforme": {
+  "NPY_DISABLE_CPU_FEATURES": "",
+  "machine": "AMD64",
+  "numpy": "2.2.6",
+  "python": "3.11.9",
+  "systeme": "Windows",
+  "temoin_arrondi": "0x1.a483018a169c6p+64",
+  "temoin_lecture": "CR"
+ },
+ "prevol": false
+}

@@ -1,0 +1,23 @@
+=== 1. LE LOT ENTRANT ===
+OK    C01 lot : 39 pieces au canon, a l empreinte brute et a la taille (canon du lot c294e7d5a2e8865a) : ecarts : aucun
+OK    C02 les trois scripts : ASCII pur, LF seul, et chacun cite le gel v2 cde0cd11a763f26d ; le gel v2 du lot est au canon cde0cd11a763f26d : sonde 214ea376cbf540a4 lecture b3ac958a1a2b915b banc 666e69f11bc1f72c
+=== 2. SELFTEST ET PRE-VOL DE L ETAGE 1 (NON OPPOSABLE) ===
+OK    C03 selftest G-Q7 de la feuille de lecture : 13 tenus sur 13 : selftest G-Q7 : 13 tenus sur 13
+OK    C04 pre-vol etage 1 : G-Q3 six sur six ; TN 15, TP 30, plancher 30 ; G-Q10 ; temoin d arrondi lu CR : comptes {'TN': {'joues': 15, 'repris': 0, 'sautes': 0}, 'TP': {'joues': 30, 'repris': 0, 'sautes': 0}, 'plancher': {'joues': 30, 'repris': 0, 'sautes': 0}}
+OK    C05 lecture de l etage 1 rejouee == celle de machine 1 (hors canon ; nombres a 3 chiffres significatifs : un affichage de la 5e decimale differe, 1.7179 / 1.7178, par plateforme) : 26 lignes
+=== 3. PRE-VOL DE L ETAGE 2 SOUS VERDICT FACTICE DE MON CANON (NON OPPOSABLE) ===
+OK    C06 pre-vol etage 2 : F1 174 joues + 6 repris == 180, formes 180, translation 90, ouverture 6 ; 1260 etats-pas, 0 perdus ; identite min 1.0000 ; |somme des c - 1| max 7.1e-14 : comptes {'F1': {'joues': 174, 'repris': 6, 'sautes': 0}, 'formes': {'joues': 180, 'repris': 0, 'sautes': 0}, 'ouverture': {'joues': 6, 'repris': 0, 'sautes': 0}, 'translation': {'joues': 90, 'repris': 0, 'sautes': 0}}
+OK    C07 lecture de l etage 2 rejouee IDENTIQUE a celle de machine 1 (hors canon) : 53 lignes ; verdict "['VERDICT : NON QUALIFIE (PRE-VOL, NON OPPOSABLE)']"
+=== 4. LE BANC QUI TUE ===
+MORD  C08 D-3 : le banc TEL QUE LIVRE rend 6 mordues sur 6 sur ce poste (il lance la sonde par python -I, qui ecarte les paquets utilisateur, donc numpy ici) : banc qui tue : 4 mordues == 6 attendues ; base MALSAINE : ECHOUE
+OK    C09 le MEME banc avec une seule modification, -I -> -P (copie de mon cru), rend 6 mordues sur 6, base saine, porte tenue : banc qui tue : 6 mordues == 6 attendues ; base saine : PASSE
+=== 5. D-1 (REPRISE) ET D-2 (PORTE), SANS DECOMPOSITION ===
+MORD  C10 D-1 : un etage 1 REEL lance dans un dossier qui ne contient que la reprise d un PRE-VOL doit REFUSER (la reprise ne controle ni la geometrie, ni le canon de la sonde, ni prevol) : il a rendu code 0 : joues 0, repris 75, sonde_etage1.json ecrit avec prevol = False et GQ10 = True
+OK    C11 G-Q3 A TAILLE REELLE : la forme native est celle du moteur element par element aux six points (N = 60, 60, 60, 61, 61, 61), matrices seulement, aucune decomposition : [('39_20', '60', 'OK'), ('197_100', '60', 'OK'), ('99_50', '60', 'OK'), ('101_50', '61', 'OK'), ('203_100', '61', 'OK'), ('41_20', '61', 'OK')]
+MORD  C12 D-2 : un etage 2 REEL (sans --prevol) doit REFUSER un verdict d etage 1 marque prevol, sur un sonde_etage1.json de pre-vol : rendu : ['PORTE FRANCHIE']
+=== 6. L ANCRAGE A TAILLE REELLE : UNE DECOMPOSITION, (F1, G20, k = 3), POINT 1.95 ===
+OK    C13 ancrage a taille reelle sur BOCAL4 : gamma(F1, G20, k = 3) au point 1.95 retombe sur G_run a 1e-3 (le gel attend le bit sur BOCAL4) : n = 2.1623273018e-10 ; rapport - 1 = 0.000e+00 ; au bit True
+=== BILAN : 13 controles, 3 mordent ===
+  MORD : C08 D-3 : le banc TEL QUE LIVRE rend 6 mordues sur 6 sur ce poste (il lance la sonde par python -I, qui ecarte les paquets utilisateur, donc numpy ici)
+  MORD : C10 D-1 : un etage 1 REEL lance dans un dossier qui ne contient que la reprise d un PRE-VOL doit REFUSER (la reprise ne controle ni la geometrie, ni le canon de la sonde, ni prevol)
+  MORD : C12 D-2 : un etage 2 REEL (sans --prevol) doit REFUSER un verdict d etage 1 marque prevol, sur un sonde_etage1.json de pre-vol

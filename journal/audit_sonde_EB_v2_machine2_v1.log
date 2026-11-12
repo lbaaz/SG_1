@@ -1,0 +1,24 @@
+=== 1. LE LOT ENTRANT ET LA RECONSTRUCTION ===
+OK    C01 lot v2 : 25 pieces au canon B, a l empreinte brute et a la taille (canon du lot 413d6ee565697278) : ecarts : aucun
+OK    C02 les bases v1 du lot sont MES exemplaires certifies (sonde 214ea376cbf540a4, banc 666e69f11bc1f72c) ; la feuille de lecture est INCHANGEE (b3ac958a1a2b915b) ; les deux v2 sont ASCII, LF seul, et citent le gel v2 : sonde v2 facc7536ba4637cb, banc v2 4e46744fe4e8a8be
+OK    C03 la construction de machine 1, lue puis rejouee depuis MES v1, rend une sonde v2 et un banc v2 IDENTIQUES AU BIT a ceux livres : sonde identique, banc identique ; 15 remplacements annonces
+OK    C04 les diffs joints sont exacts : memes lignes ajoutees et retirees que les miennes (hors lignes vides, que difflib et diff -u n alignent pas pareil), et chacun reconstruit son v2 depuis son v1 : sonde : memes lignes True, reconstruit True ; banc : memes lignes True, reconstruit True ; sonde +43 -9
+=== 2. SELFTEST ET PRE-VOL DE L ETAGE 1 SOUS LA SONDE v2 (NON OPPOSABLE) ===
+OK    C05 selftest G-Q7 : 13 tenus sur 13
+OK    C06 pre-vol etage 1, premier passage : G-Q3 six sur six ; TN 15, TP 30, plancher 30 TOUS JOUES ; G-Q10 ; 75 fichiers de reprise, 75 portent une identite : comptes {'TN': {'joues': 15, 'repris': 0, 'sautes': 0}, 'TP': {'joues': 30, 'repris': 0, 'sautes': 0}, 'plancher': {'joues': 30, 'repris': 0, 'sautes': 0}}
+OK    C07 second passage dans le MEME dossier : 0 joue + 75 repris == 75 (la reprise sous identite laisse passer le meme calcul), et ses trajectoires sont celles du premier passage : comptes {'TN': {'joues': 0, 'repris': 15, 'sautes': 0}, 'TP': {'joues': 0, 'repris': 30, 'sautes': 0}, 'plancher': {'joues': 0, 'repris': 30, 'sautes': 0}} ; trajectoires identiques : True
+OK    C08 lecture de l etage 1 sur la sortie v2 == celle de machine 1 (hors canon ; nombres a 3 chiffres) : 26 lignes
+=== 3. PRE-VOL DE L ETAGE 2 SOUS VERDICT FACTICE DE MON CANON (NON OPPOSABLE) ===
+OK    C09 pre-vol etage 2 : F1 174 + 6 repris == 180, formes 180, translation 90, ouverture 6 ; 1260 etats-pas, 0 perdus ; identite min 1.0000 (la reprise ouverture -> F1 passe sous identite) : comptes {'F1': {'joues': 174, 'repris': 6, 'sautes': 0}, 'formes': {'joues': 180, 'repris': 0, 'sautes': 0}, 'ouverture': {'joues': 6, 'repris': 0, 'sautes': 0}, 'translation': {'joues': 90, 'repris': 0, 'sautes': 0}}
+OK    C10 lecture de l etage 2 sur la sortie v2 IDENTIQUE a celle de machine 1 sous v2, ET a celle du v1 : 53 lignes
+=== 4. LE BANC QUI TUE v2, TEL QUE LIVRE ===
+OK    C11 D-3 levee : le banc v2 TEL QUE LIVRE rend 6 mordues sur 6, base saine, 4 refus sur 4 sur ce poste : banc qui tue : 6 mordues == 6 attendues ; base saine ; temoins hors gel : 4 refus == 4 attendus : PASSE
+=== 5. D-1 : L IDENTITE DE REPRISE, ATTAQUEE (CAS QUE LE BANC NE JOUE PAS) ===
+OK    C12 D-1 levee : une reprise AU FORMAT v1 (sans identite) est REFUSEE (code 2), sans decomposer :  ['L', 'N', 'cibles', 'eta0', 'etage', 'forme', 'g', 'gel', 'moteur', 'prevol', 'r_c', 'signe', 'sonde', 'trajet', 'w2']
+OK    C13 D-1 levee : une reprise dont l identite porte un g, un canon de sonde ou un eta0 DIFFERENT est refusee en nommant la cle en ecart : g : ...en ecart ['g'] ; sonde : ...cart ['sonde'] ; eta0 : ...ecart ['eta0']
+OK    C14 D-1 levee, ma demonstration du v1 REJOUEE : un etage 1 REEL dans une reprise de pre-vol s arrete au premier fichier (code 2), apres G-Q3 a taille reelle six sur six (N = 60, 60, 60, 61, 61, 61, matrices seulement), sans aucun G-Q10 ni sonde_etage1.json ecrit : 0\k_+03.json porte une autre identite, cles en ecart ['L', 'N', 'prevol', 'r_c']
+=== 6. D-2 : LA PORTE DE L ETAGE 2, SEPT CAS, PAR SENTINELLE (AUCUN CALCUL) ===
+OK    C15 D-2 levee : sur sept cas, la porte se FERME aux cinq cas interdits (original, croise, inverse, etage 1 mute, sonde_etage1.json absent -- sans exception) et reste OUVERTE aux deux chemins legitimes (tout reel, tout pre-vol) : 7 cas, 7 OK
+=== 7. L ANCRAGE A TAILLE REELLE SOUS LA v2 : UNE DECOMPOSITION, (F1, G20, k = 3), POINT 1.95 ===
+OK    C16 ancrage a taille reelle sous la SONDE v2 (machine 1 ne l a pas rejoue sous v2) : gamma(F1, G20, k = 3) au point 1.95 retombe AU BIT sur G_run : -10 ; G_run = 2.1623273018e-10 ; rapport - 1 = 0.000e+00 ; au bit True
+=== BILAN : 16 controles, 0 mordent ===

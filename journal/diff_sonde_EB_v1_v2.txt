@@ -1,0 +1,151 @@
+--- sonde_qualification_EB_machine1_v1.py	2026-11-11 14:52:28.304613341 +0100
++++ sonde_qualification_EB_machine1_v2.py	2026-11-11 15:35:46.855826953 +0100
+@@ -1,5 +1,6 @@
+ # -*- coding: ascii -*-
+-# SONDE DE QUALIFICATION E-B -- machine 1, v1 -- gel E-B v2 cde0cd11a763f26d
++# SONDE DE QUALIFICATION E-B -- machine 1, v2 -- gel E-B v2 cde0cd11a763f26d
++# v2 = v1 (214ea376cbf540a4) + D-1 (identite de reprise) + D-2 (porte).
+ # CLASSE 2. Elle MESURE et ne juge pas : aucune routine de plateau, aucun
+ # statut, aucun verdict. Elle n'arrete que sur ses gardes d'integrite
+ # (G-Q1, G-Q2, G-Q3, G-Q4, G-Q6). Le moteur est charge en lecture seule.
+@@ -18,6 +19,8 @@
+ TOL_ANCRAGE = 1e-3
+ CFGS = ["F1G20", "F2G20", "F3G20", "F1G30", "F1GT"]    # groupes par N
+ COMPTES = {}
++CTX = {"etage": 0, "prevol": True, "mutation": None, "sonde": "hors main",
++       "moteur": CANON_MOTEUR, "gel": CANON_GEL}
+ 
+ 
+ def dire(*a):
+@@ -158,10 +161,14 @@
+     return np.lexsort((vals.real, -r)), r
+ 
+ 
+-def trajectoire(sysm, w, eta0, rep, famille, choisir, ks=None):
++def trajectoire(sysm, w, eta0, rep, famille, choisir, ks=None, meta=None):
+     """Suit des etats sur l'echelle. choisir(vals, vecs) -> (indices, extras)
+-    a k = 3. Reprise par fichier (k). Rend {k: enregistrement}."""
++    a k = 3. Reprise par fichier (k) SOUS IDENTITE (D-1) : un fichier repris
++    doit porter la meme identite que le calcul demande, sinon ARRET."""
+     os.makedirs(rep, exist_ok=True)
++    ident = dict(CTX, trajet=os.path.basename(rep), N=sysm.N,
++                 w2=str(sysm.w2), g=sysm.g, signe=sysm.signe, eta0=eta0,
++                 **(meta or {}))
+     recs, vects = {}, {}
+     for k in (ks or K_ECH):
+         fj = os.path.join(rep, "k_%+03d.json" % k)
+@@ -169,6 +176,12 @@
+         if os.path.exists(fj) and os.path.exists(fv):
+             recs[k] = json.load(open(fj))
+             vects[k] = np.load(fv)
++            vu = recs[k].get("identite_reprise") or {}
++            if vu != ident or vects[k].shape[-1] != sysm.N * sysm.N:
++                arret(2, "reprise refusee (D-1) : %s porte une autre"
++                         " identite, cles en ecart %s" % (fj, sorted(
++                             c for c in set(ident) | set(vu)
++                             if vu.get(c) != ident.get(c))))
+             compter(famille, "repris")
+             continue
+         eta = eta0 * 2.0 ** (-k)
+@@ -214,6 +227,7 @@
+             vects[k] = V
+             compter(famille, "joues")
+         np.save(fv, vects[k])
++        recs[k]["identite_reprise"] = ident
+         json.dump(recs[k], open(fj, "w"), sort_keys=True)
+     return recs, vects
+ 
+@@ -288,7 +302,8 @@
+             recs, _ = trajectoire(
+                 s, absorbeur("F1", r_c, N, L), 0.05,
+                 os.path.join(sortie, "reprise", "TP_%s_%s" % (cle, cfg)),
+-                "TP", choisir_cibles([vide]))
++                "TP", choisir_cibles([vide]),
++                meta={"forme": "F1", "r_c": r_c, "L": L, "cibles": "vide"})
+             res["TP"][cle]["traj"][cfg] = recs
+             dire("TP %s g = %.6f %s : fait" % (cle, r["g"], cfg))
+             del s
+@@ -301,7 +316,9 @@
+     cibles = [cible(M, ("fock", c, c // 2), N, None, p["w2"]) for c in cands]
+     recs, _ = trajectoire(s, absorbeur("F1", r_c, N, L), p["eta0"],
+                           os.path.join(sortie, "reprise", "TN"), "TN",
+-                          choisir_cibles(cibles))
++                          choisir_cibles(cibles),
++                          meta={"forme": "F1", "r_c": r_c, "L": L,
++                                "cibles": "fock %s" % cands})
+     res["TN"] = {"candidats": [[c, c // 2] for c in cands], "traj": recs}
+     dire("TN : fait, candidats %s" % res["TN"]["candidats"])
+     del s
+@@ -319,7 +336,9 @@
+             recs, _ = trajectoire(
+                 cache[N], absorbeur(forme, r_c, N, L), p["eta0"],
+                 os.path.join(sortie, "reprise", "PL_%s_%s" % (nom, cfg)),
+-                "plancher", choisir_graine(psi, 1), ks=[3])
++                "plancher", choisir_graine(psi, 1), ks=[3],
++                meta={"forme": forme, "r_c": r_c, "L": L,
++                      "cibles": "graine 1", "s": p["s"]})
+             res["GQ5"][nom][cfg] = recs[3]["etats"][0]["gamma"]
+         dire("G-Q5 %-8s : %s" % (nom, " ".join(
+             "%s %.2e" % (c, res["GQ5"][nom][c]) for c in CFGS)))
+@@ -342,7 +361,9 @@
+             s, absorbeur(forme, r_c, N, L), p["eta0"],
+             os.path.join(sortie, "reprise", "PT_%s_F1G20" % nom),
+             "ouverture",
+-            choisir_graine(psi, K_ETATS, a.mutation, extras=True), ks=[3])
++            choisir_graine(psi, K_ETATS, a.mutation, extras=True), ks=[3],
++            meta={"forme": forme, "r_c": r_c, "L": L,
++                  "cibles": "graine %d" % K_ETATS, "s": p["s"]})
+         g3 = recs[3]["etats"][0]["gamma"]
+         G = p["G_run"] if not a.prevol else (refs[nom] if refs else None)
+         res["GQ4"][nom] = {"gamma": g3, "reference": G,
+@@ -380,7 +401,9 @@
+                 {"F1G20": "F1", "F1G30": "F1", "F1GT": "translation"}.get(
+                     cfg, "formes"),
+                 choisir_graine(psi, K_ETATS if prem else 1,
+-                               a.mutation if prem else None, extras=prem))
++                               a.mutation if prem else None, extras=prem),
++                meta={"forme": forme, "r_c": r_c, "L": L, "s": p["s"],
++                      "cibles": "graine %d" % (K_ETATS if prem else 1)})
+             ident = 1.0
+             if not prem:
+                 u = bloc_interieur(S3[nom], geometrie(
+@@ -408,13 +431,16 @@
+     os.makedirs(a.sortie, exist_ok=True)
+     dire.f = open(os.path.join(a.sortie, "sonde_etage%d.log" % a.etage), "w")
+     dire("=" * 74)
+-    dire("SONDE DE QUALIFICATION E-B v1 -- gel %s -- etage %d%s%s" % (
++    dire("SONDE DE QUALIFICATION E-B v2 -- gel %s -- etage %d%s%s" % (
+         CANON_GEL, a.etage, " -- PRE-VOL (geometrie reduite, NON OPPOSABLE)"
+         if a.prevol else "", " -- MUTATION %s" % a.mutation if a.mutation
+         else ""))
+     dire("=" * 74)
+     if a.mutation and not a.prevol:
+         arret(2, "une mutation ne se joue qu'en pre-vol")
++    CTX.update({"etage": a.etage, "prevol": bool(a.prevol),
++                "mutation": a.mutation,
++                "sonde": canon_b(open(__file__, "rb").read())})
+     plat = ligne_plateforme()
+     M = charger_moteur(a.moteur)
+     hors = authentifier_run(a.run, a.manifeste)
+@@ -427,6 +453,8 @@
+         att["TP"] = 30 * len(res["TP"])
+     else:
+         f1 = os.path.join(a.sortie, "sonde_etage1.json")
++        if not os.path.exists(f1):
++            arret(2, "etage 2 refuse : pas de sonde_etage1.json en sortie")
+         v = json.load(open(a.verdict1)) if a.verdict1 else {}
+         if v.get("etage1") != "TIENT" or v.get("canon_sonde_etage1") != \
+                 canon_b(open(f1, "rb").read()):
+@@ -434,6 +462,12 @@
+                      " sur ce sonde_etage1.json")
+         if v.get("factice") and not a.prevol:
+             arret(2, "etage 2 refuse : verdict factice hors pre-vol")
++        s1 = json.load(open(f1))
++        drap = [bool(a.prevol), bool(v.get("prevol")), bool(s1.get("prevol"))]
++        if len(set(drap)) != 1 or s1.get("mutation"):
++            arret(2, "etage 2 refuse (D-2) : pre-vol de la commande, du"
++                     " verdict et de sonde_etage1.json = %s ; mutation de"
++                     " l'etage 1 = %s" % (drap, s1.get("mutation")))
+         res = etage2(M, P, a, a.sortie)
+         att = {"F1": 180, "formes": 180, "translation": 90, "ouverture": 6}
+     ok = True

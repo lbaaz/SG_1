@@ -1,0 +1,29 @@
+==========================================================================
+SONDE DE QUALIFICATION E-B v2 -- gel cde0cd11a763f26d -- etage 1 -- PRE-VOL (geometrie reduite, NON OPPOSABLE)
+==========================================================================
+plateforme : {"NPY_DISABLE_CPU_FEATURES": "X86_V4", "machine": "x86_64", "numpy": "2.5.3", "python": "3.13.18", "systeme": "Linux", "temoin_arrondi": "0x1.a483018a169c6p+64", "temoin_lecture": "CR"}
+G-Q1 moteur m17_chaine_v17.py canon 82a0be882568fe0c : OK
+G-Q2 run : 36 au canon et a la taille == 36 lignes du manifeste (attendu 36) ; hors manifeste, ni ouverts ni comptes : []
+G-Q3 39_20    N = 20 : OK
+G-Q3 197_100  N = 20 : OK
+G-Q3 99_50    N = 20 : OK
+G-Q3 101_50   N = 20 : OK
+G-Q3 203_100  N = 20 : OK
+G-Q3 41_20    N = 20 : OK
+TP j06 g = 0.084090 F1G20 : fait
+TP j06 g = 0.084090 F1G30 : fait
+TP j08 g = 0.100000 F1G20 : fait
+TP j08 g = 0.100000 F1G30 : fait
+TN : fait, candidats [[16, 8], [17, 8], [15, 7]]
+G-Q5 39_20    : F1G20 9.70e-12 F2G20 8.82e-13 F3G20 9.76e-12 F1G30 9.70e-12 F1GT 1.60e-14
+G-Q5 197_100  : F1G20 1.65e-12 F2G20 1.57e-13 F3G20 1.66e-12 F1G30 1.64e-12 F1GT 1.33e-14
+G-Q5 99_50    : F1G20 4.40e-13 F2G20 4.06e-14 F3G20 4.37e-13 F1G30 4.33e-13 F1GT 7.10e-15
+G-Q5 101_50   : F1G20 2.55e-11 F2G20 1.15e-12 F3G20 2.55e-11 F1G30 2.55e-11 F1GT 1.25e-15
+G-Q5 203_100  : F1G20 8.28e-11 F2G20 3.73e-12 F3G20 8.29e-11 F1G30 8.28e-11 F1GT 3.34e-15
+G-Q5 41_20    : F1G20 5.29e-09 F2G20 4.72e-10 F3G20 5.29e-09 F1G30 5.29e-09 F1GT 8.45e-12
+G-Q10 TN           joues 15 + repris 0 + sautes 0 == 15 attendus : OK
+G-Q10 TP           joues 60 + repris 0 + sautes 0 == 60 attendus : OK
+G-Q10 plancher     joues 30 + repris 0 + sautes 0 == 30 attendus : OK
+sonde sonde_qualification_EB_machine1_v2.py canon facc7536ba4637cb (relu du disque)
+sortie sonde_etage1.json canon 52e45d34fc8eefa2 (relu du disque)
+CE QUE CE LOG NE JOUE PAS : aucune routine de plateau, aucun statut, aucun verdict ; l'etage 2.

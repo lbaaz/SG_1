@@ -1,0 +1,23 @@
+OK    C01 canons des quatre pieces de la reference
+OK    C02 en-tetes : gel, moteur, canon du script, w2, p, prevol faux
+OK    C03 la liste des retenus ne porte que j et g : cles ['g', 'j', 'p', 'prevol', 'retenus', 'w2']
+OK    C04 dix-sept lignes, j = 0..16, g_j == 0.05 * 2^(j/8) au bit
+OK    C05 g des retenus == g de la table == echelle, au bit ; table.retenus == liste
+OK    C06 Gamma_ref et u_ref : un nombre fini a chaque ligne ; non raffine -> u_ref = 1.0 : raffines [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+MORD  C07 points bruts : 17 grossiers + grille complete des raffines, sans doublon : 149 points, 11 raffines x 15 + 17 - 11 communs
+OK    C08 Gamma_ref, u_ref et theta des 11 raffines recalcules des points bruts : ecart max 0.0e+00 ; theta differents []
+OK    C09 non raffines : Gamma_ref == Gamma(N = 50, theta = 0.20) du point brut, hors [1e-12, 1e-6]
+OK    C10 aucune ligne raffinee ne porte de motif d'exclusion ajoute
+OK    C11 selection rejouee par un code ecrit ici == liste : candidats [6, 7, 8, 9, 10] -> [6, 8]
+OK    C12 canon de la feuille de lecture certifiee
+OK    C13 selection_gel de la feuille certifiee sur la table == liste
+OK    C14 la feuille lit la vraie table : etage 1 synthetique a Gamma_ref -> TIENT : TIENT []
+OK    C15 controle vivant : une largeur a j = 6 fausse de 6 pour cent -> NE TIENT PAS : ['TP ne tient pas a j06']
+OK    C16 controle vivant : une liste [5, 8] contre cette table -> NE TIENT PAS : ['TP non concluant (retenus sonde [6, 8], reference [5, 8], regle du gel [6, 8])']
+OK    C17 bord j = 5 : u_ref depasse 0.01 de moins de 1e-4, par un seul point : u_ref = 0.010019582, depassement 1.96e-05, point (N = 60, theta = 0.25) ; second plus grand ecart 5.98e-03
+OK    C18 sans j = 5 le plus proche de 1e-10 est j = 6 ; avec lui ce serait j = 5
+Traceback (most recent call last):
+  File "/home/claude/cert_ref/audit_reference_TP_machine1_v1.py", line 118, in <module>
+    pts = [P[(j, n, t)] for n in NS for t in THETAS]
+           ~^^^^^^^^^^^
+KeyError: (6, 60, 0.1)

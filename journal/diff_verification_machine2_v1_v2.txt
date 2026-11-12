@@ -1,0 +1,203 @@
+--- verification_acte_nn_qualification_EB_machine2_v1.py
++++ verification_acte_nn_qualification_EB_machine2_v2.py
+@@ -1,10 +1,15 @@
+ # -*- coding: ascii -*-
+ """VERIFICATION par machine 2 de l'ACTE 'nn' de la qualification E-B (journal_delta_nn_qualification_EB_v1.md,
+-canon 0d7870ebad535303), 2026-11-12. Chaque affirmation CHIFFREE de l'acte est RECALCULEE ici depuis MES sources
++canon 0d7870ebad535303 ; v2 : 569ccbd0d1adb927), 2026-11-12. Chaque affirmation CHIFFREE de l'acte est RECALCULEE ici depuis MES sources
+ (sortie de la sonde de la nuit, table de reference, fichiers du run M17, moteur, feuille certifiee), jamais lue dans
+ le script d'ecriture de machine 1. Les phrases attendues sont CONSTRUITES depuis les donnees puis cherchees dans
+ l'acte (blancs normalises) : un nombre tape a la main dans l'acte et faux est une morsure.
+-Usage (depuis BOCAL4, jamais -I : numpy en user-site) : python -P verification_acte_nn_qualification_EB_machine2_v1.py
+-Sorties : verification_acte_nn_qualification_EB_machine2_v1.log et .json. Ce script ne modifie rien."""
++Usage (depuis BOCAL4, jamais -I : numpy en user-site) : python -P verification_acte_nn_qualification_EB_machine2_v2.py [v2|v1]
++v2 (defaut) : l'acte a contresigner ; v1 : CONTRE-EPREUVE sur le v1, qui doit mordre sur nn.9. Ce script derive du v1 de la
++verification (261ed59a1781d7d3), DIFF JOINT (diff_verification_machine2_v1_v2.txt) : constantes par version, C26 a C28
++reecrits (decompte PAR PIECE depuis mes copies des actes 90 a 93 ; parenthese lue avec espaces, "six" admis), C29 a C33
++ajoutes (v2 seulement), selecteur de version nomme VERSION_ACTE (VER designait deja mon verdict de l'etage 1).
++Sorties : verification_acte_nn_qualification_EB_machine2_v2.log et .json (suffixe _sur_acte_v1 en contre-epreuve).
++Ce script ne modifie rien."""
+ import hashlib
+ import importlib.util
+@@ -21,8 +26,17 @@
+ ICI = os.path.dirname(os.path.abspath(__file__))
+ DL = os.path.join(os.path.expanduser('~'), 'Downloads')
+-ACTE_NOM = 'journal_delta_nn_qualification_EB_v1.md'
+-LOT = 'lot_machine1_2026-11-12_acte_qualification_EB_v1_recu.zip'
+-LOG = os.path.join(ICI, 'verification_acte_nn_qualification_EB_machine2_v1.log')
+-JSN = os.path.join(ICI, 'verification_acte_nn_qualification_EB_machine2_v1.json')
++VERSION_ACTE = sys.argv[1] if len(sys.argv) > 1 else 'v2'
++CONF = {'v1': dict(nom='journal_delta_nn_qualification_EB_v1.md',
++                   lot='lot_machine1_2026-11-12_acte_qualification_EB_v1_recu.zip',
++                   manifest='MANIFEST_lot_machine1_acte_qualification_EB_v1.txt', canon='0d7870ebad535303',
++                   pieces=7, tok=51, suffixe='_sur_acte_v1'),
++        'v2': dict(nom='journal_delta_nn_qualification_EB_v2.md',
++                   lot='lot_machine1_2026-11-12_acte_qualification_EB_v2_recu.zip',
++                   manifest='MANIFEST_lot_machine1_acte_qualification_EB_v2.txt', canon='569ccbd0d1adb927',
++                   pieces=13, tok=56, suffixe='')}[VERSION_ACTE]
++ACTE_NOM = CONF['nom']
++LOT = CONF['lot']
++LOG = os.path.join(ICI, 'verification_acte_nn_qualification_EB_machine2_v2%s.log' % CONF['suffixe'])
++JSN = os.path.join(ICI, 'verification_acte_nn_qualification_EB_machine2_v2%s.json' % CONF['suffixe'])
+ NUIT = os.path.join(ICI, 'nuit_EB')
+ SORTIE = os.path.join(NUIT, 'sortie')
+@@ -68,8 +82,8 @@
+ dire('VERIFICATION de l acte %s par machine 2' % ACTE_NOM)
+ c_act = emp(open(os.path.join(ICI, ACTE_NOM), 'rb').read())[0]
+-chk('C01', c_act == '0d7870ebad535303' == emp(zl.read(ACTE_NOM))[0] and
++chk('C01', c_act == CONF['canon'] == emp(zl.read(ACTE_NOM))[0] and
+     open(os.path.join(ICI, ACTE_NOM), 'rb').read() == zl.read(ACTE_NOM),
+-    'acte hors zip == membre du zip, canon %s (annonce 0d7870ebad535303)' % c_act)
+-man = zl.read('MANIFEST_lot_machine1_acte_qualification_EB_v1.txt').decode('utf-8')
++    'acte hors zip == membre du zip, canon %s (annonce %s)' % (c_act, CONF['canon']))
++man = zl.read(CONF['manifest']).decode('utf-8')
+ bad = []
+ n_lignes = 0
+@@ -82,7 +96,7 @@
+     if (b, br, ob, obr) != (m.group(1), m.group(2), int(m.group(3)), int(m.group(4))):
+         bad.append(m.group(5))
+-chk('C02', n_lignes == 7 and not bad and len(zl.namelist()) == 8,
+-    '%d pieces sur 7 au canon, a l empreinte brute et a la taille ; membres du zip %d (attendu 8 avec le manifeste) ;'
+-    ' ecarts %s ; CANON DU LOT %s' % (n_lignes, len(zl.namelist()), bad, emp(man.encode())[0]))
++chk('C02', n_lignes == CONF['pieces'] and not bad and len(zl.namelist()) == CONF['pieces'] + 1,
++    '%d pieces sur %d au canon, a l empreinte brute et a la taille ; membres du zip %d (attendu %d avec le manifeste) ;'
++    ' ecarts %s ; CANON DU LOT %s' % (n_lignes, CONF['pieces'], len(zl.namelist()), CONF['pieces'] + 1, bad, emp(man.encode())[0]))
+ 
+ # ------------------------------------------------------------------ index de TOUT ce que je detiens
+@@ -140,6 +154,6 @@
+ TOK = sorted(set(re.findall(r'(?<![0-9a-f])[0-9a-f]{16}(?![0-9a-f])', ACTE)))
+ non = [t for t in TOK if t not in IDX]
+-chk('C03', len(TOK) == 51,
+-    '%d empreintes distinctes citees dans l acte (machine 1 annonce 51)' % len(TOK))
++chk('C03', len(TOK) == CONF['tok'],
++    '%d empreintes distinctes citees dans l acte (machine 1 annonce %d)' % (len(TOK), CONF['tok']))
+ dire('     resolues chez moi : %d ; NON resolues chez moi : %d' % (len(TOK) - len(non), len(non)))
+ for t in TOK:
+@@ -523,30 +537,102 @@
+     'touchees' in ACTE_N, 'la meme ligne est citee dans l acte')
+ 
+-# ------------------------------------------------------------------ nn.9 : numerotation et compte des regles candidates (X)
++# ------------------------------------------------------------------ nn.9 : regles candidates sous (X), decompte PAR PIECE
+ dire()
+ dire('--- nn.9 : regles candidates sous (X) ---')
++
++
++def regles_acte(chemin):
++    t = open(os.path.join(ICI, chemin), encoding='utf-8').read()
++    m0 = re.search(r'(?m)^nn\.\d+ REGLES CANDIDATES[^\n]*\n', t)
++    corps = t[m0.end():]
++    m1 = re.search(r'(?m)^nn\.\d+ ', corps)
++    return [int(x) for x in re.findall(r'(?m)^  (\d{1,2})[. ] ', corps[:m1.start()])]
++
++
+ zm = zipfile.ZipFile(os.path.join(ICI, 'lot_machine2_2026-09-29_contreseing_acte_delta93_v1.zip'))
+ n93 = zm.read('POUR_MACHINE1_contreseing_acte_delta93_machine2_v1.md').decode('utf-8')
+ sec6 = n93.split('## 6. VERSE SOUS (X)')[1].split('## 7.')[0]
+ miens = sorted(int(x) for x in re.findall(r'^  (\d{2})  ', sec6, re.M))
++SRC_X = ['DEPOT_delta90/journal_delta_nn_constante_A_v2.md', 'DEPOT_delta91/journal_delta_nn_constante_A_run_v2.md',
++         'DEPOT_delta92/journal_delta_nn_constante_A_second_ordre_v1.md',
++         'm2_rec_acte93_v2/journal_delta_nn_constante_A_mesure_v2.md']
++par_piece = [regles_acte(c) for c in SRC_X] + [miens]
++deja = [x for l in par_piece for x in l]
+ nn9 = ACTE.split('nn.9 REGLES CANDIDATES')[1].split('nn.10 ')[0]
+ neufs = sorted(int(x) for x in re.findall(r'^  (\d{2}) \(m1', nn9, re.M))
+-chk('C26', not (set(miens) & set(neufs)),
+-    'numeros des regles candidates : les 4 nouvelles de l acte portent %s ; les 3 de MON contreseing du 93 (note '
+-    'scellee, lot_machine2_2026-09-29_contreseing_acte_delta93_v1, que machine 1 detient) portent %s ; communs : %s'
+-    % (neufs, miens, sorted(set(miens) & set(neufs))))
+-n_prec = 21                                          # mon contreseing du 93 (note v1 et v2) : "vingt et une candidates"
+-assert 'vingt et une candidates' in n93
+-dit = re.search(r'la revue \(X\), echue : ([a-z-]+) candidates', ACTE).group(1)
+-chk('C27', dit == 'vingt-cinq',
+-    'compte de la revue (X) : l acte dit "%s candidates" ; mon contreseing du 93 en compte %d, plus les %d de l acte = %d'
+-    % (dit, n_prec, len(neufs), n_prec + len(neufs)))
+-par = re.search(r'Les ([a-z-]+) precedentes \(([^)]*)\)', ACTE_N)
+-MOTS_N = {'une': 1, 'deux': 2, 'trois': 3, 'quatre': 4, 'huit': 8, 'dix-huit': 18, 'vingt et une': 21}
+-somme = sum(MOTS_N[w] for w in re.findall(r'(huit|quatre|une|trois|deux)', par.group(2)))
+-chk('C28', MOTS_N[par.group(1)] == somme,
+-    'la parenthese "Les %s precedentes (%s)" somme a %d ; le nombre annonce vaut %d (heredite : le delta 93 deposait '
+-    'deja "treize precedentes (huit du 90, quatre du 91, une du 92)" ; la numerotation 13, 14, 15 donne trois au 92)'
+-    % (par.group(1), par.group(2), somme, MOTS_N[par.group(1)]))
++ok26 = (deja == list(range(1, len(deja) + 1)) and neufs == list(range(len(deja) + 1, len(deja) + 1 + len(neufs))))
++chk('C26', ok26,
++    'numeros des regles candidates relus dans MES copies des actes 90, 91, 92, 93 et dans mon contreseing du 93 : '
++    '%d regles, par piece %s, de 1 a %d sans trou ni doublon : %s ; les %d nouvelles de l acte portent %s'
++    % (len(deja), [len(l) for l in par_piece], max(deja), deja == list(range(1, len(deja) + 1)), len(neufs), neufs))
++MOTS_N = {'une': 1, 'deux': 2, 'trois': 3, 'quatre': 4, 'six': 6, 'huit': 8, 'dix-huit': 18, 'vingt et une': 21,
++          'vingt-deux': 22, 'vingt-cinq': 25}
++dit = re.search(r'la revue \(X\), echue : ([a-z -]+?) candidates', ACTE_N).group(1)
++chk('C27', MOTS_N.get(dit) == len(deja) + len(neufs),
++    'compte de la revue (X) : l acte dit "%s candidates" ; mes pieces en comptent %d, plus les %d de l acte = %d'
++    % (dit, len(deja), len(neufs), len(deja) + len(neufs)))
++par = re.search(r'Les ([a-z -]+?) precedentes \(([^)]*)\)', ACTE_N)
++if par is None:
++    chk('C28', False, 'aucune parenthese "Les ... precedentes (...)" lisible dans l acte')
++else:
++    vals = [MOTS_N[t] for t in re.findall(r'\b(huit|quatre|trois|deux|six|une)\b', par.group(2))]
++    # v2 : huit, quatre, trois, trois, trois = un nombre par piece, dans l ordre des actes puis de mon contreseing
++    chk('C28', MOTS_N[par.group(1)] == sum(vals) == len(deja) and vals == [len(l) for l in par_piece],
++        'la parenthese "Les %s precedentes (%s)" somme a %d ; le nombre annonce vaut %d ; mes pieces donnent %s'
++        % (par.group(1), par.group(2), sum(vals), MOTS_N[par.group(1)], [len(l) for l in par_piece]))
++
++if VERSION_ACTE == 'v2':
++    import difflib
++    z1 = zipfile.ZipFile(os.path.join(ICI, 'lot_machine1_2026-11-12_acte_qualification_EB_v1_recu.zip'))
++    V1 = z1.read('journal_delta_nn_qualification_EB_v1.md').decode('utf-8')
++    a_, b_ = V1.splitlines(), ACTE.splitlines()
++    sect, cur = [], 'tete'
++    for l in a_:
++        mm = re.match(r'^nn\.(\d+) ', l)
++        if mm:
++            cur = 'nn.' + mm.group(1)
++        sect.append(cur)
++    touches, nn6 = set(), []
++    NUM = re.compile(r'\d+\.\d+(?:e[+-]?\d+)?')
++    ajoutes = set()
++    for tag, i1, i2, j1, j2 in difflib.SequenceMatcher(None, a_, b_, autojunk=False).get_opcodes():
++        if tag == 'equal':
++            continue
++        for i in (list(range(i1, i2)) or [min(i1, len(a_) - 1)]):
++            touches.add(sect[i])
++            if sect[i] == 'nn.6' and i1 != i2:
++                nn6.append(a_[i].strip()[:60])
++        if tag in ('replace', 'insert'):
++            for l in b_[j1:j2]:
++                ajoutes |= set(NUM.findall(l))
++    permis = {'tete', 'nn.1', 'nn.6', 'nn.8', 'nn.9', 'nn.10', 'nn.12', 'nn.13', 'nn.14'}
++    interdit = sorted(touches - permis)
++    nouveaux = sorted(ajoutes - set(NUM.findall(V1)))
++    chk('C29', not interdit and not nouveaux and len(nn6) == 2,
++        'diff v1 -> v2 recalcule par moi : sections touchees %s ; sections NON touchees parmi celles qui portent les '
++        'nombres mesures (nn.0, nn.2, nn.3, nn.4, nn.5, nn.7, nn.11) : %s ; dans nn.6 seules les %d lignes du paragraphe '
++        '(e) changent ; nombres decimaux AJOUTES absents du v1 : %s'
++        % (sorted(touches), not interdit, len(nn6), nouveaux))
++    r1 = ["la largeur rendue par l'absorbeur vaut 0.435 et 0.422 fois la largeur connue",
++          "la porte de descente de M17 y refuse le point"]
++    chk('C30', all(norm(x) in ACTE_N for x in r1) and k3[0] == '0.435' and k3[2] == '0.422' and
++        all('REFUSE' in x for x in dd),
++        'R-1 amendee : la phrase de nn.13 (largeur rendue 0.435 et 0.422 fois la connue, ET refus de la porte de M17) est '
++        'exacte sur mes donnees : k = 3 G20 %s et %s ; les quatre portes REFUSENT (C17) ; l amendement est juste : M17 '
++        'aurait rendu un arret de regle, pas un nombre faux' % (k3[0], k3[2]))
++    chk('C31', "l'operateur a laisse la question de cote" in ACTE_N and 'a machine 2 le 11/11' in ACTE_N,
++        'R-2 prise : nn.10 (iv) dit que l operateur a laisse la question de cote, a machine 2 le 11/11')
++    cert = [c for c in IDX.get('7b64b1b7d86c0591', []) if 'certification_reference_TP' in c]
++    egal = (open(os.path.join(DL, 'lot_machine1_2026-11-11_certification_reference_TP_v1.zip'), 'rb').read() ==
++            open(os.path.join(ICI, 'lot_machine1_2026-11-11_certification_reference_TP_v1_recu.zip'), 'rb').read())
++    chk('C32', bool(cert) and egal and norm("est detenue par machine 2, recue de l'operateur et identique a l'octet a la "
++                                           "livraison") in ACTE_N,
++        'detention : la certification de ma reference (7b64b1b7d86c0591) est chez moi (%s), copie de BOCAL4 == fichier de '
++        'Downloads a l octet : %s ; nn.1 le dit' % (cert[:1], egal))
++    neufs_c = ['0d7870ebad535303', '089c2c57b42dd4a0', '33fa99640756efba', '850767f40a770f1b', 'ec04b9e5dddee5f3']
++    chk('C33', all(c in TOK and c in IDX for c in neufs_c) and len(set(TOK) - set(re.findall(
++        r'(?<![0-9a-f])[0-9a-f]{16}(?![0-9a-f])', V1))) == 5,
++        'les 5 empreintes que le v2 ajoute au v1 (v1, son lot, mon lot de contreseing, ma note, ma note du 93) sont '
++        'citees ET resolues chez moi ; 51 + 5 = 56 : %s' % (len(TOK) == 56))
+ 
+ # ------------------------------------------------------------------ bilan
+@@ -557,5 +643,5 @@
+ for c in mord:
+     dire('  MORD %s : %s' % (c['id'], c['msg'][:200]))
+-dire('-- FIN verification_acte_nn_qualification_EB_machine2_v1 --')
++dire('-- FIN verification_acte_nn_qualification_EB_machine2_v2 --')
+ json.dump({'acte': c_act, 'bilan': {'chk': len(CHK), 'mord': len(mord), 'noms': [c['id'] for c in mord]},
+            'controles': CHK, 'non_resolues': NON_RESOLUES, 'info': INFO}, open(JSN, 'w', encoding='ascii'), indent=1)

@@ -1,0 +1,23 @@
+C01  le script lu est celui nomme dans les trois fichiers                         TIENT  canon 5fd3a1897ca0442a
+C02  moteur et gel nommes                                                         TIENT  moteur 82a0be882568fe0c gel cde0cd11a763f26d
+C03  fichiers reels (prevol faux) et grille annoncee                              TIENT  Ns [50, 60, 70] thetas [0.1, 0.15, 0.2, 0.25, 0.3]
+C04  17 g_j, g = 0.05 * 2.0 ** (j / 8.0) au bit                                   TIENT  j de 0 a 16
+C05  Gamma_ref, u_ref, g : toujours des nombres finis (engagement O-1/O-2)        TIENT  
+C06  g de la liste == g de la table, en repr ; meme liste dans les deux fichiers  TIENT  [(6, '0.08408964152537146'), (8, '0.1')]
+C07  la liste des retenus ne porte AUCUNE largeur (cles j, g seulement)           TIENT  cles ['p', 'prevol', 'retenus', 'w2']
+C08  149 points calcules = 17 + 11 * 12                                           TIENT  149
+C09  Gamma_ref, u_ref et theta des 11 raffines, recalcules d'un autre code        TIENT  ecart relatif Gamma_ref 0.0e+00, ecart u_ref 0.0e+00, theta idem
+C10  les non raffines portent u_ref = 1.0 et le Gamma de (50, 0.20)               TIENT  j [0, 1, 13, 14, 15, 16]
+C11  chaque raffine : Re E stable (< 1e-9) et recouvrement > 0.9 sur tous ses points TIENT  pire ecart Re E 1.7e-12
+C12  la feuille b3ac958a1a2b915b, sur MA table, retrouve la liste (regle du gel rejouee par elle) TIENT  feuille [6, 8], reference [6, 8], sonde [6, 8]
+C13  mutation : j = 5 a u_ref = 0.0099 -> la feuille change la liste (le controle C12 est vivant) TIENT  liste mutee [5, 8]
+C14  mutation : Gamma_ref(j = 8) x 1.5 -> ecart a mes points calcules (le controle C09 est vivant) TIENT  
+   BORD : j = 5, u_ref = 0.010019582, seuil 0.01, depassement 1.96e-05 ; Gamma_ref 1.3839e-10 (plus proche de 1e-10 que j = 6 : |ln| 0.325 contre 1.681)
+   BORD : l'ecart qui fait u_ref = 0.0100 est a (N, theta) = (60, 0.25) : Gamma 1.39772e-10 contre Gamma_ref 1.38386e-10
+C15  j = 5 EXCLU par la regle (u_ref > 0.01), j = 6 retenu : consigne, pas corrige TIENT  marge 1.96e-05
+   ARNOLDI j = 5 (N = 60, theta = 0.20) : Gamma = 1.385573e-10 ; dense 1.379764e-10 (ecart 4.21e-03) ; Gamma_ref 1.383855e-10 (ecart 1.24e-03) ; Re E -0.0001247066 ; rec 0.9589
+   ARNOLDI j = 6 (N = 60, theta = 0.20) : Gamma = 5.372624e-10 ; dense 5.363973e-10 (ecart 1.61e-03) ; Gamma_ref 5.368820e-10 (ecart 7.08e-04) ; Re E -0.0001484994 ; rec 0.9589
+   ARNOLDI j = 8 (N = 60, theta = 0.20) : Gamma = 6.428271e-09 ; dense 6.428821e-09 (ecart 8.56e-05) ; Gamma_ref 6.427903e-09 (ecart 5.72e-05) ; Re E -0.0002107570 ; rec 0.9588
+C16  SECONDE METHODE (Arnoldi) retrouve la reference aux deux retenus, a u_ref + 5e-3 pres, meme Re E TIENT  4 s
+   DIAGNOSTIC j = 5 : Arnoldi 1.385573e-10 contre Gamma_ref 1.383855e-10 (ecart 1.24e-03) et contre le dense (50..70) 1.38e-10..1.40e-10 : la table dense est entachee d'un bruit de l'ordre de 2e-02 a ce g ; la liste N'EST PAS modifiee.
+BILAN : 16 controles, 0 mordent

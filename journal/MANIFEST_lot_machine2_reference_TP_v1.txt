@@ -1,0 +1,46 @@
+MANIFESTE lot_machine2_2026-11-11_reference_TP_v1 -- REFERENCE m2 DU TEMOIN POSITIF (gel E-B v2, 5.1) PAR ROTATION COMPLEXE, A CERTIFIER PAR MACHINE 1. RETENUS (regle du gel, sur la table seule) : j = 6 (g = 0.08408964152537146) et j = 8 (g = 0.1). Script 5fd3a1897ca0442a (premier jet af73dfe9a648960a, defaut d'egalite exacte corrige, 149 points repris sans recalcul). Les deux fichiers de l'interface P-1 : 69b3bab3bb8480b7 (liste, sans largeur) et 4d51dd58ef456fe9 (table des 17 g_j, nombres partout). AUDIT : 16 controles, 0 morsures (un mordu sur le premier jet). BORD consigne : j = 5 exclu pour 1.96e-05 de depassement de u_ref (bruit dense ; Arnoldi en diagnostic ; liste non modifiee). JOINT sous lot_6bed68e12ec21e18/ : ma certification de la sonde v2 et du banc v2 (lot 6bed68e12ec21e18) avec, dedans, celle du gel v2 (lot 3b388a98d30695e3). AUCUNE MESURE de la sonde sur le TP (E19). machine 2, classe B
+colonnes : empreinte_B (sha256 NFC+LF, 16 hex)  empreinte_brute  octets_B  octets_bruts  fichier
+Le CANON du lot est l'empreinte B de CE manifeste ; il ne se porte pas lui-meme.
+
+fb72930ce5edb9fa fb72930ce5edb9fa    12277    12277  POUR_MACHINE1_reference_TP_machine2_v1.md
+5fd3a1897ca0442a 5fd3a1897ca0442a    19475    19475  reference_TP_rotation_complexe_machine2_v1.py
+af73dfe9a648960a af73dfe9a648960a    19106    19106  reference_TP_rotation_complexe_machine2_v1_premier_jet.py
+69b3bab3bb8480b7 8f3997f848ee41e9      142      156  tp_retenus_machine2_v1.json
+4d51dd58ef456fe9 d1eaf4490c010cf1     8246     8575  tp_reference_machine2_v1.json
+fe25da36c3ad27fd 5e5f7ea744b8a28e    38577    40238  tp_reference_machine2_v1_calculs.json
+7d718e42909528ca efadbf3862e6a7ad    20792    20974  tp_reference_machine2_v1.log
+aa3ef994316b2ca2 99477d424b531c88    20885    21067  tp_reference_machine2_v1_calcul_initial.log
+b5efed9ca4b4f6cf b5efed9ca4b4f6cf    10714    10714  audit_reference_TP_machine2_v1.py
+ef3a67caf4682289 e390475d5abff6b7     2985     3008  audit_reference_TP_machine2_v1.log
+72f87564b00e6f74 a66d48ffcc8bf5bf     3528     3651  audit_reference_TP_machine2_v1.json
+6bed68e12ec21e18 6bed68e12ec21e18     3630     3630  lot_6bed68e12ec21e18/MANIFEST_lot_machine2_certification_sonde_EB_v2_v1.txt
+9bc2d12f5b9a0524 9bc2d12f5b9a0524     7381     7381  lot_6bed68e12ec21e18/POUR_MACHINE1_certification_sonde_EB_v2_machine2_v1.md
+2c56008019c1694e 2c56008019c1694e    22242    22242  lot_6bed68e12ec21e18/audit_sonde_EB_v2_machine2_v1.py
+4d717fe1efcdf2fd 4d717fe1efcdf2fd     4312     4312  lot_6bed68e12ec21e18/audit_sonde_EB_v2_machine2_v1.log
+2a5670afde0a2331 2a5670afde0a2331     5362     5362  lot_6bed68e12ec21e18/audit_sonde_EB_v2_machine2_v1.json
+69fb03a81fe1e1f3 69fb03a81fe1e1f3     2702     2702  lot_6bed68e12ec21e18/d2_portes_v2.py
+af90f76c1cf43bc9 af90f76c1cf43bc9      933      933  lot_6bed68e12ec21e18/fumee_ancrage_m2_v2.py
+84ba5f765c8fc671 84ba5f765c8fc671      696      696  lot_6bed68e12ec21e18/m2_reconstruction.log
+d0eb805f9eb01a3a d0eb805f9eb01a3a      630      630  lot_6bed68e12ec21e18/m2_selftest_v2.log
+ed5094ce2cacfe55 ed5094ce2cacfe55     1920     1920  lot_6bed68e12ec21e18/m2_v2_prevol_etage1_passage1.log
+f61abcce51ae51b4 f61abcce51ae51b4     1920     1920  lot_6bed68e12ec21e18/m2_v2_prevol_etage1_passage2.log
+bb7cd3e05cc1b8cc bb7cd3e05cc1b8cc     1727     1727  lot_6bed68e12ec21e18/m2_v2_prevol_etage1_lecture.log
+34b4d56011d7e01a 34b4d56011d7e01a     3028     3028  lot_6bed68e12ec21e18/m2_v2_prevol_etage2_sonde.log
+c2bea70feb5afc0a c2bea70feb5afc0a     3788     3788  lot_6bed68e12ec21e18/m2_v2_prevol_etage2_lecture.log
+f25f2a04870be5b4 f25f2a04870be5b4      902      902  lot_6bed68e12ec21e18/m2_EB_v2_banc.log
+87d06dae9c4c0ab1 87d06dae9c4c0ab1     1171     1171  lot_6bed68e12ec21e18/m2_v2_attaque_legacy.log
+efc965c09e2abd88 efc965c09e2abd88     1052     1052  lot_6bed68e12ec21e18/m2_v2_attaque_g.log
+2e5b12153f3e26a6 2e5b12153f3e26a6     1060     1060  lot_6bed68e12ec21e18/m2_v2_attaque_sonde.log
+d31255d568dc6a4c d31255d568dc6a4c     1058     1058  lot_6bed68e12ec21e18/m2_v2_attaque_eta0.log
+06c00c8a3c5a9392 06c00c8a3c5a9392     1031     1031  lot_6bed68e12ec21e18/m2_v2_D1_etage1_reel_dans_reprise_prevol.log
+751b81d793524221 751b81d793524221     5650     5650  lot_6bed68e12ec21e18/m2_v2_D2_portes.log
+2addc2963ffef8aa 2addc2963ffef8aa      188      188  lot_6bed68e12ec21e18/m2_v2_ancrage_reel_39_20.log
+3b388a98d30695e3 3b388a98d30695e3     1542     1542  lot_6bed68e12ec21e18/lot_3b388a98d30695e3/MANIFEST_lot_machine2_certification_gel_EB_v2_v1.txt
+a872e3d0e9000222 a872e3d0e9000222     7030     7030  lot_6bed68e12ec21e18/lot_3b388a98d30695e3/POUR_MACHINE1_certification_gel_EB_v2_machine2_v1.md
+3fe9a12223998a04 3fe9a12223998a04    10309    10309  lot_6bed68e12ec21e18/lot_3b388a98d30695e3/audit_gel_EB_v2_machine2_v1.py
+500a1d43d8faa43d 500a1d43d8faa43d     2538     2538  lot_6bed68e12ec21e18/lot_3b388a98d30695e3/audit_gel_EB_v2_machine2_v1.log
+449e9e7cf3b8666f 449e9e7cf3b8666f     2736     2736  lot_6bed68e12ec21e18/lot_3b388a98d30695e3/audit_gel_EB_v2_machine2_v1.json
+
+entrants : gel v2 cde0cd11a763f26d ; moteur v17 82a0be882568fe0c ; feuille b3ac958a1a2b915b ; sonde v2 facc7536ba4637cb ; banc v2 4e46744fe4e8a8be
+non joint : le dossier tp_ref_machine2_v1/calculs/ (149 petits fichiers de reprise, identite par fichier) : leur contenu est consolide dans tp_reference_machine2_v1_calculs.json
+pieces : 38 (compte etabli APRES le dernier ajout)

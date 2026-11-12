@@ -1,0 +1,21 @@
+=== 1. LE LOT ENTRANT DE MACHINE 1 ===
+OK    C01 lot entrant : 18 pieces au canon B, a l empreinte brute et a la taille (canon du lot 6bea6ffe7db2b272) : ecarts : aucun
+=== 2. L ETAPE 0 (M-3), JOINTE AU LOT ===
+OK    C02 etape 0 : manifeste au canon 94c3749c83d4b044, 10 pieces au canon, et les trois pieces citees par le gel v1 (section 2) y figurent : ecarts : aucun
+=== 3. LE v2 SE RECONSTRUIT DEPUIS LE v1 ===
+OK    C03 v1 au canon 8603af9d4f63e9dc ; v2 au canon cde0cd11a763f26d : lus 8603af9d4f63e9dc cde0cd11a763f26d
+OK    C04 la construction de machine 1 rejouee chez moi depuis le v1 rend un v2 IDENTIQUE AU BIT au v2 livre, par 18 remplacements : sortie identique ; 18 remplacements ; code 0 
+=== 4. LE DIFF ===
+OK    C05 le diff joint == mon diff : memes lignes ajoutees et retirees, dans le meme ordre : 123 lignes de changement chez moi, 123 dans le diff joint ; ajoutees 97, retirees 26
+OK    C06 section 4 : le bloc des tolerances (tau, 0.90, 1e-12, tau_TP) est identique au v1 octet pour octet : 374 caracteres
+OK    C07 les nombres mesures cites sont intacts dans le v2 : 3.7027 ; 2.6614e-09 / 6.5625e-11 ; 7.550e-14 ; "5e+03 a 5e+06"
+=== 5. E-EB-2 : LE DECOMPTE ===
+OK    C08 le decompte du v2 nomme le TN et somme 180 + 180 + 90 + 30 + 60 + 15 = 555 ("au plus 555") : lus [180, 180, 90, 30, 60, 15], somme 555
+=== 6. E-EB-1 : LA REGLE DU v2, JOUEE ===
+OK    C09 G-Q7 du v2 est SATISFAISABLE : (20.0 ... 21.0) -> PLATEAU, la meme avec nextafter(21.0, +inf) -> PAS DE PLATEAU, en rationnels exacts : {'borne_exacte_(20..21)': True, 'borne_plus_un_ulp': False, 'serie_du_piege_v1_(1.0..1.05)_en_rationnels': False}
+  consigne (pas un controle) : G-Q7 ACCORD ecrit "|ln| = tau - 1e-6 -> ACCORD ; tau + 1e-6 -> PAS" et vaut aussi pour "l accord au TP" dont la borne est tau_TP = tau + u_ref (section 4) : le second cas rend ACCORD des que u_ref > 1e-6 -> reserve R-2 de la note (le selftest doit dire u_ref = 0)
+=== 7. M-2 : LE 37e FICHIER DU DOSSIER DU RUN ===
+OK    C10 le 37e fichier est l archive de transport : 48748 o, sha256 79c57b2bccfa43bb89df60ab088fc9d0f1df2a92d818aa7a1d07f5596796a28c (celui que machine 1 donne), 36 membres == les 36 lignes du manifeste, au canon, aucun zip interne : 48748 o, 36 membres
+=== 8. UNE PHRASE DE L ETAPE 0 QUE LES PIECES PERMETTENT DE RELIRE ===
+OK    C11 la largeur ponderee du gel M17 vaut 5e+03 a 5e+06 fois Gamma_LS aux six points (gel 7, repris au v2) : rapports ['4.57e+06', '3.73e+06', '4.19e+06', '8.69e+04', '9.55e+04', '5.11e+03']
+=== BILAN : 11 controles, 0 mordent ===

@@ -1,0 +1,24 @@
+OK    C01 canons des quatre pieces de la reference
+OK    C02 en-tetes : gel, moteur, canon du script, w2, p, prevol faux
+OK    C03 la liste des retenus ne porte que j et g : cles ['g', 'j', 'p', 'prevol', 'retenus', 'w2']
+OK    C04 dix-sept lignes, j = 0..16, g_j == 0.05 * 2^(j/8) au bit
+OK    C05 g des retenus == g de la table == echelle, au bit ; table.retenus == liste
+OK    C06 Gamma_ref et u_ref : un nombre fini a chaque ligne ; non raffine -> u_ref = 1.0 : raffines [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+OK    C07 points bruts : sans doublon, 149, et tous ceux que Gamma_ref et u_ref consomment : 149 points = 6 non raffines + 11 raffines x 13 ; grille par raffine : N = 50 et 70 aux 5 theta, N = 60 aux 3 centraux ; (60, 0.10) et (60, 0.30) non joues
+OK    C08 Gamma_ref, u_ref et theta des 11 raffines recalcules des points bruts : ecart max 0.0e+00 ; theta differents []
+OK    C09 non raffines : Gamma_ref == Gamma(N = 50, theta = 0.20) du point brut, hors [1e-12, 1e-6]
+OK    C10 aucune ligne raffinee ne porte de motif d'exclusion ajoute
+OK    C11 selection rejouee par un code ecrit ici == liste : candidats [6, 7, 8, 9, 10] -> [6, 8]
+OK    C12 canon de la feuille de lecture certifiee
+OK    C13 selection_gel de la feuille certifiee sur la table == liste
+OK    C14 la feuille lit la vraie table : etage 1 synthetique a Gamma_ref -> TIENT : TIENT []
+OK    C15 controle vivant : une largeur a j = 6 fausse de 6 pour cent -> NE TIENT PAS : ['TP ne tient pas a j06']
+OK    C16 controle vivant : une liste [5, 8] contre cette table -> NE TIENT PAS : ['TP non concluant (retenus sonde [6, 8], reference [5, 8], regle du gel [6, 8])']
+OK    C17 bord j = 5 : u_ref depasse 0.01 de moins de 1e-4, par un seul point : u_ref = 0.010019582, depassement 1.96e-05, point (N = 60, theta = 0.25) ; second plus grand ecart 5.98e-03
+OK    C18 sans j = 5 le plus proche de 1e-10 est j = 6 ; avec lui ce serait j = 5
+OK    C19 j = 6 : ses 13 points, Gamma a moins de 1 pour cent, Re E stable, etat du vide : Gamma 5.3640e-10 a 5.3803e-10 (etalement 3.0e-03) ; Re E etalement 1.0e-12 ; recouvrement 0.904 a 0.990
+OK    C19 j = 8 : ses 13 points, Gamma a moins de 1 pour cent, Re E stable, etat du vide : Gamma 6.4269e-09 a 6.4290e-09 (etalement 3.3e-04) ; Re E etalement 1.5e-12 ; recouvrement 0.904 a 0.990
+OK    C20 mon H(theta = 0) == H_2D du moteur (jumeau H+), aux deux tailles jouees : max 1.4e-14
+OK    C21 ma phase e^{5 i theta} est stationnaire en theta, la phase fausse e^{4 i theta} mord : juste [6.4281e-09, 6.4283e-09, 6.4282e-09] ; fausse [-0.00012595, -0.00016582, -0.0002039]
+OK    C22 mes 5 points independants contre les points bruts de m2 : Gamma a 1e-2, Re E a 1e-11 : j8 N50 t0.20 : -9.8e-06 (a Gamma_ref +1.0e-04) ; j6 N50 t0.20 : -1.7e-03 (a Gamma_ref -1.1e-04) ; j6 N50 t0.15 : +4.0e-04 (a Gamma_ref +1.2e-03) ; j6 N60 t0.20 : +3.1e-03 (a Gamma_ref +2.2e-03) ; j8 N60 t0.25 : +3.5e-04 (a Gamma_ref +1.8e-04)
+AUDIT m1 : 23 controles, 0 morsures

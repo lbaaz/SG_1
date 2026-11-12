@@ -1,0 +1,225 @@
+--- qualification_EB_pre_enregistrement_v1.md	2026-11-11 04:06:58.728655557 +0100
++++ qualification_EB_pre_enregistrement_v2.md	2026-11-11 14:29:15.882079628 +0100
+@@ -1,4 +1,4 @@
+-# GEL -- QUALIFICATION DE L'ESTIMATEUR E-B (Gamma_LS) -- v1
++# GEL -- QUALIFICATION DE L'ESTIMATEUR E-B (Gamma_LS) -- v2
+ # Banc de qualification, CLASSE 2 -- plume machine 1 -- 11/11/2026
+ # Piste (0) de la branche quantique, etape 1. Ce n'est PAS une manche.
+ 
+@@ -9,8 +9,11 @@
+ BOCAL4). Aucune prediction de physique nouvelle : la seule question est
+ celle de l'instrument. Regle E19 : aucun run avant certification croisee
+ du gel ET de la sonde. Un seul tour de correction est admis (section 12).
+-Le numero de version est dans le nom ; l'empreinte est celle du FICHIER
+-(titre a terminateur, convention B).
++Le numero de version est dans le nom ; l'empreinte est la convention B
++du FICHIER ENTIER, de la premiere ligne au saut de ligne final apres le
++terminateur -- "titre a terminateur" ne designait rien d'autre (M-4).
++v2 = v1 (8603af9d4f63e9dc) + les hunks de la section 15 : c'est LE tour
++de correction de la section 12.
+ 
+ ## 1. Question et perimetre
+ 
+@@ -48,6 +51,10 @@
+             d'un absorbeur complexe en base finie) ; Caliceti, Graffi,
+             Maioli (resonances de l'oscillateur cubique).
+ 
++Le lot de l'etape 0 n'etait pas detenu par m2 au 11/11 (M-3) : il est
++JOINT au lot de ce gel. Tout nombre que ce gel en tire se relit dans
++les six pieces f070 du run, sans lui.
++
+ Ce que l'etape 0 a etabli et que ce gel prend pour acquis : aux six
+ points, les portes du gel M17 (translation de p couches, N + p) et les
+ deux derniers pas de descente sont sous tau_LS = 0.05 ; l'etendue de
+@@ -74,7 +81,9 @@
+ 3.4 FORMES D'ABSORBEUR (a, b = occupations des modes 1 et 2) :
+   F1 (native) : W = (max(a, b) - r_c)^2 si max(a, b) > r_c, 0 sinon.
+   F2 (exposant) : W = (max(a, b) - r_c)^4 / L^2 si max(a, b) > r_c
+-       (meme valeur que F1 au bord de boite, autre profil).
++       (meme valeur que F1 a la distance L, c'est-a-dire a l'indice N,
++        HORS boite ; sur la derniere ligne reelle, distance L - 1, le
++        rapport F2 / F1 vaut (L - 1)^2 / L^2 ; autre profil).
+   F3 (coordonnee) : rho = max(a, 2 b) ; W = (rho - r_c)^2 si rho > r_c
+        (bord aligne sur le canal (2,1) : l'absorption commence a
+         b = r_c / 2 au lieu de r_c).
+@@ -111,15 +120,21 @@
+ |Gamma(H+)| du run (7.550e-14), arrondi a la decade superieure.
+ 
+ 3.11 PLATEAU. Une FENETRE est une suite de cinq valeurs LISIBLES a k
+-consecutifs (quatre divisions par deux, un facteur 16 en eta). Son
+-ETALEMENT est e = max(gamma) / min(gamma) - 1. Il y a PLATEAU si une
+-fenetre a e <= tau. La fenetre retenue est celle d'etalement minimal ;
+-a egalite, le plus petit k de depart. Gamma_pl est la moyenne
++consecutifs (quatre divisions par deux, un facteur 16 en eta). Il y a
++PLATEAU si une fenetre verifie, EN RATIONNELS EXACTS,
++    Fraction(max) <= (1 + Fraction(1, 20)) * Fraction(min)
++(regle 15 ; E-EB-1 : la forme max / min - 1 <= 0.05 est fausse en
++flottants a la borne meme). L'ETALEMENT e = max(gamma) / min(gamma) - 1
++n'est plus qu'un affichage. La fenetre retenue est celle de plus petit
++rapport max / min, compare lui aussi en rationnels ; a egalite, le plus
++petit k de depart. Gamma_pl est la moyenne
+ geometrique des cinq valeurs de la fenetre retenue. Le meilleur
+ etalement est CONSIGNE meme sans plateau.
+ 
+ 3.12 ACCORD entre deux valeurs de plateau : |ln(Gamma_a / Gamma_b)|
+-<= tau.
++<= tau. Comparaison en flottants : une borne de logarithme n'a pas de
++forme exacte ; elle se teste a tau - 1e-6 et a tau + 1e-6 (G-Q7), pas
++a la borne.
+ 
+ ## 4. Tolerances (aucune n'est fixee apres lecture)
+ 
+@@ -133,6 +148,10 @@
+ Ce que la plume a vu avant d'ecrire : les trois pas de descente du run
+ par point (k = 0 a 3, quatre valeurs). Une fenetre demande cinq
+ valeurs : aucune issue de ce gel n'est calculable sur ce qui a ete vu.
++Vu DEPUIS le v1 (note m2 0d11d6866e3c5f37) : un essai de formule de m2
++a UN point de l'echelle du TP, g_8 = 0.10, largeur 6.428e-09 par
++rotation complexe. Ce n'est pas la reference et aucune valeur de la
++sonde n'existe ; la plume connait donc l'ordre de grandeur a ce g.
+ Si le temoin positif lui-meme ne tient pas tau, le banc rend NON
+ CONCLUANT D'INSTRUMENT et NE LIT PAS le fantome ; tau ne se desserre
+ pas sur les donnees du fantome.
+@@ -165,20 +184,29 @@
+     meme echelle, meme plateau.
+   TP TIENT si, a chaque g retenu : PLATEAU a G20 et a G30, et
+     |ln(Gamma_pl / Gamma_ref)| <= tau_TP aux deux.
+-  Les deux scripts ne lisent pas la sortie l'un de l'autre ; la
+-  comparaison est faite par la feuille de lecture.
++  INTERFACE (precision du v2). Le script de reference ecrit deux
++  fichiers : la LISTE des couplages retenus (j, g), sans aucune
++  largeur, et la table des references. La sonde ne lit que la liste ;
++  la feuille de lecture seule ouvre la table et fait la comparaison.
++  Aucun des deux scripts de mesure ne lit une largeur de l'autre.
+   Estimation de plume, NON OPPOSABLE (WKB 1D le long de q1 + q2, script
+   estimation_TP_wkb_machine1_v1.py joint) : sept des dix-sept g_j, de
+   j = 5 a j = 11 (g de 0.077 a 0.130), tombent dans la fenetre. Une
+   premiere estimation faite de tete la placait a g entre 0.2 et 0.45 :
+   fausse d'un facteur trois, corrigee avant le gel par le calcul.
++  L'essai de formule de m2 a g_8 = 0.10 rend 6.428e-09 la ou ce WKB
++  rend 1.46e-09 : un facteur 4.4. La fenetre WKB se lit comme un ordre
++  de grandeur ; la selection se fait sur la reference seule.
+ 
+ 5.2 TEMOIN NEGATIF (TN) -- un etat qui DOIT echouer. Au point 1.95,
+ (F1, G20) : l'etat de plus grand recouvrement hermitien avec l'etat de
+ Fock |a = r0 + 10, b = (r0 + 10) // 2>, loge dans l'absorbeur sur le
+ canal ; suivi sur l'echelle. Attendu : PAS DE PLATEAU (gamma
+-proportionnelle a eta). S'il est non lisible, on essaie a + 5 puis
+-a - 5 ; trois non lisibles : TN NON JOUE, consigne au verdict.
++proportionnelle a eta). S'il est non lisible, on lit le candidat a + 5
++puis a - 5 (b = a // 2 a chaque fois) ; trois non lisibles : TN NON
++JOUE, consigne au verdict. Les trois candidats sont suivis dans les
++MEMES quinze decompositions, jouees a l'etage 1 et propres au TN :
++aucune valeur de l'etat d'ile n'y est relevee.
+   TN rend PLATEAU : le critere ne mord pas -> NON CONCLUANT
+   D'INSTRUMENT.
+ 
+@@ -227,39 +255,52 @@
+ ## 8. Gardes (enumerees ; chaque log dit ce qu'il ne joue pas)
+ 
+   G-Q1  canon du moteur == 82a0be882568fe0c.
+-  G-Q2  dossier du run : 36 au canon et a la taille == 36.
++  G-Q2  dossier du run : les 36 LIGNES DU MANIFESTE au canon et a la
++        taille == 36. Le compte se fait par le manifeste, jamais par les
++        fichiers du dossier ; tout fichier hors manifeste est nomme au
++        log, ni ouvert ni compte (M-2 : le dossier de BOCAL4 en a un).
+   G-Q3  IDENTITE DE FORME : H0 - i eta diag(W_F1) == H_2D(eta, r_c) du
+         moteur, element par element, a chaque (point, G20, k = 3).
+   G-Q4  ANCRAGE : |gamma(F1, G20, k = 3) / G_run - 1| <= 1e-3
+         (resolution d'instrument du delta 80). L'egalite au bit est
+         CONSIGNEE : attendue sur BOCAL4 a plateforme inchangee depuis
+-        le run, non exigee.
++        le run, non exigee. Jouee a l'OUVERTURE de l'etage 2 : les six
++        decompositions (F1, G20, k = 3) passent avant toute autre.
+   G-Q5  PLANCHER (5.3).
+   G-Q6  echelle exacte : eta_k * 2^k == eta0.
+   G-Q7  selftest de la routine de plateau sur series synthetiques :
+         gamma = c eta -> PAS DE PLATEAU ; constante -> PLATEAU ; plateau
+-        de cinq puis chute lineaire -> PLATEAU, fenetre nommee ;
+-        etalement 0.05 exactement -> PLATEAU ; 0.0501 -> PAS ; quatre
+-        valeurs lisibles seulement -> AUCUNE FENETRE.
++        de cinq puis chute lineaire -> PLATEAU, fenetre nommee ; quatre
++        valeurs lisibles seulement -> AUCUNE FENETRE. BORNE, a un ulp de
++        part et d'autre, sur des valeurs exactement representables :
++        (20.0, 20.25, 20.5, 20.75, 21.0) -> PLATEAU ; la meme avec
++        nextafter(21.0, +inf) -> PAS DE PLATEAU. ACCORD et accord au
++        TP : |ln| = tau - 1e-6 -> ACCORD ; tau + 1e-6 -> PAS D'ACCORD.
+   G-Q8  TP (5.1).   G-Q9  TN (5.2).
+   G-Q10 comptes, sous la forme joues + sautes == attendus, par famille.
+-Decompositions attendues (declarees avant de compter) : trajectoires
+-F1 180 (6 x 2 x 15), formes 180 (6 x 2 x 15), translation 90 (6 x 15),
+-plancher 30 (6 x 5), TP au plus 60 : au plus 540.
++Decompositions attendues (declarees avant de compter), par famille :
++trajectoires F1 180 (6 x 2 x 15), formes 180 (6 x 2 x 15), translation
++90 (6 x 15), plancher 30 (6 x 5), TP au plus 60 (2 x 2 x 15), TN 15
++(E-EB-2 ; un seul jeu de quinze pour les trois candidats, 5.2) : au
++plus 555. Hors de ce compte, et declarees comme telles : les
++decompositions a geometrie reduite du banc qui tue, et celles du script
++de reference de m2.
+ 
+ ## 9. Verdict -- cascade ordonnee, premier match l'emporte
+ 
+   1. NON CONCLUANT D'INSTRUMENT : G-Q1 a G-Q7 ou G-Q10 mord ; TP ne
+      tient pas ou est non concluant ; TN rend PLATEAU. Le fantome n'est
+-     PAS lu (l'etage 2 n'est pas joue si l'etage 1 echoue).
++     PAS lu : l'etage 2 n'est pas joue si l'etage 1 echoue, et il
++     s'arrete a son ouverture si G-Q4 mord.
+   2. ESTIMATEUR QUALIFIE : six points QUALIFIES.
+   3. QUALIFIE PAR POINT : un a cinq points QUALIFIES ; la liste est le
+      verdict. Toute phrase de grille (rang, pic, creux) est caduque.
+   4. NON QUALIFIE : zero point QUALIFIE et au moins un NON QUALIFIE.
+   5. NON LISIBLE : zero QUALIFIE, zero NON QUALIFIE.
+-Ordre d'execution : ETAGE 1 = selftest, banc qui tue, TP, TN, G-Q3 a
+-G-Q5 ; ETAGE 2 = les six points. Reprise par fichier
+-(point, configuration, k) obligatoire.
++Ordre d'execution : ETAGE 1 = selftest, banc qui tue, TP, TN, G-Q3,
++G-Q5 ; la feuille de lecture ecrit le verdict de l'etage 1 ; ETAGE 2 =
++les six points, ouvert par G-Q4, et seulement si ce verdict tient.
++Reprise par fichier (point, configuration, k) obligatoire.
+ 
+ ## 10. Banc qui tue (mutations ; chacune doit faire tomber ce qu'elle vise)
+ 
+@@ -289,7 +330,10 @@
+ 
+ ## 12. Contrat de script, cout, garde-fou
+ 
+-SONDE (m1) : arguments = moteur, dossier du run, manifeste, sortie ;
++SONDE (m1) : elle MESURE et ne juge pas ; la FEUILLE DE LECTURE (m1)
++juge et ne mesure pas (routine de plateau, statuts, cascade, G-Q7).
++Sonde : arguments = moteur, dossier du run, manifeste, liste des
++couplages retenus, sortie ;
+ ASCII ; ligne de plateforme avec temoin d'arrondi ; aucun ** de tableau
+ hors du moteur ; ordre de parcours declare ; sortie JSON + log, le log
+ porte son empreinte relue du disque.
+@@ -337,4 +381,31 @@
+ un TP tenu ne prouve pas que la methode vaut pour lui, il prouve
+ qu'elle sait mesurer une largeur connue.
+ 
++## 15. Journal v1 -> v2 (certification m2 du 11/11, lot 113e5b84238203de)
++
++m2 : NON CERTIFIE EN L'ETAT, 21 controles, 2 morsures de description,
++quatre demandes. Tout est pris, sans reserve.
++  E-EB-1  3.11 en rationnels exacts ; 3.12 dit sa comparaison ; G-Q7
++          rebati a un ulp de la borne (H1, H2, H9).
++  E-EB-2  le TN entre au decompte par famille ; total 555 et non 585 :
++          les trois candidats partagent quinze decompositions (H6, H10).
++  M-1     F2 : "a la distance L" (H4).
++  M-2     G-Q2 compte par le manifeste (H7).
++  M-3     lot de l'etape 0 joint (H12).
++  M-4     canons confirmes -- gel v1 8603af9d4f63e9dc, WKB
++          3eeb30328f9c542c ; "titre a terminateur" = convention B du
++          fichier entier (H0). Faute de transit de la plume : deux
++          pieces a plat sans manifeste ; le v2 part en lot.
++De la plume, declares, hors demandes de m2 :
++  P-1     interface du TP : la sonde ne lit que la liste des couplages
++          retenus ; sonde = mesure, feuille de lecture = jugement
++          (H5a, H13).
++  P-2     G-Q4 a l'ouverture de l'etage 2 ; verdict de l'etage 1 ecrit
++          par la feuille de lecture (H8, H11a, H11b).
++  P-3     ce que la plume a vu depuis le v1 : l'essai de m2 a g_8
++          (H3, H5b).
++Aucune tolerance ne change ; aucun nombre mesure ne change ; le
++decompte passe de 540 a 555. Formule de rotation complexe : re-derivee
++et validee par m2, inchangee.
++
+ -- FIN --

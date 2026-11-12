@@ -1,0 +1,156 @@
+{
+ "acte": "0d7870ebad535303",
+ "bilan": {
+  "chk": 28,
+  "mord": 3,
+  "noms": [
+   "C26",
+   "C27",
+   "C28"
+  ]
+ },
+ "controles": [
+  {
+   "id": "C01",
+   "ok": true,
+   "msg": "acte hors zip == membre du zip, canon 0d7870ebad535303 (annonce 0d7870ebad535303)"
+  },
+  {
+   "id": "C02",
+   "ok": true,
+   "msg": "7 pieces sur 7 au canon, a l empreinte brute et a la taille ; membres du zip 8 (attendu 8 avec le manifeste) ; ecarts [] ; CANON DU LOT 089c2c57b42dd4a0"
+  },
+  {
+   "id": "C03",
+   "ok": true,
+   "msg": "51 empreintes distinctes citees dans l acte (machine 1 annonce 51)"
+  },
+  {
+   "id": "C04",
+   "ok": true,
+   "msg": "la table nn.5 du temoin positif recalculee de ma sortie (plateau exact, ma table de reference) : 6 phrases attendues retrouvees dans l acte, accord avec mon verdict_etage1.json ; absentes : []"
+  },
+  {
+   "id": "C05",
+   "ok": true,
+   "msg": "verdict et motifs lus dans MON verdict_etage1.json retrouves mot pour mot : VERDICT DE L'ETAGE 1 : NE TIENT PAS, motifs 'TP ne tient pas a j06' ; 'TP ne tient pas a j08'."
+  },
+  {
+   "id": "C06",
+   "ok": true,
+   "msg": "G-Q5 : 30 valeurs, max |Gamma(H+)| = 1.330e-13 ; l acte dit 1.330e-13"
+  },
+  {
+   "id": "C07",
+   "ok": true,
+   "msg": "comptes recomptes dans mon JSON : 93 jouees (dont le plancher 30) + 12 sautees = 105 ; phrase de nn.4 retrouvee"
+  },
+  {
+   "id": "C08",
+   "ok": true,
+   "msg": "duree moyenne par decomposition du temoin positif : 30.1 s a N = 60 (30), 68.2 s a N = 70 (30) ; l acte dit environ 30 s et 68 s"
+  },
+  {
+   "id": "C09",
+   "ok": true,
+   "msg": "plateforme lue dans mon JSON == celle de nn.4"
+  },
+  {
+   "id": "C10",
+   "ok": true,
+   "msg": "temoin negatif : candidats [[50, 25], [55, 27], [45, 22]], Gamma a k = 3 ['0.898', '2.449', '0.669'], recouvrements k = 2 et 4 de 0.766 a 0.884, aucun suivi ; phrases absentes de l acte : []"
+  },
+  {
+   "id": "C11",
+   "ok": true,
+   "msg": "feuille b3ac958a1a2b915b : cascade(mon verdict, pas d etage 2) = NON CONCLUANT D'INSTRUMENT"
+  },
+  {
+   "id": "C12",
+   "ok": true,
+   "msg": "gel cde0cd11a763f26d : section 9 rang 1 (TP ne tient pas -> NON CONCLUANT D INSTRUMENT) et section 13 (consigner le meilleur etalement) relues ; l acte consigne 0.0276, 0.0344, 0.3847, 0.4214 : True"
+  },
+  {
+   "id": "C13",
+   "ok": true,
+   "msg": "tableau de nn.6 : 60 cellules lues dans l acte, 60 recalculees de mon JSON (Gamma / Gamma_ref ; \"-\" sous 1e-12) ; ecarts []"
+  },
+  {
+   "id": "C14",
+   "ok": true,
+   "msg": "paliers (plus longue suite de valeurs consecutives a 5 pour cent) recalcules : j = 6 G20 : quatre valeurs, k = -2 a 1, etalement 0.0397; j = 6 G30 : cinq valeurs, k = -2 a 2, etalement 0.0276; j = 8 G20 : trois valeurs, k = -2 a 0, etalement 0.0088; j = 8 G30 : cinq valeurs, k = -2 a 2, etalement 0.0344 ; absents de l acte : []"
+  },
+  {
+   "id": "C15",
+   "ok": true,
+   "msg": "(a) k = -2 : ecart maximal a la reference 0.54 pour cent (acte : 0.5) ; u_ref de j = 6 0.21 pour cent (acte : 0.2)"
+  },
+  {
+   "id": "C16",
+   "ok": true,
+   "msg": "(c) rapports de pas k = 9 a 12 : 0.499 a 0.507 (valeurs lisibles) ; avec les non lisibles 0.499 a 0.507 ; k = 3 : ['0.435', '1.249', '0.422', '0.892'] ; bosse a j = 6 G30 : 2.10 ; absents de l acte : []"
+  },
+  {
+   "id": "C17",
+   "ok": true,
+   "msg": "(d) pas de descente et portes recalcules (denominateur = pas precedent, plancher du moteur ~1e-19 negligeable) : j = 6 G20 : pas 0.038, 0.249, 0.410 -> REFUSE | j = 6 G30 : pas 0.003, 0.028, 0.218 -> REFUSE | j = 8 G20 : pas 0.062, 0.250, 0.406 -> REFUSE | j = 8 G30 : pas 0.005, 0.028, 0.078 -> REFUSE ; accepte (glisse) : j = 6 G20 : accepte k = 0, 1 (Gamma / Gamma_ref : 1.019, 0.980) | j = 6 G30 : accepte k = 0, 1, 2 (Gamma / Gamma_ref : 1.002, 0.998, 1.026) | j = 8 G20 : accepte k = 0 (Gamma / Gamma_ref : 1.009) | j = 8 G30 : accepte k = 0, 1, 2 (Gamma / Gamma_ref : 1.000, 0.994, 0.967) ; ecart maximal des acceptes 3.3 pour cent ; absents de l acte : []"
+  },
+  {
+   "id": "C18",
+   "ok": true,
+   "msg": "six points de M17 (pt_*_f070.json du run) : plus grand des deux derniers pas de descente 0.0469 (acte : 0.0469) ; L retenus [20, 20, 20, 20, 20, 20]"
+  },
+  {
+   "id": "C19",
+   "ok": true,
+   "msg": "nn.2 : six largeurs lues par M17 a eta0/8 : 2.162e-10, 1.298e-10, 8.442e-11, 6.562e-11, 9.008e-11, 2.661e-09 ; E_run = ln(max/min) = 3.7027"
+  },
+  {
+   "id": "C20",
+   "ok": true,
+   "msg": "nn.2 (constate) : poids total gauche 0.845 a 0.867, droite 0.998 a 0.998 ; recouvrement gauche 2.75 a 2.88 pour cent, droite 4.31 a 4.37 pour cent, lus dans les pt_*_f070.json du run"
+  },
+  {
+   "id": "C21",
+   "ok": true,
+   "msg": "rejeu de machine 1 : 6 lignes ; la colonne \"sonde m2\" == MES gamma a 10 chiffres, les ecarts relatifs recalcules a leur affichage ; pire 2.856e-04 (acte : 2.856e-04)"
+  },
+  {
+   "id": "C22",
+   "ok": true,
+   "msg": "mes 24 pieces et lots cites par l acte : tous detenus chez moi ET cites dans l acte ; manquants []"
+  },
+  {
+   "id": "C23",
+   "ok": true,
+   "msg": "comptes de controles et de morsures que l acte attribue a mes quatre certifications, relus dans mes notes : gel v1 ok; gel v2 ok; sonde v1 ok; sonde v2 ok"
+  },
+  {
+   "id": "C24",
+   "ok": true,
+   "msg": "la ligne de machine 2 que nn.7 dit \"reprise telle quelle\" se trouve dans mes pieces : ['POUR_MACHINE1_certification_sonde_EB_v1_machine2_v1.md']"
+  },
+  {
+   "id": "C25",
+   "ok": true,
+   "msg": "la meme ligne est citee dans l acte"
+  },
+  {
+   "id": "C26",
+   "ok": false,
+   "msg": "numeros des regles candidates : les 4 nouvelles de l acte portent [19, 20, 21, 22] ; les 3 de MON contreseing du 93 (note scellee, lot_machine2_2026-09-29_contreseing_acte_delta93_v1, que machine 1 detient) portent [19, 20, 21] ; communs : [19, 20, 21]"
+  },
+  {
+   "id": "C27",
+   "ok": false,
+   "msg": "compte de la revue (X) : l acte dit \"vingt-deux candidates\" ; mon contreseing du 93 en compte 21, plus les 4 de l acte = 25"
+  },
+  {
+   "id": "C28",
+   "ok": false,
+   "msg": "la parenthese \"Les dix-huit precedentes (huit du 90, quatre du 91, une du 92, trois du 93)\" somme a 16 ; le nombre annonce vaut 18 (heredite : le delta 93 deposait deja \"treize precedentes (huit du 90, quatre du 91, une du 92)\" ; la numerotation 13, 14, 15 donne trois au 92)"
+  }
+ ],
+ "non_resolues": [],
+ "info": []
+}

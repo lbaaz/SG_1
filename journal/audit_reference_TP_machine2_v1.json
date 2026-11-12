@@ -1,0 +1,124 @@
+{
+ "arnoldi": [
+  {
+   "Gamma_arnoldi": 1.3855731766359193e-10,
+   "Gamma_dense_N60_th020": 1.37976446525077e-10,
+   "Gamma_ref": 1.3838550942924926e-10,
+   "Re_E": -0.00012470658953537758,
+   "ecart_dense": 0.004209929688320679,
+   "ecart_ref": 0.0012415189643140145,
+   "g": 0.07711054127039704,
+   "j": 5,
+   "recouvrement": 0.9588718535478806
+  },
+  {
+   "Gamma_arnoldi": 5.372624153233279e-10,
+   "Gamma_dense_N60_th020": 5.363973005221935e-10,
+   "Gamma_ref": 5.368820401556629e-10,
+   "Re_E": -0.00014849938221998642,
+   "ecart_dense": 0.0016128246735995777,
+   "ecart_ref": 0.0007084892755115924,
+   "g": 0.08408964152537146,
+   "j": 6,
+   "recouvrement": 0.9588648884358502
+  },
+  {
+   "Gamma_arnoldi": 6.4282705422131185e-09,
+   "Gamma_dense_N60_th020": 6.428820895174255e-09,
+   "Gamma_ref": 6.4279027357986375e-09,
+   "Re_E": -0.00021075698265387438,
+   "ecart_dense": 8.560713855776392e-05,
+   "ecart_ref": 5.7220283131043104e-05,
+   "g": 0.1,
+   "j": 8,
+   "recouvrement": 0.9588467630542522
+  }
+ ],
+ "bilan": {
+  "chk": 16,
+  "mord": 0,
+  "noms": []
+ },
+ "controles": [
+  {
+   "detail": "canon 5fd3a1897ca0442a",
+   "nom": "C01 le script lu est celui nomme dans les trois fichiers",
+   "tient": true
+  },
+  {
+   "detail": "moteur 82a0be882568fe0c gel cde0cd11a763f26d",
+   "nom": "C02 moteur et gel nommes",
+   "tient": true
+  },
+  {
+   "detail": "Ns [50, 60, 70] thetas [0.1, 0.15, 0.2, 0.25, 0.3]",
+   "nom": "C03 fichiers reels (prevol faux) et grille annoncee",
+   "tient": true
+  },
+  {
+   "detail": "j de 0 a 16",
+   "nom": "C04 17 g_j, g = 0.05 * 2.0 ** (j / 8.0) au bit",
+   "tient": true
+  },
+  {
+   "detail": "",
+   "nom": "C05 Gamma_ref, u_ref, g : toujours des nombres finis (engagement O-1/O-2)",
+   "tient": true
+  },
+  {
+   "detail": "[(6, '0.08408964152537146'), (8, '0.1')]",
+   "nom": "C06 g de la liste == g de la table, en repr ; meme liste dans les deux fichiers",
+   "tient": true
+  },
+  {
+   "detail": "cles ['p', 'prevol', 'retenus', 'w2']",
+   "nom": "C07 la liste des retenus ne porte AUCUNE largeur (cles j, g seulement)",
+   "tient": true
+  },
+  {
+   "detail": "149",
+   "nom": "C08 149 points calcules = 17 + 11 * 12",
+   "tient": true
+  },
+  {
+   "detail": "ecart relatif Gamma_ref 0.0e+00, ecart u_ref 0.0e+00, theta idem",
+   "nom": "C09 Gamma_ref, u_ref et theta des 11 raffines, recalcules d'un autre code",
+   "tient": true
+  },
+  {
+   "detail": "j [0, 1, 13, 14, 15, 16]",
+   "nom": "C10 les non raffines portent u_ref = 1.0 et le Gamma de (50, 0.20)",
+   "tient": true
+  },
+  {
+   "detail": "pire ecart Re E 1.7e-12",
+   "nom": "C11 chaque raffine : Re E stable (< 1e-9) et recouvrement > 0.9 sur tous ses points",
+   "tient": true
+  },
+  {
+   "detail": "feuille [6, 8], reference [6, 8], sonde [6, 8]",
+   "nom": "C12 la feuille b3ac958a1a2b915b, sur MA table, retrouve la liste (regle du gel rejouee par elle)",
+   "tient": true
+  },
+  {
+   "detail": "liste mutee [5, 8]",
+   "nom": "C13 mutation : j = 5 a u_ref = 0.0099 -> la feuille change la liste (le controle C12 est vivant)",
+   "tient": true
+  },
+  {
+   "detail": "",
+   "nom": "C14 mutation : Gamma_ref(j = 8) x 1.5 -> ecart a mes points calcules (le controle C09 est vivant)",
+   "tient": true
+  },
+  {
+   "detail": "marge 1.96e-05",
+   "nom": "C15 j = 5 EXCLU par la regle (u_ref > 0.01), j = 6 retenu : consigne, pas corrige",
+   "tient": true
+  },
+  {
+   "detail": "4 s",
+   "nom": "C16 SECONDE METHODE (Arnoldi) retrouve la reference aux deux retenus, a u_ref + 5e-3 pres, meme Re E",
+   "tient": true
+  }
+ ]
+}

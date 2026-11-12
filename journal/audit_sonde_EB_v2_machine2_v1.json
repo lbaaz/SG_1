@@ -1,0 +1,104 @@
+{
+ "bilan": {
+  "chk": 16,
+  "mord": 0,
+  "noms": []
+ },
+ "controles": [
+  {
+   "nom": "C01 lot v2 : 25 pieces au canon B, a l empreinte brute et a la taille (canon du lot 413d6ee565697278)",
+   "ok": true,
+   "detail": "ecarts : aucun"
+  },
+  {
+   "nom": "C02 les bases v1 du lot sont MES exemplaires certifies (sonde 214ea376cbf540a4, banc 666e69f11bc1f72c) ; la feuille de lecture est INCHANGEE (b3ac958a1a2b915b) ; les deux v2 sont ASCII, LF seul, et citent le gel v2",
+   "ok": true,
+   "detail": "sonde v2 facc7536ba4637cb, banc v2 4e46744fe4e8a8be"
+  },
+  {
+   "nom": "C03 la construction de machine 1, lue puis rejouee depuis MES v1, rend une sonde v2 et un banc v2 IDENTIQUES AU BIT a ceux livres",
+   "ok": true,
+   "detail": "sonde identique, banc identique ; 15 remplacements annonces"
+  },
+  {
+   "nom": "C04 les diffs joints sont exacts : memes lignes ajoutees et retirees que les miennes (hors lignes vides, que difflib et diff -u n alignent pas pareil), et chacun reconstruit son v2 depuis son v1",
+   "ok": true,
+   "detail": "sonde : memes lignes True, reconstruit True ; banc : memes lignes True, reconstruit True ; sonde +43 -9"
+  },
+  {
+   "nom": "C05 selftest G-Q7 : 13 tenus sur 13",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "nom": "C06 pre-vol etage 1, premier passage : G-Q3 six sur six ; TN 15, TP 30, plancher 30 TOUS JOUES ; G-Q10 ; 75 fichiers de reprise, 75 portent une identite",
+   "ok": true,
+   "detail": "comptes {'TN': {'joues': 15, 'repris': 0, 'sautes': 0}, 'TP': {'joues': 30, 'repris': 0, 'sautes': 0}, 'plancher': {'joues': 30, 'repris': 0, 'sautes': 0}}"
+  },
+  {
+   "nom": "C07 second passage dans le MEME dossier : 0 joue + 75 repris == 75 (la reprise sous identite laisse passer le meme calcul), et ses trajectoires sont celles du premier passage",
+   "ok": true,
+   "detail": "comptes {'TN': {'joues': 0, 'repris': 15, 'sautes': 0}, 'TP': {'joues': 0, 'repris': 30, 'sautes': 0}, 'plancher': {'joues': 0, 'repris': 30, 'sautes': 0}} ; trajectoires identiques : True"
+  },
+  {
+   "nom": "C08 lecture de l etage 1 sur la sortie v2 == celle de machine 1 (hors canon ; nombres a 3 chiffres)",
+   "ok": true,
+   "detail": "26 lignes"
+  },
+  {
+   "nom": "C09 pre-vol etage 2 : F1 174 + 6 repris == 180, formes 180, translation 90, ouverture 6 ; 1260 etats-pas, 0 perdus ; identite min 1.0000 (la reprise ouverture -> F1 passe sous identite)",
+   "ok": true,
+   "detail": "comptes {'F1': {'joues': 174, 'repris': 6, 'sautes': 0}, 'formes': {'joues': 180, 'repris': 0, 'sautes': 0}, 'ouverture': {'joues': 6, 'repris': 0, 'sautes': 0}, 'translation': {'joues': 90, 'repris': 0, 'sautes': 0}}"
+  },
+  {
+   "nom": "C10 lecture de l etage 2 sur la sortie v2 IDENTIQUE a celle de machine 1 sous v2, ET a celle du v1",
+   "ok": true,
+   "detail": "53 lignes"
+  },
+  {
+   "nom": "C11 D-3 levee : le banc v2 TEL QUE LIVRE rend 6 mordues sur 6, base saine, 4 refus sur 4 sur ce poste",
+   "ok": true,
+   "detail": "banc qui tue : 6 mordues == 6 attendues ; base saine ; temoins hors gel : 4 refus == 4 attendus : PASSE"
+  },
+  {
+   "nom": "C12 D-1 levee : une reprise AU FORMAT v1 (sans identite) est REFUSEE (code 2), sans decomposer",
+   "ok": true,
+   "detail": " ['L', 'N', 'cibles', 'eta0', 'etage', 'forme', 'g', 'gel', 'moteur', 'prevol', 'r_c', 'signe', 'sonde', 'trajet', 'w2']"
+  },
+  {
+   "nom": "C13 D-1 levee : une reprise dont l identite porte un g, un canon de sonde ou un eta0 DIFFERENT est refusee en nommant la cle en ecart",
+   "ok": true,
+   "detail": "g : ...en ecart ['g'] ; sonde : ...cart ['sonde'] ; eta0 : ...ecart ['eta0']"
+  },
+  {
+   "nom": "C14 D-1 levee, ma demonstration du v1 REJOUEE : un etage 1 REEL dans une reprise de pre-vol s arrete au premier fichier (code 2), apres G-Q3 a taille reelle six sur six (N = 60, 60, 60, 61, 61, 61, matrices seulement), sans aucun G-Q10 ni sonde_etage1.json ecrit",
+   "ok": true,
+   "detail": "0\\k_+03.json porte une autre identite, cles en ecart ['L', 'N', 'prevol', 'r_c']"
+  },
+  {
+   "nom": "C15 D-2 levee : sur sept cas, la porte se FERME aux cinq cas interdits (original, croise, inverse, etage 1 mute, sonde_etage1.json absent -- sans exception) et reste OUVERTE aux deux chemins legitimes (tout reel, tout pre-vol)",
+   "ok": true,
+   "detail": "7 cas, 7 OK"
+  },
+  {
+   "nom": "C16 ancrage a taille reelle sous la SONDE v2 (machine 1 ne l a pas rejoue sous v2) : gamma(F1, G20, k = 3) au point 1.95 retombe AU BIT sur G_run",
+   "ok": true,
+   "detail": "-10 ; G_run = 2.1623273018e-10 ; rapport - 1 = 0.000e+00 ; au bit True"
+  }
+ ],
+ "consignes": {
+  "canon_lot_v2": "413d6ee565697278",
+  "canons": {
+   "sonde_v2": "facc7536ba4637cb",
+   "banc_v2": "4e46744fe4e8a8be",
+   "lecture_v1": "b3ac958a1a2b915b"
+  },
+  "D1_attaques": {
+   "legacy": "ARRET reprise refusee (D-1) : C:\\Users\\bazil\\AppData\\Local\\Temp\\claude\\75adcc7f3c1d08bf\\7d33635e-8345-4a2c-a69e-f6a51f9d8fa7\\scratchpad\\audit_sonde_v2_run\\attaque_legacy\\reprise\\TP_j08_F1G20\\k_+03.jso",
+   "g": "G20\\k_+03.json porte une autre identite, cles en ecart ['g']",
+   "sonde": "k_+03.json porte une autre identite, cles en ecart ['sonde']",
+   "eta0": "\\k_+03.json porte une autre identite, cles en ecart ['eta0']"
+  },
+  "ancrage_reel_v2": "ANCRAGE point 39_20 N = 60 : 45.7 s ; gamma = 2.1623273018e-10 ; G_run = 2.1623273018e-10 ; rapport - 1 = 0.000e+00 ; au bit True"
+ }
+}
