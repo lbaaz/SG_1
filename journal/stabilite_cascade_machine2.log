@@ -1,0 +1,17 @@
+E1 juge  classe TENU  ; possibles sous le bruit ['TENU']               ; 0 etat(s) incertain(s) -> INCHANGEE
+E2 juge  classe TOMBE ; possibles sous le bruit ['TOMBE']              ; 0 etat(s) incertain(s) -> INCHANGEE
+E3 juge  classe TOMBE ; possibles sous le bruit ['TOMBE']              ; 0 etat(s) incertain(s) -> INCHANGEE
+E4 juge  classe TOMBE ; possibles sous le bruit ['TOMBE']              ; 0 etat(s) incertain(s) -> INCHANGEE
+E5 juge  classe TENU  ; possibles sous le bruit ['TENU']               ; 0 etat(s) incertain(s) -> INCHANGEE
+E6 juge  classe TENU  ; possibles sous le bruit ['TENU']               ; 1 etat(s) incertain(s) -> INCHANGEE
+H1 juge  classe TOMBE ; possibles sous le bruit ['TENU', 'TOMBE']      ; 1 etat(s) incertain(s) -> PEUT CHANGER
+H2 juge  classe TOMBE ; possibles sous le bruit ['TOMBE']              ; 0 etat(s) incertain(s) -> INCHANGEE
+H3 juge  classe TOMBE ; possibles sous le bruit ['TOMBE']              ; 0 etat(s) incertain(s) -> INCHANGEE
+H4 juge  classe TENU  ; possibles sous le bruit ['TENU']               ; 0 etat(s) incertain(s) -> INCHANGEE
+H5 juge  classe TENU  ; possibles sous le bruit ['TENU']               ; 0 etat(s) incertain(s) -> INCHANGEE
+H6 juge  classe TENU  ; possibles sous le bruit ['TENU']               ; 0 etat(s) incertain(s) -> INCHANGEE
+
+verdicts possibles sous le bruit : ['LA GARDE NE TIENT PAS'] (rendu : LA GARDE NE TIENT PAS)
+rivales possibles sous le bruit : ['NON TENUE', 'TENUE'] (rendue : NON TENUE)
+paires possibles : {'P1': ['HETEROGENE', 'HOMOGENE'], 'P2': ['HOMOGENE'], 'P3': ['HOMOGENE'], 'P4': ['HOMOGENE'], 'P5': ['HOMOGENE']}
+VERDICT INCHANGE ; RIVALE PEUT CHANGER

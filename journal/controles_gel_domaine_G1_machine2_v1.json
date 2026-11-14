@@ -1,0 +1,71 @@
+{
+ "bilan": {
+  "controles": 11,
+  "ids": [],
+  "mord": 0
+ },
+ "controles": [
+  {
+   "id": "C01",
+   "msg": "22 pieces sur 22 au canon, a l empreinte brute et aux deux tailles (zip et copie de travail) ; ecarts [] ; CANON DU LOT 1aafb301d7d0ebb3 (annonce 1aafb301d7d0ebb3) ; gel b59651f99e60707a",
+   "ok": true
+  },
+  {
+   "id": "C02",
+   "msg": "24 empreintes de 16 chiffres citees ; 18 couples (nom, canon) de la section 1 ; non resolues chez moi ['119f4e4dcbb4baba'] ; noms differents []",
+   "ok": true
+  },
+  {
+   "id": "C03",
+   "msg": "rejeu de la construction du gel (gabarit + canons des 12 pieces, ses controles de coherence) : code 0 ; gel reconstruit == gel du lot, octet pour octet : True ; canon b59651f99e60707a",
+   "ok": true
+  },
+  {
+   "id": "C04",
+   "msg": "sonde : la sonde certifiee acf7e26dedfa8abc + les 5 hunks de machine 1, appliques par mon code, == la sonde du lot 940a21b1d562bb49 (148 lignes) : True ; lignes ajoutees 25, dont une qui branche sur le statut de la garde : 0",
+   "ok": true
+  },
+  {
+   "id": "C05",
+   "msg": "sonde : aucune condition (if, elif, while) ne porte sur le statut de la garde : la garde est CONSIGNEE et JAMAIS APPLIQUEE (gel, section 3)",
+   "ok": true
+  },
+  {
+   "id": "C06",
+   "msg": "feuille : motif_exclusion, palier, eval_fraction et garde_ancres == ceux de la feuille certifiee f94ab05f69e9bf2f (arbres ast, docstrings retirees ; la seule difference de docstring est le numero de section, 6 -> 5, que machine 1 declare) ; differences {} ; constantes heritees (9) egales : differences []",
+   "ok": true
+  },
+  {
+   "id": "C07",
+   "msg": "section 8 : sur les 3^12 = 531441 vecteurs de classes (TENU, TOMBE, aucune) des douze points juges, quand LA GARDE SEPARE toute paire lisible est HETEROGENE (violations 0) et la rivale n est jamais TENUE (violations 0) ; repartition (verdict, rivale) : {('NE TIENT PAS', 'NL'): 79392, ('NE TIENT PAS', 'NON'): 122010, ('NE TIENT PAS', 'TENUE'): 33702, ('NON LISIBLE', 'NL'): 226113, ('NON LISIBLE', 'NON'): 44908, ('NON LISIBLE', 'TENUE'): 14404, ('SEPARE', 'NL'): 219, ('SEPARE', 'NON'): 265, ('SUFFIT', 'NL'): 4101, ('SUFFIT', 'NON'): 4861, ('SUFFIT', 'TENUE'): 1466}",
+   "ok": true
+  },
+  {
+   "id": "C08",
+   "msg": "annonces : A-1, cinq issues [0.74, 0.1, 0.03, 0.07, 0.06], somme 1.00 ; 12 annonces a probabilite lues (A-2 a A-13, dont A-13 en deux parties) ; les cinq paires ont chacune le meme w2 a leurs deux points : {'P1': '52/25', 'P2': '21/10', 'P3': '53/25', 'P4': '191/100', 'P5': '19/10'}",
+   "ok": true
+  },
+  {
+   "id": "C09",
+   "msg": "les douze couples (w2, facteur) du gel sont neufs (communs avec M17 ou le gel precedent : []) ; la section 2 relue de MON run : q medians {'J5': 0.545, 'A1': 0.758, 'J3': 0.842, 'J6': 1.503, 'A2': 1.505, 'J4': 1.418, 'T2': 1.334, 'J2': 3.735, 'T4': 18.348} (phrases absentes []), c_max 0.0635/0.0381 = 1.67, HORS DECADE a ['J2', 'T3', 'T4']",
+   "ok": true
+  },
+  {
+   "id": "C10",
+   "msg": "essai de machine 2 aux deux ancres avec la sonde neuve : 28 etats, 0 differe(nt) de mon essai avec la sonde certifiee (JSON de l etat entier, au bit) ; A1 (7,2) et A2 (8,2) == les lectures de M17 au bit : True ; garde consignee A1 EN DOMAINE (D1 0.055556 c_max 0.040917), A2 EN DOMAINE (D1 0.050000 c_max 0.051012)",
+   "ok": true
+  },
+  {
+   "id": "C11",
+   "msg": "selftest de la feuille rejoue par moi : SELFTEST : 74 cas, 74 tenus ; le journal de machine 1 dit la meme ligne : True",
+   "ok": true
+  }
+ ],
+ "info": [
+  "119f4e4dcbb4baba, la note d anteriorite hors chaine, est citee par le gel (\"au projet\" de machine 1) et ne m a pas ete remise : je ne l ai pas lue ; le gel n en tire rien (\"ce gel ne revendique rien sur la methode\"), aucun nombre ni aucun critere n en depend",
+  "lignes de la sonde qui nomment \"statut\" : [57, 61, 141] ; toutes sont la consignation (update, affichage) ou la docstring ; aucune ne branche",
+  "motif_exclusion : identique, a la docstring pres, dont seul change le numero de section (6 -> 5), comme machine 1 le declare",
+  "feuille neuve contre feuille certifiee : 383 lignes en plus ou en moins ; fichier 26258 contre 15202 octets",
+  "journaux de machine 1, lus et non rejoues : banc \"BANC : 60 alterations, 59 mordues, 1 survivantes\" ; releve \"RELEVE : 0 controles mordent\""
+ ]
+}

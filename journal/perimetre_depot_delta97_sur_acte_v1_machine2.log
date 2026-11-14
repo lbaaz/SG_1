@@ -1,0 +1,80 @@
+
+1. LES CITATIONS DE L ACTE, ET LES DEUX INDEX PAR CANON
+  [ note] acte                                                       journal_delta_nn_domaine_G1_chaine_EA_v1.md (version 1)
+  [PASSE] l acte est ASCII pur, LF, newline final                    20265 octets
+  [PASSE] l acte cite des empreintes (compte etabli apres extraction 21 jetons distincts de 16 hex
+  [PASSE] chaque VALEUR declaree est bien citee par l acte           
+  [PASSE] chaque lot de TRANSPORT declare est bien cite par l acte   
+  [ note] numero DERIVE du releve, non tape                          plafond 96 -> le delta de cet acte porte le 97 ; le numero reste de la main de l operateur (E18)
+  [PASSE] releve : HEAD 04053e0, plafond 96, aucun fichier delta_97  1658 fichiers suivis
+  [PASSE] le delta PRECEDENT est bien au registre -- le releve porte delta_96 present
+  [ note] index du poste                                             7581 canons distincts (B et brut), 2371 noms de table
+  [ note] balayage : tout BOCAL4 hors .git et __pycache__ ; exclues, manifest_depot_delta97_machine2_v1.txt, perimetre_depot_delta97_sur_acte_v1_machine2.log
+
+2. RESOLUTION DE CHAQUE CITATION -- AU REGISTRE, AU POSTE, OU NULLE PART
+   registre  82a0be882568fe0c  scripts/m17_chaine_v17.py
+   registre  9df2702af59adbbc  gels/gel_chaine_EA_par_etat_pre_enregistrement_v1.md
+   registre  aed8677322e20e0d  journal/journal_delta_96_chaine_EA_par_etat_v1.md
+   poste     b59651f99e60707a  DEPOT_delta97/entrants/lot_machine1_2026-11-14_gel_domaine_G1_chaine_EA_v1_recu/gel_domaine_G1_chaine_EA_pre_enregistrement_v1.md
+   poste     1aafb301d7d0ebb3  MANIFEST_lot_machine1_gel_domaine_G1_chaine_EA_v1.txt
+   poste     940a21b1d562bb49  DEPOT_delta97/entrants/lot_machine1_2026-11-14_gel_domaine_G1_chaine_EA_v1_recu/sonde_domaine_G1_machine1_v1.py
+   poste     0a760e3a244e547d  DEPOT_delta97/entrants/lot_machine1_2026-11-14_gel_domaine_G1_chaine_EA_v1_recu/lecture_domaine_G1_machine1_v1.py
+   poste     d92a200ac348f0a3  MANIFEST_lot_machine2_certification_gel_domaine_G1_chaine_EA_v1.txt
+   poste     c3092a2dfbbcf462  POUR_MACHINE1_certification_gel_domaine_G1_machine2_v1.md
+   poste     bfe10d4347e93202  DEPOT_delta97/entrants/lot_machine2_2026-11-14_certification_gel_domaine_G1_chaine_EA_v1/domaine_G1/garde_et_boites_machine2_v1.log
+   poste     3f93d8747fd6a4ca  DEPOT_delta97/entrants/lot_machine2_2026-11-14_certification_gel_domaine_G1_chaine_EA_v1/domaine_G1/banc_feuille_domaine_G1_machine2_v1.log
+   poste     86a677dc0ff8ba9d  MANIFEST_lot_machine2_resultat_domaine_G1_chaine_EA_v1.txt
+   poste     d51a9c6ce98b0452  DEPOT_delta97/entrants/lot_machine2_2026-11-14_resultat_domaine_G1_chaine_EA_v1/domaine_G1/sortie/sonde_domaine_G1.json
+   poste     955c4ee53bc2e5d5  DEPOT_delta97/entrants/lot_machine1_2026-11-14_acte_domaine_G1_chaine_EA_v1_recu/verdict_rejoue_machine1.json
+   poste     1ee031ea89823525  DEPOT_delta97/entrants/lot_machine2_2026-11-14_resultat_domaine_G1_chaine_EA_v1/domaine_G1/sortie/lecture_domaine_G1.log
+   poste     7d4558a5322b2b00  POUR_MACHINE1_resultat_domaine_G1_machine2_v1.md
+   poste     464b1e04a3fabd25  DEPOT_delta97/entrants/lot_machine2_2026-11-14_resultat_domaine_G1_chaine_EA_v1/domaine_G1/sortie/stabilite_sous_bruit_machine2.log
+   poste     840acb8d6032e566  DEPOT_delta97/entrants/lot_machine2_2026-11-14_resultat_domaine_G1_chaine_EA_v1/domaine_G1/sortie/stabilite_cascade_machine2.log
+   poste     240d94da00442ee0  DEPOT_delta97/entrants/lot_machine2_2026-11-14_resultat_domaine_G1_chaine_EA_v1/domaine_G1/sortie/relecture_independante_machine2.log
+   poste     d6759636a140b472  DEPOT_delta97/entrants/lot_machine2_2026-11-14_resultat_domaine_G1_chaine_EA_v1/domaine_G1/sortie/compare_run_essai_ancres_machine2.log
+   poste     31aa65c9983b79a4  DEPOT_delta97/entrants/lot_machine1_2026-11-14_acte_domaine_G1_chaine_EA_v1_recu/lecture_rejouee_machine1.log
+  [PASSE] toute empreinte citee resout par canon (registre, poste, o 3 au registre, 18 au poste, 0 zip, 0 valeurs
+  [PASSE] les lots de ce delta (manifeste dont l en-tete porte le ca bf07ec23b0209ffc MANIFEST_lot_machine1_acte_domaine_G1_chaine_EA_v1.txt; 86e73729505a610e MANIFEST_lot_machine2_contreseing_acte_domaine_G1_chaine_EA_v1.txt
+
+3. LES LOTS CITES ENTRENT AVEC LEURS PIECES DE TABLE
+  [ note] erratum                                                    aucun dans ce chantier : une divergence de table mord
+  [ note] manifeste sans ligne pieces : N                            1aafb301d7d0ebb3 : compte attendu = 22 membres du zip extrait, hors manifeste
+   lot 1aafb301d7d0ebb3  table 22 / declare 22   MANIFEST_lot_machine1_gel_domaine_G1_chaine_EA_v1.txt
+   lot d92a200ac348f0a3  table 20 / declare 20   MANIFEST_lot_machine2_certification_gel_domaine_G1_chaine_EA_v1.txt
+   lot 86a677dc0ff8ba9d  table 14 / declare 14   MANIFEST_lot_machine2_resultat_domaine_G1_chaine_EA_v1.txt
+  [ note] manifeste sans ligne pieces : N                            bf07ec23b0209ffc : compte attendu = 10 membres du zip extrait, hors manifeste
+   lot bf07ec23b0209ffc  table 10 / declare 10   MANIFEST_lot_machine1_acte_domaine_G1_chaine_EA_v1.txt
+   lot 86e73729505a610e  table  8 / declare 8    MANIFEST_lot_machine2_contreseing_acte_domaine_G1_chaine_EA_v1.txt
+  [PASSE] 5 lots cites a deposer, chacun au compte de table declare  0 faux compte
+  [PASSE] aucune piece de table ne s ecarte de son manifeste HORS er 0 ecart
+  [PASSE] aucune piece de table n est introuvable a cote de son mani 0 introuvable
+  [PASSE] aucune piece retenue n est deja au registre par canon      76 retenues
+
+4. LE MANIFESTE DE DEPOT -- DERIVE, JAMAIS ECRIT A LA MAIN
+  [ note] collision de nom, prefixe applique                         compare_essais_machine2_v1.log -> lot_d92a200ac348f0a3__compare_essais_machine2_v1.log
+  [ note] collision de nom, prefixe applique                         compare_run_essai_ancres_machine2.log -> lot_86a677dc0ff8ba9d__compare_run_essai_ancres_machine2.log
+  [ note] collision de nom, prefixe applique                         essai_ancres_machine2.json -> lot_d92a200ac348f0a3__essai_ancres_machine2.json
+  [ note] collision de nom, prefixe applique                         essai_ancres_machine2.log -> lot_d92a200ac348f0a3__essai_ancres_machine2.log
+  [ note] collision de nom, prefixe applique                         lecture_essai_ancres_machine1.log -> lot_1aafb301d7d0ebb3__lecture_essai_ancres_machine1.log
+  [ note] collision de nom, prefixe applique                         lecture_essai_ancres_machine2.log -> lot_d92a200ac348f0a3__lecture_essai_ancres_machine2.log
+  [ note] collision de nom, prefixe applique                         lecture_rejouee_machine1.log -> lot_bf07ec23b0209ffc__lecture_rejouee_machine1.log
+  [ note] collision de nom, prefixe applique                         lecture_resultat_machine2.log -> lot_86a677dc0ff8ba9d__lecture_resultat_machine2.log
+  [ note] collision de nom, prefixe applique                         lecture_selftest_machine1.log -> lot_1aafb301d7d0ebb3__lecture_selftest_machine1.log
+  [ note] collision de nom, prefixe applique                         relecture_independante_machine2.log -> lot_86a677dc0ff8ba9d__relecture_independante_machine2.log
+  [ note] collision de nom, prefixe applique                         sonde_essai_ancres_machine1.json -> lot_1aafb301d7d0ebb3__sonde_essai_ancres_machine1.json
+  [ note] collision de nom, prefixe applique                         sonde_essai_ancres_machine1.log -> lot_1aafb301d7d0ebb3__sonde_essai_ancres_machine1.log
+  [ note] collision de nom, prefixe applique                         stabilite_sous_bruit_machine2.log -> lot_86a677dc0ff8ba9d__stabilite_sous_bruit_machine2.log
+  [PASSE] aucun chemin cible en double ni deja au registre           82 chemins cibles
+  [PASSE] aucun doublon de canon dans le depot                       82 pieces
+  [PASSE] toute collision resolue porte le prefixe de son LOT (aucun 13 prefixes
+  [PASSE] les .md/.py/.txt deposes sont B == brut (ASCII/LF)         46 pieces texte
+  [PASSE] le manifeste relu porte autant de lignes que de pieces     82 lignes, 82 pieces
+  [PASSE] chaque source du manifeste resout encore au canon ecrit    0 ecart
+  [PASSE] le manifeste declare son compte, egal aux lignes           pieces : 82
+  [PASSE] le manifeste est ASCII                                     21949 octets
+
+=====================================================================
+BILAN PERIMETRE : 20/20 controles PASSENT
+21 empreintes citees : 3 au registre, 20 au poste, 0 zip, 0 valeurs, 0 non resolues
+DEPOT : 82 pieces (gels 1, journal 77, scripts 4) ; manifeste MANIFEST_DEPOT_delta97_machine2_v1.txt 20fb3e3be5a8a553
+=====================================================================

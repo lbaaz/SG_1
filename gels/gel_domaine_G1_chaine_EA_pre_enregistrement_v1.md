@@ -1,0 +1,277 @@
+GEL -- LA GARDE G-1 DU MOTEUR ET LA CHAINE E-A PAR ETAT : LA GARDE DE DOMAINE DU MOTEUR, CALCULEE
+AVANT TOUTE DIAGONALISATION, DIT-ELLE OU LA CHAINE REND LA LECTURE DE E-B A UNE DEMI-DECADE PRES ?
+PRE-ENREGISTREMENT, VERSION 1
+(plume machine 1, certification machine 2, chantier ouvert par l'operateur, 2026-11-14)
+=======================================================================
+
+0. STATUT ET POSITION
+  Ce gel fait suite au gel "la chaine E-A par etat, hors plage" (9df2702af59adbbc), joue le
+  14/11/2026, verdict TENU EN PARTIE (acte aed8677322e20e0d, contresigne). Cet acte releve une
+  coincidence : les trois points HORS DECADE sont les trois points ou la garde de domaine G-1 du
+  moteur dit HORS DOMAINE. Le gel precedent interdit d'en tirer un domaine sans un nouveau gel
+  (sa section 11). Celui-ci est ce nouveau gel : la garde G-1, calculee AVANT toute
+  diagonalisation, est prise comme domaine declare de la chaine, sur douze points jamais joues.
+  La lecture de E-B garde le statut que le gel bis lui laisse ("bonne a l'ordre de grandeur") ;
+  aucune phrase de ce chantier ne dira "largeur" sans "lue a k = 3".
+  Pour la methode, la chaine E-A est l'effet tunnel assiste par resonance, connu depuis 2002
+  (note d'anteriorite hors chaine 119f4e4dcbb4baba) ; ce gel ne revendique rien sur la methode.
+  Ouverture : l'operateur a ecrit "Ouvre !" a machine 1 le 14/11/2026 a 14 h 57, apres que
+  machine 1 lui a conseille ce gel. Machine 2 ne peut pas le verifier sur piece ; le message de
+  transmission de l'operateur le dit ou non.
+  Rien ne se joue avant la certification croisee (E19).
+
+1. PIECES CITEES (convention B)
+  Au registre (fe10bfe)
+    scripts/m17_chaine_v17.py  82a0be882568fe0c
+        le moteur ; sa garde G-1 est garde_domaine, bornes BORNE_D1 = 1/5 et BORNE_D2A = 1/10
+    journal/manche_m17_v17_MANIFEST_machine2.txt  4aecd0e2b23bc818
+        le manifeste du run de M17
+  Hors registre
+    gel_chaine_EA_par_etat_pre_enregistrement_v1.md  9df2702af59adbbc
+        le gel precedent
+    journal_delta_nn_chaine_EA_par_etat_v1.md  aed8677322e20e0d
+        son acte, contresigne par machine 2 (lot 3ae869c8c037dc21)
+    lot de machine 2  3381564852ba6fe4
+        sa certification du gel precedent : la reserve R-1 sur la garde G-1, ecrite avant le run,
+        et son banc de la feuille (reserve R-2)
+    lot de machine 2  9143062c481ad267
+        le resultat du run (JSON de la sonde 5d80bf2edd26a6c1, verdict 4fbc5f7115002054)
+    sonde_chaine_par_etat_machine1_v1.py  acf7e26dedfa8abc
+    lecture_chaine_par_etat_machine1_v1.py  f94ab05f69e9bf2f
+        la sonde et la feuille du gel precedent, certifiees
+  De ce lot
+    sonde_domaine_G1_machine1_v1.py  940a21b1d562bb49
+        la sonde : elle mesure et ne juge pas ; derivee de acf7e26dedfa8abc par cinq hunks
+    construction_sonde_domaine_G1_machine1_v1.py  d57df97afafc8ebe
+        les cinq hunks
+    lecture_domaine_G1_machine1_v1.py  0a760e3a244e547d
+        la feuille : elle juge et ne mesure pas
+    lecture_selftest_machine1.log  76c8c4a7d49d4c93
+        les 74 cas de la feuille
+    banc_feuille_domaine_G1_machine1_v1.py  e53d4fa0b1939a4c
+    banc_feuille_domaine_G1_machine1_v1.log  5749d9ee81a42352
+        soixante alterations d'une ligne de la feuille contre son selftest : 59 mordues ; la
+        soixantieme (M11) est equivalente en pratique, comme machine 2 l'a note (sa reserve R-2)
+    conception_points_domaine_G1_machine1_v1.py  6548e247e1ab1d2e
+    conception_points_domaine_G1_machine1_v1.log  011ad6e70584a404
+        la garde G-1 et la chaine SEULE sur 156 points candidats ; aucune decomposition 2D
+    garde_aux_points_machine1_v1.py  386910a97f3070cf
+    garde_aux_points_machine1_v1.log  3846ad3a12a39ac6
+        la garde G-1 et la boite attendue aux quatorze points, a six decimales
+    sonde_essai_ancres_machine1.json  c34fc873f5c1aab1
+    lecture_essai_ancres_machine1.log  8a279d544c4b0c15
+        essai a blanc aux deux ancres, non opposable
+
+2. CE QUI A MENE ICI
+  La garde G-1 du moteur tient en deux conditions, calculees sans diagonaliser, par seuil_A4 puis
+  garde_domaine : (D1) |delta| / Omega_c <= 1/5 et (D2a) contamination c_max <= 1/10. Machine 2
+  l'a calculee aux douze points du gel precedent AVANT le run (sa reserve R-1) : HORS DOMAINE a
+  J2, T3 et T4. Le run a rendu HORS DECADE a J2, T3 et T4, et FACTEUR 2 ou DECADE aux neuf autres.
+  L'acte dit : coincidence sur douze points dont trois, ni test ni domaine.
+  Ce que la plume a vu en concevant ce gel, et qu'elle doit dire.
+  (i) La garde sur une grille de 156 points (26 valeurs de w2 de 1.86 a 2.14, six facteurs), sans
+  aucune decomposition 2D : D1 n'y mord jamais (au plus 0.1944) ; tous les HORS DOMAINE viennent
+  de D2a. A facteur 1 la garde dit EN DOMAINE de 1.90 a 2.09 ; a facteur 3/2, de 1.90 a 2.12 ; a
+  facteur 2/3, de 1.92 a 2.07. La frontiere de la garde depend donc du facteur.
+  (ii) Le run du gel precedent, relu : a w2 = 2.05, les trois facteurs joues (2/3, 1, 3/2)
+  rendent a peu pres le meme q median (1.503, 1.505, 1.418), alors que leur c_max differe :
+  0.0635, 0.0510, 0.0381, le plus grand valant 1.67 fois le plus petit. A facteur 1 et au-dessus
+  de 2.00, le q median croit avec le desaccord : 1.334 a 2.04, 1.505 a 2.05, 3.735 a 2.10, 18.348
+  a 2.15. Au-dessous de 2.00 il depend du facteur : 0.545, 0.758, 0.842 a 1.95 pour 2/3, 1, 3/2.
+  (iii) Donc deux lectures s'opposent au-dessus de 2.00. Si la garde est le domaine, un point a
+  facteur 3/2 et a w2 = 2.10 ou 2.12, EN DOMAINE, tient. Si le desaccord seul compte, il tombe
+  comme J2. Ce gel met les deux lectures face a face, par paires de points de meme w2.
+  (iv) La plume avait dit a l'operateur, avant de calculer la grille, que la garde tiendrait a 70
+  chances sur 100. Apres (i) a (iii) elle ne le croit plus (section 11) et le lui a ecrit avant
+  de finir ce gel.
+  Regle candidate (a) de l'acte aed8677322e20e0d : une sonde qui appelle les fonctions d'un moteur
+  sans passer par ses gardes le dit, et consigne le statut de ces gardes a chaque point. La sonde
+  de ce gel le fait.
+
+3. CE QUI EST MESURE (la sonde)
+  Les mesures sont celles du gel precedent, au caractere pres (la sonde en derive par cinq hunks).
+  Par point (w2, g) : s = 0.70 s_ff(w2, g) ; graine coherente du moteur ; boite par la regle de
+  executer_EB du moteur a L = 20 : r_c = plafond(n1 de la graine) + 2 (m + max(8, m)) + 2, ou m est
+  le dernier site de la barriere a la graine (0 si elle est vide), et N = r_c + 20 ; le point est
+  INFAISABLE si N > N_MAX_EB = 120. H_2D du moteur (x^5, signe du fantome -1) a eta_k = eta0
+  2^(-k), eta0 = |w2 - 2|, pour k = 2, 3, 4 : trois decompositions par point.
+  A k = 3, les 14 etats de plus grand recouvrement avec la graine, dans l'ordre du moteur. Pour
+  chacun : J moyen et son ecart-type (J = n1 - 2 n2), <n1>, <n2> ; ETIQUETTE : n2 = arrondi de
+  <n2>, n1 = arrondi de J + 2 n2 ; poids de l'etat sur le site (n1, n2) ; Gamma_2D(3) = -2 Im E.
+  Le meme etat est suivi a k = 2 et a k = 4 par plus grand recouvrement entre vecteurs normes, ce
+  qui donne Gamma_2D(2), Gamma_2D(4) et deux recouvrements de suivi.
+  Chaine : barriere(n1, n2, w2, g) avec Sigma2, puis gamma_chaine du moteur au site entier,
+  M_facteur 4, a quatre eta de chaine (facteurs 1/4, 1/8, 1/16, 1/32) ; la valeur lue est celle du
+  facteur 1/16. Un arret du moteur se consigne et ne se rattrape pas.
+  EN PLUS : a chaque point, la garde G-1 du moteur, calculee comme mesurer_point la calcule
+  (seuil_A4 en lecture reelle, puis garde_domaine avec Omega_du_canal) : D1, c_max, le site de
+  c_max, le statut. Elle est CONSIGNEE et JAMAIS APPLIQUEE : la sonde lit la chaine que la garde
+  dise EN DOMAINE ou HORS DOMAINE.
+  La sonde n'affiche aucun rapport et n'applique aucun seuil.
+
+4. LES QUATORZE POINTS (fraction 0.70 ; g = facteur x g_du_point(w2))
+  La garde est celle du journal garde_aux_points (six decimales). N est la boite attendue.
+  JUGES, garde EN DOMAINE
+    E1  w2 = 52/25    facteur 1     D1 0.080000  c_max 0.082317  N 61
+    E2  w2 = 209/100  facteur 1     D1 0.090000  c_max 0.093558  N 61
+    E3  w2 = 21/10    facteur 3/2   D1 0.100000  c_max 0.077751  N 55
+    E4  w2 = 53/25    facteur 3/2   D1 0.120000  c_max 0.094450  N 55
+    E5  w2 = 191/100  facteur 1     D1 0.109756  c_max 0.080390  N 60
+    E6  w2 = 19/10    facteur 3/2   D1 0.125000  c_max 0.090398  N 54
+  JUGES, garde HORS DOMAINE (par D2a seule)
+    H1  w2 = 52/25    facteur 2/3   D1 0.080000  c_max 0.103309  N 74
+    H2  w2 = 21/10    facteur 2/3   D1 0.100000  c_max 0.129951  N 74
+    H3  w2 = 53/25    facteur 1     D1 0.120000  c_max 0.126744  N 62
+    H4  w2 = 191/100  facteur 2/3   D1 0.109756  c_max 0.106427  N 72
+    H5  w2 = 19/10    facteur 2/3   D1 0.125000  c_max 0.151055  N 72
+    H6  w2 = 189/100  facteur 1     D1 0.141026  c_max 0.102598  N 60
+  ANCRES, connues, garde EN DOMAINE, pour les gardes G-4 et G-6
+    A1  w2 = 39/20    facteur 1     D1 0.055556  c_max 0.040917  N 60
+    A2  w2 = 41/20    facteur 1     D1 0.050000  c_max 0.051012  N 61
+  PAIRES, un point EN DOMAINE et un point HORS DOMAINE au meme w2
+    P1 = (E1, H1) a 2.08    P2 = (E3, H2) a 2.10    P3 = (E4, H3) a 2.12
+    P4 = (E5, H4) a 1.91    P5 = (E6, H5) a 1.90
+  Hors paire : E2 (2.09, le dernier point EN DOMAINE a facteur 1 au-dessus de 2.00) et H6 (1.89,
+  le premier point HORS DOMAINE a facteur 1 au-dessous).
+  Aucun de ces douze couples (w2, facteur) n'a ete joue : ni par M17 (1.95, 1.97, 1.98, 2.02,
+  2.03, 2.05 a facteur 1), ni par le gel precedent (1.85, 1.90, 1.96, 2.04, 2.10, 2.15 a facteur
+  1 ; 1.95 et 2.05 a facteurs 3/2 et 2/3).
+  Choix, fait sur la garde et la chaine SEULES. Les paires prennent chaque w2 ou la garde change
+  de statut entre deux facteurs lisibles. Les facteurs 2 et 3 sont ecartes : de 10 a 18 des 32
+  sites voisins de la graine n'y ont plus de barriere. Le facteur 1/2 est ecarte : boites de N =
+  85 a 93, et sous dix planchers au-dessous de 2.00. Des points proches de la borne 1/10 sont
+  pris des deux cotes : E4 (0.094450), E2 (0.093558), E6 (0.090398) ; H6 (0.102598), H1
+  (0.103309), H4 (0.106427). Ce ne sont pas tous les plus proches de la grille : 1.92 a facteur
+  2/3 (0.0927, EN DOMAINE) et 1.89 a facteur 3/2 (0.1017, HORS DOMAINE) n'entrent dans aucune
+  paire et ne sont pas pris.
+
+5. LES ETATS JUGES
+  Les neuf criteres du gel precedent, inchanges. A un point, un des 14 etats est JUGE s'il passe,
+  dans cet ordre :
+    (1) J net : ecart-type de J < 0.2 ;
+    (2) etiquette dans le domaine : n1 >= 0 et n2 >= 0 ;
+    (3) site majoritaire : poids sur le site (n1, n2) >= 0.5 ;
+    (4) au-dessus de dix planchers : Gamma_2D(3) > 1.33e-12 ;
+    (5) etat suivi : les deux recouvrements de suivi >= 0.9 ;
+    (6) cible stable : les trois Gamma_2D (k = 2, 3, 4) strictement positives, et max / min <= 2 ;
+    (7) chaine definie : pas d'arret du moteur, barriere non vide ;
+    (8) chaine stable : ses quatre valeurs strictement positives, et max / min <= 2 ;
+    (9) etiquette unique parmi les 14 : deux etats de meme etiquette sont exclus tous les deux.
+  Aucun plafond sur Gamma_2D. Un etat exclu est compte avec son premier motif et ne pese pas.
+  Ces criteres ne lisent aucun rapport chaine / 2D. Les mots "strictement positives" de (6) et de
+  (8) disent ce que la feuille precedente faisait deja et que le gel precedent taisait (D-CH-8).
+
+6. LE STATUT ET LA CLASSE D'UN POINT
+  q = Gamma_chaine / Gamma_2D(3), pour chaque etat juge. Statut du point, comme au gel precedent :
+    NON LISIBLE   si le point est infaisable ou compte moins de 6 etats juges ;
+    FACTEUR 2     si tous les q verifient 0.5 <= q <= 2 ;
+    DECADE        sinon, si tous les q verifient 0.1 <= q x q <= 10, en flottants (la demi-decade,
+                  de 0.3162 a 3.1623) ;
+    HORS DECADE   sinon.
+  Classe du point : TENU s'il est FACTEUR 2 ou DECADE ; TOMBE s'il est HORS DECADE ; aucune s'il
+  est NON LISIBLE. Un seul etat juge hors de la demi-decade fait tomber le point, comme au gel
+  precedent.
+
+7. LA CASCADE : LE VERDICT SUR LA GARDE
+  a = nombre de points juges EN DOMAINE, lisibles, qui sont TOMBES ;
+  b = nombre de points juges HORS DOMAINE, lisibles, qui sont TENUS.
+    NON CONCLUANT D'INSTRUMENT   si une garde de la section 9 mord ;
+    NON LISIBLE                  sinon, si moins de 4 des 6 points EN DOMAINE sont lisibles, ou
+                                 moins de 4 des 6 points HORS DOMAINE ;
+    LA GARDE SEPARE              sinon, si a = 0 et b = 0 ;
+    LA GARDE SUFFIT              sinon, si a = 0 (et b >= 1) ;
+    LA GARDE NE TIENT PAS        sinon (a >= 1).
+  Les ancres ne pesent pas. Un seul point EN DOMAINE tombe suffit a NE TIENT PAS : c'est voulu.
+
+8. LA RIVALE, ECRITE D'AVANCE : LE DESACCORD SEUL, AU-DESSUS DE 2.00
+  Enonce : au-dessus de 2.00, a w2 fixe, la classe d'un point ne depend pas du facteur.
+  Elle se lit sur les trois paires P1, P2, P3. Une paire est NON LISIBLE si l'un de ses deux
+  points l'est ; HOMOGENE si ses deux points ont la meme classe ; HETEROGENE sinon.
+    RIVALE NON LISIBLE   si moins de 2 des 3 paires sont lisibles ;
+    RIVALE TENUE         sinon, si toutes les paires lisibles sont HOMOGENES ;
+    RIVALE NON TENUE     sinon.
+  La garde et la rivale s'excluent : si LA GARDE SEPARE, toute paire lisible est HETEROGENE. Les
+  paires P4 et P5, au-dessous de 2.00, sont lues et rendues sans hypothese : le run precedent y
+  montre deja un q qui depend du facteur.
+  La rivale a son issue propre ; elle n'entre pas dans le verdict de la section 7.
+
+9. GARDES
+  G-1  le moteur lu par la sonde est au canon 82a0be882568fe0c.
+  G-2  les quatorze points sont presents, avec le role, le w2 et le facteur de la section 4, et
+       g = facteur x g_du_point(w2).
+  G-3  chaque point faisable porte 14 etats.
+  G-4  ancres : a A1 l'etat d'etiquette (7,2), a A2 l'etat d'etiquette (8,2), existe une seule fois
+       et rend la lecture du run de M17 a 1e-2 pres en relatif : 2.1623273017950654e-10 et
+       2.6613925716641374e-09.
+  G-5  la feuille passe son selftest (74 cas) avant de lire.
+  G-6  a chacun des quatorze points, la garde du moteur consignee par la sonde est sans erreur,
+       porte le statut de la section 4, et ses D1 et c_max sont ceux de la section 4 a 5e-5 pres.
+
+10. LECTURES DECLAREES, SANS VERDICT
+  Par point : q minimal, maximal, median ; l'etat juge de plus grand recouvrement et son q ; le
+  compte des exclus par motif. Par paire, les cinq : HOMOGENE, HETEROGENE ou NON LISIBLE, et les
+  deux q medians. Ces lectures decrivent ; elles ne rejouent aucun seuil.
+
+11. ANNONCES DE LA PLUME (machine 1), AVANT TOUT RUN
+  Ce que la plume sait est en section 2. Ses attentes en sortent ; ce sont des estimations.
+  A-1  le verdict : LA GARDE NE TIENT PAS 0.74 ; LA GARDE SUFFIT 0.10 ; LA GARDE SEPARE 0.03 ;
+       NON LISIBLE 0.07 ; NON CONCLUANT D'INSTRUMENT 0.06.
+  A-2  (0.75) E3 est HORS DECADE.
+  A-3  (0.85) E4 est HORS DECADE.
+  A-4  (0.55) E2 est HORS DECADE.
+  A-5  (0.75) E1 est DECADE.
+  A-6  (0.70) H1 est TENU.
+  A-7  (0.75) H6 est TENU.
+  A-8  (0.40) la rivale est TENUE. Non jugee si la rivale est NON LISIBLE.
+  A-9  (0.60) a E3, le q median est entre 3.0 et 4.5. Non jugee si E3 est NON LISIBLE.
+  A-10 (0.80) E5 et E6 sont tous les deux TENUS. Non jugee si l'un des deux est NON LISIBLE.
+  A-11 (0.50) H4 ou H5, l'un au moins, est HORS DECADE. Non jugee si aucun n'est HORS DECADE et
+       que l'un des deux est NON LISIBLE.
+  A-12 (0.85) signe : a chaque point juge lisible, le q median est sous 1 si w2 < 2 et au-dessus
+       de 1 si w2 > 2. Fausse des qu'un point lisible la contredit.
+  A-13 (0.95) la garde G-4 tient ; (0.97) la garde G-6 tient.
+  Les annonces A-2 a A-7 et A-10, A-11 sont non jugees si le point qu'elles nomment est NON
+  LISIBLE, sauf mention contraire.
+
+12. CE QUE CHAQUE ISSUE ENGAGE
+  LA GARDE SEPARE : l'acte pourra ecrire que, sur douze points neufs, la garde G-1 du moteur,
+    calculee avant toute diagonalisation, a separe les points ou la chaine au site entier rend la
+    lecture de E-B a k = 3 a une demi-decade pres de ceux ou elle ne la rend pas ; rien de plus.
+  LA GARDE SUFFIT : l'acte pourra ecrire que la chaine a tenu partout ou la garde disait EN
+    DOMAINE, et que la garde n'est pas la frontiere (elle ecarte des points ou la chaine tient).
+  LA GARDE NE TIENT PAS : la coincidence de l'acte aed8677322e20e0d etait une coincidence ; la
+    garde G-1 n'est pas le domaine de validite de la chaine par etat ; l'acte nomme les points.
+  RIVALE TENUE : l'acte pourra ecrire qu'aux paires lisibles au-dessus de 2.00 la classe a suivi
+    w2 et non le facteur ; aucune frontiere en w2 n'en est tiree sans un nouveau gel.
+  RIVALE NON TENUE : la lecture (iii) de la section 2 est retiree comme enonce general.
+  NON LISIBLE, NON CONCLUANT D'INSTRUMENT : rien n'est appris, et l'acte le dit.
+  Dans tous les cas : aucune largeur intrinseque n'est affirmee ; les verdicts PAS DE SIGNAL de
+  M17, NON QUALIFIE de la nuit bis et TENU EN PARTIE du gel precedent ne sont pas touches.
+
+13. GARDE-FOUS
+  Un seul run. Aucun point n'est ajoute, retire ou rejoue apres lecture ; aucune relecture sous
+  d'autres paliers, d'autres criteres, d'autres paires ou une autre population. Si la
+  certification mord, rien ne se joue et la plume corrige par hunks. Ce gel ne rouvre pas la
+  piste (0) et n'en leve pas le garde-fou.
+
+14. DECLARATIONS D'AVEUGLE
+  Machine 1 n'a diagonalise le H 2D a aucun des douze points E1 a E6 et H1 a H6. Elle y a calcule
+  la garde du moteur et la chaine seule. Elle a joue la sonde aux deux ancres, points deja connus
+  (essai a blanc joint, non opposable). Machine 2 dit dans sa certification ce qu'elle a joue.
+
+15. LE CANAL
+  Machine 2 certifie le gel, la sonde (par ses cinq hunks sur acf7e26dedfa8abc) et la feuille. Si
+  la certification rend 0 morsure, elle joue dans le meme retour : un passage de la sonde (42
+  decompositions, de l'ordre de 2000 secondes sur BOCAL4 d'apres ses durees du run precedent),
+  puis la feuille ; elle rend le JSON de la sonde, le verdict et les journaux. Machine 1 rejoue
+  la feuille sur ce JSON et ecrit l'acte. Machine 1 ne joue pas la sonde aux points juges avant
+  d'avoir recu le lot de resultat de machine 2.
+
+16. CE QUE CE GEL NE DIT PAS
+  Il n'eprouve pas la condition D1 de la garde : aucun point faisable de la grille ne la fait
+  mordre. Il n'eprouve la garde qu'aux facteurs 2/3, 1 et 3/2 et qu'a la fraction 0.70. Il ne dit
+  pas que la chaine est "qualifiee", ni qu'elle rend une largeur intrinseque. Il ne dit rien
+  d'autres degres ni d'autres canaux. Il ne prend aucun numero, n'adopte aucune regle, n'edite
+  aucune piece citee (PB-1).
+
+-- FIN gel_domaine_G1_chaine_EA_pre_enregistrement_v1 --

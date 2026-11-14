@@ -1,0 +1,75 @@
+  TIENT  S01 base : EN a q = 1, HORS a q = 5                                attendu LA GARDE SEPARE ; rendu LA GARDE SEPARE
+  TIENT  S02 un etat a q = 2.5 en E2 : DECADE, toujours TENU                attendu LA GARDE SEPARE ; rendu LA GARDE SEPARE
+  TIENT  S03 un etat a q = 4 en E2 : le point tombe, a = 1                  attendu LA GARDE NE TIENT PAS ; rendu LA GARDE NE TIENT PAS
+  TIENT  S04 un etat a q = 0.3 en E5 : le point tombe                       attendu LA GARDE NE TIENT PAS ; rendu LA GARDE NE TIENT PAS
+  TIENT  S05 H6 tout a q = 1 : b = 1, la garde suffit                       attendu LA GARDE SUFFIT ; rendu LA GARDE SUFFIT
+  TIENT  S06 H6 tout a q = 2.5 : DECADE compte TENU, b = 1                  attendu LA GARDE SUFFIT ; rendu LA GARDE SUFFIT
+  TIENT  S07 H3 a q = 1 sauf un etat a 0.3 : pire etat, HORS DECADE         attendu LA GARDE SEPARE ; rendu LA GARDE SEPARE
+  TIENT  S08 a = 1 et b = 1 : la garde ne tient pas                         attendu LA GARDE NE TIENT PAS ; rendu LA GARDE NE TIENT PAS
+  TIENT  S09 tout a q = 1 : a = 0, b = 6                                    attendu LA GARDE SUFFIT ; rendu LA GARDE SUFFIT
+  TIENT  S10 tout a q = 5 : a = 6                                           attendu LA GARDE NE TIENT PAS ; rendu LA GARDE NE TIENT PAS
+  TIENT  S11 bords : q = 2 et q = 0.5 restent FACTEUR 2                     attendu LA GARDE SEPARE ; rendu LA GARDE SEPARE
+  TIENT  S12 q = 0.499 fait DECADE                                          attendu LA GARDE SEPARE ; rendu LA GARDE SEPARE
+  TIENT  S13 q = 2.001 fait DECADE                                          attendu LA GARDE SEPARE ; rendu LA GARDE SEPARE
+  TIENT  S14 q = 3.16 fait DECADE                                           attendu LA GARDE SEPARE ; rendu LA GARDE SEPARE
+  TIENT  S15 q = 3.17 fait HORS DECADE                                      attendu LA GARDE NE TIENT PAS ; rendu LA GARDE NE TIENT PAS
+  TIENT  S16 q = 0.317 fait DECADE, q = 0.316 fait HORS DECADE              attendu LA GARDE NE TIENT PAS ; rendu LA GARDE NE TIENT PAS
+  TIENT  S17 J flou exclu (ecart-type 0.3)                                  attendu LA GARDE SEPARE ; rendu LA GARDE SEPARE
+  TIENT  S18 J flou au bord : 0.22 exclu                                    attendu LA GARDE SEPARE ; rendu LA GARDE SEPARE
+  TIENT  S19 J flou au bord : 0.2 exactement exclu                          attendu LA GARDE SEPARE ; rendu LA GARDE SEPARE
+  TIENT  S20 J net : 0.19 juge, le point tombe                              attendu LA GARDE NE TIENT PAS ; rendu LA GARDE NE TIENT PAS
+  TIENT  S21 etiquette n2 = -1 exclue                                       attendu LA GARDE SEPARE ; rendu LA GARDE SEPARE
+  TIENT  S22 etiquette n1 = -1 exclue                                       attendu LA GARDE SEPARE ; rendu LA GARDE SEPARE
+  TIENT  S23 site minoritaire exclu (0.49)                                  attendu LA GARDE SEPARE ; rendu LA GARDE SEPARE
+  TIENT  S24 site au bord : 0.5 juge, le point tombe                        attendu LA GARDE NE TIENT PAS ; rendu LA GARDE NE TIENT PAS
+  TIENT  S25 sous dix planchers exclu (1e-12)                               attendu LA GARDE SEPARE ; rendu LA GARDE SEPARE
+  TIENT  S26 sous dix planchers au bord : 1.2e-12 exclu                     attendu LA GARDE SEPARE ; rendu LA GARDE SEPARE
+  TIENT  S27 dix planchers exactement (1.33e-12) exclu                      attendu LA GARDE SEPARE ; rendu LA GARDE SEPARE
+  TIENT  S28 juste au-dessus (1.34e-12) juge, le point tombe                attendu LA GARDE NE TIENT PAS ; rendu LA GARDE NE TIENT PAS
+  TIENT  S29 etat non suivi exclu (0.5)                                     attendu LA GARDE SEPARE ; rendu LA GARDE SEPARE
+  TIENT  S30 suivi au bord : 0.85 exclu                                     attendu LA GARDE SEPARE ; rendu LA GARDE SEPARE
+  TIENT  S31 suivi au bord : 0.9 juge, le point tombe                       attendu LA GARDE NE TIENT PAS ; rendu LA GARDE NE TIENT PAS
+  TIENT  S32 cible instable exclue (rapport 2.1)                            attendu LA GARDE SEPARE ; rendu LA GARDE SEPARE
+  TIENT  S33 cible instable par k = 4 seul                                  attendu LA GARDE SEPARE ; rendu LA GARDE SEPARE
+  TIENT  S34 cible a valeur nulle exclue                                    attendu LA GARDE SEPARE ; rendu LA GARDE SEPARE
+  TIENT  S35 cible a valeur negative exclue                                 attendu LA GARDE SEPARE ; rendu LA GARDE SEPARE
+  TIENT  S36 barriere vide exclue                                           attendu LA GARDE SEPARE ; rendu LA GARDE SEPARE
+  TIENT  S37 chaine non definie exclue                                      attendu LA GARDE SEPARE ; rendu LA GARDE SEPARE
+  TIENT  S38 chaine en erreur exclue                                        attendu LA GARDE SEPARE ; rendu LA GARDE SEPARE
+  TIENT  S39 chaine instable exclue (dernier barreau)                       attendu LA GARDE SEPARE ; rendu LA GARDE SEPARE
+  TIENT  S40 chaine instable par le premier barreau seul                    attendu LA GARDE SEPARE ; rendu LA GARDE SEPARE
+  TIENT  S41 chaine a valeur nulle exclue                                   attendu LA GARDE SEPARE ; rendu LA GARDE SEPARE
+  TIENT  S42 chaine a valeur negative exclue                                attendu LA GARDE SEPARE ; rendu LA GARDE SEPARE
+  TIENT  S43 etiquette en double : les deux exclus                          attendu LA GARDE SEPARE ; rendu LA GARDE SEPARE
+  TIENT  S44 q lu au troisieme barreau et a k = 3 : q = 1                   attendu LA GARDE SEPARE ; rendu LA GARDE SEPARE
+  TIENT  S45 cinq etats juges en E5 : point NON LISIBLE, verdict tenu       attendu LA GARDE SEPARE ; rendu LA GARDE SEPARE
+  TIENT  S46 six etats juges en E5 : point lisible                          attendu LA GARDE SEPARE ; rendu LA GARDE SEPARE
+  TIENT  S47 deux EN illisibles : quatre lisibles suffisent                 attendu LA GARDE SEPARE ; rendu LA GARDE SEPARE
+  TIENT  S48 trois EN illisibles                                            attendu NON LISIBLE ; rendu NON LISIBLE
+  TIENT  S49 deux HORS illisibles : quatre lisibles suffisent               attendu LA GARDE SEPARE ; rendu LA GARDE SEPARE
+  TIENT  S50 trois HORS illisibles                                          attendu NON LISIBLE ; rendu NON LISIBLE
+  TIENT  S51 point infaisable : NON LISIBLE au point                        attendu LA GARDE SEPARE ; rendu LA GARDE SEPARE
+  TIENT  S52 un EN illisible qui serait tombe ne pese pas                   attendu LA GARDE SEPARE ; rendu LA GARDE SEPARE
+  TIENT  S53 rivale tenue : P1 tenu-tenu, P2 et P3 tombe-tombe              attendu LA GARDE NE TIENT PAS ; rendu LA GARDE NE TIENT PAS
+  TIENT  S54 rivale non tenue des qu'une paire est heterogene               attendu LA GARDE NE TIENT PAS ; rendu LA GARDE NE TIENT PAS
+  TIENT  S55 rivale : P4 et P5 ne pesent pas                                attendu LA GARDE SUFFIT ; rendu LA GARDE SUFFIT
+  TIENT  S56 rivale sur deux paires lisibles                                attendu LA GARDE NE TIENT PAS ; rendu LA GARDE NE TIENT PAS
+  TIENT  S57 rivale NON LISIBLE a une seule paire lisible                   attendu LA GARDE SEPARE ; rendu LA GARDE SEPARE
+  TIENT  S58 une ancre hors decade ne pese pas                              attendu LA GARDE SEPARE ; rendu LA GARDE SEPARE
+  TIENT  S59 ancre a 2 pour cent                                            attendu NON CONCLUANT D'INSTRUMENT ; rendu NON CONCLUANT D'INSTRUMENT
+  TIENT  S60 ancre a 1.5 pour cent                                          attendu NON CONCLUANT D'INSTRUMENT ; rendu NON CONCLUANT D'INSTRUMENT
+  TIENT  S61 ancre a 0.5 pour cent : tenue                                  attendu LA GARDE SEPARE ; rendu LA GARDE SEPARE
+  TIENT  S62 etat d'ancre absent                                            attendu NON CONCLUANT D'INSTRUMENT ; rendu NON CONCLUANT D'INSTRUMENT
+  TIENT  S63 moteur hors canon                                              attendu NON CONCLUANT D'INSTRUMENT ; rendu NON CONCLUANT D'INSTRUMENT
+  TIENT  S64 un point manque                                                attendu NON CONCLUANT D'INSTRUMENT ; rendu NON CONCLUANT D'INSTRUMENT
+  TIENT  S65 g n'est pas facteur x regle                                    attendu NON CONCLUANT D'INSTRUMENT ; rendu NON CONCLUANT D'INSTRUMENT
+  TIENT  S66 w2 d'un point change                                           attendu NON CONCLUANT D'INSTRUMENT ; rendu NON CONCLUANT D'INSTRUMENT
+  TIENT  S67 treize etats a un point                                        attendu NON CONCLUANT D'INSTRUMENT ; rendu NON CONCLUANT D'INSTRUMENT
+  TIENT  S68 G-6 : la garde du moteur dit HORS a un point EN                attendu NON CONCLUANT D'INSTRUMENT ; rendu NON CONCLUANT D'INSTRUMENT
+  TIENT  S69 G-6 : la garde du moteur dit EN a un point HORS                attendu NON CONCLUANT D'INSTRUMENT ; rendu NON CONCLUANT D'INSTRUMENT
+  TIENT  S70 G-6 : c_max a 1e-4 de la table                                 attendu NON CONCLUANT D'INSTRUMENT ; rendu NON CONCLUANT D'INSTRUMENT
+  TIENT  S71 G-6 : D1 a 1e-4 de la table                                    attendu NON CONCLUANT D'INSTRUMENT ; rendu NON CONCLUANT D'INSTRUMENT
+  TIENT  S72 G-6 : c_max a 4e-5 de la table : tenue                         attendu LA GARDE SEPARE ; rendu LA GARDE SEPARE
+  TIENT  S73 G-6 : garde du moteur en erreur                                attendu NON CONCLUANT D'INSTRUMENT ; rendu NON CONCLUANT D'INSTRUMENT
+  TIENT  S74 G-6 : garde du moteur non consignee a une ancre                attendu NON CONCLUANT D'INSTRUMENT ; rendu NON CONCLUANT D'INSTRUMENT
+SELFTEST : 74 cas, 74 tenus

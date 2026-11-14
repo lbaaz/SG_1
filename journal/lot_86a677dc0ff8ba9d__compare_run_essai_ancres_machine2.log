@@ -1,0 +1,12 @@
+plateformes : run {'MKL_NUM_THREADS': None, 'OMP_NUM_THREADS': None, 'OPENBLAS_NUM_THREADS': None} | essai_domaine {'MKL_NUM_THREADS': None, 'OMP_NUM_THREADS': None, 'OPENBLAS_NUM_THREADS': None}
+== A1 : g 1.815737e-03/1.815737e-03 r_c 40/40 N 60/60 graine (7.5943,2.5683)/(7.5943,2.5683)
+   rang  2 (6,2) G3 7.3492e-12 / 7.3492e-12  rel 0.00e+00  abs 0.00e+00 ; G2 7.4802e-12/7.4802e-12 ; G4 6.5922e-12/6.5922e-12
+   rang  8 (7,1) G3 6.4611e-12 / 6.4611e-12  rel 0.00e+00  abs 0.00e+00 ; G2 6.5525e-12/6.5525e-12 ; G4 6.1659e-12/6.1659e-12
+   rang  9 (5,2) G3 2.1809e-13 / 2.1809e-13  rel 0.00e+00  abs 0.00e+00 ; G2 2.0263e-13/2.0263e-13 ; G4 1.8870e-13/1.8870e-13
+   rang 10 (6,1) G3 2.0162e-13 / 2.0162e-13  rel 0.00e+00  abs 0.00e+00 ; G2 1.5603e-13/1.5603e-13 ; G4 1.8372e-13/1.8372e-13
+== A2 : g 2.634488e-03/2.634488e-03 r_c 41/41 N 61/61 graine (8.4774,2.5683)/(8.4774,2.5683)
+   rang  4 (6,2) G3 4.3190e-12 / 4.3190e-12  rel 0.00e+00  abs 0.00e+00 ; G2 4.3896e-12/4.3896e-12 ; G4 4.2467e-12/4.2467e-12
+   rang  5 (7,1) G3 3.6720e-12 / 3.6720e-12  rel 0.00e+00  abs 0.00e+00 ; G2 3.7438e-12/3.7438e-12 ; G4 3.4921e-12/3.4921e-12
+   rang 10 (6,1) G3 1.0949e-13 / 1.0949e-13  rel 0.00e+00  abs 0.00e+00 ; G2 1.4162e-13/1.4162e-13 ; G4 1.2826e-13/1.2826e-13
+   rang 13 (5,2) G3 5.4988e-14 / 5.4988e-14  rel 0.00e+00  abs 0.00e+00 ; G2 1.2690e-13/1.2690e-13 ; G4 1.1505e-13/1.1505e-13
+BILAN : 28 etats, 0 etiquettes differentes ; ecart absolu max de Gamma_2D (k = 2, 3, 4) 0.00e+00 ; relatif max 0.00e+00 ; relatif max au-dessus de 1e-10 0.00e+00 ; chaine : ecart relatif max 0.00e+00

@@ -1,0 +1,471 @@
+# -*- coding: ascii -*-
+"""FEUILLE DE LECTURE DU GEL "LA GARDE G-1 DU MOTEUR ET LA CHAINE E-A PAR ETAT" -- machine 1, v1, 2026-11-14.
+ELLE JUGE ET NE MESURE PAS : elle lit le JSON de la sonde et applique les sections 5 a 9 du gel.
+Les criteres d'etat (motif_exclusion), les paliers (palier) et la garde des ancres sont ceux de la feuille
+certifiee du gel precedent (lecture_chaine_par_etat_machine1_v1.py, f94ab05f69e9bf2f), au caractere pres
+(seul change, dans une docstring, le numero de la section du gel qui porte les criteres : 5 et non 6).
+Ce qui change : les points, la garde G-6 (statut de la garde du moteur consigne par la sonde), la cascade
+(sections 7 et 8 du gel) et le selftest, qui porte les cas aux bords demandes par machine 2 (sa reserve R-2).
+Usage :
+  python -P lecture_domaine_G1_machine1_v1.py --selftest
+  python -P lecture_domaine_G1_machine1_v1.py <sonde.json> <verdict.json>
+  python -P lecture_domaine_G1_machine1_v1.py --essai <sonde.json>     (essai a blanc, non opposable)
+"""
+import sys, json, math, copy
+
+MOTEUR_CANON = "82a0be882568fe0c"
+EN, HORS = "EN DOMAINE", "HORS DOMAINE"
+ATTENDUS = {  # id : (role, w2, facteur, garde du moteur attendue, D1, c_max)  -- section 4 du gel
+    "E1": ("juge", "52/25", "1/1", EN, 0.080000, 0.082317), "E2": ("juge", "209/100", "1/1", EN, 0.090000, 0.093558),
+    "E3": ("juge", "21/10", "3/2", EN, 0.100000, 0.077751), "E4": ("juge", "53/25", "3/2", EN, 0.120000, 0.094450),
+    "E5": ("juge", "191/100", "1/1", EN, 0.109756, 0.080390), "E6": ("juge", "19/10", "3/2", EN, 0.125000, 0.090398),
+    "H1": ("juge", "52/25", "2/3", HORS, 0.080000, 0.103309), "H2": ("juge", "21/10", "2/3", HORS, 0.100000, 0.129951),
+    "H3": ("juge", "53/25", "1/1", HORS, 0.120000, 0.126744), "H4": ("juge", "191/100", "2/3", HORS, 0.109756, 0.106427),
+    "H5": ("juge", "19/10", "2/3", HORS, 0.125000, 0.151055), "H6": ("juge", "189/100", "1/1", HORS, 0.141026, 0.102598),
+    "A1": ("ancre", "39/20", "1/1", EN, 0.055556, 0.040917), "A2": ("ancre", "41/20", "1/1", EN, 0.050000, 0.051012),
+}
+PAIRES = {"P1": ("E1", "H1"), "P2": ("E3", "H2"), "P3": ("E4", "H3"), "P4": ("E5", "H4"), "P5": ("E6", "H5")}
+PAIRES_RIVALE = ("P1", "P2", "P3")   # les trois paires au-dessus de 2.00
+ANCRES = {"A1": ((7, 2), 2.1623273017950654e-10), "A2": ((8, 2), 2.6613925716641374e-09)}  # lecture du run M17
+TOL_ANCRE = 1e-2
+TOL_GARDE = 5e-5              # D1 et c_max du moteur contre la table du gel, donnee a six decimales
+N_ETATS = 14
+DIX_PLANCHERS = 1.33e-12      # dix fois le plancher du jumeau de la nuit bis (1.330e-13)
+SIGMA_J_MAX = 0.2
+POIDS_SITE_MIN = 0.5
+SUIVI_MIN = 0.9
+STABILITE_CIBLE = 2.0         # max / min de Gamma_2D sur k = 2, 3, 4
+ETALEMENT_CHAINE = 2.0        # max / min de la chaine sur ses quatre eta (meme exigence que la cible)
+MIN_JUGES = 6                 # etats juges par point, sinon NON LISIBLE
+MIN_EN_LISIBLES = 4           # points juges EN DOMAINE lisibles, sinon NON LISIBLE
+MIN_HORS_LISIBLES = 4         # points juges HORS DOMAINE lisibles, sinon NON LISIBLE
+MIN_PAIRES_RIVALE = 2         # paires de la rivale lisibles, sinon la rivale est NON LISIBLE
+
+def motif_exclusion(e):
+    """None si l'etat est juge, sinon le premier motif d'exclusion, dans l'ordre du gel (section 5)."""
+    if not (e["J_ecart_type"] < SIGMA_J_MAX):
+        return "J flou"
+    if e["n1"] < 0 or e["n2"] < 0:
+        return "etiquette hors domaine"
+    if not (e["poids_site"] >= POIDS_SITE_MIN):
+        return "site minoritaire"
+    g3 = e["Gamma_2D"]["3"]
+    if not (g3 > DIX_PLANCHERS):
+        return "sous dix planchers"
+    gs = [e["Gamma_2D"][k] for k in ("2", "3", "4")]
+    if min(e["suivi"]["2"], e["suivi"]["4"]) < SUIVI_MIN:
+        return "etat non suivi"
+    if min(gs) <= 0 or max(gs) / min(gs) > STABILITE_CIBLE:
+        return "cible instable"
+    ch = e["chaine"]
+    if ch.get("erreur"):
+        return "chaine en erreur"
+    if ch.get("vide") or not ch.get("definie"):
+        return "barriere vide"
+    cg = ch["gammas"]
+    if min(cg) <= 0 or max(cg) / min(cg) > ETALEMENT_CHAINE:
+        return "chaine instable"
+    return None
+
+def palier(q):
+    if 0.5 <= q <= 2.0:
+        return "FACTEUR 2"
+    if q * q >= 0.1 and q * q <= 10.0:
+        return "DECADE"
+    return "HORS DECADE"
+
+ORDRE_PALIER = {"FACTEUR 2": 0, "DECADE": 1, "HORS DECADE": 2}
+CLASSE = {"FACTEUR 2": "TENU", "DECADE": "TENU", "HORS DECADE": "TOMBE", "NON LISIBLE": None}
+
+def lire_point(pt):
+    out = {"id": pt["id"], "role": pt["role"], "w2": pt["w2"], "facteur": pt["facteur"], "etats": [],
+           "garde_moteur": (pt.get("garde_moteur") or {}).get("statut")}
+    if not pt.get("faisable", False):
+        out.update({"statut": "NON LISIBLE", "motif": "infaisable (N > N_max)", "n_juges": 0, "classe": None})
+        return out
+    vus = {}
+    for e in pt["etats"]:
+        vus[(e["n1"], e["n2"])] = vus.get((e["n1"], e["n2"]), 0) + 1
+    juges = []
+    for e in pt["etats"]:
+        m = motif_exclusion(e)
+        if m is None and vus[(e["n1"], e["n2"])] > 1:
+            m = "etiquette en double"
+        ligne = {"rang": e["rang"], "n1": e["n1"], "n2": e["n2"], "Gamma_2D": e["Gamma_2D"]["3"], "exclu": m}
+        if m is None:
+            q = e["chaine"]["gammas"][2] / e["Gamma_2D"]["3"]
+            ligne.update({"Gamma_chaine": e["chaine"]["gammas"][2], "q": q, "palier": palier(q)})
+            juges.append(ligne)
+        out["etats"].append(ligne)
+    out["n_juges"] = len(juges)
+    if len(juges) < MIN_JUGES:
+        out.update({"statut": "NON LISIBLE", "motif": "moins de %d etats juges" % MIN_JUGES, "classe": None})
+        return out
+    qs = sorted(x["q"] for x in juges)
+    pire = max(juges, key=lambda x: ORDRE_PALIER[x["palier"]])
+    out.update({"statut": pire["palier"], "classe": CLASSE[pire["palier"]], "q_min": qs[0], "q_max": qs[-1],
+                "q_median": 0.5 * (qs[(len(qs) - 1) // 2] + qs[len(qs) // 2]),
+                "premier_juge": {k: juges[0][k] for k in ("rang", "n1", "n2", "q", "palier")}})
+    return out
+
+def eval_fraction(t):
+    a, b = t.split("/")
+    return float(int(a)) / float(int(b))
+
+def garde_ancres(pts):
+    motifs = []
+    for pid, ((n1, n2), ref) in ANCRES.items():
+        p = pts.get(pid)
+        if p is None or not p.get("faisable"):
+            motifs.append("G-4 ancre %s absente" % pid); continue
+        tr = [e for e in p["etats"] if (e["n1"], e["n2"]) == (n1, n2)]
+        if len(tr) != 1:
+            motifs.append("G-4 ancre %s : etat (%d,%d) vu %d fois" % (pid, n1, n2, len(tr))); continue
+        ecart = abs(tr[0]["Gamma_2D"]["3"] / ref - 1.0)
+        if ecart > TOL_ANCRE:
+            motifs.append("G-4 ancre %s : ecart %.3e a la lecture du run" % (pid, ecart))
+    return motifs
+
+def garde_du_moteur(pid, p):
+    """G-6 : la garde G-1 du moteur, consignee par la sonde, est celle de la table du gel."""
+    statut, d1, cmax = ATTENDUS[pid][3:6]
+    gm = p.get("garde_moteur")
+    if not isinstance(gm, dict):
+        return ["G-6 point %s : garde du moteur non consignee" % pid]
+    if gm.get("erreur"):
+        return ["G-6 point %s : garde du moteur en erreur" % pid]
+    if gm.get("statut") != statut:
+        return ["G-6 point %s : garde du moteur %s, le gel attend %s" % (pid, gm.get("statut"), statut)]
+    if gm.get("D1") is None or gm.get("c_max") is None or \
+            abs(gm["D1"] - d1) > TOL_GARDE or abs(gm["c_max"] - cmax) > TOL_GARDE:
+        return ["G-6 point %s : D1 ou c_max hors de la table du gel" % pid]
+    return []
+
+def gardes(s):
+    motifs = []
+    if s.get("moteur_canon") != MOTEUR_CANON:
+        motifs.append("G-1 moteur hors canon")
+    pts = {p["id"]: p for p in s.get("points", [])}
+    if sorted(pts) != sorted(ATTENDUS) or len(s.get("points", [])) != len(ATTENDUS):
+        motifs.append("G-2 points : attendu %s" % " ".join(sorted(ATTENDUS)))
+    else:
+        for pid in ATTENDUS:
+            role, w2, fac = ATTENDUS[pid][0:3]
+            p = pts[pid]
+            if (p["role"], p["w2"], p["facteur"]) != (role, w2, fac):
+                motifs.append("G-2 point %s : role, w2 ou facteur" % pid)
+            if p.get("faisable") and len(p["etats"]) != N_ETATS:
+                motifs.append("G-3 point %s : %d etats" % (pid, len(p["etats"])))
+            if abs(p["g"] - p["g_regle"] * eval_fraction(fac)) > 1e-12 * p["g_regle"]:
+                motifs.append("G-2 point %s : g n'est pas facteur x regle" % pid)
+            motifs += garde_du_moteur(pid, p)
+        motifs += garde_ancres(pts)
+    return motifs
+
+def lire_paires(par_id):
+    out = {}
+    for nom, (a, b) in PAIRES.items():
+        ca, cb = par_id[a]["classe"], par_id[b]["classe"]
+        if ca is None or cb is None:
+            out[nom] = "NON LISIBLE"
+        else:
+            out[nom] = "HOMOGENE" if ca == cb else "HETEROGENE"
+    return out
+
+def cascade(s):
+    motifs = gardes(s)
+    lus = [lire_point(p) for p in s.get("points", [])]
+    if motifs:
+        return {"verdict": "NON CONCLUANT D'INSTRUMENT", "motifs": motifs, "points": lus}
+    par_id = {x["id"]: x for x in lus}
+    en = [par_id[k] for k in ATTENDUS if ATTENDUS[k][0] == "juge" and ATTENDUS[k][3] == EN]
+    hors = [par_id[k] for k in ATTENDUS if ATTENDUS[k][0] == "juge" and ATTENDUS[k][3] == HORS]
+    en_l = [x for x in en if x["statut"] != "NON LISIBLE"]
+    hors_l = [x for x in hors if x["statut"] != "NON LISIBLE"]
+    a = sum(1 for x in en_l if x["classe"] == "TOMBE")       # manquements a la suffisance
+    b = sum(1 for x in hors_l if x["classe"] == "TENU")      # manquements a la necessite
+    if len(en_l) < MIN_EN_LISIBLES or len(hors_l) < MIN_HORS_LISIBLES:
+        v = "NON LISIBLE"
+    elif a == 0 and b == 0:
+        v = "LA GARDE SEPARE"
+    elif a == 0:
+        v = "LA GARDE SUFFIT"
+    else:
+        v = "LA GARDE NE TIENT PAS"
+    paires = lire_paires(par_id)
+    lisibles = [paires[k] for k in PAIRES_RIVALE if paires[k] != "NON LISIBLE"]
+    if len(lisibles) < MIN_PAIRES_RIVALE:
+        rivale = "NON LISIBLE"
+    else:
+        rivale = "TENUE" if all(x == "HOMOGENE" for x in lisibles) else "NON TENUE"
+    return {"verdict": v, "motifs": [], "points": lus, "a_EN_tombes": a, "b_HORS_tenus": b,
+            "EN_lisibles": len(en_l), "HORS_lisibles": len(hors_l), "paires": paires, "rivale": rivale,
+            "points_juges": {x["id"]: [x["garde_moteur"], x["statut"]] for x in en + hors}}
+
+def afficher(r, titre):
+    print(titre)
+    for x in r["points"]:
+        if x["statut"] == "NON LISIBLE":
+            print("  %s %-5s w2=%-7s x%s garde %-12s : NON LISIBLE (%s), %d etats juges" % (
+                x["id"], x["role"], x["w2"], x["facteur"], x["garde_moteur"], x["motif"], x["n_juges"]))
+        else:
+            print("  %s %-5s w2=%-7s x%s garde %-12s : %-11s %-5s %d etats juges, q de %.3f a %.3f, mediane %.3f ; "
+                  "premier juge (%d,%d) q = %.3f" % (
+                      x["id"], x["role"], x["w2"], x["facteur"], x["garde_moteur"], x["statut"], x["classe"],
+                      x["n_juges"], x["q_min"], x["q_max"], x["q_median"], x["premier_juge"]["n1"],
+                      x["premier_juge"]["n2"], x["premier_juge"]["q"]))
+        ex = {}
+        for e in x["etats"]:
+            if e["exclu"]:
+                ex[e["exclu"]] = ex.get(e["exclu"], 0) + 1
+        if ex:
+            print("      exclus : " + " ; ".join("%s %d" % kv for kv in sorted(ex.items())))
+    for m in r["motifs"]:
+        print("  MOTIF : " + m)
+    if "paires" in r:
+        print("  EN DOMAINE lisibles %d, dont tombes a = %d ; HORS DOMAINE lisibles %d, dont tenus b = %d" % (
+            r["EN_lisibles"], r["a_EN_tombes"], r["HORS_lisibles"], r["b_HORS_tenus"]))
+        print("  paires : " + " ; ".join("%s (%s, %s) %s" % (k, PAIRES[k][0], PAIRES[k][1], r["paires"][k])
+                                         for k in sorted(PAIRES)))
+        print("RIVALE, le desaccord seul au-dessus de 2.00 (P1, P2, P3) : " + r["rivale"])
+    print("VERDICT : " + r["verdict"])
+
+# ---------------------------------------------------------------------------------------------- selftest
+def etat(rang, n1, n2, g2d, q, **kw):
+    e = {"rang": rang, "recouvrement": 0.03, "E_re": 0.0, "J_moyen": float(n1 - 2 * n2), "J_ecart_type": 0.05,
+         "n1_moyen": n1 + 0.1, "n2_moyen": n2 + 0.05, "n1": n1, "n2": n2, "poids_site": 0.9, "poids_Fock_max": 0.9,
+         "Gamma_2D": {"2": g2d * 1.05, "3": g2d, "4": g2d * 0.97}, "suivi": {"2": 0.999, "4": 0.999},
+         "chaine": {"definie": True, "vide": False, "gammas": [g2d * q * f for f in (1.02, 1.01, 1.0, 0.99)],
+                    "Lambda": 1.0, "card": 6, "erreur": None}}
+    for k, v in kw.items():
+        if k in e["chaine"]:
+            e["chaine"][k] = v
+        else:
+            e[k] = v
+    return e
+
+def point(pid, qs=None, etats=None):
+    role, w2, fac, statut, d1, cmax = ATTENDUS[pid]
+    if etats is None:
+        q0 = 1.0 if statut == EN else 5.0        # base : la garde separe
+        qs = qs if qs is not None else [q0] * N_ETATS
+        etats = [etat(r, 5 + r, 2, 1e-9, qs[r]) for r in range(N_ETATS)]
+    if pid in ANCRES:
+        (n1, n2), ref = ANCRES[pid]
+        etats = [etat(0, n1, n2, ref, 1.0)] + [etat(r, 20 + r, 2, 1e-9, 1.0) for r in range(1, N_ETATS)]
+    return {"id": pid, "role": role, "w2": w2, "facteur": fac, "g_regle": 1e-3, "g": 1e-3 * eval_fraction(fac),
+            "faisable": True, "etats": etats,
+            "garde_moteur": {"Omega_c": 1.0, "D1": d1, "c_max": cmax, "site_c_max": 3, "statut": statut, "erreur": None}}
+
+def jeu(modif=None):
+    pts = {pid: point(pid) for pid in ATTENDUS}
+    s = {"moteur_canon": MOTEUR_CANON, "points": None}
+    if modif:
+        modif(pts, s)
+    s["points"] = s["points"] if s["points"] is not None else [pts[k] for k in ATTENDUS]
+    return s
+
+def selftest():
+    cas = []
+    SEP, SUF, NTP, NL, NC = ("LA GARDE SEPARE", "LA GARDE SUFFIT", "LA GARDE NE TIENT PAS", "NON LISIBLE",
+                             "NON CONCLUANT D'INSTRUMENT")
+    def c(nom, attendu, modif=None, point_attendu=None, rivale=None, ab=None, paire=None):
+        r = cascade(jeu(modif))
+        ok = (r["verdict"] == attendu)
+        if point_attendu:
+            pid, st = point_attendu
+            ok = ok and [x for x in r["points"] if x["id"] == pid][0]["statut"] == st
+        if rivale:
+            ok = ok and r.get("rivale") == rivale
+        if ab:
+            ok = ok and (r.get("a_EN_tombes"), r.get("b_HORS_tenus")) == ab
+        if paire:
+            ok = ok and r.get("paires", {}).get(paire[0]) == paire[1]
+        cas.append(ok)
+        print("  %s  %-66s attendu %s ; rendu %s" % ("TIENT" if ok else "MORD ", nom, attendu, r["verdict"]))
+    def qsur(pid, r, q):
+        def f(pts, s):
+            pts[pid]["etats"][r] = etat(r, 5 + r, 2, 1e-9, q)
+        return f
+    def tous(q, ids):
+        def f(pts, s):
+            for pid in ids:
+                pts[pid] = point(pid, [q] * N_ETATS)
+        return f
+    def et(*fs):
+        def f(pts, s):
+            for g in fs:
+                g(pts, s)
+        return f
+    E = ["E1", "E2", "E3", "E4", "E5", "E6"]; Hh = ["H1", "H2", "H3", "H4", "H5", "H6"]
+    # --- la cascade
+    c("S01 base : EN a q = 1, HORS a q = 5", SEP, point_attendu=("E1", "FACTEUR 2"), rivale="NON TENUE", ab=(0, 0),
+      paire=("P1", "HETEROGENE"))
+    c("S02 un etat a q = 2.5 en E2 : DECADE, toujours TENU", SEP, qsur("E2", 3, 2.5), point_attendu=("E2", "DECADE"))
+    c("S03 un etat a q = 4 en E2 : le point tombe, a = 1", NTP, qsur("E2", 3, 4.0), point_attendu=("E2", "HORS DECADE"),
+      ab=(1, 0))
+    c("S04 un etat a q = 0.3 en E5 : le point tombe", NTP, qsur("E5", 0, 0.3), point_attendu=("E5", "HORS DECADE"))
+    c("S05 H6 tout a q = 1 : b = 1, la garde suffit", SUF, tous(1.0, ["H6"]), point_attendu=("H6", "FACTEUR 2"), ab=(0, 1))
+    c("S06 H6 tout a q = 2.5 : DECADE compte TENU, b = 1", SUF, tous(2.5, ["H6"]), point_attendu=("H6", "DECADE"), ab=(0, 1))
+    c("S07 H3 a q = 1 sauf un etat a 0.3 : pire etat, HORS DECADE", SEP,
+      et(tous(1.0, ["H3"]), qsur("H3", 4, 0.3)), point_attendu=("H3", "HORS DECADE"), ab=(0, 0))
+    c("S08 a = 1 et b = 1 : la garde ne tient pas", NTP, et(tous(5.0, ["E3"]), tous(1.0, ["H6"])), ab=(1, 1))
+    c("S09 tout a q = 1 : a = 0, b = 6", SUF, tous(1.0, Hh), ab=(0, 6), rivale="TENUE", paire=("P4", "HOMOGENE"))
+    c("S10 tout a q = 5 : a = 6", NTP, tous(5.0, E), ab=(6, 0), rivale="TENUE")
+    # --- les bords des paliers
+    c("S11 bords : q = 2 et q = 0.5 restent FACTEUR 2", SEP,
+      et(qsur("E3", 0, 2.0), qsur("E3", 1, 0.5)), point_attendu=("E3", "FACTEUR 2"))
+    c("S12 q = 0.499 fait DECADE", SEP, qsur("E3", 0, 0.499), point_attendu=("E3", "DECADE"))
+    c("S13 q = 2.001 fait DECADE", SEP, qsur("E3", 0, 2.001), point_attendu=("E3", "DECADE"))
+    c("S14 q = 3.16 fait DECADE", SEP, qsur("E4", 0, 3.16), point_attendu=("E4", "DECADE"))
+    c("S15 q = 3.17 fait HORS DECADE", NTP, qsur("E4", 0, 3.17), point_attendu=("E4", "HORS DECADE"))
+    c("S16 q = 0.317 fait DECADE, q = 0.316 fait HORS DECADE", NTP,
+      et(qsur("E1", 0, 0.317), qsur("E6", 0, 0.316)), point_attendu=("E1", "DECADE"), ab=(1, 0))
+    # --- les exclusions : un etat a q = 100 en E2 ne pese pas s'il est exclu
+    def excl(champ, valeur, q=100.0, n1=7, n2=2):
+        def f(pts, s):
+            pts["E2"]["etats"][2] = etat(2, n1, n2, 1e-9, q, **{champ: valeur})
+        return f
+    c("S17 J flou exclu (ecart-type 0.3)", SEP, excl("J_ecart_type", 0.3))
+    c("S18 J flou au bord : 0.22 exclu", SEP, excl("J_ecart_type", 0.22))
+    c("S19 J flou au bord : 0.2 exactement exclu", SEP, excl("J_ecart_type", 0.2))
+    c("S20 J net : 0.19 juge, le point tombe", NTP, excl("J_ecart_type", 0.19))
+    c("S21 etiquette n2 = -1 exclue", SEP, excl("J_ecart_type", 0.05, n1=7, n2=-1))
+    c("S22 etiquette n1 = -1 exclue", SEP, excl("J_ecart_type", 0.05, n1=-1, n2=2))
+    c("S23 site minoritaire exclu (0.49)", SEP, excl("poids_site", 0.49))
+    c("S24 site au bord : 0.5 juge, le point tombe", NTP, excl("poids_site", 0.5))
+    c("S25 sous dix planchers exclu (1e-12)", SEP, excl("Gamma_2D", {"2": 1e-12, "3": 1e-12, "4": 1e-12}))
+    c("S26 sous dix planchers au bord : 1.2e-12 exclu", SEP, excl("Gamma_2D", {"2": 1.2e-12, "3": 1.2e-12, "4": 1.2e-12}))
+    c("S27 dix planchers exactement (1.33e-12) exclu", SEP,
+      excl("Gamma_2D", {"2": 1.33e-12, "3": 1.33e-12, "4": 1.33e-12}))
+    c("S28 juste au-dessus (1.34e-12) juge, le point tombe", NTP,
+      excl("Gamma_2D", {"2": 1.34e-12, "3": 1.34e-12, "4": 1.34e-12}))
+    c("S29 etat non suivi exclu (0.5)", SEP, excl("suivi", {"2": 0.5, "4": 0.999}))
+    c("S30 suivi au bord : 0.85 exclu", SEP, excl("suivi", {"2": 0.999, "4": 0.85}))
+    c("S31 suivi au bord : 0.9 juge, le point tombe", NTP, excl("suivi", {"2": 0.9, "4": 0.9}))
+    c("S32 cible instable exclue (rapport 2.1)", SEP, excl("Gamma_2D", {"2": 2.1e-9, "3": 1e-9, "4": 1e-9}))
+    c("S33 cible instable par k = 4 seul", SEP, excl("Gamma_2D", {"2": 1e-9, "3": 1e-9, "4": 0.45e-9}))
+    c("S34 cible a valeur nulle exclue", SEP, excl("Gamma_2D", {"2": 0.0, "3": 1e-9, "4": 1e-9}))
+    c("S35 cible a valeur negative exclue", SEP, excl("Gamma_2D", {"2": 1e-9, "3": 1e-9, "4": -1e-9}))
+    c("S36 barriere vide exclue", SEP, excl("vide", True))
+    c("S37 chaine non definie exclue", SEP, excl("definie", False))
+    c("S38 chaine en erreur exclue", SEP, excl("erreur", "SystemExit: ARRET"))
+    c("S39 chaine instable exclue (dernier barreau)", SEP, excl("gammas", [1e-7, 1e-7, 1e-7, 4e-8]))
+    c("S40 chaine instable par le premier barreau seul", SEP, excl("gammas", [2.5e-7, 1e-7, 1e-7, 1e-7]))
+    c("S41 chaine a valeur nulle exclue", SEP, excl("gammas", [1e-7, 1e-7, 1e-7, 0.0]))
+    c("S42 chaine a valeur negative exclue", SEP, excl("gammas", [1e-7, -1e-7, 1e-7, 1e-7]))
+    def double(pts, s):
+        pts["E2"]["etats"][2] = etat(2, 6, 2, 1e-9, 100.0)      # meme etiquette que le rang 1 : les deux sont exclus
+    c("S43 etiquette en double : les deux exclus", SEP, double)
+    def lecture_barreau(pts, s):                                # q se lit au troisieme barreau (facteur 1/16), sur k = 3
+        e = etat(2, 7, 2, 1e-9, 1.0); e["chaine"]["gammas"] = [1.9e-9, 1.9e-9, 1.0e-9, 1.0e-9]
+        e["Gamma_2D"] = {"2": 1.9e-9, "3": 1.0e-9, "4": 1.0e-9}
+        pts["E2"]["etats"] = [copy.deepcopy(e) for _ in range(N_ETATS)]
+        for r, x in enumerate(pts["E2"]["etats"]):
+            x["rang"] = r; x["n1"] = 5 + r
+    c("S44 q lu au troisieme barreau et a k = 3 : q = 1", SEP, lecture_barreau, point_attendu=("E2", "FACTEUR 2"))
+    # --- lisibilite
+    def peu(ids, n=5):
+        def f(pts, s):
+            for pid in ids:
+                q0 = 1.0 if ATTENDUS[pid][3] == EN else 5.0
+                pts[pid]["etats"] = [etat(r, 5 + r, 2, 1e-9, q0) for r in range(n)] + \
+                                    [etat(r, 5 + r, 2, 1e-13, q0) for r in range(n, N_ETATS)]
+        return f
+    c("S45 cinq etats juges en E5 : point NON LISIBLE, verdict tenu", SEP, peu(["E5"]), point_attendu=("E5", "NON LISIBLE"),
+      paire=("P4", "NON LISIBLE"))
+    c("S46 six etats juges en E5 : point lisible", SEP, peu(["E5"], 6), point_attendu=("E5", "FACTEUR 2"))
+    c("S47 deux EN illisibles : quatre lisibles suffisent", SEP, peu(["E5", "E6"]))
+    c("S48 trois EN illisibles", NL, peu(["E4", "E5", "E6"]))
+    c("S49 deux HORS illisibles : quatre lisibles suffisent", SEP, peu(["H4", "H5"]))
+    c("S50 trois HORS illisibles", NL, peu(["H4", "H5", "H6"]))
+    def infaisable(pts, s):
+        pts["H1"]["faisable"] = False
+    c("S51 point infaisable : NON LISIBLE au point", SEP, infaisable, point_attendu=("H1", "NON LISIBLE"),
+      paire=("P1", "NON LISIBLE"))
+    c("S52 un EN illisible qui serait tombe ne pese pas", SEP,
+      lambda pts, s: pts.__setitem__("E3", dict(point("E3", [5.0] * N_ETATS), etats=[etat(r, 5 + r, 2, 1e-13, 5.0)
+                                                                                    for r in range(N_ETATS)])),
+      point_attendu=("E3", "NON LISIBLE"), ab=(0, 0))
+    # --- la rivale
+    c("S53 rivale tenue : P1 tenu-tenu, P2 et P3 tombe-tombe", NTP,
+      et(tous(1.0, ["H1"]), tous(5.0, ["E3", "E4"])), rivale="TENUE", ab=(2, 1), paire=("P2", "HOMOGENE"))
+    c("S54 rivale non tenue des qu'une paire est heterogene", NTP, et(tous(1.0, ["H1"]), tous(5.0, ["E3"])),
+      rivale="NON TENUE", paire=("P3", "HETEROGENE"))
+    c("S55 rivale : P4 et P5 ne pesent pas", SUF, tous(1.0, ["H1", "H2", "H3"]), rivale="TENUE", ab=(0, 3),
+      paire=("P5", "HETEROGENE"))
+    c("S56 rivale sur deux paires lisibles", NTP, et(peu(["E1"]), tous(5.0, ["E3", "E4"])), rivale="TENUE")
+    c("S57 rivale NON LISIBLE a une seule paire lisible", SEP, peu(["E1", "E3"]), rivale="NON LISIBLE")
+    # --- les ancres ne pesent pas dans la cascade
+    def ancre_q(pts, s):
+        for e in pts["A1"]["etats"][1:]:
+            e["chaine"]["gammas"] = [x * 50.0 for x in e["chaine"]["gammas"]]
+    c("S58 une ancre hors decade ne pese pas", SEP, ancre_q, point_attendu=("A1", "HORS DECADE"))
+    # --- les gardes
+    def ancre(f):
+        def g(pts, s):
+            pts["A1"]["etats"][0]["Gamma_2D"]["3"] *= f
+        return g
+    c("S59 ancre a 2 pour cent", NC, ancre(1.02))
+    c("S60 ancre a 1.5 pour cent", NC, ancre(1.015))
+    c("S61 ancre a 0.5 pour cent : tenue", SEP, ancre(1.005))
+    def ancre_abs(pts, s):
+        pts["A2"]["etats"][0]["n1"] = 9
+    c("S62 etat d'ancre absent", NC, ancre_abs)
+    def moteur(pts, s):
+        s["moteur_canon"] = "0000000000000000"
+    c("S63 moteur hors canon", NC, moteur)
+    def manque(pts, s):
+        s["points"] = [pts[k] for k in ATTENDUS if k != "H3"]
+    c("S64 un point manque", NC, manque)
+    def mauvais_g(pts, s):
+        pts["E3"]["g"] = pts["E3"]["g_regle"]
+    c("S65 g n'est pas facteur x regle", NC, mauvais_g)
+    def mauvais_w2(pts, s):
+        pts["E1"]["w2"] = "51/25"
+    c("S66 w2 d'un point change", NC, mauvais_w2)
+    def treize(pts, s):
+        pts["E1"]["etats"] = pts["E1"]["etats"][:13]
+    c("S67 treize etats a un point", NC, treize)
+    def gm(pid, champ, valeur):
+        def f(pts, s):
+            pts[pid]["garde_moteur"][champ] = valeur
+        return f
+    c("S68 G-6 : la garde du moteur dit HORS a un point EN", NC, gm("E2", "statut", HORS))
+    c("S69 G-6 : la garde du moteur dit EN a un point HORS", NC, gm("H6", "statut", EN))
+    c("S70 G-6 : c_max a 1e-4 de la table", NC, gm("E4", "c_max", ATTENDUS["E4"][5] + 1e-4))
+    c("S71 G-6 : D1 a 1e-4 de la table", NC, gm("H1", "D1", ATTENDUS["H1"][4] - 1e-4))
+    c("S72 G-6 : c_max a 4e-5 de la table : tenue", SEP, gm("E4", "c_max", ATTENDUS["E4"][5] - 4e-5))
+    c("S73 G-6 : garde du moteur en erreur", NC, gm("H2", "erreur", "AssertionError: A4"))
+    def sans_garde(pts, s):
+        del pts["A1"]["garde_moteur"]
+    c("S74 G-6 : garde du moteur non consignee a une ancre", NC, sans_garde)
+    print("SELFTEST : %d cas, %d tenus" % (len(cas), sum(cas)))
+    return all(cas)
+
+def main():
+    if len(sys.argv) == 2 and sys.argv[1] == "--selftest":
+        raise SystemExit(0 if selftest() else 1)
+    if len(sys.argv) == 3 and sys.argv[1] == "--essai":
+        s = json.load(open(sys.argv[2], encoding="ascii"))
+        pts = {p["id"]: p for p in s["points"]}
+        print("ESSAI A BLANC, NON OPPOSABLE : points presents %s" % " ".join(sorted(pts)))
+        print("  moteur au canon : %s" % (s.get("moteur_canon") == MOTEUR_CANON))
+        m = garde_ancres(pts)
+        print("  garde des ancres : %s" % ("TENUE" if not m else " ; ".join(m)))
+        m6 = [x for pid in sorted(pts) if pid in ATTENDUS for x in garde_du_moteur(pid, pts[pid])]
+        print("  garde G-6 aux points presents : %s" % ("TENUE" if not m6 else " ; ".join(m6)))
+        afficher({"points": [lire_point(p) for p in s["points"]], "motifs": [], "verdict": "AUCUN (essai)"},
+                 "lecture des points presents :")
+        return
+    if len(sys.argv) != 3:
+        raise SystemExit(__doc__)
+    if not selftest():
+        raise SystemExit("selftest en echec : la feuille ne lit pas")
+    s = json.load(open(sys.argv[1], encoding="ascii"))
+    r = cascade(s)
+    afficher(r, "LECTURE DU GEL, sonde %s :" % sys.argv[1])
+    json.dump(r, open(sys.argv[2], "w", encoding="ascii"), indent=1, sort_keys=True)
+
+if __name__ == "__main__":
+    main()

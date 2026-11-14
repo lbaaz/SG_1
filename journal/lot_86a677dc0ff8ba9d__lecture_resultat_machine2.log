@@ -1,0 +1,268 @@
+LECTURE DE MACHINE 2 DU RUN (gel b59651f99e60707a ; sonde 940a21b1d562bb49 ; moteur 82a0be882568fe0c)
+plateforme : {'coeurs': 16, 'fils': {'MKL_NUM_THREADS': None, 'OMP_NUM_THREADS': None, 'OPENBLAS_NUM_THREADS': None}, 'levier': None, 'machine': 'AMD64', 'numpy': '2.2.6', 'python': '3.11.9', 'systeme': 'Windows', 'temoin_arrondi': '0x1.a483018a169c6p+64'}
+points joues : E1 E2 E3 E4 E5 E6 H1 H2 H3 H4 H5 H6 A1 A2
+durees (s) : E1 163.7 E2 160.8 E3 98.0 E4 97.5 E5 146.9 E6 82.2 H1 433.6 H2 448.0 H3 180.6 H4 393.0 H5 383.0 H6 151.6 A1 138.1 A2 150.0
+
+1. BOITES, REGLE g ET GARDE G-1 DU MOTEUR, RECALCULEES PAR MOI AVEC LE MOTEUR (aucune diagonalisation), contre le JSON de la sonde
+  E1 w2=52/25 x1/1 : g 4.686681e-03 r_c 41 N 61 ; garde recalculee EN DOMAINE D1 0.080000 c_max 0.082317 ; JSON r_c 41 N 61 garde EN DOMAINE D1 0.080000 c_max 0.082317 -> IDENTIQUE
+  E2 w2=209/100 x1/1 : g 5.459296e-03 r_c 41 N 61 ; garde recalculee EN DOMAINE D1 0.090000 c_max 0.093558 ; JSON r_c 41 N 61 garde EN DOMAINE D1 0.090000 c_max 0.093558 -> IDENTIQUE
+  E3 w2=21/10 x3/2 : g 9.418721e-03 r_c 35 N 55 ; garde recalculee EN DOMAINE D1 0.100000 c_max 0.077751 ; JSON r_c 35 N 55 garde EN DOMAINE D1 0.100000 c_max 0.077751 -> IDENTIQUE
+  E4 w2=53/25 x3/2 : g 1.210198e-02 r_c 35 N 55 ; garde recalculee EN DOMAINE D1 0.120000 c_max 0.094450 ; JSON r_c 35 N 55 garde EN DOMAINE D1 0.120000 c_max 0.094450 -> IDENTIQUE
+  E5 w2=191/100 x1/1 : g 2.791114e-03 r_c 40 N 60 ; garde recalculee EN DOMAINE D1 0.109756 c_max 0.080390 ; JSON r_c 40 N 60 garde EN DOMAINE D1 0.109756 c_max 0.080390 -> IDENTIQUE
+  E6 w2=19/10 x3/2 : g 4.467944e-03 r_c 34 N 54 ; garde recalculee EN DOMAINE D1 0.125000 c_max 0.090398 ; JSON r_c 34 N 54 garde EN DOMAINE D1 0.125000 c_max 0.090398 -> IDENTIQUE
+  H1 w2=52/25 x2/3 : g 3.124454e-03 r_c 54 N 74 ; garde recalculee HORS DOMAINE D1 0.080000 c_max 0.103309 ; JSON r_c 54 N 74 garde HORS DOMAINE D1 0.080000 c_max 0.103309 -> IDENTIQUE
+  H2 w2=21/10 x2/3 : g 4.186098e-03 r_c 54 N 74 ; garde recalculee HORS DOMAINE D1 0.100000 c_max 0.129951 ; JSON r_c 54 N 74 garde HORS DOMAINE D1 0.100000 c_max 0.129951 -> IDENTIQUE
+  H3 w2=53/25 x1/1 : g 8.067989e-03 r_c 42 N 62 ; garde recalculee HORS DOMAINE D1 0.120000 c_max 0.126744 ; JSON r_c 42 N 62 garde HORS DOMAINE D1 0.120000 c_max 0.126744 -> IDENTIQUE
+  H4 w2=191/100 x2/3 : g 1.860742e-03 r_c 52 N 72 ; garde recalculee HORS DOMAINE D1 0.109756 c_max 0.106427 ; JSON r_c 52 N 72 garde HORS DOMAINE D1 0.109756 c_max 0.106427 -> IDENTIQUE
+  H5 w2=19/10 x2/3 : g 1.985753e-03 r_c 52 N 72 ; garde recalculee HORS DOMAINE D1 0.125000 c_max 0.151055 ; JSON r_c 52 N 72 garde HORS DOMAINE D1 0.125000 c_max 0.151055 -> IDENTIQUE
+  H6 w2=189/100 x1/1 : g 3.145804e-03 r_c 40 N 60 ; garde recalculee HORS DOMAINE D1 0.141026 c_max 0.102598 ; JSON r_c 40 N 60 garde HORS DOMAINE D1 0.141026 c_max 0.102598 -> IDENTIQUE
+  A1 w2=39/20 x1/1 : g 1.815737e-03 r_c 40 N 60 ; garde recalculee EN DOMAINE D1 0.055556 c_max 0.040917 ; JSON r_c 40 N 60 garde EN DOMAINE D1 0.055556 c_max 0.040917 -> IDENTIQUE
+  A2 w2=41/20 x1/1 : g 2.634488e-03 r_c 41 N 61 ; garde recalculee EN DOMAINE D1 0.050000 c_max 0.051012 ; JSON r_c 41 N 61 garde EN DOMAINE D1 0.050000 c_max 0.051012 -> IDENTIQUE
+  ecarts : 0
+
+2. LECTURES DECLAREES (section 10 du gel) : verdict LA GARDE NE TIENT PAS ; motifs []
+  E1 juge  w2=52/25 x1/1 garde EN DOMAINE : DECADE TENU, 13 juges, q min 1.888 max 2.832 median 2.529 ; premier juge (8,2) q 2.529 ; exclus {'sous dix planchers': 1}
+  E2 juge  w2=209/100 x1/1 garde EN DOMAINE : HORS DECADE TOMBE, 13 juges, q min 2.305 max 3.510 median 3.094 ; premier juge (8,2) q 3.094 ; exclus {'sous dix planchers': 1}
+  E3 juge  w2=21/10 x3/2 garde EN DOMAINE : HORS DECADE TOMBE, 13 juges, q min 2.337 max 3.434 median 2.867 ; premier juge (6,1) q 3.131 ; exclus {'J flou': 1}
+  E4 juge  w2=53/25 x3/2 garde EN DOMAINE : HORS DECADE TOMBE, 12 juges, q min 3.620 max 4.615 median 4.005 ; premier juge (6,1) q 4.018 ; exclus {'J flou': 2}
+  E5 juge  w2=191/100 x1/1 garde EN DOMAINE : FACTEUR 2 TENU, 12 juges, q min 0.596 max 1.095 median 0.845 ; premier juge (7,2) q 0.906 ; exclus {'sous dix planchers': 2}
+  E6 juge  w2=19/10 x3/2 garde EN DOMAINE : FACTEUR 2 TENU, 13 juges, q min 0.726 max 1.383 median 0.934 ; premier juge (5,2) q 0.920 ; exclus {'J flou': 1}
+  H1 juge  w2=52/25 x2/3 garde HORS DOMAINE : HORS DECADE TOMBE, 8 juges, q min 2.325 max 3.169 median 2.759 ; premier juge (10,3) q 2.897 ; exclus {'sous dix planchers': 6}
+  H2 juge  w2=21/10 x2/3 garde HORS DOMAINE : HORS DECADE TOMBE, 9 juges, q min 3.750 max 5.961 median 5.065 ; premier juge (11,2) q 5.961 ; exclus {'sous dix planchers': 5}
+  H3 juge  w2=53/25 x1/1 garde HORS DOMAINE : HORS DECADE TOMBE, 14 juges, q min 4.526 max 6.987 median 5.909 ; premier juge (8,2) q 5.981 ; exclus {}
+  H4 juge  w2=191/100 x2/3 garde HORS DOMAINE : DECADE TENU, 7 juges, q min 0.375 max 0.746 median 0.605 ; premier juge (10,3) q 0.746 ; exclus {'sous dix planchers': 7}
+  H5 juge  w2=19/10 x2/3 garde HORS DOMAINE : FACTEUR 2 TENU, 6 juges, q min 0.506 max 0.814 median 0.662 ; premier juge (10,3) q 0.793 ; exclus {'sous dix planchers': 7, 'J flou': 1}
+  H6 juge  w2=189/100 x1/1 garde HORS DOMAINE : FACTEUR 2 TENU, 11 juges, q min 0.659 max 1.234 median 0.958 ; premier juge (7,2) q 0.996 ; exclus {'sous dix planchers': 3}
+  A1 ancre w2=39/20 x1/1 garde EN DOMAINE : FACTEUR 2 TENU, 11 juges, q min 0.587 max 0.882 median 0.758 ; premier juge (7,2) q 0.819 ; exclus {'sous dix planchers': 2, 'barriere vide': 1}
+  A2 ancre w2=41/20 x1/1 garde EN DOMAINE : FACTEUR 2 TENU, 12 juges, q min 1.292 max 1.629 median 1.505 ; premier juge (8,2) q 1.474 ; exclus {'sous dix planchers': 2}
+  paires : P1 HETEROGENE ; P2 HOMOGENE ; P3 HOMOGENE ; P4 HOMOGENE ; P5 HOMOGENE
+  a (EN DOMAINE tombes) 3, b (HORS DOMAINE tenus) 3, EN lisibles 6, HORS lisibles 6 ; rivale NON TENUE
+
+3. ANNONCES DE LA SECTION 11 (jugees par machine 2 sur le verdict et le JSON de la feuille, sans seuil nouveau)
+  A-1 verdict LA GARDE NE TIENT PAS ; probabilite annoncee 0.74
+  A-2 (0.75) E3 est HORS DECADE : VRAIE
+  A-3 (0.85) E4 est HORS DECADE : VRAIE
+  A-4 (0.55) E2 est HORS DECADE : VRAIE
+  A-5 (0.75) E1 est DECADE : VRAIE
+  A-6 (0.70) H1 est TENU : FAUSSE
+  A-7 (0.75) H6 est TENU : VRAIE
+  A-8 (0.40) la rivale est TENUE : FAUSSE
+  A-9 (0.60) a E3 le q median est entre 3.0 et 4.5 : FAUSSE
+  A-10 (0.80) E5 et E6 sont tous les deux TENUS : VRAIE
+  A-11 (0.50) H4 ou H5, l un au moins, est HORS DECADE : FAUSSE
+  A-12 (0.85) signe du q median aux points juges lisibles : VRAIE
+  A-13 (0.95) la garde G-4 tient : VRAIE ; (0.97) la garde G-6 tient : VRAIE
+
+4. ETATS (rang, etiquette, Gamma_2D(3), q ou motif) -- consigne, non juge
+  E1 :
+     rang  0 (8,2) Gamma_2D(3) 2.5255e-09 chaine 6.3874e-09 q 2.529 DECADE
+     rang  1 (7,2) Gamma_2D(3) 1.1148e-10 chaine 2.9734e-10 q 2.667 DECADE
+     rang  2 (9,2) Gamma_2D(3) 4.5611e-08 chaine 1.0703e-07 q 2.347 DECADE
+     rang  3 (8,1) Gamma_2D(3) 8.4315e-11 chaine 2.3876e-10 q 2.832 DECADE
+     rang  4 (9,1) Gamma_2D(3) 1.6741e-09 chaine 4.6261e-09 q 2.763 DECADE
+     rang  5 (7,1) Gamma_2D(3) 3.5018e-12 chaine 9.7733e-12 q 2.791 DECADE
+     rang  6 (6,2) Gamma_2D(3) 3.9690e-12 chaine 1.0706e-11 q 2.697 DECADE
+     rang  7 (7,3) Gamma_2D(3) 2.3910e-09 chaine 5.6586e-09 q 2.367 DECADE
+     rang  8 (8,3) Gamma_2D(3) 4.9525e-08 chaine 1.0573e-07 q 2.135 DECADE
+     rang  9 (10,1) Gamma_2D(3) 2.7124e-08 chaine 7.1764e-08 q 2.646 DECADE
+     rang 10 (10,2) Gamma_2D(3) 6.7544e-07 chaine 1.4021e-06 q 2.076 DECADE
+     rang 11 (6,3) Gamma_2D(3) 9.2635e-11 chaine 2.3032e-10 q 2.486 DECADE
+     rang 12 (6,1) Gamma_2D(3) 1.2209e-13 exclu : sous dix planchers
+     rang 13 (9,3) Gamma_2D(3) 7.9842e-07 chaine 1.5076e-06 q 1.888 FACTEUR 2
+  E2 :
+     rang  0 (8,2) Gamma_2D(3) 2.3356e-09 chaine 7.2268e-09 q 3.094 DECADE
+     rang  1 (7,2) Gamma_2D(3) 1.0314e-10 chaine 3.3599e-10 q 3.258 HORS DECADE
+     rang  2 (9,2) Gamma_2D(3) 4.2109e-08 chaine 1.2122e-07 q 2.879 DECADE
+     rang  3 (8,1) Gamma_2D(3) 7.7259e-11 chaine 2.7118e-10 q 3.510 HORS DECADE
+     rang  4 (9,1) Gamma_2D(3) 1.5252e-09 chaine 5.2593e-09 q 3.448 HORS DECADE
+     rang  5 (7,1) Gamma_2D(3) 3.1780e-12 chaine 1.1118e-11 q 3.498 HORS DECADE
+     rang  6 (6,2) Gamma_2D(3) 3.6028e-12 chaine 1.2111e-11 q 3.362 HORS DECADE
+     rang  7 (7,3) Gamma_2D(3) 2.2035e-09 chaine 6.3712e-09 q 2.891 DECADE
+     rang  8 (8,3) Gamma_2D(3) 4.5581e-08 chaine 1.1801e-07 q 2.589 DECADE
+     rang  9 (10,1) Gamma_2D(3) 2.4687e-08 chaine 8.0873e-08 q 3.276 HORS DECADE
+     rang 10 (10,2) Gamma_2D(3) 6.2811e-07 chaine 1.5893e-06 q 2.530 DECADE
+     rang 11 (6,3) Gamma_2D(3) 8.6115e-11 chaine 2.5885e-10 q 3.006 DECADE
+     rang 12 (9,3) Gamma_2D(3) 7.3851e-07 chaine 1.7019e-06 q 2.305 DECADE
+     rang 13 (6,1) Gamma_2D(3) 1.2137e-13 exclu : sous dix planchers
+  E3 :
+     rang  0 (6,1) Gamma_2D(3) 2.3678e-08 chaine 7.4146e-08 q 3.131 DECADE
+     rang  1 (7,1) Gamma_2D(3) 4.2900e-07 chaine 1.3048e-06 q 3.041 DECADE
+     rang  2 (5,1) Gamma_2D(3) 9.6515e-10 chaine 3.0897e-09 q 3.201 HORS DECADE
+     rang  3 (6,2) Gamma_2D(3) 5.4774e-07 chaine 1.4586e-06 q 2.663 DECADE
+     rang  4 (5,2) Gamma_2D(3) 2.5585e-08 chaine 7.1666e-08 q 2.801 DECADE
+     rang  5 (7,2) Gamma_2D(3) 9.0000e-06 chaine 2.1032e-05 q 2.337 DECADE
+     rang  6 (8,1) Gamma_2D(3) 6.0805e-06 chaine 1.6939e-05 q 2.786 DECADE
+     rang  7 (4,1) Gamma_2D(3) 2.9758e-11 chaine 9.2006e-11 q 3.092 DECADE
+     rang  8 (4,2) Gamma_2D(3) 8.6281e-10 chaine 2.4740e-09 q 2.867 DECADE
+     rang  9 (7,0) Gamma_2D(3) 1.0461e-08 chaine 3.5922e-08 q 3.434 HORS DECADE
+     rang 10 (6,0) Gamma_2D(3) 5.2363e-10 chaine 1.7222e-09 q 3.289 HORS DECADE
+     rang 11 (8,2) Gamma_2D(3) 1.0411e-04 exclu : J flou
+     rang 12 (5,3) Gamma_2D(3) 4.0113e-07 chaine 1.0167e-06 q 2.535 DECADE
+     rang 13 (6,3) Gamma_2D(3) 7.3022e-06 chaine 1.7286e-05 q 2.367 DECADE
+  E4 :
+     rang  0 (6,1) Gamma_2D(3) 2.2354e-08 chaine 8.9821e-08 q 4.018 HORS DECADE
+     rang  1 (7,1) Gamma_2D(3) 3.9532e-07 chaine 1.5765e-06 q 3.988 HORS DECADE
+     rang  2 (6,2) Gamma_2D(3) 4.3730e-07 chaine 1.7458e-06 q 3.992 HORS DECADE
+     rang  3 (5,1) Gamma_2D(3) 9.2201e-10 chaine 3.7415e-09 q 4.058 HORS DECADE
+     rang  4 (5,2) Gamma_2D(3) 2.1347e-08 chaine 8.5903e-08 q 4.024 HORS DECADE
+     rang  5 (8,1) Gamma_2D(3) 5.4035e-06 chaine 2.0396e-05 q 3.775 HORS DECADE
+     rang  6 (7,2) Gamma_2D(3) 6.9392e-06 chaine 2.5116e-05 q 3.620 HORS DECADE
+     rang  7 (4,1) Gamma_2D(3) 2.8427e-11 chaine 1.1107e-10 q 3.907 HORS DECADE
+     rang  8 (4,2) Gamma_2D(3) 7.4844e-10 chaine 2.9658e-09 q 3.963 HORS DECADE
+     rang  9 (7,0) Gamma_2D(3) 9.5222e-09 chaine 4.3941e-08 q 4.615 HORS DECADE
+     rang 10 (6,0) Gamma_2D(3) 4.6399e-10 chaine 2.1112e-09 q 4.550 HORS DECADE
+     rang 11 (8,2) Gamma_2D(3) 7.9930e-05 exclu : J flou
+     rang 12 (9,1) Gamma_2D(3) 5.6876e-05 exclu : J flou
+     rang 13 (8,0) Gamma_2D(3) 1.5353e-07 chaine 6.9906e-07 q 4.553 HORS DECADE
+  E5 :
+     rang  0 (7,2) Gamma_2D(3) 3.4475e-10 chaine 3.1250e-10 q 0.906 FACTEUR 2
+     rang  1 (6,2) Gamma_2D(3) 1.1750e-11 chaine 1.1614e-11 q 0.988 FACTEUR 2
+     rang  2 (8,2) Gamma_2D(3) 8.0189e-09 chaine 6.5621e-09 q 0.818 FACTEUR 2
+     rang  3 (7,3) Gamma_2D(3) 7.5887e-09 chaine 6.3505e-09 q 0.837 FACTEUR 2
+     rang  4 (8,3) Gamma_2D(3) 1.5827e-07 chaine 1.1534e-07 q 0.729 FACTEUR 2
+     rang  5 (6,3) Gamma_2D(3) 2.7752e-10 chaine 2.6648e-10 q 0.960 FACTEUR 2
+     rang  6 (5,2) Gamma_2D(3) 2.9750e-13 exclu : sous dix planchers
+     rang  7 (9,2) Gamma_2D(3) 1.5058e-07 chaine 1.0767e-07 q 0.715 FACTEUR 2
+     rang  8 (9,3) Gamma_2D(3) 2.6876e-06 chaine 1.6018e-06 q 0.596 FACTEUR 2
+     rang  9 (7,1) Gamma_2D(3) 1.0080e-11 chaine 9.5987e-12 q 0.952 FACTEUR 2
+     rang 10 (6,1) Gamma_2D(3) 3.0835e-13 exclu : sous dix planchers
+     rang 11 (5,3) Gamma_2D(3) 7.7333e-12 chaine 8.4683e-12 q 1.095 FACTEUR 2
+     rang 12 (8,1) Gamma_2D(3) 2.6784e-10 chaine 2.2836e-10 q 0.853 FACTEUR 2
+     rang 13 (7,4) Gamma_2D(3) 1.2725e-07 chaine 8.9528e-08 q 0.704 FACTEUR 2
+  E6 :
+     rang  0 (5,2) Gamma_2D(3) 7.7386e-08 chaine 7.1186e-08 q 0.920 FACTEUR 2
+     rang  1 (5,1) Gamma_2D(3) 2.6378e-09 chaine 2.8264e-09 q 1.071 FACTEUR 2
+     rang  2 (6,2) Gamma_2D(3) 1.7185e-06 chaine 1.4031e-06 q 0.816 FACTEUR 2
+     rang  3 (4,1) Gamma_2D(3) 7.2011e-11 chaine 8.6737e-11 q 1.205 FACTEUR 2
+     rang  4 (6,1) Gamma_2D(3) 7.0815e-08 chaine 6.6130e-08 q 0.934 FACTEUR 2
+     rang  5 (4,2) Gamma_2D(3) 2.4566e-09 chaine 2.5492e-09 q 1.038 FACTEUR 2
+     rang  6 (7,2) Gamma_2D(3) 2.7104e-05 chaine 1.9679e-05 q 0.726 FACTEUR 2
+     rang  7 (7,1) Gamma_2D(3) 1.3654e-06 chaine 1.1387e-06 q 0.834 FACTEUR 2
+     rang  8 (3,1) Gamma_2D(3) 1.3373e-12 chaine 1.8492e-12 q 1.383 FACTEUR 2
+     rang  9 (5,3) Gamma_2D(3) 1.2611e-06 chaine 1.0885e-06 q 0.863 FACTEUR 2
+     rang 10 (6,3) Gamma_2D(3) 2.2261e-05 chaine 1.7633e-05 q 0.792 FACTEUR 2
+     rang 11 (3,2) Gamma_2D(3) 5.1273e-11 chaine 6.2294e-11 q 1.215 FACTEUR 2
+     rang 12 (4,3) Gamma_2D(3) 4.7991e-08 chaine 4.5993e-08 q 0.958 FACTEUR 2
+     rang 13 (7,3) Gamma_2D(3) 2.7303e-04 exclu : J flou
+  H1 :
+     rang  0 (10,3) Gamma_2D(3) 6.5782e-12 chaine 1.9059e-11 q 2.897 DECADE
+     rang  1 (11,2) Gamma_2D(3) 5.2399e-12 chaine 1.6604e-11 q 3.169 HORS DECADE
+     rang  2 (10,2) Gamma_2D(3) 3.3057e-13 exclu : sous dix planchers
+     rang  3 (11,3) Gamma_2D(3) 1.3145e-10 chaine 3.4830e-10 q 2.650 DECADE
+     rang  4 (9,3) Gamma_2D(3) 3.4851e-13 exclu : sous dix planchers
+     rang  5 (12,2) Gamma_2D(3) 9.8932e-11 chaine 2.8384e-10 q 2.869 DECADE
+     rang  6 (9,2) Gamma_2D(3) 1.5103e-14 exclu : sous dix planchers
+     rang  7 (12,3) Gamma_2D(3) 2.2632e-09 chaine 5.2628e-09 q 2.325 DECADE
+     rang  8 (8,3) Gamma_2D(3) 4.1334e-14 exclu : sous dix planchers
+     rang  9 (10,4) Gamma_2D(3) 1.2180e-10 chaine 3.1695e-10 q 2.602 DECADE
+     rang 10 (9,4) Gamma_2D(3) 5.3787e-12 chaine 1.5863e-11 q 2.949 DECADE
+     rang 11 (13,2) Gamma_2D(3) 1.5677e-09 chaine 4.0663e-09 q 2.594 DECADE
+     rang 12 (8,2) Gamma_2D(3) -1.3410e-13 exclu : sous dix planchers
+     rang 13 (11,1) Gamma_2D(3) 9.6725e-14 exclu : sous dix planchers
+  H2 :
+     rang  0 (11,2) Gamma_2D(3) 3.5629e-12 chaine 2.1239e-11 q 5.961 HORS DECADE
+     rang  1 (10,3) Gamma_2D(3) 4.2948e-12 chaine 2.4083e-11 q 5.607 HORS DECADE
+     rang  2 (10,2) Gamma_2D(3) 8.7657e-14 exclu : sous dix planchers
+     rang  3 (11,3) Gamma_2D(3) 8.7169e-11 chaine 4.4149e-10 q 5.065 HORS DECADE
+     rang  4 (12,2) Gamma_2D(3) 6.6021e-11 chaine 3.6317e-10 q 5.501 HORS DECADE
+     rang  5 (9,3) Gamma_2D(3) 2.3768e-13 exclu : sous dix planchers
+     rang  6 (9,2) Gamma_2D(3) -1.7973e-14 exclu : sous dix planchers
+     rang  7 (12,3) Gamma_2D(3) 1.5549e-09 chaine 6.6844e-09 q 4.299 HORS DECADE
+     rang  8 (13,2) Gamma_2D(3) 1.0456e-09 chaine 5.2099e-09 q 4.983 HORS DECADE
+     rang  9 (10,4) Gamma_2D(3) 8.8984e-11 chaine 3.9808e-10 q 4.474 HORS DECADE
+     rang 10 (8,3) Gamma_2D(3) 2.1578e-14 exclu : sous dix planchers
+     rang 11 (9,4) Gamma_2D(3) 3.8469e-12 chaine 1.9818e-11 q 5.152 HORS DECADE
+     rang 12 (11,1) Gamma_2D(3) 1.1851e-13 exclu : sous dix planchers
+     rang 13 (11,4) Gamma_2D(3) 1.7325e-09 chaine 6.4979e-09 q 3.750 HORS DECADE
+  H3 :
+     rang  0 (8,2) Gamma_2D(3) 1.6300e-09 chaine 9.7500e-09 q 5.981 HORS DECADE
+     rang  1 (9,2) Gamma_2D(3) 2.9517e-08 chaine 1.6331e-07 q 5.533 HORS DECADE
+     rang  2 (7,2) Gamma_2D(3) 7.3556e-11 chaine 4.5571e-10 q 6.195 HORS DECADE
+     rang  3 (8,1) Gamma_2D(3) 5.6078e-11 chaine 3.7358e-10 q 6.662 HORS DECADE
+     rang  4 (9,1) Gamma_2D(3) 1.1352e-09 chaine 7.1992e-09 q 6.342 HORS DECADE
+     rang  5 (7,1) Gamma_2D(3) 2.1860e-12 chaine 1.5273e-11 q 6.987 HORS DECADE
+     rang  6 (10,1) Gamma_2D(3) 1.8154e-08 chaine 1.1148e-07 q 6.141 HORS DECADE
+     rang  7 (8,3) Gamma_2D(3) 3.1204e-08 chaine 1.5841e-07 q 5.076 HORS DECADE
+     rang  8 (10,2) Gamma_2D(3) 4.2761e-07 chaine 2.1372e-06 q 4.998 HORS DECADE
+     rang  9 (7,3) Gamma_2D(3) 1.5337e-09 chaine 8.4658e-09 q 5.520 HORS DECADE
+     rang 10 (6,2) Gamma_2D(3) 2.5606e-12 chaine 1.6317e-11 q 6.372 HORS DECADE
+     rang 11 (9,3) Gamma_2D(3) 4.9947e-07 chaine 2.2605e-06 q 4.526 HORS DECADE
+     rang 12 (6,3) Gamma_2D(3) 5.9174e-11 chaine 3.4540e-10 q 5.837 HORS DECADE
+     rang 13 (11,1) Gamma_2D(3) 2.4212e-07 chaine 1.3849e-06 q 5.720 HORS DECADE
+  H4 :
+     rang  0 (9,3) Gamma_2D(3) 1.0096e-12 exclu : sous dix planchers
+     rang  1 (10,3) Gamma_2D(3) 2.5955e-11 chaine 1.9353e-11 q 0.746 FACTEUR 2
+     rang  2 (8,3) Gamma_2D(3) 3.9637e-14 exclu : sous dix planchers
+     rang  3 (10,4) Gamma_2D(3) 5.7619e-10 chaine 3.4870e-10 q 0.605 FACTEUR 2
+     rang  4 (9,4) Gamma_2D(3) 2.4165e-11 chaine 1.7648e-11 q 0.730 FACTEUR 2
+     rang  5 (11,3) Gamma_2D(3) 5.6527e-10 chaine 3.5208e-10 q 0.623 FACTEUR 2
+     rang  6 (9,2) Gamma_2D(3) 6.6475e-15 exclu : sous dix planchers
+     rang  7 (11,4) Gamma_2D(3) 1.1804e-08 chaine 5.5232e-09 q 0.468 DECADE
+     rang  8 (10,2) Gamma_2D(3) 9.3322e-13 exclu : sous dix planchers
+     rang  9 (8,4) Gamma_2D(3) 8.4912e-13 exclu : sous dix planchers
+     rang 10 (8,2) Gamma_2D(3) 2.2046e-14 exclu : sous dix planchers
+     rang 11 (7,3) Gamma_2D(3) 2.3338e-14 exclu : sous dix planchers
+     rang 12 (12,3) Gamma_2D(3) 1.0133e-08 chaine 5.2064e-09 q 0.514 FACTEUR 2
+     rang 13 (12,4) Gamma_2D(3) 1.8915e-07 chaine 7.0866e-08 q 0.375 DECADE
+  H5 :
+     rang  0 (9,3) Gamma_2D(3) 1.0401e-12 exclu : sous dix planchers
+     rang  1 (10,3) Gamma_2D(3) 2.6927e-11 chaine 2.1353e-11 q 0.793 FACTEUR 2
+     rang  2 (8,3) Gamma_2D(3) 5.4636e-14 exclu : sous dix planchers
+     rang  3 (10,4) Gamma_2D(3) 5.9907e-10 chaine 3.8639e-10 q 0.645 FACTEUR 2
+     rang  4 (9,4) Gamma_2D(3) 2.4047e-11 chaine 1.9581e-11 q 0.814 FACTEUR 2
+     rang  5 (11,3) Gamma_2D(3) 5.7209e-10 chaine 3.8807e-10 q 0.678 FACTEUR 2
+     rang  6 (9,2) Gamma_2D(3) 4.8875e-14 exclu : sous dix planchers
+     rang  7 (11,4) Gamma_2D(3) 1.2084e-08 chaine 6.1110e-09 q 0.506 FACTEUR 2
+     rang  8 (8,4) Gamma_2D(3) 8.5079e-13 exclu : sous dix planchers
+     rang  9 (8,2) Gamma_2D(3) -1.9558e-14 exclu : sous dix planchers
+     rang 10 (10,2) Gamma_2D(3) 9.9706e-13 exclu : sous dix planchers
+     rang 11 (7,3) Gamma_2D(3) 2.8396e-14 exclu : sous dix planchers
+     rang 12 (12,3) Gamma_2D(3) 1.0609e-08 chaine 5.7315e-09 q 0.540 FACTEUR 2
+     rang 13 (12,4) Gamma_2D(3) 2.0010e-07 exclu : J flou
+  H6 :
+     rang  0 (7,2) Gamma_2D(3) 3.7953e-10 chaine 3.7814e-10 q 0.996 FACTEUR 2
+     rang  1 (6,2) Gamma_2D(3) 1.2321e-11 chaine 1.4102e-11 q 1.145 FACTEUR 2
+     rang  2 (8,2) Gamma_2D(3) 8.9024e-09 chaine 7.9158e-09 q 0.889 FACTEUR 2
+     rang  3 (7,3) Gamma_2D(3) 8.1921e-09 chaine 7.7471e-09 q 0.946 FACTEUR 2
+     rang  4 (6,3) Gamma_2D(3) 2.9806e-10 chaine 3.2636e-10 q 1.095 FACTEUR 2
+     rang  5 (8,3) Gamma_2D(3) 1.7610e-07 chaine 1.4024e-07 q 0.796 FACTEUR 2
+     rang  6 (5,2) Gamma_2D(3) 2.6114e-13 exclu : sous dix planchers
+     rang  7 (7,1) Gamma_2D(3) 1.0517e-11 chaine 1.1510e-11 q 1.094 FACTEUR 2
+     rang  8 (6,1) Gamma_2D(3) 2.8692e-13 exclu : sous dix planchers
+     rang  9 (9,2) Gamma_2D(3) 1.6695e-07 chaine 1.2956e-07 q 0.776 FACTEUR 2
+     rang 10 (9,3) Gamma_2D(3) 2.9490e-06 chaine 1.9422e-06 q 0.659 FACTEUR 2
+     rang 11 (5,3) Gamma_2D(3) 8.4472e-12 chaine 1.0425e-11 q 1.234 FACTEUR 2
+     rang 12 (8,1) Gamma_2D(3) 2.8506e-10 chaine 2.7302e-10 q 0.958 FACTEUR 2
+     rang 13 (5,1) Gamma_2D(3) 2.2222e-14 exclu : sous dix planchers
+  A1 :
+     rang  0 (7,2) Gamma_2D(3) 2.1623e-10 chaine 1.7707e-10 q 0.819 FACTEUR 2
+     rang  1 (8,2) Gamma_2D(3) 4.9324e-09 chaine 3.7402e-09 q 0.758 FACTEUR 2
+     rang  2 (6,2) Gamma_2D(3) 7.3492e-12 chaine 6.4827e-12 q 0.882 FACTEUR 2
+     rang  3 (8,3) Gamma_2D(3) 9.7507e-08 chaine 6.4738e-08 q 0.664 FACTEUR 2
+     rang  4 (7,3) Gamma_2D(3) 4.7290e-09 chaine 3.5411e-09 q 0.749 FACTEUR 2
+     rang  5 (9,2) Gamma_2D(3) 8.9734e-08 chaine 6.1665e-08 q 0.687 FACTEUR 2
+     rang  6 (9,3) Gamma_2D(3) 1.5406e-06 chaine 9.0385e-07 q 0.587 FACTEUR 2
+     rang  7 (6,3) Gamma_2D(3) 1.7894e-10 chaine 1.4745e-10 q 0.824 FACTEUR 2
+     rang  8 (7,1) Gamma_2D(3) 6.4611e-12 chaine 5.4857e-12 q 0.849 FACTEUR 2
+     rang  9 (5,2) Gamma_2D(3) 2.1809e-13 exclu : sous dix planchers
+     rang 10 (6,1) Gamma_2D(3) 2.0162e-13 exclu : sous dix planchers
+     rang 11 (8,1) Gamma_2D(3) 1.6238e-10 chaine 1.3244e-10 q 0.816 FACTEUR 2
+     rang 12 (10,3) Gamma_2D(3) 1.8971e-05 exclu : barriere vide
+     rang 13 (10,2) Gamma_2D(3) 1.3059e-06 chaine 7.9513e-07 q 0.609 FACTEUR 2
+  A2 :
+     rang  0 (8,2) Gamma_2D(3) 2.6614e-09 chaine 3.9236e-09 q 1.474 FACTEUR 2
+     rang  1 (7,2) Gamma_2D(3) 1.2086e-10 chaine 1.8337e-10 q 1.517 FACTEUR 2
+     rang  2 (8,1) Gamma_2D(3) 9.0700e-11 chaine 1.4494e-10 q 1.598 FACTEUR 2
+     rang  3 (9,2) Gamma_2D(3) 4.6877e-08 chaine 6.5534e-08 q 1.398 FACTEUR 2
+     rang  4 (6,2) Gamma_2D(3) 4.3190e-12 chaine 6.6226e-12 q 1.533 FACTEUR 2
+     rang  5 (7,1) Gamma_2D(3) 3.6720e-12 chaine 5.9800e-12 q 1.629 FACTEUR 2
+     rang  6 (9,1) Gamma_2D(3) 1.7915e-09 chaine 2.8003e-09 q 1.563 FACTEUR 2
+     rang  7 (7,3) Gamma_2D(3) 2.4376e-09 chaine 3.5278e-09 q 1.447 FACTEUR 2
+     rang  8 (8,3) Gamma_2D(3) 4.8265e-08 chaine 6.5626e-08 q 1.360 FACTEUR 2
+     rang  9 (6,3) Gamma_2D(3) 9.6588e-11 chaine 1.4434e-10 q 1.494 FACTEUR 2
+     rang 10 (6,1) Gamma_2D(3) 1.0949e-13 exclu : sous dix planchers
+     rang 11 (10,1) Gamma_2D(3) 2.8599e-08 chaine 4.3345e-08 q 1.516 FACTEUR 2
+     rang 12 (10,2) Gamma_2D(3) 6.6291e-07 chaine 8.5650e-07 q 1.292 FACTEUR 2
+     rang 13 (5,2) Gamma_2D(3) 5.4988e-14 exclu : sous dix planchers
+
+BILAN DE MA LECTURE : 0 ecart(s) de boite, de regle ou de garde entre le JSON de la sonde et mon recalcul

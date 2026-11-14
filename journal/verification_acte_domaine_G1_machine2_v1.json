@@ -1,0 +1,98 @@
+{
+ "acte": "journal_delta_nn_domaine_G1_chaine_EA_v1.md",
+ "bilan": {
+  "controles": 16,
+  "ids": [],
+  "mord": 0
+ },
+ "canon": "e718d2db619af9b1",
+ "controles": [
+  {
+   "id": "C01",
+   "msg": "acte : canon e718d2db619af9b1 (annonce e718d2db619af9b1), 20265 octets (20265), 292 lignes (292), en-tete et ligne de FIN, VERSION 1",
+   "ok": true
+  },
+  {
+   "id": "C02",
+   "msg": "10 pieces sur 10 au canon, a l empreinte brute et aux deux tailles ; ecarts [] ; CANON DU LOT bf07ec23b0209ffc (annonce bf07ec23b0209ffc)",
+   "ok": true
+  },
+  {
+   "id": "C03",
+   "msg": "forme de l acte : non ASCII 0, plus longue ligne 100 colonnes (<= 100), pour cent 0, tabulations 0",
+   "ok": true
+  },
+  {
+   "id": "C04",
+   "msg": "nn.1 : 19 couples (nom, canon) lus dans l acte, tous retrouves chez moi, le nom est celui d une piece de ce canon ; non resolus [] ; noms differents []",
+   "ok": true
+  },
+  {
+   "id": "C05",
+   "msg": "21 empreintes de 16 chiffres citees dans tout l acte, toutes recalculees de pieces ou de manifestes que je detiens ; non resolues []",
+   "ok": true
+  },
+  {
+   "id": "C06",
+   "msg": "mon recalcul de q = Gamma_chaine / Gamma_2D(3) sur le verdict de mon run : ecart relatif max 0.0e+00 ; les quatorze statuts == ceux de la feuille ; 154 etats juges sur 196 ; verdict LA GARDE NE TIENT PAS, a 3, b 3, rivale NON TENUE",
+   "ok": true
+  },
+  {
+   "id": "C07",
+   "msg": "verdict de mon run == verdict rejoue par machine 1, octet pour octet apres CRLF -> LF (mes octets bruts 48196, les siens 45987), canon 955c4ee53bc2e5d5 ; journaux : 108 lignes de part et d autre, 1 ligne qui differe (le titre) ; canons des deux journaux 1ee031ea89823525 et 31aa65c9983b79a4",
+   "ok": true
+  },
+  {
+   "id": "C08",
+   "msg": "nn.2 : mes journaux de certification (11 controles / 0 mordent ; 4000 sondes / 0 ecart ; 531441 ; 59 alterations, 9 au selftest, [15] a mon banc ; 28 etats des ancres) et du run (heures, code, duree, plateforme, temoin ; batterie et frequence, tels que ma note les dit) == l acte ; phrases absentes []",
+   "ok": true
+  },
+  {
+   "id": "C09",
+   "msg": "nn.3 : ecart maximal de D1 4.44e-07 et de c_max 4.84e-07 entre la garde consignee dans mon JSON et la table du gel (< 5e-7) ; motifs de la feuille [] ; ancres au bit des lectures de M17 : True ; statut de la garde a chaque point == la table : True ; phrases absentes []",
+   "ok": true
+  },
+  {
+   "id": "C10",
+   "msg": "nn.4 : les 14 lignes du tableau et les 14 lignes d exclusion (premier motif) recalculees de mon verdict ; absentes [] [] ; 154 etats juges sur 196 : True",
+   "ok": true
+  },
+  {
+   "id": "C11",
+   "msg": "nn.5 : comptes par point recalcules de mon verdict (etats hors de la demi-decade, marges 11.0, 8.6 et 14.5 pour cent, etats au-dessus de 2 a E1, sous 1/2 a H4, minimum de H5) ; phrases absentes []",
+   "ok": true
+  },
+  {
+   "id": "C12",
+   "msg": "nn.6 : l etat de H1 (rang 1, (11,2), Gamma_2D(3) 5.240e-12, q 3.1688, 0.21 pour cent au-dessus de la borne, bruit relatif 1.4 pour cent) ; les cinq lignes de paires (q medians, lecture) ; \"le point au plus petit facteur a le q median le plus loin de 1\" aux cinq paires : True ; rapports 1.059 et 1.766 ; mon enumeration sous bruit (verdict inchange, rivale peut changer, E2 E3 E4 sans etat incertain) ; absentes [] []",
+   "ok": true
+  },
+  {
+   "id": "C13",
+   "msg": "nn.7 : cinq points juges au-dessous de 2.00, tous TENUS ; sept au-dessus, un seul TENU (E1, DECADE) ; le signe des q medians aux 14 points ; les exclus a facteur 2/3 ; mon journal de bruit (13 statuts inchanges sur 14, H1 excepte ; 154 etats ; 5.47e-02 a E6 rang 8) ; les ancres == celles du run precedent ; phrases absentes []",
+   "ok": true
+  },
+  {
+   "id": "C14",
+   "msg": "nn.8 : probabilites et intervalles des annonces == section 11 de mon exemplaire du gel : True ; sort de chacune recalcule de mon verdict, 9 vraies sur 13, fausses ['A-6', 'A-8', 'A-9', 'A-11'] ; lignes absentes []",
+   "ok": true
+  },
+  {
+   "id": "C15",
+   "msg": "nn.0, nn.9, nn.10, nn.12 : tete publique du registre 04053e0 ; commits 3c26420 (2026-11-14 14:12|delta 95 -- the qualification of the E-B estimator Gamma_LS, resumed under the bis freeze, returns NOT QUALIFIED: at stage 1, played on the night of 13/11 on BOCAL4 with every guard held, the positive witness (the H+ twin, its width known by complex rotation) holds at all four configurations, at 0.15 per cent at worst, on a plateau that begins at the strong edge of the eta scale, which the bis freeze extends to k = -5 to 12 and which is its one substantive difference from the v2 freeze; stage 2 is played in full, 540 decompositions with every guard held and the anchor reproducing M17's reading to the bit at the six points, and none of the six phantom points is qualified: five of them have no plateau of five values at the short absorber, and the sixth (1.95) has one there and fails under both replacement forms of the absorber; the widths M17 read are therefore not, in the freeze's sense, widths independent of the absorber, every sentence carrying a Gamma since July is reclassified, and what remains is the order-of-magnitude fact that the phantom leaks and the twin does not; this was the last attempt under the freeze's own safeguard and track (0) closes in this form unless the operator decides otherwise; machine 1's replay of the point 1.95 on another platform was sealed by its fingerprint (7fb9026014ad0c93), which the operator attests having received before handing machine 1 machine 2's night lot, and then opened: the judged state agrees to 4.9e-4 against a tolerance of 1e-3, four of the nine other followed states do not, the gap between machines being bounded in absolute terms so that a relative tolerance alone does not say what it covers; the one disagreement between the probe and the earlier diagnostic is traced to the BLAS thread count; three candidate rules, numbered 26 to 28, join the twenty-five awaiting review (X); act written by one machine and countersigned by the other after the numbers were re-read at their sources, three points of description found in the first version and corrected in a second before deposit, the superseded version being deposited beside it so that the correction stays legible, the deposited file being the countersigned one byte for byte) et 04053e0 (2026-11-14 14:13|delta 96 -- the E-A chain read state by state, outside the range of M17 (the engine's chain function, called at the whole site that labels a clean 2D eigenstate, against the width E-B reads at k = 3), is HELD IN PART: under a freeze written before the run and certified by the other machine before it, opened by the operator on 14/11 at 00:15 (the operator attests it), played once on BOCAL4 on 14/11 with every guard held and the two anchors reproducing M17's readings to the bit, twelve points and 168 states, six points judged; the chain reads E-B's width within a factor 2 at four of the six (44 judged states), within half a decade at a fifth (8 states, three of them under 1/2), and falls at the sixth, J2 at 2.10, where it overestimates by a factor 2.9 to 4.2 on all thirteen judged states, eleven of them outside the half decade; at the twelve points the median ratio is below 1 when w2 is below 2 and above 1 when it is above; the engine's own domain guard says OUTSIDE DOMAIN at exactly three points, J2, T3 and T4, which are exactly the three that fall outside the half decade, a coincidence recorded as such and not a domain of validity, which the freeze forbids drawing; the probe reads the chain without consulting that guard, a silence of the freeze recorded as a defect, so that a verdict at J2 is a verdict outside the chain's declared domain; seven of the eight announcements of the pen are true, the ratio of the first judged state at J1 (0.950 against 0.70 to 0.85) is not; the act does not call the chain qualified, does not retire the reading of the earlier note, which holds at the named points, and leaves the not-qualified verdict of delta 95 untouched; three candidate rules, numbered 29 to 31, join the twenty-eight awaiting review (X); act written by one machine and countersigned by the other after every number was recalculated from the countersigner's own sources, 22 controls of which none bites, the same sheet biting 18 times on a copy with fifteen figures changed, the deposited file being the countersigned one byte for byte) ; le gel dit fe10bfe et \"Hors registre\" ; l acte 96 au registre porte \"coincidence\", D-CH-7 et la phrase de J2 que l acte cite ; messages des commits : regles 26 a 28 sur 25, 29 a 31 sur 28, soit 31 ; phrases absentes []",
+   "ok": true
+  },
+  {
+   "id": "C16",
+   "msg": "nn.15 : les 10 pieces nommees == les 10 lignes du manifeste ; nn.13 : les canons des trois lots cites, recalcules de leurs manifestes : True ; nn.12 : les trois regles candidates et leurs origines ; absents [] []",
+   "ok": true
+  }
+ ],
+ "info": [
+  "index : 10576 fichiers, 8693 empreintes distinctes (fichiers et membres de zip), dont 1658 fichiers du registre public",
+  "la batterie (70 pour cent, en decharge) et la frequence (2516 / 3801 MHz) ne sont dans aucune PIECE de mes lots : elles sont dans ma note du resultat, qui les tient d une interrogation de Windows faite pendant le run ; l acte les reprend de ma note",
+  "registre public : tete 04053e0 ; commits : {'3c26420': \"2026-11-14 14:12|delta 95 -- the qualification of the E-B estimator Gamma_LS, resumed under the bis freeze, returns NOT QUALIFIED: at stage 1, played on the night of 13/11 on BOCAL4 with every guard held, the positive witness (the H+ twin, its width known by complex rotation) holds at all four configurations, at 0.15 per cent at worst, on a plateau that begins at the strong edge of the eta scale, which the bis freeze extends to k = -5 to 12 and which is its one substantive difference from the v2 freeze; stage 2 is played in full, 540 decompositions with every guard held and the anchor reproducing M17's reading to the bit at the six points, and none of the six phantom points is qualified: five of them have no plateau of five values at the short absorber, and the sixth (1.95) has one there and fails under both replacement forms of the absorber; the widths M17 read are therefore not, in the freeze's sense, widths independent of the absorber, every sentence carrying a Gamma since July is reclassified, and what remains is the order-of-magnitude fact that the phantom leaks and the twin does not; this was the last attempt under the freeze's own safeguard and track (0) closes in this form unless the operator decides otherwise; machine 1's replay of the point 1.95 on another platform was sealed by its fingerprint (7fb9026014ad0c93), which the operator attests having received before handing machine 1 machine 2's night lot, and then opened: the judged state agrees to 4.9e-4 against a tolerance of 1e-3, four of the nine other followed states do not, the gap between machines being bounded in absolute terms so that a relative tolerance alone does not say what it covers; the one disagreement between the probe and the earlier diagnostic is traced to the BLAS thread count; three candidate rules, numbered 26 to 28, join the twenty-five awaiting review (X); act written by one machine and countersigned by the other after the numbers were re-read at their sources, three points of description found in the first version and corrected in a second before deposit, the superseded version being deposited beside it so that the correction stays legible, the deposited file being the countersigned one byte for byte\", '04053e0': \"2026-11-14 14:13|delta 96 -- the E-A chain read state by state, outside the range of M17 (the engine's chain function, called at the whole site that labels a clean 2D eigenstate, against the width E-B reads at k = 3), is HELD IN PART: under a freeze written before the run and certified by the other machine before it, opened by the operator on 14/11 at 00:15 (the operator attests it), played once on BOCAL4 on 14/11 with every guard held and the two anchors reproducing M17's readings to the bit, twelve points and 168 states, six points judged; the chain reads E-B's width within a factor 2 at four of the six (44 judged states), within half a decade at a fifth (8 states, three of them under 1/2), and falls at the sixth, J2 at 2.10, where it overestimates by a factor 2.9 to 4.2 on all thirteen judged states, eleven of them outside the half decade; at the twelve points the median ratio is below 1 when w2 is below 2 and above 1 when it is above; the engine's own domain guard says OUTSIDE DOMAIN at exactly three points, J2, T3 and T4, which are exactly the three that fall outside the half decade, a coincidence recorded as such and not a domain of validity, which the freeze forbids drawing; the probe reads the chain without consulting that guard, a silence of the freeze recorded as a defect, so that a verdict at J2 is a verdict outside the chain's declared domain; seven of the eight announcements of the pen are true, the ratio of the first judged state at J1 (0.950 against 0.70 to 0.85) is not; the act does not call the chain qualified, does not retire the reading of the earlier note, which holds at the named points, and leaves the not-qualified verdict of delta 95 untouched; three candidate rules, numbered 29 to 31, join the twenty-eight awaiting review (X); act written by one machine and countersigned by the other after every number was recalculated from the countersigner's own sources, 22 controls of which none bites, the same sheet biting 18 times on a copy with fifteen figures changed, the deposited file being the countersigned one byte for byte\"}",
+  "journaux de machine 1, lus et non rejoues : releve \"RELEVE : 0 controle(s) mordent\" ; contre-epreuve \"CONTRE-EPREUVE : 18 alterations jouees, 18 mordues\"",
+  "NON VERIFIABLE par machine 2 (attestations de machine 1 ou de l operateur) : (a) nn.0 et nn.11 (ii), l ouverture du chantier, \"Ouvre !\", 14/11 a 14 h 57 ; (b) nn.2, machine 1 n a joue la sonde a aucun des douze points E1 a E6 et H1 a H6 ; (c) nn.9 D-G1-3, ce que la plume a dit a l operateur (70 chances sur 100, puis 0.74 de l inverse) ; (d) nn.9 D-G1-2, l heure a laquelle machine 1 a relu le registre : l acte dit que la plume ne l a pas fait"
+ ]
+}
