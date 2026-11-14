@@ -1,0 +1,18 @@
+== m2, defaut (16 fils) : fils {'MKL_NUM_THREADS': None, 'OMP_NUM_THREADS': None, 'OPENBLAS_NUM_THREADS': None}, coeurs 16, levier None
+  A1 etat (7,2) vu 1 fois, rang 0 : Gamma_2D(3) 2.162327301795e-10 ; lecture du run de M17 2.162327301795e-10 ; ecart relatif 0.000e+00
+     suivi min 0.999991 ; stabilite de la cible max (etats au-dessus de dix planchers) 1.135 ; etalement de la chaine max 1.065 ; barrieres vides [(10, 3)] ; sigma_J max 0.115 ; poids sur le site min 0.668
+     etat lu (rang 0) : <n2> - n2 = +0.0448, <n1> - n1 = +0.0897 (rapport 2.002), poids sur le site 0.935
+  A2 etat (8,2) vu 1 fois, rang 0 : Gamma_2D(3) 2.661392571664e-09 ; lecture du run de M17 2.661392571664e-09 ; ecart relatif 0.000e+00
+     suivi min 1.000000 ; stabilite de la cible max (etats au-dessus de dix planchers) 1.084 ; etalement de la chaine max 1.045 ; barrieres vides [] ; sigma_J max 0.079 ; poids sur le site min 0.788
+     etat lu (rang 0) : <n2> - n2 = +0.0671, <n1> - n1 = +0.1345 (rapport 2.002), poids sur le site 0.901
+== m2, 4 fils : fils {'MKL_NUM_THREADS': None, 'OMP_NUM_THREADS': '4', 'OPENBLAS_NUM_THREADS': '4'}, coeurs 16, levier None
+  A1 etat (7,2) vu 1 fois, rang 0 : Gamma_2D(3) 2.162389504203e-10 ; lecture du run de M17 2.162327301795e-10 ; ecart relatif 2.877e-05
+     suivi min 0.999991 ; stabilite de la cible max (etats au-dessus de dix planchers) 1.138 ; etalement de la chaine max 1.065 ; barrieres vides [(10, 3)] ; sigma_J max 0.115 ; poids sur le site min 0.668
+     etat lu (rang 0) : <n2> - n2 = +0.0448, <n1> - n1 = +0.0897 (rapport 2.002), poids sur le site 0.935
+== m1, 1 fil, X86_V4 : fils {'MKL_NUM_THREADS': None, 'OMP_NUM_THREADS': None, 'OPENBLAS_NUM_THREADS': '1'}, coeurs 2, levier X86_V4
+  A1 etat (7,2) vu 1 fois, rang 0 : Gamma_2D(3) 2.161843106223e-10 ; lecture du run de M17 2.162327301795e-10 ; ecart relatif 2.239e-04
+     suivi min 0.999991 ; stabilite de la cible max (etats au-dessus de dix planchers) 1.134 ; etalement de la chaine max 1.065 ; barrieres vides [(10, 3)] ; sigma_J max 0.115 ; poids sur le site min 0.668
+     etat lu (rang 0) : <n2> - n2 = +0.0448, <n1> - n1 = +0.0897 (rapport 2.002), poids sur le site 0.935
+  A2 etat (8,2) vu 1 fois, rang 0 : Gamma_2D(3) 2.661392144201e-09 ; lecture du run de M17 2.661392571664e-09 ; ecart relatif 1.606e-07
+     suivi min 1.000000 ; stabilite de la cible max (etats au-dessus de dix planchers) 1.084 ; etalement de la chaine max 1.045 ; barrieres vides [] ; sigma_J max 0.079 ; poids sur le site min 0.788
+     etat lu (rang 0) : <n2> - n2 = +0.0671, <n1> - n1 = +0.1345 (rapport 2.002), poids sur le site 0.901

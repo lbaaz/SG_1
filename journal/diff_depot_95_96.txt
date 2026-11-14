@@ -1,0 +1,32 @@
+--- delta95
++++ delta96
+@@ -1,9 +1,9 @@
+ #!/usr/bin/env python3
+ # -*- coding: ascii -*-
+-"""LE DEPOT DU DELTA 95 SUR CLONE FRAIS -- copie, verification au bit, releve, commit LOCAL. machine 2, v1, 14/11/2026.
++"""LE DEPOT DU DELTA 96 SUR CLONE FRAIS -- copie, verification au bit, releve, commit LOCAL. machine 2, v1, 14/11/2026.
+ Le PUSH n'est pas fait ici.
+ 
+-Derive de depot_delta94_machine2_v1.py (NON EDITE : regle 17). Un seul changement : le texte du message de commit ; le numero se lit toujours
++Derive de depot_delta95_machine2_v1.py (NON EDITE : regle 17). Un seul changement : le texte du message de commit ; le numero se lit toujours
+ dans le nom du manifeste, l'etat attendu du registre s'en deduit, rien n'est tape. Le diff est joint.
+ Arguments : <clone frais> <MANIFEST_DEPOT_delta<nn>_machine2_v<N>.txt>.
+   1. releve AVANT : origin/main == HEAD, arbre propre, plafond == nn - 1, aucun delta_nn ;
+@@ -16,7 +16,7 @@
+ import hashlib, os, re, shutil, subprocess, sys, unicodedata
+ 
+ if len(sys.argv) != 3:
+-    sys.exit('usage : depot_delta95_machine2_v1.py <clone frais> <MANIFEST_DEPOT_delta<nn>_machine2_v<N>.txt>')
++    sys.exit('usage : depot_delta96_machine2_v1.py <clone frais> <MANIFEST_DEPOT_delta<nn>_machine2_v<N>.txt>')
+ CLONE, MAN = os.path.abspath(sys.argv[1]), os.path.abspath(sys.argv[2])
+ ICI = os.path.dirname(os.path.abspath(__file__))
+ RAC = os.path.dirname(ICI)
+@@ -122,7 +122,7 @@
+ 
+ print('\n4. COMMIT LOCAL (pas de push ici)')
+ auteur = git('log', '-1', '--format=%an <%ae>')
+-msg = ("delta 95 -- the qualification of the E-B estimator Gamma_LS, resumed under the bis freeze, returns NOT QUALIFIED: at stage 1, played on the night of 13/11 on BOCAL4 with every guard held, the positive witness (the H+ twin, its width known by complex rotation) holds at all four configurations, at 0.15 per cent at worst, on a plateau that begins at the strong edge of the eta scale, which the bis freeze extends to k = -5 to 12 and which is its one substantive difference from the v2 freeze; stage 2 is played in full, 540 decompositions with every guard held and the anchor reproducing M17's reading to the bit at the six points, and none of the six phantom points is qualified: five of them have no plateau of five values at the short absorber, and the sixth (1.95) has one there and fails under both replacement forms of the absorber; the widths M17 read are therefore not, in the freeze's sense, widths independent of the absorber, every sentence carrying a Gamma since July is reclassified, and what remains is the order-of-magnitude fact that the phantom leaks and the twin does not; this was the last attempt under the freeze's own safeguard and track (0) closes in this form unless the operator decides otherwise; machine 1's replay of the point 1.95 on another platform was sealed by its fingerprint (7fb9026014ad0c93), which the operator attests having received before handing machine 1 machine 2's night lot, and then opened: the judged state agrees to 4.9e-4 against a tolerance of 1e-3, four of the nine other followed states do not, the gap between machines being bounded in absolute terms so that a relative tolerance alone does not say what it covers; the one disagreement between the probe and the earlier diagnostic is traced to the BLAS thread count; three candidate rules, numbered 26 to 28, join the twenty-five awaiting review (X); act written by one machine and countersigned by the other after the numbers were re-read at their sources, three points of description found in the first version and corrected in a second before deposit, the superseded version being deposited beside it so that the correction stays legible, the deposited file being the countersigned one byte for byte")
++msg = ("delta 96 -- the E-A chain read state by state, outside the range of M17 (the engine's chain function, called at the whole site that labels a clean 2D eigenstate, against the width E-B reads at k = 3), is HELD IN PART: under a freeze written before the run and certified by the other machine before it, opened by the operator on 14/11 at 00:15 (the operator attests it), played once on BOCAL4 on 14/11 with every guard held and the two anchors reproducing M17's readings to the bit, twelve points and 168 states, six points judged; the chain reads E-B's width within a factor 2 at four of the six (44 judged states), within half a decade at a fifth (8 states, three of them under 1/2), and falls at the sixth, J2 at 2.10, where it overestimates by a factor 2.9 to 4.2 on all thirteen judged states, eleven of them outside the half decade; at the twelve points the median ratio is below 1 when w2 is below 2 and above 1 when it is above; the engine's own domain guard says OUTSIDE DOMAIN at exactly three points, J2, T3 and T4, which are exactly the three that fall outside the half decade, a coincidence recorded as such and not a domain of validity, which the freeze forbids drawing; the probe reads the chain without consulting that guard, a silence of the freeze recorded as a defect, so that a verdict at J2 is a verdict outside the chain's declared domain; seven of the eight announcements of the pen are true, the ratio of the first judged state at J1 (0.950 against 0.70 to 0.85) is not; the act does not call the chain qualified, does not retire the reading of the earlier note, which holds at the named points, and leaves the not-qualified verdict of delta 95 untouched; three candidate rules, numbered 29 to 31, join the twenty-eight awaiting review (X); act written by one machine and countersigned by the other after every number was recalculated from the countersigner's own sources, 22 controls of which none bites, the same sheet biting 18 times on a copy with fifteen figures changed, the deposited file being the countersigned one byte for byte")
+ open(os.path.join(ICI, 'message_commit_delta%d.txt' % NUMERO), 'w', encoding='utf-8', newline='\n').write(msg + '\n')
+ chk('le message ne porte aucun trailer d outillage (convention du depot public, 25/08)',
+     'Co-Authored' not in msg and 'Claude' not in msg and 'Generated' not in msg, '%d caracteres' % len(msg))

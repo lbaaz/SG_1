@@ -1,0 +1,27 @@
+C01 TIENT  lot b3d3e23e98914a95 (annonce b3d3e23e98914a95) ; 13 pieces sur 13 au canon, a l empreinte brute et aux deux tailles ; ecarts []
+C02 TIENT  gel reconstruit depuis le gabarit et les canons des pieces : identique a l octet
+C03 TIENT  15 canons cites par le gel (hors le sien), tous resolus chez moi vers une piece du meme contenu ; non resolus : []
+        2b211d51fb8eb3f0  ./MANIFEST_lot_machine1_chaine_EA_par_etat_v1.txt
+        4aecd0e2b23bc818  ./manche_m17_v17_MANIFEST_machine2.txt
+        4ba6d21977f861be  ./lot_machine1_2026-11-14_gel_chaine_EA_par_etat_v1_recu.zip::lecture_selftest_machine1.log
+        82a0be882568fe0c  ./m17_chaine_v17.py
+        9322566db2546adb  ./lot_machine1_2026-11-13_chaine_EA_par_etat_v1_recu.zip::note_machine1_chaine_EA_par_etat_2026-11-13_v1.md
+        acf7e26dedfa8abc  ./lot_machine1_2026-11-14_gel_chaine_EA_par_etat_v1_recu.zip::sonde_chaine_par_etat_machine1_v1.py
+        b46705c3bfd9882c  ./lot_machine1_2026-11-14_gel_chaine_EA_par_etat_v1_recu.zip::lecture_essai_ancres_machine1.log
+        bdf8c5a0c73096a4  ./lot_machine1_2026-11-13_acte_qualification_EB_bis_v2_recu.zip::journal_delta_nn_qualification_EB_bis_v2.md
+        cc6a638c0c12d6c8  ./lot_machine1_2026-11-14_gel_chaine_EA_par_etat_v1_recu.zip::conception_points_chaine_seule_machine1_v1.log
+        dcda1611adf5f8fd  ./lot_machine1_2026-11-13_gel_EB_bis_v1_recu.zip::qualification_EB_bis_pre_enregistrement_v1.md
+        df01461fc9b2b099  ./lot_machine2_2026-11-13_rejeu_chaine_EA_par_etat_v1.zip::MANIFEST_lot_machine2_rejeu_chaine_EA_par_etat_v1.txt
+        e8f3d4d0eda40d9f  ./lot_machine1_2026-11-14_gel_chaine_EA_par_etat_v1_recu.zip::conception_points_chaine_seule_machine1_v1.py
+        ea86d833a0075942  ./lot_machine1_2026-11-14_gel_chaine_EA_par_etat_v1_recu.zip::sonde_essai_ancres_machine1.json
+        f94ab05f69e9bf2f  ./lot_machine1_2026-11-14_gel_chaine_EA_par_etat_v1_recu.zip::lecture_chaine_par_etat_machine1_v1.py
+        fa54b6ed68469db8  ./MANIFEST_lot_machine1_reponse_rejeu_chaine_EA_v1.txt
+C04 TIENT  les douze points (w2, facteur) : gel section 4 (12 lus), POINTS de la sonde (12), ATTENDUS de la feuille (12) : identiques, roles compris
+C05 TIENT  boites N recalculees par moi (douze points, sans diagonalisation) = celles du journal de conception de machine 1 ; juges : {'J1': 60, 'J2': 61, 'J3': 54, 'J4': 55, 'J5': 72, 'J6': 74} ; gel : "N de 54 (J3) a 74 (J6)" ; tous faisables
+C06 TIENT  section 4 du gel sur la chaine seule : facteur 2, sites sans barriere [10, 14] (gel : de 10 a 14) ; facteur 3 : [15, 18] (de 15 a 18) ; facteur 1/2 a 1.95 : etat modal 1.58e-13 sous 1.33e-12, boites N 87 et 88
+C07 TIENT  10 constantes de la feuille (SIGMA_J_MAX, POIDS_SITE_MIN, DIX_PLANCHERS, SUIVI_MIN, STABILITE_CIBLE, ETALEMENT_CHAINE, MIN_JUGES, MIN_POINTS_LISIBLES, TOL_ANCRE, N_ETATS) egales aux nombres du gel, phrase par phrase ; les deux ancres du gel egales a celles de la feuille ; mauvaises : []
+C08 TIENT  sonde : fraction 0.70, L = 20, 14 etats, k = 2, 3, 4, quatre eta de chaine 1/4..1/32, M_facteur 4 ; feuille : q = gammas[2] (facteur 1/16) / Gamma_2D(3)
+C09 TIENT  feuille : criteres (1) a (6) dans l ordre du gel ; paliers : [1/2, 2] ferme, demi-decade 0.3162 a 3.1623
+C10 TIENT  gel ASCII, sans pour cent, plus longue ligne 99, ligne de FIN
+C11 TIENT  annonce A-1 : cinq issues, probabilites [0.72, 0.17, 0.05, 0.03, 0.03], somme 1.00
+BILAN : 11 controles, 0 mordent : []

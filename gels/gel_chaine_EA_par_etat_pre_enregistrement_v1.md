@@ -1,0 +1,211 @@
+GEL -- LA CHAINE E-A PAR ETAT, HORS PLAGE : LA CHAINE DU MOTEUR, EVALUEE AU SITE ENTIER D'UN ETAT
+PROPRE, PREDIT-ELLE LA LECTURE DE E-B A k = 3, A L'ORDRE DE GRANDEUR, HORS DES SIX POINTS DE M17 ?
+PRE-ENREGISTREMENT, VERSION 1
+(plume machine 1, certification machine 2, chantier ouvert par l'operateur, 2026-11-14)
+=======================================================================
+
+0. STATUT ET POSITION
+  Ce gel ouvre un chantier DISTINCT de la piste (0). La piste (0) demandait si Gamma_LS (E-B) est
+  une largeur independante de l'absorbeur ; le gel bis (dcda1611adf5f8fd) a rendu NON QUALIFIE et
+  l'a fermee sous cette forme. La question d'ici est autre : la chaine E-A du moteur, appelee au
+  site entier qui etiquette un etat propre 2D, predit-elle la LECTURE de E-B a k = 3, a l'ordre de
+  grandeur, HORS de la plage ou l'accord a ete vu apres coup ? La lecture de E-B est prise au
+  statut que le gel bis lui laisse ("bonne a l'ordre de grandeur") ; rien ici ne la requalifie, et
+  aucune phrase de ce chantier ne dira "largeur" sans "lue a k = 3".
+  Ouverture : l'operateur a ecrit "j'ouvre" a machine 1 le 14/11/2026 a 00 h 15, apres que machine
+  2 a dit (lot df01461fc9b2b099, section 4) que la decision etait la sienne. Machine 2 ne peut pas
+  le verifier sur piece ; le message de transmission de l'operateur le dit ou non.
+  Rien ne se joue avant la certification croisee (E19).
+
+1. PIECES CITEES (convention B)
+  Au registre (fe10bfe)
+    scripts/m17_chaine_v17.py  82a0be882568fe0c
+        le moteur
+    journal/manche_m17_v17_MANIFEST_machine2.txt  4aecd0e2b23bc818
+        le manifeste du run de M17
+  Hors registre
+    qualification_EB_bis_pre_enregistrement_v1.md  dcda1611adf5f8fd
+        le gel bis
+    journal_delta_nn_qualification_EB_bis_v2.md  bdf8c5a0c73096a4
+        l'acte de la nuit bis, projet v2
+    lot de machine 1  2b211d51fb8eb3f0
+        la chaine E-A par etat, post hoc (note 9322566db2546adb)
+    lot de machine 2  df01461fc9b2b099
+        le rejeu de ce lot sur BOCAL4, et quatre reserves sur le gel alors propose
+    lot de machine 1  fa54b6ed68469db8
+        la reponse : cinq defauts pris, gel propose retire
+  De ce lot
+    sonde_chaine_par_etat_machine1_v1.py  acf7e26dedfa8abc
+        la sonde : elle mesure et ne juge pas
+    lecture_chaine_par_etat_machine1_v1.py  f94ab05f69e9bf2f
+        la feuille : elle juge et ne mesure pas
+    conception_points_chaine_seule_machine1_v1.py  e8f3d4d0eda40d9f
+    conception_points_chaine_seule_machine1_v1.log  cc6a638c0c12d6c8
+        la chaine SEULE aux points candidats ; aucune decomposition 2D
+    sonde_essai_ancres_machine1.json  ea86d833a0075942
+    lecture_essai_ancres_machine1.log  b46705c3bfd9882c
+        essai a blanc aux deux ancres, non opposable
+    lecture_selftest_machine1.log  4ba6d21977f861be
+        les 26 cas de la feuille
+
+2. CE QUI A MENE ICI
+  Post hoc (lot 2b211d51fb8eb3f0), rejoue par machine 2 (lot df01461fc9b2b099) : aux six points de
+  M17, les etats propres 2D proches de la graine s'etiquettent par un site (n1, n2), et la chaine
+  du moteur appelee a ce site rend leur largeur lue, a un rapport chaine / 2D de 0.499 a 1.642
+  (machine 1) ou 1.626 (machine 2) sur 72 etats-points. Machine 2 a montre que le gel que machine 1
+  proposait alors (points 1.96 et 2.04, borne [1/2, 2], plafond a 1e-07) etait une interpolation a
+  borne reglee sur ces 72 rapports ; machine 1 l'a retire (lot fa54b6ed68469db8).
+  Defaut de plus, trouve en ecrivant ce gel (D-CH-6, m1). La note 9322566db2546adb dit "au reglage
+  du run (N = 60, r_c = 40)". C'est le reglage du run a 1.95 ; la boite du moteur depend du point :
+  le run porte N = 61, r_c = 41 a 2.02 et a 2.05 (champs EB/N et EB/r_c ; non relu a 2.03). Les
+  Gamma_2D du lot 2b211d51fb8eb3f0 y sont donc lus dans une autre boite que celle du run ; c'est
+  l'ecart de 1.5 a 1.7 pour cent a 2.02 et 2.03 que la note rangeait sous "mieux que 2 pour cent".
+  La sonde de ce gel prend la boite du moteur.
+
+3. CE QUI EST MESURE (la sonde)
+  Par point (w2, g) : s = 0.70 s_ff(w2, g) ; graine coherente du moteur ; boite par la regle de
+  executer_EB du moteur a L = 20 : r_c = plafond(n1 de la graine) + 2 (m + max(8, m)) + 2, ou m est
+  le dernier site de la barriere a la graine (0 si elle est vide), et N = r_c + 20 ; le point est
+  INFAISABLE si N > N_MAX_EB = 120. H_2D du moteur (x^5, signe du fantome -1) a eta_k = eta0
+  2^(-k), eta0 = |w2 - 2|, pour k = 2, 3, 4 : trois decompositions par point.
+  A k = 3, les 14 etats de plus grand recouvrement avec la graine, dans l'ordre du moteur. Pour
+  chacun : J moyen et son ecart-type (J = n1 - 2 n2), <n1>, <n2> ; ETIQUETTE : n2 = arrondi de
+  <n2>, n1 = arrondi de J + 2 n2 ; poids de l'etat sur le site (n1, n2) ; Gamma_2D(3) = -2 Im E.
+  Le meme etat est suivi a k = 2 et a k = 4 par plus grand recouvrement entre vecteurs normes, ce
+  qui donne Gamma_2D(2), Gamma_2D(4) et deux recouvrements de suivi.
+  Chaine : barriere(n1, n2, w2, g) avec Sigma2, puis gamma_chaine du moteur au site entier,
+  M_facteur 4, a quatre eta de chaine (facteurs 1/4, 1/8, 1/16, 1/32) ; la valeur lue est celle du
+  facteur 1/16. Un arret du moteur se consigne et ne se rattrape pas.
+  La sonde n'affiche aucun rapport et n'applique aucun seuil.
+
+4. LES DOUZE POINTS (fraction 0.70 ; g = facteur x g_du_point(w2))
+  JUGES, tous en extrapolation
+    J1  w2 = 19/10  facteur 1     desaccord double, dessous
+    J2  w2 = 21/10  facteur 1     desaccord double, dessus
+    J3  w2 = 39/20  facteur 3/2   couplage plus fort, dessous
+    J4  w2 = 41/20  facteur 3/2   couplage plus fort, dessus
+    J5  w2 = 39/20  facteur 2/3   couplage plus faible, dessous
+    J6  w2 = 41/20  facteur 2/3   couplage plus faible, dessus
+  TEMOINS, lus et non juges
+    T1  w2 = 49/25  facteur 1     interpolation (un point de la proposition retiree)
+    T2  w2 = 51/25  facteur 1     interpolation (l'autre)
+    T3  w2 = 37/20  facteur 1     extrapolation plus lointaine, dessous
+    T4  w2 = 43/20  facteur 1     extrapolation plus lointaine, dessus
+  ANCRES, connues, pour la garde G-4
+    A1  w2 = 39/20  facteur 1
+    A2  w2 = 41/20  facteur 1
+  Choix des facteurs, fait sur la CHAINE SEULE (conception_points_chaine_seule, 32 sites voisins de
+  la graine par point) : a facteur 2, de 10 a 14 de ces sites n'ont plus de barriere, a facteur 3
+  de 15 a 18 ; a facteur 1/2 l'etat modal de 1.95 est sous dix planchers (1.6e-13) et la boite
+  passe a N = 87 ou 88. 3/2 et 2/3 sont les facteurs ronds qui restent lisibles d'apres la chaine.
+  Boites attendues : N de 54 (J3) a 74 (J6).
+
+5. LES ETATS JUGES
+  A un point, un des 14 etats est JUGE s'il passe, dans cet ordre :
+    (1) J net : ecart-type de J < 0.2 ;
+    (2) etiquette dans le domaine : n1 >= 0 et n2 >= 0 ;
+    (3) site majoritaire : poids sur le site (n1, n2) >= 0.5 ;
+    (4) au-dessus de dix planchers : Gamma_2D(3) > 1.33e-12, dix fois le plancher du jumeau de la
+        nuit bis (1.330e-13) ;
+    (5) etat suivi : les deux recouvrements de suivi >= 0.9 ;
+    (6) cible stable : max / min de Gamma_2D sur k = 2, 3, 4 <= 2 ;
+    (7) chaine definie : pas d'arret du moteur, barriere non vide ;
+    (8) chaine stable : max / min de ses quatre valeurs <= 2, la meme exigence que pour la cible ;
+    (9) etiquette unique parmi les 14 : deux etats de meme etiquette sont exclus tous les deux.
+  Aucun plafond sur Gamma_2D. Un etat exclu est compte avec son premier motif et ne pese pas.
+  Ces criteres ne lisent aucun rapport chaine / 2D. Ce que la plume sait d'eux : sur les 72 etats
+  connus, (1) passe partout (ecart-type au plus 0.115) et le poids sur un seul site vaut au moins
+  0.668. A l'essai a blanc aux deux ancres, (5) et (6) passent partout (suivi au moins 0.99999,
+  stabilite de la cible au plus 1.134), l'etalement de la chaine vaut au plus 1.065 sur les etats
+  juges, et l'etat (10,3) de 1.95, celui du rapport 0.499, est exclu par (7) : sa barriere est
+  vide. Les deux ancres s'y lisent FACTEUR 2 (q de 0.587 a 0.878 a A1, de 1.292 a 1.607 a A2).
+
+6. LE VERDICT D'UN POINT
+  q = Gamma_chaine / Gamma_2D(3), pour chaque etat juge.
+    NON LISIBLE   si le point est infaisable ou compte moins de 6 etats juges ;
+    FACTEUR 2     si tous les q sont dans [1/2, 2] ;
+    DECADE        sinon, si tous les q sont dans [10^(-1/2), 10^(1/2)], soit de 0.3162 a 3.1623 ;
+    HORS DECADE   sinon.
+  D'ou viennent les bornes. Ce sont deux paliers ronds, ecrits d'avance tous les deux pour que
+  personne n'ait a en choisir un apres coup. La demi-decade est la lecture stricte de "ordre de
+  grandeur", le statut que le gel bis laisse a E-B. Aucun des deux n'est independant de ce que les
+  plumes savent : des 72 rapports connus, tous sont dans la demi-decade et un seul sort de [1/2, 2]
+  (0.499). C'est pourquoi aucun point connu n'est juge.
+
+7. LA CASCADE
+    NON CONCLUANT D'INSTRUMENT          si une garde de la section 8 mord ;
+    NON LISIBLE                         sinon, si moins de 4 des 6 points juges sont lisibles ;
+  sinon, sur les points juges lisibles :
+    ORDRE DE GRANDEUR TENU HORS PLAGE   si tous sont FACTEUR 2 ou DECADE ;
+    TENU EN PARTIE                      si au moins un l'est et au moins un est HORS DECADE ;
+    NON TENU                            si tous sont HORS DECADE.
+  Les temoins et les ancres ne pesent pas.
+
+8. GARDES
+  G-1  le moteur lu par la sonde est au canon 82a0be882568fe0c.
+  G-2  les douze points sont presents, avec le role, le w2 et le facteur de la section 4, et
+       g = facteur x g_du_point(w2).
+  G-3  chaque point faisable porte 14 etats.
+  G-4  ancres : a A1 l'etat d'etiquette (7,2), a A2 l'etat d'etiquette (8,2), existe une seule fois
+       et rend la lecture du run de M17 a 1e-2 pres en relatif : 2.1623273017950654e-10 et
+       2.6613925716641374e-09 (champ EB/operatif_4_6/Gamma de pt_39_20_f070.json et de
+       pt_41_20_f070.json).
+  G-5  la feuille passe son selftest (26 cas) avant de lire.
+
+9. LECTURES DECLAREES, SANS VERDICT
+  Par point : q minimal, maximal, median ; l'etat juge de plus grand recouvrement et son q ; le
+  compte des exclus par motif. Les quatre temoins sont lus comme des points. Ces lectures
+  decrivent ; elles ne rejouent aucun seuil.
+
+10. ANNONCES DE LA PLUME (machine 1), AVANT TOUT RUN
+  Ce que la plume sait : les 72 rapports ; au-dessus de 2.00 le rapport de l'etat lu croit a peu
+  pres comme g^2 / |delta| (1.10, 1.19, 1.47 a 2.02, 2.03, 2.05) ; en dessous il bouge peu (0.82 a
+  0.85). Ses attentes en sortent ; ce sont des estimations, pas des calculs.
+  A-1  le verdict : TENU EN PARTIE 0.72 ; ORDRE DE GRANDEUR TENU HORS PLAGE 0.17 ; NON CONCLUANT
+       D'INSTRUMENT 0.05 ; NON LISIBLE 0.03 ; NON TENU 0.03.
+  A-2  (0.55) J2 est HORS DECADE.
+  A-3  (0.55) a J2, le q de l'etat juge de plus grand recouvrement est entre 2.3 et 4.6. Non jugee
+       si J2 est NON LISIBLE.
+  A-4  (0.60) a J1, ce q est entre 0.70 et 0.85. Non jugee si J1 est NON LISIBLE.
+  A-5  (0.40) J3 et J4 sont tous les deux FACTEUR 2.
+  A-6  (0.75) signe : a chaque point juge lisible, le q median est sous 1 si w2 < 2 et au-dessus de
+       1 si w2 > 2. Fausse des qu'un point lisible la contredit ; non jugee si aucun n'est lisible.
+  A-7  (0.65) J5 est lisible.
+  A-8  (0.95) la garde G-4 tient.
+
+11. CE QUE CHAQUE ISSUE ENGAGE
+  ORDRE DE GRANDEUR TENU HORS PLAGE : l'acte pourra ecrire que la chaine E-A, au site entier,
+    predit la lecture de E-B a k = 3 a une demi-decade pres aux points juges lisibles ; rien de
+    plus.
+  TENU EN PARTIE : l'acte nomme les points tenus et les points tombes ; aucun "domaine de
+    validite" n'en est tire sans un nouveau gel.
+  NON TENU : l'accord vu aux six points de M17 ne sort pas de leur plage ; la lecture de la note
+    9322566db2546adb est retiree comme enonce general.
+  NON LISIBLE, NON CONCLUANT D'INSTRUMENT : rien n'est appris sur la chaine, et l'acte le dit.
+  Dans tous les cas : aucune largeur intrinseque n'est affirmee ; le verdict PAS DE SIGNAL de M17
+  et le verdict NON QUALIFIE de la nuit bis ne sont pas touches.
+
+12. GARDE-FOUS
+  Un seul run. Aucun point n'est ajoute, retire ou rejoue apres lecture ; aucune relecture sous
+  d'autres paliers, d'autres criteres ou une autre population. Si la certification mord, rien ne
+  se joue et la plume corrige par hunks. Ce gel ne rouvre pas la piste (0) et n'en leve pas le
+  garde-fou.
+
+13. DECLARATIONS D'AVEUGLE
+  Machine 1 n'a diagonalise le H 2D a aucun des dix points J1 a J6 et T1 a T4. Elle y a calcule la
+  chaine seule. Elle a joue la sonde aux deux ancres, points deja connus (essai a blanc joint, non
+  opposable). Machine 2 dit dans sa certification ce qu'elle a joue.
+
+14. LE CANAL
+  Machine 2 certifie le gel, la sonde et la feuille. Si la certification rend 0 morsure, elle joue
+  dans le meme retour : un passage de la sonde (36 decompositions, de l'ordre d'une demi-heure sur
+  BOCAL4 d'apres ses durees du rejeu), puis la feuille ; elle rend le JSON de la sonde, le verdict
+  et les journaux. Machine 1 rejoue la feuille sur ce JSON et ecrit l'acte. Machine 1 ne joue pas
+  la sonde aux points juges ou temoins avant d'avoir recu ce lot.
+
+15. CE QUE CE GEL NE DIT PAS
+  Il ne dit pas que la chaine est "qualifiee", ni qu'elle rend une largeur intrinseque. Il ne dit
+  rien d'autres degres, d'autres canaux, d'autres fractions. Il ne prend aucun numero, n'adopte
+  aucune regle, n'edite aucune piece citee (PB-1).
+
+-- FIN gel_chaine_EA_par_etat_pre_enregistrement_v1 --

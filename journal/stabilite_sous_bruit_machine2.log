@@ -1,0 +1,13 @@
+J1 juge   statut FACTEUR 2   ; sous le bruit : pire configuration FACTEUR 2  , meilleure FACTEUR 2   -> INCHANGE
+J2 juge   statut HORS DECADE ; sous le bruit : pire configuration HORS DECADE, meilleure HORS DECADE -> INCHANGE
+J3 juge   statut FACTEUR 2   ; sous le bruit : pire configuration FACTEUR 2  , meilleure FACTEUR 2   -> INCHANGE
+J4 juge   statut FACTEUR 2   ; sous le bruit : pire configuration FACTEUR 2  , meilleure FACTEUR 2   -> INCHANGE
+J5 juge   statut DECADE      ; sous le bruit : pire configuration DECADE     , meilleure DECADE      -> INCHANGE
+J6 juge   statut FACTEUR 2   ; sous le bruit : pire configuration FACTEUR 2  , meilleure FACTEUR 2   -> INCHANGE
+T1 temoin statut DECADE      ; sous le bruit : pire configuration DECADE     , meilleure DECADE      -> INCHANGE
+T2 temoin statut FACTEUR 2   ; sous le bruit : pire configuration FACTEUR 2  , meilleure FACTEUR 2   -> INCHANGE
+T3 temoin statut HORS DECADE ; sous le bruit : pire configuration HORS DECADE, meilleure HORS DECADE -> INCHANGE
+T4 temoin statut HORS DECADE ; sous le bruit : pire configuration HORS DECADE, meilleure HORS DECADE -> INCHANGE
+A1 ancre  statut FACTEUR 2   ; sous le bruit : pire configuration FACTEUR 2  , meilleure FACTEUR 2   -> INCHANGE
+A2 ancre  statut FACTEUR 2   ; sous le bruit : pire configuration FACTEUR 2  , meilleure FACTEUR 2   -> INCHANGE
+131 etats juges ; bruit relatif maximal de la cible 2.38e-02 (('J2', 5), Gamma_2D(3) = 3.078e-12) ; q le plus proche d une borne : ecart relatif 0.005 (('T1', 12, 0.49766202641908697, 0.5))

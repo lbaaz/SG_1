@@ -1,0 +1,27 @@
+  TIENT  S01 base saine, tous q = 1                                 attendu ORDRE DE GRANDEUR TENU HORS PLAGE ; rendu ORDRE DE GRANDEUR TENU HORS PLAGE
+  TIENT  S02 un etat a q = 2.5 en J2                                attendu ORDRE DE GRANDEUR TENU HORS PLAGE ; rendu ORDRE DE GRANDEUR TENU HORS PLAGE
+  TIENT  S03 un etat a q = 4 en J2                                  attendu TENU EN PARTIE ; rendu TENU EN PARTIE
+  TIENT  S04 un etat a q = 0.3 en J1                                attendu TENU EN PARTIE ; rendu TENU EN PARTIE
+  TIENT  S05 les six juges hors decade                              attendu NON TENU ; rendu NON TENU
+  TIENT  S06 bords : q = 2 et q = 0.5 restent FACTEUR 2             attendu ORDRE DE GRANDEUR TENU HORS PLAGE ; rendu ORDRE DE GRANDEUR TENU HORS PLAGE
+  TIENT  S07 q = 0.499 fait DECADE                                  attendu ORDRE DE GRANDEUR TENU HORS PLAGE ; rendu ORDRE DE GRANDEUR TENU HORS PLAGE
+  TIENT  S08 q = 3.17 fait HORS DECADE, 3.16 fait DECADE            attendu TENU EN PARTIE ; rendu TENU EN PARTIE
+  TIENT  S09 J flou exclu (q = 100 sans effet)                      attendu ORDRE DE GRANDEUR TENU HORS PLAGE ; rendu ORDRE DE GRANDEUR TENU HORS PLAGE
+  TIENT  S10 site minoritaire exclu                                 attendu ORDRE DE GRANDEUR TENU HORS PLAGE ; rendu ORDRE DE GRANDEUR TENU HORS PLAGE
+  TIENT  S11 sous dix planchers exclu                               attendu ORDRE DE GRANDEUR TENU HORS PLAGE ; rendu ORDRE DE GRANDEUR TENU HORS PLAGE
+  TIENT  S12 cible instable exclue                                  attendu ORDRE DE GRANDEUR TENU HORS PLAGE ; rendu ORDRE DE GRANDEUR TENU HORS PLAGE
+  TIENT  S13 etat non suivi exclu                                   attendu ORDRE DE GRANDEUR TENU HORS PLAGE ; rendu ORDRE DE GRANDEUR TENU HORS PLAGE
+  TIENT  S14 barriere vide exclue                                   attendu ORDRE DE GRANDEUR TENU HORS PLAGE ; rendu ORDRE DE GRANDEUR TENU HORS PLAGE
+  TIENT  S15 chaine instable exclue                                 attendu ORDRE DE GRANDEUR TENU HORS PLAGE ; rendu ORDRE DE GRANDEUR TENU HORS PLAGE
+  TIENT  S16 chaine en erreur exclue                                attendu ORDRE DE GRANDEUR TENU HORS PLAGE ; rendu ORDRE DE GRANDEUR TENU HORS PLAGE
+  TIENT  S17 etiquette en double : les deux exclus                  attendu ORDRE DE GRANDEUR TENU HORS PLAGE ; rendu ORDRE DE GRANDEUR TENU HORS PLAGE
+  TIENT  S18 cinq etats juges en J5 : point NON LISIBLE, verdict tenu attendu ORDRE DE GRANDEUR TENU HORS PLAGE ; rendu ORDRE DE GRANDEUR TENU HORS PLAGE
+  TIENT  S19 trois points juges illisibles                          attendu NON LISIBLE ; rendu NON LISIBLE
+  TIENT  S20 un temoin hors decade ne pese pas                      attendu ORDRE DE GRANDEUR TENU HORS PLAGE ; rendu ORDRE DE GRANDEUR TENU HORS PLAGE
+  TIENT  S21 ancre a 2 pour cent                                    attendu NON CONCLUANT D'INSTRUMENT ; rendu NON CONCLUANT D'INSTRUMENT
+  TIENT  S22 etat d'ancre absent                                    attendu NON CONCLUANT D'INSTRUMENT ; rendu NON CONCLUANT D'INSTRUMENT
+  TIENT  S23 moteur hors canon                                      attendu NON CONCLUANT D'INSTRUMENT ; rendu NON CONCLUANT D'INSTRUMENT
+  TIENT  S24 un point manque                                        attendu NON CONCLUANT D'INSTRUMENT ; rendu NON CONCLUANT D'INSTRUMENT
+  TIENT  S25 g n'est pas facteur x regle                            attendu NON CONCLUANT D'INSTRUMENT ; rendu NON CONCLUANT D'INSTRUMENT
+  TIENT  S26 point infaisable : NON LISIBLE au point                attendu ORDRE DE GRANDEUR TENU HORS PLAGE ; rendu ORDRE DE GRANDEUR TENU HORS PLAGE
+SELFTEST : 26 cas, 26 tenus

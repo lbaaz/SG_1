@@ -1,0 +1,66 @@
+
+1. LES CITATIONS DE L ACTE, ET LES DEUX INDEX PAR CANON
+  [ note] acte                                                       journal_delta_nn_chaine_EA_par_etat_v1.md (version 1)
+  [PASSE] l acte est ASCII pur, LF, newline final                    15203 octets
+  [PASSE] l acte cite des empreintes (compte etabli apres extraction 18 jetons distincts de 16 hex
+  [PASSE] chaque VALEUR declaree est bien citee par l acte           
+  [PASSE] chaque lot de TRANSPORT declare est bien cite par l acte   
+  [ note] numero DERIVE du releve, non tape                          plafond 95 -> le delta de cet acte porte le 96 ; le numero reste de la main de l operateur (E18)
+  [PASSE] releve : HEAD 3c26420, plafond 95, aucun fichier delta_96  1580 fichiers suivis
+  [PASSE] le delta PRECEDENT est bien au registre -- le releve porte delta_95 present
+  [ note] index du poste                                             7460 canons distincts (B et brut), 2239 noms de table
+  [ note] balayage : tout BOCAL4 hors .git et __pycache__ ; exclues, manifest_depot_delta96_machine2_v1.txt, perimetre_depot_delta96_sur_acte_v1_machine2.log
+
+2. RESOLUTION DE CHAQUE CITATION -- AU REGISTRE, AU POSTE, OU NULLE PART
+   registre  bdf8c5a0c73096a4  journal/journal_delta_95_qualification_EB_bis_v2.md
+   registre  b46537578fff4ab0  journal/MANIFEST_lot_machine2_contreseing_acte_95_EB_bis_v2_v1.txt
+   registre  82a0be882568fe0c  scripts/m17_chaine_v17.py
+   registre  9322566db2546adb  journal/note_machine1_chaine_EA_par_etat_2026-11-13_v1.md
+   poste     9df2702af59adbbc  DEPOT_delta96/entrants/lot_machine1_2026-11-14_gel_chaine_EA_par_etat_v1_recu/gel_chaine_EA_par_etat_pre_enregistrement_v1.md
+   poste     b3d3e23e98914a95  MANIFEST_lot_machine1_gel_chaine_EA_par_etat_v1.txt
+   poste     acf7e26dedfa8abc  DEPOT_delta96/entrants/lot_machine1_2026-11-14_gel_chaine_EA_par_etat_v1_recu/sonde_chaine_par_etat_machine1_v1.py
+   poste     f94ab05f69e9bf2f  DEPOT_delta96/entrants/lot_machine1_2026-11-14_gel_chaine_EA_par_etat_v1_recu/lecture_chaine_par_etat_machine1_v1.py
+   poste     3381564852ba6fe4  MANIFEST_lot_machine2_certification_gel_chaine_EA_par_etat_v1.txt
+   poste     9143062c481ad267  MANIFEST_lot_machine2_resultat_chaine_EA_par_etat_v1.txt
+   poste     5d80bf2edd26a6c1  chaine_EA_par_etat/sortie/sonde_chaine_par_etat.json
+   poste     4fbc5f7115002054  DEPOT_delta96/entrants/lot_machine1_2026-11-14_acte_chaine_EA_par_etat_v1_recu/verdict_rejoue_machine1.json
+   poste     997c4e4681b0e7ec  chaine_EA_par_etat/sortie/lecture_chaine_par_etat.log
+   poste     4297a8489cdf5eea  POUR_MACHINE1_resultat_chaine_EA_par_etat_machine2_v1.md
+   poste     b643f7e55be69ef2  chaine_EA_par_etat/sortie/stabilite_sous_bruit_machine2.log
+   poste     f839525cfff22aa5  chaine_EA_par_etat/garde_G1_domaine_machine2_v1.log
+   poste     64589ba23c6b8097  DEPOT_delta96/entrants/lot_machine1_2026-11-14_acte_chaine_EA_par_etat_v1_recu/lecture_rejouee_machine1.log
+   poste     fa54b6ed68469db8  MANIFEST_lot_machine1_reponse_rejeu_chaine_EA_v1.txt
+  [PASSE] toute empreinte citee resout par canon (registre, poste, o 4 au registre, 14 au poste, 0 zip, 0 valeurs
+  [PASSE] les lots de ce delta (manifeste dont l en-tete porte le ca bb7db90c75d6935e MANIFEST_lot_machine1_acte_chaine_EA_par_etat_v1.txt; 3ae869c8c037dc21 MANIFEST_lot_machine2_contreseing_acte_chaine_EA_par_etat_v1.txt
+
+3. LES LOTS CITES ENTRENT AVEC LEURS PIECES DE TABLE
+  [ note] erratum                                                    aucun dans ce chantier : une divergence de table mord
+  [ note] manifeste sans ligne pieces : N                            b3d3e23e98914a95 : compte attendu = 13 membres du zip extrait, hors manifeste
+   lot b3d3e23e98914a95  table 13 / declare 13   MANIFEST_lot_machine1_gel_chaine_EA_par_etat_v1.txt
+   lot 3381564852ba6fe4  table 25 / declare 25   MANIFEST_lot_machine2_certification_gel_chaine_EA_par_etat_v1.txt
+   lot 9143062c481ad267  table 15 / declare 15   MANIFEST_lot_machine2_resultat_chaine_EA_par_etat_v1.txt
+  [ note] manifeste sans ligne pieces : N                            fa54b6ed68469db8 : compte attendu = 4 membres du zip extrait, hors manifeste
+   lot fa54b6ed68469db8  table  4 / declare 4    MANIFEST_lot_machine1_reponse_rejeu_chaine_EA_v1.txt
+  [ note] manifeste sans ligne pieces : N                            bb7db90c75d6935e : compte attendu = 8 membres du zip extrait, hors manifeste
+   lot bb7db90c75d6935e  table  8 / declare 8    MANIFEST_lot_machine1_acte_chaine_EA_par_etat_v1.txt
+   lot 3ae869c8c037dc21  table  8 / declare 8    MANIFEST_lot_machine2_contreseing_acte_chaine_EA_par_etat_v1.txt
+  [PASSE] 6 lots cites a deposer, chacun au compte de table declare  0 faux compte
+  [PASSE] aucune piece de table ne s ecarte de son manifeste HORS er 0 ecart
+  [PASSE] aucune piece de table n est introuvable a cote de son mani 0 introuvable
+  [PASSE] aucune piece retenue n est deja au registre par canon      72 retenues
+
+4. LE MANIFESTE DE DEPOT -- DERIVE, JAMAIS ECRIT A LA MAIN
+  [PASSE] aucun chemin cible en double ni deja au registre           76 chemins cibles
+  [PASSE] aucun doublon de canon dans le depot                       76 pieces
+  [PASSE] toute collision resolue porte le prefixe de son LOT (aucun 0 prefixes
+  [PASSE] les .md/.py/.txt deposes sont B == brut (ASCII/LF)         41 pieces texte
+  [PASSE] le manifeste relu porte autant de lignes que de pieces     76 lignes, 76 pieces
+  [PASSE] chaque source du manifeste resout encore au canon ecrit    0 ecart
+  [PASSE] le manifeste declare son compte, egal aux lignes           pieces : 76
+  [PASSE] le manifeste est ASCII                                     19711 octets
+
+=====================================================================
+BILAN PERIMETRE : 20/20 controles PASSENT
+18 empreintes citees : 4 au registre, 16 au poste, 0 zip, 0 valeurs, 0 non resolues
+DEPOT : 76 pieces (gels 1, journal 72, scripts 3) ; manifeste MANIFEST_DEPOT_delta96_machine2_v1.txt ca659be5a7bb0ca2
+=====================================================================

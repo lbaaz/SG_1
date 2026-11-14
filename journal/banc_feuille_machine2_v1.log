@@ -1,0 +1,31 @@
+A. LECTEUR INDEPENDANT (gel 9df2702af59adbbc, sections 5 a 8) CONTRE LA FEUILLE lecture_chaine_par_etat_machine1_v1.py
+   4000 sondes synthetiques aux bords des seuils ; verdicts du lecteur independant : {'NCI': 2522, 'NL': 619, 'PARTIE': 271, 'TENU': 588}
+   ecarts feuille / lecteur : 0
+   BORD EXACT, hors tirage : q = sqrt(10) = 3.1622776601683795 ; feuille : HORS DECADE ; le gel (section 6) ferme la borne : [10^(-1/2), 10^(1/2)]
+   BORD EXACT : q = 1/sqrt(10) = 0.31622776601683794 ; feuille : DECADE
+B. MUTATIONS DE LA FEUILLE : 24 alterations d'une ligne ; le selftest de machine 1 mord-il ? mon banc A mord-il ?
+   M01  selftest m1 : survit    banc m2 : MORD      SIGMA_J_MAX = 0.2  ->  SIGMA_J_MAX = 0.25
+   M02  selftest m1 : MORD      banc m2 : MORD      POIDS_SITE_MIN = 0.5  ->  POIDS_SITE_MIN = 0.45
+   M03  selftest m1 : survit    banc m2 : MORD      DIX_PLANCHERS = 1.33e-12  ->  DIX_PLANCHERS = 1.0e-12
+   M04  selftest m1 : survit    banc m2 : MORD      SUIVI_MIN = 0.9  ->  SUIVI_MIN = 0.8
+   M05  selftest m1 : MORD      banc m2 : MORD      STABILITE_CIBLE = 2.0  ->  STABILITE_CIBLE = 2.5
+   M06  selftest m1 : MORD      banc m2 : MORD      ETALEMENT_CHAINE = 2.0  ->  ETALEMENT_CHAINE = 3.0
+   M07  selftest m1 : MORD      banc m2 : MORD      MIN_JUGES = 6  ->  MIN_JUGES = 5
+   M08  selftest m1 : MORD      banc m2 : MORD      MIN_POINTS_LISIBLES = 4  ->  MIN_POINTS_LISIBLES = 3
+   M09  selftest m1 : survit    banc m2 : MORD      TOL_ANCRE = 1e-2  ->  TOL_ANCRE = 2e-2
+   M10  selftest m1 : MORD      banc m2 : MORD      if 0.5 <= q <= 2.0:  ->  if 0.5 < q <= 2.0:
+   M11  selftest m1 : survit    banc m2 : survit    if q * q >= 0.1 and q * q <= 10.0:  ->  if q * q > 0.1 and q * q <= 10.0:
+   M12  selftest m1 : MORD      banc m2 : MORD      q = e["chaine"]["gammas"][2] / e["Gamma_2D"]["3"]  ->  q = e["chaine"]["gammas"][1] / e["Gamma_2D"]["3"]
+   M13  selftest m1 : MORD      banc m2 : MORD      q = e["chaine"]["gammas"][2] / e["Gamma_2D"]["3"]  ->  q = e["chaine"]["gammas"][2] / e["Gamma_2D"]["2"]
+   M14  selftest m1 : MORD      banc m2 : MORD      vus[(e["n1"], e["n2"])] > 1  ->  vus[(e["n1"], e["n2"])] > 2
+   M15  selftest m1 : survit    banc m2 : MORD      if len(lisibles) < MIN_POINTS_LISIBLES:  ->  if len(lisibles) <= MIN_POINTS_LISIBLES:
+   M16  selftest m1 : MORD      banc m2 : MORD      if x["statut"] in ("FACTEUR 2", "DECADE")]  ->  if x["statut"] in ("FACTEUR 2",)]
+   M17  selftest m1 : MORD      banc m2 : MORD      juges = [x for x in lus if x["role"] == "juge"]  ->  juges = [x for x in lus if x["role"] in ("juge", "
+   M18  selftest m1 : MORD      banc m2 : MORD      pire = max(juges, key=lambda x: ORDRE_PALIER[x["palier"]])  ->  pire = min(juges, key=lambda x: ORDRE_PALIER[x["pa
+   M19  selftest m1 : MORD      banc m2 : MORD      if min(e["suivi"]["2"], e["suivi"]["4"]) < SUIVI_MIN:  ->  if max(e["suivi"]["2"], e["suivi"]["4"]) < SUIVI_M
+   M20  selftest m1 : MORD      banc m2 : MORD      gs = [e["Gamma_2D"][k] for k in ("2", "3", "4")]  ->  gs = [e["Gamma_2D"][k] for k in ("3", "4")]
+   M21  selftest m1 : survit    banc m2 : MORD      if e["n1"] < 0 or e["n2"] < 0:  ->  if e["n1"] < 0:
+   M22  selftest m1 : MORD      banc m2 : MORD      motifs += garde_ancres(pts)  ->  pass
+   M23  selftest m1 : survit    banc m2 : MORD      if not (g3 > DIX_PLANCHERS):  ->  if not (g3 >= DIX_PLANCHERS):
+   M24  selftest m1 : survit    banc m2 : MORD      if min(cg) <= 0 or max(cg) / min(cg) > ETALEMENT_CHAINE:  ->  if min(cg) <= 0 or max(cg[1:]) / min(cg[1:]) > ETA
+   BILAN : survivent au selftest de machine 1 : [1, 3, 4, 9, 11, 15, 21, 23, 24] ; survivent a mon banc : [11] ; survivent aux deux : [11]

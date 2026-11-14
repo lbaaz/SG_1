@@ -1,0 +1,49 @@
+--- delta95
++++ delta96
+@@ -1,14 +1,12 @@
+ #!/usr/bin/env python3
+ # -*- coding: ascii -*-
+-"""LE PERIMETRE DU DEPOT delta 95 (LA QUALIFICATION E-B, REPRISE SOUS LE GEL BIS) -- ENUMERE DEPUIS LES CITATIONS DE L'ACTE.
++"""LE PERIMETRE DU DEPOT delta 96 (LA CHAINE E-A PAR ETAT, HORS PLAGE) -- ENUMERE DEPUIS LES CITATIONS DE L'ACTE.
+ machine 2, v1, 14/11/2026.
+ 
+-Derive de la feuille du delta 94 (perimetre_depot_delta94_machine2_v1.py, au registre ou au poste, NON EDITEE : regle 17), meme methode,
+-meme code, TROIS changements nommes, le diff est joint :
+-  1. dossier() : les instruments et constructions de ce chantier (la nuit bis de la qualification E-B (gel bis, sonde v3, banc v3, feuille v2)) vont sous scripts/, comme ceux du delta precedent.
+-  2. le texte du manifeste (corps) parle de ce chantier et de sa date ; la phrase propre aux fichiers de reprise du 94 est retiree.
+-  3. un manifeste SANS ligne "pieces : N" (les lots de machine 1 des 13 et 14/11) : le compte attendu est celui des membres du zip extrait
+-     sous entrants/, hors manifeste ; il n'est pas tape, et une piece de table introuvable mord toujours (controle voisin).
++Derive de la feuille du delta 95 (perimetre_depot_delta95_machine2_v1.py, au registre ou au poste, NON EDITEE : regle 17), meme methode,
++meme code, DEUX changements nommes, le diff est joint :
++  1. dossier() : les instruments et constructions de ce chantier (la chaine E-A par etat, hors plage (gel, sonde, feuille)) vont sous scripts/, comme ceux du delta precedent.
++  2. le texte du manifeste (corps) parle de ce chantier et de sa date.
+ Pour le reste, tout est herite : le perimetre ne s'ecrit pas a la main, il s'ENUMERE depuis les citations de l'acte, resolues PAR CANON
+ (registre, poste, ou NON RESOLU qui mord) ; le numero se DERIVE du registre (plafond + 1) ; les lots cites entrent avec leurs pieces de
+ table ; les ZIP ne sont pas deposes ; DEUX VERBES (`chk` mesure, `note` porte la prose) ; PB-1 : rien n'est edite.
+@@ -16,7 +14,7 @@
+ import hashlib, os, re, subprocess, sys, unicodedata
+ 
+ if len(sys.argv) != 3:
+-    sys.exit('usage : perimetre_depot_delta95_machine2_v1.py <clone frais du registre> <acte journal_delta_nn_..._vN.md>')
++    sys.exit('usage : perimetre_depot_delta96_machine2_v1.py <clone frais du registre> <acte journal_delta_nn_..._vN.md>')
+ CLONE = os.path.abspath(sys.argv[1])
+ ICI = os.path.dirname(os.path.abspath(__file__))
+ RAC = os.path.dirname(ICI)
+@@ -306,7 +304,7 @@
+         return 'gels/'
+     if re.match(r'(sonde_qualification_EB_machine1_v\d+|banc_qui_tue_qualification_EB_machine1_v\d+|'
+                 r'lecture_qualification_EB_machine1_v\d+|reference_TP_rotation_complexe_machine2_v\d+(_premier_jet)?|'
+-                r'estimation_TP_wkb_machine1_v\d+|construction_(gel_EB_v\d+|sonde_banc_v\d+|gel_EB_bis|instrument_EB_bis)_machine1_v\d+)\.py$', b):
++                r'estimation_TP_wkb_machine1_v\d+|construction_(gel_EB_v\d+|sonde_banc_v\d+|gel_EB_bis|instrument_EB_bis|gel_chaine_EA_par_etat)_machine1_v\d+|sonde_chaine_par_etat_machine1_v\d+|lecture_chaine_par_etat_machine1_v\d+)\.py$', b):
+         return 'scripts/'
+     return 'journal/'
+ 
+@@ -376,7 +374,7 @@
+ for c, *_ in lignes:
+     par_dossier[c.split('/')[0]] = par_dossier.get(c.split('/')[0], 0) + 1
+ 
+-corps = ("MANIFESTE DU LOT DE DEPOT -- DELTA %s (LA QUALIFICATION E-B, REPRISE SOUS LE GEL BIS) -- 14/11/2026 -- "
++corps = ("MANIFESTE DU LOT DE DEPOT -- DELTA %s (LA CHAINE E-A PAR ETAT, HORS PLAGE) -- 14/11/2026 -- "
+          "assemble par machine 2 -- derive de l'acte v%s\n" % (NUMERO, VERSION))
+ corps += ("Convention B (sha256 NFC+LF, 16 hex) et empreinte brute, les deux tailles ; le depot et "
+           "le numero sont de la main de l'operateur.\n")

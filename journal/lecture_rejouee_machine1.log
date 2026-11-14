@@ -1,0 +1,52 @@
+  TIENT  S01 base saine, tous q = 1                                 attendu ORDRE DE GRANDEUR TENU HORS PLAGE ; rendu ORDRE DE GRANDEUR TENU HORS PLAGE
+  TIENT  S02 un etat a q = 2.5 en J2                                attendu ORDRE DE GRANDEUR TENU HORS PLAGE ; rendu ORDRE DE GRANDEUR TENU HORS PLAGE
+  TIENT  S03 un etat a q = 4 en J2                                  attendu TENU EN PARTIE ; rendu TENU EN PARTIE
+  TIENT  S04 un etat a q = 0.3 en J1                                attendu TENU EN PARTIE ; rendu TENU EN PARTIE
+  TIENT  S05 les six juges hors decade                              attendu NON TENU ; rendu NON TENU
+  TIENT  S06 bords : q = 2 et q = 0.5 restent FACTEUR 2             attendu ORDRE DE GRANDEUR TENU HORS PLAGE ; rendu ORDRE DE GRANDEUR TENU HORS PLAGE
+  TIENT  S07 q = 0.499 fait DECADE                                  attendu ORDRE DE GRANDEUR TENU HORS PLAGE ; rendu ORDRE DE GRANDEUR TENU HORS PLAGE
+  TIENT  S08 q = 3.17 fait HORS DECADE, 3.16 fait DECADE            attendu TENU EN PARTIE ; rendu TENU EN PARTIE
+  TIENT  S09 J flou exclu (q = 100 sans effet)                      attendu ORDRE DE GRANDEUR TENU HORS PLAGE ; rendu ORDRE DE GRANDEUR TENU HORS PLAGE
+  TIENT  S10 site minoritaire exclu                                 attendu ORDRE DE GRANDEUR TENU HORS PLAGE ; rendu ORDRE DE GRANDEUR TENU HORS PLAGE
+  TIENT  S11 sous dix planchers exclu                               attendu ORDRE DE GRANDEUR TENU HORS PLAGE ; rendu ORDRE DE GRANDEUR TENU HORS PLAGE
+  TIENT  S12 cible instable exclue                                  attendu ORDRE DE GRANDEUR TENU HORS PLAGE ; rendu ORDRE DE GRANDEUR TENU HORS PLAGE
+  TIENT  S13 etat non suivi exclu                                   attendu ORDRE DE GRANDEUR TENU HORS PLAGE ; rendu ORDRE DE GRANDEUR TENU HORS PLAGE
+  TIENT  S14 barriere vide exclue                                   attendu ORDRE DE GRANDEUR TENU HORS PLAGE ; rendu ORDRE DE GRANDEUR TENU HORS PLAGE
+  TIENT  S15 chaine instable exclue                                 attendu ORDRE DE GRANDEUR TENU HORS PLAGE ; rendu ORDRE DE GRANDEUR TENU HORS PLAGE
+  TIENT  S16 chaine en erreur exclue                                attendu ORDRE DE GRANDEUR TENU HORS PLAGE ; rendu ORDRE DE GRANDEUR TENU HORS PLAGE
+  TIENT  S17 etiquette en double : les deux exclus                  attendu ORDRE DE GRANDEUR TENU HORS PLAGE ; rendu ORDRE DE GRANDEUR TENU HORS PLAGE
+  TIENT  S18 cinq etats juges en J5 : point NON LISIBLE, verdict tenu attendu ORDRE DE GRANDEUR TENU HORS PLAGE ; rendu ORDRE DE GRANDEUR TENU HORS PLAGE
+  TIENT  S19 trois points juges illisibles                          attendu NON LISIBLE ; rendu NON LISIBLE
+  TIENT  S20 un temoin hors decade ne pese pas                      attendu ORDRE DE GRANDEUR TENU HORS PLAGE ; rendu ORDRE DE GRANDEUR TENU HORS PLAGE
+  TIENT  S21 ancre a 2 pour cent                                    attendu NON CONCLUANT D'INSTRUMENT ; rendu NON CONCLUANT D'INSTRUMENT
+  TIENT  S22 etat d'ancre absent                                    attendu NON CONCLUANT D'INSTRUMENT ; rendu NON CONCLUANT D'INSTRUMENT
+  TIENT  S23 moteur hors canon                                      attendu NON CONCLUANT D'INSTRUMENT ; rendu NON CONCLUANT D'INSTRUMENT
+  TIENT  S24 un point manque                                        attendu NON CONCLUANT D'INSTRUMENT ; rendu NON CONCLUANT D'INSTRUMENT
+  TIENT  S25 g n'est pas facteur x regle                            attendu NON CONCLUANT D'INSTRUMENT ; rendu NON CONCLUANT D'INSTRUMENT
+  TIENT  S26 point infaisable : NON LISIBLE au point                attendu ORDRE DE GRANDEUR TENU HORS PLAGE ; rendu ORDRE DE GRANDEUR TENU HORS PLAGE
+SELFTEST : 26 cas, 26 tenus
+LECTURE DU GEL, sonde lot_machine2_2026-11-14_resultat_chaine_EA_par_etat_v1/chaine_EA_par_etat/sortie/sonde_chaine_par_etat.json :
+  J1 juge   w2=19/10 x1/1 : FACTEUR 2    11 etats juges, q de 0.621 a 1.161, mediane 0.897 ; premier juge (7,2) q = 0.950
+      exclus : sous dix planchers 3
+  J2 juge   w2=21/10 x1/1 : HORS DECADE  13 etats juges, q de 2.945 a 4.168, mediane 3.735 ; premier juge (8,2) q = 3.711
+      exclus : sous dix planchers 1
+  J3 juge   w2=39/20 x3/2 : FACTEUR 2    11 etats juges, q de 0.756 a 0.926, mediane 0.842 ; premier juge (5,2) q = 0.854
+      exclus : barriere vide 2 ; sous dix planchers 1
+  J4 juge   w2=41/20 x3/2 : FACTEUR 2    14 etats juges, q de 1.269 a 1.511, mediane 1.418 ; premier juge (6,1) q = 1.444
+  J5 juge   w2=39/20 x2/3 : DECADE       8 etats juges, q de 0.395 a 0.653, mediane 0.545 ; premier juge (10,3) q = 0.619
+      exclus : sous dix planchers 6
+  J6 juge   w2=41/20 x2/3 : FACTEUR 2    8 etats juges, q de 1.292 a 1.641, mediane 1.503 ; premier juge (10,3) q = 1.590
+      exclus : sous dix planchers 6
+  T1 temoin w2=49/25 x1/1 : DECADE       12 etats juges, q de 0.498 a 0.866, mediane 0.756 ; premier juge (7,2) q = 0.819
+      exclus : sous dix planchers 2
+  T2 temoin w2=51/25 x1/1 : FACTEUR 2    12 etats juges, q de 1.153 a 1.404, mediane 1.334 ; premier juge (7,2) q = 1.347
+      exclus : sous dix planchers 2
+  T3 temoin w2=37/20 x1/1 : HORS DECADE  11 etats juges, q de 0.064 a 1.358, mediane 0.979 ; premier juge (6,2) q = 0.662
+      exclus : J flou 1 ; chaine instable 2
+  T4 temoin w2=43/20 x1/1 : HORS DECADE  8 etats juges, q de 12.327 a 26.380, mediane 18.348 ; premier juge (8,2) q = 17.665
+      exclus : J flou 4 ; sous dix planchers 2
+  A1 ancre  w2=39/20 x1/1 : FACTEUR 2    11 etats juges, q de 0.587 a 0.882, mediane 0.758 ; premier juge (7,2) q = 0.819
+      exclus : barriere vide 1 ; sous dix planchers 2
+  A2 ancre  w2=41/20 x1/1 : FACTEUR 2    12 etats juges, q de 1.292 a 1.629, mediane 1.505 ; premier juge (8,2) q = 1.474
+      exclus : sous dix planchers 2
+VERDICT : TENU EN PARTIE
