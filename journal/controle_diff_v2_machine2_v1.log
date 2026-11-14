@@ -1,0 +1,13 @@
+canons : v1 c396a00095a0b9e3 (attendu c396a00095a0b9e3) ; v2 bdf8c5a0c73096a4 (attendu bdf8c5a0c73096a4) ; diff 7a6e82e462d67e99
+mon diff : 8 blocs ; lignes otees 9, posees 28
+   replace v1[10:10] -> v2[10:10]
+   replace v1[128:128] -> v2[128:134]
+   replace v1[206:206] -> v2[212:213]
+   replace v1[280:282] -> v2[287:293]
+   replace v1[329:329] -> v2[340:343]
+   replace v1[345:345] -> v2[359:359]
+   insert v1[355:354] -> v2[369:373]
+   replace v1[357:357] -> v2[376:376]
+application du diff de m1 a la v1 : 7 blocs ; resultat == v2 : True ; contexte coherent : True
+lignes posees : 28 ; non ASCII 0 ; > 100 col 0 ; avec % 0
+empreintes : v1 39, v2 45 ; nouvelles ['05f8eed219631f63', '2b211d51fb8eb3f0', 'c396a00095a0b9e3', 'df01461fc9b2b099', 'e58d01567a46b86a', 'ff93d708547f8ec0'] ; disparues []

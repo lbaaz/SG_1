@@ -1,0 +1,39 @@
+--- sonde_qualification_EB_machine1_v2.py
++++ sonde_qualification_EB_machine1_v3.py
+@@ -1,4 +1,5 @@
+ # -*- coding: ascii -*-
+-# SONDE DE QUALIFICATION E-B -- machine 1, v2 -- gel E-B v2 cde0cd11a763f26d
+-# v2 = v1 (214ea376cbf540a4) + D-1 (identite de reprise) + D-2 (porte).
++# SONDE DE QUALIFICATION E-B -- machine 1, v3 -- gel E-B bis v1 dcda1611adf5f8fd
++# v3 = v2 (facc7536ba4637cb) + l'echelle du gel bis (k = -5 a 12) et ses
++# comptes. v2 = v1 (214ea376cbf540a4) + D-1 (identite de reprise) + D-2 (porte).
+ # CLASSE 2. Elle MESURE et ne juge pas : aucune routine de plateau, aucun
+@@ -12,6 +13,6 @@
+ 
+-CANON_GEL = "cde0cd11a763f26d"
++CANON_GEL = "dcda1611adf5f8fd"
+ CANON_MOTEUR = "82a0be882568fe0c"
+ POINTS = ["39_20", "197_100", "99_50", "101_50", "203_100", "41_20"]
+-K_ECH = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 2, 1, 0, -1, -2]   # ordre declare
++K_ECH = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 2, 1, 0, -1, -2, -3, -4, -5]   # ordre declare (gel bis, 3.6)
+ SEUIL_SUIVI = 0.90
+@@ -433,3 +434,3 @@
+     dire("=" * 74)
+-    dire("SONDE DE QUALIFICATION E-B v2 -- gel %s -- etage %d%s%s" % (
++    dire("SONDE DE QUALIFICATION E-B v3 -- gel %s -- etage %d%s%s" % (
+         CANON_GEL, a.etage, " -- PRE-VOL (geometrie reduite, NON OPPOSABLE)"
+@@ -451,4 +452,5 @@
+         res = etage1(M, P, a, a.sortie)
+-        att = {"TP": 60, "TN": 15, "plancher": 30}
+-        att["TP"] = 30 * len(res["TP"])
++        n = len(K_ECH)
++        att = {"TP": 4 * n, "TN": n, "plancher": 30}
++        att["TP"] = 2 * n * len(res["TP"])
+     else:
+@@ -471,3 +473,5 @@
+         res = etage2(M, P, a, a.sortie)
+-        att = {"F1": 180, "formes": 180, "translation": 90, "ouverture": 6}
++        n = len(K_ECH)
++        att = {"F1": 12 * n, "formes": 12 * n, "translation": 6 * n,
++               "ouverture": 6}
+     ok = True

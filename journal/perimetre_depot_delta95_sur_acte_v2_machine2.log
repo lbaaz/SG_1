@@ -1,0 +1,115 @@
+
+1. LES CITATIONS DE L ACTE, ET LES DEUX INDEX PAR CANON
+  [ note] acte                                                       journal_delta_nn_qualification_EB_bis_v2.md (version 2)
+  [PASSE] l acte est ASCII pur, LF, newline final                    28350 octets
+  [PASSE] l acte cite des empreintes (compte etabli apres extraction 45 jetons distincts de 16 hex
+  [PASSE] chaque VALEUR declaree est bien citee par l acte           
+  [PASSE] chaque lot de TRANSPORT declare est bien cite par l acte   
+  [ note] numero DERIVE du releve, non tape                          plafond 94 -> le delta de cet acte porte le 95 ; le numero reste de la main de l operateur (E18)
+  [PASSE] releve : HEAD fe10bfe, plafond 94, aucun fichier delta_95  1397 fichiers suivis
+  [PASSE] le delta PRECEDENT est bien au registre -- le releve porte delta_94 present
+  [ note] index du poste                                             7441 canons distincts (B et brut), 2166 noms de table
+  [ note] balayage : tout BOCAL4 hors .git et __pycache__ ; exclues, manifest_depot_delta95_machine2_v2.txt, perimetre_depot_delta95_sur_acte_v2_machine2.log
+
+2. RESOLUTION DE CHAQUE CITATION -- AU REGISTRE, AU POSTE, OU NULLE PART
+   registre  cde0cd11a763f26d  gels/qualification_EB_pre_enregistrement_v2.md
+   registre  569ccbd0d1adb927  journal/journal_delta_94_qualification_EB_v2.md
+   registre  82a0be882568fe0c  scripts/m17_chaine_v17.py
+   registre  4aecd0e2b23bc818  journal/manche_m17_v17_MANIFEST_machine2.txt
+   registre  4d51dd58ef456fe9  journal/tp_reference_machine2_v1.json
+   registre  69b3bab3bb8480b7  journal/tp_retenus_machine2_v1.json
+   registre  f25f2a04870be5b4  journal/banc_qui_tue_v2.log
+   poste     762a89e8ad7d498a  MANIFEST_lot_machine2_diagnostic_TP_echelle_forte_v1.txt
+   poste     7e856dbdd51ea14f  POUR_MACHINE1_diagnostic_TP_echelle_forte_machine2_v1.md
+   poste     25276846153bacff  DEPOT_delta95/entrants/lot_machine1_2026-11-13_gel_EB_bis_v1_recu/MANIFEST_lot_machine1_gel_EB_bis_v1.txt
+   poste     dcda1611adf5f8fd  DEPOT_delta95/entrants/lot_machine1_2026-11-13_gel_EB_bis_v1_recu/qualification_EB_bis_pre_enregistrement_v1.md
+   poste     555146abd2192f79  DEPOT_delta95/entrants/lot_machine1_2026-11-13_gel_EB_bis_v1_recu/sonde_qualification_EB_machine1_v3.py
+   poste     c14dafffc5f84c97  DEPOT_delta95/entrants/lot_machine1_2026-11-13_gel_EB_bis_v1_recu/lecture_qualification_EB_machine1_v2.py
+   poste     3f2ef4d35af630c2  DEPOT_delta95/entrants/lot_machine1_2026-11-13_gel_EB_bis_v1_recu/banc_qui_tue_qualification_EB_machine1_v3.py
+   poste     f5a528ec684d2e67  DEPOT_delta95/entrants/lot_machine1_2026-11-13_gel_EB_bis_v1_recu/essai_feuille_v2_series_etendues_machine1_v1.log
+   poste     09f239071bb2ba23  DEPOT_delta95/entrants/lot_machine1_2026-11-13_gel_EB_bis_v1_recu/POUR_MACHINE2_gel_EB_bis_machine1_v1.md
+   poste     4de461538a1b694d  MANIFEST_lot_machine2_certification_gel_EB_bis_v1.txt
+   poste     62beaa7971ce4544  POUR_MACHINE1_certification_gel_EB_bis_machine2_v1.md
+   poste     a01598ec24237921  MANIFEST_lot_machine2_resultat_nuit_EB_bis_v1.txt
+   poste     7fb7c0534c744911  POUR_MACHINE1_resultat_nuit_EB_bis_machine2_v1.md
+   poste     1ae4b5b2f9ff0e70  DEPOT_delta95/entrants/lot_machine2_2026-11-13_resultat_nuit_EB_bis_v1/nuit_EB_bis/sortie/sonde_etage1.json
+   poste     4908daa89d914382  DEPOT_delta95/entrants/lot_machine2_2026-11-13_resultat_nuit_EB_bis_v1/nuit_EB_bis/sortie/sonde_etage1.log
+   poste     f7694c58bdbd11a4  DEPOT_delta95/entrants/lot_machine2_2026-11-13_resultat_nuit_EB_bis_v1/nuit_EB_bis/sortie/verdict_etage1.json
+   poste     85e7939fc556b0e8  DEPOT_delta95/entrants/lot_machine1_2026-11-13_acte_qualification_EB_bis_v1_recu/lecture_m1/lecture_etage1.log
+   poste     c110c6286157b025  DEPOT_delta95/entrants/lot_machine2_2026-11-13_resultat_nuit_EB_bis_v1/nuit_EB_bis/sortie/sonde_etage2.json
+   poste     1c53c8c28ab5ab95  DEPOT_delta95/entrants/lot_machine2_2026-11-13_resultat_nuit_EB_bis_v1/nuit_EB_bis/sortie/sonde_etage2.log
+   poste     63bca8c997bde7c0  DEPOT_delta95/entrants/lot_machine2_2026-11-13_resultat_nuit_EB_bis_v1/nuit_EB_bis/sortie/verdict_qualification_EB.json
+   poste     e316a1e8caffd058  DEPOT_delta95/entrants/lot_machine1_2026-11-13_acte_qualification_EB_bis_v1_recu/lecture_m1/lecture_etage2.log
+   poste     efcc91c332e008ea  DEPOT_delta95/entrants/lot_machine2_2026-11-13_resultat_nuit_EB_bis_v1/nuit_EB_bis/console_nuit.log
+   poste     7dc2197de3401886  DEPOT_delta95/entrants/lot_machine2_2026-11-13_certification_gel_EB_bis_v1/nuit_EB_bis/lancer_nuit_EB_bis_machine2_v1.py
+   poste     37579efadcaf862b  lecture_resultat_nuit_EB_bis_machine2_v1.py
+   poste     4f471482c721e5b6  DEPOT_delta95/entrants/lot_machine2_2026-11-13_resultat_nuit_EB_bis_v1/nuit_EB_bis/lecture_resultat_machine2_v1.log
+   poste     4c9243a624a8686d  DEPOT_delta95/entrants/lot_machine1_2026-11-13_acte_qualification_EB_bis_v1_recu/rejeu_declare_point_39_20_machine1_v1.py
+   poste     7fb9026014ad0c93  DEPOT_delta95/entrants/lot_machine1_2026-11-13_acte_qualification_EB_bis_v1_recu/rejeu_point_39_20_F1G20_machine1.json
+   poste     e9fd2a0309846c06  DEPOT_delta95/entrants/lot_machine1_2026-11-13_acte_qualification_EB_bis_v1_recu/rejeu_declare_machine1.log
+   poste     8c34d754855ed673  DEPOT_delta95/entrants/lot_machine1_2026-11-13_acte_qualification_EB_bis_v1_recu/ouverture_scelle_point_39_20_machine1_v1.py
+   poste     08bc4a86b628d24b  DEPOT_delta95/entrants/lot_machine1_2026-11-13_acte_qualification_EB_bis_v1_recu/ouverture_scelle_point_39_20_machine1_v1.log
+   poste     39de3069d6405633  DEPOT_delta95/entrants/lot_machine1_2026-11-13_acte_qualification_EB_bis_v1_recu/lecture_m1/verdict_etage1.json
+   poste     b89749caaec1b8b5  DEPOT_delta95/entrants/lot_machine1_2026-11-13_acte_qualification_EB_bis_v1_recu/lecture_m1/verdict_qualification_EB.json
+   poste     2b211d51fb8eb3f0  MANIFEST_lot_machine1_chaine_EA_par_etat_v1.txt
+   poste     e58d01567a46b86a  MANIFEST_lot_machine1_envoi_chaine_et_lectures_v1.txt
+   poste     05f8eed219631f63  MANIFEST_lot_machine2_contreseing_acte_nn_EB_bis_v1.txt
+   poste     df01461fc9b2b099  MANIFEST_lot_machine2_rejeu_chaine_EA_par_etat_v1.txt
+   poste     c396a00095a0b9e3  journal_delta_nn_qualification_EB_bis_v1.md
+   poste     ff93d708547f8ec0  DEPOT_delta95/entrants/lot_machine1_2026-11-13_acte_qualification_EB_bis_v1_recu/MANIFEST_lot_machine1_acte_qualification_EB_bis_v1.txt
+  [PASSE] toute empreinte citee resout par canon (registre, poste, o 7 au registre, 38 au poste, 0 zip, 0 valeurs
+  [PASSE] les lots de ce delta (manifeste dont l en-tete porte le ca 1af62634ba0068b6 MANIFEST_lot_machine1_acte_qualification_EB_bis_v2.txt; b46537578fff4ab0 MANIFEST_lot_machine2_contreseing_acte_nn_EB_bis_v2_v1.txt
+
+3. LES LOTS CITES ENTRENT AVEC LEURS PIECES DE TABLE
+  [ note] erratum                                                    aucun dans ce chantier : une divergence de table mord
+   lot 762a89e8ad7d498a  table  9 / declare 9    MANIFEST_lot_machine2_diagnostic_TP_echelle_forte_v1.txt
+   lot 25276846153bacff  table 29 / declare 29   DEPOT_delta95/entrants/lot_machine1_2026-11-13_gel_EB_bis_v1_recu/MANIFEST_lot_machine1_gel_EB_bis_v1.txt
+   lot 4de461538a1b694d  table 34 / declare 34   MANIFEST_lot_machine2_certification_gel_EB_bis_v1.txt
+   lot a01598ec24237921  table 14 / declare 14   MANIFEST_lot_machine2_resultat_nuit_EB_bis_v1.txt
+  [ note] manifeste sans ligne pieces : N                            2b211d51fb8eb3f0 : compte attendu = 12 membres du zip extrait, hors manifeste
+   lot 2b211d51fb8eb3f0  table 12 / declare 12   MANIFEST_lot_machine1_chaine_EA_par_etat_v1.txt
+  [ note] manifeste sans ligne pieces : N                            e58d01567a46b86a : compte attendu = 10 membres du zip extrait, hors manifeste
+   lot e58d01567a46b86a  table 10 / declare 10   MANIFEST_lot_machine1_envoi_chaine_et_lectures_v1.txt
+   lot 05f8eed219631f63  table 13 / declare 13   MANIFEST_lot_machine2_contreseing_acte_nn_EB_bis_v1.txt
+   lot df01461fc9b2b099  table 24 / declare 24   MANIFEST_lot_machine2_rejeu_chaine_EA_par_etat_v1.txt
+   lot ff93d708547f8ec0  table 16 / declare 16   DEPOT_delta95/entrants/lot_machine1_2026-11-13_acte_qualification_EB_bis_v1_recu/MANIFEST_lot_machine1_acte_qualification_EB_bis_v1.txt
+  [ note] manifeste sans ligne pieces : N                            1af62634ba0068b6 : compte attendu = 8 membres du zip extrait, hors manifeste
+   lot 1af62634ba0068b6  table  8 / declare 8    MANIFEST_lot_machine1_acte_qualification_EB_bis_v2.txt
+   lot b46537578fff4ab0  table  9 / declare 9    MANIFEST_lot_machine2_contreseing_acte_nn_EB_bis_v2_v1.txt
+  [PASSE] 11 lots cites a deposer, chacun au compte de table declare 0 faux compte
+  [PASSE] aucune piece de table ne s ecarte de son manifeste HORS er 0 ecart
+  [PASSE] aucune piece de table n est introuvable a cote de son mani 0 introuvable
+  [PASSE] aucune piece retenue n est deja au registre par canon      175 retenues
+
+4. LE MANIFESTE DE DEPOT -- DERIVE, JAMAIS ECRIT A LA MAIN
+  [ note] collision de nom, prefixe applique                         lecture_etage1.log -> lot_25276846153bacff__lecture_etage1.log
+  [ note] collision de nom, prefixe applique                         lecture_etage1.log -> lot_a01598ec24237921__lecture_etage1.log
+  [ note] collision de nom, prefixe applique                         lecture_etage2.log -> lot_25276846153bacff__lecture_etage2.log
+  [ note] collision de nom, prefixe applique                         lecture_etage2.log -> lot_a01598ec24237921__lecture_etage2.log
+  [ note] collision de nom, prefixe applique                         sonde_etage1.json -> lot_25276846153bacff__sonde_etage1.json
+  [ note] collision de nom, prefixe applique                         sonde_etage1.json -> lot_a01598ec24237921__sonde_etage1.json
+  [ note] collision de nom, prefixe applique                         sonde_etage1.log -> lot_25276846153bacff__sonde_etage1.log
+  [ note] collision de nom, prefixe applique                         sonde_etage1.log -> lot_a01598ec24237921__sonde_etage1.log
+  [ note] collision de nom, prefixe applique                         sonde_etage2.json -> lot_25276846153bacff__sonde_etage2.json
+  [ note] collision de nom, prefixe applique                         sonde_etage2.json -> lot_a01598ec24237921__sonde_etage2.json
+  [ note] collision de nom, prefixe applique                         sonde_etage2.log -> lot_25276846153bacff__sonde_etage2.log
+  [ note] collision de nom, prefixe applique                         sonde_etage2.log -> lot_a01598ec24237921__sonde_etage2.log
+  [ note] collision de nom, prefixe applique                         verdict_etage1.json -> lot_a01598ec24237921__verdict_etage1.json
+  [ note] collision de nom, prefixe applique                         verdict_etage1.json -> lot_ff93d708547f8ec0__verdict_etage1.json
+  [ note] collision de nom, prefixe applique                         verdict_qualification_EB.json -> lot_25276846153bacff__verdict_qualification_EB.json
+  [ note] collision de nom, prefixe applique                         verdict_qualification_EB.json -> lot_a01598ec24237921__verdict_qualification_EB.json
+  [ note] collision de nom, prefixe applique                         verdict_qualification_EB.json -> lot_ff93d708547f8ec0__verdict_qualification_EB.json
+  [PASSE] aucun chemin cible en double ni deja au registre           181 chemins cibles
+  [PASSE] aucun doublon de canon dans le depot                       181 pieces
+  [PASSE] toute collision resolue porte le prefixe de son LOT (aucun 17 prefixes
+  [PASSE] les .md/.py/.txt deposes sont B == brut (ASCII/LF)         85 pieces texte
+  [PASSE] le manifeste relu porte autant de lignes que de pieces     181 lignes, 181 pieces
+  [PASSE] chaque source du manifeste resout encore au canon ecrit    0 ecart
+  [PASSE] le manifeste declare son compte, egal aux lignes           pieces : 181
+  [PASSE] le manifeste est ASCII                                     44682 octets
+
+=====================================================================
+BILAN PERIMETRE : 20/20 controles PASSENT
+45 empreintes citees : 7 au registre, 40 au poste, 0 zip, 0 valeurs, 0 non resolues
+DEPOT : 181 pieces (gels 1, journal 175, scripts 5) ; manifeste MANIFEST_DEPOT_delta95_machine2_v2.txt e97194b6ef9de3f5
+=====================================================================

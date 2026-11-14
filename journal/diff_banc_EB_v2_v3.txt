@@ -1,0 +1,18 @@
+--- banc_qui_tue_qualification_EB_machine1_v2.py
++++ banc_qui_tue_qualification_EB_machine1_v3.py
+@@ -1,5 +1,7 @@
+ # -*- coding: ascii -*-
+-# BANC QUI TUE DE LA QUALIFICATION E-B -- machine 1, v2 -- gel E-B v2
+-# v2 = v1 (666e69f11bc1f72c) + D-3 (-P), temoins de D-1 et D-2, O-3.
+-# cde0cd11a763f26d, section 10. Six mutations ; chacune doit faire tomber ce
++# BANC QUI TUE DE LA QUALIFICATION E-B -- machine 1, v3 -- gel E-B bis v1
++# v3 = v2 (4e46744fe4e8a8be) + l'echelle du gel bis dans les series
++# synthetiques. v2 = v1 (666e69f11bc1f72c) + D-3 (-P), temoins de D-1 et
++# D-2, O-3.
++# dcda1611adf5f8fd, section 10. Six mutations ; chacune doit faire tomber ce
+ # qu'elle vise ; le banc affirme sa branche et compte : mordues == attendues.
+@@ -41,3 +43,3 @@
+                                 "E_im": -0.5 * f(k), "gamma": f(k)}
+-                               for f in fonctions]} for k in range(-2, 13)}
++                               for f in fonctions]} for k in range(-5, 13)}
+ 

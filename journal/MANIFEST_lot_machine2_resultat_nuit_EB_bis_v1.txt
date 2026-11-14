@@ -1,0 +1,22 @@
+MANIFESTE lot_machine2_2026-11-13_resultat_nuit_EB_bis_v1 -- RESULTAT DE LA NUIT E-B BIS (gel dcda1611adf5f8fd, sonde v3 555146abd2192f79, feuille v2 c14dafffc5f84c97, moteur v17 82a0be882568fe0c). ETAGE 1 : TIENT (TP aux quatre configurations). ETAGE 2 : VERDICT lu : NON QUALIFIE (zero point QUALIFIE sur six). Plateforme : Windows AMD64, python 3.11.9, numpy 2.2.6. machine 2, classe B
+colonnes : empreinte_B (sha256 NFC+LF, 16 hex)  empreinte_brute  octets_B  octets_bruts  fichier
+Le CANON du lot est l'empreinte B de CE manifeste ; il ne se porte pas lui-meme.
+
+7fb7c0534c744911 7fb7c0534c744911    13865    13865  POUR_MACHINE1_resultat_nuit_EB_bis_machine2_v1.md
+1ae4b5b2f9ff0e70 eaabf9f112fc383c    69476    72680  nuit_EB_bis/sortie/sonde_etage1.json
+4908daa89d914382 914c3d842f27a89e     1956     1985  nuit_EB_bis/sortie/sonde_etage1.log
+f7694c58bdbd11a4 0d363111d942e3c5     1183     1234  nuit_EB_bis/sortie/verdict_etage1.json
+85e7939fc556b0e8 75888182c33fa967     2047     2078  nuit_EB_bis/sortie/lecture_etage1.log
+c110c6286157b025 031d3b5828b0ccfc   673342   699289  nuit_EB_bis/sortie/sonde_etage2.json
+1c53c8c28ab5ab95 5eb01613826e9070     3083     3132  nuit_EB_bis/sortie/sonde_etage2.log
+63bca8c997bde7c0 14815a9f32602f0c    13581    14179  nuit_EB_bis/sortie/verdict_qualification_EB.json
+e316a1e8caffd058 6783492dfe8d987b     3051     3094  nuit_EB_bis/sortie/lecture_etage2.log
+efcc91c332e008ea efcc91c332e008ea      687      687  nuit_EB_bis/console_nuit.log
+7dc2197de3401886 7dc2197de3401886     3825     3825  nuit_EB_bis/lancer_nuit_EB_bis_machine2_v1.py
+4f471482c721e5b6 b155eec94abf1a68    11024    11129  nuit_EB_bis/lecture_resultat_machine2_v1.log
+37579efadcaf862b 37579efadcaf862b     5883     5883  lecture_resultat_nuit_EB_bis_machine2_v1.py
+6ef8740e9a072606 6ef8740e9a072606    10634    10634  fabrique_lot_resultat_nuit_EB_bis_machine2_v1.py
+
+non joint : nuit_EB_bis/sortie/reprise/ (fichiers de reprise, dont les vecteurs propres .npy) : contenu utile consolide dans sonde_etage1.json et sonde_etage2.json ; console_etage1.log / console_etage2.log et console_lecture_etage*.log identiques (meme canon) aux journaux joints
+entrants : lot de certification de machine 2 4de461538a1b694d ; lot de machine 1 25276846153bacff ; reference TP 4d51dd58ef456fe9
+pieces : 14 (compte etabli APRES le dernier ajout)

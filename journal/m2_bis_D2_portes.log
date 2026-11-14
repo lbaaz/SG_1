@@ -1,0 +1,54 @@
+==========================================================================
+SONDE DE QUALIFICATION E-B v3 -- gel dcda1611adf5f8fd -- etage 2
+==========================================================================
+plateforme : {"NPY_DISABLE_CPU_FEATURES": "", "machine": "AMD64", "numpy": "2.2.6", "python": "3.11.9", "systeme": "Windows", "temoin_arrondi": "0x1.a483018a169c6p+64", "temoin_lecture": "CR"}
+G-Q1 moteur m17_chaine_v17.py canon 82a0be882568fe0c : OK
+G-Q2 run : 36 au canon et a la taille == 36 lignes du manifeste (attendu 36) ; hors manifeste, ni ouverts ni comptes : ['pt_39_20_f100.zip']
+ARRET etage 2 refuse (D-2) : pre-vol de la commande, du verdict et de sonde_etage1.json = [False, True, True] ; mutation de l'etage 1 = None
+PORTE 1 reel / verdict pre-vol / etage1 pre-vol (D-2 d'origine) : FERMEE (attendu FERMEE) : OK
+==========================================================================
+SONDE DE QUALIFICATION E-B v3 -- gel dcda1611adf5f8fd -- etage 2
+==========================================================================
+plateforme : {"NPY_DISABLE_CPU_FEATURES": "", "machine": "AMD64", "numpy": "2.2.6", "python": "3.11.9", "systeme": "Windows", "temoin_arrondi": "0x1.a483018a169c6p+64", "temoin_lecture": "CR"}
+G-Q1 moteur m17_chaine_v17.py canon 82a0be882568fe0c : OK
+G-Q2 run : 36 au canon et a la taille == 36 lignes du manifeste (attendu 36) ; hors manifeste, ni ouverts ni comptes : ['pt_39_20_f100.zip']
+ARRET etage 2 refuse (D-2) : pre-vol de la commande, du verdict et de sonde_etage1.json = [False, False, True] ; mutation de l'etage 1 = None
+PORTE 2 reel / verdict reel / etage1 pre-vol (croise) : FERMEE (attendu FERMEE) : OK
+==========================================================================
+SONDE DE QUALIFICATION E-B v3 -- gel dcda1611adf5f8fd -- etage 2 -- PRE-VOL (geometrie reduite, NON OPPOSABLE)
+==========================================================================
+plateforme : {"NPY_DISABLE_CPU_FEATURES": "", "machine": "AMD64", "numpy": "2.2.6", "python": "3.11.9", "systeme": "Windows", "temoin_arrondi": "0x1.a483018a169c6p+64", "temoin_lecture": "CR"}
+G-Q1 moteur m17_chaine_v17.py canon 82a0be882568fe0c : OK
+G-Q2 run : 36 au canon et a la taille == 36 lignes du manifeste (attendu 36) ; hors manifeste, ni ouverts ni comptes : ['pt_39_20_f100.zip']
+ARRET etage 2 refuse (D-2) : pre-vol de la commande, du verdict et de sonde_etage1.json = [True, False, False] ; mutation de l'etage 1 = None
+PORTE 3 pre-vol / verdict reel / etage1 reel (inverse) : FERMEE (attendu FERMEE) : OK
+==========================================================================
+SONDE DE QUALIFICATION E-B v3 -- gel dcda1611adf5f8fd -- etage 2
+==========================================================================
+plateforme : {"NPY_DISABLE_CPU_FEATURES": "", "machine": "AMD64", "numpy": "2.2.6", "python": "3.11.9", "systeme": "Windows", "temoin_arrondi": "0x1.a483018a169c6p+64", "temoin_lecture": "CR"}
+G-Q1 moteur m17_chaine_v17.py canon 82a0be882568fe0c : OK
+G-Q2 run : 36 au canon et a la taille == 36 lignes du manifeste (attendu 36) ; hors manifeste, ni ouverts ni comptes : ['pt_39_20_f100.zip']
+PORTE 4 TOUT REEL (le chemin legitime de la nuit) : OUVERTE (attendu OUVERTE) : OK
+==========================================================================
+SONDE DE QUALIFICATION E-B v3 -- gel dcda1611adf5f8fd -- etage 2 -- PRE-VOL (geometrie reduite, NON OPPOSABLE)
+==========================================================================
+plateforme : {"NPY_DISABLE_CPU_FEATURES": "", "machine": "AMD64", "numpy": "2.2.6", "python": "3.11.9", "systeme": "Windows", "temoin_arrondi": "0x1.a483018a169c6p+64", "temoin_lecture": "CR"}
+G-Q1 moteur m17_chaine_v17.py canon 82a0be882568fe0c : OK
+G-Q2 run : 36 au canon et a la taille == 36 lignes du manifeste (attendu 36) ; hors manifeste, ni ouverts ni comptes : ['pt_39_20_f100.zip']
+PORTE 5 TOUT PRE-VOL, verdict factice (le chemin legitime du pre-vol) : OUVERTE (attendu OUVERTE) : OK
+==========================================================================
+SONDE DE QUALIFICATION E-B v3 -- gel dcda1611adf5f8fd -- etage 2 -- PRE-VOL (geometrie reduite, NON OPPOSABLE)
+==========================================================================
+plateforme : {"NPY_DISABLE_CPU_FEATURES": "", "machine": "AMD64", "numpy": "2.2.6", "python": "3.11.9", "systeme": "Windows", "temoin_arrondi": "0x1.a483018a169c6p+64", "temoin_lecture": "CR"}
+G-Q1 moteur m17_chaine_v17.py canon 82a0be882568fe0c : OK
+G-Q2 run : 36 au canon et a la taille == 36 lignes du manifeste (attendu 36) ; hors manifeste, ni ouverts ni comptes : ['pt_39_20_f100.zip']
+ARRET etage 2 refuse (D-2) : pre-vol de la commande, du verdict et de sonde_etage1.json = [True, True, True] ; mutation de l'etage 1 = M-4
+PORTE 6 etage 1 MUTE (M-4) sous verdict pre-vol : FERMEE (attendu FERMEE) : OK
+==========================================================================
+SONDE DE QUALIFICATION E-B v3 -- gel dcda1611adf5f8fd -- etage 2 -- PRE-VOL (geometrie reduite, NON OPPOSABLE)
+==========================================================================
+plateforme : {"NPY_DISABLE_CPU_FEATURES": "", "machine": "AMD64", "numpy": "2.2.6", "python": "3.11.9", "systeme": "Windows", "temoin_arrondi": "0x1.a483018a169c6p+64", "temoin_lecture": "CR"}
+G-Q1 moteur m17_chaine_v17.py canon 82a0be882568fe0c : OK
+G-Q2 run : 36 au canon et a la taille == 36 lignes du manifeste (attendu 36) ; hors manifeste, ni ouverts ni comptes : ['pt_39_20_f100.zip']
+ARRET etage 2 refuse : pas de sonde_etage1.json en sortie
+PORTE 7 sonde_etage1.json ABSENT : FERMEE (attendu FERMEE) : OK

@@ -1,0 +1,27 @@
+--- p = 3 ; I1 = 1.000 ; pente WKB attendue de ln Gamma en 1/hbar : -2.0000
+hbar=0.200  Gamma_pl (4 absorbeurs) = 1.0148e-03 1.0166e-03 1.0157e-03 1.0158e-03  max/min entre absorbeurs = 1.0019  pire etalement interne = 1.0043
+hbar=0.160  Gamma_pl (4 absorbeurs) = 1.1490e-04 1.1493e-04 1.1497e-04 1.1498e-04  max/min entre absorbeurs = 1.0007  pire etalement interne = 1.0019
+hbar=0.130  Gamma_pl (4 absorbeurs) = 8.0599e-06 8.0673e-06 8.0662e-06 8.0662e-06  max/min entre absorbeurs = 1.0009  pire etalement interne = 1.0019
+hbar=0.110  Gamma_pl (4 absorbeurs) = 5.7278e-07 5.7304e-07 5.7303e-07 5.7302e-07  max/min entre absorbeurs = 1.0005  pire etalement interne = 1.0010
+hbar=0.095  Gamma_pl (4 absorbeurs) = 3.6616e-08 3.6612e-08 3.6617e-08 3.6617e-08  max/min entre absorbeurs = 1.0002  pire etalement interne = 1.0003
+hbar=0.085  Gamma_pl (4 absorbeurs) = 3.3499e-09 3.3502e-09 3.3502e-09 3.3502e-09  max/min entre absorbeurs = 1.0001  pire etalement interne = 1.0002
+pente entre hbar=0.200 et 0.085 : -1.8659
+pente entre hbar=0.130 et 0.085 : -1.9120
+pente entre hbar=0.110 et 0.085 : -1.9230
+--- p = 4 ; I1 = 1.000 ; pente WKB attendue de ln Gamma en 1/hbar : -3.1416
+hbar=0.200  Gamma_pl (4 absorbeurs) = 1.6911e-05 1.6970e-05 1.7116e-05 1.6574e-05  max/min entre absorbeurs = 1.0327  pire etalement interne = 1.0862
+hbar=0.160  Gamma_pl (4 absorbeurs) = 4.3564e-07 4.3609e-07 4.3849e-07 4.3691e-07  max/min entre absorbeurs = 1.0065  pire etalement interne = 1.0385
+hbar=0.130  Gamma_pl (4 absorbeurs) = 5.9113e-09 5.9164e-09 5.8919e-09 5.8900e-09  max/min entre absorbeurs = 1.0045  pire etalement interne = 1.0193
+hbar=0.110  Gamma_pl (4 absorbeurs) = 8.7482e-11 8.7454e-11 8.7538e-11 8.7398e-11  max/min entre absorbeurs = 1.0016  pire etalement interne = 1.0041
+hbar=0.095  Gamma_pl (4 absorbeurs) = 1.1282e-12 1.1252e-12 1.1113e-12 1.1309e-12  max/min entre absorbeurs = 1.0176  pire etalement interne = 1.0580
+hbar=0.085  Gamma_pl (4 absorbeurs) = 2.1799e-14 3.6129e-14 2.0085e-14 2.7966e-14  max/min entre absorbeurs = 1.7988  pire etalement interne = 4.2191
+pente entre hbar=0.200 et 0.085 : -3.0009
+pente entre hbar=0.130 et 0.085 : -3.0304
+pente entre hbar=0.110 et 0.085 : -3.0403
+--- cercle limite ? sommes partielles de |u_k|^2 (E = 0.3, nu = mu = 1, hbar = 0.1)
+p=2 depart=(1.0, 0.0) : 11.63397  34.90251  108.42535  341.04605
+p=2 depart=(0.0, 1.0) : 127.14717  402.65141  1272.76327  4024.59666
+p=3 depart=(1.0, 0.0) : 2.07811  2.10979  2.11979  2.12295
+p=3 depart=(0.0, 1.0) : 150.48275  154.80857  156.17480  156.60677
+p=4 depart=(1.0, 0.0) : 1.92646  1.92832  1.92850  1.92852
+p=4 depart=(0.0, 1.0) : 1428.03359  1430.88077  1431.16563  1431.19412

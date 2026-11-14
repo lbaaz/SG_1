@@ -1,0 +1,97 @@
+--- delta94
++++ delta95
+@@ -1,40 +1,22 @@
+ #!/usr/bin/env python3
+ # -*- coding: ascii -*-
+-"""LE PERIMETRE DU DEPOT delta 94 (LA QUALIFICATION E-B) -- ENUMERE DEPUIS LES CITATIONS DE L'ACTE.
+-machine 2, v1, 12/11/2026.
+-
+-Derive de la v2 du delta 93 (perimetre_depot_delta93_machine2_v2.py, canon 613c8157419f6e82, au registre, NON EDITEE :
+-regle 17), meme methode, meme code, sept changements -- tous nommes ici, le diff est joint :
+-  1. L'ERRATUM DU 93 EST RETIRE. Ce chantier n'en a pas (aucune piece scellee modifiee apres coup) :
+-     le mecanisme des divergences declarees est remplace par un dictionnaire vide, et toute divergence
+-     entre la table d'un lot et le fichier du poste MORD.
+-  2. LES SERIES DU RUN SONT RETIREES (volets alpha et temoin du 93, specifiques a la constante A). Les 279
+-     fichiers de reprise de la nuit E-B ne sont pas cites par l'acte (contenu utile consolide dans
+-     sonde_etage1.json) : ils n'entrent pas, et le manifeste le dit.
+-  3. LES LOTS DE CE DELTA SONT DERIVES, non tapes : un manifeste du poste dont la ligne d'en-tete porte le
+-     canon de l'acte lui-meme (le lot de l'acte, le contreseing) ne peut pas etre CITE par l'acte -- il est
+-     fait apres lui -- et entre par son manifeste et ses pieces de table.
+-  4. L'EMPLACEMENT (dossier()) : gels/ pour les gels, scripts/ pour les instruments de ce chantier (sonde,
+-     banc, feuille de lecture, reference du temoin, estimation WKB) et leurs scripts de construction,
+-     journal/ a plat pour le reste. C'est un choix de rangement, a trancher par l'operateur.
+-  5. Le texte du manifeste (corps) parle de ce chantier.
+-  6. LECTURE DES MANIFESTES AU FORMAT ANCIEN de machine 1 (etape 0 : `canon  nom  octets`, compte en
+-     commentaire `# pieces : N`) : le nom est le champ du milieu, le compte se lit aussi apres un `#`.
+-  7. L'ACTE NUMEROTE EST LA PIECE DE DEPOT : sa copie dans le lot de l'acte (derive, changement 3)
+-     n'entre pas deux fois.
+-Le perimetre ne s'ecrit pas a la main : il s'ENUMERE. Cette feuille lit l'acte, en extrait tous les jetons de
+-16 hex, et resout chacun PAR CANON (convention B, ou brut) : sur le CLONE FRAIS du registre (git ls-files) :
+-AU REGISTRE ; sinon sur TOUT le poste BOCAL4 : A DEPOSER ; sinon NON RESOLU, et c'est une morsure. Tout LOT cite
+-entre AVEC SES PIECES DE TABLE, chacune verifiee contre sa ligne a cote du manifeste, le compte de table egal au
+-`pieces : N` declare. Une piece a un seul canon et un seul chemin de depot ; un nom qui collisionne porte le
+-prefixe de son lot. Les ZIP ne sont pas deposes (precedent). Les lots sont lus dans DEPOT_delta94/entrants/,
+-extraits des zips recus et emis, un dossier par lot. DEUX VERBES : `chk` mesure et compte ; `note` porte la
+-prose. PB-1 : rien n'est edite.
++"""LE PERIMETRE DU DEPOT delta 95 (LA QUALIFICATION E-B, REPRISE SOUS LE GEL BIS) -- ENUMERE DEPUIS LES CITATIONS DE L'ACTE.
++machine 2, v1, 14/11/2026.
++
++Derive de la feuille du delta 94 (perimetre_depot_delta94_machine2_v1.py, au registre ou au poste, NON EDITEE : regle 17), meme methode,
++meme code, TROIS changements nommes, le diff est joint :
++  1. dossier() : les instruments et constructions de ce chantier (la nuit bis de la qualification E-B (gel bis, sonde v3, banc v3, feuille v2)) vont sous scripts/, comme ceux du delta precedent.
++  2. le texte du manifeste (corps) parle de ce chantier et de sa date ; la phrase propre aux fichiers de reprise du 94 est retiree.
++  3. un manifeste SANS ligne "pieces : N" (les lots de machine 1 des 13 et 14/11) : le compte attendu est celui des membres du zip extrait
++     sous entrants/, hors manifeste ; il n'est pas tape, et une piece de table introuvable mord toujours (controle voisin).
++Pour le reste, tout est herite : le perimetre ne s'ecrit pas a la main, il s'ENUMERE depuis les citations de l'acte, resolues PAR CANON
++(registre, poste, ou NON RESOLU qui mord) ; le numero se DERIVE du registre (plafond + 1) ; les lots cites entrent avec leurs pieces de
++table ; les ZIP ne sont pas deposes ; DEUX VERBES (`chk` mesure, `note` porte la prose) ; PB-1 : rien n'est edite.
+ """
+ import hashlib, os, re, subprocess, sys, unicodedata
+ 
+ if len(sys.argv) != 3:
+-    sys.exit('usage : perimetre_depot_delta94_machine2_v1.py <clone frais du registre> <acte journal_delta_nn_..._vN.md>')
++    sys.exit('usage : perimetre_depot_delta95_machine2_v1.py <clone frais du registre> <acte journal_delta_nn_..._vN.md>')
+ CLONE = os.path.abspath(sys.argv[1])
+ ICI = os.path.dirname(os.path.abspath(__file__))
+ RAC = os.path.dirname(ICI)
+@@ -282,6 +264,13 @@
+             lot_de[e[0]] = t
+     m = PIECES.search(tx)
+     att = int(m.group(1)) if m else None
++    if att is None:        # changement 3 : manifeste sans ligne 'pieces : N' -> compte des membres du zip extrait, hors manifeste
++        _nl = tx.split(chr(10))[0].split()[1]
++        _dd = [x for x in (os.path.join(ICI, 'entrants', _nl), os.path.join(ICI, 'entrants', _nl + '_recu')) if os.path.isdir(x)]
++        if _dd:
++            att = (sum(1 for _r, _s, _fs in os.walk(_dd[0]) for _f in _fs)
++                   - sum(1 for _f in os.listdir(_dd[0]) if _f.startswith('MANIFEST_')))
++            note('manifeste sans ligne pieces : N', '%s : compte attendu = %d membres du zip extrait, hors manifeste' % (t, att))
+     if att is None or att != n_tab:
+         faux_comptes.append('%s : table %d, declare %s' % (t, n_tab, att))
+     print('   lot %s  table %2d / declare %-4s %s' % (t, n_tab, att, rel(chemin, RAC)))
+@@ -317,7 +306,7 @@
+         return 'gels/'
+     if re.match(r'(sonde_qualification_EB_machine1_v\d+|banc_qui_tue_qualification_EB_machine1_v\d+|'
+                 r'lecture_qualification_EB_machine1_v\d+|reference_TP_rotation_complexe_machine2_v\d+(_premier_jet)?|'
+-                r'estimation_TP_wkb_machine1_v\d+|construction_(gel_EB_v\d+|sonde_banc_v\d+)_machine1_v\d+)\.py$', b):
++                r'estimation_TP_wkb_machine1_v\d+|construction_(gel_EB_v\d+|sonde_banc_v\d+|gel_EB_bis|instrument_EB_bis)_machine1_v\d+)\.py$', b):
+         return 'scripts/'
+     return 'journal/'
+ 
+@@ -387,7 +376,7 @@
+ for c, *_ in lignes:
+     par_dossier[c.split('/')[0]] = par_dossier.get(c.split('/')[0], 0) + 1
+ 
+-corps = ("MANIFESTE DU LOT DE DEPOT -- DELTA %s (LA QUALIFICATION DE L ESTIMATEUR E-B) -- 12/11/2026 -- "
++corps = ("MANIFESTE DU LOT DE DEPOT -- DELTA %s (LA QUALIFICATION E-B, REPRISE SOUS LE GEL BIS) -- 14/11/2026 -- "
+          "assemble par machine 2 -- derive de l'acte v%s\n" % (NUMERO, VERSION))
+ corps += ("Convention B (sha256 NFC+LF, 16 hex) et empreinte brute, les deux tailles ; le depot et "
+           "le numero sont de la main de l'operateur.\n")
+@@ -405,7 +394,7 @@
+           "les instruments de ce chantier (sonde, banc, feuille, reference du temoin) et leurs scripts de construction, journal/ a plat pour le reste. Un nom qui "
+           "collisionne (deux canons sous le meme nom, entre les deux plumes) porte le prefixe "
+           "lot_<canon du lot>__ ; %d cas, listes dans le log.\n" % len(prefixes))
+-corps += ("LOTS DE CE DELTA, DERIVES (manifeste dont l en-tete porte le canon de l acte) : %s. NON CITES PAR L ACTE (ils sont faits apres lui), ils entrent par leur manifeste et leurs pieces de table. Les 279 fichiers de reprise de la nuit (nuit_EB/sortie/reprise) NE SONT PAS deposes : l acte ne les cite pas, leur contenu utile est consolide dans sonde_etage1.json.\n" % (", ".join(c for c, p in lots_delta) or "aucun"))
++corps += ("LOTS DE CE DELTA, DERIVES (manifeste dont l en-tete porte le canon de l acte) : %s. NON CITES PAR L ACTE (ils sont faits apres lui), ils entrent par leur manifeste et leurs pieces de table.\n" % (", ".join(c for c, p in lots_delta) or "aucun"))
+ corps += ("NON DEPOSES, ASSUMES : les ZIP des lots (precedent non pris ; listes en brut en fin de "
+           "manifeste) ; MANIFEST.sha256 (dette anterieure).\n")
+ corps += "colonnes : chemin_cible  empreinte_B  empreinte_brute  octets_B  octets_bruts  source (relative a BOCAL4)  [origine]\n\n"

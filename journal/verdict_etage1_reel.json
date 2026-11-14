@@ -1,0 +1,35 @@
+{
+ "canon_reference": "663f53df2e25d09f",
+ "canon_sonde_etage1": "ed7daabc5f4337ac",
+ "detail": {
+  "TN": "PAS DE PLATEAU",
+  "TP": {
+   "j08": {
+    "F1G20": {
+     "Gamma_pl": 5.470960106900295e-09,
+     "ecart_ln": null,
+     "etalement": 0.8073479036372673,
+     "k0": -5,
+     "statut": "PAS DE PLATEAU",
+     "tient": false
+    },
+    "F1G30": {
+     "Gamma_pl": 6.544419270545761e-09,
+     "ecart_ln": 0.01794921883274657,
+     "etalement": 0.032786595724368484,
+     "k0": -5,
+     "statut": "PLATEAU",
+     "tient": true
+    },
+    "Gamma_ref": 6.428e-09,
+    "u_ref": 0.001
+   }
+  }
+ },
+ "etage1": "NE TIENT PAS",
+ "motifs": [
+  "G-Q5",
+  "TP ne tient pas a j08"
+ ],
+ "prevol": true
+}

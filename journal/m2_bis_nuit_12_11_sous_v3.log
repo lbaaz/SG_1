@@ -1,0 +1,13 @@
+==========================================================================
+SONDE DE QUALIFICATION E-B v3 -- gel dcda1611adf5f8fd -- etage 1
+==========================================================================
+plateforme : {"NPY_DISABLE_CPU_FEATURES": "", "machine": "AMD64", "numpy": "2.2.6", "python": "3.11.9", "systeme": "Windows", "temoin_arrondi": "0x1.a483018a169c6p+64", "temoin_lecture": "CR"}
+G-Q1 moteur m17_chaine_v17.py canon 82a0be882568fe0c : OK
+G-Q2 run : 36 au canon et a la taille == 36 lignes du manifeste (attendu 36) ; hors manifeste, ni ouverts ni comptes : ['pt_39_20_f100.zip']
+G-Q3 39_20    N = 60 : OK
+G-Q3 197_100  N = 60 : OK
+G-Q3 99_50    N = 60 : OK
+G-Q3 101_50   N = 61 : OK
+G-Q3 203_100  N = 61 : OK
+G-Q3 41_20    N = 61 : OK
+ARRET reprise refusee (D-1) : d:\devs\bocal\BOCAL4\audit_gel_EB_bis_sortie\nuit_du_12_11_sous_v3\reprise\TP_j06_F1G20\k_+03.json porte une autre identite, cles en ecart ['gel', 'sonde']

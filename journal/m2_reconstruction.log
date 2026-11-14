@@ -1,0 +1,43 @@
+nombres tapes dans les hunks : affirmes contre la nuit, la table, le diagnostic, l'etape 0 et le registre
+  B0     197 ->  285 caracteres ; ancre "# GEL -- QUALIFICATION DE L'ESTIMATEUR E-B (Ga"
+  B1     245 ->  769 caracteres ; ancre 'du FICHIER ENTIER, de la premiere ligne au sau'
+  B2a     71 ->  905 caracteres ; ancre '  registre  lbaaz/SG_1, HEAD 2ec6775, plafond '
+  B2b    176 ->  138 caracteres ; ancre "Le lot de l'etape 0 n'etait pas detenu par m2 "
+  B3     250 ->  473 caracteres ; ancre '3.6 ECHELLE EN eta. eta_k = eta0 * 2^(-k), k ='
+  B5     642 -> 1354 caracteres ; ancre "Ce que la plume a vu avant d'ecrire : les troi"
+  B6      99 ->  510 caracteres ; ancre '  MESURE par la sonde, forme F1, r_c = 40, G20'
+  B7     181 ->  767 caracteres ; ancre 'JOUE, consigne au verdict. Les trois candidats'
+  B8     125 ->  313 caracteres ; ancre '  (e) CONSIGNE, pas une condition : |ln(G_run '
+  B9b     64 ->  207 caracteres ; ancre 'valeurs lisibles seulement -> AUCUNE FENETRE. '
+  B9a    359 ->  373 caracteres ; ancre 'trajectoires F1 180 (6 x 2 x 15), formes 180 ('
+  B11    597 -> 1472 caracteres ; ancre '  A-1  verdict : QUALIFIE PAR POINT 0.5 ; ESTI'
+  B12a   267 ->  205 caracteres ; ancre 'COUT (estimation, loi cubique sur la mesure 93'
+  B12b   182 ->  223 caracteres ; ancre "en (F1, G20) sur l'echelle entiere (15 decompo"
+  B12c   251 ->  516 caracteres ; ancre 'GARDE-FOU (proposition de la plume, sous le ve'
+  B13a   291 ->  723 caracteres ; ancre '  ESTIMATEUR QUALIFIE : Gamma_LS est une large'
+  B13b   107 ->  163 caracteres ; ancre '  QUALIFIE PAR POINT : seules les largeurs des'
+  B14    105 -> 1227 caracteres ; ancre 'un TP tenu ne prouve pas que la methode vaut p'
+  B15   1415 -> 2227 caracteres ; section 15 remplacee en bloc
+remplacements : 18 (+ la section 15) ; gel bis v1 : canon dcda1611adf5f8fd, 28937 o, 526 lignes ; gel v2 : 21711 o, 411 lignes
+-- FIN construction_gel_EB_bis_machine1_v1 --
+gel bis v1 : canon dcda1611adf5f8fd (lu du fichier qualification_EB_bis_pre_enregistrement_v1.md)
+  S0  sonde : 148 -> 223 caracteres ; ancre '# SONDE DE QUALIFICATION E-B -- machine 1, v2 --'
+  S1  sonde :  30 ->  19 caracteres ; ancre 'CANON_GEL = "cde0cd11a763f26d"'
+  S2  sonde :  76 -> 103 caracteres ; ancre 'K_ECH = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 2, 1, '
+  S3  sonde :  90 -> 118 caracteres ; ancre '        att = {"TP": 60, "TN": 15, "plancher": 3'
+  S4  sonde :  75 -> 122 caracteres ; ancre '        att = {"F1": 180, "formes": 180, "transl'
+  S5  sonde :  70 ->  70 caracteres ; ancre '    dire("SONDE DE QUALIFICATION E-B v2 -- gel %'
+ecrit : sonde_qualification_EB_machine1_v3.py, canon 555146abd2192f79, 21916 o (depuis sonde_qualification_EB_machine1_v2.py facc7536ba4637cb, 6 remplacements)
+  L0  lecture : 102 -> 314 caracteres ; ancre '# FEUILLE DE LECTURE DE LA QUALIFICATION E-B -- '
+  L1  lecture :  30 ->  88 caracteres ; ancre 'CANON_GEL = "cde0cd11a763f26d"'
+  L2  lecture :  27 ->  38 caracteres ; ancre '    for k0 in range(-2, 9):'
+  L3  lecture :  56 ->  66 caracteres ; ancre '    eta = {k: 0.05 * 2.0 ** (-k) for k in range('
+  L4  lecture :  94 -> 294 caracteres ; ancre '    t("plateau de cinq puis chute lineaire", (p['
+  L5  lecture :  82 ->  82 caracteres ; ancre '    dire("FEUILLE DE LECTURE E-B v1 -- gel %s --'
+  L6  lecture :  71 -> 688 caracteres ; ancre '        ref = json.load(open(a.reference))'
+  L7  lecture :  65 -> 303 caracteres ; ancre '        s2 = json.load(open(f2)) if os.path.exis'
+ecrit : lecture_qualification_EB_machine1_v2.py, canon c14dafffc5f84c97, 17193 o (depuis lecture_qualification_EB_machine1_v1.py b3ac958a1a2b915b, 8 remplacements)
+  K0  banc : 170 -> 247 caracteres ; ancre '# BANC QUI TUE DE LA QUALIFICATION E-B -- machin'
+  K1  banc :  44 ->  44 caracteres ; ancre 'for f in fonctions]} for k in range(-2, 13)}'
+ecrit : banc_qui_tue_qualification_EB_machine1_v3.py, canon 3f2ef4d35af630c2, 11301 o (depuis banc_qui_tue_qualification_EB_machine1_v2.py 4e46744fe4e8a8be, 2 remplacements)
+-- FIN construction_instrument_EB_bis_machine1_v1 --

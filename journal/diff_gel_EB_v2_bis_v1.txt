@@ -1,0 +1,336 @@
+--- qualification_EB_pre_enregistrement_v2.md
++++ qualification_EB_bis_pre_enregistrement_v1.md
+@@ -1,4 +1,6 @@
+-# GEL -- QUALIFICATION DE L'ESTIMATEUR E-B (Gamma_LS) -- v2
+-# Banc de qualification, CLASSE 2 -- plume machine 1 -- 11/11/2026
+-# Piste (0) de la branche quantique, etape 1. Ce n'est PAS une manche.
++# GEL -- QUALIFICATION DE L'ESTIMATEUR E-B (Gamma_LS) -- BIS, v1
++# Banc de qualification, CLASSE 2 -- plume machine 1 -- 13/11/2026
++# Piste (0) de la branche quantique, etape 1 bis : REPRISE apres le
++# delta 94. Ce n'est PAS une manche, et ce n'est PAS un v3 du gel
++# cde0cd11a763f26d.
+ 
+@@ -13,5 +15,13 @@
+ du FICHIER ENTIER, de la premiere ligne au saut de ligne final apres le
+-terminateur -- "titre a terminateur" ne designait rien d'autre (M-4).
+-v2 = v1 (8603af9d4f63e9dc) + les hunks de la section 15 : c'est LE tour
+-de correction de la section 12.
++terminateur.
++NOUVEAU GEL. Le gel v2 (cde0cd11a763f26d) est JOUE : etage 1 du 12/11,
++verdict NON CONCLUANT D'INSTRUMENT, delta 94 (fe10bfe), qui ecrit "sous
++ce gel, pas de v3". Ce gel-ci en est la REPRISE, decidee par
++l'operateur (relais du 13/11 ; a confirmer par lui a machine 2 avant
++le run), et le DERNIER ESSAI (section 12). Il est construit du gel v2
++par les hunks de la section 15, avec UNE difference de fond : l'echelle
++en eta (3.6) est prolongee du cote de l'absorbeur fort, de k = -2 a
++k = -5. Le reste est soit consequence de cette difference (comptes,
++couts), soit etat des lieux (sources, ce qui a ete vu, annonces), soit
++precision sans effet sur un statut ; la section 15 dit lequel.
+ 
+@@ -48,3 +58,16 @@
+             lot m1                                  94c3749c83d4b044
+-  registre  lbaaz/SG_1, HEAD 2ec6775, plafond 93 (clone frais du 11/11)
++  gel v2    gels/qualification_EB_pre_enregistrement_v2.md
++                                                    cde0cd11a763f26d  JOUE
++  acte 94   journal/journal_delta_94_qualification_EB_v2.md
++                                                    569ccbd0d1adb927
++  la nuit   lot m2 72f65ad8a898fbb5 ; sortie de la sonde
++                                                    ab31334aea5c444a
++  TP        liste des couplages retenus (j = 6 et j = 8)
++                                                    69b3bab3bb8480b7
++            table des references (m2 ; certifiee par m1, lot
++            7b64b1b7d86c0591)                       4d51dd58ef456fe9
++            REPRISES TELLES QUELLES : aucune reference n'est recalculee.
++  reglage   diagnostic du TP a barreaux forts, lot m2 762a89e8ad7d498a
++            (HORS GEL, NON OPPOSABLE ; section 4)
++  registre  lbaaz/SG_1, HEAD fe10bfe, plafond 94 (releve du 13/11)
+   externe   Riss et Meyer, J. Phys. B 26 (1993) 4503 (trajectoires en eta
+@@ -53,5 +76,4 @@
+ 
+-Le lot de l'etape 0 n'etait pas detenu par m2 au 11/11 (M-3) : il est
+-JOINT au lot de ce gel. Tout nombre que ce gel en tire se relit dans
+-les six pieces f070 du run, sans lui.
++Le lot de l'etape 0 est au registre depuis le delta 94. Tout nombre que
++ce gel en tire se relit dans les six pieces f070 du run, sans lui.
+ 
+@@ -95,6 +117,9 @@
+ 
+-3.6 ECHELLE EN eta. eta_k = eta0 * 2^(-k), k = -2, -1, 0, ..., 12 :
+-quinze valeurs, quatre decades et un quart. Les quatre valeurs du run
+-sont k = 0, 1, 2, 3. La multiplication par une puissance de deux est
+-exacte : eta se porte en cette seule forme.
++3.6 ECHELLE EN eta. eta_k = eta0 * 2^(-k), k = -5, -4, ..., 12 :
++dix-huit valeurs, cinq decades et un dixieme. Les quatre valeurs du run
++sont k = 0, 1, 2, 3 ; les quinze du gel v2 sont k = -2 a 12 ; les trois
++barreaux AJOUTES sont k = -5, -4, -3 (eta = 32, 16 et 8 fois eta0).
++Aucun barreau du gel v2 n'est retire. La multiplication par une
++puissance de deux est exacte : eta se porte en cette seule forme.
++ORDRE DE PARCOURS : k = 3, puis 4 a 12, puis 2, 1, 0, -1, ..., -5.
+ 
+@@ -147,12 +172,23 @@
+   tau_TP = tau + u_ref : accord au temoin positif (5.1).
+-Ce que la plume a vu avant d'ecrire : les trois pas de descente du run
+-par point (k = 0 a 3, quatre valeurs). Une fenetre demande cinq
+-valeurs : aucune issue de ce gel n'est calculable sur ce qui a ete vu.
+-Vu DEPUIS le v1 (note m2 0d11d6866e3c5f37) : un essai de formule de m2
+-a UN point de l'echelle du TP, g_8 = 0.10, largeur 6.428e-09 par
+-rotation complexe. Ce n'est pas la reference et aucune valeur de la
+-sonde n'existe ; la plume connait donc l'ordre de grandeur a ce g.
+-Si le temoin positif lui-meme ne tient pas tau, le banc rend NON
+-CONCLUANT D'INSTRUMENT et NE LIT PAS le fantome ; tau ne se desserre
+-pas sur les donnees du fantome.
++Ce que la plume a vu avant d'ecrire, DU FANTOME : les trois pas de
++descente du run par point (k = 0 a 3, quatre valeurs) et, au seul
++point 1.95, les largeurs de dix etats a k = 3 (faute D-QEB-1 du delta
++94). Une fenetre demande cinq valeurs : aucune issue de l'etage 2
++n'est calculable sur ce qui a ete vu.
++Ce que la plume a vu DU TEMOIN, et qui fait de lui un temoin REGLE et
++non plus un test aveugle : (i) l'etage 1 du 12/11 sous le gel v2, les
++soixante largeurs du TP, k = -2 a 12 ; (ii) le rejeu ponctuel de m1,
++six decompositions ; (iii) le diagnostic de m2 du 13/11, vingt
++decompositions du jumeau H+, k = -6 a -2, G20 et G30, j = 6 et 8, par
++un code qui n'est pas la sonde. (ii) et (iii) sont HORS GEL et NON
++OPPOSABLES ; aucun ne touche au fantome. Sur les series (i) + (iii)
++restreintes a k = -5 a 12, la regle 3.11 rend PLATEAU aux quatre
++(g, geometrie) et l'accord a la reference tient a 0.0012 au pire,
++recalcule par m1 sur les sorties de m2. La tenue du TP est donc
++ATTENDUE ; elle doit etre REFAITE par la sonde certifiee dans le run
++juge, et son echec garde toute sa force : NON CONCLUANT D'INSTRUMENT,
++le fantome n'est pas lu. C'est l'echelle qui a ete reglee sur le
++temoin, a taille reelle, par un run qui ne lit rien de l'objet
++(candidate 22 du delta 94) ; aucune tolerance ne l'a ete.
++tau ne se desserre pas sur les donnees du fantome.
+ 
+@@ -183,3 +219,9 @@
+   MESURE par la sonde, forme F1, r_c = 40, G20 et G30, eta0 = 0.05,
+-    meme echelle, meme plateau.
++    meme echelle (3.6, dix-huit valeurs), meme plateau.
++  ETAT AU 13/11. La reference est faite et certifiee ; la regle
++    ci-dessus rend j = 6 (g = 0.08409, Gamma_ref 5.3688e-10, u_ref
++    2.1e-03) et j = 8 (g = 0.10000, Gamma_ref 6.4279e-09, u_ref
++    1.6e-04). Liste et table sont reprises a l'octet. j = 5 (Gamma_ref
++    1.384e-10) reste HORS liste : son u_ref depasse le plafond de
++    1.96e-05, et le plafond ne bouge pas (section 14).
+   TP TIENT si, a chaque g retenu : PLATEAU a G20 et a G30, et
+@@ -207,4 +249,13 @@
+ JOUE, consigne au verdict. Les trois candidats sont suivis dans les
+-MEMES quinze decompositions, jouees a l'etage 1 et propres au TN :
++MEMES dix-huit decompositions, jouees a l'etage 1 et propres au TN :
+ aucune valeur de l'etat d'ile n'y est relevee.
++  ATTENDU A TAILLE REELLE : TN NON JOUE. Le 12/11 aucun des trois
++  candidats n'a ete suivi de k = 3 a k = 2 ni a k = 4 (recouvrements
++  0.766 a 0.884, sous 0.90 : D-QEB-3 du delta 94). Le TN est garde TEL
++  QUEL -- le changer serait une seconde difference -- et sa limite est
++  declaree en section 14. EN CONSIGNE, sans effet sur le verdict :
++  l'acte releve qu'au TP aucune fenetre de depart k0 >= 4 ne rend
++  PLATEAU (la largeur y est proportionnelle a eta, ou sous le
++  plancher) ; c'est le seul temoin a taille reelle que le critere mord
++  sur une largeur faite par l'absorbeur.
+   TN rend PLATEAU : le critere ne mord pas -> NON CONCLUANT
+@@ -225,2 +276,5 @@
+       <= tau. Sinon : "M17 a lu hors plateau a ce point".
++      Le depart k0 de la fenetre retenue est consigne a chaque
++      configuration ; "la fenetre retenue contient k = 3", le barreau
++      de lecture de M17, se lit de k0 : -1 <= k0 <= 3.
+ Statut du point :
+@@ -273,3 +327,5 @@
+         de cinq puis chute lineaire -> PLATEAU, fenetre nommee ; quatre
+-        valeurs lisibles seulement -> AUCUNE FENETRE. BORNE, a un ulp de
++        valeurs lisibles seulement -> AUCUNE FENETRE ; plateau des cinq
++        barreaux les plus forts (k = -5 a -1) puis chute -> PLATEAU,
++        k0 = -5 (ce cas mord sous l'echelle du gel v2). BORNE, a un ulp de
+         part et d'autre, sur des valeurs exactement representables :
+@@ -281,8 +337,8 @@
+ Decompositions attendues (declarees avant de compter), par famille :
+-trajectoires F1 180 (6 x 2 x 15), formes 180 (6 x 2 x 15), translation
+-90 (6 x 15), plancher 30 (6 x 5), TP au plus 60 (2 x 2 x 15), TN 15
+-(E-EB-2 ; un seul jeu de quinze pour les trois candidats, 5.2) : au
+-plus 555. Hors de ce compte, et declarees comme telles : les
+-decompositions a geometrie reduite du banc qui tue, et celles du script
+-de reference de m2.
++trajectoires F1 216 (6 x 2 x 18), formes 216 (6 x 2 x 18), translation
++108 (6 x 18), plancher 30 (6 x 5), TP 72 (2 x 2 x 18), TN 18 (un seul
++jeu de dix-huit pour les trois candidats, 5.2) : 660, dont 120 a
++l'etage 1 et 540 a l'etage 2. Hors de ce compte, et declarees comme
++telles : les decompositions a geometrie reduite du banc qui tue. La
++reference de m2 est deja faite.
+ 
+@@ -319,12 +375,27 @@
+ 
+-  A-1  verdict : QUALIFIE PAR POINT 0.5 ; ESTIMATEUR QUALIFIE 0.3 ;
+-       NON QUALIFIE 0.1 ; NON CONCLUANT D'INSTRUMENT 0.1.
+-  A-2  2.02 n'est pas QUALIFIE : 0.6 (le dernier pas du run y est plus
+-       grand que le precedent).
++  Les annonces du gel v2 n'ont pas ete jugees sur le fantome (etage 2
++  non joue) ; son A-1 portait 0.1 sur l'issue du 12/11. Celles-ci les
++  remplacent. La feuille compte A-1 a A-5 ; A-6 a A-8 se comptent a
++  l'acte.
++  A-1  verdict : QUALIFIE PAR POINT 0.50 ; NON QUALIFIE 0.27 ;
++       ESTIMATEUR QUALIFIE 0.13 ; NON CONCLUANT D'INSTRUMENT 0.07 ;
++       NON LISIBLE 0.03.
++  A-2  2.02 n'est pas QUALIFIE : 0.6 (reconduite ; le dernier pas du
++       run y est plus grand que le precedent).
+   A-3  la famille de droite (2.02, 2.03, 2.05) compte au moins autant
+-       de points QUALIFIES que celle de gauche : 0.65 (base propre
+-       presque orthogonale a droite, poids total 0.998 contre 0.85).
+-  A-4  T-etats : FLUCTUATION D'ETAT DOMINANTE : 0.7.
++       de points QUALIFIES que celle de gauche : 0.5 (ramenee de 0.65 :
++       le premier pas de descente du run vaut 0.090 et 0.115 a 2.02 et
++       2.03, 0.026 au plus aux quatre autres points).
++  A-4  T-etats : FLUCTUATION D'ETAT DOMINANTE : 0.7. NON AVEUGLE
++       (D-QEB-1 du delta 94) : comptee, non creditee.
+   A-5  kappa de l'etat retenu : plus petit des trois de gauche > plus
+-       grand des trois de droite : 0.6.
++       grand des trois de droite : 0.6. NON AVEUGLE (D-QEB-1) :
++       comptee, non creditee.
++  A-6  le TP tient : 0.93. NON AVEUGLE (temoin regle, section 4).
++  A-7  a (F1, G20), a tout point qui a un PLATEAU, la fenetre retenue
++       ne commence pas avant k = -1 (k0 >= -1) : 0.7. Raison : l'etat
++       du fantome s'etend jusqu'au bord r_c, celui du temoin non ; un
++       absorbeur fort doit deplacer le premier et laisser le second.
++  A-8  la consigne 6 (e) tient a tout point qui a un PLATEAU a
++       (F1, G20) : 0.55.
+ 
+@@ -341,15 +412,18 @@
+ eta = 0 pour le terme x^5, ou le reecrit.
+-COUT (estimation, loi cubique sur la mesure 93 a 94 s par
+-decomposition a N = 70 du delta 80) : etage 1 de l'ordre de 2 a 3 h,
+-reference comprise si m2 la balaie d'abord grossierement (un theta,
+-N = 50) avant de raffiner ; etage 2 environ 8 h 30 ; une nuit de BOCAL4.
++COUT (sur les durees mesurees a BOCAL4 la nuit du 12/11 : 30.1 s par
++decomposition a N = 60, 68.2 s a N = 70) : etage 1 environ 1 h 30,
++etage 2 environ 7 h ; une nuit de BOCAL4. Aucune reference a refaire.
+ REJEU m1, PERIMETRE DECLARE : selftest, banc qui tue, et le point 1.95
+-en (F1, G20) sur l'echelle entiere (15 decompositions), compare a
+-BOCAL4 a 1e-3, avec le levier NPY_DISABLE_CPU_FEATURES. Le reste n'est
+-pas rejoue par m1 : repetition non opposable.
+-GARDE-FOU (proposition de la plume, sous le veto de l'operateur) : un
+-gel, UN tour de correction,
+-un run, un acte. Si le TP ne qualifie pas l'instrument apres ce
+-tour, on l'ecrit et on s'arrete. Aucun rejeu des donnees du fantome sous
+-d'autres seuils.
++en (F1, G20) sur l'echelle entiere (18 decompositions), compare a
++BOCAL4 a 1e-3, avec le levier NPY_DISABLE_CPU_FEATURES, et seulement
++APRES un etage 1 qui tient. Le reste n'est pas rejoue par m1 :
++repetition non opposable.
++GARDE-FOU : un gel, UN tour de correction, un run, un acte, et c'est
++le DERNIER ESSAI de la piste (0) sous cette forme. Ce sont les trois
++conditions de m1 au delta 94, nn.10 (iv) : l'acte d'abord (fait), une
++seule difference de fond (3.6), dernier essai. Quelle que soit l'issue
++-- y compris un TP qui ne tiendrait pas -- on l'ecrit et on s'arrete :
++ni troisieme gel, ni autre echelle, ni autre temoin. L'operateur peut
++lever ce garde-fou ; les machines, non. Aucun rejeu des donnees du
++fantome sous d'autres seuils.
+ 
+@@ -357,9 +431,16 @@
+ 
+-  ESTIMATEUR QUALIFIE : Gamma_LS est une largeur sortante, citable avec
+-      sa valeur et son etalement ; "PAS DE SIGNAL" de M17 reste, comme
+-      reponse a une question de rang. Suite PROPOSEE : le plancher en
+-      g (c de juillet) remesure avec cet instrument, puis sa
+-      derivation.
++  ESTIMATEUR QUALIFIE : aux six points il existe une largeur sortante,
++      citable avec sa valeur Gamma_pl et son etalement. Ce que cela
++      engage pour les nombres de M17 depend de la consigne 6 (e) : la
++      ou elle tient, la valeur lue par M17 (G_run) est citable et vaut
++      Gamma_pl a tau pres ; la ou elle ne tient pas, M17 a lu hors
++      plateau, G_run n'est pas citable et c'est Gamma_pl qui l'est.
++      "PAS DE SIGNAL" de M17 reste, comme reponse a une question de
++      rang, SI la consigne tient aux six points ; sinon la question de
++      rang est a reposer sur les Gamma_pl, hors de ce gel. Suite
++      PROPOSEE : le plancher en g (c de juillet) remesure avec cet
++      instrument, puis sa derivation.
+   QUALIFIE PAR POINT : seules les largeurs des points listes sont
+-      citables ; aucune phrase de grille.
++      citables, avec la meme distinction entre Gamma_pl et G_run ;
++      aucune phrase de grille.
+   NON QUALIFIE : toute phrase portant un Gamma depuis juillet est
+@@ -383,28 +464,62 @@
+ 
+-## 15. Journal v1 -> v2 (certification m2 du 11/11, lot 113e5b84238203de)
+-
+-m2 : NON CERTIFIE EN L'ETAT, 21 controles, 2 morsures de description,
+-quatre demandes. Tout est pris, sans reserve.
+-  E-EB-1  3.11 en rationnels exacts ; 3.12 dit sa comparaison ; G-Q7
+-          rebati a un ulp de la borne (H1, H2, H9).
+-  E-EB-2  le TN entre au decompte par famille ; total 555 et non 585 :
+-          les trois candidats partagent quinze decompositions (H6, H10).
+-  M-1     F2 : "a la distance L" (H4).
+-  M-2     G-Q2 compte par le manifeste (H7).
+-  M-3     lot de l'etape 0 joint (H12).
+-  M-4     canons confirmes -- gel v1 8603af9d4f63e9dc, WKB
+-          3eeb30328f9c542c ; "titre a terminateur" = convention B du
+-          fichier entier (H0). Faute de transit de la plume : deux
+-          pieces a plat sans manifeste ; le v2 part en lot.
+-De la plume, declares, hors demandes de m2 :
+-  P-1     interface du TP : la sonde ne lit que la liste des couplages
+-          retenus ; sonde = mesure, feuille de lecture = jugement
+-          (H5a, H13).
+-  P-2     G-Q4 a l'ouverture de l'etage 2 ; verdict de l'etage 1 ecrit
+-          par la feuille de lecture (H8, H11a, H11b).
+-  P-3     ce que la plume a vu depuis le v1 : l'essai de m2 a g_8
+-          (H3, H5b).
+-Aucune tolerance ne change ; aucun nombre mesure ne change ; le
+-decompte passe de 540 a 555. Formule de rotation complexe : re-derivee
+-et validee par m2, inchangee.
++Limites propres a cette reprise. (1) Le TP est REGLE (section 4) : sa
++tenue ne dit plus que l'instrument est juste a un reglage choisi a
++l'aveugle ; elle verifie que la sonde certifiee refait ce que le
++diagnostic a vu. (2) Le plus bas temoin est a 5.369e-10 ; cinq des six
++largeurs lues par M17 sont en dessous, d'un facteur 2.5 a 8.2. Le TP
++qualifie la METHODE a 5e-10 et 6e-09 ; c'est la garde G-Q5 -- au plus
++1.330e-13 le 12/11 -- qui porte la PRECISION numerique a l'echelle de
++7e-11, pas le temoin. j = 5 n'est pas ajoute : il faudrait ou relever
++le plafond de u_ref sur une valeur vue, ou refaire et recertifier la
++reference, et ce serait une seconde difference. (3) Au barreau k = 3,
++celui ou M17 lit, le temoin est HORS de son palier a G20 (0.435 et
++0.422 de la largeur connue) et la porte de descente de M17 y refuse le
++temoin : le palier du temoin et le point de lecture de M17 ne
++coincident pas. Rien n'en est deduit pour le fantome ; la consigne
++6 (e) est la pour le lire. (4) Le TN est attendu NON JOUE (5.2) : le
++critere n'a de temoin negatif a taille reelle que la consigne sur les
++barreaux faibles du TP.
++
++## 15. Journal gel v2 -> gel bis v1
++
++Le journal v1 -> v2 du gel v2 se lit dans le gel v2, au registre ; il
++n'est pas recopie. Ce gel = gel v2 (cde0cd11a763f26d) + les hunks
++ci-dessous, a ancre unique (script de construction et diff joints).
++DIFFERENCE DE FOND, une seule :
++  B3    3.6 : l'echelle passe de k = -2 a 12 a k = -5 a 12.
++CONSEQUENCES de B3, sans choix :
++  B7    5.2, premiere phrase : le jeu du TN passe a dix-huit.
++  B9a   8 : decompte 660 (120 + 540) au lieu de 555.
++  B9b   8 : G-Q7 gagne un cas, le plateau au bord fort.
++  B12a  12 : cout, sur les durees mesurees.
++  B12b  12 : rejeu de m1 a dix-huit decompositions, apres l'etage 1.
++ETAT DES LIEUX, rien qui touche un statut :
++  B0, B1  titre et statut : nouveau gel, reprise, dernier essai.
++  B2a   2 : gel v2, delta 94, la nuit, la reference reprise, le
++        diagnostic, le registre a fe10bfe.
++  B2b   2 : le lot de l'etape 0 est au registre.
++  B5    4 : ce que la plume a vu ; le TP est un temoin regle.
++  B6    5.1 : les deux couplages retenus, nommes ; j = 5 hors liste.
++  B7    5.2, suite : le TN est attendu NON JOUE ; consigne sur les
++        barreaux faibles du TP.
++  B11   11 : annonces refaites.
++  B12c  12 : garde-fou, dernier essai.
++  B14   14 : quatre limites propres a la reprise.
++PRECISIONS, sans effet sur un statut :
++  B8    6 (e) : k0 consigne ; "la fenetre contient k = 3" s'en lit.
++  B13a, B13b  13 : ce que QUALIFIE engage pour les nombres de M17,
++        selon la consigne 6 (e) -- question de m2 (note du diagnostic,
++        3 (c)).
++  B15   cette section.
++INSTRUMENT (hors gel, pour memoire). Sonde v3 = v2 + l'echelle et ses
++comptes. Feuille v2 = v1 + les bornes de fenetre, le cas de G-Q7 et
++deux refus a l'entree : gel de la sortie different du sien ; g de la
++sonde different du g de la table (observation O-2 de m2). Banc v3 =
++v2 + l'echelle de ses series.
++NON PRIS. L'echelle decalee k = -6 a 8, d'abord proposee par m1 : elle
++retirait quatre barreaux du gel v2, donc deux differences au lieu
++d'une, et reglait l'echelle du fantome sur le cote faible du temoin.
++j = 5 (section 14). Tout changement du TN.
++Aucune tolerance ne change : tau, 0.90, 1e-12, tau_TP, la fenetre de
++cinq, le plafond de u_ref, la selection des couplages.
+ 

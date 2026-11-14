@@ -1,0 +1,190 @@
+{
+ "acte": "journal_delta_nn_qualification_EB_bis_v1.md",
+ "bilan": {
+  "chk": 34,
+  "mord": 5,
+  "noms": [
+   "C01",
+   "C02",
+   "C04",
+   "C05",
+   "C34"
+  ]
+ },
+ "canon": "c396a00095a0b9e3",
+ "controles": [
+  {
+   "id": "C01",
+   "msg": "acte hors zip == membre du zip, canon c396a00095a0b9e3 (annonce c396a00095a0b9e3)",
+   "ok": false
+  },
+  {
+   "id": "C02",
+   "msg": "16 pieces sur 16 au canon, a l empreinte brute et a la taille ; membres du zip 17 (attendu 17) ; ecarts ['journal_delta_nn_qualification_EB_bis_v1.md'] ; CANON DU LOT ff93d708547f8ec0 (annonce ff93d708547f8ec0) ; manifeste de Downloads identique : True",
+   "ok": false
+  },
+  {
+   "id": "C03",
+   "msg": "45 empreintes distinctes citees dans l acte, resolues chez moi : 45, NON resolues : [] (machine 1 annonce 39 dans son releve C03 : le nombre est a lire, voir C04)",
+   "ok": true
+  },
+  {
+   "id": "C04",
+   "msg": "nn.1 : 39 couples (nom, canon) ; chaque canon resout chez moi vers un fichier de MEME NOM ; couples sans fichier du meme nom : [] ; empreintes distinctes citees dans tout l acte : 45 (releve de machine 1 : 39 : a regarder)",
+   "ok": false
+  },
+  {
+   "id": "C05",
+   "msg": "tete : projet version 1, redaction m1 / contreseing m2 / depot operateur, dernier essai dit dans le titre",
+   "ok": false
+  },
+  {
+   "id": "C06",
+   "msg": "journal du pilote relu : {'DEBUT etage1': '00:52', 'FIN etage1': '02:08', 'FIN etage2': '08:35'} ; durees 4597 s et 23203 s ; les phrases de nn.4 les retrouvent ; aucun ARRET",
+   "ok": true
+  },
+  {
+   "id": "C07",
+   "msg": "plateforme de mon JSON == celle de nn.4 ; la declaration que l acte me prete est celle de ma note (section 1)",
+   "ok": true
+  },
+  {
+   "id": "C08",
+   "msg": "table du temoin positif recalculee de MA sortie (plateau exact en rationnels, ma table de reference) : 10 phrases attendues, absentes de l acte : [] ; accord avec mon verdict_etage1.json : True",
+   "ok": true
+  },
+  {
+   "id": "C09",
+   "msg": "consigne 5.2 : aucune fenetre k0 >= 4 a PLATEAU (True) ; plus petit etalement d une telle fenetre 2.814 (acte : 2.8) ; pire |ln| 0.0015",
+   "ok": true
+  },
+  {
+   "id": "C10",
+   "msg": "gardes de l etage 1 relus dans mon JSON : G-Q5 30 valeurs max 1.330e-13 ; comptes {'TN': {'joues': 3, 'repris': 0, 'sautes': 15}, 'TP': {'joues': 72, 'repris': 0, 'sautes': 0}, 'plancher': {'joues': 30, 'repris': 0, 'sautes': 0}} ; verdict de l etage 1 TIENT motifs []",
+   "ok": true
+  },
+  {
+   "id": "C11",
+   "msg": "les six lignes du tableau de nn.6 (statut, etalement, k0, echecs) et les Gamma_pl recalcules de MES sorties par ma regle de plateau : 12 phrases attendues, absentes : [] ; ecart a ma feuille : 0.00e+00",
+   "ok": true
+  },
+  {
+   "id": "C12",
+   "msg": "denombrement des plateaux et epreuves du point 1.95 recalcules : 6 phrases, absentes [] (G30/G20 0.0148, GT/G20 0.0367, (e) 0.0086)",
+   "ok": true
+  },
+  {
+   "id": "C13",
+   "msg": "G-Q4 au bit True ; comptes {'F1': {'joues': 210, 'repris': 6, 'sautes': 0}, 'formes': {'joues': 216, 'repris': 0, 'sautes': 0}, 'ouverture': {'joues': 6, 'repris': 0, 'sautes': 0}, 'translation': {'joues': 108, 'repris': 0, 'sautes': 0}} ; etat 0 suivi 540/540 ; plus petit recouvrement 0.999999539 ; identite 30 couples, min 1.0000",
+   "ok": true
+  },
+  {
+   "id": "C14",
+   "msg": "T-etats recalcules : E_run 3.7027, somme des c_nu a 2.7e-13 pres, 60 kappa de 1.0000000 a 1.00057, etats a plateau {'39_20': 1, '197_100': 1, '99_50': 0, '101_50': 0, '203_100': 2, '41_20': 2}, S_w lus 0 sur 6",
+   "ok": true
+  },
+  {
+   "id": "C15",
+   "msg": "verdict de ma feuille : NON QUALIFIE ; six points NON QUALIFIES, aucun NON LISIBLE : True",
+   "ok": true
+  },
+  {
+   "id": "C16",
+   "msg": "nn.7 : 10 chiffres recalcules ; ceux que l acte ne porte pas tels que je les recalcule (arrondi de ma valeur entre parentheses) : []",
+   "ok": true
+  },
+  {
+   "id": "C17",
+   "msg": "nn.7 (c) : etat 0 suivi 540/540, plus petit recouvrement 0.999999539",
+   "ok": true
+  },
+  {
+   "id": "C18",
+   "msg": "gel bis dcda1611adf5f8fd : probabilites des annonces egales dans le gel et dans l acte ; comptes recalcules : A-2 True, A-3 0 contre 0, A-4 None, A-5 False, A-6 True, A-7 True sur ['39_20'], A-8 True",
+   "ok": true
+  },
+  {
+   "id": "C19",
+   "msg": "bilan de nn.8 : A-2, A-7, A-8 vraies (A-7 et A-8 sur le seul point 1.95), A-1 : l issue donnee pour la plus probable (QUALIFIE PAR POINT 0.50) ne s est pas produite, celle qui s est produite etait a 0.27 ; la lecture \"annonce principale manquee\" est de m1",
+   "ok": true
+  },
+  {
+   "id": "C20",
+   "msg": "scelle 7fb9026014ad0c93 lu dans le lot ; 180 couples (etat, barreau) memes statuts de suivi : True ; etat 0 pire ecart -4.948e-04 a k=-3 ; barreaux hors 1e-3 : {2: 18, 8: 14, 9: 18, 7: 3} ; plus grand ecart absolu 5.21e-13 ; E_re <= 3.0e-13 ; plus grand Gamma hors tolerance 1.16e-11 ; phrases de nn.9 absentes de l acte : []",
+   "ok": true
+  },
+  {
+   "id": "C21",
+   "msg": "neuf autres etats : 5 tiennent a tous les barreaux ([1, 3, 4, 5, 6]), 4 non ([2, 7, 8, 9])",
+   "ok": true
+  },
+  {
+   "id": "C22",
+   "msg": "plages de Gamma citees pour les etats 2, 7, 8, 9 : retrouvees a un chiffre sur [(2, 'hors'), (7, 'hors'), (8, 'hors'), (9, 'hors')]",
+   "ok": true
+  },
+  {
+   "id": "C23",
+   "msg": "feuille rejouee par machine 1 comparee a MES verdicts : journaux au canon True ; differences hors flottants [] ; flottants differents 27 (etage 1 : 4, etage 2 : 23), ecart relatif max 7.46e-12",
+   "ok": true
+  },
+  {
+   "id": "C24",
+   "msg": "diagnostic contre sonde aux barreaux communs : pire ecart -3.610e-03 en ('j06', 'G30', -2) ; le run donne |ln| 0.0015",
+   "ok": true
+  },
+  {
+   "id": "C25",
+   "msg": "O-BIS-3 : hors manifeste dans mon JSON : ['pt_39_20_f100.zip']",
+   "ok": true
+  },
+  {
+   "id": "C26",
+   "msg": "regles relues dans MES copies des actes 90 a 94 et de mon contreseing du 93 : 25 regles, par piece [8, 4, 3, 3, 3, 4], de 1 a 25 sans trou ; les nouvelles de l acte portent [26, 27, 28] ; la parenthese somme a 25 ; \"vingt-huit candidates\" dans nn.12",
+   "ok": true
+  },
+  {
+   "id": "C27",
+   "msg": "mes quatre notes (certification, resultat, diagnostic, contreseing du 94) : motifs \"regle candidate / verse sous (X)\" trouves : {'POUR_MACHINE1_certification_gel_EB_bis_machine2_v1.md': 0, 'POUR_MACHINE1_resultat_nuit_EB_bis_machine2_v1.md': 0, 'POUR_MACHINE1_diagnostic_TP_echelle_forte_machine2_v1.md': 0, 'POUR_MACHINE1_contreseing_acte_qualification_EB_machine2_v2.md': 0}",
+   "ok": true
+  },
+  {
+   "id": "C28",
+   "msg": "acte 94 (copie du registre, canon 569ccbd0d1adb927) : regles [22, 23, 24, 25]",
+   "ok": true
+  },
+  {
+   "id": "C29",
+   "msg": "citations du gel bis (sections 12 et 13) retrouvees dans le gel : manquantes [] ; dans l acte : manquantes [] ; les trois conditions de m1 au 94, nn.10 (iv), retrouvees dans mon exemplaire de l acte 94 : True",
+   "ok": true
+  },
+  {
+   "id": "C30",
+   "msg": "rapport du plus petit G_run (6.562e-11) au plus grand |Gamma(H+)| de G-Q5 (1.330e-13) : 493.6 ; G_run de 6.562e-11 a 2.661e-09",
+   "ok": true
+  },
+  {
+   "id": "C31",
+   "msg": "canons des quatre lots du canal nn.14 recalcules depuis les manifestes de mes zips : {'762a89e8ad7d498a': True, '4de461538a1b694d': True, 'a01598ec24237921': True, '25276846153bacff': True}",
+   "ok": true
+  },
+  {
+   "id": "C32",
+   "msg": "registre : tete publique fe10bfe, l acte dit fe10bfe (nn.14)",
+   "ok": true
+  },
+  {
+   "id": "C33",
+   "msg": "rappels de nn.2 et nn.3 (decomptes 120 et 540, echelle, lecture de M17 a k = 3, diagnostic k = -6 a -2) retrouves ; decomptes dans le gel bis",
+   "ok": true
+  },
+  {
+   "id": "C34",
+   "msg": "acte ASCII, plus longue ligne 100, ligne de FIN",
+   "ok": false
+  }
+ ],
+ "info": [
+  "tete du registre public lue par git ls-remote : fe10bfe (l acte dit fe10bfe)"
+ ]
+}

@@ -1,0 +1,31 @@
+==========================================================================
+FEUILLE DE LECTURE E-B v2 -- gel dcda1611adf5f8fd -- etage 1
+==========================================================================
+  G-Q7 gamma = c eta                          OK
+  G-Q7 constante                              OK
+  G-Q7 plateau de cinq puis chute lineaire    OK
+  G-Q7 plateau au bord fort (k = -5 a -1) puis chute OK
+  G-Q7 quatre valeurs lisibles                OK
+  G-Q7 borne exacte (20.0 .. 21.0)            OK
+  G-Q7 borne + 1 ulp                          OK
+  G-Q7 accord a tau - 1e-6                    OK
+  G-Q7 accord a tau + 1e-6                    OK
+  G-Q7 accord au TP a tau + u - 1e-6          OK
+  G-Q7 accord au TP a tau + u + 1e-6          OK
+  G-Q7 selection du gel sur une table         OK
+  G-Q7 plancher : 1e-12 non lisible           OK
+  G-Q7 non suivi non lisible                  OK
+G-Q7 selftest : 14 tenus sur 14
+G-Q5 plancher : 30 valeurs (attendu 30), max |Gamma(H+)| = 1.330e-13, seuil 1e-12
+TP selection : sonde [6, 8] ; reference [6, 8] ; rejouee par la regle du gel sur la table [6, 8]
+TP j06 g = 0.08409 F1G20 : PLATEAU Gamma_pl 5.3767e-10 etalement 0.0032 k0 -5 ; Gamma_ref 5.3688e-10 u_ref 2.1e-03 ; |ln| = 0.0015 contre 0.0521 : TIENT
+TP j06 g = 0.08409 F1G30 : PLATEAU Gamma_pl 5.3762e-10 etalement 0.0061 k0 -4 ; Gamma_ref 5.3688e-10 u_ref 2.1e-03 ; |ln| = 0.0014 contre 0.0521 : TIENT
+TP j08 g = 0.10000 F1G20 : PLATEAU Gamma_pl 6.4312e-09 etalement 0.0022 k0 -5 ; Gamma_ref 6.4279e-09 u_ref 1.6e-04 ; |ln| = 0.0005 contre 0.0502 : TIENT
+TP j08 g = 0.10000 F1G30 : PLATEAU Gamma_pl 6.4277e-09 etalement 0.0004 k0 -5 ; Gamma_ref 6.4279e-09 u_ref 1.6e-04 ; |ln| = 0.0000 contre 0.0502 : TIENT
+TN candidat 0 [50, 25] : AUCUNE FENETRE
+TN candidat 1 [55, 27] : AUCUNE FENETRE
+TN candidat 2 [45, 22] : AUCUNE FENETRE
+TN : NON JOUE
+VERDICT DE L'ETAGE 1 : TIENT []
+feuille lecture_qualification_EB_machine1_v2.py canon c14dafffc5f84c97 (relue du disque)
+CE QUE CE LOG NE JOUE PAS : aucune decomposition, aucune mesure.

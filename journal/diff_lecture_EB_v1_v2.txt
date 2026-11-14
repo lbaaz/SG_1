@@ -1,0 +1,61 @@
+--- lecture_qualification_EB_machine1_v1.py
++++ lecture_qualification_EB_machine1_v2.py
+@@ -1,4 +1,7 @@
+ # -*- coding: ascii -*-
+-# FEUILLE DE LECTURE DE LA QUALIFICATION E-B -- machine 1, v1
+-# gel E-B v2 cde0cd11a763f26d. CLASSE 2. Elle JUGE et ne mesure pas : aucune
++# FEUILLE DE LECTURE DE LA QUALIFICATION E-B -- machine 1, v2
++# v2 = v1 (b3ac958a1a2b915b) + l'echelle du gel bis (bornes de fenetre, un
++# cas de G-Q7) + deux refus a l'entree (gel de la sortie ; g de la sonde
++# contre g de la table, observation O-2 de m2). Aucun seuil ne change.
++# gel E-B bis v1 dcda1611adf5f8fd. CLASSE 2. Elle JUGE et ne mesure pas : aucune
+ # decomposition, aucun moteur. Routine de plateau (3.11, rationnels exacts),
+@@ -8,3 +11,4 @@
+ 
+-CANON_GEL = "cde0cd11a763f26d"
++CANON_GEL = "dcda1611adf5f8fd"
++K_MIN, K_MAX = -5, 12                      # echelle du gel bis, 3.6
+ TAU = Fraction(1, 20)
+@@ -50,3 +54,3 @@
+     best = None
+-    for k0 in range(-2, 9):
++    for k0 in range(K_MIN, K_MAX - 3):
+         v = [ser.get(k) for k in range(k0, k0 + 5)]
+@@ -90,3 +94,3 @@
+     """G-Q7. Rend (ok, lignes)."""
+-    eta = {k: 0.05 * 2.0 ** (-k) for k in range(-2, 13)}
++    eta = {k: 0.05 * 2.0 ** (-k) for k in range(K_MIN, K_MAX + 1)}
+     T = []
+@@ -103,2 +107,6 @@
+       ("PLATEAU", 2))
++    f = {k: (2e-10 if k <= -1 else 2e-10 * eta[k] / eta[-1]) for k in eta}
++    p = plateau(f)
++    t("plateau au bord fort (k = -5 a -1) puis chute",
++      (p["statut"], p.get("k0")), ("PLATEAU", -5))
+     q = {k: None for k in eta}
+@@ -328,3 +336,3 @@
+     dire("=" * 74)
+-    dire("FEUILLE DE LECTURE E-B v1 -- gel %s -- etage %d" % (CANON_GEL, a.etage))
++    dire("FEUILLE DE LECTURE E-B v2 -- gel %s -- etage %d" % (CANON_GEL, a.etage))
+     dire("=" * 74)
+@@ -335,2 +343,13 @@
+         ref = json.load(open(a.reference))
++        if s1.get("gel") != CANON_GEL:
++            dire("LECTURE REFUSEE : la sortie de la sonde porte le gel %s,"
++                 " cette feuille juge le gel %s" % (s1.get("gel"), CANON_GEL))
++            sys.exit(2)
++        gt = {r["j"]: r["g"] for r in ref["balayage"]}
++        for cle in sorted(s1["TP"]):
++            if gt.get(s1["TP"][cle]["j"]) != s1["TP"][cle]["g"]:
++                dire("LECTURE REFUSEE (O-2) : a %s le g de la sonde (%r) n'est"
++                     " pas celui de la table (%r)" % (
++                         cle, s1["TP"][cle]["g"], gt.get(s1["TP"][cle]["j"])))
++                sys.exit(2)
+         if s1.get("prevol"):
+@@ -348,2 +367,6 @@
+         s2 = json.load(open(f2)) if os.path.exists(f2) else None
++        if s2 is not None and s2.get("gel") != CANON_GEL:
++            dire("LECTURE REFUSEE : la sortie de l'etage 2 porte le gel %s,"
++                 " cette feuille juge le gel %s" % (s2.get("gel"), CANON_GEL))
++            sys.exit(2)
+         if s2 is None or v1.get("etage1") != "TIENT":

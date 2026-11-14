@@ -1,0 +1,61 @@
+--- journal_delta_nn_qualification_EB_bis_v1.md
++++ journal_delta_nn_qualification_EB_bis_v2.md
+@@ -9,3 +9,3 @@
+ CETTE FORME
+-(redaction machine 1, contreseing machine 2, depot operateur, 2026-11-13) -- PROJET, VERSION 1
++(redaction machine 1, contreseing machine 2, depot operateur, 2026-11-13) -- PROJET, VERSION 2
+ =======================================================================
+@@ -127,3 +127,9 @@
+   pendant le run un calcul hors chaine sans rapport avec ces donnees (une note de litterature, non
+-  jointe, non citee). Rien d'autre.
++  jointe, non citee). Apres la nuit, et apres la remise du projet v1 de cet acte a l'operateur,
++  machine 1 a joue aussi, hors chaine, classe 3, post hoc, une plume, non contresigne : des
++  diagonalisations du H 2D aux six points de M17 (lot 2b211d51fb8eb3f0) et une seconde note de
++  lecture avec son jouet (lot e58d01567a46b86a, qui porte aussi la note de litterature de la
++  nuit). Ces calculs ne relisent aucun fichier de sortie de la nuit ; ils en reprennent un nombre,
++  le plancher du jumeau 1.330e-13 (nn.5), comme seuil de lecture (dix planchers), et la note du
++  premier lot cite le verdict de la nuit. L'acte n'en tire rien.
+ 
+@@ -205,3 +211,4 @@
+   (d) G20 et G30 coincident a 0.0028 pres de k = -5 a k = 2 aux six points (pire : 2.03) et se
+-      separent ensuite : a k = 4, de 0.011 a 0.097. G30 a un plateau a cinq points, G20 a un seul.
++      separent ensuite : a k = 4, de 0.011 a 0.097 (ecarts lus comme |G20/G30 - 1|). G30 a un
++      plateau a cinq points, G20 a un seul.
+   (e) Les fenetres retenues partent de k0 = -2 a 2. Etalements hors plateau a moins de 0.06 : 4 --
+@@ -279,5 +286,9 @@
+     diagnostic different de 3.6e-03 au plus (j = 6, G30, k = -2) -- plus que l'ecart entre machines
+-    sur le meme code. Cause non recherchee. L'essai a blanc de machine 1 joint au lot du gel bis,
+-    fait sur les valeurs du diagnostic, donnait |ln| <= 0.0012 ; le run donne 0.0015. Sans effet :
+-    le seuil est a plus de 0.05.
++    sur le meme code. Cause trouvee par machine 2 (lot du contreseing 05f8eed219631f63) : le nombre
++    de fils BLAS. Sur la meme matrice, 16 fils (defaut) rendent la valeur de la sonde, 4 fils celle
++    du diagnostic, a treize chiffres ; 2 fils en rendent une troisieme. Machine 1 a lu les deux
++    journaux et retrouve les deux valeurs dans ses copies de la sonde et du diagnostic ; elle n'a
++    pas rejoue. L'essai a blanc de machine 1 joint au lot du gel bis, fait sur les valeurs du
++    diagnostic, donnait |ln| <= 0.0012 ; le run donne 0.0015. Sans effet : le seuil est a plus de
++    0.05.
+   O-BIS-3 (m2, declare). Le dossier du run de BOCAL4 contient un fichier hors manifeste
+@@ -328,3 +339,6 @@
+   762a89e8ad7d498a ; certification du gel bis 4de461538a1b694d ; resultat de la nuit
+-  a01598ec24237921. Machine 1 -- gel bis et instrument 25276846153bacff ; cet acte. Le lot de
++  a01598ec24237921. Machine 1 -- gel bis et instrument 25276846153bacff ; cet acte. Depuis le
++  projet v1, le 13/11 : machine 1, hors chaine, remis a l'operateur -- la chaine E-A par etat
++  2b211d51fb8eb3f0, l'envoi et les notes de lecture e58d01567a46b86a ; machine 2 -- contreseing du
++  projet v1 05f8eed219631f63, rejeu hors chaine de la chaine E-A df01461fc9b2b099. Le lot de
+   certification est arrive deux fois a machine 1, verifie identique a l'octet, sans effet. Le
+@@ -344,3 +358,3 @@
+ nn.16 PIECES DE CE DELTA (lot machine 1 ; canon = convention B du manifeste)
+-  journal_delta_nn_qualification_EB_bis_v1.md           cet acte
++  journal_delta_nn_qualification_EB_bis_v2.md           cet acte
+   ecrire_acte_qualification_EB_bis_machine1_v1.py       le script qui pose nombres et canons
+@@ -354,4 +368,9 @@
+   fabrique_lot_acte_EB_bis_machine1_v1.py               la fabrique du lot
++  Version 2 : le projet v1 (c396a00095a0b9e3) plus huit hunks poses par
++  construction_acte_qualification_EB_bis_v2_machine1_v1.py ; quatre repondent au contreseing de
++  machine 2 (M-1 en nn.4 et nn.14, R-1 en nn.7, R-3 en nn.10), quatre sont de forme (version,
++  nom de l'acte, ce paragraphe, ligne de fin). Le diff et le releve de la v2 sont au lot de la v2 ;
++  les autres pieces ci-dessus sont celles du lot ff93d708547f8ec0, inchangees.
+   Perimetre : la feuille du contresignataire, sur ce texte ; les entrants sont ceux de nn.1.
+ 
+--- FIN journal_delta_nn_qualification_EB_bis_v1 --
++-- FIN journal_delta_nn_qualification_EB_bis_v2 --

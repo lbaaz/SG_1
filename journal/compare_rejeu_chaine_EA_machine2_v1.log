@@ -1,0 +1,22 @@
+REJEU machine 2 de comparaison_par_etat_machine1_v1.py (4eaef82543e4f76f) contre les journaux A et B de machine 1
+  39/20    rangs et etiquettes identiques : True ; etat lu (7,2) ; marge rang 0 / rang 1 : m1 1.0338, m2 1.0338 ; 12 etats au-dessus du seuil
+  197/100  rangs et etiquettes identiques : True ; etat lu (7,2) ; marge rang 0 / rang 1 : m1 1.0129, m2 1.0129 ; 12 etats au-dessus du seuil
+  99/50    rangs et etiquettes identiques : True ; etat lu (7,2) ; marge rang 0 / rang 1 : m1 1.0026, m2 1.0026 ; 12 etats au-dessus du seuil
+  101/50   rangs et etiquettes identiques : True ; etat lu (7,2) ; marge rang 0 / rang 1 : m1 1.0308, m2 1.0308 ; 12 etats au-dessus du seuil
+  203/100  rangs et etiquettes identiques : True ; etat lu (7,2) ; marge rang 0 / rang 1 : m1 1.0190, m2 1.0190 ; 12 etats au-dessus du seuil
+  41/20    rangs et etiquettes identiques : True ; etat lu (8,2) ; marge rang 0 / rang 1 : m1 1.0043, m2 1.0043 ; 12 etats au-dessus du seuil
+(1) etat lu different : AUCUN : memes rangs, memes etiquettes, memes marges aux six points
+(2) 72 etats-points au-dessus du seuil ; chaine/2D de 0.499 a 1.626 chez moi, de 0.499 a 1.642 chez machine 1 ; hors [0.50, 1.64] : [('39/20', '(10,3)', 0.499)]
+(3) plus grand ecart-type de J sur ces etats : 0.115 (regle : 0.2)
+Gamma_2D machine 1 / machine 2 : 60 etats au-dessus de 1e-11, ecart relatif max 1.32e-03
+Gamma_2D machine 1 / machine 2 : 48 etats au-dessus de 1e-10, ecart relatif max 9.41e-04
+Gamma_2D machine 1 / machine 2 : 41 etats au-dessus de 1e-09, ecart relatif max 0.00e+00
+plus grand ecart absolu Gamma_2D, tous les etats : 1.00e-13
+
+BISSECTION (resonant seul), mon rejeu de bissection_chaine_2D_machine1_v2.py contre le journal de machine 1 :
+  (39/20 : pas de ligne "complet" dans le journal de bissection de machine 1 ; je prends le Gamma_2D lu, rang 0, du journal A)
+  39/20   complet m2 2.1623e-10 (m1 2.1620e-10) ; resonant m2 1.8639e-10 (m1 1.8640e-10) ; complet / resonant : m2 1.160, m1 1.160
+  101/50  complet m2 6.6680e-11 (m1 6.6635e-11) ; resonant m2 7.7082e-11 (m1 7.7084e-11) ; complet / resonant : m2 0.865, m1 0.864
+  41/20   complet m2 2.6651e-09 (m1 2.6652e-09) ; resonant m2 4.3645e-09 (m1 4.3646e-09) ; complet / resonant : m2 0.611, m1 0.611
+
+CE QUE CE LOG NE JOUE PAS : aucune decomposition, aucune mesure ; il relit des journaux.

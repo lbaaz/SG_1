@@ -1,0 +1,30 @@
+1. LES SIX CANONS NOUVEAUX DE LA v2, RECALCULES DE PIECES QUE JE DETIENS
+   2b211d51fb8eb3f0  MANIFEST_lot_machine1_chaine_EA_par_etat_v1.txt  -> TIENT
+   e58d01567a46b86a  MANIFEST_lot_machine1_envoi_chaine_et_lectures_v1.txt  -> TIENT
+   05f8eed219631f63  MANIFEST_lot_machine2_contreseing_acte_nn_EB_bis_v1.txt  -> TIENT
+   df01461fc9b2b099  MANIFEST_lot_machine2_rejeu_chaine_EA_par_etat_v1.txt  -> TIENT
+   c396a00095a0b9e3  journal_delta_nn_qualification_EB_bis_v1.md  -> TIENT
+   ff93d708547f8ec0  MANIFEST_lot_machine1_acte_qualification_EB_bis_v1.txt (dans le zip du lot de machine 1)  -> TIENT
+
+2. nn.4 : "ces calculs ne relisent aucun fichier de sortie de la nuit ; ils en reprennent un nombre, le plancher du jumeau 1.330e-13, comme seuil (dix planchers)"
+   note_machine1_chaine_EA_par_etat_2026-11-13_v1.md            references a la nuit : []                             seuil 1.33e-12 : True
+   comparaison_par_etat_machine1_v1.py                          references a la nuit : []                             seuil 1.33e-12 : True
+   chaine_second_ordre_machine1_v1.py                           references a la nuit : []                             seuil 1.33e-12 : True
+   POUR_MACHINE2_chaine_EA_par_etat_machine1_v1.md              references a la nuit : []                             seuil 1.33e-12 : True
+   (aucun script ne nomme un fichier de sortie de la nuit ; les deux scripts qui portent 1.33e-12 le portent comme constante litterale)
+
+3. DATES DES PIECES DANS LES ZIP DE MACHINE 1 (heure locale de leur conteneur, telle qu'ecrite dans le zip)
+   lot_machine1_2026-11-13_acte_qualification_EB_bis_v1_recu.zip : de 2026-11-13 08:57 (MANIFEST_lot_machine1_acte_qualification_EB_bis_v1.txt) a 2026-11-13 08:57 (releve_acte_qualification_EB_bis_machine1_v1.py)
+   lot_machine1_2026-11-13_chaine_EA_par_etat_v1_recu.zip : de 2026-11-13 10:33 (lire_m17_EA_EB_machine1_v1.py) a 2026-11-13 10:59 (fabrique_lot_machine1_v1.py)
+   lot_machine1_2026-11-13_envoi_chaine_et_lectures_v1_recu.zip : de 2026-11-13 09:45 (jouet_ile_cherry_quantique_machine1_v1.py) a 2026-11-13 19:35 (note_apports_litterature_2026-11-13_v1.md)
+      2026-11-13 19:12  POUR_MACHINE2_chaine_EA_par_etat_machine1_v1.md
+      2026-11-13 19:11  predictions_chaine_points_neufs_machine1_v1.py
+      2026-11-13 19:11  predictions_chaine_points_neufs_machine1_v1.log
+      2026-11-13 09:48  note_lecture_modes_energie_negative_2026-11-13_v1.md
+      2026-11-13 09:45  jouet_ile_cherry_quantique_machine1_v1.py
+      2026-11-13 09:45  jouet_ile_cherry_quantique_machine1_v1.log
+      2026-11-13 19:35  note_apports_litterature_2026-11-13_v1.md
+      2026-11-13 19:35  controle_MN_habillage_machine1_v1.py
+      2026-11-13 19:35  controle_MN_habillage_machine1_v1.log
+      2026-11-13 10:59  fabrique_lot_machine1_v1.py
+   note_apports_litterature (piece datee de 19:35) : dit "(e)crite pendant le run" : True ; dit "Ne contient rien du run" : True ; cite controle_MN_habillage_machine1_v1.py (piece datee de 19:35) en son paragraphe 2 : True
