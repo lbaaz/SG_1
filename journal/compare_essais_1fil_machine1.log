@@ -1,0 +1,12 @@
+plateformes : machine2_1fil {'MKL_NUM_THREADS': '1', 'OMP_NUM_THREADS': '1', 'OPENBLAS_NUM_THREADS': '1'} | machine1 {'MKL_NUM_THREADS': None, 'OMP_NUM_THREADS': None, 'OPENBLAS_NUM_THREADS': '1'}
+== A1 : g 1.815737e-03/1.815737e-03 r_c 40/40 N 60/60 graine (7.5943,2.5683)/(7.5943,2.5683)
+   rang  2 (6,2) G3 7.3443e-12 / 7.3844e-12  rel 5.43e-03  abs 4.01e-14 ; G2 7.5378e-12/7.4652e-12 ; G4 6.5704e-12/6.5818e-12
+   rang  8 (7,1) G3 6.4401e-12 / 6.4605e-12  rel 3.16e-03  abs 2.04e-14 ; G2 6.5205e-12/6.5205e-12 ; G4 6.1738e-12/6.1614e-12
+   rang  9 (5,2) G3 1.3534e-13 / 2.1551e-13  rel 3.72e-01  abs 8.02e-14 ; G2 2.1287e-13/1.5704e-13 ; G4 1.9874e-13/1.6616e-13
+   rang 10 (6,1) G3 1.8165e-13 / 2.0091e-13  rel 9.59e-02  abs 1.93e-14 ; G2 2.6361e-13/1.8851e-13 ; G4 1.9163e-13/1.7613e-13
+== A2 : g 2.634488e-03/2.634488e-03 r_c 41/41 N 61/61 graine (8.4774,2.5683)/(8.4774,2.5683)
+   rang  4 (6,2) G3 4.2973e-12 / 4.3097e-12  rel 2.88e-03  abs 1.24e-14 ; G2 4.4053e-12/4.4300e-12 ; G4 4.2678e-12/4.2953e-12
+   rang  5 (7,1) G3 3.7326e-12 / 3.7169e-12  rel 4.22e-03  abs 1.57e-14 ; G2 3.7723e-12/3.7472e-12 ; G4 3.4948e-12/3.5437e-12
+   rang 10 (6,1) G3 1.2083e-13 / 8.9181e-14  rel 3.55e-01  abs 3.17e-14 ; G2 9.2288e-14/1.8475e-13 ; G4 1.1568e-13/1.0136e-13
+   rang 13 (5,2) G3 1.1615e-13 / 1.0548e-13  rel 1.01e-01  abs 1.07e-14 ; G2 1.5382e-13/1.2995e-13 ; G4 1.4490e-13/1.0562e-13
+BILAN : 28 etats, 0 etiquettes differentes ; ecart absolu max de Gamma_2D (k = 2, 3, 4) 1.72e-13 ; relatif max 1.00e+00 ; relatif max au-dessus de 1e-10 9.63e-04 ; chaine : ecart relatif max 2.40e-01

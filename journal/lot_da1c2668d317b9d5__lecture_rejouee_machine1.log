@@ -1,0 +1,199 @@
+  TIENT  S000 base : tout a q2 = 1.05, q1 = 0.7, energie a 1e-3                     attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S001 base : une ancre est lue sans borne                                   attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S002 base : l'autre ancre aussi                                            attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S003 base : le second temoin aussi                                         attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S101 C1 : un etat a q2 = borne x 1.01 : le point tombe                     attendu L'ORDRE 2 NE TIENT PAS ; rendu L'ORDRE 2 NE TIENT PAS
+  TIENT  S201 C1 : un etat a q2 = borne x 0.99 : le point tient                     attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S301 C1 : un etat a q2 = 1 / (borne x 1.01) : le point tombe               attendu L'ORDRE 2 NE TIENT PAS ; rendu L'ORDRE 2 NE TIENT PAS
+  TIENT  S401 C1 : un etat a q2 = 1 / (borne x 0.99) : le point tient               attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S102 C2 : un etat a q2 = borne x 1.01 : le point tombe                     attendu L'ORDRE 2 NE TIENT PAS ; rendu L'ORDRE 2 NE TIENT PAS
+  TIENT  S202 C2 : un etat a q2 = borne x 0.99 : le point tient                     attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S302 C2 : un etat a q2 = 1 / (borne x 1.01) : le point tombe               attendu L'ORDRE 2 NE TIENT PAS ; rendu L'ORDRE 2 NE TIENT PAS
+  TIENT  S402 C2 : un etat a q2 = 1 / (borne x 0.99) : le point tient               attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S103 C3 : un etat a q2 = borne x 1.01 : le point tombe                     attendu L'ORDRE 2 NE TIENT PAS ; rendu L'ORDRE 2 NE TIENT PAS
+  TIENT  S203 C3 : un etat a q2 = borne x 0.99 : le point tient                     attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S303 C3 : un etat a q2 = 1 / (borne x 1.01) : le point tombe               attendu L'ORDRE 2 NE TIENT PAS ; rendu L'ORDRE 2 NE TIENT PAS
+  TIENT  S403 C3 : un etat a q2 = 1 / (borne x 0.99) : le point tient               attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S104 C4 : un etat a q2 = borne x 1.01 : le point tombe                     attendu L'ORDRE 2 NE TIENT PAS ; rendu L'ORDRE 2 NE TIENT PAS
+  TIENT  S204 C4 : un etat a q2 = borne x 0.99 : le point tient                     attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S304 C4 : un etat a q2 = 1 / (borne x 1.01) : le point tombe               attendu L'ORDRE 2 NE TIENT PAS ; rendu L'ORDRE 2 NE TIENT PAS
+  TIENT  S404 C4 : un etat a q2 = 1 / (borne x 0.99) : le point tient               attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S105 M1 : un etat a q2 = borne x 1.01 : le point tombe                     attendu L'ORDRE 2 TIENT JUSQU'A 0.06 ; rendu L'ORDRE 2 TIENT JUSQU'A 0.06
+  TIENT  S205 M1 : un etat a q2 = borne x 0.99 : le point tient                     attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S305 M1 : un etat a q2 = 1 / (borne x 1.01) : le point tombe               attendu L'ORDRE 2 TIENT JUSQU'A 0.06 ; rendu L'ORDRE 2 TIENT JUSQU'A 0.06
+  TIENT  S405 M1 : un etat a q2 = 1 / (borne x 0.99) : le point tient               attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S106 M2 : un etat a q2 = borne x 1.01 : le point tombe                     attendu L'ORDRE 2 TIENT JUSQU'A 0.06 ; rendu L'ORDRE 2 TIENT JUSQU'A 0.06
+  TIENT  S206 M2 : un etat a q2 = borne x 0.99 : le point tient                     attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S306 M2 : un etat a q2 = 1 / (borne x 1.01) : le point tombe               attendu L'ORDRE 2 TIENT JUSQU'A 0.06 ; rendu L'ORDRE 2 TIENT JUSQU'A 0.06
+  TIENT  S406 M2 : un etat a q2 = 1 / (borne x 0.99) : le point tient               attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S107 M3 : un etat a q2 = borne x 1.01 : le point tombe                     attendu L'ORDRE 2 TIENT JUSQU'A 0.06 ; rendu L'ORDRE 2 TIENT JUSQU'A 0.06
+  TIENT  S207 M3 : un etat a q2 = borne x 0.99 : le point tient                     attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S307 M3 : un etat a q2 = 1 / (borne x 1.01) : le point tombe               attendu L'ORDRE 2 TIENT JUSQU'A 0.06 ; rendu L'ORDRE 2 TIENT JUSQU'A 0.06
+  TIENT  S407 M3 : un etat a q2 = 1 / (borne x 0.99) : le point tient               attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S108 M4 : un etat a q2 = borne x 1.01 : le point tombe                     attendu L'ORDRE 2 TIENT JUSQU'A 0.06 ; rendu L'ORDRE 2 TIENT JUSQU'A 0.06
+  TIENT  S208 M4 : un etat a q2 = borne x 0.99 : le point tient                     attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S308 M4 : un etat a q2 = 1 / (borne x 1.01) : le point tombe               attendu L'ORDRE 2 TIENT JUSQU'A 0.06 ; rendu L'ORDRE 2 TIENT JUSQU'A 0.06
+  TIENT  S408 M4 : un etat a q2 = 1 / (borne x 0.99) : le point tient               attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S109 L1 : un etat a q2 = borne x 1.01 : le point tombe                     attendu L'ORDRE 2 TIENT JUSQU'A 0.10 ; rendu L'ORDRE 2 TIENT JUSQU'A 0.10
+  TIENT  S209 L1 : un etat a q2 = borne x 0.99 : le point tient                     attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S309 L1 : un etat a q2 = 1 / (borne x 1.01) : le point tombe               attendu L'ORDRE 2 TIENT JUSQU'A 0.10 ; rendu L'ORDRE 2 TIENT JUSQU'A 0.10
+  TIENT  S409 L1 : un etat a q2 = 1 / (borne x 0.99) : le point tient               attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S110 L2 : un etat a q2 = borne x 1.01 : le point tombe                     attendu L'ORDRE 2 TIENT JUSQU'A 0.10 ; rendu L'ORDRE 2 TIENT JUSQU'A 0.10
+  TIENT  S210 L2 : un etat a q2 = borne x 0.99 : le point tient                     attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S310 L2 : un etat a q2 = 1 / (borne x 1.01) : le point tombe               attendu L'ORDRE 2 TIENT JUSQU'A 0.10 ; rendu L'ORDRE 2 TIENT JUSQU'A 0.10
+  TIENT  S410 L2 : un etat a q2 = 1 / (borne x 0.99) : le point tient               attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S111 L3 : un etat a q2 = borne x 1.01 : le point tombe                     attendu L'ORDRE 2 TIENT JUSQU'A 0.10 ; rendu L'ORDRE 2 TIENT JUSQU'A 0.10
+  TIENT  S211 L3 : un etat a q2 = borne x 0.99 : le point tient                     attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S311 L3 : un etat a q2 = 1 / (borne x 1.01) : le point tombe               attendu L'ORDRE 2 TIENT JUSQU'A 0.10 ; rendu L'ORDRE 2 TIENT JUSQU'A 0.10
+  TIENT  S411 L3 : un etat a q2 = 1 / (borne x 0.99) : le point tient               attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S112 L4 : un etat a q2 = borne x 1.01 : le point tombe                     attendu L'ORDRE 2 TIENT JUSQU'A 0.10 ; rendu L'ORDRE 2 TIENT JUSQU'A 0.10
+  TIENT  S212 L4 : un etat a q2 = borne x 0.99 : le point tient                     attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S312 L4 : un etat a q2 = 1 / (borne x 1.01) : le point tombe               attendu L'ORDRE 2 TIENT JUSQU'A 0.10 ; rendu L'ORDRE 2 TIENT JUSQU'A 0.10
+  TIENT  S412 L4 : un etat a q2 = 1 / (borne x 0.99) : le point tient               attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S501 marge : a Gamma_2D = 2e-12, q2 = 1.25 x 1.05 reste dans la borne      attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S502 marge : a Gamma_2D = 2e-12, q2 = 1.25 x 1.08 en sort                  attendu L'ORDRE 2 NE TIENT PAS ; rendu L'ORDRE 2 NE TIENT PAS
+  TIENT  S503 marge : a Gamma_2D = 2e-12, q2 = 0.95 / 1.25 reste dans la borne      attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S504 marge : a Gamma_2D = 2e-12, q2 = 0.92 / 1.25 en sort                  attendu L'ORDRE 2 NE TIENT PAS ; rendu L'ORDRE 2 NE TIENT PAS
+  TIENT  S505 marge : a Gamma_2D = 1e-9 elle ne joue pas (q2 = 1.25 x 1.001 sort)   attendu L'ORDRE 2 NE TIENT PAS ; rendu L'ORDRE 2 NE TIENT PAS
+  TIENT  S506 sans marge : a la base, meme verdict et aucun etat garde              attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S507 sans marge : l'etat garde par le haut est nomme, la borne nue l'aurait sorti attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S508 sans marge : l'etat garde par le bas, en bande moyenne                attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S509 sans marge : un etat hors des deux bornes n'est pas dit garde         attendu L'ORDRE 2 TIENT JUSQU'A 0.10 ; rendu L'ORDRE 2 TIENT JUSQU'A 0.10
+  TIENT  S510 sans marge : deux etats gardes en bande lointaine                     attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S511 moyenne et lointaine tombees : tient jusqu'a 0.06                     attendu L'ORDRE 2 TIENT JUSQU'A 0.06 ; rendu L'ORDRE 2 TIENT JUSQU'A 0.06
+  TIENT  S512 proche tombee : ne tient pas, quoi que fassent les autres             attendu L'ORDRE 2 NE TIENT PAS ; rendu L'ORDRE 2 NE TIENT PAS
+  TIENT  S513 palier atteint : q2 = 1.5 a un point de la bande lointaine            attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S514 palier atteint : q2 = 1.9                                             attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S515 palier atteint : q2 = 2.5, aucun                                      attendu L'ORDRE 2 TIENT JUSQU'A 0.10 ; rendu L'ORDRE 2 TIENT JUSQU'A 0.10
+  TIENT  S516 palier atteint a la base : 1.25                                       attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S521 cinq etats juges en C1 : point NON LISIBLE, trois lisibles suffisent  attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S522 six etats juges en C1 : point lisible                                 attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S523 deux points illisibles en bande proche : NON LISIBLE                  attendu NON LISIBLE ; rendu NON LISIBLE
+  TIENT  S524 deux points illisibles en bande moyenne : tient jusqu'a 0.06          attendu L'ORDRE 2 TIENT JUSQU'A 0.06 ; rendu L'ORDRE 2 TIENT JUSQU'A 0.06
+  TIENT  S525 deux points illisibles en bande lointaine : tient jusqu'a 0.10        attendu L'ORDRE 2 TIENT JUSQU'A 0.10 ; rendu L'ORDRE 2 TIENT JUSQU'A 0.10
+  TIENT  S526 point infaisable : NON LISIBLE au point                               attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S527 un point illisible qui serait tombe ne pese pas                       attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S531 temoin W1 tout a q2 = 5 : ne pese pas                                 attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S532 temoin W2 a l'energie fausse et pas mieux : ne pese pas               attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S533 temoin W2 absent : la lecture se fait                                 attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S534 les deux temoins absents                                              attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S535 temoin W2 infaisable                                                  attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S536 les autres etats d'une ancre a q2 = 50 : ne pese pas                  attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S541 M1 tout a q1 = 1.02 : pas mieux, le verdict n'est pas touche          attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S542 egalite des pires ecarts : pas mieux (inegalite stricte)              attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S543 un seul etat a q1 = 0.5, les autres a 1.0 : le pire etat decide, mieux attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S544 un seul etat a q2 = 1.5 en M1 : pire ordre 2 au-dessus du pire ordre 1 attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S545 le pire etat vers le bas compte aussi : q2 = 0.68 contre q1 = 0.7     attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S546 un point illisible ne pese pas dans la comparaison                    attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S551 un etat a 1.1 pour cent en L3 : l'energie ne tient pas, le verdict n'est pas touche attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S552 un etat a 0.9 pour cent : tenue                                       attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S553 un etat a moins 1.1 pour cent : non tenue                             attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S554 decalage 2D negatif : l'ecart se lit en valeur absolue                attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S555 decalage 2D nul : non tenue                                           attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S556 E_re deplace de 1e-4 sur un decalage de 2e-3 : non tenue              attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S557 dE lu au troisieme barreau                                            attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S558 decalage 2D negatif et ecart de 1.1 pour cent : non tenue             attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S601 J flou exclu (ecart-type 0.3)                                         attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S602 J flou au bord : 0.2 exactement exclu                                 attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S603 J net : 0.19 juge, le point tombe                                     attendu L'ORDRE 2 NE TIENT PAS ; rendu L'ORDRE 2 NE TIENT PAS
+  TIENT  S604 etiquette n2 = -1 exclue                                              attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S605 etiquette n1 = -1 exclue                                              attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S606 site minoritaire exclu (0.49)                                         attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S607 site au bord : 0.5 juge, le point tombe                               attendu L'ORDRE 2 NE TIENT PAS ; rendu L'ORDRE 2 NE TIENT PAS
+  TIENT  S608 sous dix planchers exclu (1.2e-12)                                    attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S609 dix planchers exactement (1.33e-12) exclu                             attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S610 juste au-dessus (1.34e-12) juge, le point tombe                       attendu L'ORDRE 2 NE TIENT PAS ; rendu L'ORDRE 2 NE TIENT PAS
+  TIENT  S611 etat non suivi exclu (0.85 a k = 4)                                   attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S612 etat non suivi exclu (0.85 a k = 2)                                   attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S613 suivi au bord : 0.9 juge, le point tombe                              attendu L'ORDRE 2 NE TIENT PAS ; rendu L'ORDRE 2 NE TIENT PAS
+  TIENT  S614 cible instable exclue (rapport 2.1 par k = 2)                         attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S615 cible instable par k = 4 seul                                         attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S616 cible au bord : rapport 2 exactement juge                             attendu L'ORDRE 2 NE TIENT PAS ; rendu L'ORDRE 2 NE TIENT PAS
+  TIENT  S617 cible a valeur nulle exclue                                           attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S618 cible a valeur negative exclue                                        attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S619 barriere vide exclue                                                  attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S620 chaine du moteur non definie exclue                                   attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S621 chaine du moteur en erreur exclue                                     attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S622 chaine du moteur instable exclue                                      attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S623 chaine du moteur a valeur nulle exclue                                attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S624 chaine du moteur a valeur negative exclue                             attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S625 ordre 2 en erreur exclu                                               attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S626 ordre 2 non defini exclu                                              attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S627 ordre 2 instable exclu (dernier barreau)                              attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S628 ordre 2 instable par le premier barreau seul                          attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S629 ordre 2 a valeur nulle exclu                                          attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S630 ordre 2 a valeur negative exclu                                       attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S631 ordre 2 au bord : etalement 2 exactement juge, le point tombe         attendu L'ORDRE 2 NE TIENT PAS ; rendu L'ORDRE 2 NE TIENT PAS
+  TIENT  S632 etiquette en double : les deux exclus                                 attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S633 chaine d'ordre 2 non consignee : exclu                                attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S641 q2 se lit sur Gamma_flux, pas sur -2 Im E                             attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S642 q2 et q1 lus au troisieme barreau et a k = 3                          attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S701 G-4 : ancre a 2 pour cent                                             attendu NON CONCLUANT D'INSTRUMENT ; rendu NON CONCLUANT D'INSTRUMENT
+  TIENT  S702 G-4 : ancre a 0.5 pour cent, tenue                                    attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S703 G-4 : l'autre ancre a 1.5 pour cent                                   attendu NON CONCLUANT D'INSTRUMENT ; rendu NON CONCLUANT D'INSTRUMENT
+  TIENT  S704 G-8 : ordre 2 de l'ancre a 0.2 pour cent                              attendu NON CONCLUANT D'INSTRUMENT ; rendu NON CONCLUANT D'INSTRUMENT
+  TIENT  S705 G-8 : ordre 2 de l'ancre a 0.05 pour cent, tenue                      attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S706 G-8 : ordre 2 de l'autre ancre a 0.2 pour cent                        attendu NON CONCLUANT D'INSTRUMENT ; rendu NON CONCLUANT D'INSTRUMENT
+  TIENT  S707 G-8 : dE de l'ancre a 1e-5                                            attendu NON CONCLUANT D'INSTRUMENT ; rendu NON CONCLUANT D'INSTRUMENT
+  TIENT  S708 G-8 : dE de l'ancre a 1e-7, tenue                                     attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S709 G-8 : dE de l'autre ancre a 1e-5                                      attendu NON CONCLUANT D'INSTRUMENT ; rendu NON CONCLUANT D'INSTRUMENT
+  TIENT  S710 G-4 : etat d'ancre absent                                             attendu NON CONCLUANT D'INSTRUMENT ; rendu NON CONCLUANT D'INSTRUMENT
+  TIENT  S711 G-8 : ordre 2 non defini a l'etat d'ancre                             attendu NON CONCLUANT D'INSTRUMENT ; rendu NON CONCLUANT D'INSTRUMENT
+  TIENT  S730 G-4 : etat d'ancre vu deux fois                                       attendu NON CONCLUANT D'INSTRUMENT ; rendu NON CONCLUANT D'INSTRUMENT
+  TIENT  S712 G-1 : moteur hors canon                                               attendu NON CONCLUANT D'INSTRUMENT ; rendu NON CONCLUANT D'INSTRUMENT
+  TIENT  S713 G-7 : sonde hors canon                                                attendu NON CONCLUANT D'INSTRUMENT ; rendu NON CONCLUANT D'INSTRUMENT
+  TIENT  S714 G-2 : un point juge manque                                            attendu NON CONCLUANT D'INSTRUMENT ; rendu NON CONCLUANT D'INSTRUMENT
+  TIENT  S715 G-2 : une ancre manque                                                attendu NON CONCLUANT D'INSTRUMENT ; rendu NON CONCLUANT D'INSTRUMENT
+  TIENT  S716 G-2 : un point inconnu en plus                                        attendu NON CONCLUANT D'INSTRUMENT ; rendu NON CONCLUANT D'INSTRUMENT
+  TIENT  S717 G-2 : un point en double                                              attendu NON CONCLUANT D'INSTRUMENT ; rendu NON CONCLUANT D'INSTRUMENT
+  TIENT  S718 G-2 : g n'est pas facteur x regle                                     attendu NON CONCLUANT D'INSTRUMENT ; rendu NON CONCLUANT D'INSTRUMENT
+  TIENT  S719 G-2 : w2 d'un point change                                            attendu NON CONCLUANT D'INSTRUMENT ; rendu NON CONCLUANT D'INSTRUMENT
+  TIENT  S720 G-2 : facteur d'un temoin change                                      attendu NON CONCLUANT D'INSTRUMENT ; rendu NON CONCLUANT D'INSTRUMENT
+  TIENT  S721 G-2 : role d'un point change                                          attendu NON CONCLUANT D'INSTRUMENT ; rendu NON CONCLUANT D'INSTRUMENT
+  TIENT  S722 G-3 : treize etats a un point                                         attendu NON CONCLUANT D'INSTRUMENT ; rendu NON CONCLUANT D'INSTRUMENT
+  TIENT  S723 G-6 : la garde du moteur dit HORS a un point EN                       attendu NON CONCLUANT D'INSTRUMENT ; rendu NON CONCLUANT D'INSTRUMENT
+  TIENT  S724 G-6 : la garde du moteur dit EN a un point HORS                       attendu NON CONCLUANT D'INSTRUMENT ; rendu NON CONCLUANT D'INSTRUMENT
+  TIENT  S725 G-6 : c_max a 1e-4 de la table                                        attendu NON CONCLUANT D'INSTRUMENT ; rendu NON CONCLUANT D'INSTRUMENT
+  TIENT  S726 G-6 : D1 a 1e-4 de la table                                           attendu NON CONCLUANT D'INSTRUMENT ; rendu NON CONCLUANT D'INSTRUMENT
+  TIENT  S727 G-6 : c_max a 4e-5 de la table, tenue                                 attendu L'ORDRE 2 TIENT ; rendu L'ORDRE 2 TIENT
+  TIENT  S728 G-6 : garde du moteur en erreur                                       attendu NON CONCLUANT D'INSTRUMENT ; rendu NON CONCLUANT D'INSTRUMENT
+  TIENT  S729 G-6 : garde du moteur non consignee a une ancre                       attendu NON CONCLUANT D'INSTRUMENT ; rendu NON CONCLUANT D'INSTRUMENT
+SELFTEST : 160 cas, 160 tenus
+LECTURE DU GEL, sonde /home/claude/recu_1115/lots/resultat/ordre2/sortie/sonde_ordre2.json :
+  C1 juge   w2=197/100 x2/3 bande proche    borne 1.25 : TENU   8 juges ; q2 1.002 1.042 1.055 ; q1 0.444 0.600 0.676 ; pire o2 0.053, o1 0.811 : MIEUX     ; energie 2.69e-04 TENUE     ; palier 1.25 ; q2/loi 1.016 ; flux/im 4.6e-04
+      exclus : sous dix planchers 6
+  C2 juge   w2=97/50   x3/4 bande proche    borne 1.25 : TENU  11 juges ; q2 1.044 1.099 1.136 ; q1 0.415 0.622 0.773 ; pire o2 0.128, o1 0.880 : MIEUX     ; energie 1.18e-03 TENUE     ; palier 1.25 ; q2/loi 1.003 ; flux/im 2.7e-03
+      exclus : sous dix planchers 3
+  C3 juge   w2=203/100 x3/2 bande proche    borne 1.25 : TENU  14 juges ; q2 1.015 1.021 1.032 ; q1 1.063 1.178 1.250 ; pire o2 0.032, o1 0.223 : MIEUX     ; energie 3.28e-04 TENUE     ; palier 1.25 ; q2/loi 1.008 ; flux/im 3.5e-04
+  C4 juge   w2=103/50  x4/3 bande proche    borne 1.25 : TENU  13 juges ; q2 1.067 1.076 1.091 ; q1 1.377 1.620 1.678 ; pire o2 0.087, o1 0.518 : MIEUX     ; energie 1.36e-03 TENUE     ; palier 1.25 ; q2/loi 1.017 ; flux/im 6.6e-05
+      exclus : sous dix planchers 1
+  M1 juge   w2=193/100 x1/1 bande moyenne   borne 1.6  : TENU  11 juges ; q2 1.075 1.120 1.140 ; q1 0.573 0.813 0.970 ; pire o2 0.131, o1 0.557 : MIEUX     ; energie 1.59e-03 TENUE     ; palier 1.25 ; q2/loi 1.005 ; flux/im 6.6e-04
+      exclus : barriere vide 1 ; sous dix planchers 2
+  M2 juge   w2=48/25   x4/3 bande moyenne   borne 1.6  : TENU  13 juges ; q2 1.041 1.108 1.144 ; q1 0.653 0.846 1.064 ; pire o2 0.135, o1 0.425 : MIEUX     ; energie 2.53e-03 TENUE     ; palier 1.25 ; q2/loi 1.006 ; flux/im 4.2e-03
+      exclus : J flou 1
+  M3 juge   w2=207/100 x2/3 bande moyenne   borne 1.6  : TENU   8 juges ; q2 1.114 1.128 1.153 ; q1 1.838 2.160 2.501 ; pire o2 0.142, o1 0.917 : MIEUX     ; energie 1.12e-03 TENUE     ; palier 1.25 ; q2/loi 0.967 ; flux/im 2.1e-03
+      exclus : sous dix planchers 6
+  M4 juge   w2=21/10   x3/4 bande moyenne   borne 1.6  : TENU   9 juges ; q2 1.356 1.388 1.447 ; q1 3.840 4.638 5.620 ; pire o2 0.370, o1 1.726 : MIEUX     ; energie 2.41e-03 TENUE     ; palier 1.6 ; q2/loi 1.037 ; flux/im 5.8e-04
+      exclus : sous dix planchers 5
+  L1 juge   w2=189/100 x4/3 bande lointaine borne 2.0  : TENU  14 juges ; q2 1.093 1.181 1.226 ; q1 0.712 1.030 1.394 ; pire o2 0.203, o1 0.339 : MIEUX     ; energie 4.60e-03 TENUE     ; palier 1.25 ; q2/loi 0.991 ; flux/im 9.2e-03
+  L2 juge   w2=47/25   x1/1 bande lointaine borne 2.0  : TENU  10 juges ; q2 1.171 1.229 1.314 ; q1 0.810 1.052 1.350 ; pire o2 0.273, o1 0.300 : MIEUX     ; energie 3.40e-03 TENUE     ; palier 1.6 ; q2/loi 0.889 ; flux/im 2.5e-04
+      exclus : J flou 1 ; sous dix planchers 3
+  L3 juge   w2=211/100 x3/2 bande lointaine borne 2.0  : TENU  12 juges ; q2 1.273 1.306 1.350 ; q1 2.923 3.385 4.027 ; pire o2 0.300, o1 1.393 : MIEUX     ; energie 4.27e-03 TENUE     ; palier 1.6 ; q2/loi 1.037 ; flux/im 2.7e-04
+      exclus : J flou 2
+  L4 juge   w2=53/25   x2/3 bande lointaine borne 2.0  : TENU   9 juges ; q2 1.508 1.579 1.679 ; q1 7.416 8.804 10.551 ; pire o2 0.518, o1 2.356 : MIEUX     ; energie 3.21e-03 TENUE     ; palier 2.0 ; q2/loi 0.981 ; flux/im 1.3e-02
+      exclus : sous dix planchers 5
+  A1 ancre  w2=39/20   x1/1 hors enonce               : LU    11 juges ; q2 1.038 1.062 1.080 ; q1 0.587 0.758 0.882 ; pire o2 0.077, o1 0.533 : MIEUX     ; energie 8.12e-04 TENUE     ; palier 1.25 ; q2/loi 1.011 ; flux/im 4.4e-04
+      exclus : barriere vide 1 ; sous dix planchers 2
+  A2 ancre  w2=41/20   x1/1 hors enonce               : LU    12 juges ; q2 1.035 1.053 1.064 ; q1 1.292 1.505 1.629 ; pire o2 0.062, o1 0.488 : MIEUX     ; energie 7.77e-04 TENUE     ; palier 1.25 ; q2/loi 0.991 ; flux/im 1.6e-03
+      exclus : sous dix planchers 2
+  W1 temoin w2=107/50  x1/1 hors enonce               : LU    11 juges ; q2 1.513 1.689 2.047 ; q1 8.058 10.796 15.533 ; pire o2 0.716, o1 2.743 : MIEUX     ; energie 5.59e-03 TENUE     ; palier HORS ; q2/loi 1.026 ; flux/im 5.9e-03
+      exclus : J flou 2 ; sous dix planchers 1
+  W2 temoin w2=209/100 x1/2 hors enonce               : NON LISIBLE (moins de 6 etats juges), 3 etats juges
+      exclus : sous dix planchers 11
+  bande proche    (|delta| <= 0.06, borne 1.25) : TENUE       4 lisibles ; tombes : aucun
+  bande moyenne   (|delta| <= 0.10, borne 1.6) : TENUE       4 lisibles ; tombes : aucun
+  bande lointaine (|delta| <= 0.12, borne 2.0) : TENUE       4 lisibles ; tombes : aucun
+COMPARAISON au pire etat : L'ORDRE 2 FAIT MIEUX PARTOUT (12 lisibles ; pas mieux : aucun)
+ENERGIES : L'ENERGIE TIENT (12 lisibles ; non tenue : aucun)
+LECTURE SANS MARGE (declaree) : L'ORDRE 2 TIENT ; etats gardes par la marge d'un plancher : aucun
+VERDICT : L'ORDRE 2 TIENT

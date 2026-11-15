@@ -1,0 +1,123 @@
+{
+ "bilan": {
+  "controles": 22,
+  "ids": [],
+  "mord": 0
+ },
+ "controles": [
+  {
+   "id": "C01",
+   "msg": "34 pieces sur 34 au canon, a l empreinte brute et aux deux tailles (zip et copie de travail) ; ecarts [] ; CANON DU LOT 3bc363266957de56 (annonce 3bc363266957de56) ; gel 41153158190cf7f1",
+   "ok": true
+  },
+  {
+   "id": "C02",
+   "msg": "tete du registre lue : 79e77d2 (le gel : 79e77d2) ; 29 couples (nom, canon) de la section 1 : 29 relus (registre au chemin donne, lot au manifeste et a ma copie) ; ecarts [] ; empreintes de 16 chiffres citees : 30, non resolues par un couple : ['119f4e4dcbb4baba']",
+   "ok": true
+  },
+  {
+   "id": "C02b",
+   "msg": "le gel precedent et son acte, relus au registre : b59651f99e60707a e718d2db619af9b1",
+   "ok": true
+  },
+  {
+   "id": "C03",
+   "msg": "rejeu de la construction du gel (gabarit + 23 canons poses depuis les pieces, comptes lus dans les journaux de selftest et de banc) : code 0 ; gel reconstruit == gel du lot, octet pour octet : True ; canon 41153158190cf7f1",
+   "ok": true
+  },
+  {
+   "id": "C04",
+   "msg": "sonde : la sonde du registre 940a21b1d562bb49 (relue au chemin scripts/) + les 8 blocs du diff de machine 1 (6 hunks de construction), appliques par mon code, == la sonde du lot 24315c52b234319c (231 lignes) : True ; lignes otees 15, ajoutees 98",
+   "ok": true
+  },
+  {
+   "id": "C04b",
+   "msg": "sonde : les 15 lignes otees par le diff sont toutes ou de la docstring (jusqu a la ligne 14), ou des lignes de la table POINTS, ou du dictionnaire de consignation \"sortie\" (metadonnees : lignes 125 a 135) ; aucune ne porte une mesure (decomposition, H_2D, chaine du moteur, garde) ; lignes otees hors de ces trois endroits : []",
+   "ok": true
+  },
+  {
+   "id": "C04c",
+   "msg": "sonde : le bloc 7cd5977bc27bebc1 y est insere tel quel (texte contenu dans la sonde, au caractere pres)",
+   "ok": true
+  },
+  {
+   "id": "C05",
+   "msg": "sonde : aucune condition ne porte sur le statut de la garde (la garde est CONSIGNEE, JAMAIS APPLIQUEE) ; aucune ligne ajoutee ne porte un seuil, une borne ou un verdict du gel : []",
+   "ok": true
+  },
+  {
+   "id": "C06",
+   "msg": "feuille : les 13 instructions de motif_exclusion qui portent les huit criteres du gel precedent sont celles de la feuille du registre 0a760e3a244e547d, au caractere pres (arbres ast) : True ; suivent 3 criteres neufs (9) a (11), avec leurs deux affectations, et le meme \"return None\" : 6 instructions, dont 3 conditions",
+   "ok": true
+  },
+  {
+   "id": "C06b",
+   "msg": "feuille : eval_fraction == celle du registre (arbre ast)",
+   "ok": true
+  },
+  {
+   "id": "C07",
+   "msg": "sections 6 et 7 : sur les 3^12 = 531441 vecteurs de statuts (TENU, TOMBE, NON LISIBLE) des douze points juges, la cascade que j ai ecrite du texte du gel (premiere bande qui n est pas TENUE arrete la lecture) == lire_bandes de la feuille, verdict et issue de chaque bande (desaccords 0) ; repartition {\"L'ORDRE 2 NE TIENT PAS\": 282123, \"L'ORDRE 2 TIENT\": 125, \"L'ORDRE 2 TIENT JUSQU'A 0.06\": 30780, \"L'ORDRE 2 TIENT JUSQU'A 0.10\": 1900, 'NON LISIBLE': 216513}",
+   "ok": true
+  },
+  {
+   "id": "C08",
+   "msg": "annonces : A-1, six issues [0.45, 0.27, 0.1, 0.08, 0.04, 0.06], somme 1.00 ; 15 annonces A-1 a A-15 ; les points qu elles nomment ['L2', 'L4', 'M4', 'W1', 'W2'] sont des points de la section 4",
+   "ok": true
+  },
+  {
+   "id": "C09",
+   "msg": "les quatorze couples (w2, facteur) juges et temoins sont neufs : communs avec M17 ou les deux runs deja joues (JSON du registre) : [] ; les facteurs 3/4, 4/3 et 1/2 ne sont dans aucun couple joue (facteurs joues : ['1/1', '2/3', '3/2']) ; 28 couples joues au total",
+   "ok": true
+  },
+  {
+   "id": "C10",
+   "msg": "aux deux ancres, l etat (7,2) de A1 et l etat (8,2) de A2 existent une seule fois et rendent, a 1e-2 (G-4), 1e-3 et 1e-6 (G-8) : ecarts relatifs (Gamma_2D(3), Gamma d ordre 2, dE) [A1, A2] : mon essai a 16 fils [('0.0e+00', '8.2e-11', '1.2e-12'), ('0.0e+00', '1.8e-11', '2.6e-12')] ; a 1 fil [('3.5e-04', '8.2e-11', '1.2e-12'), ('8.6e-06', '1.8e-11', '2.6e-12')] ; celui de machine 1 [('2.2e-04', '0.0e+00', '0.0e+00'), ('1.6e-07', '0.0e+00', '0.0e+00')] ; les quatre constantes sont dans le texte du gel : True",
+   "ok": true
+  },
+  {
+   "id": "C10b",
+   "msg": "mon essai avec la sonde neuve, compare champ a champ a mon essai du gel precedent (meme machine, memes fils) : 737 champs communs hors chaine d ordre 2 et energie libre, 0 different(s) (le gel, section 15 : 737 champs a l identique, annonce par machine 1 sur ses propres essais) ; garde du moteur consignee aux ancres == la table : True",
+   "ok": true
+  },
+  {
+   "id": "C10c",
+   "msg": "mes essais (16 fils et 1 fil) et celui de machine 1 portent les memes etiquettes aux 28 etats ; aux etats de Gamma_2D(3) > 1.33e-12, Gamma_2D(3) differe de moins de 1.33e-13 en absolu (le plancher, la marge de bruit de la borne : machines differentes, fils differents), et les trois barreaux k = 2, 3, 4 de moins de 2.5e-13 ; de moins de 2e-3 en relatif au-dessus de 1e-10 ; Gamma_flux de l ordre 2 aux etats juges a moins de 10 pour cent",
+   "ok": true
+  },
+  {
+   "id": "C11",
+   "msg": "selftest de la feuille rejoue par moi : SELFTEST : 160 cas, 160 tenus ; le journal de machine 1 dit la meme ligne : True",
+   "ok": true
+  },
+  {
+   "id": "C11b",
+   "msg": "banc de machine 1 REJOUE par moi sur la feuille : BANC, famille T (la table) : 131 alterations, 131 mordues, 0 survivantes | BANC, famille C (le code)  : 109 alterations, 108 mordues, 1 survivantes | survivantes : C82b",
+   "ok": true
+  },
+  {
+   "id": "C11c",
+   "msg": "releve de machine 1 REJOUE par moi (ses 24 controles, sur le gel, le lot, MON clone du registre a 79e77d2 et le journal d essai du gel precedent) : ['RELEVE : 24 controles, 24 tenus']",
+   "ok": true
+  },
+  {
+   "id": "C12",
+   "msg": "mes journaux : le bloc recalcule a part (BILAN : 17 controles, 0 mordent []) ; la garde G-1 du moteur et les boites aux seize points (BILAN : 0 ecart(s) a la table des seize points ; groupes et quatre HORS DOMAINE : tiennent)",
+   "ok": true
+  },
+  {
+   "id": "C12b",
+   "msg": "la garde du moteur aux seize points, imprimee a tous les chiffres : identique a 16 fils (defaut) et a 1 fil (OMP_NUM_THREADS = OPENBLAS_NUM_THREADS = MKL_NUM_THREADS = 1) : True",
+   "ok": true
+  },
+  {
+   "id": "C12c",
+   "msg": "mon banc de la feuille : ecarts lecteur independant / feuille 0 ; BILAN : 115 alterations ; motifs absents [] ; survivent au selftest de machine 1 : [11, 14, 15, 22, 24, 28, 48, 56, 61, 66, 69, 70, 71, 72, 73, 83, 85, 91, 101, 109, 110, 114] ; survivent a mon banc : [45, 69, 109] ; survivent aux deux : [69, 109]",
+   "ok": true
+  }
+ ],
+ "info": [
+  "119f4e4dcbb4baba (la note d anteriorite hors chaine) est citee par le gel et ne m a pas ete remise : je ne l ai pas lue ; le gel n en tire rien (\"ce gel ne revendique rien sur la methode\") ; b59651f99e60707a et e718d2db619af9b1 sont citees sans couple de nom : le gel precedent et son acte, au registre aux chemins gels/ et journal/, canons relus a part ci-dessous",
+  "essai a 1 fil contre celui de machine 1 (machines differentes : Windows, numpy 2.2.6, 16 coeurs contre Linux, numpy 2.5.3, levier X86_V4) : memes etiquettes aux 28 etats True ; ecart absolu maximal de Gamma_2D(3) aux etats de Gamma_2D(3) > 1.33e-12 : 7.74e-14 ; aux trois barreaux k = 2, 3, 4 : 1.72e-13 aux memes etats, 1.72e-13 sur tous les etats (le bruit de fils que mon run precedent a mesure : 7.32e-14, le plancher du gel : 1.33e-13) ; relatif maximal au-dessus de 1e-10 : 9.63e-04 ; Gamma_flux de l ordre 2 aux etats juges (Gamma_2D > 1.33e-12) : ecart relatif maximal 9.05e-10"
+ ]
+}

@@ -1,0 +1,16 @@
+C1 bande proche    statut TENU  ; possibles sous le bruit ['TENU']               ; 0 etat(s) incertain(s) -> INCHANGE
+C2 bande proche    statut TENU  ; possibles sous le bruit ['TENU']               ; 0 etat(s) incertain(s) -> INCHANGE
+C3 bande proche    statut TENU  ; possibles sous le bruit ['TENU']               ; 0 etat(s) incertain(s) -> INCHANGE
+C4 bande proche    statut TENU  ; possibles sous le bruit ['TENU']               ; 0 etat(s) incertain(s) -> INCHANGE
+M1 bande moyenne   statut TENU  ; possibles sous le bruit ['TENU']               ; 0 etat(s) incertain(s) -> INCHANGE
+M2 bande moyenne   statut TENU  ; possibles sous le bruit ['TENU']               ; 0 etat(s) incertain(s) -> INCHANGE
+M3 bande moyenne   statut TENU  ; possibles sous le bruit []                     ; 1 etat(s) incertain(s) -> PEUT CHANGER
+M4 bande moyenne   statut TENU  ; possibles sous le bruit ['TENU']               ; 0 etat(s) incertain(s) -> INCHANGE
+L1 bande lointaine statut TENU  ; possibles sous le bruit ['TENU']               ; 0 etat(s) incertain(s) -> INCHANGE
+L2 bande lointaine statut TENU  ; possibles sous le bruit ['TENU']               ; 0 etat(s) incertain(s) -> INCHANGE
+L3 bande lointaine statut TENU  ; possibles sous le bruit ['TENU']               ; 0 etat(s) incertain(s) -> INCHANGE
+L4 bande lointaine statut TENU  ; possibles sous le bruit ['TENU']               ; 1 etat(s) incertain(s) -> INCHANGE
+
+verdicts possibles sous le bruit : [] (rendu : L'ORDRE 2 TIENT)
+issues de bande possibles : {'proche': [], 'moyenne': [], 'lointaine': []}
+VERDICT PEUT CHANGER

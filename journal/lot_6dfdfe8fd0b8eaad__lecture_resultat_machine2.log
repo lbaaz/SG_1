@@ -1,0 +1,312 @@
+LECTURE DE MACHINE 2 DU RUN (gel 41153158190cf7f1 ; sonde 24315c52b234319c ; moteur 82a0be882568fe0c)
+plateforme : {'coeurs': 16, 'fils': {'MKL_NUM_THREADS': None, 'OMP_NUM_THREADS': None, 'OPENBLAS_NUM_THREADS': None}, 'levier': None, 'machine': 'AMD64', 'numpy': '2.2.6', 'python': '3.11.9', 'systeme': 'Windows', 'temoin_arrondi': '0x1.a483018a169c6p+64'}
+points joues : C1 C2 C3 C4 M1 M2 M3 M4 L1 L2 L3 L4 A1 A2 W1 W2
+durees (s) : C1 377.4 C2 283.0 C3 91.1 C4 107.0 M1 153.0 M2 99.7 M3 459.7 M4 316.3 L1 85.6 L2 155.3 L3 101.8 L4 463.7 A1 143.8 A2 156.5 W1 183.1 W2 1346.0 ; total 4523
+
+1. BOITES, REGLE g ET GARDE G-1 DU MOTEUR, RECALCULEES PAR MOI AVEC LE MOTEUR (aucune diagonalisation), contre le JSON de la sonde
+  C1 w2=197/100 x2/3 : g 7.843529e-04 r_c 53 N 73 ; garde recalculee EN DOMAINE D1 0.031915 c_max 0.039186 ; JSON r_c 53 N 73 garde EN DOMAINE D1 0.031915 c_max 0.039186 -> IDENTIQUE
+  C2 w2=97/50 x3/4 : g 1.571743e-03 r_c 48 N 68 ; garde recalculee EN DOMAINE D1 0.068182 c_max 0.066595 ; JSON r_c 48 N 68 garde EN DOMAINE D1 0.068182 c_max 0.066595 -> IDENTIQUE
+  C3 w2=203/100 x3/2 : g 2.206186e-03 r_c 35 N 55 ; garde recalculee EN DOMAINE D1 0.030000 c_max 0.022594 ; JSON r_c 35 N 55 garde EN DOMAINE D1 0.030000 c_max 0.022594 -> IDENTIQUE
+  C4 w2=103/50 x4/3 : g 4.368007e-03 r_c 36 N 56 ; garde recalculee EN DOMAINE D1 0.060000 c_max 0.046008 ; JSON r_c 36 N 56 garde EN DOMAINE D1 0.060000 c_max 0.046008 -> IDENTIQUE
+  M1 w2=193/100 x1/1 : g 2.350749e-03 r_c 40 N 60 ; garde recalculee EN DOMAINE D1 0.081395 c_max 0.059553 ; JSON r_c 40 N 60 garde EN DOMAINE D1 0.081395 c_max 0.059553 -> IDENTIQUE
+  M2 w2=48/25 x4/3 : g 3.442918e-03 r_c 35 N 55 ; garde recalculee EN DOMAINE D1 0.095238 c_max 0.069702 ; JSON r_c 35 N 55 garde EN DOMAINE D1 0.095238 c_max 0.069702 -> IDENTIQUE
+  M3 w2=207/100 x2/3 : g 2.639667e-03 r_c 54 N 74 ; garde recalculee EN DOMAINE D1 0.070000 c_max 0.090110 ; JSON r_c 54 N 74 garde EN DOMAINE D1 0.070000 c_max 0.090110 -> IDENTIQUE
+  M4 w2=21/10 x3/4 : g 4.709360e-03 r_c 49 N 69 ; garde recalculee HORS DOMAINE D1 0.100000 c_max 0.130464 ; JSON r_c 49 N 69 garde HORS DOMAINE D1 0.100000 c_max 0.130464 -> IDENTIQUE
+  L1 w2=189/100 x4/3 : g 4.194406e-03 r_c 34 N 54 ; garde recalculee HORS DOMAINE D1 0.141026 c_max 0.102322 ; JSON r_c 34 N 54 garde HORS DOMAINE D1 0.141026 c_max 0.102322 -> IDENTIQUE
+  L2 w2=47/25 x1/1 : g 3.293675e-03 r_c 40 N 60 ; garde recalculee HORS DOMAINE D1 0.157895 c_max 0.114482 ; JSON r_c 40 N 60 garde HORS DOMAINE D1 0.157895 c_max 0.114482 -> IDENTIQUE
+  L3 w2=211/100 x3/2 : g 1.072212e-02 r_c 35 N 55 ; garde recalculee EN DOMAINE D1 0.110000 c_max 0.086367 ; JSON r_c 35 N 55 garde EN DOMAINE D1 0.110000 c_max 0.086367 -> IDENTIQUE
+  L4 w2=53/25 x2/3 : g 5.378660e-03 r_c 54 N 74 ; garde recalculee HORS DOMAINE D1 0.120000 c_max 0.158143 ; JSON r_c 54 N 74 garde HORS DOMAINE D1 0.120000 c_max 0.158143 -> IDENTIQUE
+  A1 w2=39/20 x1/1 : g 1.815737e-03 r_c 40 N 60 ; garde recalculee EN DOMAINE D1 0.055556 c_max 0.040917 ; JSON r_c 40 N 60 garde EN DOMAINE D1 0.055556 c_max 0.040917 -> IDENTIQUE
+  A2 w2=41/20 x1/1 : g 2.634488e-03 r_c 41 N 61 ; garde recalculee EN DOMAINE D1 0.050000 c_max 0.051012 ; JSON r_c 41 N 61 garde EN DOMAINE D1 0.050000 c_max 0.051012 -> IDENTIQUE
+  W1 w2=107/50 x1/1 : g 1.006857e-02 r_c 42 N 62 ; garde recalculee HORS DOMAINE D1 0.140000 c_max 0.148692 ; JSON r_c 42 N 62 garde HORS DOMAINE D1 0.140000 c_max 0.148692 -> IDENTIQUE
+  W2 w2=209/100 x1/2 : g 2.729648e-03 r_c 69 N 89 ; garde recalculee HORS DOMAINE D1 0.090000 c_max 0.139955 ; JSON r_c 69 N 89 garde HORS DOMAINE D1 0.090000 c_max 0.139955 -> IDENTIQUE
+  ecarts : 0
+
+2. LECTURES DECLAREES (section 11 du gel) : verdict L'ORDRE 2 TIENT ; motifs []
+  C1 juge   w2=197/100 x2/3 bande proche garde EN DOMAINE : TENU 8 juges ; q2 1.002 1.042 1.055 ; q1 0.444 0.600 0.676 ; pire o2 0.053 o1 0.811 MIEUX ; energie 2.69e-04 TENUE ; palier 1.25 ; q2/loi 1.016 ; flux/im 4.6e-04 ; sans marge TENU ; exclus {'sous dix planchers': 6}
+  C2 juge   w2=97/50 x3/4 bande proche garde EN DOMAINE : TENU 11 juges ; q2 1.044 1.099 1.136 ; q1 0.415 0.622 0.773 ; pire o2 0.128 o1 0.880 MIEUX ; energie 1.18e-03 TENUE ; palier 1.25 ; q2/loi 1.003 ; flux/im 2.7e-03 ; sans marge TENU ; exclus {'sous dix planchers': 3}
+  C3 juge   w2=203/100 x3/2 bande proche garde EN DOMAINE : TENU 14 juges ; q2 1.015 1.021 1.032 ; q1 1.063 1.178 1.250 ; pire o2 0.032 o1 0.223 MIEUX ; energie 3.28e-04 TENUE ; palier 1.25 ; q2/loi 1.008 ; flux/im 3.5e-04 ; sans marge TENU ; exclus {}
+  C4 juge   w2=103/50 x4/3 bande proche garde EN DOMAINE : TENU 13 juges ; q2 1.067 1.076 1.091 ; q1 1.377 1.620 1.678 ; pire o2 0.087 o1 0.518 MIEUX ; energie 1.36e-03 TENUE ; palier 1.25 ; q2/loi 1.017 ; flux/im 6.6e-05 ; sans marge TENU ; exclus {'sous dix planchers': 1}
+  M1 juge   w2=193/100 x1/1 bande moyenne garde EN DOMAINE : TENU 11 juges ; q2 1.075 1.120 1.140 ; q1 0.573 0.813 0.970 ; pire o2 0.131 o1 0.557 MIEUX ; energie 1.59e-03 TENUE ; palier 1.25 ; q2/loi 1.005 ; flux/im 6.6e-04 ; sans marge TENU ; exclus {'sous dix planchers': 2, 'barriere vide': 1}
+  M2 juge   w2=48/25 x4/3 bande moyenne garde EN DOMAINE : TENU 13 juges ; q2 1.041 1.108 1.144 ; q1 0.653 0.846 1.064 ; pire o2 0.135 o1 0.425 MIEUX ; energie 2.53e-03 TENUE ; palier 1.25 ; q2/loi 1.006 ; flux/im 4.2e-03 ; sans marge TENU ; exclus {'J flou': 1}
+  M3 juge   w2=207/100 x2/3 bande moyenne garde EN DOMAINE : TENU 8 juges ; q2 1.114 1.128 1.153 ; q1 1.838 2.160 2.501 ; pire o2 0.142 o1 0.917 MIEUX ; energie 1.12e-03 TENUE ; palier 1.25 ; q2/loi 0.967 ; flux/im 2.1e-03 ; sans marge TENU ; exclus {'sous dix planchers': 6}
+  M4 juge   w2=21/10 x3/4 bande moyenne garde HORS DOMAINE : TENU 9 juges ; q2 1.356 1.388 1.447 ; q1 3.840 4.638 5.620 ; pire o2 0.370 o1 1.726 MIEUX ; energie 2.41e-03 TENUE ; palier 1.6 ; q2/loi 1.037 ; flux/im 5.8e-04 ; sans marge TENU ; exclus {'sous dix planchers': 5}
+  L1 juge   w2=189/100 x4/3 bande lointaine garde HORS DOMAINE : TENU 14 juges ; q2 1.093 1.181 1.226 ; q1 0.712 1.030 1.394 ; pire o2 0.203 o1 0.339 MIEUX ; energie 4.60e-03 TENUE ; palier 1.25 ; q2/loi 0.991 ; flux/im 9.2e-03 ; sans marge TENU ; exclus {}
+  L2 juge   w2=47/25 x1/1 bande lointaine garde HORS DOMAINE : TENU 10 juges ; q2 1.171 1.229 1.314 ; q1 0.810 1.052 1.350 ; pire o2 0.273 o1 0.300 MIEUX ; energie 3.40e-03 TENUE ; palier 1.6 ; q2/loi 0.889 ; flux/im 2.5e-04 ; sans marge TENU ; exclus {'sous dix planchers': 3, 'J flou': 1}
+  L3 juge   w2=211/100 x3/2 bande lointaine garde EN DOMAINE : TENU 12 juges ; q2 1.273 1.306 1.350 ; q1 2.923 3.385 4.027 ; pire o2 0.300 o1 1.393 MIEUX ; energie 4.27e-03 TENUE ; palier 1.6 ; q2/loi 1.037 ; flux/im 2.7e-04 ; sans marge TENU ; exclus {'J flou': 2}
+  L4 juge   w2=53/25 x2/3 bande lointaine garde HORS DOMAINE : TENU 9 juges ; q2 1.508 1.579 1.679 ; q1 7.416 8.804 10.551 ; pire o2 0.518 o1 2.356 MIEUX ; energie 3.21e-03 TENUE ; palier 2.0 ; q2/loi 0.981 ; flux/im 1.3e-02 ; sans marge TENU ; exclus {'sous dix planchers': 5}
+  A1 ancre  w2=39/20 x1/1 bande None garde EN DOMAINE : LU 11 juges ; q2 1.038 1.062 1.080 ; q1 0.587 0.758 0.882 ; pire o2 0.077 o1 0.533 MIEUX ; energie 8.12e-04 TENUE ; palier 1.25 ; q2/loi 1.011 ; flux/im 4.4e-04 ; sans marge None ; exclus {'sous dix planchers': 2, 'barriere vide': 1}
+  A2 ancre  w2=41/20 x1/1 bande None garde EN DOMAINE : LU 12 juges ; q2 1.035 1.053 1.064 ; q1 1.292 1.505 1.629 ; pire o2 0.062 o1 0.488 MIEUX ; energie 7.77e-04 TENUE ; palier 1.25 ; q2/loi 0.991 ; flux/im 1.6e-03 ; sans marge None ; exclus {'sous dix planchers': 2}
+  W1 temoin w2=107/50 x1/1 bande None garde HORS DOMAINE : LU 11 juges ; q2 1.513 1.689 2.047 ; q1 8.058 10.796 15.533 ; pire o2 0.716 o1 2.743 MIEUX ; energie 5.59e-03 TENUE ; palier None ; q2/loi 1.026 ; flux/im 5.9e-03 ; sans marge None ; exclus {'J flou': 2, 'sous dix planchers': 1}
+  W2 temoin w2=209/100 x1/2 garde HORS DOMAINE : NON LISIBLE (moins de 6 etats juges), 3 juges ; exclus {'sous dix planchers': 11}
+  bande proche    (|delta| <= 0.06, borne 1.25) : TENUE       4 lisibles ; tombes : aucun
+  bande moyenne   (|delta| <= 0.10, borne 1.6) : TENUE       4 lisibles ; tombes : aucun
+  bande lointaine (|delta| <= 0.12, borne 2.0) : TENUE       4 lisibles ; tombes : aucun
+  comparaison au pire etat : L'ORDRE 2 FAIT MIEUX PARTOUT ; pas mieux : []
+  energies : L'ENERGIE TIENT ; non tenue : []
+  lecture SANS MARGE (declaree) : L'ORDRE 2 TIENT ; etats gardes par la marge : []
+
+3. ANNONCES DE LA SECTION 12 (jugees par machine 2 sur le verdict et le JSON de la feuille, sans seuil nouveau)
+  A-1 verdict L'ORDRE 2 TIENT ; probabilite annoncee 0.45
+  A-2 (0.85) la bande PROCHE est TENUE : VRAIE
+  A-3 (0.80) la bande MOYENNE est TENUE : VRAIE
+  A-4 (0.60) la bande LOINTAINE est TENUE : VRAIE
+  A-5 (0.70) L2 est TENU : VRAIE
+  A-6 (0.80) L4 est TENU : VRAIE
+  A-6b (0.65) a L4 le plus grand q2 est entre 1.5 et 1.9 : VRAIE
+  A-7 (0.80) M4 est TENU : VRAIE
+  A-7b (0.65) a M4 le plus grand q2 est entre 1.35 et 1.55 : VRAIE
+  A-8 (0.85) L'ORDRE 2 FAIT MIEUX PARTOUT : VRAIE (L'ORDRE 2 FAIT MIEUX PARTOUT)
+  A-9 (0.90) L'ENERGIE TIENT : VRAIE (L'ENERGIE TIENT)
+  A-9b (0.70) le plus grand ecart d energie des points juges est < 0.006 : VRAIE (0.0046, au point L1)
+  A-10 (0.70) a chaque point juge lisible le plus petit q2 est >= 0.95 : VRAIE []
+  A-11 (0.60) a chaque point juge lisible la mediane de q2 / loi est entre 0.93 et 1.15 : FAUSSE [('L2', 0.889)]
+  A-14 (0.65) a chaque point juge lisible -2 Im E et Gamma_flux different de moins de 0.05 en relatif : VRAIE []
+  A-12 (0.75) W1 a un etat juge hors de 1.6 : VRAIE (11 etats, q2 de 1.513 a 2.047 ; etats hors du palier 1.6 : [(8, 2, 1.689), (7, 2, 1.801), (9, 1, 1.875), (8, 1, 2.047), (10, 1, 1.718), (6, 2, 2.008), (6, 3, 1.683)])
+  A-12b (0.70) tous les etats juges de W1 sont sous 2.5 : VRAIE (plus grand q2 2.047)
+  A-13 (0.65) W2 est joue et lisible : FAUSSE (W2 est joue mais NON LISIBLE : moins de 6 etats juges)
+  A-15 (0.95) la garde G-4 tient : VRAIE ; (0.93) la garde G-8 tient : VRAIE ; (0.97) la garde G-6 tient : VRAIE
+
+4. ETATS (rang, etiquette, Gamma_2D(3), q1, q2 ou motif) -- consigne, non juge
+  C1 :
+     rang  0 (10,3) Gamma_2D(3) 1.0197e-11 q1 0.657 q2 1.017 palier 1.25 dE_2D 2.1091e-03 dE_2 2.1094e-03 ecart 0.0001 DANS
+     rang  1 (11,3) Gamma_2D(3) 2.0467e-10 q1 0.601 q2 1.042 palier 1.25 dE_2D 2.7891e-03 dE_2 2.7896e-03 ecart 0.0002 DANS
+     rang  2 (9,3) Gamma_2D(3) 4.3556e-13 exclu : sous dix planchers
+     rang  3 (10,4) Gamma_2D(3) 1.9369e-10 q1 0.599 q2 1.041 palier 1.25 dE_2D 2.8191e-03 dE_2 2.8196e-03 ecart 0.0002 DANS
+     rang  4 (11,4) Gamma_2D(3) 3.6126e-09 q1 0.525 q2 1.051 palier 1.25 dE_2D 3.7041e-03 dE_2 3.7049e-03 ecart 0.0002 DANS
+     rang  5 (12,3) Gamma_2D(3) 3.4551e-09 q1 0.533 q2 1.044 palier 1.25 dE_2D 3.6281e-03 dE_2 3.6288e-03 ecart 0.0002 DANS
+     rang  6 (9,4) Gamma_2D(3) 8.7546e-12 q1 0.676 q2 1.039 palier 1.25 dE_2D 2.1061e-03 dE_2 2.1064e-03 ecart 0.0001 DANS
+     rang  7 (12,4) Gamma_2D(3) 5.5881e-08 q1 0.444 q2 1.055 palier 1.25 dE_2D 4.7958e-03 dE_2 4.7971e-03 ecart 0.0003 DANS
+     rang  8 (10,2) Gamma_2D(3) 3.6815e-13 exclu : sous dix planchers
+     rang  9 (8,3) Gamma_2D(3) 3.7080e-14 exclu : sous dix planchers
+     rang 10 (9,2) Gamma_2D(3) 2.5993e-14 exclu : sous dix planchers
+     rang 11 (11,2) Gamma_2D(3) 8.3529e-12 q1 0.662 q2 1.002 palier 1.25 dE_2D 2.0037e-03 dE_2 2.0039e-03 ecart 0.0001 DANS
+     rang 12 (8,2) Gamma_2D(3) -2.0639e-14 exclu : sous dix planchers
+     rang 13 (8,4) Gamma_2D(3) 3.1071e-13 exclu : sous dix planchers
+  C2 :
+     rang  0 (9,3) Gamma_2D(3) 1.1097e-10 q1 0.681 q2 1.099 palier 1.25 dE_2D 4.0998e-03 dE_2 4.1022e-03 ecart 0.0006 DANS
+     rang  1 (8,3) Gamma_2D(3) 4.2562e-12 q1 0.773 q2 1.113 palier 1.25 dE_2D 2.9560e-03 dE_2 2.9573e-03 ecart 0.0004 DANS
+     rang  2 (10,3) Gamma_2D(3) 2.3115e-09 q1 0.598 q2 1.099 palier 1.25 dE_2D 5.5518e-03 dE_2 5.5557e-03 ecart 0.0007 DANS
+     rang  3 (9,2) Gamma_2D(3) 4.1151e-12 q1 0.767 q2 1.121 palier 1.25 dE_2D 2.8757e-03 dE_2 2.8770e-03 ecart 0.0004 DANS
+     rang  4 (8,2) Gamma_2D(3) 1.6387e-13 exclu : sous dix planchers
+     rang  5 (9,4) Gamma_2D(3) 2.1780e-09 q1 0.575 q2 1.044 palier 1.25 dE_2D 5.5486e-03 dE_2 5.5526e-03 ecart 0.0007 DANS
+     rang  6 (11,3) Gamma_2D(3) 4.0759e-08 q1 0.500 q2 1.066 palier 1.25 dE_2D 7.3758e-03 dE_2 7.3825e-03 ecart 0.0009 DANS
+     rang  7 (10,2) Gamma_2D(3) 9.3913e-11 q1 0.705 q2 1.136 palier 1.25 dE_2D 3.9349e-03 dE_2 3.9370e-03 ecart 0.0006 DANS
+     rang  8 (7,3) Gamma_2D(3) 1.4546e-13 exclu : sous dix planchers
+     rang  9 (10,4) Gamma_2D(3) 4.0615e-08 q1 0.493 q2 1.052 palier 1.25 dE_2D 7.4611e-03 dE_2 7.4679e-03 ecart 0.0009 DANS
+     rang 10 (7,2) Gamma_2D(3) -3.2309e-14 exclu : sous dix planchers
+     rang 11 (8,4) Gamma_2D(3) 9.1401e-11 q1 0.679 q2 1.073 palier 1.25 dE_2D 4.0374e-03 dE_2 4.0396e-03 ecart 0.0006 DANS
+     rang 12 (11,4) Gamma_2D(3) 6.1133e-07 q1 0.415 q2 1.067 palier 1.25 dE_2D 9.8658e-03 dE_2 9.8775e-03 ecart 0.0012 DANS
+     rang 13 (11,2) Gamma_2D(3) 1.8085e-09 q1 0.622 q2 1.119 palier 1.25 dE_2D 5.2708e-03 dE_2 5.2745e-03 ecart 0.0007 DANS
+  C3 :
+     rang  0 (6,1) Gamma_2D(3) 1.7741e-08 q1 1.202 q2 1.027 palier 1.25 dE_2D -1.0862e-03 dE_2 -1.0864e-03 ecart 0.0001 DANS
+     rang  1 (5,1) Gamma_2D(3) 7.5127e-10 q1 1.194 q2 1.015 palier 1.25 dE_2D -6.5251e-04 dE_2 -6.5257e-04 ecart 0.0001 DANS
+     rang  2 (5,2) Gamma_2D(3) 1.8215e-08 q1 1.173 q2 1.022 palier 1.25 dE_2D -1.1291e-03 dE_2 -1.1292e-03 ecart 0.0001 DANS
+     rang  3 (6,2) Gamma_2D(3) 3.8027e-07 q1 1.132 q2 1.017 palier 1.25 dE_2D -1.8386e-03 dE_2 -1.8390e-03 ecart 0.0002 DANS
+     rang  4 (7,1) Gamma_2D(3) 3.1730e-07 q1 1.175 q2 1.024 palier 1.25 dE_2D -1.7146e-03 dE_2 -1.7150e-03 ecart 0.0002 DANS
+     rang  5 (4,1) Gamma_2D(3) 2.2571e-11 q1 1.204 q2 1.032 palier 1.25 dE_2D -3.6387e-04 dE_2 -3.6389e-04 ecart 0.0001 DANS
+     rang  6 (4,2) Gamma_2D(3) 6.3310e-10 q1 1.180 q2 1.017 palier 1.25 dE_2D -6.4894e-04 dE_2 -6.4901e-04 ecart 0.0001 DANS
+     rang  7 (7,2) Gamma_2D(3) 5.7006e-06 q1 1.080 q2 1.029 palier 1.25 dE_2D -2.8637e-03 dE_2 -2.8647e-03 ecart 0.0003 DANS
+     rang  8 (8,1) Gamma_2D(3) 4.2402e-06 q1 1.136 q2 1.029 palier 1.25 dE_2D -2.6081e-03 dE_2 -2.6089e-03 ecart 0.0003 DANS
+     rang  9 (6,0) Gamma_2D(3) 3.8966e-10 q1 1.235 q2 1.019 palier 1.25 dE_2D -5.1071e-04 dE_2 -5.1076e-04 ecart 0.0001 DANS
+     rang 10 (5,3) Gamma_2D(3) 2.7354e-07 q1 1.143 q2 1.031 palier 1.25 dE_2D -1.7454e-03 dE_2 -1.7457e-03 ecart 0.0002 DANS
+     rang 11 (7,0) Gamma_2D(3) 7.9829e-09 q1 1.250 q2 1.020 palier 1.25 dE_2D -8.3579e-04 dE_2 -8.3590e-04 ecart 0.0001 DANS
+     rang 12 (5,0) Gamma_2D(3) 1.4369e-11 q1 1.216 q2 1.021 palier 1.25 dE_2D -2.9323e-04 dE_2 -2.9325e-04 ecart 0.0001 DANS
+     rang 13 (6,3) Gamma_2D(3) 4.9035e-06 q1 1.063 q2 1.021 palier 1.25 dE_2D -2.8111e-03 dE_2 -2.8121e-03 ecart 0.0003 DANS
+  C4 :
+     rang  0 (6,1) Gamma_2D(3) 1.1997e-09 q1 1.678 q2 1.075 palier 1.25 dE_2D -1.6390e-03 dE_2 -1.6398e-03 ecart 0.0004 DANS
+     rang  1 (7,1) Gamma_2D(3) 2.5422e-08 q1 1.664 q2 1.074 palier 1.25 dE_2D -2.5675e-03 dE_2 -2.5692e-03 ecart 0.0006 DANS
+     rang  2 (6,2) Gamma_2D(3) 2.9537e-08 q1 1.620 q2 1.089 palier 1.25 dE_2D -2.7546e-03 dE_2 -2.7563e-03 ecart 0.0006 DANS
+     rang  3 (7,2) Gamma_2D(3) 5.5582e-07 q1 1.535 q2 1.076 palier 1.25 dE_2D -4.2383e-03 dE_2 -4.2422e-03 ecart 0.0009 DANS
+     rang  4 (5,2) Gamma_2D(3) 1.2018e-09 q1 1.632 q2 1.080 palier 1.25 dE_2D -1.7043e-03 dE_2 -1.7051e-03 ecart 0.0004 DANS
+     rang  5 (5,1) Gamma_2D(3) 4.2651e-11 q1 1.674 q2 1.081 palier 1.25 dE_2D -9.9004e-04 dE_2 -9.9034e-04 ecart 0.0003 DANS
+     rang  6 (8,1) Gamma_2D(3) 4.1319e-07 q1 1.629 q2 1.078 palier 1.25 dE_2D -3.8606e-03 dE_2 -3.8641e-03 ecart 0.0009 DANS
+     rang  7 (8,2) Gamma_2D(3) 7.7579e-06 q1 1.433 q2 1.084 palier 1.25 dE_2D -6.3019e-03 dE_2 -6.3104e-03 ecart 0.0014 DANS
+     rang  8 (4,2) Gamma_2D(3) 3.5071e-11 q1 1.642 q2 1.091 palier 1.25 dE_2D -9.8432e-04 dE_2 -9.8461e-04 ecart 0.0003 DANS
+     rang  9 (6,3) Gamma_2D(3) 4.6557e-07 q1 1.499 q2 1.071 palier 1.25 dE_2D -4.1617e-03 dE_2 -4.1654e-03 ecart 0.0009 DANS
+     rang 10 (9,1) Gamma_2D(3) 5.2649e-06 q1 1.542 q2 1.071 palier 1.25 dE_2D -5.6361e-03 dE_2 -5.6435e-03 ecart 0.0013 DANS
+     rang 11 (4,1) Gamma_2D(3) 1.1099e-12 exclu : sous dix planchers
+     rang 12 (5,3) Gamma_2D(3) 2.1439e-08 q1 1.562 q2 1.067 palier 1.25 dE_2D -2.6141e-03 dE_2 -2.6157e-03 ecart 0.0006 DANS
+     rang 13 (7,3) Gamma_2D(3) 7.4790e-06 q1 1.377 q2 1.071 palier 1.25 dE_2D -6.3496e-03 dE_2 -6.3581e-03 ecart 0.0013 DANS
+  M1 :
+     rang  0 (7,2) Gamma_2D(3) 2.8750e-10 q1 0.854 q2 1.135 palier 1.25 dE_2D 3.0079e-03 dE_2 3.0098e-03 ecart 0.0006 DANS
+     rang  1 (8,2) Gamma_2D(3) 6.7437e-09 q1 0.767 q2 1.123 palier 1.25 dE_2D 4.3974e-03 dE_2 4.4012e-03 ecart 0.0009 DANS
+     rang  2 (6,2) Gamma_2D(3) 9.8657e-12 q1 0.913 q2 1.109 palier 1.25 dE_2D 1.9779e-03 dE_2 1.9788e-03 ecart 0.0005 DANS
+     rang  3 (7,3) Gamma_2D(3) 6.3259e-09 q1 0.782 q2 1.128 palier 1.25 dE_2D 4.4440e-03 dE_2 4.4478e-03 ecart 0.0009 DANS
+     rang  4 (8,3) Gamma_2D(3) 1.3387e-07 q1 0.674 q2 1.098 palier 1.25 dE_2D 6.4167e-03 dE_2 6.4242e-03 ecart 0.0012 DANS
+     rang  5 (6,3) Gamma_2D(3) 2.3931e-10 q1 0.864 q2 1.120 palier 1.25 dE_2D 2.9703e-03 dE_2 2.9722e-03 ecart 0.0006 DANS
+     rang  6 (9,2) Gamma_2D(3) 1.2237e-07 q1 0.695 q2 1.135 palier 1.25 dE_2D 6.2375e-03 dE_2 6.2447e-03 ecart 0.0012 DANS
+     rang  7 (9,3) Gamma_2D(3) 2.1906e-06 q1 0.573 q2 1.075 palier 1.25 dE_2D 9.0261e-03 dE_2 9.0405e-03 ecart 0.0016 DANS
+     rang  8 (5,2) Gamma_2D(3) 2.3324e-13 exclu : sous dix planchers
+     rang  9 (7,1) Gamma_2D(3) 8.6930e-12 q1 0.867 q2 1.076 palier 1.25 dE_2D 1.8479e-03 dE_2 1.8487e-03 ecart 0.0005 DANS
+     rang 10 (6,1) Gamma_2D(3) 2.6837e-13 exclu : sous dix planchers
+     rang 11 (8,1) Gamma_2D(3) 2.2316e-10 q1 0.813 q2 1.090 palier 1.25 dE_2D 2.7558e-03 dE_2 2.7575e-03 ecart 0.0006 DANS
+     rang 12 (5,3) Gamma_2D(3) 6.7061e-12 q1 0.970 q2 1.140 palier 1.25 dE_2D 1.8933e-03 dE_2 1.8941e-03 ecart 0.0005 DANS
+     rang 13 (10,3) Gamma_2D(3) 2.7020e-05 exclu : barriere vide
+  M2 :
+     rang  0 (6,2) Gamma_2D(3) 7.3289e-08 q1 0.846 q2 1.108 palier 1.25 dE_2D 4.1656e-03 dE_2 4.1706e-03 ecart 0.0012 DANS
+     rang  1 (5,2) Gamma_2D(3) 2.7351e-09 q1 0.954 q2 1.130 palier 1.25 dE_2D 2.5770e-03 dE_2 2.5791e-03 ecart 0.0008 DANS
+     rang  2 (5,1) Gamma_2D(3) 8.6863e-11 q1 1.030 q2 1.144 palier 1.25 dE_2D 1.4895e-03 dE_2 1.4903e-03 ecart 0.0006 DANS
+     rang  3 (6,1) Gamma_2D(3) 2.6485e-09 q1 0.933 q2 1.134 palier 1.25 dE_2D 2.4731e-03 dE_2 2.4751e-03 ecart 0.0008 DANS
+     rang  4 (7,2) Gamma_2D(3) 1.4618e-06 q1 0.735 q2 1.061 palier 1.25 dE_2D 6.4189e-03 dE_2 6.4298e-03 ecart 0.0017 DANS
+     rang  5 (4,2) Gamma_2D(3) 7.5687e-11 q1 1.040 q2 1.116 palier 1.25 dE_2D 1.4901e-03 dE_2 1.4909e-03 ecart 0.0006 DANS
+     rang  6 (7,1) Gamma_2D(3) 5.9153e-08 q1 0.861 q2 1.143 palier 1.25 dE_2D 3.8868e-03 dE_2 3.8912e-03 ecart 0.0011 DANS
+     rang  7 (4,1) Gamma_2D(3) 2.1930e-12 q1 1.064 q2 1.079 palier 1.25 dE_2D 8.3188e-04 dE_2 8.3219e-04 ecart 0.0004 DANS
+     rang  8 (6,3) Gamma_2D(3) 1.2521e-06 q1 0.752 q2 1.062 palier 1.25 dE_2D 6.3374e-03 dE_2 6.3480e-03 ecart 0.0017 DANS
+     rang  9 (8,2) Gamma_2D(3) 2.0751e-05 q1 0.662 q2 1.078 palier 1.25 dE_2D 9.5746e-03 dE_2 9.5983e-03 ecart 0.0025 DANS
+     rang 10 (5,3) Gamma_2D(3) 5.6444e-08 q1 0.822 q2 1.041 palier 1.25 dE_2D 3.9861e-03 dE_2 3.9907e-03 ecart 0.0011 DANS
+     rang 11 (7,3) Gamma_2D(3) 2.0625e-05 q1 0.653 q2 1.056 palier 1.25 dE_2D 9.6789e-03 dE_2 9.7034e-03 ecart 0.0025 DANS
+     rang 12 (8,1) Gamma_2D(3) 1.0140e-06 q1 0.782 q2 1.123 palier 1.25 dE_2D 5.8662e-03 dE_2 5.8757e-03 ecart 0.0016 DANS
+     rang 13 (8,3) Gamma_2D(3) 2.2618e-04 exclu : J flou
+  M3 :
+     rang  0 (10,3) Gamma_2D(3) 7.2110e-12 q1 2.294 q2 1.128 palier 1.25 dE_2D -4.4411e-03 dE_2 -4.4443e-03 ecart 0.0007 DANS
+     rang  1 (10,2) Gamma_2D(3) 2.9881e-13 exclu : sous dix planchers
+     rang  2 (11,2) Gamma_2D(3) 5.7515e-12 q1 2.501 q2 1.153 palier 1.25 dE_2D -4.2098e-03 dE_2 -4.2128e-03 ecart 0.0007 DANS
+     rang  3 (11,3) Gamma_2D(3) 1.4452e-10 q1 2.094 q2 1.128 palier 1.25 dE_2D -5.8657e-03 dE_2 -5.8709e-03 ecart 0.0009 DANS
+     rang  4 (9,3) Gamma_2D(3) 2.8162e-13 exclu : sous dix planchers
+     rang  5 (9,2) Gamma_2D(3) 1.4437e-14 exclu : sous dix planchers
+     rang  6 (12,2) Gamma_2D(3) 1.0648e-10 q1 2.305 q2 1.144 palier 1.25 dE_2D -5.5072e-03 dE_2 -5.5121e-03 ecart 0.0009 DANS
+     rang  7 (12,3) Gamma_2D(3) 2.4846e-09 q1 1.838 q2 1.114 palier 1.25 dE_2D -7.6176e-03 dE_2 -7.6261e-03 ecart 0.0011 DANS
+     rang  8 (8,3) Gamma_2D(3) -7.3715e-14 exclu : sous dix planchers
+     rang  9 (10,4) Gamma_2D(3) 1.3798e-10 q1 2.005 q2 1.126 palier 1.25 dE_2D -5.9250e-03 dE_2 -5.9302e-03 ecart 0.0009 DANS
+     rang 10 (9,4) Gamma_2D(3) 6.2184e-12 q1 2.225 q2 1.128 palier 1.25 dE_2D -4.4281e-03 dE_2 -4.4312e-03 ecart 0.0007 DANS
+     rang 11 (8,2) Gamma_2D(3) -9.3310e-16 exclu : sous dix planchers
+     rang 12 (13,2) Gamma_2D(3) 1.6775e-09 q1 2.095 q2 1.141 palier 1.25 dE_2D -7.0953e-03 dE_2 -7.1031e-03 ecart 0.0011 DANS
+     rang 13 (11,1) Gamma_2D(3) 1.6138e-13 exclu : sous dix planchers
+  M4 :
+     rang  0 (10,2) Gamma_2D(3) 2.5749e-11 q1 4.905 q2 1.356 palier 1.6 dE_2D -5.5494e-03 dE_2 -5.5576e-03 ecart 0.0015 DANS
+     rang  1 (9,2) Gamma_2D(3) 1.1831e-12 exclu : sous dix planchers
+     rang  2 (11,2) Gamma_2D(3) 4.6889e-10 q1 4.638 q2 1.380 palier 1.6 dE_2D -7.4087e-03 dE_2 -7.4226e-03 ecart 0.0019 DANS
+     rang  3 (9,3) Gamma_2D(3) 2.7900e-11 q1 4.753 q2 1.409 palier 1.6 dE_2D -5.7951e-03 dE_2 -5.8036e-03 ecart 0.0015 DANS
+     rang  4 (10,3) Gamma_2D(3) 5.6820e-10 q1 4.357 q2 1.412 palier 1.6 dE_2D -7.8323e-03 dE_2 -7.8471e-03 ecart 0.0019 DANS
+     rang  5 (8,2) Gamma_2D(3) -1.7193e-14 exclu : sous dix planchers
+     rang  6 (8,3) Gamma_2D(3) 1.1533e-12 exclu : sous dix planchers
+     rang  7 (11,3) Gamma_2D(3) 9.7543e-09 q1 3.840 q2 1.422 palier 1.6 dE_2D -1.0377e-02 dE_2 -1.0402e-02 ecart 0.0024 DANS
+     rang  8 (12,2) Gamma_2D(3) 7.3941e-09 q1 4.177 q2 1.388 palier 1.6 dE_2D -9.7168e-03 dE_2 -9.7399e-03 ecart 0.0024 DANS
+     rang  9 (10,1) Gamma_2D(3) 6.3774e-13 exclu : sous dix planchers
+     rang 10 (11,1) Gamma_2D(3) 1.3988e-11 q1 5.620 q2 1.387 palier 1.6 dE_2D -4.8664e-03 dE_2 -4.8733e-03 ecart 0.0014 DANS
+     rang 11 (9,1) Gamma_2D(3) 4.1291e-14 exclu : sous dix planchers
+     rang 12 (9,4) Gamma_2D(3) 4.8556e-10 q1 4.272 q2 1.447 palier 1.6 dE_2D -7.8104e-03 dE_2 -7.8249e-03 ecart 0.0019 DANS
+     rang 13 (12,1) Gamma_2D(3) 2.3872e-10 q1 5.355 q2 1.382 palier 1.6 dE_2D -6.4506e-03 dE_2 -6.4622e-03 ecart 0.0018 DANS
+  L1 :
+     rang  0 (5,2) Gamma_2D(3) 3.2052e-09 q1 1.116 q2 1.195 palier 1.25 dE_2D 3.6083e-03 dE_2 3.6139e-03 ecart 0.0015 DANS
+     rang  1 (6,2) Gamma_2D(3) 8.5637e-08 q1 0.987 q2 1.221 palier 1.25 dE_2D 5.8277e-03 dE_2 5.8406e-03 ecart 0.0022 DANS
+     rang  2 (5,1) Gamma_2D(3) 1.0504e-10 q1 1.151 q2 1.116 palier 1.25 dE_2D 2.0826e-03 dE_2 2.0847e-03 ecart 0.0010 DANS
+     rang  3 (6,1) Gamma_2D(3) 3.1995e-09 q1 1.040 q2 1.158 palier 1.25 dE_2D 3.4572e-03 dE_2 3.4625e-03 ecart 0.0015 DANS
+     rang  4 (7,2) Gamma_2D(3) 1.7031e-06 q1 0.859 q2 1.226 palier 1.25 dE_2D 8.9721e-03 dE_2 9.0006e-03 ecart 0.0032 DANS
+     rang  5 (4,2) Gamma_2D(3) 8.5690e-11 q1 1.267 q2 1.169 palier 1.25 dE_2D 2.0886e-03 dE_2 2.0907e-03 ecart 0.0010 DANS
+     rang  6 (4,1) Gamma_2D(3) 2.4307e-12 q1 1.313 q2 1.093 palier 1.25 dE_2D 1.1634e-03 dE_2 1.1642e-03 ecart 0.0007 DANS
+     rang  7 (6,3) Gamma_2D(3) 1.5245e-06 q1 0.852 q2 1.180 palier 1.25 dE_2D 8.8758e-03 dE_2 8.9036e-03 ecart 0.0031 DANS
+     rang  8 (7,1) Gamma_2D(3) 7.3291e-08 q1 0.932 q2 1.181 palier 1.25 dE_2D 5.4321e-03 dE_2 5.4438e-03 ecart 0.0021 DANS
+     rang  9 (5,3) Gamma_2D(3) 6.3524e-08 q1 1.020 q2 1.212 palier 1.25 dE_2D 5.5907e-03 dE_2 5.6028e-03 ecart 0.0022 DANS
+     rang 10 (7,3) Gamma_2D(3) 2.5949e-05 q1 0.712 q2 1.154 palier 1.25 dE_2D 1.3537e-02 dE_2 1.3599e-02 ecart 0.0046 DANS
+     rang 11 (8,2) Gamma_2D(3) 2.5550e-05 q1 0.727 q2 1.195 palier 1.25 dE_2D 1.3370e-02 dE_2 1.3431e-02 ecart 0.0046 DANS
+     rang 12 (4,3) Gamma_2D(3) 1.9120e-09 q1 1.193 q2 1.218 palier 1.25 dE_2D 3.3159e-03 dE_2 3.3208e-03 ecart 0.0015 DANS
+     rang 13 (3,2) Gamma_2D(3) 1.6256e-12 q1 1.394 q2 1.098 palier 1.25 dE_2D 1.0973e-03 dE_2 1.0981e-03 ecart 0.0007 DANS
+  L2 :
+     rang  0 (7,2) Gamma_2D(3) 3.8336e-10 q1 1.071 q2 1.199 palier 1.25 dE_2D 5.3087e-03 dE_2 5.3187e-03 ecart 0.0019 DANS
+     rang  1 (6,2) Gamma_2D(3) 1.2394e-11 q1 1.236 q2 1.171 palier 1.25 dE_2D 3.4940e-03 dE_2 3.4988e-03 ecart 0.0014 DANS
+     rang  2 (7,3) Gamma_2D(3) 8.3758e-09 q1 1.008 q2 1.289 palier 1.6 dE_2D 7.8559e-03 dE_2 7.8758e-03 ecart 0.0025 DANS
+     rang  3 (8,2) Gamma_2D(3) 9.0984e-09 q1 0.943 q2 1.248 palier 1.25 dE_2D 7.7546e-03 dE_2 7.7741e-03 ecart 0.0025 DANS
+     rang  4 (6,3) Gamma_2D(3) 3.0165e-10 q1 1.181 q2 1.263 palier 1.6 dE_2D 5.2593e-03 dE_2 5.2691e-03 ecart 0.0019 DANS
+     rang  5 (8,3) Gamma_2D(3) 1.7866e-07 q1 0.854 q2 1.314 palier 1.6 dE_2D 1.1326e-02 dE_2 1.1365e-02 ecart 0.0034 DANS
+     rang  6 (5,2) Gamma_2D(3) 2.8448e-13 exclu : sous dix planchers
+     rang  7 (6,1) Gamma_2D(3) 2.6930e-13 exclu : sous dix planchers
+     rang  8 (7,1) Gamma_2D(3) 1.0320e-11 q1 1.204 q2 1.192 palier 1.25 dE_2D 3.2589e-03 dE_2 3.2633e-03 ecart 0.0013 DANS
+     rang  9 (9,2) Gamma_2D(3) 1.7304e-07 q1 0.810 q2 1.270 palier 1.6 dE_2D 1.0990e-02 dE_2 1.1027e-02 ecart 0.0034 DANS
+     rang 10 (5,3) Gamma_2D(3) 8.4437e-12 q1 1.350 q2 1.211 palier 1.25 dE_2D 3.3584e-03 dE_2 3.3629e-03 ecart 0.0013 DANS
+     rang 11 (9,3) Gamma_2D(3) 3.0472e-06 exclu : J flou
+     rang 12 (5,1) Gamma_2D(3) -4.2305e-15 exclu : sous dix planchers
+     rang 13 (8,1) Gamma_2D(3) 2.8509e-10 q1 1.033 q2 1.192 palier 1.25 dE_2D 4.8597e-03 dE_2 4.8683e-03 ecart 0.0018 DANS
+  L3 :
+     rang  0 (6,1) Gamma_2D(3) 2.3004e-08 q1 3.558 q2 1.294 palier 1.6 dE_2D -3.6061e-03 dE_2 -3.6132e-03 ecart 0.0020 DANS
+     rang  1 (7,1) Gamma_2D(3) 4.1215e-07 q1 3.483 q2 1.309 palier 1.6 dE_2D -5.6610e-03 dE_2 -5.6771e-03 ecart 0.0028 DANS
+     rang  2 (6,2) Gamma_2D(3) 4.9204e-07 q1 3.245 q2 1.308 palier 1.6 dE_2D -6.0997e-03 dE_2 -6.1171e-03 ecart 0.0028 DANS
+     rang  3 (5,1) Gamma_2D(3) 9.4929e-10 q1 3.597 q2 1.317 palier 1.6 dE_2D -2.1764e-03 dE_2 -2.1793e-03 ecart 0.0013 DANS
+     rang  4 (5,2) Gamma_2D(3) 2.3573e-08 q1 3.338 q2 1.286 palier 1.6 dE_2D -3.7593e-03 dE_2 -3.7665e-03 ecart 0.0019 DANS
+     rang  5 (7,2) Gamma_2D(3) 7.9411e-06 q1 2.923 q2 1.281 palier 1.6 dE_2D -9.4443e-03 dE_2 -9.4846e-03 ecart 0.0043 DANS
+     rang  6 (8,1) Gamma_2D(3) 5.7597e-06 q1 3.259 q2 1.303 palier 1.6 dE_2D -8.5495e-03 dE_2 -8.5853e-03 ecart 0.0042 DANS
+     rang  7 (4,1) Gamma_2D(3) 2.9600e-11 q1 3.429 q2 1.273 palier 1.6 dE_2D -1.2186e-03 dE_2 -1.2197e-03 ecart 0.0009 DANS
+     rang  8 (4,2) Gamma_2D(3) 8.1358e-10 q1 3.342 q2 1.291 palier 1.6 dE_2D -2.1650e-03 dE_2 -2.1677e-03 ecart 0.0013 DANS
+     rang  9 (7,0) Gamma_2D(3) 9.8965e-09 q1 4.027 q2 1.328 palier 1.6 dE_2D -2.7133e-03 dE_2 -2.7182e-03 ecart 0.0018 DANS
+     rang 10 (6,0) Gamma_2D(3) 4.9336e-10 q1 3.878 q2 1.310 palier 1.6 dE_2D -1.6693e-03 dE_2 -1.6714e-03 ecart 0.0013 DANS
+     rang 11 (8,2) Gamma_2D(3) 9.1986e-05 exclu : J flou
+     rang 12 (9,1) Gamma_2D(3) 6.2235e-05 exclu : J flou
+     rang 13 (5,3) Gamma_2D(3) 3.4382e-07 q1 3.245 q2 1.350 palier 1.6 dE_2D -5.7784e-03 dE_2 -5.7939e-03 ecart 0.0027 DANS
+  L4 :
+     rang  0 (11,2) Gamma_2D(3) 2.4644e-12 q1 10.551 q2 1.571 palier 1.6 dE_2D -6.7260e-03 dE_2 -6.7398e-03 ecart 0.0020 DANS
+     rang  1 (10,3) Gamma_2D(3) 3.1650e-12 q1 9.215 q2 1.508 palier 1.6 dE_2D -7.1179e-03 dE_2 -7.1325e-03 ecart 0.0020 DANS
+     rang  2 (11,3) Gamma_2D(3) 6.2181e-11 q1 8.704 q2 1.565 palier 1.6 dE_2D -9.3858e-03 dE_2 -9.4100e-03 ecart 0.0026 DANS
+     rang  3 (10,2) Gamma_2D(3) 1.3354e-13 exclu : sous dix planchers
+     rang  4 (12,2) Gamma_2D(3) 4.6481e-11 q1 9.662 q2 1.552 palier 1.6 dE_2D -8.7808e-03 dE_2 -8.8033e-03 ecart 0.0026 DANS
+     rang  5 (9,3) Gamma_2D(3) 8.8410e-14 exclu : sous dix planchers
+     rang  6 (12,3) Gamma_2D(3) 1.0794e-09 q1 7.590 q2 1.579 palier 1.6 dE_2D -1.2165e-02 dE_2 -1.2205e-02 ecart 0.0032 DANS
+     rang  7 (9,2) Gamma_2D(3) 3.0272e-14 exclu : sous dix planchers
+     rang  8 (13,2) Gamma_2D(3) 7.3162e-10 q1 8.804 q2 1.596 palier 1.6 dE_2D -1.1287e-02 dE_2 -1.1323e-02 ecart 0.0032 DANS
+     rang  9 (10,4) Gamma_2D(3) 5.6803e-11 q1 8.516 q2 1.634 palier 2.0 dE_2D -9.4910e-03 dE_2 -9.5151e-03 ecart 0.0025 DANS
+     rang 10 (11,4) Gamma_2D(3) 1.0644e-09 q1 7.416 q2 1.671 palier 2.0 dE_2D -1.2440e-02 dE_2 -1.2480e-02 ecart 0.0032 DANS
+     rang 11 (11,1) Gamma_2D(3) 7.3094e-14 exclu : sous dix planchers
+     rang 12 (12,1) Gamma_2D(3) 1.2945e-12 exclu : sous dix planchers
+     rang 13 (9,4) Gamma_2D(3) 2.4529e-12 q1 9.700 q2 1.679 palier 1.6 dE_2D -7.1013e-03 dE_2 -7.1155e-03 ecart 0.0020 DANS
+  A1 :
+     rang  0 (7,2) Gamma_2D(3) 2.1623e-10 q1 0.819 q2 1.075 palier 1.25 dE_2D 2.1183e-03 dE_2 2.1190e-03 ecart 0.0003 
+     rang  1 (8,2) Gamma_2D(3) 4.9324e-09 q1 0.758 q2 1.077 palier 1.25 dE_2D 3.0973e-03 dE_2 3.0986e-03 ecart 0.0004 
+     rang  2 (6,2) Gamma_2D(3) 7.3492e-12 q1 0.882 q2 1.080 palier 1.25 dE_2D 1.3926e-03 dE_2 1.3930e-03 ecart 0.0002 
+     rang  3 (8,3) Gamma_2D(3) 9.7507e-08 q1 0.664 q2 1.038 palier 1.25 dE_2D 4.5175e-03 dE_2 4.5202e-03 ecart 0.0006 
+     rang  4 (7,3) Gamma_2D(3) 4.7290e-09 q1 0.749 q2 1.053 palier 1.25 dE_2D 3.1276e-03 dE_2 3.1289e-03 ecart 0.0004 
+     rang  5 (9,2) Gamma_2D(3) 8.9734e-08 q1 0.687 q2 1.070 palier 1.25 dE_2D 4.3938e-03 dE_2 4.3964e-03 ecart 0.0006 
+     rang  6 (9,3) Gamma_2D(3) 1.5406e-06 q1 0.587 q2 1.041 palier 1.25 dE_2D 6.3564e-03 dE_2 6.3616e-03 ecart 0.0008 
+     rang  7 (6,3) Gamma_2D(3) 1.7894e-10 q1 0.824 q2 1.062 palier 1.25 dE_2D 2.0895e-03 dE_2 2.0902e-03 ecart 0.0003 
+     rang  8 (7,1) Gamma_2D(3) 6.4611e-12 q1 0.849 q2 1.054 palier 1.25 dE_2D 1.3016e-03 dE_2 1.3019e-03 ecart 0.0002 
+     rang  9 (5,2) Gamma_2D(3) 2.1809e-13 exclu : sous dix planchers
+     rang 10 (6,1) Gamma_2D(3) 2.0162e-13 exclu : sous dix planchers
+     rang 11 (8,1) Gamma_2D(3) 1.6238e-10 q1 0.816 q2 1.071 palier 1.25 dE_2D 1.9408e-03 dE_2 1.9414e-03 ecart 0.0003 
+     rang 12 (10,3) Gamma_2D(3) 1.8971e-05 exclu : barriere vide
+     rang 13 (10,2) Gamma_2D(3) 1.3059e-06 q1 0.609 q2 1.056 palier 1.25 dE_2D 6.0931e-03 dE_2 6.0980e-03 ecart 0.0008 
+  A2 :
+     rang  0 (8,2) Gamma_2D(3) 2.6614e-09 q1 1.474 q2 1.050 palier 1.25 dE_2D -2.8189e-03 dE_2 -2.8201e-03 ecart 0.0004 
+     rang  1 (7,2) Gamma_2D(3) 1.2086e-10 q1 1.517 q2 1.044 palier 1.25 dE_2D -1.9301e-03 dE_2 -1.9307e-03 ecart 0.0003 
+     rang  2 (8,1) Gamma_2D(3) 9.0700e-11 q1 1.598 q2 1.054 palier 1.25 dE_2D -1.7630e-03 dE_2 -1.7635e-03 ecart 0.0003 
+     rang  3 (9,2) Gamma_2D(3) 4.6877e-08 q1 1.398 q2 1.055 palier 1.25 dE_2D -3.9925e-03 dE_2 -3.9948e-03 ecart 0.0006 
+     rang  4 (6,2) Gamma_2D(3) 4.3190e-12 q1 1.533 q2 1.035 palier 1.25 dE_2D -1.2697e-03 dE_2 -1.2699e-03 ecart 0.0002 
+     rang  5 (7,1) Gamma_2D(3) 3.6720e-12 q1 1.629 q2 1.059 palier 1.25 dE_2D -1.1851e-03 dE_2 -1.1854e-03 ecart 0.0002 
+     rang  6 (9,1) Gamma_2D(3) 1.7915e-09 q1 1.563 q2 1.050 palier 1.25 dE_2D -2.5339e-03 dE_2 -2.5349e-03 ecart 0.0004 
+     rang  7 (7,3) Gamma_2D(3) 2.4376e-09 q1 1.447 q2 1.057 palier 1.25 dE_2D -2.8408e-03 dE_2 -2.8420e-03 ecart 0.0004 
+     rang  8 (8,3) Gamma_2D(3) 4.8265e-08 q1 1.360 q2 1.064 palier 1.25 dE_2D -4.1019e-03 dE_2 -4.1042e-03 ecart 0.0006 
+     rang  9 (6,3) Gamma_2D(3) 9.6588e-11 q1 1.494 q2 1.049 palier 1.25 dE_2D -1.8970e-03 dE_2 -1.8976e-03 ecart 0.0003 
+     rang 10 (6,1) Gamma_2D(3) 1.0949e-13 exclu : sous dix planchers
+     rang 11 (10,1) Gamma_2D(3) 2.8599e-08 q1 1.516 q2 1.052 palier 1.25 dE_2D -3.5445e-03 dE_2 -3.5465e-03 ecart 0.0006 
+     rang 12 (10,2) Gamma_2D(3) 6.6291e-07 q1 1.292 q2 1.061 palier 1.25 dE_2D -5.5239e-03 dE_2 -5.5282e-03 ecart 0.0008 
+     rang 13 (5,2) Gamma_2D(3) 5.4988e-14 exclu : sous dix planchers
+  W1 :
+     rang  0 (8,2) Gamma_2D(3) 1.0754e-09 q1 10.695 q2 1.689 palier 2.0 dE_2D -6.9815e-03 dE_2 -7.0042e-03 ecart 0.0032 
+     rang  1 (9,2) Gamma_2D(3) 2.1706e-08 q1 8.893 q2 1.537 palier 1.6 dE_2D -9.8402e-03 dE_2 -9.8829e-03 ecart 0.0043 
+     rang  2 (7,2) Gamma_2D(3) 4.3410e-11 q1 12.353 q2 1.801 palier 2.0 dE_2D -4.7990e-03 dE_2 -4.8105e-03 ecart 0.0024 
+     rang  3 (9,1) Gamma_2D(3) 6.4137e-10 q1 13.365 q2 1.875 palier 2.0 dE_2D -6.2058e-03 dE_2 -6.2258e-03 ecart 0.0032 
+     rang  4 (8,1) Gamma_2D(3) 2.8587e-11 q1 15.533 q2 2.047 palier None dE_2D -4.3412e-03 dE_2 -4.3517e-03 ecart 0.0024 
+     rang  5 (10,1) Gamma_2D(3) 1.1565e-08 q1 11.493 q2 1.718 palier 2.0 dE_2D -8.6299e-03 dE_2 -8.6666e-03 ecart 0.0043 
+     rang  6 (10,2) Gamma_2D(3) 3.4145e-07 exclu : J flou
+     rang  7 (8,3) Gamma_2D(3) 2.3035e-08 q1 8.058 q2 1.513 palier 1.6 dE_2D -1.0147e-02 dE_2 -1.0190e-02 ecart 0.0043 
+     rang  8 (7,1) Gamma_2D(3) 1.0421e-12 exclu : sous dix planchers
+     rang  9 (7,3) Gamma_2D(3) 1.0575e-09 q1 9.355 q2 1.587 palier 1.6 dE_2D -7.0517e-03 dE_2 -7.0740e-03 ecart 0.0032 
+     rang 10 (6,2) Gamma_2D(3) 1.3480e-12 q1 14.170 q2 2.008 palier 2.0 dE_2D -3.1670e-03 dE_2 -3.1725e-03 ecart 0.0017 
+     rang 11 (9,3) Gamma_2D(3) 3.8338e-07 exclu : J flou
+     rang 12 (11,1) Gamma_2D(3) 1.7317e-07 q1 9.544 q2 1.562 palier 1.6 dE_2D -1.1740e-02 dE_2 -1.1806e-02 ecart 0.0056 
+     rang 13 (6,3) Gamma_2D(3) 3.7261e-11 q1 10.796 q2 1.683 palier 2.0 dE_2D -4.7194e-03 dE_2 -4.7303e-03 ecart 0.0023 
+  W2 :
+     rang  0 (13,3) Gamma_2D(3) 4.0730e-14 exclu : sous dix planchers
+     rang  1 (12,3) Gamma_2D(3) 1.0471e-13 exclu : sous dix planchers
+     rang  2 (14,3) Gamma_2D(3) 1.0384e-12 exclu : sous dix planchers
+     rang  3 (12,4) Gamma_2D(3) 1.0610e-13 exclu : sous dix planchers
+     rang  4 (11,3) Gamma_2D(3) 2.2742e-14 exclu : sous dix planchers
+     rang  5 (13,4) Gamma_2D(3) 1.4686e-12 q1 3.768 q2 1.245 palier 1.25 dE_2D -8.5510e-03 dE_2 -8.5628e-03 ecart 0.0014 
+     rang  6 (13,2) Gamma_2D(3) 2.8175e-14 exclu : sous dix planchers
+     rang  7 (11,4) Gamma_2D(3) -1.2827e-13 exclu : sous dix planchers
+     rang  8 (14,2) Gamma_2D(3) 1.0047e-14 exclu : sous dix planchers
+     rang  9 (12,2) Gamma_2D(3) 2.1492e-14 exclu : sous dix planchers
+     rang 10 (15,3) Gamma_2D(3) 1.9029e-11 q1 3.880 q2 1.369 palier 1.6 dE_2D -1.0204e-02 dE_2 -1.0221e-02 ecart 0.0017 
+     rang 11 (14,4) Gamma_2D(3) 2.5863e-11 q1 3.259 q2 1.279 palier 1.6 dE_2D -1.0659e-02 dE_2 -1.0676e-02 ecart 0.0017 
+     rang 12 (15,2) Gamma_2D(3) 7.0349e-13 exclu : sous dix planchers
+     rang 13 (10,3) Gamma_2D(3) 2.9213e-14 exclu : sous dix planchers
+
+BILAN DE MA LECTURE : 0 ecart(s) de boite, de regle ou de garde entre le JSON de la sonde et mon recalcul

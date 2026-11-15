@@ -1,0 +1,32 @@
+--- delta97
++++ delta98
+@@ -1,9 +1,9 @@
+ #!/usr/bin/env python3
+ # -*- coding: ascii -*-
+-"""LE DEPOT DU DELTA 97 SUR CLONE FRAIS -- copie, verification au bit, releve, commit LOCAL. machine 2, v1, 14/11/2026.
++"""LE DEPOT DU DELTA 98 SUR CLONE FRAIS -- copie, verification au bit, releve, commit LOCAL. machine 2, v1, 15/11/2026.
+ Le PUSH n'est pas fait ici.
+ 
+-Derive de depot_delta96_machine2_v1.py (NON EDITE : regle 17). Un seul changement : le texte du message de commit ; le numero se lit toujours
++Derive de depot_delta97_machine2_v1.py (NON EDITE : regle 17). Un seul changement : le texte du message de commit ; le numero se lit toujours
+ dans le nom du manifeste, l'etat attendu du registre s'en deduit, rien n'est tape. Le diff est joint.
+ Arguments : <clone frais> <MANIFEST_DEPOT_delta<nn>_machine2_v<N>.txt>.
+   1. releve AVANT : origin/main == HEAD, arbre propre, plafond == nn - 1, aucun delta_nn ;
+@@ -16,7 +16,7 @@
+ import hashlib, os, re, shutil, subprocess, sys, unicodedata
+ 
+ if len(sys.argv) != 3:
+-    sys.exit('usage : depot_delta97_machine2_v1.py <clone frais> <MANIFEST_DEPOT_delta<nn>_machine2_v<N>.txt>')
++    sys.exit('usage : depot_delta98_machine2_v1.py <clone frais> <MANIFEST_DEPOT_delta<nn>_machine2_v<N>.txt>')
+ CLONE, MAN = os.path.abspath(sys.argv[1]), os.path.abspath(sys.argv[2])
+ ICI = os.path.dirname(os.path.abspath(__file__))
+ RAC = os.path.dirname(ICI)
+@@ -122,7 +122,7 @@
+ 
+ print('\n4. COMMIT LOCAL (pas de push ici)')
+ auteur = git('log', '-1', '--format=%an <%ae>')
+-msg = ("delta 97 -- the engine's own domain guard G-1, computed before any diagonalization, does NOT hold as the domain of the E-A chain read state by state: under a freeze written before the run, certified by the other machine before it, which takes that guard as the declared domain on twelve judged points never played, six the guard calls IN DOMAIN and six OUT OF DOMAIN, opened by the operator on 14/11 at 14:57 (the operator attests it), played once on BOCAL4 on 14/11 with every guard held and the two anchors reproducing M17's readings to the bit, the chain at the whole site, read against the width E-B reads at k = 3, falls at three points the guard calls IN DOMAIN (2.09 at factor 1, 2.10 and 2.12 at factor 3/2) and holds at three the guard calls OUT OF DOMAIN (1.91, 1.90 and 1.89, all below 2.00): THE GUARD DOES NOT HOLD, the coincidence recorded at delta 96 was a coincidence, the guard is not the domain of validity of the chain by state, and the act names the points; the rival reading written in advance, that above 2.00 the class of a point does not depend on the factor, is not held either, but by one state of one point alone (H1, 0.21 per cent above the half-decade bound, inside the thread noise), while the verdict itself is unchanged under that noise; nine of the thirteen announcements of the pen are true; the act draws no domain of validity and no boundary in w2; the run was played on battery, which lengthened it to 3028 s and changed no number; three candidate rules, numbered 32 to 34, join the thirty-one awaiting review (X); act written by one machine and countersigned by the other after every number was recalculated from the countersigner's own sources, 16 controls of which none bites, the same sheet biting 13 times on a copy with seventeen figures changed, the deposited file being the countersigned one byte for byte")
++msg = ('delta 98 -- the E-A chain completed by its second order HOLDS against the width E-B reads at k = 3: under a freeze written before the run and certified by the other machine before it, opened by the operator\'s "ok go" on 14/11 at 22:04 as machine 1 declares it (machine 2 cannot check it), played once on BOCAL4 on 14 and 15/11 with every guard held and the two anchors reproducing M17\'s readings to the bit, on twelve judged points never played, at factors 2/3 to 3/2 and in three bands of |delta| (to 0.06, to 0.10, to 0.12), the chain with the level shift of each site and the hop to the second neighbour reads that width within a factor 1.25, 1.6 and 2 in the three bands, on 132 judged states, the largest ratio being 1.679 against a bound of 2 at L4: THE ORDER 2 HOLDS; it does better than the engine\'s own chain at the worst state at all twelve points, and it reads the energy shift of the states to one per cent, the largest gap being 0.0046; the residual is on one side only (the smallest ratio is 1.002) and grows with the disagreement, and the act does not say where it comes from; the verdict is unchanged under the thread noise up to seven times the noise measured at the anchors and may change from eight times, that noise not having been measured at the boxes of 73 and 74; the witness W2, played and not readable (3 judged states out of 14), and W1 (largest ratio 2.047), outside the statement, carry no weight; eighteen of the twenty announcements of the pen that can be judged are true; the act says nothing outside factors 2/3 to 3/2, the fraction 0.70, the 2:1 channel of x^5 and |delta| from 0.03 to 0.12, does not call the chain qualified and states no intrinsic width; the run was played on battery, which lengthened it to 4524 s and changed no number; no new candidate rule, thirty-four await review (X); act written by one machine and countersigned by the other after every number was recalculated from the countersigner\'s own sources, 16 controls of which one bites (a quotation from machine 1\'s own note that lost one word, with no consequence), the same sheet biting 14 times on a copy with nineteen figures or words changed, the deposited file being the countersigned one byte for byte')
+ open(os.path.join(ICI, 'message_commit_delta%d.txt' % NUMERO), 'w', encoding='utf-8', newline='\n').write(msg + '\n')
+ chk('le message ne porte aucun trailer d outillage (convention du depot public, 25/08)',
+     'Co-Authored' not in msg and 'Claude' not in msg and 'Generated' not in msg, '%d caracteres' % len(msg))

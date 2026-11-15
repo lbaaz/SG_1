@@ -1,0 +1,56 @@
+A. TABLES : somme generique (36 sauts, elements entiers) contre le bloc de machine 1
+  122 etats (ancres A1 (7,2) et A2 (8,2), 3 x 3 etiquettes voisines de la graine aux 14 autres points) ; tous les sites de m_min a la fin de la chaine
+  plus grand ecart relatif : t 0.00e+00 ; Sigma2 5.22e-13 ; u 4.60e-13
+  termes nuls (relatifs a la plus grande valeur de la table) : entre voisins et a trois sites 0.00e+00 ; a quatre sites 0.00e+00
+  A1     TIENT  t, Sigma2 et u du bloc == ma somme generique, a 1e-9 relatif
+  A2     TIENT  la parite et la portee annulent bien les termes entre voisins, a trois et a quatre sites
+  Sigma2(0) du bloc et de ma somme contre Sigma2_site du moteur (celui de la barriere, que la note dit retrouve 'a 5e-15 pres') : ecart relatif maximal 4.52e-15
+  A3     TIENT  Sigma2(0) du bloc == Sigma2_site du moteur, a 1e-12 relatif
+
+B. LOWDIN SUR LE H_2D EXACT DU MOTEUR (x5, eta = 0) : le second ordre est lu SUR LA MATRICE, contre les tables du bloc
+  5 etats, boite N = n1 + 24, sites de m_min a 8 ; ecart relatif : t 0.00e+00 ; Sigma2 1.18e-14 ; u 5.16e-15 ; termes nuls (dm = 1, 3, 4) 0.00e+00
+  B1     TIENT  le bloc == le second ordre lu sur la matrice du moteur, sans aucune enumeration de saut de ma part
+
+C. ENERGIE ET SIGNE : l'energie exacte de l'etat de plus grand recouvrement avec le site 0 (H_2D du moteur, hermitien) contre la chaine, a g, g/2, g/4
+  A1 (7,2) w2=39/20 : dE exact 5.1159e-04 (g), 1.2689e-04 (g/2) ; erreur / |dE| de la chaine d'ordre 2 : 7.50e-05, 1.84e-05, 4.59e-06 ; ordre 1 : 4.37e-02 ; Sigma2 seul : 4.40e-04 ; u seul : 4.40e-02 ; rapports d'erreur par moitie de g : 16.4, 16.1
+  A2 (8,2) w2=41/20 : dE exact -6.7392e-04 (g), -1.6680e-04 (g/2) ; erreur / |dE| de la chaine d'ordre 2 : 9.56e-05, 2.33e-05, 5.80e-06 ; ordre 1 : 5.57e-02 ; Sigma2 seul : 3.18e-04 ; u seul : 5.62e-02 ; rapports d'erreur par moitie de g : 16.6, 16.1
+  C1 (7,2) w2=197/100 : dE exact 3.0217e-04 (g), 7.4947e-05 (g/2) ; erreur / |dE| de la chaine d'ordre 2 : 2.69e-05, 6.60e-06, 1.64e-06 ; ordre 1 : 2.74e-02 ; Sigma2 seul : 2.40e-04 ; u seul : 2.76e-02 ; rapports d'erreur par moitie de g : 16.4, 16.1
+  L3 (8,2) w2=211/100 : dE exact -1.3774e-03 (g), -3.4119e-04 (g/2) ; erreur / |dE| de la chaine d'ordre 2 : 4.53e-04, 1.11e-04, 2.75e-05 ; ordre 1 : 1.41e-01 ; Sigma2 seul : 4.17e-04 ; u seul : 1.42e-01 ; rapports d'erreur par moitie de g : 16.5, 16.1
+  C1     TIENT  l'erreur de la chaine d'ordre 2 sur dE est sous 5 pour cent de dE a g et sous 0.5 pour cent a g/4
+  C2     TIENT  l'erreur relative decroit au moins comme g^2 (rapport > 3.5 a chaque moitie de g ; cubique : 8)
+  a g/4 (la ou le developpement tient) : erreur / |dE|, ordre 2 complet ['4.6e-06', '5.8e-06', '1.6e-06', '2.7e-05'] ; ordre 1 ['4.4e-02', '5.5e-02', '2.7e-02', '1.4e-01'] ; Sigma2 seul ['2.7e-05', '1.9e-05', '1.5e-05', '2.5e-05'] ; u seul ['4.4e-02', '5.5e-02', '2.7e-02', '1.4e-01']
+  C3     TIENT  a g/4, l'ordre 1 et 'u seul' sont au moins trois fois plus loin de l'energie exacte que l'ordre 2 complet ; 'Sigma2 seul' est aussi bon que lui (le decalage d'energie de l'etat central est le terme Sigma2 : u n'agit pas a cet ordre sur l'energie, il agit sur la saut entre sites, donc sur la largeur)
+
+D. LE SOLVEUR : ma chaine (mes tables) contre gamma_chaine_ordre2 du bloc (ses tables), aux quatre eta, aux etats de A
+  180 (etat, eta) : ecart relatif max : Gamma_flux 6.97e-09 ; dE 1.95e-11 ; recouvrement 3.93e-13 ; -2 Im E 4.74e-02 aux largeurs de la fenetre de lecture (Gamma_flux >= 1e-12) ; sur les 16 (etat, eta) a Gamma_flux sous 1e-12 le -2 Im E des deux solveurs differe jusqu a 2.67e+00 (arrondi de la diagonalisation non hermitienne, gel section 2 (iv))
+  D1     TIENT  le bloc == mon solveur sur mes tables, a 1e-6 relatif, pour les trois valeurs que la feuille lit : Gamma_flux, dE, recouvrement
+  D2     TIENT  -2 Im E (valeur NON lue, consignee) : les deux solveurs different de moins de 17 pour cent aux largeurs de la fenetre de lecture, le plus grand arrondi que le gel (iv) declare
+
+E. LA NOTE : les 262 etats des deux runs deja joues (JSON du registre), juges par (1) a (8) et l'etiquette unique ; q1, q2, decalage d'energie recalcules
+  262 etats juges sur 24 points distincts (la note : 262 etats sur 24 points)
+  mes valeurs contre celles du tableau de la note, par etat, Gamma_2D >= 1e-11 : q2 (lu a -2 Im E) 2.21e-03 ; q1 2.02e-03 ; dE 5.46e-11 (ecarts relatifs maximaux)
+  les memes aux etats de Gamma_2D sous 1e-11, ou -2 Im E s'arrondit (13 pour cent aux deux plus petits, a T3) : q2 1.31e-01 ; q1 6.18e-02
+  E1     TIENT  262 etats sur 24 points, comme la note
+  E2     TIENT  mes q2, q1 et dE == le tableau de la note a 5e-3 relatif des que Gamma_2D >= 1e-11 (arrondi de -2 Im E) ; a 15 pour cent au plus en dessous
+  243 etats hors 1.85 et 2.15 : q2 (-2 Im E) de 0.998 a 1.512 ; (Gamma_flux) de 0.998 a 1.512 ; la chaine du moteur q1 de 0.375 a 6.987
+  E3     TIENT  le gel (i) : q2 dans [0.998 ; 1.512] (exact) contre [0.375 ; 7.00] pour la chaine du moteur (mon maximum : H3 (7,1), Gamma_2D 2.2e-12, a 0.2 pour cent du 7.00)
+    |delta| <= 0.05   88 etats, plus grand q2 1.101
+    0.08 a 0.10      118 etats, plus grand q2 1.512
+    0.11 a 0.12       37 etats, plus grand q2 1.474
+  E4     TIENT  le gel (ii) : 88 etats, plus grand q2 1.101 ; 118, 1.512 ; 37, 1.474
+  dans un facteur 1.5 a l'ordre 2 : 242 sur 243 (la note : 241) ; dans un facteur 2 a l'ordre 1 : 143 sur 243 (la note : 143)
+  etats a q2 entre 1.49 et 1.52 : [(1.4924, 'H2', 13, 2), (1.4948, 'H2', 10, 3), (1.5122, 'H2', 11, 3)]
+  E5     TIENT  la note, verdict 2 : 241 etats sur 243 dans un facteur 1.5 (moi : 242, a un etat de la limite 1.5 : H2 (10,3) a 1.4948) ; 143 dans un facteur 2 au premier ordre (exact)
+  decalage d'energie, ecart relatif de la chaine d'ordre 2 a l'etat 2D : mediane 0.0011, pire 0.0050 (le gel : 0.11 pour cent, 0.50 pour cent ; plus grand ecart 0.0050)
+  E6     TIENT  le gel (i), section 9 : energie a 0.11 pour cent en mediane, 0.50 au pire, sur les 243 etats
+  Gamma_flux contre -2 Im E, au reglage de la sonde : ecart relatif median 1.24e-06, pire 1.40e-02 (le gel (iv) : 1.5e-06 et 1.6e-02)
+  E7     TIENT  le gel (iv) : Gamma_flux et -2 Im E different de 1.5e-06 en mediane et de 1.6e-02 au pire (moi : meme ordre, a l'arrondi pres de -2 Im E)
+  hors fenetre : T3 (1.85) q2 de 0.036 a 1.329 ; T4 (2.15) q2 de 1.816 a 2.686
+
+F. LES REFERENCES DE G-8 : ma chaine d'ordre 2 aux deux etats d'ancre, sans decomposition 2D, contre les constantes du gel (section 10)
+  les quatre constantes sont dans le texte du gel, au caractere pres : True
+  A1 (7,2) : Gamma_flux 2.3236497766320964e-10 (gel 2.3236497766513317e-10, ecart 8.28e-12) ; dE 2.1189849430533732e-03 (gel 2.1189849430559272e-03, ecart 1.21e-12)
+  A2 (8,2) : Gamma_flux 2.7943447916839322e-09 (gel 2.7943447916995482e-09, ecart 5.59e-12) ; dE -2.8201377357573829e-03 (gel -2.8201377357584354e-03, ecart 3.73e-13)
+  F1     TIENT  G-8 : mes references (chaine d'ordre 2 aux etats (7,2) et (8,2), tables et solveur a moi) == les quatre constantes du gel, a 1e-3 (Gamma) et 1e-6 (dE) relatif
+
+BILAN : 17 controles, 0 mordent []

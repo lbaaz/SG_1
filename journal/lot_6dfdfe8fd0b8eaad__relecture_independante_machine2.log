@@ -1,0 +1,21 @@
+RELECTURE INDEPENDANTE (mon lecteur, ecrit du texte du gel) du JSON ordre2/sortie/sonde_ordre2.json contre la feuille lecture_ordre2_machine1_v1.py
+  mon verdict : TIENT ; celui de la feuille : TIENT
+  bandes : mienne {'proche': 'T', 'moyenne': 'T', 'lointaine': 'T'} ; feuille {'proche': 'T', 'moyenne': 'T', 'lointaine': 'T'}
+  comparaison au pire etat : MIEUX / MIEUX ; energies : T / T ; lecture sans marge : TIENT / TIENT ; etats gardes par la marge : [] / []
+  A1 : statut LU, 11 juges ; palier 1.25 ; q2 1.038 1.062 1.080 ; MIEUX ; energie T
+  A2 : statut LU, 12 juges ; palier 1.25 ; q2 1.035 1.053 1.064 ; MIEUX ; energie T
+  C1 : statut TENU, 8 juges ; palier 1.25 ; q2 1.002 1.042 1.055 ; MIEUX ; energie T
+  C2 : statut TENU, 11 juges ; palier 1.25 ; q2 1.044 1.099 1.136 ; MIEUX ; energie T
+  C3 : statut TENU, 14 juges ; palier 1.25 ; q2 1.015 1.021 1.032 ; MIEUX ; energie T
+  C4 : statut TENU, 13 juges ; palier 1.25 ; q2 1.067 1.076 1.091 ; MIEUX ; energie T
+  L1 : statut TENU, 14 juges ; palier 1.25 ; q2 1.093 1.181 1.226 ; MIEUX ; energie T
+  L2 : statut TENU, 10 juges ; palier 1.6 ; q2 1.171 1.229 1.314 ; MIEUX ; energie T
+  L3 : statut TENU, 12 juges ; palier 1.6 ; q2 1.273 1.306 1.350 ; MIEUX ; energie T
+  L4 : statut TENU, 9 juges ; palier 2.0 ; q2 1.508 1.579 1.679 ; MIEUX ; energie T
+  M1 : statut TENU, 11 juges ; palier 1.25 ; q2 1.075 1.120 1.140 ; MIEUX ; energie T
+  M2 : statut TENU, 13 juges ; palier 1.25 ; q2 1.041 1.108 1.144 ; MIEUX ; energie T
+  M3 : statut TENU, 8 juges ; palier 1.25 ; q2 1.114 1.128 1.153 ; MIEUX ; energie T
+  M4 : statut TENU, 9 juges ; palier 1.6 ; q2 1.356 1.388 1.447 ; MIEUX ; energie T
+  W1 : statut LU, 11 juges ; palier None ; q2 1.513 1.689 2.047 ; MIEUX ; energie T
+  W2 : statut NL, 3 juges
+  ECARTS ENTRE MON LECTEUR ET LA FEUILLE : 0 []

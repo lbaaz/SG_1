@@ -1,0 +1,125 @@
+A. LECTEUR INDEPENDANT (gel 41153158190cf7f1, sections 4 a 10) CONTRE LA FEUILLE lecture_ordre2_machine1_v1.py
+   tableau lu dans le texte du gel : 16 points ; bornes {'proche': 1.25, 'moyenne': 1.6, 'lointaine': 2.0} ; seuils lus : sigma 0.2, poids 0.5, dix planchers 1.33e-12, suivi 0.9, stabilite 2.0, plancher 1.33e-13, energie 0.01, juges 6, lisibles 3
+   canons lus : moteur 82a0be882568fe0c, sonde 24315c52b234319c ; G-4 {'A1': 2.1623273017950654e-10, 'A2': 2.6613925716641374e-09} ; G-8 {'A1': (2.3236497766513317e-10, 0.002118984943055927), 'A2': (2.794344791699548e-09, -0.0028201377357584354)}
+   tableau de la feuille == tableau du gel, aux 16 points (role, w2, facteur, bande, garde, D1, c_max) : True ; ecarts []
+   references des ancres de la feuille == celles du gel (G-4 et G-8, etiquettes, Gamma_2D, Gamma d'ordre 2, dE) : True ; seuils et canons de la feuille == ceux du gel : True ; bandes et bornes de la feuille == celles du gel : True
+   4000 sondes synthetiques aux bords des seuils ; verdicts du lecteur independant : {'J06': 290, 'J10': 254, 'NCI': 873, 'NL': 940, 'NTP': 975, 'TIENT': 668}
+   ecarts feuille / lecteur : 0
+B. MUTATIONS DE LA FEUILLE : 115 alterations d'une ligne ; le selftest de machine 1 mord-il ? mon banc A (600 sondes) mord-il ?
+   M001  selftest m1 : MORD      banc m2 : MORD      SIGMA_J_MAX = 0.2  ->  SIGMA_J_MAX = 0.25
+   M002  selftest m1 : MORD      banc m2 : MORD      POIDS_SITE_MIN = 0.5  ->  POIDS_SITE_MIN = 0.45
+   M003  selftest m1 : MORD      banc m2 : MORD      DIX_PLANCHERS = 1.33e-12  ->  DIX_PLANCHERS = 1.0e-12
+   M004  selftest m1 : MORD      banc m2 : MORD      SUIVI_MIN = 0.9  ->  SUIVI_MIN = 0.8
+   M005  selftest m1 : MORD      banc m2 : MORD      STABILITE_CIBLE = 2.0  ->  STABILITE_CIBLE = 2.5
+   M006  selftest m1 : MORD      banc m2 : MORD      ETALEMENT_CHAINE = 2.0  ->  ETALEMENT_CHAINE = 3.0
+   M007  selftest m1 : MORD      banc m2 : MORD      TOL_ENERGIE = 1e-2  ->  TOL_ENERGIE = 2e-2
+   M008  selftest m1 : MORD      banc m2 : MORD      MIN_JUGES = 6  ->  MIN_JUGES = 5
+   M009  selftest m1 : MORD      banc m2 : MORD      MIN_LISIBLES_BANDE = 3  ->  MIN_LISIBLES_BANDE = 2
+   M010  selftest m1 : MORD      banc m2 : MORD      PLANCHER = 1.33e-13  ->  PLANCHER = 1.0e-13
+   M011  selftest m1 : survit    banc m2 : MORD      B_LOI = 2.87  ->  B_LOI = 2.5
+   M012  selftest m1 : MORD      banc m2 : MORD      N_ETATS = 14  ->  N_ETATS = 13
+   M013  selftest m1 : MORD      banc m2 : MORD      TOL_ANCRE = 1e-2  ->  TOL_ANCRE = 2e-2
+   M014  selftest m1 : survit    banc m2 : MORD      TOL_ANCRE_O2 = 1e-3  ->  TOL_ANCRE_O2 = 2e-3
+   M015  selftest m1 : survit    banc m2 : MORD      TOL_ANCRE_DE = 1e-6  ->  TOL_ANCRE_DE = 1e-5
+   M016  selftest m1 : MORD      banc m2 : MORD      TOL_GARDE = 5e-5  ->  TOL_GARDE = 1e-4
+   M017  selftest m1 : MORD      banc m2 : MORD      (PROCHE, 1.25, "0.06")  ->  (PROCHE, 1.3, "0.06")
+   M018  selftest m1 : MORD      banc m2 : MORD      (MOYENNE, 1.6, "0.10")  ->  (MOYENNE, 1.7, "0.10")
+   M019  selftest m1 : MORD      banc m2 : MORD      (LOINTAINE, 2.0, "0.12")  ->  (LOINTAINE, 2.1, "0.12")
+   M020  selftest m1 : MORD      banc m2 : MORD      MOTEUR_CANON = "82a0be882568fe0c"  ->  MOTEUR_CANON = "82a0be882568fe0d"
+   M021  selftest m1 : MORD      banc m2 : MORD      SONDE_CANON = "24315c52b234319c"  ->  SONDE_CANON = "24315c52b234319d"
+   M022  selftest m1 : survit    banc m2 : MORD      "C1": ("juge", "197/100", "2/3", PROCHE, EN, 0.031915, 0  ->  "C1": ("juge", "197/100", "2/3", PROCHE, EN, 0.031
+   M023  selftest m1 : MORD      banc m2 : MORD      "M4": ("juge", "21/10", "3/4", MOYENNE, HORS, 0.100000,  ->  "M4": ("juge", "21/10", "3/4", MOYENNE, EN, 0.1000
+   M024  selftest m1 : survit    banc m2 : MORD      "W2": ("temoin", "209/100", "1/2", None, HORS, 0.090000,  ->  "W2": ("temoin", "209/100", "1/2", None, HORS, 0.0
+   M025  selftest m1 : MORD      banc m2 : MORD      "L3": ("juge", "211/100", "3/2", LOINTAINE, EN, 0.110000  ->  "L3": ("juge", "211/100", "3/2", LOINTAINE, HORS,
+   M026  selftest m1 : MORD      banc m2 : MORD      "C4": ("juge", "103/50", "4/3", PROCHE, EN, 0.060000, 0.  ->  "C4": ("juge", "103/50", "4/3", MOYENNE, EN, 0.060
+   M027  selftest m1 : MORD      banc m2 : MORD      "M2": ("juge", "48/25", "4/3", MOYENNE, EN, 0.095238, 0.  ->  "M2": ("juge", "48/25", "3/4", MOYENNE, EN, 0.0952
+   M028  selftest m1 : survit    banc m2 : MORD      "L1": ("juge", "189/100", "4/3", LOINTAINE, HORS, 0.1410  ->  "L1": ("juge", "189/100", "4/3", LOINTAINE, HORS,
+   M029  selftest m1 : MORD      banc m2 : MORD      "A2": ("ancre", "41/20", "1/1", None, EN, 0.050000, 0.05  ->  "A2": ("temoin", "41/20", "1/1", None, EN, 0.05000
+   M030  selftest m1 : MORD      banc m2 : MORD      "W1": ("temoin", "107/50", "1/1", None, HORS, 0.140000,  ->  "W1": ("ancre", "107/50", "1/1", None, HORS, 0.140
+   M031  selftest m1 : MORD      banc m2 : MORD      2.1623273017950654e-10  ->  2.2623273017950654e-10
+   M032  selftest m1 : MORD      banc m2 : MORD      2.3236497766513317e-10  ->  2.4236497766513317e-10
+   M033  selftest m1 : MORD      banc m2 : MORD      0.002118984943055927  ->  0.003118984943055927
+   M034  selftest m1 : MORD      banc m2 : MORD      -0.0028201377357584354  ->  -0.0038201377357584354
+   M035  selftest m1 : MORD      banc m2 : MORD      2.6613925716641374e-09  ->  2.7613925716641374e-09
+   M036  selftest m1 : MORD      banc m2 : MORD      "A1": ((7, 2),  ->  "A1": ((7, 3),
+   M037  selftest m1 : MORD      banc m2 : MORD      if not (e["J_ecart_type"] < SIGMA_J_MAX):  ->  if not (e["J_ecart_type"] <= SIGMA_J_MAX):
+   M038  selftest m1 : MORD      banc m2 : MORD      if e["n1"] < 0 or e["n2"] < 0:  ->  if e["n1"] < 0:
+   M039  selftest m1 : MORD      banc m2 : MORD      if not (e["poids_site"] >= POIDS_SITE_MIN):  ->  if not (e["poids_site"] > POIDS_SITE_MIN):
+   M040  selftest m1 : MORD      banc m2 : MORD      if not (g3 > DIX_PLANCHERS):  ->  if not (g3 >= DIX_PLANCHERS):
+   M041  selftest m1 : MORD      banc m2 : MORD      if min(e["suivi"]["2"], e["suivi"]["4"]) < SUIVI_MIN:  ->  if max(e["suivi"]["2"], e["suivi"]["4"]) < SUIVI_M
+   M042  selftest m1 : MORD      banc m2 : MORD      gs = [e["Gamma_2D"][k] for k in ("2", "3", "4")]  ->  gs = [e["Gamma_2D"][k] for k in ("3", "4")]
+   M043  selftest m1 : MORD      banc m2 : MORD      if min(gs) <= 0 or max(gs) / min(gs) > STABILITE_CIBLE:  ->  if min(gs) < 0 or max(gs) / min(gs) > STABILITE_CI
+   M044  selftest m1 : MORD      banc m2 : MORD      if min(gs) <= 0 or max(gs) / min(gs) > STABILITE_CIBLE:  ->  if min(gs) <= 0 or max(gs) / min(gs) >= STABILITE_
+   M045  selftest m1 : MORD      banc m2 : survit    if ch.get("erreur"):  ->  if False:
+   M046  selftest m1 : MORD      banc m2 : MORD      if ch.get("vide") or not ch.get("definie"):  ->  if ch.get("vide"):
+   M047  selftest m1 : MORD      banc m2 : MORD      if min(cg) <= 0 or max(cg) / min(cg) > ETALEMENT_CHAINE:  ->  if min(cg) < 0 or max(cg) / min(cg) > ETALEMENT_CH
+   M048  selftest m1 : survit    banc m2 : MORD      if min(cg) <= 0 or max(cg) / min(cg) > ETALEMENT_CHAINE:  ->  if min(cg) <= 0 or max(cg) / min(cg) >= ETALEMENT_
+   M049  selftest m1 : MORD      banc m2 : MORD      if c2.get("erreur"):  ->  if False:
+   M050  selftest m1 : MORD      banc m2 : MORD      if not c2.get("definie"):  ->  if False:
+   M051  selftest m1 : MORD      banc m2 : MORD      if min(fg) <= 0 or max(fg) / min(fg) > ETALEMENT_CHAINE:  ->  if min(fg) < 0 or max(fg) / min(fg) > ETALEMENT_CH
+   M052  selftest m1 : MORD      banc m2 : MORD      if min(fg) <= 0 or max(fg) / min(fg) > ETALEMENT_CHAINE:  ->  if min(fg) <= 0 or max(fg) / min(fg) >= ETALEMENT_
+   M053  selftest m1 : MORD      banc m2 : MORD      fg = c2["gammas_flux"]  ->  fg = c2["gammas_flux"][:3]
+   M054  selftest m1 : MORD      banc m2 : MORD      cg = ch["gammas"]  ->  cg = ch["gammas"][:3]
+   M055  selftest m1 : MORD      banc m2 : MORD      return (g3 - PLANCHER) / borne <= g2 <= borne * (g3 + PL  ->  return (g3 + PLANCHER) / borne <= g2 <= borne * (g
+   M056  selftest m1 : survit    banc m2 : MORD      return (g3 - PLANCHER) / borne <= g2 <= borne * (g3 + PL  ->  return (g3 - PLANCHER) / borne < g2 < borne * (g3
+   M057  selftest m1 : MORD      banc m2 : MORD      return (g3 - PLANCHER) / borne <= g2 <= borne * (g3 + PL  ->  return g3 / borne <= g2 <= borne * g3
+   M058  selftest m1 : MORD      banc m2 : MORD      return (g3 - PLANCHER) / borne <= g2 <= borne * (g3 + PL  ->  return (g3 - PLANCHER) / borne <= g2 <= borne * (g
+   M059  selftest m1 : MORD      banc m2 : MORD      for (_, borne, _) in BANDES:         if dans_borne(g2, g  ->  for (_, borne, _) in BANDES[::-1]:         if dans
+   M060  selftest m1 : MORD      banc m2 : MORD      return float(int(a)) / float(int(b))  ->  return float(int(b)) / float(int(a))
+   M061  selftest m1 : survit    banc m2 : MORD      return 0.5 * (xs[(len(xs) - 1) // 2] + xs[len(xs) // 2])  ->  return xs[len(xs) // 2]
+   M062  selftest m1 : MORD      banc m2 : MORD      g1 = e["chaine"]["gammas"][2]  ->  g1 = e["chaine"]["gammas"][1]
+   M063  selftest m1 : MORD      banc m2 : MORD      g2 = c2["gammas_flux"][2]  ->  g2 = c2["gammas_flux"][1]
+   M064  selftest m1 : MORD      banc m2 : MORD      de_c2 = c2["dE"][2]  ->  de_c2 = c2["dE"][1]
+   M065  selftest m1 : MORD      banc m2 : MORD      de_2d = e["E_re"] - e["E_libre"]  ->  de_2d = e["E_re"]
+   M066  selftest m1 : survit    banc m2 : MORD      ecart_e = abs(de_c2 - de_2d) / abs(de_2d) if de_2d != 0.  ->  ecart_e = abs(de_c2 - de_2d) / abs(de_c2) if de_2d
+   M067  selftest m1 : MORD      banc m2 : MORD      ecart_e = abs(de_c2 - de_2d) / abs(de_2d) if de_2d != 0.  ->  ecart_e = (de_c2 - de_2d) / abs(de_2d) if de_2d !=
+   M068  selftest m1 : MORD      banc m2 : MORD      ecart_e = abs(de_c2 - de_2d) / abs(de_2d) if de_2d != 0.  ->  ecart_e = abs(de_c2 - de_2d) / abs(de_2d) if de_2d
+   M069  selftest m1 : survit    banc m2 : survit    "energie_tenue": bool(ecart_e <= TOL_ENERGIE)  ->  "energie_tenue": bool(ecart_e < TOL_ENERGIE)
+   M070  selftest m1 : survit    banc m2 : MORD      delta = eval_fraction(pt["w2"]) - 2.0  ->  delta = eval_fraction(pt["w2"]) + 2.0
+   M071  selftest m1 : survit    banc m2 : MORD      math.exp(B_LOI * delta * delta * c2["m_bord"])  ->  math.exp(B_LOI * delta * delta * c2["m_min"])
+   M072  selftest m1 : survit    banc m2 : MORD      "flux_contre_im": abs(c2["gammas_im"][2] / g2 - 1.0)  ->  "flux_contre_im": abs(c2["gammas_im"][1] / g2 - 1.
+   M073  selftest m1 : survit    banc m2 : MORD      "flux_contre_im": abs(c2["gammas_im"][2] / g2 - 1.0)  ->  "flux_contre_im": abs(c2["gammas_im"][2] / g3 - 1.
+   M074  selftest m1 : MORD      banc m2 : MORD      if len(juges) < MIN_JUGES:  ->  if len(juges) <= MIN_JUGES:
+   M075  selftest m1 : MORD      banc m2 : MORD      pire2 = max(abs(math.log(q)) for q in q2s)  ->  pire2 = max(math.log(q) for q in q2s)
+   M076  selftest m1 : MORD      banc m2 : MORD      pire1 = max(abs(math.log(q)) for q in q1s)  ->  pire1 = max(math.log(q) for q in q1s)
+   M077  selftest m1 : MORD      banc m2 : MORD      "MIEUX" if pire2 < pire1 else "PAS MIEUX"  ->  "MIEUX" if pire2 <= pire1 else "PAS MIEUX"
+   M078  selftest m1 : MORD      banc m2 : MORD      ("TENU" if all(x["dans_borne"] for x in juges) else "TOM  ->  ("TENU" if any(x["dans_borne"] for x in juges) els
+   M079  selftest m1 : MORD      banc m2 : MORD      ("TENU" if all(x["dans_borne_nue"] for x in juges) else  ->  ("TENU" if any(x["dans_borne_nue"] for x in juges)
+   M080  selftest m1 : MORD      banc m2 : MORD      if x["dans_borne"] and not x["dans_borne_nue"]]  ->  if not x["dans_borne"] and x["dans_borne_nue"]]
+   M081  selftest m1 : MORD      banc m2 : MORD      else max(paliers))  ->  else min(paliers))
+   M082  selftest m1 : MORD      banc m2 : MORD      "energie": ("TENUE" if all(x["energie_tenue"] for x in j  ->  "energie": ("TENUE" if any(x["energie_tenue"] for
+   M083  selftest m1 : survit    banc m2 : MORD      "ecart_energie_max": max(x["ecart_energie"] for x in jug  ->  "ecart_energie_max": min(x["ecart_energie"] for x
+   M084  selftest m1 : MORD      banc m2 : MORD      if m is None and vus[(e["n1"], e["n2"])] > 1:  ->  if m is None and vus[(e["n1"], e["n2"])] > 2:
+   M085  selftest m1 : survit    banc m2 : MORD      if m is None and vus[(e["n1"], e["n2"])] > 1:  ->  if vus[(e["n1"], e["n2"])] > 1:
+   M086  selftest m1 : MORD      banc m2 : MORD      if len(tr) != 1:  ->  if len(tr) < 1:
+   M087  selftest m1 : MORD      banc m2 : MORD      if ecart > TOL_ANCRE:  ->  if ecart > 2 * TOL_ANCRE:
+   M088  selftest m1 : MORD      banc m2 : MORD      if not c2.get("definie") or c2.get("erreur"):  ->  if False:
+   M089  selftest m1 : MORD      banc m2 : MORD      if abs(c2["gammas_flux"][2] / ref_o2 - 1.0) > TOL_ANCRE_  ->  if abs(c2["gammas_flux"][1] / ref_o2 - 1.0) > TOL_
+   M090  selftest m1 : MORD      banc m2 : MORD      if abs(c2["dE"][2] / ref_de - 1.0) > TOL_ANCRE_DE:  ->  if abs(c2["dE"][1] / ref_de - 1.0) > TOL_ANCRE_DE:
+   M091  selftest m1 : survit    banc m2 : MORD      if p is None or not p.get("faisable"):  ->  if p is None:
+   M092  selftest m1 : MORD      banc m2 : MORD      if gm.get("statut") != statut:  ->  if False:
+   M093  selftest m1 : MORD      banc m2 : MORD      if gm.get("erreur"):  ->  if False:
+   M094  selftest m1 : MORD      banc m2 : MORD      if not isinstance(gm, dict):  ->  if False:
+   M095  selftest m1 : MORD      banc m2 : MORD      abs(gm["D1"] - d1) > TOL_GARDE or abs(gm["c_max"] - cmax  ->  abs(gm["D1"] - d1) > TOL_GARDE and abs(gm["c_max"]
+   M096  selftest m1 : MORD      banc m2 : MORD      abs(gm["c_max"] - cmax) > TOL_GARDE  ->  abs(gm["c_max"] - d1) > TOL_GARDE
+   M097  selftest m1 : MORD      banc m2 : MORD      if s.get("moteur_canon") != MOTEUR_CANON:  ->  if False:
+   M098  selftest m1 : MORD      banc m2 : MORD      if s.get("sonde_canon") != SONDE_CANON:  ->  if False:
+   M099  selftest m1 : MORD      banc m2 : MORD      if (p["role"], p["w2"], p["facteur"]) != (role, w2, fac)  ->  if (p["w2"], p["facteur"]) != (w2, fac):
+   M100  selftest m1 : MORD      banc m2 : MORD      if p.get("faisable") and len(p["etats"]) != N_ETATS:  ->  if False:
+   M101  selftest m1 : survit    banc m2 : MORD      if abs(p["g"] - p["g_regle"] * eval_fraction(fac)) > 1e-  ->  if abs(p["g"] - p["g_regle"] * eval_fraction(fac))
+   M102  selftest m1 : MORD      banc m2 : MORD      obligatoires = [k for k in ATTENDUS if ATTENDUS[k][0] !=  ->  obligatoires = [k for k in ATTENDUS]
+   M103  selftest m1 : MORD      banc m2 : MORD      if len(ids) != len(set(ids)) or any(k not in ATTENDUS fo  ->  if any(k not in ATTENDUS for k in ids) or any(k no
+   M104  selftest m1 : MORD      banc m2 : MORD      motifs += garde_ancres(pts)  ->  pass
+   M105  selftest m1 : MORD      banc m2 : MORD      if len(lis) < MIN_LISIBLES_BANDE:  ->  if len(lis) <= MIN_LISIBLES_BANDE:
+   M106  selftest m1 : MORD      banc m2 : MORD      issue = "TENUE" if not tombes else "NON TENUE"  ->  issue = "TENUE" if len(tombes) < 2 else "NON TENUE
+   M107  selftest m1 : MORD      banc m2 : MORD      tombes = sorted(x["id"] for x in lis if x[cle] == "TOMBE  ->  tombes = sorted(x["id"] for x in pts if x[cle] ==
+   M108  selftest m1 : MORD      banc m2 : MORD      v = "L'ORDRE 2 TIENT JUSQU'A " + BANDES[i - 1][2]  ->  v = "L'ORDRE 2 TIENT JUSQU'A " + BANDES[i][2]
+   M109  selftest m1 : survit    banc m2 : survit    elif bandes[BANDES[0][0]]["issue"] == "NON LISIBLE":  ->  elif bandes[BANDES[0][0]]["issue"] != "NON TENUE":
+   M110  selftest m1 : survit    banc m2 : MORD      juges = [par_id[k] for k in sorted(ATTENDUS) if ATTENDUS  ->  juges = [par_id[k] for k in sorted(ATTENDUS) if AT
+   M111  selftest m1 : MORD      banc m2 : MORD      pas_mieux = sorted(x["id"] for x in lis if x["comparaiso  ->  pas_mieux = sorted(x["id"] for x in juges if x["co
+   M112  selftest m1 : MORD      banc m2 : MORD      sans_energie = sorted(x["id"] for x in lis if x["energie  ->  sans_energie = sorted(x["id"] for x in lis if x["e
+   M113  selftest m1 : MORD      banc m2 : MORD      v_nu, _ = lire_bandes(juges, "statut_sans_marge")  ->  v_nu, _ = lire_bandes(juges, "statut")
+   M114  selftest m1 : survit    banc m2 : MORD      ("NON LISIBLE" if not lis else  ->  ("NON LISIBLE" if len(lis) < 4 else
+   M115  selftest m1 : MORD      banc m2 : MORD      if not pt.get("faisable", False):  ->  if False:
+   BILAN : 115 alterations ; motifs absents [] ; survivent au selftest de machine 1 : [11, 14, 15, 22, 24, 28, 48, 56, 61, 66, 69, 70, 71, 72, 73, 83, 85, 91, 101, 109, 110, 114] ; survivent a mon banc : [45, 69, 109] ; survivent aux deux : [69, 109]
+code 0
