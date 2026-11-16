@@ -1,0 +1,147 @@
+{
+ "annonces": {
+  "A-1": {
+   "evenement": "l'instrument tient",
+   "probabilite": 0.95,
+   "realise": true
+  },
+  "A-2": {
+   "evenement": "le temoin tient aux 28 cellules",
+   "indication_cellules": 28,
+   "indication_plus_grand_rapport_a_la_largeur_predite": 1.3206301125524323e-27,
+   "probabilite": 0.95,
+   "realise": true,
+   "temoins_non_tenus": [],
+   "temoins_tenus": 28
+  },
+  "A-3": {
+   "evenement": "le lecteur qualifie les seize cellules lisibles ; douze au moins",
+   "probabilites": {
+    "douze_au_moins": 0.8,
+    "seize": 0.6
+   },
+   "qualifiees": 16,
+   "realise": {
+    "douze_au_moins": true,
+    "seize": true
+   }
+  },
+  "A-4": {
+   "evenement": "issue de V1",
+   "probabilite_de_l_issue": 0.5,
+   "probabilites": {
+    "NON CONCLUANT": 0.32,
+    "TENU": 0.5,
+    "TENU SAUF UNE CELLULE": 0.05,
+    "TOMBE": 0.08,
+    "instrument": 0.05
+   },
+   "realise": "TENU"
+  },
+  "A-5": {
+   "evenement": "issue de VP",
+   "probabilite_de_l_issue": 0.35,
+   "probabilites": {
+    "NON LUE ou NON CONCLUANT": 0.45,
+    "TENU": 0.35,
+    "TENU SAUF UNE CELLULE": 0.05,
+    "TOMBE": 0.1,
+    "instrument": 0.05
+   },
+   "realise": "TENU"
+  },
+  "A-6": {
+   "cellule": "MG6",
+   "cellules_lues": 16,
+   "evenement": "aux cellules lisibles lues, le plus grand |ln q| est sous 0.01",
+   "plus_grand": 0.0006838856949649141,
+   "probabilite": 0.55,
+   "realise": true
+  },
+  "A-7": {
+   "au_dela_de_la_bande": [],
+   "bande": {
+    "MG3": 0.002967843667917552,
+    "MG4": 0.00289216912231895,
+    "MG5": 0.002942499765492139,
+    "MG6": 0.0024007067810139686
+   },
+   "evenement": "signe de ln q aux cellules lisibles lues de MG",
+   "ln_q": {
+    "MG3": 0.00024176999831126977,
+    "MG4": 0.00041740071505813603,
+    "MG5": 0.0005455285885425099,
+    "MG6": 0.0006838856949649141
+   },
+   "lues": 4,
+   "negatives": [],
+   "positives": [
+    "MG3",
+    "MG4",
+    "MG5",
+    "MG6"
+   ],
+   "probabilite_de_l_issue": 0.4,
+   "probabilites": {
+    "negatif": 0.4,
+    "ni l'un ni l'autre": 0.2,
+    "positif": 0.4
+   },
+   "realise": "positif"
+  }
+ },
+ "annonces_gelees": {
+  "A-1": 0.95,
+  "A-2": 0.95,
+  "A-3": {
+   "douze_au_moins": 0.8,
+   "seize": 0.6
+  },
+  "A-4": {
+   "NON CONCLUANT": 0.32,
+   "TENU": 0.5,
+   "TENU SAUF UNE CELLULE": 0.05,
+   "TOMBE": 0.08,
+   "instrument": 0.05
+  },
+  "A-5": {
+   "NON LUE ou NON CONCLUANT": 0.45,
+   "TENU": 0.35,
+   "TENU SAUF UNE CELLULE": 0.05,
+   "TOMBE": 0.1,
+   "instrument": 0.05
+  },
+  "A-6": {
+   "probabilite": 0.55,
+   "seuil": 0.01
+  },
+  "A-7": {
+   "negatif": 0.4,
+   "ni l'un ni l'autre": 0.2,
+   "positif": 0.4
+  }
+ },
+ "comparaison": {
+  "champs": 1576,
+  "champs_discrets_differents": [],
+  "dont_issues_jugements_statuts": [],
+  "issue": "VERDICTS IDENTIQUES",
+  "nombres_compares": 816,
+  "plus_grand_ecart": 1.4432782429580314e-14,
+  "plus_grand_ecart_champ": "/cellules/PG16/lecteur/plateaux/D/ecart_ln_A"
+ },
+ "feuille_canon": "ac39a24def6c7420",
+ "gel_canon": "eebd979f18d8db48",
+ "inventaire": {
+  "attendus": 30,
+  "fichiers": 68,
+  "manquent": []
+ },
+ "piece": "reception_resultat_gel_vide_machine1_v1",
+ "rejeu": {
+  "code": 0,
+  "verdict_ecrit": true
+ },
+ "table_canon": "b71206e5daf6c741",
+ "verdict_rejoue": "V1 TENU ; VP TENU"
+}

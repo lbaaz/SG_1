@@ -1,0 +1,7 @@
+verdict m1 : V1 TENU ; VP TENU | verdict m2 : V1 TENU ; VP TENU | identiques : True
+  V1 : issue m1 TENU / m2 TENU ; comptes m1 {'NON JUGEABLE': 0, 'NON LUE': 0, 'TIENT': 16, 'TOMBE': 0} / m2 {'NON JUGEABLE': 0, 'NON LUE': 0, 'TIENT': 16, 'TOMBE': 0} ; identiques : True
+  VP : issue m1 TENU / m2 TENU ; comptes m1 {'NON JUGEABLE': 0, 'NON LUE': 0, 'TIENT': 12, 'TOMBE': 0} / m2 {'NON JUGEABLE': 0, 'NON LUE': 0, 'TIENT': 12, 'TOMBE': 0} ; identiques : True
+  instrument m1 TIENT / m2 TIENT ; incomplet m1 [] / m2 [] ; prevol m1 False / m2 False
+cellules comparees : 28 ; jugements, statuts du lecteur et temoins identiques : 28 sur 28
+ecart max entre les deux feuilles : ln q 0.00e+00 ; bande 0.00e+00 ; etalement 0.00e+00 ; ln Gamma_pl 0.00e+00
+DESACCORDS : []

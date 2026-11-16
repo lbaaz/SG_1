@@ -1,0 +1,8 @@
+128c128
+< cas("b24_bande_chaine", "MG3 (etendue %.4f) et PG6 (etendue %.4f) a ln q = 0.0105 : la plus petite etendue TIENT, la plus grande est NON JUGEABLE" % (
+---
+> cas("b24_bande_chaine", "MG3 (etendue %.4f) et PG6 (etendue %.4f) a ln q = 0.0125 : la plus petite etendue TIENT, la plus grande est NON JUGEABLE" % (
+130c130
+<     lambda c, V: cel(V, "MG3")["jugement"] == "TIENT" and cel(V, "PG6")["jugement"] == "NON JUGEABLE", par_cellule={"MG3": {"ln_q": 0.0105}, "PG6": {"ln_q": 0.0105}})
+---
+>     lambda c, V: cel(V, "MG3")["jugement"] == "TIENT" and cel(V, "PG6")["jugement"] == "NON JUGEABLE", par_cellule={"MG3": {"ln_q": 0.0125}, "PG6": {"ln_q": 0.0125}})

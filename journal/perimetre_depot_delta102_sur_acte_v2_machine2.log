@@ -1,0 +1,138 @@
+
+1. LES CITATIONS DE L ACTE, ET LES DEUX INDEX PAR CANON
+  [ note] acte                                                       journal_delta_nn_largeur_vide_v2.md (version 2)
+  [PASSE] l acte est ASCII pur, LF, newline final                    29875 octets
+  [PASSE] l acte cite des empreintes (compte etabli apres extraction 41 jetons distincts de 16 hex
+  [PASSE] chaque VALEUR declaree est bien citee par l acte           
+  [PASSE] chaque lot de TRANSPORT declare est bien cite par l acte   
+  [ note] numero DERIVE du releve, non tape                          plafond 101 -> le delta de cet acte porte le 102 ; le numero reste de la main de l operateur (E18)
+  [PASSE] releve : HEAD dee73bd, plafond 101, aucun fichier delta_10 2465 fichiers suivis
+  [PASSE] le delta PRECEDENT est bien au registre -- le releve porte delta_101 present
+  [ note] index du poste                                             10631 canons distincts (B et brut), 4525 noms de table
+  [ note] balayage : tout BOCAL4 hors .git et __pycache__ ; exclues, manifest_depot_delta102_machine2_v2.txt, perimetre_depot_delta102_sur_acte_v2_machine2.log
+
+2. RESOLUTION DE CHAQUE CITATION -- AU REGISTRE, AU POSTE, OU NULLE PART
+   registre  82a0be882568fe0c  scripts/m17_chaine_v17.py
+   registre  d5cc48f48e37af99  scripts/sonde_lecteur_gel_loi_machine1_v1.py
+   poste     b57c9ccdd3946261  DEPOT_delta102/entrants/lot_machine1_2026-11-16_gel_vide_partie1_regle_tirage_v1/gel_largeur_vide_partie1_regle_tirage_pre_enregistrement_v1.md
+   poste     eebd979f18d8db48  DEPOT_delta102/entrants/lot_machine1_2026-11-16_gel_vide_partie2_instrument_enonces_v1/gel_largeur_vide_partie2_instrument_enonces_pre_enregistrement_v1.md
+   poste     b71206e5daf6c741  DEPOT_delta102/entrants/lot_machine1_2026-11-16_gel_vide_partie2_instrument_enonces_v1/table_cellules_gel_vide_v1.json
+   poste     879ea2e51c7d7f4f  DEPOT_delta102/entrants/lot_machine1_2026-11-16_gel_vide_partie1_regle_tirage_v1/MANIFESTE_lot_machine1_2026-11-16_gel_vide_partie1_regle_tirage_v1.txt
+   poste     d4f95772710d545c  MANIFEST_lot_machine2_certification_gel_vide_partie1_v1.txt
+   poste     5921fcd984d6de5b  MANIFEST_lot_machine2_tirage_graine_gel_vide_v1.txt
+   poste     b1919dc9468dc437  DEPOT_delta102/entrants/lot_machine1_2026-11-16_gel_vide_partie2_instrument_enonces_v1/MANIFESTE_lot_machine1_2026-11-16_gel_vide_partie2_instrument_enonces_v1.txt
+   poste     f989369a3ac22f98  MANIFEST_lot_machine2_certification_gel_vide_partie2_v1.txt
+   poste     336913aecc732cdf  DEPOT_delta102/entrants/lot_machine1_2026-11-16_rectificatif_gel_vide_partie2_C1_C2_v1/rectificatif_gel_vide_partie2_C1_C2_machine1_v1.md
+   poste     71ec801a5f86e068  DEPOT_delta102/entrants/lot_machine1_2026-11-16_rectificatif_gel_vide_partie2_C1_C2_v1/MANIFESTE_lot_machine1_2026-11-16_rectificatif_gel_vide_partie2_C1_C2_v1.txt
+   poste     2d8e6692d862fa37  DEPOT_delta102/entrants/lot_machine2_2026-11-16_resultat_run_gel_vide_v1/run_gel_vide_machine2/console_run_1.log
+   poste     a38b1550f8f5e3cf  DEPOT_delta102/entrants/lot_machine1_2026-11-16_gel_vide_partie2_instrument_enonces_v1/pilote_gel_vide_machine1_v1.py
+   poste     cc54f4bc4e175143  DEPOT_delta102/entrants/lot_machine2_2026-11-16_resultat_run_gel_vide_v1/run_gel_vide_machine2/run_1/verdict_ter_instrument.json
+   poste     8472dba8919a9b6e  DEPOT_delta102/entrants/lot_machine2_2026-11-16_resultat_run_gel_vide_v1/run_gel_vide_machine2/run_1/verdict_vide.json
+   poste     9a14bf95fa8c6d20  MANIFEST_lot_machine2_resultat_run_gel_vide_v1.txt
+   poste     c815876f0ff7d66b  DEPOT_delta102/entrants/lot_machine1_2026-11-16_acte_gel_vide_v1/reception_resultat_gel_vide_machine1_v1.py
+   poste     4adc285659120eb8  DEPOT_delta102/entrants/lot_machine1_2026-11-16_acte_gel_vide_v1/essai_reception_resultat_machine1_v1.py
+   poste     ac39a24def6c7420  DEPOT_delta102/entrants/lot_machine1_2026-11-16_gel_vide_partie2_instrument_enonces_v1/feuille_vide_machine1_v1.py
+   poste     a6754241629160a7  certif_gel_vide_partie2_machine2/feuille_vide_machine2_v1.py
+   poste     49a40d9098b55361  DEPOT_delta102/entrants/lot_machine1_2026-11-16_gel_vide_partie1_regle_tirage_v1/chaine_adaptee_bloc_machine1_v1.py
+   poste     53c604647e78afa4  DEPOT_delta102/entrants/lot_machine1_2026-11-16_reception_certification_gel_vide_partie1_v1/MANIFESTE_lot_machine1_2026-11-16_reception_certification_gel_vide_partie1_v1.txt
+   poste     22b5d62869889371  certif_gel_vide_partie2_machine2/table_cellules_gel_vide_rejouee_m2.json
+   poste     464ba00a6905e3a5  DEPOT_delta102/entrants/lot_machine1_2026-11-16_acte_gel_vide_v1/journal_delta_nn_largeur_vide_v1.md
+   poste     29058152bbba7a7a  DEPOT_delta102/entrants/lot_machine1_2026-11-16_acte_gel_vide_v1/MANIFESTE_lot_machine1_2026-11-16_acte_gel_vide_v1.txt
+   poste     e1dfb7ba7b18196e  MANIFEST_lot_machine2_contreseing_acte_gel_vide_v1.txt
+   poste     2913b7aa82184ef1  POUR_MACHINE1_certification_gel_vide_partie2_machine2_v1.md
+   poste     bcaf377489a0e1ff  POUR_MACHINE1_resultat_run_gel_vide_machine2_v1.md
+   poste     700a39a9a7223fd0  POUR_MACHINE1_contreseing_acte_gel_vide_machine2_v1.md
+   poste     47bb39ef530a967c  DEPOT_delta102/entrants/lot_machine1_2026-11-16_acte_gel_vide_v1/verdict_vide_rejoue_machine1.json
+   poste     c95df19ff2f16ff7  DEPOT_delta102/entrants/lot_machine2_2026-11-16_resultat_run_gel_vide_v1/resultats_run_vide_machine2/verdict_vide_feuille_machine2.json
+   poste     957ce0b198a5f31b  DEPOT_delta102/entrants/lot_machine1_2026-11-16_acte_gel_vide_v1/reception_resultat_vide_v1.json
+   poste     f1d08f97d5301157  DEPOT_delta102/entrants/lot_machine1_2026-11-16_acte_gel_vide_v1/lecture_resultat_vide_machine1_v1.py
+   poste     af0b3d8cdd0b4fa5  DEPOT_delta102/entrants/lot_machine1_2026-11-16_acte_gel_vide_v1/lecture_resultat_vide_v1.json
+   poste     16ba5e594ab18717  DEPOT_delta102/entrants/lot_machine1_2026-11-16_acte_gel_vide_v2/journal_delta_nn_largeur_vide_v2.md
+   poste     c5d8fd0313217569  DEPOT_delta102/entrants/lot_machine1_2026-11-16_vide_etape_sans_run_v1/MANIFESTE_lot_machine1_2026-11-16_vide_etape_sans_run_v1.txt
+   poste     408b8a595cad0040  DEPOT_delta102/entrants/lot_machine1_2026-11-16_loi_echelle_etape0_v1/MANIFESTE_lot_machine1_2026-11-16_loi_echelle_etape0_v1.txt
+   poste     fb6db25d1f5ae190  DEPOT_delta102/entrants/lot_machine1_2026-11-16_acte_gel_vide_v2/MANIFESTE_lot_machine1_2026-11-16_acte_gel_vide_v2.txt
+   poste     af04248cea5cff5e  MANIFEST_lot_machine2_contreseing_acte_gel_vide_v2_v1.txt
+  [PASSE] toute empreinte citee resout par canon (registre, poste, o 2 au registre, 38 au poste, 0 zip, 0 valeurs
+  [PASSE] TOUS les lots extraits sous entrants/ sont deposes par cit 14 lots extraits ; manquants : []
+
+3. LES LOTS CITES ENTRENT AVEC LEURS PIECES DE TABLE
+  [ note] erratum                                                    aucun dans ce chantier : une divergence de table mord
+  [ note] manifeste sans ligne pieces : N                            879ea2e51c7d7f4f : compte attendu = 30 membres du zip extrait, hors manifeste
+   lot 879ea2e51c7d7f4f  table 30 / declare 30   DEPOT_delta102/entrants/lot_machine1_2026-11-16_gel_vide_partie1_regle_tirage_v1/MANIFESTE_lot_machine1_2026-11-16_gel_vide_partie1_regle_tirage_v1.txt
+   lot d4f95772710d545c  table 69 / declare 69   MANIFEST_lot_machine2_certification_gel_vide_partie1_v1.txt
+   lot 5921fcd984d6de5b  table 10 / declare 10   MANIFEST_lot_machine2_tirage_graine_gel_vide_v1.txt
+  [ note] manifeste sans ligne pieces : N                            b1919dc9468dc437 : compte attendu = 26 membres du zip extrait, hors manifeste
+   lot b1919dc9468dc437  table 26 / declare 26   DEPOT_delta102/entrants/lot_machine1_2026-11-16_gel_vide_partie2_instrument_enonces_v1/MANIFESTE_lot_machine1_2026-11-16_gel_vide_partie2_instrument_enonces_v1.txt
+   lot f989369a3ac22f98  table 55 / declare 55   MANIFEST_lot_machine2_certification_gel_vide_partie2_v1.txt
+  [ note] manifeste sans ligne pieces : N                            71ec801a5f86e068 : compte attendu = 7 membres du zip extrait, hors manifeste
+   lot 71ec801a5f86e068  table  7 / declare 7    DEPOT_delta102/entrants/lot_machine1_2026-11-16_rectificatif_gel_vide_partie2_C1_C2_v1/MANIFESTE_lot_machine1_2026-11-16_rectificatif_gel_vide_partie2_C1_C2_v1.txt
+   lot 9a14bf95fa8c6d20  table 82 / declare 82   MANIFEST_lot_machine2_resultat_run_gel_vide_v1.txt
+  [ note] manifeste sans ligne pieces : N                            53c604647e78afa4 : compte attendu = 11 membres du zip extrait, hors manifeste
+   lot 53c604647e78afa4  table 11 / declare 11   DEPOT_delta102/entrants/lot_machine1_2026-11-16_reception_certification_gel_vide_partie1_v1/MANIFESTE_lot_machine1_2026-11-16_reception_certification_gel_vide_partie1_v1.txt
+  [ note] manifeste sans ligne pieces : N                            29058152bbba7a7a : compte attendu = 16 membres du zip extrait, hors manifeste
+   lot 29058152bbba7a7a  table 16 / declare 16   DEPOT_delta102/entrants/lot_machine1_2026-11-16_acte_gel_vide_v1/MANIFESTE_lot_machine1_2026-11-16_acte_gel_vide_v1.txt
+   lot e1dfb7ba7b18196e  table 15 / declare 15   MANIFEST_lot_machine2_contreseing_acte_gel_vide_v1.txt
+  [ note] manifeste sans ligne pieces : N                            c5d8fd0313217569 : compte attendu = 30 membres du zip extrait, hors manifeste
+   lot c5d8fd0313217569  table 30 / declare 30   DEPOT_delta102/entrants/lot_machine1_2026-11-16_vide_etape_sans_run_v1/MANIFESTE_lot_machine1_2026-11-16_vide_etape_sans_run_v1.txt
+  [ note] manifeste sans ligne pieces : N                            408b8a595cad0040 : compte attendu = 27 membres du zip extrait, hors manifeste
+   lot 408b8a595cad0040  table 27 / declare 27   DEPOT_delta102/entrants/lot_machine1_2026-11-16_loi_echelle_etape0_v1/MANIFESTE_lot_machine1_2026-11-16_loi_echelle_etape0_v1.txt
+  [ note] manifeste sans ligne pieces : N                            fb6db25d1f5ae190 : compte attendu = 6 membres du zip extrait, hors manifeste
+   lot fb6db25d1f5ae190  table  6 / declare 6    DEPOT_delta102/entrants/lot_machine1_2026-11-16_acte_gel_vide_v2/MANIFESTE_lot_machine1_2026-11-16_acte_gel_vide_v2.txt
+   lot af04248cea5cff5e  table 15 / declare 15   MANIFEST_lot_machine2_contreseing_acte_gel_vide_v2_v1.txt
+  [PASSE] 14 lots cites a deposer, chacun au compte de table declare 0 faux compte
+  [PASSE] aucune piece de table ne s ecarte de son manifeste HORS er 0 ecart
+  [PASSE] aucune piece de table n est introuvable a cote de son mani 0 introuvable
+  [PASSE] aucune piece retenue n est deja au registre par canon      377 retenues
+
+4. LE MANIFESTE DE DEPOT -- DERIVE, JAMAIS ECRIT A LA MAIN
+  [ note] collision de nom, prefixe applique                         absorbeur_adapte_v1.json -> lot_879ea2e51c7d7f4f__absorbeur_adapte_v1.json
+  [ note] collision de nom, prefixe applique                         absorbeur_adapte_v1.json -> lot_d4f95772710d545c__absorbeur_adapte_v1.json
+  [ note] collision de nom, prefixe applique                         apres_barriere_v1.json -> lot_d4f95772710d545c__apres_barriere_v1.json
+  [ note] collision de nom, prefixe applique                         apres_barriere_v1.json -> lot_c5d8fd0313217569__apres_barriere_v1.json
+  [ note] collision de nom, prefixe applique                         carte_adaptee_v1.json -> lot_d4f95772710d545c__carte_adaptee_v1.json
+  [ note] collision de nom, prefixe applique                         carte_adaptee_v1.json -> lot_c5d8fd0313217569__carte_adaptee_v1.json
+  [ note] collision de nom, prefixe applique                         console_ancres.log -> lot_f989369a3ac22f98__console_ancres.log
+  [ note] collision de nom, prefixe applique                         console_ancres.log -> lot_9a14bf95fa8c6d20__console_ancres.log
+  [ note] collision de nom, prefixe applique                         console_etage0.log -> lot_f989369a3ac22f98__console_etage0.log
+  [ note] collision de nom, prefixe applique                         console_etage0.log -> lot_9a14bf95fa8c6d20__console_etage0.log
+  [ note] collision de nom, prefixe applique                         console_etage1.log -> lot_f989369a3ac22f98__console_etage1.log
+  [ note] collision de nom, prefixe applique                         console_etage1.log -> lot_9a14bf95fa8c6d20__console_etage1.log
+  [ note] collision de nom, prefixe applique                         controle_joues_absorbeur_v1.json -> lot_d4f95772710d545c__controle_joues_absorbeur_v1.json
+  [ note] collision de nom, prefixe applique                         controle_joues_absorbeur_v1.json -> lot_c5d8fd0313217569__controle_joues_absorbeur_v1.json
+  [ note] collision de nom, prefixe applique                         feuille_vide.log -> lot_f989369a3ac22f98__feuille_vide.log
+  [ note] collision de nom, prefixe applique                         feuille_vide.log -> lot_9a14bf95fa8c6d20__feuille_vide.log
+  [ note] collision de nom, prefixe applique                         lecture_carte_machine1_v1.log -> lot_408b8a595cad0040__lecture_carte_machine1_v1.log
+  [ note] collision de nom, prefixe applique                         lecture_carte_machine1_v1.py -> lot_408b8a595cad0040__lecture_carte_machine1_v1.py
+  [ note] collision de nom, prefixe applique                         lecture_carte_v1.json -> lot_408b8a595cad0040__lecture_carte_v1.json
+  [ note] collision de nom, prefixe applique                         mandataire_absorbeur_2D_v1.json -> lot_d4f95772710d545c__mandataire_absorbeur_2D_v1.json
+  [ note] collision de nom, prefixe applique                         mandataire_absorbeur_2D_v1.json -> lot_c5d8fd0313217569__mandataire_absorbeur_2D_v1.json
+  [ note] collision de nom, prefixe applique                         prevol_verdict_ter_instrument.json -> lot_b1919dc9468dc437__prevol_verdict_ter_instrument.json
+  [ note] collision de nom, prefixe applique                         sonde_ter_ancres.json -> lot_f989369a3ac22f98__sonde_ter_ancres.json
+  [ note] collision de nom, prefixe applique                         sonde_ter_ancres.json -> lot_9a14bf95fa8c6d20__sonde_ter_ancres.json
+  [ note] collision de nom, prefixe applique                         sonde_ter_etage0.json -> lot_f989369a3ac22f98__sonde_ter_etage0.json
+  [ note] collision de nom, prefixe applique                         sonde_ter_etage0.json -> lot_9a14bf95fa8c6d20__sonde_ter_etage0.json
+  [ note] collision de nom, prefixe applique                         sonde_ter_etage1.json -> lot_f989369a3ac22f98__sonde_ter_etage1.json
+  [ note] collision de nom, prefixe applique                         sonde_ter_etage1.json -> lot_9a14bf95fa8c6d20__sonde_ter_etage1.json
+  [ note] collision de nom, prefixe applique                         temoin_lecteur_vide_v1.json -> lot_d4f95772710d545c__temoin_lecteur_vide_v1.json
+  [ note] collision de nom, prefixe applique                         temoin_lecteur_vide_v1.json -> lot_c5d8fd0313217569__temoin_lecteur_vide_v1.json
+  [ note] collision de nom, prefixe applique                         tirage_demonstration_machine2_v1.log -> lot_d4f95772710d545c__tirage_demonstration_machine2_v1.log
+  [ note] collision de nom, prefixe applique                         tirage_demonstration_machine2_v1.py -> lot_d4f95772710d545c__tirage_demonstration_machine2_v1.py
+  [ note] collision de nom, prefixe applique                         verdict_ter_instrument.json -> lot_f989369a3ac22f98__verdict_ter_instrument.json
+  [ note] collision de nom, prefixe applique                         verdict_ter_instrument.json -> lot_9a14bf95fa8c6d20__verdict_ter_instrument.json
+  [ note] collision de nom, prefixe applique                         sonde_vide_machine1_v1.py -> lot_b1919dc9468dc437__sonde_vide_machine1_v1.py
+  [ note] collision de nom, prefixe applique                         sonde_vide_machine1_v1.py -> lot_408b8a595cad0040__sonde_vide_machine1_v1.py
+  [PASSE] aucun chemin cible en double ni deja au registre           385 chemins cibles
+  [PASSE] aucun doublon de canon dans le depot                       385 pieces
+  [PASSE] les pieces exclues (vie privee) sont toutes rencontrees et 6 exclues, toutes vues ; 385 lignes de depot
+  [PASSE] toute collision resolue porte le prefixe de son LOT (aucun 36 prefixes
+  [PASSE] les .md/.py/.txt deposes sont B == brut (ASCII/LF)         137 pieces texte
+  [PASSE] le manifeste relu porte autant de lignes que de pieces     385 lignes, 385 pieces
+  [PASSE] chaque source du manifeste resout encore au canon ecrit    0 ecart
+  [PASSE] le manifeste declare son compte, egal aux lignes           pieces : 385
+  [PASSE] le manifeste est ASCII                                     97438 octets
+
+=====================================================================
+BILAN PERIMETRE : 21/21 controles PASSENT
+41 empreintes citees : 2 au registre, 38 au poste, 0 zip, 0 valeurs, 0 non resolues
+DEPOT : 385 pieces (gels 2, journal 372, scripts 11) ; manifeste MANIFEST_DEPOT_delta102_machine2_v2.txt 23edea5efc152aea
+=====================================================================

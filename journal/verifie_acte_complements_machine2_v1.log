@@ -1,0 +1,17 @@
+(1) etendue, sur les 4 creneaux, de r3 de la chaine (mon r3) ; acte : 0.0097 0.0316 0.0473 0.0858 0.1263 aux profondeurs 3, 6, 8, 12, 16
+    m = 3  : etendue de r3 0.00967 -> 0.0097 (acte 0.0097 : identique) ; etendue de ln(G3/|delta|) 0.00972 -> 0.0097
+    m = 6  : etendue de r3 0.03157 -> 0.0316 (acte 0.0316 : identique) ; etendue de ln(G3/|delta|) 0.03162 -> 0.0316
+    m = 8  : etendue de r3 0.04732 -> 0.0473 (acte 0.0473 : identique) ; etendue de ln(G3/|delta|) 0.04732 -> 0.0473
+    m = 12 : etendue de r3 0.08576 -> 0.0858 (acte 0.0858 : identique) ; etendue de ln(G3/|delta|) 0.08574 -> 0.0857
+    m = 16 : etendue de r3 0.12633 -> 0.1263 (acte 0.1263 : identique) ; etendue de ln(G3/|delta|) 0.12629 -> 0.1263
+
+(2) rejeu de m1 contre le verdict du run : 1114 nombres ; ecart ABSOLU maximal 1.4e-14 (/cellules[27]/lecteur/plateaux/D/ecart_ln_A) ; ecart relatif maximal 1.1e-07 (/cellules[20]/lecteur/plateaux/B/ecart_ln_A)
+    nombres exactement egaux : 979 ; nombres qui different : 135
+    arbre du verdict du run : feuilles 1517 = flottants 816 + entiers 298 + booleens 29 + chaines 318 + null 56 ; noeuds (feuilles et conteneurs) 1836
+    acte : 1576 champs dont 816 nombres, ecart 1.4e-14 : mon decompte ne retrouve pas ces deux totaux avec les definitions que je sais ecrire ; aucun champ absent, aucun champ non numerique different.
+
+(3) part de r3 que ln q represente, en plus de chiffres (journal de m1 : 0.023 0.025 0.024 0.023)
+    MG3 : ln q +0.0002418 / r3 -0.0103290 = 0.02341
+    MG4 : ln q +0.0004174 / r3 -0.0162991 = 0.02561
+    MG5 : ln q +0.0005455 / r3 -0.0222956 = 0.02447
+    MG6 : ln q +0.0006839 / r3 -0.0290563 = 0.02354

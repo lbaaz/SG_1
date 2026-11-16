@@ -1,0 +1,154 @@
+--- delta101
++++ delta102
+@@ -1,26 +1,31 @@
+ #!/usr/bin/env python3
+ # -*- coding: ascii -*-
+-"""LE PERIMETRE DU DEPOT delta 101 (COMPLEMENT AUX DEPOTS 99 ET 100) -- ENUMERE DEPUIS LES CITATIONS DE LA NOTE DE DEPOT.
++"""LE PERIMETRE DU DEPOT delta 102 (LA LARGEUR DU VIDE) -- ENUMERE DEPUIS LES CITATIONS DE L ACTE ET DE LA NOTE DE DEPOT.
+ machine 2, v1, 16/11/2026.
+ 
+-Derive de la feuille du delta 100 (perimetre_depot_delta100_machine2_v1.py, au registre ou au poste, NON EDITEE : regle 17), meme methode,
+-meme code, TROIS changements nommes, le diff est joint :
+-  1. dossier() : les instruments et constructions de ce chantier (le complement aux depots 99 et 100 (aucun changement de dossier() : pas d'instrument nouveau)) vont sous scripts/, comme ceux du delta precedent.
++Derive de la feuille du delta 101 (perimetre_depot_delta101_machine2_v1.py, au registre ou au poste, NON EDITEE : regle 17), meme methode,
++meme code, HUIT changements nommes, le diff est joint :
++  1. dossier() : les instruments et constructions de ce chantier (la largeur du vide (regle de tirage, sonde, feuille, banc, predictions, pilote et bloc de l absorbeur adapte de machine 1)) vont sous scripts/, comme ceux du delta precedent.
+   2. le texte du manifeste (corps) parle de ce chantier et de sa date.
+ Pour le reste, tout est herite : le perimetre ne s'ecrit pas a la main, il s'ENUMERE depuis les citations de l'acte, resolues PAR CANON
+ (registre, poste, ou NON RESOLU qui mord) ; le numero se DERIVE du registre (plafond + 1) ; les lots cites entrent avec leurs pieces de
+ table ; les ZIP ne sont pas deposes ; DEUX VERBES (`chk` mesure, `note` porte la prose) ; PB-1 : rien n'est edite.
+-  3. la note de depot de ce delta, de la plume de machine 2, CITE les canons des lots a deposer : la feuille les enumere par citation ; la garde heritee "lots derives de l'en-tete" (>= 1) n'a plus d'objet ici et est REMPLACEE par
+-     le controle qui manquait aux deltas 99 et 100 : TOUS les lots extraits sous entrants/ sont deposes.
++  3. la note de depot de ce delta (de la plume de machine 2) CITE les canons des quatorze lots : la feuille prend un TROISIEME argument, cette note, dont les empreintes s ajoutent a celles de l acte ; l acte n en cite que dix.
++  4. les manifestes de machine 1 de ce chantier s appellent MANIFESTE_ (et non MANIFEST_) et sont DANS le zip, sous le dossier du lot : la feuille les reconnait.
++  5. le controle "tous les lots extraits sont deposes" cherche le manifeste de chaque lot dans son arbre.
++  6. le compte attendu d un manifeste sans ligne pieces : N retire les manifestes de tout l arbre du lot, pas seulement ceux de sa racine.
++  7. six scripts de machine 2 portent, dans un chemin local en dur, l identifiant de l utilisateur du poste (balayage de vie privee, rejouable : certif_depot_102_machine2/balayage_vie_privee_depot_102_machine2_v1.py) : la table EXCLUS les nomme par canon ; ils ne sont PAS deposes.
++  8. le manifeste les declare (NON DEPOSES, ASSUMES) ; un controle de la feuille exige que chacun soit rencontre (citation ou table de lot) et qu aucun n entre dans le depot.
+ """
+ import hashlib, os, re, subprocess, sys, unicodedata
+ 
+-if len(sys.argv) != 3:
+-    sys.exit('usage : perimetre_depot_delta101_machine2_v1.py <clone frais du registre> <acte journal_delta_nn_..._vN.md>')
++if len(sys.argv) != 4:
++    sys.exit('usage : perimetre_depot_delta102_machine2_v1.py <clone frais du registre> <acte journal_delta_nn_..._vN.md> <note de depot qui cite des lots>')
+ CLONE = os.path.abspath(sys.argv[1])
+ ICI = os.path.dirname(os.path.abspath(__file__))
+ RAC = os.path.dirname(ICI)
+ ACTE = os.path.abspath(sys.argv[2])
++NOTE_DEPOT = os.path.abspath(sys.argv[3])
+ VERSION = re.search(r'_v(\d+)\.md$', os.path.basename(ACTE)).group(1)
+ # Le nom de depot se DERIVE du nom de l'acte : 'nn' -> le numero, le reste inchange. La v1 du 91
+ # fabriquait ce nom par un gabarit '..._constante_A_run_v%s.md' ou 'run' etait code en dur ; la
+@@ -42,6 +47,8 @@
+                ICI, 'perimetre_depot_delta%s_sur_acte_v%s_machine2.log' % (NUMERO, VERSION)))}
+ VALEURS = {}
+ TRANSPORT = {}
++EXCLUS = {'af1b49cfdf3bde0c': 'contre_epreuve_releve_acte_vide_machine2_v1.py', '6412b757b22b3736': 'contre_epreuve_releve_acte_vide_machine2_v2.py', '6399794d3aa15110': 'fabrique_lot_contreseing_acte_gel_vide_machine2_v1.py', '5a73b5a492d5d4a2': 'lance_run_vide_machine2_v1.py', 'fcfa1e8671b724d1': 'releve_contreseing_acte_vide_machine2_v1.py', '3c2704eb97619d75': 'releve_contreseing_acte_vide_machine2_v2.py'}   # delta 102 : pieces NON DEPOSEES, ASSUMEES (vie privee) : canon -> nom
++EXCLUS_VUS = {}
+ OK = []
+ 
+ 
+@@ -93,7 +100,7 @@
+     all(b < 128 for b in raw_acte) and b'\r' not in raw_acte and raw_acte.endswith(b'\n'),
+     '%d octets' % len(raw_acte))
+ cites = []
+-for t in HEX.findall(texte):
++for t in HEX.findall(texte + chr(10) + open(NOTE_DEPOT, encoding='utf-8').read()):
+     if t not in cites:
+         cites.append(t)
+ chk('l acte cite des empreintes (compte etabli apres extraction)', len(cites) > 0,
+@@ -160,6 +167,8 @@
+         continue
+     if t in reg:
+         au_registre.append((t, reg[t]))
++    elif t in EXCLUS:
++        EXCLUS_VUS.setdefault(t, []).append('citee par l acte ou par la note de depot')
+     elif t in poste:
+         p = chemin_de(t)
+         (zips if p.lower().endswith('.zip') else a_deposer).append((t, p))
+@@ -182,7 +191,7 @@
+ for _c, _ps in list(poste.items()):
+     for _p in _ps:
+         _b = os.path.basename(_p)
+-        if (_b.upper().startswith('MANIFEST_') and _b.lower().endswith('.txt') and _c not in reg and
++        if (_b.upper().startswith(('MANIFEST_', 'MANIFESTE_')) and _b.lower().endswith('.txt') and _c not in reg and
+                 _c not in [x[0] for x in a_deposer] and
+                 open(_p, encoding='utf-8', errors='replace').readline().startswith('MANIFESTE lot_') and
+                 (canon_acte in open(_p, encoding='utf-8', errors='replace').readline() or ('e8ff4d600edf89ef' in open(_p, encoding='utf-8', errors='replace').readline() and open(_p, encoding='utf-8', errors='replace').readline().startswith('MANIFESTE lot_machine2_')))):
+@@ -191,8 +200,9 @@
+ _ent = os.path.join(ICI, 'entrants')
+ _canons_ent = []
+ for _l in sorted(os.listdir(_ent)):
+-    _m = [f for f in os.listdir(os.path.join(_ent, _l)) if f.startswith('MANIFEST_') and f.endswith('.txt')]
+-    _canons_ent.append(emp_de(os.path.join(_ent, _l, _m[0]))[0])
++    _m = [os.path.join(_r, f) for _r, _s, _fs in os.walk(os.path.join(_ent, _l)) for f in _fs if f.startswith('MANIFEST') and f.endswith('.txt')]
++    assert len(_m) == 1, (_l, _m)
++    _canons_ent.append(emp_de(_m[0])[0])
+ _deposes = [x[0] for x in a_deposer]
+ chk('TOUS les lots extraits sous entrants/ sont deposes par citation de la note (le controle qui manquait aux deltas 99 et 100)',
+     len(_canons_ent) >= 1 and all(c in _deposes for c in _canons_ent), '%d lots extraits ; manquants : %s' % (len(_canons_ent), [c for c in _canons_ent if c not in _deposes]))
+@@ -207,7 +217,7 @@
+ divergences = []
+ retenues, lot_de = {}, {}
+ lots = [(t, p) for t, p in a_deposer
+-        if os.path.basename(p).upper().startswith('MANIFEST_')
++        if os.path.basename(p).upper().startswith(('MANIFEST_', 'MANIFESTE_'))
+         and os.path.basename(p).lower().endswith('.txt')]
+ faux_comptes, ecarts, introuvables = [], [], []
+ for t, chemin in lots:
+@@ -262,6 +272,9 @@
+         e = emp_de(p)
+         vus.add(nom)
+         n_tab += 1
++        if e[0] in EXCLUS or e[1] in EXCLUS:
++            EXCLUS_VUS.setdefault(e[0] if e[0] in EXCLUS else e[1], []).append('piece de table du lot ' + t)
++            continue
+         if e[0] in reg or e[1] in reg:
+             continue
+         if e[0] not in retenues:
+@@ -274,7 +287,7 @@
+         _dd = [x for x in (os.path.join(ICI, 'entrants', _nl), os.path.join(ICI, 'entrants', _nl + '_recu')) if os.path.isdir(x)]
+         if _dd:
+             att = (sum(1 for _r, _s, _fs in os.walk(_dd[0]) for _f in _fs)
+-                   - sum(1 for _f in os.listdir(_dd[0]) if _f.startswith('MANIFEST_')))
++                   - sum(1 for _r2, _s2, _fs2 in os.walk(_dd[0]) for _f in _fs2 if _f.startswith('MANIFEST')))
+             note('manifeste sans ligne pieces : N', '%s : compte attendu = %d membres du zip extrait, hors manifeste' % (t, att))
+     if att is None or att != n_tab:
+         faux_comptes.append('%s : table %d, declare %s' % (t, n_tab, att))
+@@ -311,7 +324,7 @@
+         return 'gels/'
+     if re.match(r'(sonde_qualification_EB_machine1_v\d+|banc_qui_tue_qualification_EB_machine1_v\d+|'
+                 r'lecture_qualification_EB_machine1_v\d+|reference_TP_rotation_complexe_machine2_v\d+(_premier_jet)?|'
+-                r'estimation_TP_wkb_machine1_v\d+|construction_(gel_EB_v\d+|sonde_banc_v\d+|gel_EB_bis|instrument_EB_bis|gel_chaine_EA_par_etat|gel_domaine_G1|sonde_domaine_G1|gel_ordre2|sonde_ordre2|feuille_ter|gel_ter|sonde_ter|instrument_gel_loi|pilote_gel_loi|gel_partie2|regle_tirage)_machine1_v\d+|sonde_chaine_par_etat_machine1_v\d+|lecture_chaine_par_etat_machine1_v\d+|sonde_domaine_G1_machine1_v\d+|lecture_domaine_G1_machine1_v\d+|sonde_ordre2_machine1_v\d+|lecture_ordre2_machine1_v\d+|chaine_ordre2_bloc_machine1_v\d+|sonde_qualification_EB_ter_machine1_v\d+|lecteur_plateau_bloc_machine1_v\d+|lecture_qualification_EB_ter_machine1_v\d+|banc_feuille_ter_machine1_v\d+|pilote_gel_loi_machine1_v\d+|feuille_ordre3_machine1_v\d+|banc_feuille_ordre3_machine1_v\d+|ordre3_bloc_machine1_v\d+|sonde_dense_gel_loi_machine1_v\d+|sonde_lecteur_gel_loi_machine1_v\d+|lecture_lecteur_gel_loi_machine1_v\d+|tirage_machine1_v\d+|eligibilite_creneaux_machine1_v\d+|lecture_eligibilite_machine1_v\d+)\.py$', b):
++                r'estimation_TP_wkb_machine1_v\d+|construction_(gel_EB_v\d+|sonde_banc_v\d+|gel_EB_bis|instrument_EB_bis|gel_chaine_EA_par_etat|gel_domaine_G1|sonde_domaine_G1|gel_ordre2|sonde_ordre2|feuille_ter|gel_ter|sonde_ter|instrument_gel_loi|pilote_gel_loi|gel_partie2|regle_tirage)_machine1_v\d+|sonde_chaine_par_etat_machine1_v\d+|lecture_chaine_par_etat_machine1_v\d+|sonde_domaine_G1_machine1_v\d+|lecture_domaine_G1_machine1_v\d+|sonde_ordre2_machine1_v\d+|lecture_ordre2_machine1_v\d+|chaine_ordre2_bloc_machine1_v\d+|sonde_qualification_EB_ter_machine1_v\d+|lecteur_plateau_bloc_machine1_v\d+|lecture_qualification_EB_ter_machine1_v\d+|banc_feuille_ter_machine1_v\d+|pilote_gel_loi_machine1_v\d+|feuille_ordre3_machine1_v\d+|banc_feuille_ordre3_machine1_v\d+|ordre3_bloc_machine1_v\d+|sonde_dense_gel_loi_machine1_v\d+|sonde_lecteur_gel_loi_machine1_v\d+|lecture_lecteur_gel_loi_machine1_v\d+|tirage_machine1_v\d+|eligibilite_creneaux_machine1_v\d+|lecture_eligibilite_machine1_v\d+|sonde_vide_machine1_v\d+|feuille_vide_machine1_v\d+|pilote_gel_vide_machine1_v\d+|banc_feuille_vide_machine1_v\d+|predictions_vide_machine1_v\d+|chaine_adaptee_bloc_machine1_v\d+|tirage_vide_machine1_v\d+|eligibilite_vide_machine1_v\d+|lecture_eligibilite_vide_machine1_v\d+|table_prevol_vide_machine1_v\d+|construction_gel_vide_partie2_machine1_v\d+|construction_regle_tirage_vide_machine1_v\d+)\.py$', b):
+         return 'scripts/'
+     return 'journal/'
+ 
+@@ -372,6 +385,7 @@
+     and not [c for c in cibles if c in suivis], '%d chemins cibles' % len(cibles))
+ canons_dep = [l[1] for l in lignes]
+ chk('aucun doublon de canon dans le depot', len(canons_dep) == len(set(canons_dep)), '%d pieces' % len(lignes))
++chk('les pieces exclues (vie privee) sont toutes rencontrees et aucune n entre dans le depot', set(EXCLUS_VUS) == set(EXCLUS) and not [l for l in lignes if l[1] in EXCLUS or l[2] in EXCLUS], '%d exclues, toutes vues ; %d lignes de depot' % (len(EXCLUS), len(lignes)))
+ chk('toute collision resolue porte le prefixe de son LOT (aucune piece flottante)', not sans_lot,
+     ','.join(sans_lot) or '%d prefixes' % len(prefixes))
+ non_ascii = [c for c, B, br, oB, obr, src, orig in lignes if c.endswith(('.md', '.py', '.txt')) and B != br]
+@@ -381,7 +395,7 @@
+ for c, *_ in lignes:
+     par_dossier[c.split('/')[0]] = par_dossier.get(c.split('/')[0], 0) + 1
+ 
+-corps = ("MANIFESTE DU LOT DE DEPOT -- DELTA %s (COMPLEMENT AUX DEPOTS 99 ET 100 : SEPT LOTS) -- 16/11/2026 -- "
++corps = ("MANIFESTE DU LOT DE DEPOT -- DELTA %s (LA LARGEUR DU VIDE) -- 16/11/2026 -- "
+          "assemble par machine 2 -- derive de l'acte v%s\n" % (NUMERO, VERSION))
+ corps += ("Convention B (sha256 NFC+LF, 16 hex) et empreinte brute, les deux tailles ; le depot et "
+           "le numero sont de la main de l'operateur.\n")
+@@ -405,6 +419,9 @@
+ corps += "colonnes : chemin_cible  empreinte_B  empreinte_brute  octets_B  octets_bruts  source (relative a BOCAL4)  [origine]\n\n"
+ for c, B, br, oB, obr, src, orig in lignes:
+     corps += "%-84s %s %s %9d %9d  %s  [%s]\n" % (c, B, br, oB, obr, src, orig)
++corps += "\nNON DEPOSES, ASSUMES (VIE PRIVEE : un chemin local en dur de ces scripts porte l identifiant de l utilisateur du poste ; le depot public est pseudonymise depuis le delta 65 ; ils sont scelles, leurs canons sont cites par l acte et par des manifestes de lots, donc ils ne sont pas corriges ; ils ne sont pas deposes, et leurs canons restent cites) :\n"
++for _c, _r in sorted(EXCLUS_VUS.items()):
++    corps += "  %s  %s  [%s]\n" % (_c, EXCLUS[_c], '; '.join(_r))
+ corps += "\nZIP CITES EN BRUT, NON DEPOSES :\n"
+ for t, p in zips:
+     corps += "  %s  %s\n" % (t, rel(p, RAC))

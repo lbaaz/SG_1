@@ -1,0 +1,13 @@
+ barreaux  m_bord(ma regle)  sites   ln Phi (mon determinant)      ln Phi (m1, fc)         ln Phi (m1, lecteur)      mon - fc     mon - lecteur   Re E       iterations  chiffres
+     4           4             49         -19.4328810756         -19.4328810756         -19.4328810756   +7.1e-14   +3.6e-15   -4.048e-04     6       68
+     8           8             65         -35.2767976303         -35.2767976303         -35.2767976303   +1.4e-14   +7.1e-15   -8.626e-05     6       75
+    16          16            129         -67.8897760755         -67.8897760755         -67.8897760755   +0.0e+00   +0.0e+00   -1.461e-05     6       89
+    32          32            257        -134.1130526464        -134.1130526464        -134.1130526464   +0.0e+00   +0.0e+00   -2.151e-06     6      118
+    64          64            513        -267.6167025287        -267.6167025287        -267.6167025287   +5.7e-14   +0.0e+00   -2.926e-07     6      176
+   128         128           1025        -535.7158431113        -535.7158431113        -535.7158431113   -1.1e-13   +0.0e+00   -3.819e-08     7      292
+ma regle de barriere rend m_bord = nombre de barreaux aux 6 points : True
+plus grand |mon - fc| : 1.14e-13 ; plus grand |mon - lecteur| : 7.11e-15 ; plus petite largeur : exp(-535.7) = 233 decades
+
+real	0m1.573s
+user	0m0.015s
+sys	0m0.046s

@@ -1,0 +1,62 @@
+R01 TIENT  forme : ASCII ; la derniere ligne est la ligne de FIN ; les douze sections nn.0 a nn.12
+        ASCII True ; FIN True ; sections 13
+R02 TIENT  nn.12 : les 23 canons cites sont ceux de mes fichiers (recalcules)
+        23 canons cites ; hors fichier : []
+R03 TIENT  nn.0 : V1 TENU (16 sur 16), VP TENU (12 sur 12), issues de la feuille
+        acte ['16', '16', '12', '12'] | refait ['16', '16', '12', '12']
+R04 TIENT  nn.0 (1) : plus grands |ln q|, tolerances, decades et bornes de largeur
+        acte ['0.00068', 'MG6', '0.00134', 'PG16', '0.02', '0.05', '23.5', '2.9e-09', '9.5e-33'] | refait ['0.00068', 'MG6', '0.00134', 'PG16', '0.02', '0.05', '23.5', '2.9e-09', '9.5e-33']
+R05 TIENT  nn.0 (2) : |ln q| sous l'etendue de la chaine a 28 cellules sur 28
+        acte ['28', '28'] | refait ['28', '28']
+R06 TIENT  nn.1 : le run (dates, heures, duree, appels, durees des etages, des 28 cellules, processus, canons recalcules)
+        acte ['2026-11-16', '19:13:54', '19:57:11', '2597', '33'] | refait ['2026-11-16', '19:13:54', '19:57:11', '2597', '33'] ; acte ['20', '659', '700', '309', '866'] | refait ['20', '659', '700', '309', '866'] ; acte ['8', '12'] | refait ['8', '12']
+R07 TIENT  nn.1 : la table jouee est celle du gel (canon b71206e5daf6c741, sans --prevol) ; les quatre delta ; la graine ; sept profondeurs
+        acte ['-0.018', '-0.003', '+0.005', '+0.017'] | refait ['-0.018', '-0.003', '+0.005', '+0.017'] ; graine 479579 ; table du gel jouee sans pre-vol : True ; acte ['3', '4', '5', '6', '8', '12', '16'] | refait ['3', '4', '5', '6', '8', '12', '16']
+R08 TIENT  nn.2 : comptes bruts (cellules qualifiees, 112 plateaux, 1344 lectures suivies, poids, residu, decalages), refaits sur les 28 fichiers de cellule
+        acte ['28', '28', '112', '112', '1344', '1344', '0.999', '6.9e-12'] | refait ['28', '28', '112', '112', '1344', '1344', '0.999', '6.9e-12']
+R09 TIENT  nn.2 : etalement du plateau sous A, plus grand ecart entre absorbeurs, etalement s du lecteur (bornes et mediane)
+        acte ['0.0002', '0.0031', 'PP8', '0.0001', '0.0031', '0.0011'] | refait ['0.0002', '0.0031', 'PP8', '0.0001', '0.0031', '0.0011']
+R10 TIENT  nn.2 : ce que j'avais mesure aux 144 etats du delta 100 (mediane 0.0009, au plus 0.0052)
+        acte ['0.0009', '0.0052'] | refait ['0.0009', '0.0052']
+R11 TIENT  nn.2 : temoin (1344 lectures suivies, plus grande largeur 1.3e-27 du plateau, seuil 1e-06) et jumeau tenu a 28 cellules
+        acte ['1344', '1344', '28', '1.3e-27', '1e-06'] | refait ['1344', '1344', '28', '1.3e-27', '1e-06'] ; seuil de la feuille : 1e-6
+R12 TIENT  nn.2 : 19 cellules sous le plancher 1.33e-12 (les 12 profondes et sept lisibles nommees)
+        acte ['19', '12', 'MG6 MP5 MP6 PP5 PP6 PG5 PG6'] | refait ['19', '12', 'MG6 MP5 MP6 PP5 PP6 PG5 PG6']
+R13 TIENT  nn.3 : tableau 1 (28 lignes : w2, m, ln Gamma_pl, s, etendue, bande, ln q, T, marge, jugement) refait ligne a ligne
+        28 lignes ; differentes : []
+R14 TIENT  nn.3 : tableau 2 (28 lignes : barreaux de depart, etalement A, ecarts B C D, jumeau / plateau) refait ligne a ligne ; lignes V1 et VP
+        28 lignes ; differentes : [] ; acte ['16', '0', '0', '0', '12', '0', '0', '0'] | refait ['16', '0', '0', '0', '12', '0', '0', '0']
+R15 TIENT  nn.4 : mon lot de resultat (canon, 82 pieces sur 82) et le rejeu de m1 (nombres, ecart maximal et sa cellule)
+        acte ['9a14bf95fa8c6d20', '82', '82'] | refait ['9a14bf95fa8c6d20', '82', '82'] ; nombres (flottants) 816 ; ecart maximal 1.4e-14 a PG16 ; champs discrets differents 0 ; absents 0
+R16 TIENT  nn.4 : l'essai de reception de m1 (20 cas tenus sur 20, lu dans son journal) ; mon ecart de 4.26e-09 sur ln q (lu dans mon journal) ; ma feuille a 28 sur 28
+        essai ['20', '20'] | ['20', '20'] ; ecart 4.26e-09 | 4.26e-09
+R17 TIENT  nn.5 V1 : mediane, plus grand |ln q|, plus petite marge, bande, etendue, lecteur, plateaux
+        acte ['4.4e-15', '2.9e-09', '0.00028', '0.00068', 'MG6', '0.02', '0.0101', 'PG6', '0.0024', '0.0093', '0.0013', '0.0070', '0.0002', '0.0023'] | refait ['4.4e-15', '2.9e-09', '0.00028', '0.00068', 'MG6', '0.02', '0.0101', 'PG6', '0.0024', '0.0093', '0.0013', '0.0070', '0.0002', '0.0023']
+R18 TIENT  nn.5 VP : plateaux, mediane, plus grand |ln q|, plus petite marge ; comptes sous l'etendue, la bande, l'etalement
+        acte ['9.5e-33', '8.3e-18', '0.00048', '0.00134', 'PG16', '0.05', '0.0398', 'PP8'] | refait ['9.5e-33', '8.3e-18', '0.00048', '0.00134', 'PG16', '0.05', '0.0398', 'PP8'] ; acte ['28', '28', '21'] | refait ['28', '28', '21']
+R19 TIENT  nn.6 : tableau des ordres (28 lignes : ordre 3 de la feuille ; ordres 2 et 1, loi d'echelle, forme fermee et ln(Gamma/|delta|) refaits avec MES predictions)
+        28 lignes ; differentes : []
+R20 TIENT  nn.6 : plus grands ecarts par ordre (lisibles, profondes) et nombre de cellules ou l'ordre 3 est plus pres
+        acte ['0.0024', 'PG4', '0.0213', 'MG6', '0.0297', 'MG6', '0.0602', 'MG3', '15', '14', '15', '0.0045', 'PG16', '0.0783', 'MG16', '0.1015', 'MG16', '0.1136', 'MG16', '9', '12', '12'] | refait ['0.0024', 'PG4', '0.0213', 'MG6', '0.0297', 'MG6', '0.0602', 'MG3', '15', '14', '15', '0.0045', 'PG16', '0.0783', 'MG16', '0.1015', 'MG16', '0.1136', 'MG16', '9', '12', '12']
+R21 TIENT  nn.6 : MG12 et MG16 (ordre 3, premier ordre, loi d'echelle, bandes) ; superposition (ecarts, chaine, reste, kappa a 3e-06)
+        acte ['+0.0005', '+0.0012', '+0.0554', '+0.0783', '+0.0726', '+0.1015', '0.0097', '0.0087'] | refait ['+0.0005', '+0.0012', '+0.0554', '+0.0783', '+0.0726', '+0.1015', '0.0097', '0.0087'] ; acte ['0.0098', '0.0321', '0.0481', '0.0855', '0.1262', '0.0097', '0.0316', '0.0473', '0.0858', '0.1263', '0.0003', '0.0013', '0.0008', '0.0003', '0.0016'] | refait ['0.0098', '0.0321', '0.0481', '0.0855', '0.1262', '0.0097', '0.0316', '0.0473', '0.0858', '0.1263', '0.0003', '0.0013', '0.0008', '0.0003', '0.0016'] ; kappa relatif 3.38e-06 (acte 3e-06)
+R22 TIENT  nn.6 : signes de ln q (positifs, par creneau, delta < 0 et > 0, signe de delta, signe de (b), 11 + 5 cellules)
+        acte ['22', '6', '+0.00032', '7', '5', '5', '5', '12', '10', '12', '19'] | refait ['22', '6', '+0.00032', '7', '5', '5', '5', '12', '10', '12', '19'] ; acte ['11', '7', 'MG3 MG4 MG5 MG6 MP4 MP5 MP6', '4', 'MP3 PP4 PP5 PP6', '5', '4'] | refait ['11', '7', 'MG3 MG4 MG5 MG6 MP4 MP5 MP6', '4', 'MP3 PP4 PP5 PP6', '5', '4']
+R23 TIENT  nn.6 : les quatre MG lisibles (ln q, etendues) et ce que (b) y attendait (0.0008 a 0.0022)
+        acte ['+0.00024', '+0.00042', '+0.00055', '+0.00068', '0.0013', '0.0014', '0.0026', '0.0022', '0.0008', '0.0022'] | refait ['+0.00024', '+0.00042', '+0.00055', '+0.00068', '0.0013', '0.0014', '0.0026', '0.0022', '0.0008', '0.0022']
+R24 TIENT  nn.7 : probabilites des annonces (relues dans le gel, section 10) et nombres de la confrontation
+         acte ['0.0093', '0.0023'] | refait ['0.0093', '0.0023']
+R25 TIENT  nn.8 : la phrase que V1 TENU autorise est celle de la section 8 du gel, a la lettre ; le bloc 49a40d9098b55361 est celui du gel
+        phrase de 254 caracteres retrouvee a la lettre dans le gel : True ; bloc cite par l acte True, par le gel True
+R26 TIENT  nn.9 : C-1 (3.42 a MG16), C-2 (182), reserves de ma certification (canon 22b5d62869889371 a 1.7e-8 ; 18 fautes sur 20)
+        acte ['3.42', 'MG16'] | refait ['3.42', 'MG16'] ; 182 : 182 | 182 ; mutations ['18', '20'] | ['18', '20']
+R27 TIENT  nn.10 : 19 cellules sous 1.33e-12 ; moteur partage : l'assembleur du lecteur depose ET les sauts de la chaine appellent X_saut_reel du moteur 82a0be882568fe0c
+        19 cellules ; sauts de la chaine (t_site) appellent X_saut_reel : True ; hamiltonien 2D (assembler du bloc du lecteur depose) l appelle : True ; canon du moteur 82a0be882568fe0c
+R28 TIENT  nn.10 : les limites L-1 a L-9 existent dans la section 13 du gel ; le chemin du fantome de la sonde tourne pour la premiere fois ici (le pre-vol ne le lisait pas, G-6)
+        L-1 et L-9 dans le gel : True ; fantome du pre-vol PV3 lu : False
+
+28 CONTROLES : 28 TIENNENT, 0 MORDENT
+
+NON REFAIT PAR CE RELEVE : le total '1576 champs' de nn.4 (mon arbre JSON compte 1517 feuilles dont 816 flottants : les 816 nombres et l'ecart de 1.4e-14 sont retrouves, le total de 1576 depend d'une definition du mot champ que je n'ai pas) ;
+  les declarations de m1 (ouverture 12 h 19, graine donnee a 13 h 34, anteriorite de sa piece de reception, message de 19 h 18) ; sa phrase sur la plume ('pessimiste, pour la seconde fois de suite') que je juge a part ;
+  le contenu ligne a ligne de ses scripts de reception, de lecture et d'essai (je n'ai rejoue aucun de ses 20 cas) ; l'attribution des durees des etages ('en parallele') que je lis sur les heures de la console.

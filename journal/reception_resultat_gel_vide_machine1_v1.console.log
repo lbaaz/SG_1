@@ -1,0 +1,16 @@
+====================================================================================================
+RECEPTION DU RESULTAT DU GEL LARGEUR DU VIDE -- machine 1
+====================================================================================================
+1. INVENTAIRE : 68 fichiers dans le dossier du run ; 30 attendus ; manquent : aucun
+2. REJEU de la feuille : code 0 ; verdict ecrit : True
+3. COMPARAISON au verdict de machine 2 : 1576 champs, dont 816 nombres ; plus grand ecart d'un nombre 1.4e-14 (/cellules/PG16/lecteur/plateaux/D/ecart_ln_A) ; champs discrets differents : 0 -> VERDICTS IDENTIQUES
+     dont issues, jugements, statuts : aucun
+4. ANNONCES (lues sur le verdict rejoue : V1 TENU ; VP TENU)
+   A-1 (0.95) l'instrument tient : True
+   A-2 (0.95) le temoin tient aux 28 cellules : True (28 tenus ; non tenus : aucun) ; indication : plus grand rapport a la largeur predite 1.3e-27 sur 28 cellules
+   A-3 (0.60 ; 0.80) lecteur QUALIFIE aux cellules lisibles : 16 sur 16 -> {'seize': True, 'douze_au_moins': True}
+   A-4 V1 : TENU (annonce a 0.50)
+   A-5 VP : TENU (annonce a 0.35)
+   A-6 (0.55) plus grand |ln q| lisible lu : 0.0007 a MG6, sur 16 cellules -> True
+   A-7 MG lisibles lues : 4 ; ln q negatif a aucune ; positif a ['MG3', 'MG4', 'MG5', 'MG6'] -> positif (annonce a 0.40) ; au-dela de la bande : aucune
+ecrit reception_16i/rejeu/reception_resultat_vide_v1.json

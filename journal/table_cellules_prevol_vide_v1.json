@@ -1,0 +1,75 @@
+{
+ "cellules": [
+  {
+   "creneau": "PV",
+   "delta": 0.020000000000000018,
+   "eta0": 0.020000000000000018,
+   "etendue": null,
+   "g": "5.53067e-03",
+   "id": "PV3",
+   "ligne": "pre-vol",
+   "ln_G3": null,
+   "m": 3,
+   "r_c": 24,
+   "tolerance": null,
+   "w2": "101/50"
+  },
+  {
+   "creneau": "PV",
+   "delta": 0.020000000000000018,
+   "eta0": 0.020000000000000018,
+   "etendue": null,
+   "g": "1.95896e-03",
+   "id": "PV8",
+   "ligne": "pre-vol",
+   "ln_G3": null,
+   "m": 8,
+   "r_c": 34,
+   "tolerance": null,
+   "w2": "101/50"
+  }
+ ],
+ "gel": "largeur du vide -- PRE-VOL",
+ "regle": {
+  "absorbeurs_du_lecteur": [
+   [
+    "A",
+    "F2",
+    0,
+    80
+   ],
+   [
+    "B",
+    "F2",
+    0,
+    100
+   ],
+   [
+    "C",
+    "F1",
+    0,
+    100
+   ],
+   [
+    "D",
+    "F2",
+    10,
+    80
+   ]
+  ],
+  "barreaux": [
+   -3,
+   -2,
+   -1,
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8
+  ]
+ }
+}

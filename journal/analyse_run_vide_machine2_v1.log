@@ -1,0 +1,37 @@
+V1 : TENU {'NON JUGEABLE': 0, 'NON LUE': 0, 'TIENT': 16, 'TOMBE': 0} ; VP : TENU {'NON JUGEABLE': 0, 'NON LUE': 0, 'TIENT': 12, 'TOMBE': 0} ; instrument : TIENT ; incomplet : []
+
+(1) ln q de la feuille (ln G3 de la table gelee - ln Gamma_pl) et ln q avec MES predictions (mon ln G3 - ln Gamma_pl)
+    ecart max entre les deux ln q sur 28 cellules : 4.26e-09 (la table gelee et mes predictions different de 8.6e-9 au plus ; ln q = ln G3 - ln Gamma_pl, convention de la feuille verifiee)
+
+(2) qualite des lectures
+    cellules QUALIFIEES : 28 sur 28 ; echecs : 0 ; non lisibles : 0 ; poids minimal sur toutes les cellules : 0.999
+    etats suivis par le lecteur (par cellule) : min 48 max 48
+    plateaux des quatre absorbeurs : [(('A', 'PLATEAU'), 28), (('B', 'PLATEAU'), 28), (('C', 'PLATEAU'), 28), (('D', 'PLATEAU'), 28)]
+    temoin (jumeau sans fantome) : tient 28 sur 28 ; lectures suivies [(48, 48)] ; plus grande largeur du jumeau 3.89e-36 ; plus grand rapport au plateau 1.32e-27 (seuil 1e-6)
+    etalement s du lecteur au vide : min 0.0001 ; mediane 0.0011 ; max 0.0031 (m2 mesurait <= 0.0052 aux 144 etats joues du delta 100 : dans cette borne)
+
+(3) marges (lisibles T = 0.02, profondes T = 0.05)
+    lisible  16 cellules : plus grand |ln q| 0.0007 (a MG6) ; mediane |ln q| 0.0003 ; plus petite marge T - b - |ln q| 0.0101 ; bande b : 0.0024 a 0.0093
+    profonde 12 cellules : plus grand |ln q| 0.0013 (a PG16) ; mediane |ln q| 0.0005 ; plus petite marge T - b - |ln q| 0.0398 ; bande b : 0.0055 a 0.0100
+    cellules ou |ln q| est sous l etendue de la chaine (le residu est alors a l interieur de ce que les 18 variantes d absorbeur laissent indetermine) : 28 sur 28
+    cellules ou |ln q| est sous la bande b = etendue + s : 28 sur 28
+
+(4) annonces de la plume (section 10), selon leurs mots
+    A-1 instrument du lecteur tient : OUI
+    A-2 temoin tient aux 28 cellules : OUI
+    A-3 le lecteur qualifie les 16 lisibles : OUI (16 sur 16)
+    A-4 V1 : TENU (annonce : TENU 0.50)
+    A-5 VP : TENU (annonce : TENU 0.35)
+    A-6 plus grand |ln q| aux lisibles lues : 0.0007 -> OUI (annonce : sous 0.01)
+    A-7 signe de ln q aux cellules lisibles de MG : positif a 4 ['MG3', 'MG4', 'MG5', 'MG6'] ; negatif a 0 [] -> branche (b) : positif a trois au moins
+        tailles : ln q aux MG lisibles = ['+0.0002', '+0.0004', '+0.0005', '+0.0007'] ; etendue de la chaine = ['0.0013', '0.0014', '0.0026', '0.0022']
+
+(5) consigne : signe de ln q selon le signe de delta
+    MG (delta <0) : ln q > 0 a 7 cellules sur 7 ; ln q de chaque cellule : +0.0002 +0.0004 +0.0005 +0.0007 +0.0005 +0.0005 +0.0012
+    MP (delta <0) : ln q > 0 a 5 cellules sur 7 ; ln q de chaque cellule : -0.0000 +0.0004 +0.0004 +0.0001 -0.0001 +0.0004 +0.0005
+    PP (delta >0) : ln q > 0 a 5 cellules sur 7 ; ln q de chaque cellule : +0.0002 +0.0002 +0.0003 +0.0002 -0.0003 +0.0005 -0.0003
+    PG (delta >0) : ln q > 0 a 5 cellules sur 7 ; ln q de chaque cellule : +0.0002 +0.0003 +0.0001 -0.0006 -0.0002 +0.0007 +0.0013
+    ensemble : ln q > 0 a 22 cellules sur 28, ln q < 0 a 6 ; mediane de ln q : +0.00032
+    ln q du signe de delta a 12 cellules, du signe oppose a 16 (la feuille consigne : 12 du signe de delta ; 19 du signe de la sous-correction)
+    ordre 3 plus pres de la mesure que l ordre 1 : 26 cellules ; que la loi d echelle : 27 (la feuille consigne 26 et 27)
+    plus grand |ln q| de la forme fermee (consigne, non jugee) : 0.1136

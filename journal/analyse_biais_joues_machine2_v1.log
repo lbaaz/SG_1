@@ -1,0 +1,31 @@
+etats 185 ; cles du premier : ['delta', 'e_bord', 'etendue', 'etoile_moins_depose', 'id', 'ln_G3_depose', 'ln_G3_etoile', 'ln_Gpl', 'ln_q3_depose', 'ln_q3_etoile', 'm_bord', 'n1', 'n2', 'rang', 'source', 'tolerance_E1']
+delta < 0 regle deposee  n=104  ln q3 : moy -0.0253  med -0.0226  min -0.0740  max +0.0084  |max| 0.0740  ecart-type 0.0165
+delta < 0 regle adaptee  n=104  ln q3 : moy -0.0346  med -0.0343  min -0.0706  max -0.0091  |max| 0.0706  ecart-type 0.0176
+delta > 0 regle deposee  n= 81  ln q3 : moy +0.0217  med +0.0162  min +0.0010  max +0.0996  |max| 0.0996  ecart-type 0.0198
+delta > 0 regle adaptee  n= 81  ln q3 : moy +0.0123  med +0.0070  min +0.0011  max +0.0902  |max| 0.0902  ecart-type 0.0176
+
+par cellule (source id) : n, delta, med ln q3 depose, med ln q3 adapte, max etendue, pire |ln q3| depose / adapte
+delta98   M2  n= 7 d=-0.0800  med q depose -0.0166  med q adapte -0.0216  etendue max 0.329  pire 0.0220 / 0.0333
+delta100  BN  n= 7 d=-0.0760  med q depose -0.0362  med q adapte -0.0461  etendue max 0.136  pire 0.0461 / 0.0520
+delta98   M1  n=11 d=-0.0700  med q depose -0.0341  med q adapte -0.0404  etendue max 0.073  pire 0.0431 / 0.0446
+delta100  N1  n=11 d=-0.0650  med q depose -0.0464  med q adapte -0.0654  etendue max 0.026  pire 0.0740 / 0.0706
+delta100  N2  n=11 d=-0.0650  med q depose -0.0374  med q adapte -0.0477  etendue max 0.023  pire 0.0427 / 0.0551
+delta100  N3  n=11 d=-0.0650  med q depose -0.0275  med q adapte -0.0321  etendue max 0.037  pire 0.0355 / 0.0354
+delta100  N4  n=14 d=-0.0650  med q depose -0.0132  med q adapte -0.0191  etendue max 0.042  pire 0.0208 / 0.0214
+delta100  N5  n=13 d=-0.0650  med q depose -0.0094  med q adapte -0.0134  etendue max 0.064  pire 0.0157 / 0.0157
+delta98   C2  n=11 d=-0.0600  med q depose -0.0341  med q adapte -0.0522  etendue max 0.025  pire 0.0604 / 0.0568
+delta98   C1  n= 8 d=-0.0300  med q depose -0.0028  med q adapte -0.0101  etendue max 0.027  pire 0.0143 / 0.0119
+delta98   C3  n=14 d=+0.0300  med q depose +0.0082  med q adapte +0.0023  etendue max 0.011  pire 0.0133 / 0.0032
+delta100  P1  n= 9 d=+0.0350  med q depose +0.0170  med q adapte +0.0158  etendue max 0.032  pire 0.0336 / 0.0190
+delta100  P2  n=10 d=+0.0350  med q depose +0.0210  med q adapte +0.0123  etendue max 0.029  pire 0.0302 / 0.0150
+delta100  P3  n=12 d=+0.0350  med q depose +0.0168  med q adapte +0.0094  etendue max 0.022  pire 0.0219 / 0.0105
+delta100  P4  n=13 d=+0.0350  med q depose +0.0170  med q adapte +0.0058  etendue max 0.023  pire 0.0217 / 0.0085
+delta100  P5  n=13 d=+0.0350  med q depose +0.0134  med q adapte +0.0041  etendue max 0.021  pire 0.0201 / 0.0066
+delta98   C4  n= 5 d=+0.0600  med q depose +0.0374  med q adapte +0.0157  etendue max 0.050  pire 0.0415 / 0.0300
+delta100  BP  n= 5 d=+0.0670  med q depose +0.0975  med q adapte +0.0880  etendue max 0.054  pire 0.0996 / 0.0902
+
+BP rang 1 delta 0.06700000000000017 q depose +0.09748  q adapte +0.08821  etendue 0.0510
+BP rang 3 delta 0.06700000000000017 q depose +0.09962  q adapte +0.09024  etendue 0.0537
+BP rang 10 delta 0.06700000000000017 q depose +0.09756  q adapte +0.08795  etendue 0.0504
+BP rang 11 delta 0.06700000000000017 q depose +0.07695  q adapte +0.05352  etendue 0.0402
+BP rang 13 delta 0.06700000000000017 q depose +0.07678  q adapte +0.05333  etendue 0.0397

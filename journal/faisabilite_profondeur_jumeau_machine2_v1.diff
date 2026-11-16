@@ -1,0 +1,37 @@
+--- machine1_v1
++++ machine2_v1
+@@ -24,7 +24,24 @@
+ src = open(SONDE, encoding="ascii").read()
+ i0 = src.index("# --- LECTEUR CREUX"); i1 = src.index("# --- fin du bloc ---", i0)
+ exec(compile(src[i0:i1], "bloc_lecteur_depose", "exec"))
+-import resource
++import ctypes
++from ctypes import wintypes
++
++
++def pic_memoire_Mo():
++    """pic de l'ensemble de travail du processus, en Mo (Windows)."""
++    class PMC(ctypes.Structure):
++        _fields_ = [("cb", wintypes.DWORD), ("PageFaultCount", wintypes.DWORD), ("PeakWorkingSetSize", ctypes.c_size_t),
++                    ("WorkingSetSize", ctypes.c_size_t), ("QuotaPeakPagedPoolUsage", ctypes.c_size_t), ("QuotaPagedPoolUsage", ctypes.c_size_t),
++                    ("QuotaPeakNonPagedPoolUsage", ctypes.c_size_t), ("QuotaNonPagedPoolUsage", ctypes.c_size_t),
++                    ("PagefileUsage", ctypes.c_size_t), ("PeakPagefileUsage", ctypes.c_size_t)]
++    c = PMC(); c.cb = ctypes.sizeof(PMC)
++    k32 = ctypes.WinDLL("kernel32"); k32.GetCurrentProcess.restype = wintypes.HANDLE
++    ps = ctypes.WinDLL("psapi"); ps.GetProcessMemoryInfo.argtypes = [wintypes.HANDLE, ctypes.POINTER(PMC), wintypes.DWORD]
++    ps.GetProcessMemoryInfo.restype = wintypes.BOOL
++    if not ps.GetProcessMemoryInfo(k32.GetCurrentProcess(), ctypes.byref(c), c.cb):
++        raise RuntimeError("GetProcessMemoryInfo a echoue")
++    return c.PeakWorkingSetSize / 1048576.0
+ KS = [-3, 3, 8]
+ ABSORBEURS = [("A", "F2", 0, 80), ("B", "F2", 0, 100)]
+ KAPPA = {8: "0.00928", 12: "0.00558", 16: "0.00382"}
+@@ -49,7 +66,7 @@
+         print("  geometrie de %d barreaux, w2 = %s, g = %.3e, r_c = %d, absorbeur %s (N = %d) : %d/%d suivis, %.1f s, largeur du jumeau de %.1e a %.1e" % (
+             mb, rec["w2"], g, r_c, nom, N, sum(s_), len(KS), dt, min(g_), max(g_)), flush=True)
+     rec.update({"lectures": lus, "suivies": suivis, "plus_grande_largeur": pire, "duree_totale_s": round(time.time() - t0, 1),
+-                "memoire_max_Mo": round(resource.getrusage(resource.RUSAGE_SELF).ru_maxrss / 1024.0, 0)})
++                "memoire_max_Mo": round(pic_memoire_Mo(), 0)})
+     out["cas"].append(rec)
+     print("  -> %d lectures, %d suivies, plus grande largeur du jumeau %.2e, %.0f s en tout, memoire max %.0f Mo" % (lus, suivis, pire, time.time() - t0, rec["memoire_max_Mo"]), flush=True)
+ json.dump(out, open(SORTIE, "w"), indent=1, sort_keys=True)

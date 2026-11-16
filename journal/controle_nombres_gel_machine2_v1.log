@@ -1,0 +1,22 @@
+SECTION 1 (16 cellules lisibles) :
+  |ln G3/G2| max : 0.0026 (gel 0.0026)  a PG6
+  |ln G3/G1| max : 0.0206 (gel 0.0206)  a MG6
+  |r3| max       : 0.0291 (gel 0.0291)  a MG6
+  MG12 : ln G3/G1 = -0.0549 (gel -0.055 / -0.077)
+  MG16 : ln G3/G1 = -0.0771 (gel -0.055 / -0.077)
+SECTION 3 : N_max = r_c + 100 :  True ; e_bord des 12 profondes de 0.024 a 0.283 (gel 0.024 a 0.283)
+SECTION 7.4 : T / etendue des 16 lisibles : de 2.9 a 15.1 (gel 2.9 a 15.1)
+  residu attendu (b), part manquee max : plus grand |.| aux lisibles = 0.0090 a MG6 (gel 0.0090 a MG6) ; 0.02 / ce nombre = 2.21 (gel 2.2)
+  residu attendu (b), part manquee mediane : plus grand |.| aux lisibles = 0.0022 (gel 0.0022)
+  residu attendu (b), pire, aux profondes : 0.0312 (gel 0.0312)
+  T - etendue aux lisibles : de 0.0130 a 0.0187 (gel 0.0130 a 0.0187)
+SECTION 9 G-8 : cellules LISIBLES dont le plateau predit G3* est sous 1.33e-12 :
+   ['MG6', 'MP5', 'MP6', 'PP5', 'PP6', 'PG5', 'PG6'] ; G3* de 4.37e-15 a 1.29e-12 (gel : MG6 MP5 MP6 PP5 PP6 PG5 PG6 ; 4.4e-15 a 1.3e-12)
+  MG5 : G3* = 1.3441e-12 (juste au-dessus du plancher, rapport 1.0106)
+SECTION 7.3 : signe de r3 par creneau, aux lisibles :
+   MG : MG3 -0.0103 MG4 -0.0163 MG5 -0.0223 MG6 -0.0291
+   MP : MP3 -0.0008 MP4 -0.0011 MP5 -0.0016 MP6 -0.0028
+   PP : PP3 -0.0007 PP4 +0.0003 PP5 +0.0017 PP6 +0.0025
+   PG : PG3 -0.0079 PG4 -0.0061 PG5 -0.0041 PG6 -0.0027
+SECTION 5 : s de m1 contre l'etendue : T - etendue = 0.0130 ... ; une cellule ne tient que si s <= (T - etendue) - |ln q|
+  etalement du lecteur au plus tolere pour que PG6 puisse tenir avec |ln q| = 0.005 : s <= 0.0080

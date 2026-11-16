@@ -1,0 +1,11 @@
+definition lue dans le script de m1 : "part": (-x["ln_q"] / x["r3"]) / (1.0 - x["ln_q"] / x["r3"])
+note v1 de m1 (point c) : 0.023, 0.025, 0.024 et 0.023
+note v2 de m1 (section 2) : 0.0229, 0.0250, 0.0239, 0.0230
+
+MG3 : ln q +0.0002418 ; mon r3 -0.0103290 ; rho = 0.02341 ; f = rho/(1+rho) = 0.02287 -> 0.023 (arrondi) ; formule du script de m1 : 0.02287 ; rho arrondi a 3 decimales 0.023 ; rho tronque 0.023
+MG4 : ln q +0.0004174 ; mon r3 -0.0162991 ; rho = 0.02561 ; f = rho/(1+rho) = 0.02497 -> 0.025 (arrondi) ; formule du script de m1 : 0.02497 ; rho arrondi a 3 decimales 0.026 ; rho tronque 0.025
+MG5 : ln q +0.0005455 ; mon r3 -0.0222956 ; rho = 0.02447 ; f = rho/(1+rho) = 0.02388 -> 0.024 (arrondi) ; formule du script de m1 : 0.02388 ; rho arrondi a 3 decimales 0.024 ; rho tronque 0.024
+MG6 : ln q +0.0006839 ; mon r3 -0.0290563 ; rho = 0.02354 ; f = rho/(1+rho) = 0.02300 -> 0.023 (arrondi) ; formule du script de m1 : 0.02300 ; rho arrondi a 3 decimales 0.024 ; rho tronque 0.023
+
+la formule de m1 (f = rho / (1 + rho)) redonne ses 0.0229 0.0250 0.0239 0.0230, soit 0.023 0.025 0.024 0.023 a trois decimales : True
+=> la troncature de rho redonne les memes quatre nombres : mon hypothese "valeurs tronquees" etait arithmetiquement compatible, mais FAUSSE sur l origine : le script de m1 calcule f = rho / (1 + rho). m1 a raison sur la definition.

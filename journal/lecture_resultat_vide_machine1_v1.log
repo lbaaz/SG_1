@@ -1,0 +1,52 @@
+LECTURE DU RESULTAT (verdict rejoue : V1 TENU ; VP TENU)
+brut : fantome 1344 lectures, 1344 suivies, residu au plus 6.9e-12, 3 iterations au plus, 0 decalages repris, poids au moins 0.999274 ; jumeau 1344 lectures, 1344 suivies ; Windows python 3.11.9 numpy 2.2.6 scipy 1.15.3
+cellule  w2         m   ln Gamma_pl  s       etendue bande   ln q      T     marge   k0(A,B,C,D)     ordre2    ordre1    loi       forme     jugement
+MG3      991/500    3   -19.6443     0.0016  0.0013  0.0030  +0.00024  0.02  0.0168  -2,-1,1,-2      +0.0014   +0.0062   +0.0106   +0.0602   TIENT
+MG4      991/500    4   -23.4596     0.0015  0.0014  0.0029  +0.00042  0.02  0.0167  -2,-1,2,-2      +0.0019   +0.0110   +0.0167   +0.0561   TIENT
+MG5      991/500    5   -27.3358     0.0004  0.0026  0.0029  +0.00055  0.02  0.0165  -2,-1,2,-2      +0.0020   +0.0158   +0.0228   +0.0560   TIENT
+MG6      991/500    6   -31.2989     0.0002  0.0022  0.0024  +0.00068  0.02  0.0169  -1,-1,2,-2      +0.0022   +0.0213   +0.0297   +0.0580   TIENT
+MG8      991/500    8   -39.3244     0.0018  0.0054  0.0072  +0.00050  0.05  0.0423  -1,0,2,-2       +0.0022   +0.0317   +0.0431   +0.0657   TIENT
+MG12     991/500    12  -55.6116     0.0005  0.0092  0.0097  +0.00050  0.05  0.0398  -1,-1,2,0       +0.0024   +0.0554   +0.0726   +0.0877   TIENT
+MG16     991/500    16  -72.0324     0.0001  0.0086  0.0087  +0.00122  0.05  0.0401  -1,-1,2,-1      +0.0033   +0.0783   +0.1015   +0.1136   TIENT
+MP3      1997/1000  3   -21.4263     0.0022  0.0027  0.0048  -0.00005  0.02  0.0151  -1,-1,1,-2      -0.0000   +0.0000   +0.0008   +0.0504   TIENT
+MP4      1997/1000  4   -25.2361     0.0005  0.0029  0.0034  +0.00035  0.02  0.0163  -1,-1,2,-2      +0.0004   +0.0005   +0.0015   +0.0409   TIENT
+MP5      1997/1000  5   -29.1067     0.0005  0.0020  0.0025  +0.00036  0.02  0.0172  -1,-1,1,-2      +0.0004   +0.0007   +0.0019   +0.0350   TIENT
+MP6      1997/1000  6   -33.0638     0.0010  0.0058  0.0068  +0.00007  0.02  0.0131  0,0,2,-1        +0.0001   +0.0015   +0.0029   +0.0312   TIENT
+MP8      1997/1000  8   -41.0771     0.0029  0.0064  0.0093  -0.00006  0.05  0.0407  0,0,2,-1        +0.0000   +0.0022   +0.0041   +0.0267   TIENT
+MP12     1997/1000  12  -57.3391     0.0003  0.0091  0.0094  +0.00041  0.05  0.0402  0,0,3,0         +0.0005   +0.0057   +0.0085   +0.0236   TIENT
+MP16     1997/1000  16  -73.7344     0.0003  0.0074  0.0077  +0.00047  0.05  0.0418  0,0,3,0         +0.0006   +0.0078   +0.0116   +0.0237   TIENT
+PP3      401/200    3   -20.9155     0.0020  0.0032  0.0052  +0.00019  0.02  0.0146  -2,-1,2,-2      +0.0004   +0.0020   +0.0008   +0.0505   TIENT
+PP4      401/200    4   -24.7237     0.0002  0.0042  0.0045  +0.00020  0.02  0.0153  -1,-1,2,-2      +0.0004   +0.0015   -0.0001   +0.0393   TIENT
+PP5      401/200    5   -28.5925     0.0011  0.0041  0.0052  +0.00031  0.02  0.0145  -1,-1,0,-2      +0.0005   +0.0006   -0.0014   +0.0317   TIENT
+PP6      401/200    6   -32.5478     0.0018  0.0052  0.0070  +0.00024  0.02  0.0128  0,0,3,-1        +0.0004   +0.0001   -0.0023   +0.0260   TIENT
+PP8      401/200    8   -40.5572     0.0031  0.0068  0.0099  -0.00031  0.05  0.0398  0,0,2,-1        -0.0001   -0.0019   -0.0050   +0.0176   TIENT
+PP12     401/200    12  -56.8109     0.0014  0.0083  0.0096  +0.00053  0.05  0.0398  0,0,2,0         +0.0008   -0.0042   -0.0090   +0.0061   TIENT
+PP16     401/200    16  -73.1973     0.0001  0.0054  0.0055  -0.00030  0.05  0.0442  0,0,2,-1        -0.0000   -0.0082   -0.0145   -0.0024   TIENT
+PG3      2017/1000  3   -19.6990     0.0006  0.0054  0.0060  +0.00017  0.02  0.0138  -2,-1,1,-2      +0.0020   +0.0122   +0.0081   +0.0577   TIENT
+PG4      2017/1000  4   -23.5064     0.0019  0.0063  0.0082  +0.00032  0.02  0.0115  -2,-1,2,-2      +0.0024   +0.0117   +0.0064   +0.0458   TIENT
+PG5      2017/1000  5   -27.3743     0.0021  0.0069  0.0090  +0.00006  0.02  0.0110  -1,-1,2,-2      +0.0024   +0.0107   +0.0041   +0.0372   TIENT
+PG6      2017/1000  6   -31.3284     0.0023  0.0070  0.0093  -0.00058  0.02  0.0101  -1,-1,2,-2      +0.0020   +0.0100   +0.0021   +0.0304   TIENT
+PG8      2017/1000  8   -39.3352     0.0016  0.0084  0.0100  -0.00022  0.05  0.0398  -1,-1,2,-1      +0.0027   +0.0074   -0.0032   +0.0194   TIENT
+PG12     2017/1000  12  -55.5832     0.0007  0.0077  0.0085  +0.00073  0.05  0.0408  -1,0,3,-1       +0.0039   +0.0031   -0.0129   +0.0022   TIENT
+PG16     2017/1000  16  -71.9634     0.0004  0.0068  0.0073  +0.00134  0.05  0.0414  -1,0,3,-1       +0.0045   -0.0031   -0.0247   -0.0126   TIENT
+lisible : 16 cellules ; {'TIENT': 16, 'TOMBE': 0, 'NON JUGEABLE': 0, 'NON LUE': 0} ; |ln q| au plus 0.00068 (MG6), mediane 0.00028 ; plus petite marge 0.0101 (PG6) ; s de 0.0002 a 0.0023 ; sous l'etendue 16, sous s 14 ; sous le plancher 7
+    consigne : ordre 2 au plus 0.0024 (PG4) ; ordre 1 au plus 0.0213 (MG6) ; loi d'echelle au plus 0.0297 (MG6) ; forme fermee au plus 0.0602 (MG3) ; ordre 3 plus pres que l'ordre 2 a 15, que l'ordre 1 a 14, que la loi a 15
+profonde : 12 cellules ; {'TIENT': 12, 'TOMBE': 0, 'NON JUGEABLE': 0, 'NON LUE': 0} ; |ln q| au plus 0.00134 (PG16), mediane 0.00048 ; plus petite marge 0.0398 (PP8) ; s de 0.0001 a 0.0031 ; sous l'etendue 12, sous s 7 ; sous le plancher 12
+    consigne : ordre 2 au plus 0.0045 (PG16) ; ordre 1 au plus 0.0783 (MG16) ; loi d'echelle au plus 0.1015 (MG16) ; forme fermee au plus 0.1136 (MG16) ; ordre 3 plus pres que l'ordre 2 a 9, que l'ordre 1 a 12, que la loi a 12
+ensemble : s de 0.0001 a 0.0031, mediane 0.0011 ; 23.5 decades de largeur ; ln q median +0.00032 ; sous la bande 28, sous l'etendue 28, sous s 21 ; temoin au plus 1.3e-27 ; 19 cellules sous le plancher
+signes : positifs 22, negatifs 6 ; du signe de delta 12 ; du signe de la lecture (b) 19 ; par creneau {'MG': '7/7', 'MP': '5/7', 'PP': '5/7', 'PG': '5/7'} ; delta < 0 : 12 sur 14 ; delta > 0 : 10 sur 14
+    lisibles ou (a) et (b) different : MG3 MG4 MG5 MG6 MP3 MP4 MP5 MP6 PP4 PP5 PP6 ; du signe de (b) : MG3 MG4 MG5 MG6 MP4 MP5 MP6 ; du signe de (a) : MP3 PP4 PP5 PP6
+    lisibles ou elles coincident : PP3 PG3 PG4 PG5 PG6 ; du signe commun : PP3 PG3 PG4 PG5
+    MG3 : ln q +0.00024 ; etendue 0.0013 ; s 0.0016 ; attente sous (b) 0.0008 (mediane) a 0.0032 (pire) ; r3 -0.0103 ; part manquee qui rendrait ce ln q : 0.023
+    MG4 : ln q +0.00042 ; etendue 0.0014 ; s 0.0015 ; attente sous (b) 0.0013 (mediane) a 0.0051 (pire) ; r3 -0.0163 ; part manquee qui rendrait ce ln q : 0.025
+    MG5 : ln q +0.00055 ; etendue 0.0026 ; s 0.0004 ; attente sous (b) 0.0017 (mediane) a 0.0069 (pire) ; r3 -0.0223 ; part manquee qui rendrait ce ln q : 0.024
+    MG6 : ln q +0.00068 ; etendue 0.0022 ; s 0.0002 ; attente sous (b) 0.0022 (mediane) a 0.0090 (pire) ; r3 -0.0291 ; part manquee qui rendrait ce ln q : 0.023
+superposition en ln(Gamma_pl / |delta|), par profondeur (etendue sur les quatre creneaux ; etendue des r3 de la chaine ; etendue restante de ln q)
+    m = 3  : 0.0098 ; 0.0097 ; 0.0003   (kappa egal a 3.4e-06 pres)
+    m = 4  : 0.0168 ; 0.0166 ; 0.0002   (kappa egal a 7.8e-07 pres)
+    m = 5  : 0.0242 ; 0.0240 ; 0.0005   (kappa egal a 2.8e-06 pres)
+    m = 6  : 0.0321 ; 0.0316 ; 0.0013   (kappa egal a 2.3e-06 pres)
+    m = 8  : 0.0481 ; 0.0473 ; 0.0008   (kappa egal a 1.9e-06 pres)
+    m = 12 : 0.0855 ; 0.0858 ; 0.0003   (kappa egal a 3.0e-06 pres)
+    m = 16 : 0.1262 ; 0.1263 ; 0.0016   (kappa egal a 1.3e-06 pres)
+ecrit reception_16i/lecture_resultat_vide_v1.json

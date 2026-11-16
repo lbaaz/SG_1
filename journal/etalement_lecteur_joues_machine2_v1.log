@@ -1,0 +1,22 @@
+etats lus (quatre trajectoires) : 144 ; statuts du lecteur : {'QUALIFIE': 144} ; QUALIFIES : 144
+s (etalement du lecteur) : min 0.0000 ; mediane 0.0009 ; q25 0.0004 ; q75 0.0019 ; q90 0.0032 ; max 0.0052
+  part des etats QUALIFIES avec s <= 0.0050 (tres petit) : 99.3 % (143 sur 144)
+  part des etats QUALIFIES avec s <= 0.0080 (PG6 pourrait tenir a |ln q| = 0.005) : 100.0 % (144 sur 144)
+  part des etats QUALIFIES avec s <= 0.0100 (dix-millieme) : 100.0 % (144 sur 144)
+  part des etats QUALIFIES avec s <= 0.0130 (T - etendue min : une cellule ne peut tenir qu en dessous) : 100.0 % (144 sur 144)
+  part des etats QUALIFIES avec s <= 0.0187 (T - etendue max) : 100.0 % (144 sur 144)
+  part des etats QUALIFIES avec s <= 0.0200 (T) : 100.0 % (144 sur 144)
+composantes : etalement du plateau sous A (ln(1+etal)) : mediane 0.0000 ; max 0.0024 ; ecart max a B, C, D : mediane 0.0009 ; max 0.0052
+par cellule : nombre d etats QUALIFIES, s median
+   BN   12 etats ; s median 0.0003 ; min 0.0000 ; max 0.0008
+   BP   13 etats ; s median 0.0024 ; min 0.0010 ; max 0.0052
+   N1   11 etats ; s median 0.0002 ; min 0.0000 ; max 0.0005
+   N2   11 etats ; s median 0.0006 ; min 0.0001 ; max 0.0013
+   N3   12 etats ; s median 0.0006 ; min 0.0002 ; max 0.0012
+   N4   14 etats ; s median 0.0004 ; min 0.0000 ; max 0.0011
+   N5   14 etats ; s median 0.0005 ; min 0.0000 ; max 0.0010
+   P1    9 etats ; s median 0.0011 ; min 0.0002 ; max 0.0030
+   P2   10 etats ; s median 0.0027 ; min 0.0006 ; max 0.0045
+   P3   12 etats ; s median 0.0017 ; min 0.0004 ; max 0.0039
+   P4   13 etats ; s median 0.0019 ; min 0.0001 ; max 0.0035
+   P5   13 etats ; s median 0.0023 ; min 0.0006 ; max 0.0043

@@ -1,0 +1,14 @@
+  m   kappa du gel   m_bord(kappa gel)   bande de kappa ou m_bord = m : de ... a ...   milieu geometrique   ecart au kappa du gel
+   3   0.02620        3             de 0.02264 a 0.03037                    0.02622             +0.09 %
+   4   0.02000        4             de 0.01767 a 0.02264                    0.02000             +0.00 %
+   5   0.01590        5             de 0.01426 a 0.01767                    0.01587             -0.16 %
+   6   0.01300        6             de 0.01182 a 0.01426                    0.01299             -0.11 %
+   8   0.00928        8             de 0.00860 a 0.01000                    0.00928             -0.04 %
+  12   0.00558        12             de 0.00529 a 0.00589                    0.00558             +0.06 %
+  16   0.00382        16             de 0.00367 a 0.00399                    0.00382             +0.05 %
+
+accord de ln Gamma entre ma racine en precision arbitraire et le flux de la double precision (mon seuil mp : Gamma/|delta| < 1e-11), par profondeur :
+  m =  6 : plus grand ecart 2.92e-08  (mediane 1.37e-08) sur 36 cellules
+  m =  8 : plus grand ecart 1.25e-06  (mediane 7.19e-07) sur 36 cellules
+  m = 12 : plus grand ecart 3.63e-03  (mediane 2.16e-03) sur 36 cellules
+  m = 16 : plus grand ecart 4.96e+00  (mediane 4.28e+00) sur 36 cellules

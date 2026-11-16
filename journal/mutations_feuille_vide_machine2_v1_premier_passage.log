@@ -1,0 +1,22 @@
+  m01 TIENT strict (< au lieu de <=)                             :    0 runs ecartes sur 300  NON ATTRAPEE
+  m02 TOMBE large (>= au lieu de >)                              :    0 runs ecartes sur 300  NON ATTRAPEE
+  m03 bande sans etalement du lecteur                            :  236 runs ecartes sur 300  ATTRAPEE
+  m04 bande sans l'etendue de la chaine                          :  236 runs ecartes sur 300  ATTRAPEE
+  m05 s sans ln(1 + etalement de A)                              :   71 runs ecartes sur 300  ATTRAPEE
+  m06 temoin a 1e-5                                              :   48 runs ecartes sur 300  ATTRAPEE
+  m07 V1 : onze cellules jugees suffisent                        :   10 runs ecartes sur 300  ATTRAPEE
+  m08 V1 : une tenue par creneau suffit                          :    6 runs ecartes sur 300  ATTRAPEE
+  m09 VP : cinq cellules jugees suffisent                        :   14 runs ecartes sur 300  ATTRAPEE
+  m10 TOMBE a trois chutes                                       :   52 runs ecartes sur 300  ATTRAPEE
+  m11 temoin : 47 lectures suivies suffisent                     :   79 runs ecartes sur 300  ATTRAPEE
+  m12 temoin strict (< au lieu de <=)                            :    0 runs ecartes sur 300  NON ATTRAPEE
+  m13 la geometrie des absorbeurs n'est plus controlee           :    4 runs ecartes sur 300  ATTRAPEE
+  m14 le couplage ecrit n'est plus controle                      :    4 runs ecartes sur 300  ATTRAPEE
+  m15 le mode pre-vol du fichier n'est plus controle             :    3 runs ecartes sur 300  ATTRAPEE
+  m16 la tolerance de la ligne profonde = 0.02 (au lieu de la table) :  117 runs ecartes sur 300  ATTRAPEE
+  m17 l'instrument n'arrete plus le jugement                     :   16 runs ecartes sur 300  ATTRAPEE
+  m18 NON LUE possible pour V1 (au lieu de VP seul)              :    0 runs ecartes sur 300  NON ATTRAPEE
+  m19 VP exige deux tenues par creneau                           :   62 runs ecartes sur 300  ATTRAPEE
+  m20 ln q calcule avec le plateau sous B                        :  236 runs ecartes sur 300  ATTRAPEE
+MUTATIONS ATTRAPEES : 16 sur 20
+NON ATTRAPEES : ['m01 TIENT strict (< au lieu de <=)', 'm02 TOMBE large (>= au lieu de >)', 'm12 temoin strict (< au lieu de <=)', 'm18 NON LUE possible pour V1 (au lieu de VP seul)']

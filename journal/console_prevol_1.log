@@ -1,0 +1,36 @@
+2026-11-16 14:30:01 PILOTE DU GEL LARGEUR DU VIDE -- PRE-VOL, RIEN N'EST JUGE ; 4 processus ; python 3.11.9 ; drapeau -P
+2026-11-16 14:30:01 pilote pilote_gel_vide_machine1_v1.py canon a38b1550f8f5e3cf
+2026-11-16 14:30:01   canon moteur            82a0be882568fe0c 
+2026-11-16 14:30:01   canon depot             10887c60d5f55bcf 
+2026-11-16 14:30:01   canon retenus           69b3bab3bb8480b7 
+2026-11-16 14:30:01   canon tp_reference      4d51dd58ef456fe9 
+2026-11-16 14:30:01   canon reference_ancres  6600fb8418c79930 
+2026-11-16 14:30:01   canon table_ordre3      35fa7b73f2b7f8eb 
+2026-11-16 14:30:01   canon sonde_lecteur     d5cc48f48e37af99 
+2026-11-16 14:30:01   canon feuille_lecteur   83701094e6a2b965 
+2026-11-16 14:30:01   canon table             916eec7c3b6f6a47 (table de pre-vol)
+2026-11-16 14:30:01   canon sonde_vide        0f82986cca133330 
+2026-11-16 14:30:01   canon feuille_vide      ac39a24def6c7420 
+2026-11-16 14:30:01 ETAGE A : sonde deposee du lecteur, etage0, ancres, etage1 ; puis feuille deposee, etape instrument
+2026-11-16 14:30:21   lecteur etage0                     code=0 duree=20 s
+2026-11-16 14:41:54   lecteur ancres                     code=0 duree=713 s
+2026-11-16 14:43:30   lecteur etage1                     code=0 duree=809 s
+2026-11-16 14:43:30   feuille du lecteur, instrument     code=0 duree=0 s
+2026-11-16 14:43:30 INSTRUMENT DU LECTEUR : TIENT ; canon de son verdict 6b5923697f9d8b60
+2026-11-16 14:43:30 ETAGE B : sonde_vide, 2 cellules : PV3 PV8
+2026-11-16 14:46:00   sonde_vide PV3                     code=0 duree=149 s
+2026-11-16 14:46:41   sonde_vide PV8                     code=0 duree=191 s
+2026-11-16 14:46:41   canon sonde_vide_PV3   e47f867126ffa51d
+2026-11-16 14:46:41   canon sonde_vide_PV8   c83733de486a88c1
+2026-11-16 14:46:41 ETAGE C : feuille_vide
+2026-11-16 14:46:41   feuille_vide                       code=0 duree=0 s
+2026-11-16 14:46:41     ====================================================================================================
+2026-11-16 14:46:41     FEUILLE DU GEL LARGEUR DU VIDE v1 -- PRE-VOL, RIEN N'EST JUGE
+2026-11-16 14:46:41     ====================================================================================================
+2026-11-16 14:46:41     INSTRUMENT DU LECTEUR (etage 0, ancres, etage 1 ; pieces deposees) : TIENT
+2026-11-16 14:46:41     PRE-VOL : le fantome n'est pas lu. Temoin (jumeau) par cellule : lectures suivies, plus grande largeur
+2026-11-16 14:46:41       PV3    w2 = 101/50    m = 3  : 48 sur 48 ; 1.83e-35
+2026-11-16 14:46:41       PV8    w2 = 101/50    m = 8  : 48 sur 48 ; 1.21e-52
+2026-11-16 14:46:41     ecrit D:/devs/bocal/BOCAL4/prevol_gel_vide_machine2/run_prevol_1\verdict_vide.json
+2026-11-16 14:46:41 CANON DU VERDICT : 677a770c13eb6277
+2026-11-16 14:46:41 FIN DU PILOTE ; duree totale 1001 s

@@ -1,0 +1,10 @@
+  TENU S1 sonde_vide, table du gel avec --prevol : code 1 ; fichiers json ecrits : 0 ; REFUS : sans --prevol la table doit etre au canon b71206e5daf6c741 ; avec --prevol elle ne doit pas l'etre
+  TENU S2 sonde_vide, table de pre-vol sans --prevol : code 1 ; fichiers json ecrits : 0 ; REFUS : sans --prevol la table doit etre au canon b71206e5daf6c741 ; avec --prevol elle ne doit pas l'etre
+  TENU S3 sonde_vide, cellule inconnue : code 1 ; fichiers json ecrits : 0 ; REFUS : la cellule MG3 n'est pas dans la table
+  TENU S4 sonde_vide, pre-vol a un w2 candidat : code 1 ; fichiers json ecrits : 0 ; REFUS : en pre-vol le w2 ne doit pas etre un candidat du gel
+  TENU S5 sonde_vide, moteur qui n'est pas au canon : code 1 ; fichiers json ecrits : 0 ; REFUS : le canon de moteur (d5cc48f48e37af99) n'est pas 82a0be882568fe0c
+  TENU S6 feuille_vide, table du gel avec --prevol : code 2 ; fichiers json ecrits : 0 ; FEUILLE REFUSEE : sans --prevol la table doit etre au canon b71206e5daf6c741 ; avec --prevol elle ne doit pas l'etre
+  TENU S7 feuille_vide, table de pre-vol sans --prevol : code 2 ; fichiers json ecrits : 0 ; FEUILLE REFUSEE : sans --prevol la table doit etre au canon b71206e5daf6c741 ; avec --prevol elle ne doit pas l'etre
+  TENU S8 pilote, table du gel avec --prevol : code 2 ; fichiers json ecrits : 0 ; 2026-11-16 14:41:06 ARRET DU PILOTE : sans --prevol la table doit etre au canon du gel ; avec --prevol elle ne doit pas l'etre
+  TENU S9 pilote, table de pre-vol sans --prevol : code 2 ; fichiers json ecrits : 0 ; 2026-11-16 14:41:06 ARRET DU PILOTE : sans --prevol la table doit etre au canon du gel ; avec --prevol elle ne doit pas l'etre
+ESSAIS DE REFUS : 9 tenus sur 9

@@ -1,0 +1,191 @@
+--- ../livraison_16j_acte_gel_vide/releve_contreseing_acte_vide_machine2_v1.py	2026-11-16 20:44:42.876601600 +0100
++++ releve_contreseing_acte_vide_machine2_v2.py	2026-11-16 21:01:54.765624100 +0100
+@@ -17,7 +17,9 @@
+ 
+ B = r'd:\devs\bocal\BOCAL4'
+ R16J = os.path.join(B, 'livraison_16j_acte_gel_vide')
+-CHEMIN = sys.argv[1] if len(sys.argv) > 1 else os.path.join(R16J, 'journal_delta_nn_largeur_vide_v1.md')
++R16K = os.path.join(B, 'livraison_16k_acte_gel_vide_v2')
++CHEMIN = sys.argv[1] if len(sys.argv) > 1 else os.path.join(R16K, 'journal_delta_nn_largeur_vide_v2.md')
++V1_ACTE = os.path.join(R16J, 'journal_delta_nn_largeur_vide_v1.md')
+ SORTIE = sys.argv[2] if len(sys.argv) > 2 else None
+ LOT_M1 = os.path.join(R16J, 'ext', 'lot_m1', 'lot_machine1_2026-11-16_acte_gel_vide_v1')
+ RUN = os.path.join(B, r'run_gel_vide_machine2\run_1')
+@@ -99,12 +101,12 @@
+ @ctl('R01', "forme : ASCII ; la derniere ligne est la ligne de FIN ; les douze sections nn.0 a nn.12")
+ def _():
+     asc = all(b < 128 for b in RAW)
+-    fin = TXT.rstrip('\n').split('\n')[-1] == '-- FIN journal_delta_nn_largeur_vide_v1 --'
++    fin = TXT.rstrip('\n').split('\n')[-1] == '-- FIN journal_delta_nn_largeur_vide_v2 --'
+     return asc and fin and sorted(SECS, key=lambda s: int(s[3:])) == ['nn.%d' % k for k in range(13)], 'ASCII %s ; FIN %s ; sections %d' % (asc, fin, len(SECS))
+ 
+ 
+ # ---------------------------------------------------------------- R02 les canons de nn.12
+-@ctl('R02', "nn.12 : les 23 canons cites sont ceux de mes fichiers (recalcules)")
++@ctl('R02', "nn.12 : les 26 canons cites sont ceux de mes fichiers (recalcules) ; v2 : trois de plus que la v1")
+ def _():
+     lotp = lambda n: os.path.join(LOT_M1, n)
+     cibles = {
+@@ -131,11 +133,14 @@
+         '957ce0b198a5f31b': lotp('reception_resultat_vide_v1.json'),
+         'f1d08f97d5301157': lotp('lecture_resultat_vide_machine1_v1.py'),
+         'af0b3d8cdd0b4fa5': lotp('lecture_resultat_vide_v1.json'),
++        '464ba00a6905e3a5': V1_ACTE,
++        'e1dfb7ba7b18196e': os.path.join(B, 'MANIFEST_lot_machine2_contreseing_acte_gel_vide_v1.txt'),
++        '700a39a9a7223fd0': os.path.join(B, 'POUR_MACHINE1_contreseing_acte_gel_vide_machine2_v1.md'),
+     }
+     sec = TXT[TXT.index('nn.12 PIECES'):]
+     cites = re.findall(r'^\s+([0-9a-f]{16})\s+(.+?)\s*$', sec, flags=re.M)
+     mauv = [h for h, _ in cites if h not in cibles or canon_fichier(cibles[h]) != h]
+-    return len(cites) == 23 and not mauv, '%d canons cites ; hors fichier : %s' % (len(cites), mauv)
++    return len(cites) == 26 and not mauv, '%d canons cites ; hors fichier : %s' % (len(cites), mauv)
+ 
+ 
+ # ---------------------------------------------------------------- R03 / R04 nn.0
+@@ -327,9 +332,22 @@
+     ab = max((abs(fa[k] - fb[k]), k) for k in nom)
+     discrets = [k for k in fa if k in fb and not (isnum(fa[k]) and isnum(fb[k])) and fa[k] != fb[k]]
+     absents = [k for k in set(fa) ^ set(fb)]
+-    g2 = rx('nn.4', r'(\d+) champs compares, dont (\d+) nombres ; aucun champ d\'issue, de jugement ou de statut ne differe, ni aucun autre champ discret ; plus grand ecart d\'un nombre : (\d\.\de-\d+)')
++    # v2 : l'acte DIT ce que compte son total (1576 = feuilles de l'arbre + listes sans identifiant, toutes vides) : je le recompte
++    ls = []
++
++    def listes_sans_id(x):
++        if isinstance(x, dict):
++            for v in x.values():
++                listes_sans_id(v)
++        elif isinstance(x, list):
++            if not (x and all(isinstance(e, dict) and 'id' in e for e in x)):
++                ls.append(x)
++            for e in x:
++                listes_sans_id(e)
++    listes_sans_id(V)
++    g2 = rx('nn.4', r"(\d+) champs compares \(les (\d+) feuilles de l'arbre du verdict, et (\d+) listes sans identifiant, toutes vides, comptees chacune pour un champ\), dont (\d+) nombres ; aucun champ d'issue, de jugement ou de statut ne differe, ni aucun autre champ discret ; plus grand ecart d'un nombre : (\d\.\de-\d+)")
+     cel = re.search(r'\[(\d+)\]', ab[1]).group(1)
+-    ok2 = g2[1] == ent(flt) and g2[2] == '%.1e' % ab[0] and V['cellules'][int(cel)]['id'] == 'PG16' and not discrets and not absents
++    ok2 = g2 == (ent(len(fa) + len(ls)), ent(len(fa)), ent(len(ls)), ent(flt), '%.1e' % ab[0]) and all(len(x) == 0 for x in ls) and V['cellules'][int(cel)]['id'] == 'PG16' and not discrets and not absents
+     return ok1 and ok2, d1 + ' ; nombres (flottants) %d ; ecart maximal %.1e a %s ; champs discrets differents %d ; absents %d' % (flt, ab[0], V['cellules'][int(cel)]['id'], len(discrets), len(absents))
+ 
+ 
+@@ -573,6 +591,112 @@
+     return ok1 and ok2 and 'L-1 a L-9' in SECS['nn.10'] and 'G-6' in SECS['nn.4'], 'L-1 et L-9 dans le gel : %s ; fantome du pre-vol PV3 lu : %s' % (ok1, pv.get('fantome') is not None)
+ 
+ 
++# ---------------------------------------------------------------- controles propres a la v2 (les endroits que la v2 a changes)
++def _marche(x, y, p=''):
++    out = []
++    if isinstance(x, dict) and isinstance(y, dict):
++        for k in sorted(set(x) | set(y)):
++            if k not in x or k not in y:
++                out.append((p + '/' + k, 'absente'))
++            else:
++                out += _marche(x[k], y[k], p + '/' + k)
++    elif isinstance(x, list) and isinstance(y, list) and len(x) == len(y):
++        for i, (u, v) in enumerate(zip(x, y)):
++            out += _marche(u, v, p + '[%d]' % i)
++    elif x != y:
++        out.append((p, 'different'))
++    return out
++
++
++@ctl('R29', "nn.10 (v2) : la routine 'assembler' est lue dans la sonde deposee d5cc48f48e37af99 (canon recalcule) ; les predictions des deux machines appellent X_saut_reel")
++def _():
++    g = rx('nn.10', r'routine "assembler" du bloc du lecteur, lu dans sa sonde deposee \(([0-9a-f]{16})\) et execute tel quel, appellent la meme fonction X_saut_reel ; les predictions des deux machines aussi')
++    ok1 = g == (canon_fichier(os.path.join(SCRATCH, 'scripts', 'sonde_lecteur_gel_loi_machine1_v1.py')),)
++    p1 = 'X_saut_reel' in lit(os.path.join(L, 'predictions_vide_machine1_v1.py'))
++    p2 = 'X_saut_reel' in lit(os.path.join(B, r'certif_gel_vide_partie2_machine2\predictions_vide_machine2_v1.py'))
++    return ok1 and p1 and p2, 'canon cite %s ; predictions de m1 : %s ; les miennes : %s' % (g[0], p1, p2)
++
++
++@ctl('R30', "nn.2 (v2) : 'aux durees pres' : l'etage A du run et celui de mon pre-vol ne different que par duree_s (fichiers de sortie) et par les trois canons de ces fichiers (verdict d'instrument)")
++def _():
++    ok_txt = re.search(r'egal, champ pour champ, a celui de son pre-vol, aux durees pres', SECS['nn.2']) is not None
++    pv = os.path.join(B, r'prevol_gel_vide_machine2\run_prevol_1')
++    autres = []
++    for f in ('sonde_ter_etage0', 'sonde_ter_ancres', 'sonde_ter_etage1'):
++        d = _marche(json.load(open(os.path.join(pv, f + '.json'))), json.load(open(os.path.join(RUN, f + '.json'))))
++        autres += [x for x in d if not x[0].endswith('/duree_s')]
++    dv = _marche(json.load(open(os.path.join(pv, 'verdict_ter_instrument.json'))), json.load(open(os.path.join(RUN, 'verdict_ter_instrument.json'))))
++    autres += [x for x in dv if not x[0].startswith('/canons/')]
++    return ok_txt and not autres, 'phrase presente : %s ; differences hors duree_s / canons : %s' % (ok_txt, autres[:3])
++
++
++@ctl('R31', "nn.4 (v2) : 'A MOTEUR COMMUN' : la phrase ecrite, et le fait que le pre-vol ne lisait pas le fantome (G-6)")
++def _():
++    ok1 = re.search(r"Ce qui le garde est que ses 28 largeurs retrouvent des chaines calculees de deux cotes, A MOTEUR COMMUN \(nn\.10\) : cet accord garde la reduction a une dimension, les absorbeurs, le lecteur et l'orchestration de la sonde ; il ne garde pas les elements de matrice", SECS['nn.4']) is not None
++    pv = json.load(open(os.path.join(B, r'prevol_gel_vide_machine2\run_prevol_1\sonde_vide_PV8.json')))
++    return ok1 and pv.get('fantome') is None, 'phrase presente : %s ; fantome du pre-vol PV8 lu : %s' % (ok1, pv.get('fantome') is not None)
++
++
++@ctl('R32', "nn.6 (v2) : le reste de la superposition est sous la plus petite etendue de chaine de chacune des cinq profondeurs (nombres recalcules)")
++def _():
++    g = rx('nn.6', r'Ce reste est sous la plus petite etendue de chaine de chacune de ces profondeurs \((\d\.\d+), (\d\.\d+), (\d\.\d+), (\d\.\d+) et (\d\.\d+)\)')
++    mn = {m: min(c['etendue'] for c in C if c['m'] == m) for m in (3, 6, 8, 12, 16)}
++    reste = {m: max(c['ln_q'] for c in C if c['m'] == m) - min(c['ln_q'] for c in C if c['m'] == m) for m in (3, 6, 8, 12, 16)}
++    ok, d = cmp(g, tuple('%.4f' % mn[m] for m in (3, 6, 8, 12, 16)))
++    return ok and all(reste[m] < mn[m] for m in mn), d + ' ; restes %s' % ['%.4f' % reste[m] for m in (3, 6, 8, 12, 16)]
++
++
++@ctl('R33', "nn.7 (v2) : la phrase sur les annonces (E1 TENU 0.35 au gel ordre 3 ; VP TENU 0.35 contre 0.45 ; V1 TENU 0.50, issue la plus probable) relue dans les deux gels")
++def _():
++    g = rx('nn.7', r'Pour la seconde fois de suite l\'issue la plus favorable a eu lieu : E1 TENU, annonce a (\d\.\d+), au gel "ordre 3" ; VP TENU, annonce a (\d\.\d+) contre (\d\.\d+) pour NON LUE ou NON CONCLUANT, ici\. V1 TENU etait deja l\'issue la plus probable du tableau de la plume \((\d\.\d+)\)\. Deux issues ne mesurent pas un biais')
++    g3 = re.sub(r'\s+', ' ', open(os.path.join(B, r'livraison_16a_gel_loi_partie2\ext\lot_m1\gel_loi_ordre3_partie2_instrument_enonces_pre_enregistrement_v1.md'), encoding='utf-8').read())
++    e1 = re.search(r'A-2 E1 : TENU (\d\.\d+) ; TENU SAUF UNE CELLULE (\d\.\d+) ; TOMBE (\d\.\d+) ; NON CONCLUANT (\d\.\d+)', g3).groups()
++    vp = re.search(r'A-5 VP : TENU (\d\.\d+) ; TENU SAUF UNE CELLULE (\d\.\d+) ; TOMBE (\d\.\d+) ; NON LUE ou NON CONCLUANT (\d\.\d+)', GEL).groups()
++    v1 = re.search(r'A-4 V1 : TENU (\d\.\d+) ; TENU SAUF UNE CELLULE (\d\.\d+) ; TOMBE (\d\.\d+) ; NON CONCLUANT (\d\.\d+)', GEL).groups()
++    ok, d = cmp(g, (e1[0], vp[0], vp[3], v1[0]))
++    modale = float(v1[0]) == max(float(x) for x in v1)
++    return ok and modale, d + ' ; V1 TENU est le maximum du tableau A-4 : %s' % modale
++
++
++@ctl('R34', "nn.9 (v2) : les retouches citent mon contreseing (lot, 15 pieces, 28 controles sur 28, 46 corruptions sur 46) et la v1 (canon, lot) tels que mes journaux les donnent")
++def _():
++    g = rx('nn.9', r'La version 1 de cet acte \(([0-9a-f]{16}), lot ([0-9a-f]{16})\) a ete relevee par machine 2 \(lot ([0-9a-f]{16}), (\d+) pieces authentifiees\) : (\d+) controles, (\d+) tenus ; contre-epreuve de son releve : (\d+) corruptions de l\'acte sur (\d+) mordues')
++    man = lit(os.path.join(B, 'MANIFEST_lot_machine2_contreseing_acte_gel_vide_v1.txt'))
++    n = len([l for l in man.split('\n') if re.match(r'^[0-9a-f]{16} [0-9a-f]{16} ', l)])
++    rl = lit(os.path.join(R16J, 'releve_contreseing_acte_vide_machine2_v1.log'))
++    m1_ = re.search(r'(\d+) CONTROLES : (\d+) TIENNENT, 0 MORDENT', rl).groups()
++    ce = lit(os.path.join(R16J, 'contre_epreuve_releve_acte_vide_machine2_v1.log'))
++    m2_ = re.search(r'CONTRE-EPREUVE : (\d+) corruptions sur (\d+) mordues', ce).groups()
++    au = lit(os.path.join(R16J, 'authentifie_acte_m1_machine2_v1.log'))
++    lot_v1 = re.search(r'CANON du manifeste \(calcule, non annonce\) : ([0-9a-f]{16})', au).group(1)
++    calc = (canon_fichier(V1_ACTE), lot_v1, canon_fichier(os.path.join(B, 'MANIFEST_lot_machine2_contreseing_acte_gel_vide_v1.txt')), ent(n), m1_[0], m1_[1], m2_[0], m2_[1])
++    return cmp(g, calc)
++
++
++@ctl('R35', "la v2 ne differe de la v1 que par les endroits annonces : 13 blocs (en-tete, nn.2, nn.4 x2, nn.6, nn.7, nn.9, nn.10, nn.11, nn.12 x4) ; les 84 lignes de tableau et les lignes de verdict sont identiques ; la v1 est intacte chez moi")
++def _():
++    import difflib
++    a = open(V1_ACTE, encoding='utf-8').read().replace('\r\n', '\n').split('\n')
++    b = TXT.split('\n')
++    sm = difflib.SequenceMatcher(None, a, b, autojunk=False)
++    blocs = [op for op in sm.get_opcodes() if op[0] != 'equal']
++    titres = [(i, int(m.group(1))) for i, l in enumerate(b) for m in [re.match(r'^nn\.(\d+) ', l)] if m]
++
++    def sec(j):
++        s = None
++        for i, k in titres:
++            if i <= j:
++                s = k
++        return 'en-tete' if s is None else 'nn.%d' % s
++    secs = [sec(op[3]) for op in blocs]
++    annonce = ['en-tete', 'nn.2', 'nn.4', 'nn.4', 'nn.6', 'nn.7', 'nn.9', 'nn.10', 'nn.11', 'nn.12', 'nn.12', 'nn.12', 'nn.12']
++    lig = lambda t: [l for l in t if re.match(r'^\s+(MG|MP|PP|PG)\d+\s+[-+0-9]', l)]
++    verd = lambda t: [l for l in t if 'V1 (16 cellules lisibles) : TENU' in l or 'VERDICT' in l]
++    v1_intacte = emp(open(V1_ACTE, 'rb').read()) == '464ba00a6905e3a5'
++    ok = secs == annonce and lig(a) == lig(b) and len(lig(b)) == 84 and verd(a) == verd(b) and v1_intacte
++    return ok, '%d blocs : %s ; lignes de tableau identiques %s (%d) ; v1 intacte %s' % (len(blocs), secs, lig(a) == lig(b), len(lig(b)), v1_intacte)
++
++
+ # ---------------------------------------------------------------- execution
+ mord = 0
+ for ident, desc, f in CONTROLES:
+@@ -587,7 +711,7 @@
+ print()
+ print('%d CONTROLES : %d TIENNENT, %d MORDENT' % (len(CONTROLES), len(CONTROLES) - mord, mord))
+ print()
+-print("NON REFAIT PAR CE RELEVE : le total '1576 champs' de nn.4 (mon arbre JSON compte 1517 feuilles dont 816 flottants : les 816 nombres et l'ecart de 1.4e-14 sont retrouves, le total de 1576 depend d'une definition du mot champ que je n'ai pas) ;")
++print("NON REFAIT PAR CE RELEVE : (v2 : le total de 1576 champs est desormais defini par l'acte - 1517 feuilles et 59 listes vides sans identifiant - et RECOMPTE par R15) ;")
+ print("  les declarations de m1 (ouverture 12 h 19, graine donnee a 13 h 34, anteriorite de sa piece de reception, message de 19 h 18) ; sa phrase sur la plume ('pessimiste, pour la seconde fois de suite') que je juge a part ;")
+ print("  le contenu ligne a ligne de ses scripts de reception, de lecture et d'essai (je n'ai rejoue aucun de ses 20 cas) ; l'attribution des durees des etages ('en parallele') que je lis sur les heures de la console.")
+ if SORTIE:

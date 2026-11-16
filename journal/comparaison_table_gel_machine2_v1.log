@@ -1,0 +1,21 @@
+28 cellules ; comparaison de MES nombres (sortie de predictions_vide_machine2_v1.py) a la table gelee de m1 :
+  kappa              plus grand ecart absolu 0.00e+00 (a -)
+  e_bord             plus grand ecart absolu 5.55e-17 (a MG16)
+  ln_G1              plus grand ecart absolu 8.03e-09 (a MP6)
+  ln_G2              plus grand ecart absolu 3.96e-09 (a MG6)
+  ln_G3              plus grand ecart absolu 4.26e-09 (a PG6)
+  ln_Phi_etoile      plus grand ecart absolu 4.33e-09 (a PG6)
+  r3                 plus grand ecart absolu 8.60e-09 (a PG6)
+  etendue            plus grand ecart absolu 7.03e-09 (a PG6)
+  etendue_ordre1     plus grand ecart absolu 7.32e-09 (a PP6)
+  etendue_ordre2     plus grand ecart absolu 3.23e-09 (a PP6)
+  M0                 plus grand ecart absolu 0.00e+00 (a -)
+  ln_forme_fermee    plus grand ecart absolu 2.84e-14 (a PP16)
+  N_max              plus grand ecart absolu 0.00e+00 (a -)
+  r_c                plus grand ecart absolu 0.00e+00 (a -)
+  m_bord             plus grand ecart absolu 0.00e+00 (a -)
+  delta              plus grand ecart absolu 0.00e+00 (a -)
+g ecrits identiques : True ; w2 identiques : True
+ln_forme_fermee avec la definition g X_c/(5|delta|) : ecart max 3.418 (la definition de M0 manque au gel)
+r3 aux quatre cellules lisibles de MG : [-0.01033, -0.0163, -0.0223, -0.02906]
+signe de r3 par creneau (lisibles) : {'MG': ['-', '-', '-', '-'], 'MP': ['-', '-', '-', '-'], 'PP': ['-', '+', '+', '+'], 'PG': ['-', '-', '-', '-']}

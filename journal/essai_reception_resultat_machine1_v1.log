@@ -1,0 +1,21 @@
+  TENU r00_base : cas de base : verdicts identiques, ecart nul ; A-1 a A-6 vraies, V1 TENU a 0.50, VP TENU a 0.35, MG positif a 0.40
+  TENU r01_sauf_une : une cellule tombe : V1 TENU SAUF UNE CELLULE a 0.05 ; A-6 fausse (|ln q| = 0.05)
+  TENU r02_tombe : deux cellules tombent : V1 TOMBE a 0.08
+  TENU r03_non_concluant : cinq non jugeables : V1 NON CONCLUANT a 0.32
+  TENU r04_non_qualifie : PP4 NON QUALIFIE : A-3 quinze (seize fausse, douze vraie) ; A-2 INDETERMINEE (27 temoins juges et tenus)
+  TENU r05_temoin : le jumeau de PP4 est trop large : A-2 FAUSSE, PP4 nommee
+  TENU r06_instrument : l'instrument ne tient pas : A-1 fausse ; A-4 et A-5 a 'instrument' (0.05) ; A-6 INDETERMINEE
+  TENU r07_incomplet : un fichier manque : l'inventaire le nomme ; rien n'est juge ; A-4 a 'instrument'
+  TENU r08_profondes_tombent : deux profondes tombent : VP TOMBE a 0.10, V1 TENU
+  TENU r09_profondes_non_lues : aucune profonde lue : VP NON LUE, comptee 'NON LUE ou NON CONCLUANT' a 0.45
+  TENU r10_profondes_peu_lues : cinq profondes jugees : VP NON CONCLUANT, meme case a 0.45
+  TENU r11_issue_retouchee : le verdict de machine 2 dit V1 TOMBE, le rejeu dit TENU : VERDICTS DIFFERENTS, champ nomme
+  TENU r12_jugement_retouche : une cellule jugee autrement par machine 2 : VERDICTS DIFFERENTS, cellule nommee
+  TENU r13_nombre_retouche : un ln q de machine 2 deplace de 1e-9 : verdicts identiques (aucun champ discret), mais l'ecart est rendu et le champ nomme
+  TENU r14_verdict_absent : le verdict de machine 2 manque : dit, et les annonces sont lues quand meme sur le rejeu
+  TENU r15_mg_negatif : trois plateaux de MG releves de 0.006 (ln q = -0.004) : A-7 'negatif' a 0.40 ; le verdict de machine 2, reste celui du cas de base, DIFFERE : les signes consignes de MG3, MG4, MG5 sont nommes, aucune issue ni aucun jugement
+  TENU r16_mg_partage : deux negatifs et deux positifs a MG : A-7 'ni l'un ni l'autre', a 0.20 (le reste)
+  TENU r17_mg_au_dela_de_la_bande : quatre plateaux de MG abaisses de 0.010 (ln q = +0.012) : positifs, et au-dela de la bande aux quatre
+  TENU r18_sortie_existante : la reception refuse d'ecrire dans un dossier de sortie qui existe
+  TENU r19_run_intact : rien n'est ecrit dans le dossier du run
+ESSAI DE LA RECEPTION : 20 cas tenus sur 20 : IL MORD COMME ATTENDU

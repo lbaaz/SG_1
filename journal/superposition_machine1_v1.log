@@ -1,0 +1,58 @@
+etats juges et qualifies : delta 100 141, delta 98 131 ; dans le domaine : 129 et 56
+controle : kappa recalcule contre le kappa de la feuille du delta 100, plus grand ecart relatif 0.0e+00
+etats sans barriere a la limite (Phi non defini) : 0
+controle : fraction continue contre diagonalisation (flux), plus grand ecart sur ln Phi : 1.2e-06
+stabilite de Phi sous l'absorbeur de la chaine (double, moitie, recule de 4), plus grand ecart sur ln Phi : 0.023
+
+DANS LE DOMAINE : 185 etats
+  Gamma_pl / |delta| va de 2.953e-11 a 2.747e-04 : 6.97 decades
+  kappa va de 0.0995 a 0.4882 ; |delta| de 0.030 a 0.080
+  |r| = |ln(Gamma_pl / (|delta| Phi))| : mediane 0.255, plus grand 0.892 (facteur 2.44) ; stabilite de Phi mediane 0.0093, pire 0.0227
+  signe de r : delta < 0, r > 0 a 103 etats sur 104 ; delta > 0, r < 0 a 81 etats sur 81
+  droite ln(Gamma_pl / |delta|) = a + b ln Phi : b = 0.9978, a = -0.082, correlation 0.997651, ecart-type restant 0.305
+
+  par cellule ou point (domaine) :   delta    etats   kappa min ; max     m_bord    r : min ; mediane ; max        r / delta : min ; mediane ; max
+  delta98  M2        -0.080     7    0.1372 ; 0.3663    3- 7    -0.033 ; +0.186 ; +0.258        -3.22 ;   -2.32 ;   +0.41
+  delta100 BN  1     -0.076     7    0.2067 ; 0.3980    5- 8    +0.147 ; +0.219 ; +0.279        -3.67 ;   -2.88 ;   -1.93
+  delta98  M1        -0.070    11    0.1683 ; 0.3981    5- 9    +0.012 ; +0.187 ; +0.280        -4.00 ;   -2.68 ;   -0.17
+  delta100 N1  3/4   -0.065    11    0.2439 ; 0.4787    6-10    +0.186 ; +0.275 ; +0.344        -5.30 ;   -4.23 ;   -2.87
+  delta100 N2  5/6   -0.065    11    0.2260 ; 0.4594    6- 9    +0.149 ; +0.248 ; +0.316        -4.86 ;   -3.82 ;   -2.29
+  delta100 N3  1     -0.065    11    0.1683 ; 0.3981    5- 9    +0.033 ; +0.196 ; +0.278        -4.27 ;   -3.01 ;   -0.50
+  delta100 N4  6/5   -0.065    14    0.1236 ; 0.4004    3- 8    +0.004 ; +0.174 ; +0.255        -3.93 ;   -2.68 ;   -0.06
+  delta100 N5  4/3   -0.065    13    0.1016 ; 0.3663    3- 8    +0.031 ; +0.161 ; +0.252        -3.88 ;   -2.48 ;   -0.47
+  delta98  C2        -0.060    11    0.2439 ; 0.4788    6-10    +0.195 ; +0.272 ; +0.338        -5.64 ;   -4.53 ;   -3.26
+  delta98  C1        -0.030     8    0.2991 ; 0.4882    8-10    +0.191 ; +0.220 ; +0.251        -8.38 ;   -7.33 ;   -6.37
+  delta98  C3        +0.030    14    0.0995 ; 0.3341    4- 7    -0.256 ; -0.222 ; -0.185        -8.54 ;   -7.42 ;   -6.18
+  delta100 P1  3/4   +0.035     9    0.2451 ; 0.4095    8-11    -0.459 ; -0.427 ; -0.366       -13.11 ;  -12.21 ;  -10.47
+  delta100 P2  5/6   +0.035    10    0.2094 ; 0.3915    8-10    -0.448 ; -0.408 ; -0.344       -12.79 ;  -11.66 ;   -9.84
+  delta100 P3  1     +0.035    12    0.1694 ; 0.3861    6- 9    -0.397 ; -0.362 ; -0.308       -11.35 ;  -10.35 ;   -8.81
+  delta100 P4  6/5   +0.035    13    0.1241 ; 0.3921    4- 9    -0.350 ; -0.311 ; -0.258       -10.01 ;   -8.88 ;   -7.38
+  delta100 P5  4/3   +0.035    13    0.1379 ; 0.3631    4- 8    -0.333 ; -0.289 ; -0.227        -9.51 ;   -8.26 ;   -6.48
+  delta98  C4        +0.060     5    0.1794 ; 0.3666    4- 7    -0.614 ; -0.566 ; -0.528       -10.23 ;   -9.44 ;   -8.80
+  delta100 BP  1     +0.067     5    0.2088 ; 0.3995    6- 9    -0.892 ; -0.816 ; -0.744       -13.32 ;  -12.18 ;  -11.10
+
+VARIANTE (variable prise sur le saut lointain, essayee apres avoir vu r) :
+  |r*| : mediane 0.197, plus grand 0.758 (facteur 2.13) ; kappa* / kappa - 1 va de -0.0044 a +0.0056
+  signe de r* : delta < 0, r* > 0 a 101 etats sur 104 ; delta > 0, r* < 0 a 81 etats sur 81
+  par cellule ou point :            delta    etats   r : etendue (max - min)    r* : min ; mediane ; max       r* : etendue
+  delta98  M2        -0.080     7        0.290                 -0.039 ; +0.133 ; +0.175         0.214
+  delta100 BN  1     -0.076     7        0.132                 +0.058 ; +0.132 ; +0.199         0.141
+  delta98  M1        -0.070    11        0.268                 +0.035 ; +0.108 ; +0.204         0.168
+  delta100 N1  3/4   -0.065    11        0.158                 +0.129 ; +0.202 ; +0.260         0.130
+  delta100 N2  5/6   -0.065    11        0.167                 +0.120 ; +0.189 ; +0.245         0.125
+  delta100 N3  1     -0.065    11        0.245                 +0.055 ; +0.121 ; +0.205         0.149
+  delta100 N4  6/5   -0.065    14        0.251                 +0.009 ; +0.124 ; +0.189         0.181
+  delta100 N5  4/3   -0.065    13        0.222                 -0.024 ; +0.125 ; +0.179         0.203
+  delta98  C2        -0.060    11        0.143                 +0.143 ; +0.209 ; +0.257         0.114
+  delta98  C1        -0.030     8        0.060                 +0.175 ; +0.185 ; +0.195         0.020
+  delta98  C3        +0.030    14        0.071                 -0.205 ; -0.192 ; -0.169         0.036
+  delta100 P1  3/4   +0.035     9        0.092                 -0.391 ; -0.373 ; -0.362         0.029
+  delta100 P2  5/6   +0.035    10        0.103                 -0.367 ; -0.353 ; -0.329         0.038
+  delta100 P3  1     +0.035    12        0.089                 -0.324 ; -0.314 ; -0.292         0.032
+  delta100 P4  6/5   +0.035    13        0.092                 -0.290 ; -0.280 ; -0.240         0.050
+  delta100 P5  4/3   +0.035    13        0.106                 -0.269 ; -0.257 ; -0.236         0.033
+  delta98  C4        +0.060     5        0.086                 -0.520 ; -0.516 ; -0.513         0.007
+  delta100 BP  1     +0.067     5        0.148                 -0.758 ; -0.746 ; -0.736         0.022
+  etendue de r dans une cellule, mediane sur les cellules : delta < 0 : 0.194 (kappa) contre 0.145 (kappa*) ; delta > 0 : 0.092 contre 0.033
+
+HORS DU DOMAINE : 87 etats ; |r| mediane 0.776, plus grand 2.768

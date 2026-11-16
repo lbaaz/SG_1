@@ -1,0 +1,27 @@
+  TENU b00_base : toutes les cellules tiennent : V1 TENU (16), VP TENU (12)
+  TENU b01_une_tombe : MG4 a ln q = +0.05 : MG4 TOMBE, V1 TENU SAUF UNE CELLULE, VP inchange
+  TENU b02_signe : MG4 a ln q = -0.05 : TOMBE aussi (valeur absolue)
+  TENU b03_deux_tombent : MG4 et PP5 a ln q = 0.05 : V1 TOMBE
+  TENU b04_non_jugeable : MP3 a ln q = 0.02, sur la tolerance : NON JUGEABLE ; V1 reste TENU (15 tenues)
+  TENU b05_trop_de_non_jugeables : cinq cellules lisibles a ln q = 0.02 (une ou deux par creneau) : 11 jugees, V1 NON CONCLUANT
+  TENU b06_creneau_vide : PG3, PG4, PG5 a ln q = 0.02 : 13 jugees mais une seule tenue au creneau PG : V1 NON CONCLUANT
+  TENU b07_desaccord_C : PP4 : plateau sous C a 0.08 de A : NON QUALIFIE, cellule NON LUE ; V1 TENU (15)
+  TENU b08_pas_de_plateau : PP4 : derive sous A, aucun plateau : NON QUALIFIE, NON LUE
+  TENU b09_non_suivi : PP4 : aucune lecture suivie sous B : NON LISIBLE, NON LUE
+  TENU b10_temoin_trop_large : PP4 : le jumeau a une largeur de 1e-3 du plateau : temoin non tenu, NON LUE
+  TENU b11_temoin_non_suivi : PP4 : une lecture du jumeau non suivie : temoin non tenu, NON LUE
+  TENU b12_instrument : l'instrument ne tient pas : rien n'est juge, aucune issue
+  TENU b13_fichier_absent : le fichier de MG8 manque : RUN INCOMPLET, rien n'est juge
+  TENU b14_canon_de_sonde : le fichier de MG3 porte un autre canon de sonde : RUN INCOMPLET
+  TENU b15_couplage : le fichier de MG3 porte un autre couplage : RUN INCOMPLET
+  TENU b16_fichier_de_prevol : le fichier de MG3 est marque pre-vol : RUN INCOMPLET
+  TENU b17_geometrie : le fichier de MG3 porte une autre boite pour B : RUN INCOMPLET
+  TENU b18_profondes_tombent : MG12 et PG16 a ln q = 0.09 : VP TOMBE, V1 inchange (TENU)
+  TENU b19_profondes_non_lues : aucune cellule profonde n'a de plateau : VP NON LUE, V1 TENU
+  TENU b20_profondes_peu_lues : sept cellules profondes sans plateau : cinq jugees, VP NON CONCLUANT
+  TENU b21_tolerance_par_ligne : ln q = 0.03 a MG3 (lisible, T = 0.02) et a MG8 (profonde, T = 0.05) : MG3 TOMBE, MG8 TIENT
+  TENU b22_bande_absorbeurs : MG3 a ln q = 0.012 : TIENT avec des absorbeurs a 0.002 pres, NON JUGEABLE s'ils different de 0.015 (la bande porte l'etalement du lecteur)
+  TENU b23_bande_plateau : MG3 : plateau sous A ondulant de 3 pour cent : QUALIFIE, mais la bande depasse la tolerance : NON JUGEABLE
+  TENU b24_bande_chaine : MG3 (etendue 0.0013) et PG6 (etendue 0.0070) a ln q = 0.0125 : la plus petite etendue TIENT, la plus grande est NON JUGEABLE
+  TENU b25_autre_table : une table qui n'est pas au canon du gel, sans --prevol : la feuille refuse (code 2), aucun verdict
+BANC : 26 cas tenus sur 26 : IL MORD COMME ATTENDU

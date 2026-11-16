@@ -1,0 +1,11 @@
+--- faisabilite_machine2_v1
++++ petit_delta_1_9995
+@@ -45,7 +45,7 @@
+ KS = [-3, 3, 8]
+ ABSORBEURS = [("A", "F2", 0, 80), ("B", "F2", 0, 100)]
+ KAPPA = {8: "0.00928", 12: "0.00558", 16: "0.00382"}
+-W2 = F(101, 50)
++W2 = F(3999, 2000)
+ def couplage(m):
+     return float("%.5e" % (float(F(KAPPA[m])) * abs(float(W2) - 2.0) * M.P / M.X_saut_reel(M.P, M.CANAL[0], M.CANAL[1], 0.0, 0.0, W2)))
+ CAS = [(m, W2, couplage(m)) for m in (8, 12, 16)]

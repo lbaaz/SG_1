@@ -1,0 +1,10 @@
+C-1 la forme fermee de la table se refait depuis son M0 a 0.0e+00 pres ; avec lambda = g X_c / (P |delta|) elle differe de 3.42 au pire (a MG16)
+    rapport des deux lambda (celui de la table sur celui de la note) : de 0.9386 a 1.0704 ; c'est X(0, 0 ; w2) / X(0, 0 ; 2)
+C-2 185 etats ; part manquee positive : 184 ; entre 0 et 1 : 182 ; au-dessus de 1 : 2 ['N4 rang 11 (r = +0.0040)', 'M1 rang 12 (r = +0.0117)'] ; negative : 1 ['M2 rang 5 (part -1.02)'] ; r de signe oppose a delta : 184
+    r du signe de delta : ['M2 rang 5 (r = -0.0327, delta = -0.080, part -1.02)']
+A-7 les lectures (a) et (b) different a 11 cellules lisibles : MG3 MG4 MG5 MG6 MP3 MP4 MP5 MP6 PP4 PP5 PP6 ; elles coincident a 5 : PP3 PG3 PG4 PG5 PG6
+    au creneau PP le residu attendu sous (b) vaut 0.0008 au plus, pour la plus grande part manquee
+    MG : plus grand residu attendu sous (b), part manquee mediane 0.0022, plus grande part 0.0090 ; plus petite etendue de la chaine 0.0013
+    MP : plus grand residu attendu sous (b), part manquee mediane 0.0002, plus grande part 0.0009 ; plus petite etendue de la chaine 0.0020
+    PP : plus grand residu attendu sous (b), part manquee mediane 0.0002, plus grande part 0.0008 ; plus petite etendue de la chaine 0.0032
+    PG : plus grand residu attendu sous (b), part manquee mediane 0.0006, plus grande part 0.0025 ; plus petite etendue de la chaine 0.0054

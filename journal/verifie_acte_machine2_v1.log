@@ -1,0 +1,66 @@
+=== 1. TABLEAUX REFAITS LIGNE A LIGNE
+nn.3 tableau 1 : 28 lignes dans l acte (attendues 28) ; tableau 2 : 28 lignes (attendues 28)
+  tableau 1 : 28 lignes sur 28 identiques a ce que je refais depuis verdict_vide.json
+  tableau 2 : 28 lignes sur 28 identiques
+nn.6 tableau : 28 lignes dans l acte (attendues 28)
+  loi d echelle a MG3 (acte : +0.0106) : {'ln|delta| + ln_Phi_etoile - lnGamma': 0.0106, 'ln_Phi_etoile - lnGamma': 4.028}
+  definition retenue pour la loi d echelle : ln|delta| + ln_Phi_etoile - lnGamma
+  tableau des ordres : 28 lignes sur 28 identiques (ou a une unite de la derniere decimale)
+
+=== 2. PROSE : nn.0, nn.2, nn.5
+nn.0 largeurs : de 2.9e-09 a 9.5e-33 ; 23.5 decades (acte : de 2.9e-09 a 9.5e-33 ; 23.5)
+nn.0/nn.5 lisibles : plus grand |ln q| 0.00068 (acte 0.00068) ; mediane 0.00028
+nn.0/nn.5 profondes : plus grand |ln q| 0.00134 (acte 0.00134) ; mediane 0.00048
+nn.5 lisibles : plateaux de 4.4e-15 a 2.9e-09 ; plus petite marge 0.0101 (PG6) ; bande de 0.0024 a 0.0093 ; etendue de 0.0013 a 0.0070 ; s de 0.0002 a 0.0023
+     acte : plateaux de 4.4e-15 a 2.9e-09 ; marge 0.0101 (PG6) ; bande 0.0024-0.0093 ; etendue 0.0013-0.0070 ; s 0.0002-0.0023
+nn.5 profondes : plateaux de 9.5e-33 a 8.3e-18 ; plus petite marge 0.0398 (PP8) ; bande de 0.0055 a 0.0100 ; etendue de 0.0054 a 0.0092 ; s de 0.0001 a 0.0031
+     acte : plateaux de 9.5e-33 a 8.3e-18 ; marge 0.0398 (PP8)
+nn.5 |ln q| sous l etendue : 28 ; sous la bande : 28 ; sous s : 21 (acte 28, 28, 21)
+nn.2 brut : fantome 1344 lectures, 1344 suivies ; jumeau 1344, 1344 suivies ; residu au plus 6.9e-12 ; iterations au plus 3 ; decalages repris 0 ; poids au moins 0.999274 ; plateaux 112 sur 112
+nn.2 etalement du plateau sous A au plus 0.0002 (acte 0.0002) ; plus grand ecart entre absorbeurs 0.0031 a PP8 (acte 0.0031, PP8)
+nn.2 s : de 0.0001 a 0.0031, mediane 0.0011 (acte : 0.0001 a 0.0031, 0.0011)
+nn.2 plateaux sous 1.33e-12 : 19 cellules : MG6 MG8 MG12 MG16 MP5 MP6 MP8 MP12 MP16 PP5 PP6 PP8 PP12 PP16 PG5 PG6 PG8 PG12 PG16
+
+=== 3. nn.1 : DUREES ET HEURES (console du pilote)
+28 cellules : 28 durees lues ; de 309 a 866 s ; appels code=0 : 33 ; debut/fin : ['19:13:54', '19:57:11']
+
+=== 4. nn.4 : LE REJEU DE m1, RECOMPTE PAR MOI (verdict rejoue contre verdict du run)
+champs (feuilles de l arbre JSON) : 1517 ; dont nombres : 1114 ; absents d un cote : 0 ; champs non numeriques differents : 0 ; plus grand ecart relatif d un nombre : 1.1e-07 (/cellules[20]/lecteur/plateaux/B/ecart_ln_A)
+    acte : 1576 champs dont 816 nombres ; aucun champ discret ; plus grand ecart 1.4e-14 (/cellules/PG16/lecteur/plateaux/D/ecart_ln_A)
+
+=== 5. nn.6 : ORDRES, SUPERPOSITION, SIGNES
+lisibles : plus grands ecarts (ordre 2, ordre 1, loi, forme fermee) : ['0.0024 PG4', '0.0213 MG6', '0.0297 MG6', '0.0602 MG3'] ; ordre 3 plus pres que ordre 2 / ordre 1 / loi a (15, 14, 15) cellules
+     acte : ['0.0024 PG4', '0.0213 MG6', '0.0297 MG6', '0.0602 MG3'] ; plus pres a (15, 14, 15)
+profondes : plus grands ecarts (ordre 2, ordre 1, loi, forme fermee) : ['0.0045 PG16', '0.0783 MG16', '0.1015 MG16', '0.1136 MG16'] ; ordre 3 plus pres que ordre 2 / ordre 1 / loi a (9, 12, 12) cellules
+     acte : ['0.0045 PG16', '0.0783 MG16', '0.1015 MG16', '0.1136 MG16'] ; plus pres a (9, 12, 12)
+superposition (etendue sur les 4 creneaux de ln(Gamma/|delta|) ; de ln(G3/|delta|) de ma chaine ; de ln q ; ecart de kappa) :
+    m = 3  : 0.0098 ; 0.0097 ; 0.0003 ; kappa a 8.9e-08
+    m = 4  : 0.0168 ; 0.0166 ; 0.0002 ; kappa a 1.6e-08
+    m = 5  : 0.0242 ; 0.0240 ; 0.0005 ; kappa a 4.4e-08
+    m = 6  : 0.0321 ; 0.0316 ; 0.0013 ; kappa a 3.1e-08
+    m = 8  : 0.0481 ; 0.0473 ; 0.0008 ; kappa a 1.8e-08
+    m = 12 : 0.0855 ; 0.0857 ; 0.0003 ; kappa a 1.7e-08
+    m = 16 : 0.1262 ; 0.1263 ; 0.0016 ; kappa a 5.1e-09
+  ** DIFFERENCE : superposition m = 12 : ('0.0855', '0.0857', '0.0003') contre acte ('0.0855', '0.0858', '0.0003')
+signes : ln q > 0 a 22, < 0 a 6 ; mediane +0.00032 ; par creneau {'MG': 7, 'MP': 5, 'PP': 5, 'PG': 5} ; delta < 0 : 12 sur 14 ; delta > 0 : 10 sur 14 ; signe de delta a 12 ; signe de (b) a 19
+     acte : 22, 6 ; +0.00032 ; MG 7, MP 5, PP 5, PG 5 ; 12 ; 10 ; 12 ; 19
+lectures qui different : 11 ; signe de (b) a 7 : MG3 MG4 MG5 MG6 MP4 MP5 MP6 ; signe de (a) a 4 : MP3 PP4 PP5 PP6 ; coincident : PP3 PG3 PG4 PG5 PG6 ; signe commun a 4 : PP3 PG3 PG4 PG5
+     acte : 11 ; (b) a 7 (MG3 MG4 MG5 MG6 MP4 MP5 MP6) ; (a) a 4 (MP3 PP4 PP5 PP6) ; coincident : 5 (PP3 PG3 PG4 PG5 PG6) ; commun a 4
+attente sous (b) a MG (part manquee mediane) : ['0.0008', '0.0013', '0.0017', '0.0022'] ; ln q : ['+0.00024', '+0.00042', '+0.00055', '+0.00068'] ; etendue : ['0.0013', '0.0014', '0.0026', '0.0022']
+     acte : de 0.0008 a 0.0022 ; +0.00024 +0.00042 +0.00055 +0.00068 ; 0.0013 0.0014 0.0026 0.0022
+
+=== 6. POUR_MACHINE2 (c) : LA PART DE r3 QUE ln q REPRESENTE (lecture apres coup de m1, hors acte)
+    MG : MG3 +0.00024/-0.0103 = -0.023  MG4 +0.00042/-0.0163 = -0.026  MG5 +0.00055/-0.0223 = -0.024  MG6 +0.00068/-0.0291 = -0.024
+    MP : MP3 -0.00005/-0.0008 = 0.057  MP4 +0.00035/-0.0011 = -0.317  MP5 +0.00036/-0.0016 = -0.231  MP6 +0.00007/-0.0028 = -0.024
+    PP : PP3 +0.00019/-0.0007 = -0.296  PP4 +0.00020/+0.0003 = 0.705  PP5 +0.00031/+0.0017 = 0.184  PP6 +0.00024/+0.0025 = 0.094
+    PG : PG3 +0.00017/-0.0079 = -0.022  PG4 +0.00032/-0.0061 = -0.053  PG5 +0.00006/-0.0041 = -0.014  PG6 -0.00058/-0.0027 = 0.214
+
+=== 7. nn.7 : bande lisible et part du lecteur
+plus grande bande lisible 0.0093 (PG6) ; plus grand s lisible 0.0023 (PG6) (acte 0.0093 ; 0.0023)
+
+MORSURES NUMERIQUES : 1
+  - superposition m = 12 : ('0.0855', '0.0857', '0.0003') contre acte ('0.0855', '0.0858', '0.0003')
+NOTES (a une unite de la derniere decimale) : 0
+
+NON VERIFIE PAR CE SCRIPT : les durees de vie, la phrase "la plume etait pessimiste, pour la seconde fois de suite" (jugement de m1 sur lui-meme), les declarations de m1 (ouverture, graine, anteriorite de sa piece de reception, message de 19 h 18),
+le contenu de ses scripts de reception et de lecture (je ne les ai pas relus ligne a ligne), les 20 cas de son essai (je n en ai rejoue aucun).

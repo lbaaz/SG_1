@@ -1,0 +1,95 @@
+4,5c4,6
+< -- PROJET, VERSION 1
+< (plume machine 1 ; certification, run et seconde feuille machine 2 ; a contresigner par machine 2)
+---
+> -- VERSION 2 (cinq precisions proposees par machine 2 a son contreseing de la version 1, toutes
+> retenues : nn.9 ; aucun nombre juge, aucun tableau ne change)
+> (plume machine 1 ; certification, run, seconde feuille et contreseing de la version 1 machine 2)
+63c64
+<   pre-vol.
+---
+>   pre-vol, aux durees pres.
+155,157c156,160
+<   IDENTIQUES. 1576 champs compares, dont 816 nombres ; aucun champ d'issue, de jugement ou de
+<   statut ne differe, ni aucun autre champ discret ; plus grand ecart d'un nombre : 1.4e-14. La
+<   regle "deux machines" du gel (lecture la moins favorable) n'a pas a jouer.
+---
+>   IDENTIQUES. 1576 champs compares (les 1517 feuilles de l'arbre du verdict, et 59 listes sans
+>   identifiant, toutes vides, comptees chacune pour un champ), dont 816 nombres ; aucun champ
+>   d'issue, de jugement ou de statut ne differe, ni aucun autre champ discret ; plus grand ecart
+>   d'un nombre : 1.4e-14. La regle "deux machines" du gel (lecture la moins favorable) n'a pas a
+>   jouer.
+161,164c164,168
+<   ln q avec SES predictions de chaine : ecart de 4.26e-09 au plus a celui de la feuille. C'est ce
+<   dernier controle qui garde le chemin du fantome de la sonde, lequel n'avait jamais tourne avant
+<   le run (le pre-vol ne le lit pas, G-6) : ses 28 largeurs retrouvent des chaines calculees de
+<   deux cotes.
+---
+>   ln q avec SES predictions de chaine : ecart de 4.26e-09 au plus a celui de la feuille. Le chemin
+>   du fantome de la sonde n'avait jamais tourne avant le run (le pre-vol ne le lit pas, G-6). Ce
+>   qui le garde est que ses 28 largeurs retrouvent des chaines calculees de deux cotes, A MOTEUR
+>   COMMUN (nn.10) : cet accord garde la reduction a une dimension, les absorbeurs, le lecteur et
+>   l'orchestration de la sonde ; il ne garde pas les elements de matrice.
+227a232,233
+>   Ce reste est sous la plus petite etendue de chaine de chacune de ces profondeurs (0.0013,
+>   0.0022, 0.0054, 0.0077 et 0.0054) : lui non plus ne mesure pas l'erreur de la chaine (nn.5).
+251,256c257,265
+<   La plume etait pessimiste, pour la seconde fois de suite apres le gel "ordre 3". Elle ecrivait
+<   que l'issue qu'elle craignait le plus etait le NON CONCLUANT, "une tolerance de 0.02 contre une
+<   bande que le lecteur peut elargir" : aucune cellule n'est non jugeable ; la plus grande bande
+<   lisible vaut 0.0093 et le lecteur n'y met que 0.0023 au plus. Elle n'avait pas la mesure de
+<   l'etalement du lecteur aux etats deja lus quand elle a gele ses annonces (rectificatif, section
+<   4) ; ce n'est pas une excuse : la mesure etait a sa portee.
+---
+>   Pour la seconde fois de suite l'issue la plus favorable a eu lieu : E1 TENU, annonce a 0.35, au
+>   gel "ordre 3" ; VP TENU, annonce a 0.35 contre 0.45 pour NON LUE ou NON CONCLUANT, ici. V1 TENU
+>   etait deja l'issue la plus probable du tableau de la plume (0.50). Deux issues ne mesurent pas
+>   un biais.
+>   La plume ecrivait que l'issue qu'elle craignait le plus etait le NON CONCLUANT, "une tolerance
+>   de 0.02 contre une bande que le lecteur peut elargir" : aucune cellule n'est non jugeable ; la
+>   plus grande bande lisible vaut 0.0093 et le lecteur n'y met que 0.0023 au plus. Elle n'avait pas
+>   la mesure de l'etalement du lecteur aux etats deja lus quand elle a gele ses annonces
+>   (rectificatif, section 4) ; ce n'est pas une excuse : la mesure etait a sa portee.
+300a310,320
+>   RETOUCHES DE LA VERSION 2. La version 1 de cet acte (464ba00a6905e3a5, lot 29058152bbba7a7a) a
+>     ete relevee par machine 2 (lot e1dfb7ba7b18196e, 15 pieces authentifiees) : 28 controles, 28
+>     tenus ; contre-epreuve de son releve : 46 corruptions de l'acte sur 46 mordues. Elle en
+>     contresigne le contenu SANS CONDITION et propose cinq precisions, qui ne sont pas des
+>     conditions. Toutes sont retenues : P-1 (nn.4 et nn.10 : "a moteur commun", et la routine qui
+>     assemble la 2D) ; P-2 (nn.2 : "aux durees pres") ; P-3 (nn.4 : ce que comptent les 1576
+>     champs) ; P-4 (nn.6 : le reste de la superposition est sous l'etendue de la chaine) ; P-5
+>     (nn.7 : la phrase sur les annonces, celle de machine 2, avec une phrase de la plume sur V1).
+>     Machine 2 dit que la limite du moteur commun corrige sa propre note de resultat. S'y ajoutent,
+>     et rien d'autre : ce paragraphe, la mention de version en tete, nn.11, trois lignes de nn.12
+>     et la ligne de fin. Aucun nombre juge, aucun tableau n'a change.
+313,315c333,337
+<   La chaine et la 2D partagent le moteur (82a0be882568fe0c) : les memes elements de matrice font
+<     le hamiltonien de la boite et les sauts de la chaine. L'accord eprouve la reduction a une
+<     dimension et les absorbeurs, pas le moteur.
+---
+>   La chaine et la 2D partagent le moteur (82a0be882568fe0c). Les sauts de la chaine, et le
+>     hamiltonien de la boite, assemble par la routine "assembler" du bloc du lecteur, lu dans sa
+>     sonde deposee (d5cc48f48e37af99) et execute tel quel, appellent la meme fonction X_saut_reel ;
+>     les predictions des deux machines aussi. L'accord eprouve la reduction a une dimension et les
+>     absorbeurs, pas le moteur.
+322,325c344,348
+<   Contreseing de machine 2. Depot : a la decision de l'operateur, numero pris au depot. Ce run
+<   s'appuie sur des pieces qui ne sont pas au registre : les deux parties du gel et leurs lots
+<   (table gelee, sonde, feuille, pilote, bloc de l'absorbeur adapte), le rectificatif, les notes
+<   sur la loi d'echelle et sur le vide. Ce gel ne se rejoue pas.
+---
+>   La version 1 est contresignee ; machine 2 peut rejouer son releve sur cette version 2. Depot : a
+>   la decision de l'operateur, numero pris au depot. Ce run s'appuie sur des pieces qui ne sont pas
+>   au registre : les deux parties du gel et leurs lots (table gelee, sonde, feuille, pilote, bloc
+>   de l'absorbeur adapte), le rectificatif, les notes sur la loi d'echelle et sur le vide. Ce gel
+>   ne se rejoue pas.
+332a356
+>     464ba00a6905e3a5 version 1 de cet acte (lot 29058152bbba7a7a)
+336a361
+>     e1dfb7ba7b18196e lot de machine 2 : contreseing de la version 1
+338a364
+>     700a39a9a7223fd0 sa note de contreseing
+352c378
+< -- FIN journal_delta_nn_largeur_vide_v1 --
+---
+> -- FIN journal_delta_nn_largeur_vide_v2 --

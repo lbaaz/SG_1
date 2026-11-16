@@ -1,0 +1,43 @@
+--- delta101
++++ delta102
+@@ -1,9 +1,9 @@
+ #!/usr/bin/env python3
+ # -*- coding: ascii -*-
+-"""LE DEPOT DU DELTA 101 SUR CLONE FRAIS -- copie, verification au bit, releve, commit LOCAL. machine 2, v1, 16/11/2026.
++"""LE DEPOT DU DELTA 102 SUR CLONE FRAIS -- copie, verification au bit, releve, commit LOCAL. machine 2, v1, 16/11/2026.
+ Le PUSH n'est pas fait ici.
+ 
+-Derive de depot_delta100_machine2_v1.py (NON EDITE : regle 17). Un seul changement : le texte du message de commit ; le numero se lit toujours
++Derive de depot_delta101_machine2_v1.py (NON EDITE : regle 17). Deux changements : le texte du message de commit, et le controle git diff --stat (qui lisait chaque ligne de stat comme finissant par + : faux pour un fichier vide et pour un binaire) remplace par git diff --name-status ; le numero se lit toujours
+ dans le nom du manifeste, l'etat attendu du registre s'en deduit, rien n'est tape. Le diff est joint.
+ Arguments : <clone frais> <MANIFEST_DEPOT_delta<nn>_machine2_v<N>.txt>.
+   1. releve AVANT : origin/main == HEAD, arbre propre, plafond == nn - 1, aucun delta_nn ;
+@@ -16,7 +16,7 @@
+ import hashlib, os, re, shutil, subprocess, sys, unicodedata
+ 
+ if len(sys.argv) != 3:
+-    sys.exit('usage : depot_delta101_machine2_v1.py <clone frais> <MANIFEST_DEPOT_delta<nn>_machine2_v<N>.txt>')
++    sys.exit('usage : depot_delta102_machine2_v1.py <clone frais> <MANIFEST_DEPOT_delta<nn>_machine2_v<N>.txt>')
+ CLONE, MAN = os.path.abspath(sys.argv[1]), os.path.abspath(sys.argv[2])
+ ICI = os.path.dirname(os.path.abspath(__file__))
+ RAC = os.path.dirname(ICI)
+@@ -122,7 +122,7 @@
+ 
+ print('\n4. COMMIT LOCAL (pas de push ici)')
+ auteur = git('log', '-1', '--format=%an <%ae>')
+-msg = ('delta 101 -- complement to deltas 99 and 100: seven lots that those two deposits should have contained are deposited, with their manifests and their pieces (101 pieces): machine 1\'s act lots for the ter act and for the order-3 act (versions 1 and 2), its notes on the width law and on the map of the cells, machine 2\'s re-derivation of the order-3 block and its answer to the map, together with machine 1\'s survey of the registry after the deposits and machine 2\'s reply; the gap was found by machine 1\'s survey (14 controls, 11 held, 3 bit) and confirmed lot by lot, with the same counts, by machine 2\'s own survey written without reading machine 1\'s script; the cause is machine 2\'s: its perimeter rule enumerated only the lots cited by the act or whose manifest header carries the act\'s canon, and its deposit controls checked the lines of its own manifest, not that every lot it had extracted entered, and its covering note to machine 1 said both lots were deposited when three were not; the control that was missing is written and bites on both earlier deposits (one lot missing at delta 99, two at delta 100); no number of any act, no verdict and no freeze is touched, no rule is adopted, thirty-four await review (X); one earlier debt stays unresolved and is said so, the off-chain note of anteriority cited by the freezes of deltas 97 and 98, which neither machine holds; deposited on the operator\'s word "Ok pour moi" to the proposal of a complement; the note numbered here is machine 2\'s and machine 1 has not countersigned it')
++msg = ("delta 102 -- the one-dimensional chain at third order, under the chain absorber adapted to the jump, reads the plateau width of the state carried by site (0, 0) of the phantom system, never read in two dimensions before this run, on twenty-eight cells drawn at random and never played, to within 0.02 in logarithm at the sixteen readable cells (3 to 6 rungs) and within 0.05 at the twelve deep ones (8, 12 and 16 rungs): V1 HELD (sixteen of sixteen, four at each of the four values of w2), VP HELD (twelve of twelve), none fallen, none unjudgeable, none unread; under a freeze in two parts, the draw and eligibility rule, then the instrument and the statements, each certified by the other machine before the run (the first with no disagreement on eligibility or on any written coupling in its table of 252 cells, the second with two corrections of text, written before the run), the seed (479579) being given by the operator after the certification of the first part so that neither machine chose the cells, both machines drawing the same twenty-eight (delta -0.018, -0.003, +0.005 and +0.017, seven depths each); played once on BOCAL4 on 16/11 from 19:13:54 to 19:57:11 (2597 s, 33 calls, every exit code 0, on mains) by a launcher of machine 2 that recomputes the twelve canons and edits no piece, on the operator's written word of 19:10 (play afterwards if everything seems clean), after the instrument had been pre-flown on BOCAL4 with the phantom unread; the reader's instrument holds, all twenty-eight cells are qualified, the twin without phantom holds at all of them (largest width 1.3e-27 of the plateau, threshold 1e-6) and the four absorbers agree on a plateau at every cell; the widest |ln q| is 0.00068 among the readable cells (MG6) and 0.00134 among the deep ones (PG16), against tolerances of 0.02 and 0.05, over 23.5 decades of width (2.9e-9 to 9.5e-33), and it lies below the extent of the chain's own eighteen absorber variants at all twenty-eight cells: the freeze is held to its tolerances and does not measure the chain's error below what its absorber leaves undetermined; the signs of ln q do not arbitrate between the two readings of the residual written in advance; nineteen of the twenty-eight plateaux lie below 1.33e-12, where no second two-dimensional measurement exists and the qualification during the run is the one guard; the chain and the two-dimensional system share the engine, so the agreement tests the reduction to one dimension and the absorbers, not the engine; machine 1's replay of its sheet agrees to 1.4e-14, and a second sheet written by machine 2 from the text alone agrees at all twenty-eight cells (both call the same deposited reader routine); act written by machine 1 and countersigned by machine 2 in two versions, the first by 28 controls recomputed from machine 2's own sources, none biting, the same sheet biting 46 times on a copy with one thing corrupted at a time, the second, deposited here byte for byte with the first beside it, by 35 controls and 61 corruptions, the countersigner's first passes, which bit on its own errors, being kept; fourteen lots enter with their manifests and pieces (eight of machine 1, six of machine 2), among them the two notes on which the freeze rests, which the act does not cite by canon and which a note of deposit cites, and the adapted-absorber block, except six scripts of machine 2 (the launcher of the run, two countersign sheets, two counter-trials and one lot builder) whose hard-coded local paths carry the workstation user's identifier: the public deposit being pseudonymised, they are sealed and cited by canon so cannot be corrected, they are not deposited, and the manifest declares them with their canons, which stay cited; the act says nothing of the lifetime of the closed system, of cells not drawn, or of |delta| outside 0.003 to 0.018; no rule is adopted, thirty-four await review (X); deposited on the operator's word, Tu peux deposer !")
+ open(os.path.join(ICI, 'message_commit_delta%d.txt' % NUMERO), 'w', encoding='utf-8', newline='\n').write(msg + '\n')
+ chk('le message ne porte aucun trailer d outillage (convention du depot public, 25/08)',
+     'Co-Authored' not in msg and 'Claude' not in msg and 'Generated' not in msg, '%d caracteres' % len(msg))
+@@ -140,8 +140,8 @@
+     plafond2 == NUMERO and len(suivis2) - len(suivis) == len(lignes), '%d attendus' % len(lignes))
+ ea = [B for c, B, *_ in lignes if c == acte[0]][0] if acte else None
+ chk('l acte numerote resout, dans l arbre, au canon de l acte source', acte and emp(os.path.join(CLONE, acte[0]))[0] == ea, ea)
+-chk('git diff HEAD~1 --stat : que des ajouts', all(l.strip().endswith(('+', '++', '+++')) or '|' not in l
+-    for l in git('diff', 'HEAD~1', '--stat=200').split('\n')[:-1]), '')
++chk('git diff HEAD~1 --name-status : que des ajouts (A), aucun M ni D, autant que de pieces', len(git('diff', '--name-status', 'HEAD~1', 'HEAD').split('\n')) == len(lignes)
++    and all(l.startswith('A\t') for l in git('diff', '--name-status', 'HEAD~1', 'HEAD').split('\n')), '%d fichiers ajoutes' % len(lignes))
+ 
+ n, k = len(OK), sum(1 for _, o in OK if o)
+ print('\n=====================================================================')
