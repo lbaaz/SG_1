@@ -1,0 +1,9 @@
+flottants differents : 344
+G_flt  7.216450e-15  (['points', 'M3', 'etats', 6, 'plateaux', 'C', 'Gamma_pl'], 6.0755322844205445e-12, 6.075532284420588e-12)
+G_ex   7.188730e-15  (['points', 'C2', 'etats', 3, 'plateaux', 'B', 'Gamma_pl'], 4.270038719466424e-12, 4.2700387194663935e-12)
+L_flt  7.391657e-15  (['points', 'L4', 'etats', 2, 'plateaux', 'C', 'ecart_ln_A'], 0.008569818954917516, 0.008569818954924908)
+L_ex   7.391657e-15  (['points', 'L4', 'etats', 2, 'plateaux', 'C', 'ecart_ln_A'], 0.008569818954917516, 0.008569818954924908)
+lecture du maximum en flottants (['points', 'M3', 'etats', 6, 'plateaux', 'C', 'Gamma_pl']) : ecart relatif EXACT 7.179758e-15 (la formule abs(a/b - 1) l arrondit a 7.216450e-15)
+lecture du maximum EXACT (['points', 'C2', 'etats', 3, 'plateaux', 'B', 'Gamma_pl']) : en flottants abs(a/b - 1) = 7.105427e-15, abs(b/a - 1) = 7.216450e-15
+65 * 2^-53 = 7.216450e-15
+CONCLUSION : "7.2e-15 au plus" (relatif) TIENT ; "7.4e-15 au plus" (absolu) TIENT

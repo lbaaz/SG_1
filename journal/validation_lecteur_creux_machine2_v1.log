@@ -1,0 +1,171 @@
+VALIDATION DU LECTEUR CREUX DE MACHINE 2 (v1), HORS CHAINE, NON CERTIFIEE ; contre la sonde dense deposee
+python 3.11.9, numpy 2.2.6, scipy 1.15.3
+canon du moteur : 82a0be882568fe0c (attendu 82a0be882568fe0c)
+canon de la sonde etage 2 : c110c6286157b025
+canon de la sonde etage 1 : 1ae4b5b2f9ff0e70
+seuils declares avant le premier passage : {"V1": 1e-15, "V3": 1e-08, "V4_abs": 5e-13, "V4_rel": 0.01, "V5_gpl": 0.01, "V6": 1e-06, "V7": 1e-09}
+duree totale : 97.6 s
+
+== pt 39_20  (93.3 s)
+  V1 H0 creux - i eta W_F1 contre H_2D du moteur, k = 3, G20 : ecart max 0.000e+00  PASSE
+  F1G20   V2 True  V3 True  V4 True  V5 True  V6 True  V7 True  V8 True | pire dE_re 1.7e-13 | pire dgamma/tol 0.04 (rel 5.24e-04) | gW vs gE 8.6e-08 | residu 5.2e-15
+          plateau dense : PLATEAU k0=0 etal=4.539% Gpl=2.143807e-10 | mien : PLATEAU k0=0 etal=4.541% Gpl=2.143926e-10
+          identite (3.9) : dense 1.000000  mienne 1.000000
+          ancrage (3.7) : recouvrement avec la graine 0.0288, second 0.0264 (rapport 1.093) ; etat a 0.516 de sigma, candidats jusqu a 1.44 ; somme des recouvrements des 80 candidats 0.224
+  F1G30   V2 True  V3 True  V4 True  V5 True  V6 True  V7 True  V8 True | pire dE_re 1.5e-13 | pire dgamma/tol 0.19 (rel 2.25e-03) | gW vs gE 2.9e-06 | residu 8.7e-15
+          plateau dense : PLATEAU k0=0 etal=3.318% Gpl=2.175750e-10 | mien : PLATEAU k0=0 etal=3.424% Gpl=2.175800e-10
+          identite (3.9) : dense 1.000000  mienne 1.000000
+          ancrage (3.7) : recouvrement avec la graine 0.0288, second 0.0279 (rapport 1.034) ; etat a 0.516 de sigma, candidats jusqu a 1.52 ; somme des recouvrements des 80 candidats 0.292
+  F1GT    V2 True  V3 True  V4 True  V5 True  V6 True  V7 True  V8 True | pire dE_re 2.0e-13 | pire dgamma/tol 0.06 (rel 1.21e-03) | gW vs gE 1.7e-06 | residu 1.4e-14
+          plateau dense : PLATEAU k0=-2 etal=4.558% Gpl=2.223885e-10 | mien : PLATEAU k0=-2 etal=4.552% Gpl=2.223681e-10
+          identite (3.9) : dense 1.000000  mienne 1.000000
+          ancrage (3.7) : recouvrement avec la graine 0.0288, second 0.0264 (rapport 1.093) ; etat a 0.516 de sigma, candidats jusqu a 1.29 ; somme des recouvrements des 80 candidats 0.174
+  F2G20   V2 True  V3 True  V4 True  V5 True  V6 True  V7 True  V8 True | pire dE_re 1.5e-13 | pire dgamma/tol 0.04 (rel 5.60e-04) | gW vs gE 9.6e-07 | residu 5.8e-15
+          plateau dense : pas de plateau, meilleur etal=7.780% | mien : pas de plateau, meilleur etal=7.735%
+          identite (3.9) : dense 1.000000  mienne 1.000000
+          ancrage (3.7) : recouvrement avec la graine 0.0288, second 0.0264 (rapport 1.093) ; etat a 0.516 de sigma, candidats jusqu a 1.42 ; somme des recouvrements des 80 candidats 0.205
+  F3G20   V2 True  V3 True  V4 True  V5 True  V6 True  V7 True  V8 True | pire dE_re 1.5e-13 | pire dgamma/tol 0.07 (rel 7.88e-04) | gW vs gE 2.4e-06 | residu 5.7e-15
+          plateau dense : pas de plateau, meilleur etal=5.684% | mien : pas de plateau, meilleur etal=5.655%
+          identite (3.9) : dense 1.000000  mienne 1.000000
+          ancrage (3.7) : recouvrement avec la graine 0.0288, second 0.0279 (rapport 1.034) ; etat a 0.516 de sigma, candidats jusqu a 1.52 ; somme des recouvrements des 80 candidats 0.293
+
+== pt 41_20  (97.0 s)
+  V1 H0 creux - i eta W_F1 contre H_2D du moteur, k = 3, G20 : ecart max 0.000e+00  PASSE
+  F1G20   V2 True  V3 True  V4 True  V5 True  V6 True  V7 True  V8 True | pire dE_re 1.4e-13 | pire dgamma/tol 0.00 (rel 3.64e-05) | gW vs gE 2.4e-07 | residu 6.5e-15
+          plateau dense : pas de plateau, meilleur etal=7.979% | mien : pas de plateau, meilleur etal=7.981%
+          identite (3.9) : dense 1.000000  mienne 1.000000
+          ancrage (3.7) : recouvrement avec la graine 0.0431, second 0.0429 (rapport 1.004) ; etat a 0.698 de sigma, candidats jusqu a 1.51 ; somme des recouvrements des 80 candidats 0.273
+  F1G30   V2 True  V3 True  V4 True  V5 True  V6 True  V7 True  V8 True | pire dE_re 2.2e-13 | pire dgamma/tol 0.01 (rel 1.45e-04) | gW vs gE 2.2e-07 | residu 6.3e-15
+          plateau dense : pas de plateau, meilleur etal=7.973% | mien : pas de plateau, meilleur etal=7.979%
+          identite (3.9) : dense 1.000000  mienne 1.000000
+          ancrage (3.7) : recouvrement avec la graine 0.0431, second 0.0429 (rapport 1.004) ; etat a 0.698 de sigma, candidats jusqu a 1.54 ; somme des recouvrements des 80 candidats 0.273
+  F1GT    V2 True  V3 True  V4 True  V5 True  V6 True  V7 True  V8 True | pire dE_re 2.4e-13 | pire dgamma/tol 0.01 (rel 7.63e-05) | gW vs gE 1.4e-07 | residu 1.1e-14
+          plateau dense : PLATEAU k0=-2 etal=3.969% Gpl=2.674010e-09 | mien : PLATEAU k0=-2 etal=3.970% Gpl=2.674007e-09
+          identite (3.9) : dense 1.000000  mienne 1.000000
+          ancrage (3.7) : recouvrement avec la graine 0.0431, second 0.0429 (rapport 1.004) ; etat a 0.698 de sigma, candidats jusqu a 1.30 ; somme des recouvrements des 80 candidats 0.235
+  F2G20   V2 True  V3 True  V4 True  V5 True  V6 True  V7 True  V8 True | pire dE_re 1.3e-13 | pire dgamma/tol 0.00 (rel 4.44e-05) | gW vs gE 1.4e-07 | residu 9.3e-15
+          plateau dense : PLATEAU k0=-1 etal=3.514% Gpl=2.573758e-09 | mien : PLATEAU k0=-1 etal=3.514% Gpl=2.573742e-09
+          identite (3.9) : dense 1.000000  mienne 1.000000
+          ancrage (3.7) : recouvrement avec la graine 0.0431, second 0.0429 (rapport 1.004) ; etat a 0.698 de sigma, candidats jusqu a 1.44 ; somme des recouvrements des 80 candidats 0.273
+  F3G20   V2 True  V3 True  V4 True  V5 True  V6 True  V7 True  V8 True | pire dE_re 1.6e-13 | pire dgamma/tol 0.01 (rel 9.57e-05) | gW vs gE 6.1e-07 | residu 7.3e-15
+          plateau dense : pas de plateau, meilleur etal=9.097% | mien : pas de plateau, meilleur etal=9.098%
+          identite (3.9) : dense 1.000000  mienne 1.000000
+          ancrage (3.7) : recouvrement avec la graine 0.0431, second 0.0429 (rapport 1.004) ; etat a 0.698 de sigma, candidats jusqu a 1.54 ; somme des recouvrements des 80 candidats 0.273
+
+== pt 99_50  (90.7 s)
+  V1 H0 creux - i eta W_F1 contre H_2D du moteur, k = 3, G20 : ecart max 0.000e+00  PASSE
+  F1G20   V2 True  V3 True  V4 True  V5 True  V6 True  V7 True  V8 True | pire dE_re 1.4e-13 | pire dgamma/tol 0.09 (rel 1.25e-03) | gW vs gE 1.3e-06 | residu 2.9e-15
+          plateau dense : pas de plateau, meilleur etal=15.334% | mien : pas de plateau, meilleur etal=15.311%
+          identite (3.9) : dense 1.000000  mienne 1.000000
+          ancrage (3.7) : recouvrement avec la graine 0.0275, second 0.0274 (rapport 1.003) ; etat a 0.276 de sigma, candidats jusqu a 1.36 ; somme des recouvrements des 80 candidats 0.243
+  F1G30   V2 True  V3 True  V4 True  V5 True  V6 True  V7 True  V8 True | pire dE_re 2.7e-13 | pire dgamma/tol 0.16 (rel 2.44e-03) | gW vs gE 2.2e-06 | residu 3.2e-15
+          plateau dense : PLATEAU k0=2 etal=3.371% Gpl=8.355176e-11 | mien : PLATEAU k0=2 etal=3.363% Gpl=8.352811e-11
+          identite (3.9) : dense 1.000000  mienne 1.000000
+          ancrage (3.7) : recouvrement avec la graine 0.0275, second 0.0274 (rapport 1.003) ; etat a 0.276 de sigma, candidats jusqu a 1.32 ; somme des recouvrements des 80 candidats 0.243
+  F1GT    V2 True  V3 True  V4 True  V5 True  V6 True  V7 True  V8 True | pire dE_re 2.0e-13 | pire dgamma/tol 0.09 (rel 1.83e-03) | gW vs gE 6.7e-06 | residu 4.5e-15
+          plateau dense : pas de plateau, meilleur etal=5.845% | mien : pas de plateau, meilleur etal=5.946%
+          identite (3.9) : dense 1.000000  mienne 1.000000
+          ancrage (3.7) : recouvrement avec la graine 0.0275, second 0.0254 (rapport 1.082) ; etat a 0.276 de sigma, candidats jusqu a 1.26 ; somme des recouvrements des 80 candidats 0.187
+  F2G20   V2 True  V3 True  V4 True  V5 True  V6 True  V7 True  V8 True | pire dE_re 1.4e-13 | pire dgamma/tol 0.09 (rel 1.61e-03) | gW vs gE 1.8e-07 | residu 2.4e-15
+          plateau dense : pas de plateau, meilleur etal=8.126% | mien : pas de plateau, meilleur etal=8.198%
+          identite (3.9) : dense 1.000000  mienne 1.000000
+          ancrage (3.7) : recouvrement avec la graine 0.0275, second 0.0274 (rapport 1.003) ; etat a 0.276 de sigma, candidats jusqu a 1.36 ; somme des recouvrements des 80 candidats 0.247
+  F3G20   V2 True  V3 True  V4 True  V5 True  V6 True  V7 True  V8 True | pire dE_re 1.9e-13 | pire dgamma/tol 0.27 (rel 3.91e-03) | gW vs gE 3.6e-07 | residu 2.1e-15
+          plateau dense : pas de plateau, meilleur etal=15.324% | mien : pas de plateau, meilleur etal=15.054%
+          identite (3.9) : dense 1.000000  mienne 1.000000
+          ancrage (3.7) : recouvrement avec la graine 0.0275, second 0.0274 (rapport 1.003) ; etat a 0.276 de sigma, candidats jusqu a 1.36 ; somme des recouvrements des 80 candidats 0.243
+
+== pt 101_50  (93.6 s)
+  V1 H0 creux - i eta W_F1 contre H_2D du moteur, k = 3, G20 : ecart max 0.000e+00  PASSE
+  F1G20   V2 True  V3 True  V4 True  V5 True  V6 True  V7 True  V8 True | pire dE_re 1.6e-13 | pire dgamma/tol 0.13 (rel 1.83e-03) | gW vs gE 1.5e-07 | residu 1.3e-15
+          plateau dense : pas de plateau, meilleur etal=12.722% | mien : pas de plateau, meilleur etal=12.791%
+          identite (3.9) : dense 1.000000  mienne 1.000000
+          ancrage (3.7) : recouvrement avec la graine 0.0437, second 0.0424 (rapport 1.031) ; etat a 0.053 de sigma, candidats jusqu a 1.32 ; somme des recouvrements des 80 candidats 0.276
+  F1G30   V2 True  V3 True  V4 True  V5 True  V6 True  V7 True  V8 True | pire dE_re 2.6e-13 | pire dgamma/tol 0.14 (rel 2.00e-03) | gW vs gE 3.4e-07 | residu 1.4e-15
+          plateau dense : PLATEAU k0=1 etal=2.003% Gpl=6.538886e-11 | mien : PLATEAU k0=1 etal=1.937% Gpl=6.540526e-11
+          identite (3.9) : dense 1.000000  mienne 1.000000
+          ancrage (3.7) : recouvrement avec la graine 0.0437, second 0.0424 (rapport 1.031) ; etat a 0.053 de sigma, candidats jusqu a 1.20 ; somme des recouvrements des 80 candidats 0.276
+  F1GT    V2 True  V3 True  V4 True  V5 True  V6 True  V7 True  V8 True | pire dE_re 3.8e-13 | pire dgamma/tol 0.10 (rel 1.98e-03) | gW vs gE 3.6e-07 | residu 1.6e-15
+          plateau dense : PLATEAU k0=-1 etal=4.888% Gpl=6.625518e-11 | mien : PLATEAU k0=-1 etal=4.835% Gpl=6.626929e-11
+          identite (3.9) : dense 1.000000  mienne 1.000000
+          ancrage (3.7) : recouvrement avec la graine 0.0437, second 0.0424 (rapport 1.031) ; etat a 0.053 de sigma, candidats jusqu a 1.11 ; somme des recouvrements des 80 candidats 0.276
+  F2G20   V2 True  V3 True  V4 True  V5 True  V6 True  V7 True  V8 True | pire dE_re 3.1e-13 | pire dgamma/tol 0.11 (rel 2.42e-03) | gW vs gE 3.0e-07 | residu 1.3e-15
+          plateau dense : pas de plateau, meilleur etal=8.121% | mien : pas de plateau, meilleur etal=8.079%
+          identite (3.9) : dense 1.000000  mienne 1.000000
+          ancrage (3.7) : recouvrement avec la graine 0.0437, second 0.0424 (rapport 1.031) ; etat a 0.053 de sigma, candidats jusqu a 1.32 ; somme des recouvrements des 80 candidats 0.277
+  F3G20   V2 True  V3 True  V4 True  V5 True  V6 True  V7 True  V8 True | pire dE_re 2.5e-13 | pire dgamma/tol 0.12 (rel 2.60e-03) | gW vs gE 1.1e-07 | residu 2.0e-15
+          plateau dense : pas de plateau, meilleur etal=12.950% | mien : pas de plateau, meilleur etal=12.892%
+          identite (3.9) : dense 1.000000  mienne 1.000000
+          ancrage (3.7) : recouvrement avec la graine 0.0437, second 0.0424 (rapport 1.031) ; etat a 0.053 de sigma, candidats jusqu a 1.32 ; somme des recouvrements des 80 candidats 0.276
+
+== pt 197_100  (92.2 s)
+  V1 H0 creux - i eta W_F1 contre H_2D du moteur, k = 3, G20 : ecart max 0.000e+00  PASSE
+  F1G20   V2 True  V3 True  V4 True  V5 True  V6 True  V7 True  V8 True | pire dE_re 1.4e-13 | pire dgamma/tol 0.07 (rel 8.42e-04) | gW vs gE 1.3e-06 | residu 2.7e-15
+          plateau dense : pas de plateau, meilleur etal=5.741% | mien : pas de plateau, meilleur etal=5.807%
+          identite (3.9) : dense 1.000000  mienne 1.000000
+          ancrage (3.7) : recouvrement avec la graine 0.0280, second 0.0276 (rapport 1.013) ; etat a 0.357 de sigma, candidats jusqu a 1.42 ; somme des recouvrements des 80 candidats 0.245
+  F1G30   V2 True  V3 True  V4 True  V5 True  V6 True  V7 True  V8 True | pire dE_re 2.8e-13 | pire dgamma/tol 0.05 (rel 6.16e-04) | gW vs gE 1.1e-06 | residu 5.3e-15
+          plateau dense : PLATEAU k0=0 etal=4.535% Gpl=1.275709e-10 | mien : PLATEAU k0=0 etal=4.583% Gpl=1.275545e-10
+          identite (3.9) : dense 1.000000  mienne 1.000000
+          ancrage (3.7) : recouvrement avec la graine 0.0280, second 0.0276 (rapport 1.013) ; etat a 0.357 de sigma, candidats jusqu a 1.42 ; somme des recouvrements des 80 candidats 0.245
+  F1GT    V2 True  V3 True  V4 True  V5 True  V6 True  V7 True  V8 True | pire dE_re 2.5e-13 | pire dgamma/tol 0.14 (rel 2.28e-03) | gW vs gE 1.5e-06 | residu 7.4e-15
+          plateau dense : pas de plateau, meilleur etal=11.621% | mien : pas de plateau, meilleur etal=11.525%
+          identite (3.9) : dense 1.000000  mienne 1.000000
+          ancrage (3.7) : recouvrement avec la graine 0.0280, second 0.0256 (rapport 1.092) ; etat a 0.357 de sigma, candidats jusqu a 1.27 ; somme des recouvrements des 80 candidats 0.167
+  F2G20   V2 True  V3 True  V4 True  V5 True  V6 True  V7 True  V8 True | pire dE_re 1.8e-13 | pire dgamma/tol 0.07 (rel 1.71e-03) | gW vs gE 1.1e-06 | residu 4.9e-15
+          plateau dense : pas de plateau, meilleur etal=6.644% | mien : pas de plateau, meilleur etal=6.666%
+          identite (3.9) : dense 1.000000  mienne 1.000000
+          ancrage (3.7) : recouvrement avec la graine 0.0280, second 0.0276 (rapport 1.013) ; etat a 0.357 de sigma, candidats jusqu a 1.42 ; somme des recouvrements des 80 candidats 0.248
+  F3G20   V2 True  V3 True  V4 True  V5 True  V6 True  V7 True  V8 True | pire dE_re 1.6e-13 | pire dgamma/tol 0.18 (rel 2.84e-03) | gW vs gE 1.8e-06 | residu 4.1e-15
+          plateau dense : pas de plateau, meilleur etal=5.981% | mien : pas de plateau, meilleur etal=5.959%
+          identite (3.9) : dense 1.000000  mienne 1.000000
+          ancrage (3.7) : recouvrement avec la graine 0.0280, second 0.0276 (rapport 1.013) ; etat a 0.357 de sigma, candidats jusqu a 1.43 ; somme des recouvrements des 80 candidats 0.245
+
+== pt 203_100  (94.2 s)
+  V1 H0 creux - i eta W_F1 contre H_2D du moteur, k = 3, G20 : ecart max 0.000e+00  PASSE
+  F1G20   V2 True  V3 True  V4 True  V5 True  V6 True  V7 True  V8 True | pire dE_re 2.1e-13 | pire dgamma/tol 0.08 (rel 1.67e-03) | gW vs gE 6.3e-07 | residu 1.4e-15
+          plateau dense : pas de plateau, meilleur etal=9.920% | mien : pas de plateau, meilleur etal=9.936%
+          identite (3.9) : dense 1.000000  mienne 1.000000
+          ancrage (3.7) : recouvrement avec la graine 0.0434, second 0.0426 (rapport 1.019) ; etat a 0.136 de sigma, candidats jusqu a 1.36 ; somme des recouvrements des 80 candidats 0.275
+  F1G30   V2 True  V3 True  V4 True  V5 True  V6 True  V7 True  V8 True | pire dE_re 1.7e-13 | pire dgamma/tol 0.17 (rel 2.48e-03) | gW vs gE 1.9e-06 | residu 1.1e-15
+          plateau dense : PLATEAU k0=2 etal=2.443% Gpl=8.987303e-11 | mien : PLATEAU k0=2 etal=2.432% Gpl=8.985830e-11
+          identite (3.9) : dense 1.000000  mienne 1.000000
+          ancrage (3.7) : recouvrement avec la graine 0.0434, second 0.0426 (rapport 1.019) ; etat a 0.136 de sigma, candidats jusqu a 1.36 ; somme des recouvrements des 80 candidats 0.275
+  F1GT    V2 True  V3 True  V4 True  V5 True  V6 True  V7 True  V8 True | pire dE_re 2.0e-13 | pire dgamma/tol 0.09 (rel 1.49e-03) | gW vs gE 5.7e-07 | residu 2.9e-15
+          plateau dense : PLATEAU k0=0 etal=4.604% Gpl=8.847586e-11 | mien : PLATEAU k0=0 etal=4.663% Gpl=8.847651e-11
+          identite (3.9) : dense 1.000000  mienne 1.000000
+          ancrage (3.7) : recouvrement avec la graine 0.0434, second 0.0426 (rapport 1.019) ; etat a 0.136 de sigma, candidats jusqu a 1.20 ; somme des recouvrements des 80 candidats 0.275
+  F2G20   V2 True  V3 True  V4 True  V5 True  V6 True  V7 True  V8 True | pire dE_re 1.4e-13 | pire dgamma/tol 0.05 (rel 3.03e-03) | gW vs gE 1.7e-06 | residu 2.3e-15
+          plateau dense : pas de plateau, meilleur etal=6.272% | mien : pas de plateau, meilleur etal=6.300%
+          identite (3.9) : dense 1.000000  mienne 1.000000
+          ancrage (3.7) : recouvrement avec la graine 0.0434, second 0.0426 (rapport 1.019) ; etat a 0.136 de sigma, candidats jusqu a 1.34 ; somme des recouvrements des 80 candidats 0.275
+  F3G20   V2 True  V3 True  V4 True  V5 True  V6 True  V7 True  V8 True | pire dE_re 2.2e-13 | pire dgamma/tol 0.38 (rel 6.26e-03) | gW vs gE 9.0e-07 | residu 1.6e-15
+          plateau dense : pas de plateau, meilleur etal=9.771% | mien : pas de plateau, meilleur etal=9.792%
+          identite (3.9) : dense 1.000000  mienne 1.000000
+          ancrage (3.7) : recouvrement avec la graine 0.0434, second 0.0426 (rapport 1.019) ; etat a 0.136 de sigma, candidats jusqu a 1.39 ; somme des recouvrements des 80 candidats 0.275
+
+== tp j06_F1G20  (20.9 s)
+  F1G20   V2 True  V3 True  V4 True  V5 True  V6 True  V7 True  | pire dE_re 8.3e-13 | pire dgamma/tol 0.06 (rel 2.83e-03) | gW vs gE 5.0e-11 | residu 2.5e-17
+          plateau dense : PLATEAU k0=-5 etal=0.318% Gpl=5.376665e-10 | mien : PLATEAU k0=-5 etal=0.281% Gpl=5.375686e-10
+
+== tp j06_F1G30  (30.8 s)
+  F1G30   V2 True  V3 True  V4 True  V5 False V6 True  V7 True  | pire dE_re 1.5e-12 | pire dgamma/tol 0.56 (rel 6.13e-03) | gW vs gE 8.1e-11 | residu 4.7e-17
+          plateau dense : PLATEAU k0=-4 etal=0.608% Gpl=5.376220e-10 | mien : PLATEAU k0=-5 etal=0.000% Gpl=5.372626e-10
+
+== tp j08_F1G20  (19.4 s)
+  F1G20   V2 True  V3 True  V4 True  V5 True  V6 True  V7 True  | pire dE_re 6.8e-13 | pire dgamma/tol 0.04 (rel 1.43e-03) | gW vs gE 3.9e-12 | residu 1.5e-16
+          plateau dense : PLATEAU k0=-5 etal=0.222% Gpl=6.431152e-09 | mien : PLATEAU k0=-5 etal=0.213% Gpl=6.431052e-09
+
+== tp j08_F1G30  (31.4 s)
+  F1G30   V2 True  V3 True  V4 True  V5 True  V6 True  V7 True  | pire dE_re 1.8e-12 | pire dgamma/tol 0.03 (rel 5.81e-04) | gW vs gE 8.2e-13 | residu 2.2e-16
+          plateau dense : PLATEAU k0=-5 etal=0.037% Gpl=6.427677e-09 | mien : PLATEAU k0=-5 etal=0.000% Gpl=6.428270e-09
+
+TOTAL V1 : 6 sur 6
+TOTAL V2 : 34 sur 34
+TOTAL V3 : 34 sur 34
+TOTAL V4 : 34 sur 34
+TOTAL V5 : 33 sur 34
+TOTAL V6 : 34 sur 34
+TOTAL V7 : 34 sur 34
+TOTAL V8 : 30 sur 30
+AU MOINS UNE EPREUVE MORD

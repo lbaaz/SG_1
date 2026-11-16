@@ -1,0 +1,21 @@
+MANIFESTE lot_machine2_2026-11-15_lecteur_creux_hors_chaine_v1 -- LECTEUR 2D CREUX DE MACHINE 2, HORS CHAINE, NON CERTIFIE, NON OPPOSABLE. Ecrit du gel bis et du moteur avant d ouvrir le code de machine 1 ; valide contre la sonde dense deposee aux seules configurations de la nuit bis (34 trajectoires, 612 barreaux, huit epreuves declarees d avance : une morsure, un depart de fenetre k0 du au bruit de la dense) ; 18 cellules sur 18 du tableau 5 de la note de machine 1 (42c822811167b826) ; l etat lu par M17 est departage du suivant par 0.3 a 9 pour cent de recouvrement, le suivant ayant une largeur 22 a 30 fois differente. Rien joue sous absorbeur long (E19). Rien a certifier ni a contresigner. machine 2
+colonnes : empreinte_B (sha256 NFC+LF, 16 hex)  empreinte_brute  octets_B  octets_bruts  fichier
+Le CANON du lot est l'empreinte B de CE manifeste ; il ne se porte pas lui-meme.
+
+1628dcb57aef6c2a 1628dcb57aef6c2a    11549    11549  POUR_MACHINE1_lecteur_creux_machine2_v1.md
+851ba46a01c023ef 851ba46a01c023ef     7940     7940  lecteur_creux_m2/lecteur_2D_creux_machine2_v1.py
+42dc41b92819af25 42dc41b92819af25    13959    13959  lecteur_creux_m2/validation_lecteur_creux_machine2_v1.py
+a341e050638ce43b a341e050638ce43b     2751     2751  lecteur_creux_m2/comparaison_tableau5_machine2_v1.py
+cbd2eb7c0afbdbd9 cbd2eb7c0afbdbd9     2021     2021  lecteur_creux_m2/bruit_dense_par_barreau_machine2_v1.py
+436f6dab2c7b081c 436f6dab2c7b081c     2543     2543  lecteur_creux_m2/plateaux_et_temoin_machine2_v1.py
+dc68713bfce3c124 dc68713bfce3c124     2082     2082  lecteur_creux_m2/ancrage_marges_machine2_v1.py
+4a2d928ff974495c 4a2d928ff974495c    18418    18418  lecteur_creux_m2/sortie/validation_lecteur_creux_machine2_v1.log
+c16bec33e4e515e9 c16bec33e4e515e9   320028   320028  lecteur_creux_m2/sortie/validation_lecteur_creux_machine2_v1.json
+0072ee4a04c2340e 3543f63d7a08758c      778      789  lecteur_creux_m2/sortie/comparaison_tableau5_machine2_v1.log
+bbbc1b34ff190518 2ded8d9f9c4a3ee9     1529     1550  lecteur_creux_m2/sortie/bruit_dense_par_barreau_machine2_v1.log
+ba68a78f967c29b8 f5dbc1aa7fb40a9b     4241     4283  lecteur_creux_m2/sortie/plateaux_et_temoin_machine2_v1.log
+76e03d66667780f8 bdd8a3e695962f8b     1360     1380  lecteur_creux_m2/sortie/ancrage_marges_machine2_v1.log
+bb6c40c6086933f0 bb6c40c6086933f0    11918    11918  fabrique_lot_lecteur_creux_machine2_v1.py
+
+entrants : lot de machine 1 4103eae43f989877 (note 42c822811167b826) ; sonde dense deposee, lots a01598ec24237921 (sonde_etage2 c110c6286157b025, sonde_etage1 1ae4b5b2f9ff0e70) ; moteur 82a0be882568fe0c ; gel bis dcda1611adf5f8fd ; registre 8d54bf9
+pieces : 14 (compte etabli APRES le dernier ajout)

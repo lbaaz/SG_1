@@ -1,0 +1,42 @@
+BLOC ET LECTEUR de machine 1, eprouves par machine 2 ; python 3.11.9, numpy 2.2.6, scipy 1.15.3
+B1  le bloc est dans la sonde tel quel : OUI
+B2  identite de matrice : 12 assemblages (w2, g de A1, A2, C3 ; N 36 et 40 ; signes -1 et +1), ecart max a H_2D, et de restreindre a l assemblage direct : 0.00e+00 (seuil 1e-15) : TIENT
+B3  table_W contre mon poids_absorbeur (r_c 34, 40, 54 ; quatre geometries) : ecart relatif max 0.00e+00 (seuil 1e-12) : TIENT
+B4  garde de singularite : un echec -> decalage_repris True, gamma 1.649485e-06 contre 1.649485e-06 sans echec (suivi True / True) : TIENT ; deux echecs -> suivi False, gamma None : TIENT
+B5  mon lecteur : 16 trajectoires en 323 s
+    contre m1 (lot) :
+       anc A1 A  N 120 : 12 barreaux suivis des deux cotes, ecart relatif max 7.64e-11, hors seuil 0 ; recouvrement graine 0.0288 / second 0.0264 (74.9 s)
+       anc A1 B  N 140 : 12 barreaux suivis des deux cotes, ecart relatif max 1.63e-10, hors seuil 0 ; recouvrement graine 0.0288 / second 0.0264 (118.0 s)
+       anc A1 C  N 140 : 12 barreaux suivis des deux cotes, ecart relatif max 4.65e-11, hors seuil 0 ; recouvrement graine 0.0288 / second 0.0279 (107.3 s)
+       anc A1 D  N 130 : 12 barreaux suivis des deux cotes, ecart relatif max 2.01e-10, hors seuil 0 ; recouvrement graine 0.0288 / second 0.0264 (96.0 s)
+       anc A2 A  N 121 : 12 barreaux suivis des deux cotes, ecart relatif max 8.30e-11, hors seuil 0 ; recouvrement graine 0.0431 / second 0.0429 (74.9 s)
+       anc A2 B  N 141 : 12 barreaux suivis des deux cotes, ecart relatif max 1.73e-10, hors seuil 0 ; recouvrement graine 0.0431 / second 0.0429 (118.2 s)
+       anc A2 C  N 141 : 12 barreaux suivis des deux cotes, ecart relatif max 3.50e-11, hors seuil 0 ; recouvrement graine 0.0431 / second 0.0429 (115.8 s)
+       anc A2 D  N 131 : 12 barreaux suivis des deux cotes, ecart relatif max 1.02e-10, hors seuil 0 ; recouvrement graine 0.0431 / second 0.0429 (92.0 s)
+       tp  6  A  N 120 : 12 barreaux suivis des deux cotes, ecart relatif max 2.43e-13, hors seuil 0 ; recouvrement graine 0.9999 / second 0.0001 (97.3 s)
+       tp  6  B  N 140 : 12 barreaux suivis des deux cotes, ecart relatif max 1.60e-13, hors seuil 0 ; recouvrement graine 0.9999 / second 0.0001 (145.8 s)
+       tp  6  C  N 140 : 12 barreaux suivis des deux cotes, ecart relatif max 2.12e-13, hors seuil 0 ; recouvrement graine 0.9999 / second 0.0001 (152.9 s)
+       tp  6  D  N 130 : 12 barreaux suivis des deux cotes, ecart relatif max 5.47e-12, hors seuil 0 ; recouvrement graine 0.9999 / second 0.0001 (120.6 s)
+       tp  8  A  N 120 : 12 barreaux suivis des deux cotes, ecart relatif max 7.00e-13, hors seuil 0 ; recouvrement graine 0.9999 / second 0.0001 (95.8 s)
+       tp  8  B  N 140 : 12 barreaux suivis des deux cotes, ecart relatif max 7.18e-13, hors seuil 0 ; recouvrement graine 0.9999 / second 0.0001 (126.9 s)
+       tp  8  C  N 140 : 12 barreaux suivis des deux cotes, ecart relatif max 4.36e-12, hors seuil 0 ; recouvrement graine 0.9999 / second 0.0001 (129.2 s)
+       tp  8  D  N 130 : 12 barreaux suivis des deux cotes, ecart relatif max 5.10e-13, hors seuil 0 ; recouvrement graine 0.9999 / second 0.0001 (82.5 s)
+    BILAN contre m1 (lot) : 192 lectures comparees, ecart relatif max 2.01e-10, hors du seuil 1e-8 : 0 : TIENT
+    contre sa sonde, MA passe :
+       anc A1 A  N 120 : 12 barreaux suivis des deux cotes, ecart relatif max 7.64e-11, hors seuil 0 ; recouvrement graine 0.0288 / second 0.0264 (74.9 s)
+       anc A1 B  N 140 : 12 barreaux suivis des deux cotes, ecart relatif max 1.63e-10, hors seuil 0 ; recouvrement graine 0.0288 / second 0.0264 (118.0 s)
+       anc A1 C  N 140 : 12 barreaux suivis des deux cotes, ecart relatif max 4.65e-11, hors seuil 0 ; recouvrement graine 0.0288 / second 0.0279 (107.3 s)
+       anc A1 D  N 130 : 12 barreaux suivis des deux cotes, ecart relatif max 2.01e-10, hors seuil 0 ; recouvrement graine 0.0288 / second 0.0264 (96.0 s)
+       anc A2 A  N 121 : 12 barreaux suivis des deux cotes, ecart relatif max 8.30e-11, hors seuil 0 ; recouvrement graine 0.0431 / second 0.0429 (74.9 s)
+       anc A2 B  N 141 : 12 barreaux suivis des deux cotes, ecart relatif max 1.73e-10, hors seuil 0 ; recouvrement graine 0.0431 / second 0.0429 (118.2 s)
+       anc A2 C  N 141 : 12 barreaux suivis des deux cotes, ecart relatif max 3.50e-11, hors seuil 0 ; recouvrement graine 0.0431 / second 0.0429 (115.8 s)
+       anc A2 D  N 131 : 12 barreaux suivis des deux cotes, ecart relatif max 1.02e-10, hors seuil 0 ; recouvrement graine 0.0431 / second 0.0429 (92.0 s)
+       tp  6  A  N 120 : 12 barreaux suivis des deux cotes, ecart relatif max 2.43e-13, hors seuil 0 ; recouvrement graine 0.9999 / second 0.0001 (97.3 s)
+       tp  6  B  N 140 : 12 barreaux suivis des deux cotes, ecart relatif max 1.60e-13, hors seuil 0 ; recouvrement graine 0.9999 / second 0.0001 (145.8 s)
+       tp  6  C  N 140 : 12 barreaux suivis des deux cotes, ecart relatif max 2.12e-13, hors seuil 0 ; recouvrement graine 0.9999 / second 0.0001 (152.9 s)
+       tp  6  D  N 130 : 12 barreaux suivis des deux cotes, ecart relatif max 5.47e-12, hors seuil 0 ; recouvrement graine 0.9999 / second 0.0001 (120.6 s)
+       tp  8  A  N 120 : 12 barreaux suivis des deux cotes, ecart relatif max 7.00e-13, hors seuil 0 ; recouvrement graine 0.9999 / second 0.0001 (95.8 s)
+       tp  8  B  N 140 : 12 barreaux suivis des deux cotes, ecart relatif max 7.18e-13, hors seuil 0 ; recouvrement graine 0.9999 / second 0.0001 (126.9 s)
+       tp  8  C  N 140 : 12 barreaux suivis des deux cotes, ecart relatif max 4.36e-12, hors seuil 0 ; recouvrement graine 0.9999 / second 0.0001 (129.2 s)
+       tp  8  D  N 130 : 12 barreaux suivis des deux cotes, ecart relatif max 5.10e-13, hors seuil 0 ; recouvrement graine 0.9999 / second 0.0001 (82.5 s)
+    BILAN contre sa sonde, MA passe : 192 lectures comparees, ecart relatif max 2.01e-10, hors du seuil 1e-8 : 0 : TIENT

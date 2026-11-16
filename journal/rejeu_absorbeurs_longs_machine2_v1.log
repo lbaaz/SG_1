@@ -1,0 +1,483 @@
+REJEU (i) DE MACHINE 2 : absorbeurs longs, six points de M17 et temoin H+ ; HORS CHAINE, POST HOC, NON OPPOSABLE ; lecteur NON CERTIFIE
+python 3.11.9, numpy 2.2.6, scipy 1.15.3
+canon du moteur : 82a0be882568fe0c (attendu 82a0be882568fe0c)
+canon de sonde2 : c110c6286157b025 (attendu c110c6286157b025)
+canon de sonde1 : 1ae4b5b2f9ff0e70 (attendu 1ae4b5b2f9ff0e70)
+canon de tp_ref : 4d51dd58ef456fe9 (attendu 4d51dd58ef456fe9)
+perimetre E19 : points 39_20,197_100,99_50,101_50,203_100,41_20 ; temoin H+ j = 6 et 8 ; configurations F2_60,F2_80,F1_80,F3_60,F1T_60,F1_40,F1_60,F2_30,F2_40,F3_30,F3_40
+taches : 34 (les plus grandes d abord)
+duree totale : 826.3 s
+
+== pt 39_20 N = 70  (59.1 s)
+   lecture de M17 (sonde dense, F1 G20, k = 3) : 2.162327e-10 ; mon ancrage de la nuit bis : E_re -3.097882, recouvrement 0.0288 (second 0.0264)
+  F2_30   F2 r_c 40 L 30 | ancrage k=3 : E_re -3.097882 rec 0.0288 second 0.0264 (rapport 1.093) dist_sigma 0.516/1.35 cand 0.177 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 1.0e-14 | gamma_E vs gamma_W max 8.1e-07 | poids dans l absorbeur (k=3) 8.888e-10
+          plateau A (k -5..14) : PLATEAU k0 -1 etalement 1.352 % Gamma_pl 2.205825e-10 | /M17 1.0201 | dans 0.5 % : (a) 2 (b) 3
+          plateau B (k -5..12) : PLATEAU k0 -1 etalement 1.352 % Gamma_pl 2.205825e-10 | /M17 1.0201 | dans 0.5 % : (a) 2 (b) 3
+  F3_30   F3 r_c 40 L 30 | ancrage k=3 : E_re -3.097882 rec 0.0288 second 0.0279 (rapport 1.034) dist_sigma 0.516/1.53 cand 0.298 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 4.8e-15 | gamma_E vs gamma_W max 3.6e-07 | poids dans l absorbeur (k=3) 5.058e-10
+          plateau A (k -5..14) : PLATEAU k0 0 etalement 3.570 % Gamma_pl 2.175283e-10 | /M17 1.0060 | dans 0.5 % : (a) 2 (b) 1
+          plateau B (k -5..12) : PLATEAU k0 0 etalement 3.570 % Gamma_pl 2.175283e-10 | /M17 1.0060 | dans 0.5 % : (a) 2 (b) 1
+
+== pt 39_20 N = 80  (134.8 s)
+   lecture de M17 (sonde dense, F1 G20, k = 3) : 2.162327e-10 ; mon ancrage de la nuit bis : E_re -3.097882, recouvrement 0.0288 (second 0.0264)
+  F1_40   F1 r_c 40 L 40 | ancrage k=3 : E_re -3.097882 rec 0.0288 second 0.0279 (rapport 1.034) dist_sigma 0.516/1.53 cand 0.298 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 5.1e-15 | gamma_E vs gamma_W max 8.2e-06 | poids dans l absorbeur (k=3) 5.094e-10
+          plateau A (k -5..14) : PLATEAU k0 2 etalement 1.373 % Gamma_pl 2.197072e-10 | /M17 1.0161 | dans 0.5 % : (a) 3 (b) 2
+          plateau B (k -5..12) : PLATEAU k0 2 etalement 1.373 % Gamma_pl 2.197072e-10 | /M17 1.0161 | dans 0.5 % : (a) 3 (b) 2
+  F2_40   F2 r_c 40 L 40 | ancrage k=3 : E_re -3.097882 rec 0.0288 second 0.0264 (rapport 1.093) dist_sigma 0.516/1.33 cand 0.169 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 8.0e-15 | gamma_E vs gamma_W max 7.2e-06 | poids dans l absorbeur (k=3) 9.812e-10
+          plateau A (k -5..14) : PLATEAU k0 0 etalement 0.371 % Gamma_pl 2.211302e-10 | /M17 1.0226 | dans 0.5 % : (a) 5 (b) 5
+          plateau B (k -5..12) : PLATEAU k0 0 etalement 0.371 % Gamma_pl 2.211302e-10 | /M17 1.0226 | dans 0.5 % : (a) 5 (b) 5
+  F3_40   F3 r_c 40 L 40 | ancrage k=3 : E_re -3.097882 rec 0.0288 second 0.0279 (rapport 1.034) dist_sigma 0.516/1.56 cand 0.317 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 6.3e-15 | gamma_E vs gamma_W max 2.1e-06 | poids dans l absorbeur (k=3) 5.058e-10
+          plateau A (k -5..14) : PLATEAU k0 2 etalement 1.427 % Gamma_pl 2.200343e-10 | /M17 1.0176 | dans 0.5 % : (a) 4 (b) 4
+          plateau B (k -5..12) : PLATEAU k0 2 etalement 1.427 % Gamma_pl 2.200343e-10 | /M17 1.0176 | dans 0.5 % : (a) 4 (b) 4
+
+== pt 39_20 N = 100  (262.8 s)
+   lecture de M17 (sonde dense, F1 G20, k = 3) : 2.162327e-10 ; mon ancrage de la nuit bis : E_re -3.097882, recouvrement 0.0288 (second 0.0264)
+  F2_60   F2 r_c 40 L 60 | ancrage k=3 : E_re -3.097882 rec 0.0288 second 0.0264 (rapport 1.093) dist_sigma 0.516/1.29 cand 0.167 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 8.2e-15 | gamma_E vs gamma_W max 1.3e-06 | poids dans l absorbeur (k=3) 1.104e-09
+          plateau A (k -5..14) : PLATEAU k0 0 etalement 0.047 % Gamma_pl 2.209200e-10 | /M17 1.0217 | dans 0.5 % : (a) 6 (b) 7
+          plateau B (k -5..12) : PLATEAU k0 0 etalement 0.047 % Gamma_pl 2.209200e-10 | /M17 1.0217 | dans 0.5 % : (a) 6 (b) 7
+  F3_60   F3 r_c 40 L 60 | ancrage k=3 : E_re -3.097882 rec 0.0288 second 0.0279 (rapport 1.034) dist_sigma 0.516/1.56 cand 0.317 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 6.4e-15 | gamma_E vs gamma_W max 3.0e-07 | poids dans l absorbeur (k=3) 5.058e-10
+          plateau A (k -5..14) : PLATEAU k0 2 etalement 1.482 % Gamma_pl 2.200165e-10 | /M17 1.0175 | dans 0.5 % : (a) 3 (b) 4
+          plateau B (k -5..12) : PLATEAU k0 2 etalement 1.482 % Gamma_pl 2.200165e-10 | /M17 1.0175 | dans 0.5 % : (a) 3 (b) 4
+  F1_60   F1 r_c 40 L 60 | ancrage k=3 : E_re -3.097882 rec 0.0288 second 0.0279 (rapport 1.034) dist_sigma 0.516/1.56 cand 0.317 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 9.7e-15 | gamma_E vs gamma_W max 4.1e-06 | poids dans l absorbeur (k=3) 5.094e-10
+          plateau A (k -5..14) : PLATEAU k0 2 etalement 1.547 % Gamma_pl 2.200719e-10 | /M17 1.0178 | dans 0.5 % : (a) 3 (b) 3
+          plateau B (k -5..12) : PLATEAU k0 2 etalement 1.547 % Gamma_pl 2.200719e-10 | /M17 1.0178 | dans 0.5 % : (a) 3 (b) 3
+
+== pt 39_20 N = 110  (132.4 s)
+   lecture de M17 (sonde dense, F1 G20, k = 3) : 2.162327e-10 ; mon ancrage de la nuit bis : E_re -3.097882, recouvrement 0.0288 (second 0.0264)
+  F1T_60  F1 r_c 50 L 60 | ancrage k=3 : E_re -3.097882 rec 0.0288 second 0.0264 (rapport 1.093) dist_sigma 0.516/1.47 cand 0.242 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 8.2e-15 | gamma_E vs gamma_W max 2.8e-06 | poids dans l absorbeur (k=3) 3.359e-10
+          plateau A (k -5..14) : PLATEAU k0 1 etalement 0.324 % Gamma_pl 2.208371e-10 | /M17 1.0213 | dans 0.5 % : (a) 6 (b) 6
+          plateau B (k -5..12) : PLATEAU k0 1 etalement 0.324 % Gamma_pl 2.208371e-10 | /M17 1.0213 | dans 0.5 % : (a) 6 (b) 6
+
+== pt 39_20 N = 120  (315.7 s)
+   lecture de M17 (sonde dense, F1 G20, k = 3) : 2.162327e-10 ; mon ancrage de la nuit bis : E_re -3.097882, recouvrement 0.0288 (second 0.0264)
+  F2_80   F2 r_c 40 L 80 | ancrage k=3 : E_re -3.097882 rec 0.0288 second 0.0264 (rapport 1.093) dist_sigma 0.516/1.43 cand 0.222 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 6.9e-15 | gamma_E vs gamma_W max 2.3e-07 | poids dans l absorbeur (k=3) 1.196e-09
+          plateau A (k -5..14) : PLATEAU k0 0 etalement 0.002 % Gamma_pl 2.209019e-10 | /M17 1.0216 | dans 0.5 % : (a) 8 (b) 8
+          plateau B (k -5..12) : PLATEAU k0 0 etalement 0.002 % Gamma_pl 2.209019e-10 | /M17 1.0216 | dans 0.5 % : (a) 8 (b) 8
+  F1_80   F1 r_c 40 L 80 | ancrage k=3 : E_re -3.097882 rec 0.0288 second 0.0279 (rapport 1.034) dist_sigma 0.516/1.56 cand 0.317 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 8.1e-15 | gamma_E vs gamma_W max 6.3e-06 | poids dans l absorbeur (k=3) 5.094e-10
+          plateau A (k -5..14) : PLATEAU k0 3 etalement 0.716 % Gamma_pl 2.207071e-10 | /M17 1.0207 | dans 0.5 % : (a) 4 (b) 5
+          plateau B (k -5..12) : PLATEAU k0 3 etalement 0.716 % Gamma_pl 2.207071e-10 | /M17 1.0207 | dans 0.5 % : (a) 4 (b) 5
+
+== pt 197_100 N = 70  (44.8 s)
+   lecture de M17 (sonde dense, F1 G20, k = 3) : 1.297614e-10 ; mon ancrage de la nuit bis : E_re -3.058749, recouvrement 0.0280 (second 0.0276)
+  F2_30   F2 r_c 40 L 30 | ancrage k=3 : E_re -3.058749 rec 0.0280 second 0.0256 (rapport 1.092) dist_sigma 0.357/1.33 cand 0.188 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 9.6e-15 | gamma_E vs gamma_W max 6.6e-07 | poids dans l absorbeur (k=3) 8.741e-10
+          plateau A (k -5..14) : PLATEAU k0 -1 etalement 1.276 % Gamma_pl 1.302756e-10 | /M17 1.0040 | dans 0.5 % : (a) 2 (b) 3
+          plateau B (k -5..12) : PLATEAU k0 -1 etalement 1.276 % Gamma_pl 1.302756e-10 | /M17 1.0040 | dans 0.5 % : (a) 2 (b) 3
+  F3_30   F3 r_c 40 L 30 | ancrage k=3 : E_re -3.058749 rec 0.0280 second 0.0276 (rapport 1.013) dist_sigma 0.357/1.44 cand 0.245 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 3.3e-15 | gamma_E vs gamma_W max 8.6e-07 | poids dans l absorbeur (k=3) 5.139e-10
+          plateau A (k -5..14) : PLATEAU k0 0 etalement 4.603 % Gamma_pl 1.275756e-10 | /M17 0.9832 | dans 0.5 % : (a) 2 (b) 1
+          plateau B (k -5..12) : PLATEAU k0 0 etalement 4.603 % Gamma_pl 1.275756e-10 | /M17 0.9832 | dans 0.5 % : (a) 2 (b) 1
+
+== pt 197_100 N = 80  (131.0 s)
+   lecture de M17 (sonde dense, F1 G20, k = 3) : 1.297614e-10 ; mon ancrage de la nuit bis : E_re -3.058749, recouvrement 0.0280 (second 0.0276)
+  F1_40   F1 r_c 40 L 40 | ancrage k=3 : E_re -3.058749 rec 0.0280 second 0.0276 (rapport 1.013) dist_sigma 0.357/1.44 cand 0.245 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 3.8e-15 | gamma_E vs gamma_W max 2.1e-06 | poids dans l absorbeur (k=3) 5.145e-10
+          plateau A (k -5..14) : PLATEAU k0 2 etalement 3.264 % Gamma_pl 1.286803e-10 | /M17 0.9917 | dans 0.5 % : (a) 3 (b) 0
+          plateau B (k -5..12) : PLATEAU k0 2 etalement 3.264 % Gamma_pl 1.286803e-10 | /M17 0.9917 | dans 0.5 % : (a) 3 (b) 0
+  F2_40   F2 r_c 40 L 40 | ancrage k=3 : E_re -3.058749 rec 0.0280 second 0.0256 (rapport 1.092) dist_sigma 0.357/1.30 cand 0.168 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 5.0e-15 | gamma_E vs gamma_W max 8.7e-06 | poids dans l absorbeur (k=3) 9.618e-10
+          plateau A (k -5..14) : PLATEAU k0 -1 etalement 0.693 % Gamma_pl 1.303320e-10 | /M17 1.0044 | dans 0.5 % : (a) 4 (b) 4
+          plateau B (k -5..12) : PLATEAU k0 -1 etalement 0.693 % Gamma_pl 1.303320e-10 | /M17 1.0044 | dans 0.5 % : (a) 4 (b) 4
+  F3_40   F3 r_c 40 L 40 | ancrage k=3 : E_re -3.058749 rec 0.0280 second 0.0276 (rapport 1.013) dist_sigma 0.357/1.44 cand 0.245 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 4.0e-15 | gamma_E vs gamma_W max 1.4e-06 | poids dans l absorbeur (k=3) 5.139e-10
+          plateau A (k -5..14) : PLATEAU k0 2 etalement 2.929 % Gamma_pl 1.287701e-10 | /M17 0.9924 | dans 0.5 % : (a) 3 (b) 0
+          plateau B (k -5..12) : PLATEAU k0 2 etalement 2.929 % Gamma_pl 1.287701e-10 | /M17 0.9924 | dans 0.5 % : (a) 3 (b) 0
+
+== pt 197_100 N = 100  (246.0 s)
+   lecture de M17 (sonde dense, F1 G20, k = 3) : 1.297614e-10 ; mon ancrage de la nuit bis : E_re -3.058749, recouvrement 0.0280 (second 0.0276)
+  F2_60   F2 r_c 40 L 60 | ancrage k=3 : E_re -3.058749 rec 0.0280 second 0.0256 (rapport 1.092) dist_sigma 0.357/1.20 cand 0.164 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 5.3e-15 | gamma_E vs gamma_W max 3.1e-06 | poids dans l absorbeur (k=3) 1.080e-09
+          plateau A (k -5..14) : PLATEAU k0 0 etalement 0.003 % Gamma_pl 1.304719e-10 | /M17 1.0055 | dans 0.5 % : (a) 7 (b) 9
+          plateau B (k -5..12) : PLATEAU k0 0 etalement 0.003 % Gamma_pl 1.304719e-10 | /M17 1.0055 | dans 0.5 % : (a) 7 (b) 9
+  F3_60   F3 r_c 40 L 60 | ancrage k=3 : E_re -3.058749 rec 0.0280 second 0.0276 (rapport 1.013) dist_sigma 0.357/1.44 cand 0.245 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 4.6e-15 | gamma_E vs gamma_W max 8.9e-07 | poids dans l absorbeur (k=3) 5.139e-10
+          plateau A (k -5..14) : PLATEAU k0 3 etalement 1.483 % Gamma_pl 1.297055e-10 | /M17 0.9996 | dans 0.5 % : (a) 3 (b) 4
+          plateau B (k -5..12) : PLATEAU k0 3 etalement 1.483 % Gamma_pl 1.297055e-10 | /M17 0.9996 | dans 0.5 % : (a) 3 (b) 4
+  F1_60   F1 r_c 40 L 60 | ancrage k=3 : E_re -3.058749 rec 0.0280 second 0.0276 (rapport 1.013) dist_sigma 0.357/1.47 cand 0.245 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 4.7e-15 | gamma_E vs gamma_W max 1.1e-06 | poids dans l absorbeur (k=3) 5.145e-10
+          plateau A (k -5..14) : PLATEAU k0 3 etalement 1.714 % Gamma_pl 1.296390e-10 | /M17 0.9991 | dans 0.5 % : (a) 3 (b) 4
+          plateau B (k -5..12) : PLATEAU k0 3 etalement 1.714 % Gamma_pl 1.296390e-10 | /M17 0.9991 | dans 0.5 % : (a) 3 (b) 4
+
+== pt 197_100 N = 110  (126.4 s)
+   lecture de M17 (sonde dense, F1 G20, k = 3) : 1.297614e-10 ; mon ancrage de la nuit bis : E_re -3.058749, recouvrement 0.0280 (second 0.0276)
+  F1T_60  F1 r_c 50 L 60 | ancrage k=3 : E_re -3.058749 rec 0.0280 second 0.0276 (rapport 1.013) dist_sigma 0.357/1.38 cand 0.235 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 4.9e-15 | gamma_E vs gamma_W max 1.5e-06 | poids dans l absorbeur (k=3) 3.395e-10
+          plateau A (k -5..14) : PLATEAU k0 1 etalement 0.110 % Gamma_pl 1.305433e-10 | /M17 1.0060 | dans 0.5 % : (a) 5 (b) 5
+          plateau B (k -5..12) : PLATEAU k0 1 etalement 0.110 % Gamma_pl 1.305433e-10 | /M17 1.0060 | dans 0.5 % : (a) 5 (b) 5
+
+== pt 197_100 N = 120  (298.2 s)
+   lecture de M17 (sonde dense, F1 G20, k = 3) : 1.297614e-10 ; mon ancrage de la nuit bis : E_re -3.058749, recouvrement 0.0280 (second 0.0276)
+  F2_80   F2 r_c 40 L 80 | ancrage k=3 : E_re -3.058749 rec 0.0280 second 0.0256 (rapport 1.092) dist_sigma 0.357/1.30 cand 0.168 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 6.7e-15 | gamma_E vs gamma_W max 1.0e-05 | poids dans l absorbeur (k=3) 1.167e-09
+          plateau A (k -5..14) : PLATEAU k0 -1 etalement 0.004 % Gamma_pl 1.304718e-10 | /M17 1.0055 | dans 0.5 % : (a) 8 (b) 8
+          plateau B (k -5..12) : PLATEAU k0 -1 etalement 0.004 % Gamma_pl 1.304718e-10 | /M17 1.0055 | dans 0.5 % : (a) 8 (b) 8
+  F1_80   F1 r_c 40 L 80 | ancrage k=3 : E_re -3.058749 rec 0.0280 second 0.0276 (rapport 1.013) dist_sigma 0.357/1.47 cand 0.245 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 7.0e-15 | gamma_E vs gamma_W max 8.4e-07 | poids dans l absorbeur (k=3) 5.145e-10
+          plateau A (k -5..14) : PLATEAU k0 3 etalement 0.628 % Gamma_pl 1.300391e-10 | /M17 1.0021 | dans 0.5 % : (a) 4 (b) 5
+          plateau B (k -5..12) : PLATEAU k0 3 etalement 0.628 % Gamma_pl 1.300391e-10 | /M17 1.0021 | dans 0.5 % : (a) 4 (b) 5
+
+== pt 99_50 N = 70  (38.8 s)
+   lecture de M17 (sonde dense, F1 G20, k = 3) : 8.442079e-11 ; mon ancrage de la nuit bis : E_re -3.039173, recouvrement 0.0275 (second 0.0274)
+  F2_30   F2 r_c 40 L 30 | ancrage k=3 : E_re -3.039173 rec 0.0275 second 0.0274 (rapport 1.003) dist_sigma 0.276/1.29 cand 0.233 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 4.1e-15 | gamma_E vs gamma_W max 4.2e-06 | poids dans l absorbeur (k=3) 8.926e-10
+          plateau A (k -5..14) : PLATEAU k0 0 etalement 0.606 % Gamma_pl 8.451038e-11 | /M17 1.0011 | dans 0.5 % : (a) 4 (b) 5
+          plateau B (k -5..12) : PLATEAU k0 0 etalement 0.606 % Gamma_pl 8.451038e-11 | /M17 1.0011 | dans 0.5 % : (a) 4 (b) 5
+  F3_30   F3 r_c 40 L 30 | ancrage k=3 : E_re -3.039173 rec 0.0275 second 0.0274 (rapport 1.003) dist_sigma 0.276/1.31 cand 0.242 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 3.6e-15 | gamma_E vs gamma_W max 3.8e-06 | poids dans l absorbeur (k=3) 5.389e-10
+          plateau A (k -5..14) : PLATEAU k0 2 etalement 3.172 % Gamma_pl 8.353980e-11 | /M17 0.9896 | dans 0.5 % : (a) 2 (b) 1
+          plateau B (k -5..12) : PLATEAU k0 2 etalement 3.172 % Gamma_pl 8.353980e-11 | /M17 0.9896 | dans 0.5 % : (a) 2 (b) 1
+
+== pt 99_50 N = 80  (123.7 s)
+   lecture de M17 (sonde dense, F1 G20, k = 3) : 8.442079e-11 ; mon ancrage de la nuit bis : E_re -3.039173, recouvrement 0.0275 (second 0.0274)
+  F1_40   F1 r_c 40 L 40 | ancrage k=3 : E_re -3.039173 rec 0.0275 second 0.0274 (rapport 1.003) dist_sigma 0.276/1.35 cand 0.243 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 4.0e-15 | gamma_E vs gamma_W max 7.2e-08 | poids dans l absorbeur (k=3) 5.391e-10
+          plateau A (k -5..14) : PLATEAU k0 2 etalement 1.997 % Gamma_pl 8.363104e-11 | /M17 0.9906 | dans 0.5 % : (a) 2 (b) 1
+          plateau B (k -5..12) : PLATEAU k0 2 etalement 1.997 % Gamma_pl 8.363104e-11 | /M17 0.9906 | dans 0.5 % : (a) 2 (b) 1
+  F2_40   F2 r_c 40 L 40 | ancrage k=3 : E_re -3.039173 rec 0.0275 second 0.0254 (rapport 1.082) dist_sigma 0.276/1.26 cand 0.185 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 3.8e-15 | gamma_E vs gamma_W max 1.7e-08 | poids dans l absorbeur (k=3) 9.710e-10
+          plateau A (k -5..14) : PLATEAU k0 0 etalement 0.479 % Gamma_pl 8.457306e-11 | /M17 1.0018 | dans 0.5 % : (a) 5 (b) 5
+          plateau B (k -5..12) : PLATEAU k0 0 etalement 0.479 % Gamma_pl 8.457306e-11 | /M17 1.0018 | dans 0.5 % : (a) 5 (b) 5
+  F3_40   F3 r_c 40 L 40 | ancrage k=3 : E_re -3.039173 rec 0.0275 second 0.0274 (rapport 1.003) dist_sigma 0.276/1.39 cand 0.243 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 3.4e-15 | gamma_E vs gamma_W max 1.4e-06 | poids dans l absorbeur (k=3) 5.389e-10
+          plateau A (k -5..14) : PLATEAU k0 2 etalement 2.012 % Gamma_pl 8.365998e-11 | /M17 0.9910 | dans 0.5 % : (a) 2 (b) 1
+          plateau B (k -5..12) : PLATEAU k0 2 etalement 2.012 % Gamma_pl 8.365998e-11 | /M17 0.9910 | dans 0.5 % : (a) 2 (b) 1
+
+== pt 99_50 N = 100  (238.5 s)
+   lecture de M17 (sonde dense, F1 G20, k = 3) : 8.442079e-11 ; mon ancrage de la nuit bis : E_re -3.039173, recouvrement 0.0275 (second 0.0274)
+  F2_60   F2 r_c 40 L 60 | ancrage k=3 : E_re -3.039173 rec 0.0275 second 0.0254 (rapport 1.082) dist_sigma 0.276/1.12 cand 0.162 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 4.1e-15 | gamma_E vs gamma_W max 7.7e-06 | poids dans l absorbeur (k=3) 1.085e-09
+          plateau A (k -5..14) : PLATEAU k0 0 etalement 0.007 % Gamma_pl 8.462914e-11 | /M17 1.0025 | dans 0.5 % : (a) 7 (b) 7
+          plateau B (k -5..12) : PLATEAU k0 0 etalement 0.007 % Gamma_pl 8.462914e-11 | /M17 1.0025 | dans 0.5 % : (a) 7 (b) 7
+  F3_60   F3 r_c 40 L 60 | ancrage k=3 : E_re -3.039173 rec 0.0275 second 0.0274 (rapport 1.003) dist_sigma 0.276/1.44 cand 0.243 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 3.7e-15 | gamma_E vs gamma_W max 2.6e-06 | poids dans l absorbeur (k=3) 5.389e-10
+          plateau A (k -5..14) : PLATEAU k0 3 etalement 0.852 % Gamma_pl 8.420591e-11 | /M17 0.9975 | dans 0.5 % : (a) 3 (b) 5
+          plateau B (k -5..12) : PLATEAU k0 3 etalement 0.852 % Gamma_pl 8.420591e-11 | /M17 0.9975 | dans 0.5 % : (a) 3 (b) 5
+  F1_60   F1 r_c 40 L 60 | ancrage k=3 : E_re -3.039173 rec 0.0275 second 0.0274 (rapport 1.003) dist_sigma 0.276/1.44 cand 0.243 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 2.5e-15 | gamma_E vs gamma_W max 1.9e-06 | poids dans l absorbeur (k=3) 5.391e-10
+          plateau A (k -5..14) : PLATEAU k0 3 etalement 0.919 % Gamma_pl 8.419551e-11 | /M17 0.9973 | dans 0.5 % : (a) 3 (b) 4
+          plateau B (k -5..12) : PLATEAU k0 3 etalement 0.919 % Gamma_pl 8.419551e-11 | /M17 0.9973 | dans 0.5 % : (a) 3 (b) 4
+
+== pt 99_50 N = 110  (123.4 s)
+   lecture de M17 (sonde dense, F1 G20, k = 3) : 8.442079e-11 ; mon ancrage de la nuit bis : E_re -3.039173, recouvrement 0.0275 (second 0.0274)
+  F1T_60  F1 r_c 50 L 60 | ancrage k=3 : E_re -3.039173 rec 0.0275 second 0.0274 (rapport 1.003) dist_sigma 0.276/1.29 cand 0.233 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 4.1e-15 | gamma_E vs gamma_W max 3.5e-06 | poids dans l absorbeur (k=3) 3.342e-10
+          plateau A (k -5..14) : PLATEAU k0 1 etalement 0.486 % Gamma_pl 8.479940e-11 | /M17 1.0045 | dans 0.5 % : (a) 5 (b) 5
+          plateau B (k -5..12) : PLATEAU k0 1 etalement 0.486 % Gamma_pl 8.479940e-11 | /M17 1.0045 | dans 0.5 % : (a) 5 (b) 5
+
+== pt 99_50 N = 120  (306.0 s)
+   lecture de M17 (sonde dense, F1 G20, k = 3) : 8.442079e-11 ; mon ancrage de la nuit bis : E_re -3.039173, recouvrement 0.0275 (second 0.0274)
+  F2_80   F2 r_c 40 L 80 | ancrage k=3 : E_re -3.039173 rec 0.0275 second 0.0254 (rapport 1.082) dist_sigma 0.276/1.07 cand 0.162 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 4.2e-15 | gamma_E vs gamma_W max 9.0e-07 | poids dans l absorbeur (k=3) 1.168e-09
+          plateau A (k -5..14) : PLATEAU k0 0 etalement 0.005 % Gamma_pl 8.462935e-11 | /M17 1.0025 | dans 0.5 % : (a) 9 (b) 9
+          plateau B (k -5..12) : PLATEAU k0 0 etalement 0.005 % Gamma_pl 8.462935e-11 | /M17 1.0025 | dans 0.5 % : (a) 9 (b) 9
+  F1_80   F1 r_c 40 L 80 | ancrage k=3 : E_re -3.039173 rec 0.0275 second 0.0274 (rapport 1.003) dist_sigma 0.276/1.44 cand 0.243 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 3.1e-15 | gamma_E vs gamma_W max 2.0e-07 | poids dans l absorbeur (k=3) 5.391e-10
+          plateau A (k -5..14) : PLATEAU k0 4 etalement 0.832 % Gamma_pl 8.459290e-11 | /M17 1.0020 | dans 0.5 % : (a) 4 (b) 5
+          plateau B (k -5..12) : PLATEAU k0 4 etalement 0.832 % Gamma_pl 8.459290e-11 | /M17 1.0020 | dans 0.5 % : (a) 4 (b) 5
+
+== pt 101_50 N = 71  (57.3 s)
+   lecture de M17 (sonde dense, F1 G20, k = 3) : 6.562453e-11 ; mon ancrage de la nuit bis : E_re -2.960797, recouvrement 0.0437 (second 0.0424)
+  F2_30   F2 r_c 41 L 30 | ancrage k=3 : E_re -2.960797 rec 0.0437 second 0.0424 (rapport 1.031) dist_sigma 0.053/1.16 cand 0.276 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 1.7e-15 | gamma_E vs gamma_W max 5.2e-07 | poids dans l absorbeur (k=3) 6.674e-10
+          plateau A (k -5..14) : PLATEAU k0 0 etalement 1.249 % Gamma_pl 6.606865e-11 | /M17 1.0068 | dans 0.5 % : (a) 4 (b) 4
+          plateau B (k -5..12) : PLATEAU k0 0 etalement 1.249 % Gamma_pl 6.606865e-11 | /M17 1.0068 | dans 0.5 % : (a) 4 (b) 4
+  F3_30   F3 r_c 41 L 30 | ancrage k=3 : E_re -2.960797 rec 0.0437 second 0.0424 (rapport 1.031) dist_sigma 0.053/1.24 cand 0.276 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 1.5e-15 | gamma_E vs gamma_W max 3.3e-08 | poids dans l absorbeur (k=3) 4.055e-10
+          plateau A (k -5..14) : PLATEAU k0 1 etalement 1.898 % Gamma_pl 6.538983e-11 | /M17 0.9964 | dans 0.5 % : (a) 2 (b) 1
+          plateau B (k -5..12) : PLATEAU k0 1 etalement 1.898 % Gamma_pl 6.538983e-11 | /M17 0.9964 | dans 0.5 % : (a) 2 (b) 1
+
+== pt 101_50 N = 81  (126.5 s)
+   lecture de M17 (sonde dense, F1 G20, k = 3) : 6.562453e-11 ; mon ancrage de la nuit bis : E_re -2.960797, recouvrement 0.0437 (second 0.0424)
+  F1_40   F1 r_c 41 L 40 | ancrage k=3 : E_re -2.960797 rec 0.0437 second 0.0424 (rapport 1.031) dist_sigma 0.053/1.28 cand 0.276 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 1.4e-15 | gamma_E vs gamma_W max 3.6e-07 | poids dans l absorbeur (k=3) 4.044e-10
+          plateau A (k -5..14) : PLATEAU k0 1 etalement 2.160 % Gamma_pl 6.559629e-11 | /M17 0.9996 | dans 0.5 % : (a) 2 (b) 1
+          plateau B (k -5..12) : PLATEAU k0 1 etalement 2.160 % Gamma_pl 6.559629e-11 | /M17 0.9996 | dans 0.5 % : (a) 2 (b) 1
+  F2_40   F2 r_c 41 L 40 | ancrage k=3 : E_re -2.960797 rec 0.0437 second 0.0424 (rapport 1.031) dist_sigma 0.053/1.11 cand 0.276 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 2.0e-15 | gamma_E vs gamma_W max 5.9e-08 | poids dans l absorbeur (k=3) 7.258e-10
+          plateau A (k -5..14) : PLATEAU k0 1 etalement 0.100 % Gamma_pl 6.628785e-11 | /M17 1.0101 | dans 0.5 % : (a) 6 (b) 7
+          plateau B (k -5..12) : PLATEAU k0 1 etalement 0.100 % Gamma_pl 6.628785e-11 | /M17 1.0101 | dans 0.5 % : (a) 6 (b) 7
+  F3_40   F3 r_c 41 L 40 | ancrage k=3 : E_re -2.960797 rec 0.0437 second 0.0424 (rapport 1.031) dist_sigma 0.053/1.28 cand 0.276 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 1.6e-15 | gamma_E vs gamma_W max 1.7e-07 | poids dans l absorbeur (k=3) 4.055e-10
+          plateau A (k -5..14) : PLATEAU k0 1 etalement 2.128 % Gamma_pl 6.557935e-11 | /M17 0.9993 | dans 0.5 % : (a) 2 (b) 1
+          plateau B (k -5..12) : PLATEAU k0 1 etalement 2.128 % Gamma_pl 6.557935e-11 | /M17 0.9993 | dans 0.5 % : (a) 2 (b) 1
+
+== pt 101_50 N = 101  (253.2 s)
+   lecture de M17 (sonde dense, F1 G20, k = 3) : 6.562453e-11 ; mon ancrage de la nuit bis : E_re -2.960797, recouvrement 0.0437 (second 0.0424)
+  F2_60   F2 r_c 41 L 60 | ancrage k=3 : E_re -2.960797 rec 0.0437 second 0.0424 (rapport 1.031) dist_sigma 0.053/1.10 cand 0.276 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 1.9e-15 | gamma_E vs gamma_W max 2.7e-07 | poids dans l absorbeur (k=3) 8.117e-10
+          plateau A (k -5..14) : PLATEAU k0 0 etalement 0.032 % Gamma_pl 6.627352e-11 | /M17 1.0099 | dans 0.5 % : (a) 9 (b) 9
+          plateau B (k -5..12) : PLATEAU k0 0 etalement 0.032 % Gamma_pl 6.627352e-11 | /M17 1.0099 | dans 0.5 % : (a) 9 (b) 9
+  F3_60   F3 r_c 41 L 60 | ancrage k=3 : E_re -2.960797 rec 0.0437 second 0.0424 (rapport 1.031) dist_sigma 0.053/1.34 cand 0.276 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 1.4e-15 | gamma_E vs gamma_W max 4.7e-07 | poids dans l absorbeur (k=3) 4.055e-10
+          plateau A (k -5..14) : PLATEAU k0 3 etalement 0.619 % Gamma_pl 6.609279e-11 | /M17 1.0071 | dans 0.5 % : (a) 4 (b) 5
+          plateau B (k -5..12) : PLATEAU k0 3 etalement 0.619 % Gamma_pl 6.609279e-11 | /M17 1.0071 | dans 0.5 % : (a) 4 (b) 5
+  F1_60   F1 r_c 41 L 60 | ancrage k=3 : E_re -2.960797 rec 0.0437 second 0.0424 (rapport 1.031) dist_sigma 0.053/1.34 cand 0.276 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 2.9e-15 | gamma_E vs gamma_W max 4.1e-07 | poids dans l absorbeur (k=3) 4.044e-10
+          plateau A (k -5..14) : PLATEAU k0 3 etalement 0.587 % Gamma_pl 6.609017e-11 | /M17 1.0071 | dans 0.5 % : (a) 4 (b) 5
+          plateau B (k -5..12) : PLATEAU k0 3 etalement 0.587 % Gamma_pl 6.609017e-11 | /M17 1.0071 | dans 0.5 % : (a) 4 (b) 5
+
+== pt 101_50 N = 111  (117.1 s)
+   lecture de M17 (sonde dense, F1 G20, k = 3) : 6.562453e-11 ; mon ancrage de la nuit bis : E_re -2.960797, recouvrement 0.0437 (second 0.0424)
+  F1T_60  F1 r_c 51 L 60 | ancrage k=3 : E_re -2.960797 rec 0.0437 second 0.0424 (rapport 1.031) dist_sigma 0.053/1.18 cand 0.276 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 1.3e-15 | gamma_E vs gamma_W max 5.0e-07 | poids dans l absorbeur (k=3) 2.729e-10
+          plateau A (k -5..14) : PLATEAU k0 2 etalement 0.293 % Gamma_pl 6.635660e-11 | /M17 1.0112 | dans 0.5 % : (a) 5 (b) 5
+          plateau B (k -5..12) : PLATEAU k0 2 etalement 0.293 % Gamma_pl 6.635660e-11 | /M17 1.0112 | dans 0.5 % : (a) 5 (b) 5
+
+== pt 101_50 N = 121  (305.4 s)
+   lecture de M17 (sonde dense, F1 G20, k = 3) : 6.562453e-11 ; mon ancrage de la nuit bis : E_re -2.960797, recouvrement 0.0437 (second 0.0424)
+  F2_80   F2 r_c 41 L 80 | ancrage k=3 : E_re -2.960797 rec 0.0437 second 0.0424 (rapport 1.031) dist_sigma 0.053/1.09 cand 0.276 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 1.6e-15 | gamma_E vs gamma_W max 3.3e-07 | poids dans l absorbeur (k=3) 8.745e-10
+          plateau A (k -5..14) : PLATEAU k0 1 etalement 0.001 % Gamma_pl 6.626909e-11 | /M17 1.0098 | dans 0.5 % : (a) 8 (b) 10
+          plateau B (k -5..12) : PLATEAU k0 1 etalement 0.001 % Gamma_pl 6.626909e-11 | /M17 1.0098 | dans 0.5 % : (a) 8 (b) 10
+  F1_80   F1 r_c 41 L 80 | ancrage k=3 : E_re -2.960797 rec 0.0437 second 0.0424 (rapport 1.031) dist_sigma 0.053/1.34 cand 0.276 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 3.4e-15 | gamma_E vs gamma_W max 1.9e-07 | poids dans l absorbeur (k=3) 4.044e-10
+          plateau A (k -5..14) : PLATEAU k0 3 etalement 0.570 % Gamma_pl 6.610091e-11 | /M17 1.0073 | dans 0.5 % : (a) 4 (b) 5
+          plateau B (k -5..12) : PLATEAU k0 3 etalement 0.570 % Gamma_pl 6.610091e-11 | /M17 1.0073 | dans 0.5 % : (a) 4 (b) 5
+
+== pt 203_100 N = 71  (59.0 s)
+   lecture de M17 (sonde dense, F1 G20, k = 3) : 9.007655e-11 ; mon ancrage de la nuit bis : E_re -2.941183, recouvrement 0.0434 (second 0.0426)
+  F2_30   F2 r_c 41 L 30 | ancrage k=3 : E_re -2.941183 rec 0.0434 second 0.0426 (rapport 1.019) dist_sigma 0.136/1.26 cand 0.275 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 2.6e-15 | gamma_E vs gamma_W max 1.6e-06 | poids dans l absorbeur (k=3) 6.187e-10
+          plateau A (k -5..14) : PLATEAU k0 -1 etalement 1.476 % Gamma_pl 9.052268e-11 | /M17 1.0050 | dans 0.5 % : (a) 3 (b) 2
+          plateau B (k -5..12) : PLATEAU k0 -1 etalement 1.476 % Gamma_pl 9.052268e-11 | /M17 1.0050 | dans 0.5 % : (a) 3 (b) 2
+  F3_30   F3 r_c 41 L 30 | ancrage k=3 : E_re -2.941183 rec 0.0434 second 0.0426 (rapport 1.019) dist_sigma 0.136/1.42 cand 0.275 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 1.4e-15 | gamma_E vs gamma_W max 2.4e-06 | poids dans l absorbeur (k=3) 3.830e-10
+          plateau A (k -5..14) : PLATEAU k0 2 etalement 1.633 % Gamma_pl 9.002035e-11 | /M17 0.9994 | dans 0.5 % : (a) 4 (b) 4
+          plateau B (k -5..12) : PLATEAU k0 2 etalement 1.633 % Gamma_pl 9.002035e-11 | /M17 0.9994 | dans 0.5 % : (a) 4 (b) 4
+
+== pt 203_100 N = 81  (130.0 s)
+   lecture de M17 (sonde dense, F1 G20, k = 3) : 9.007655e-11 ; mon ancrage de la nuit bis : E_re -2.941183, recouvrement 0.0434 (second 0.0426)
+  F1_40   F1 r_c 41 L 40 | ancrage k=3 : E_re -2.941183 rec 0.0434 second 0.0426 (rapport 1.019) dist_sigma 0.136/1.42 cand 0.275 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 2.1e-15 | gamma_E vs gamma_W max 4.4e-07 | poids dans l absorbeur (k=3) 3.788e-10
+          plateau A (k -5..14) : PLATEAU k0 2 etalement 1.366 % Gamma_pl 9.060051e-11 | /M17 1.0058 | dans 0.5 % : (a) 4 (b) 4
+          plateau B (k -5..12) : PLATEAU k0 2 etalement 1.366 % Gamma_pl 9.060051e-11 | /M17 1.0058 | dans 0.5 % : (a) 4 (b) 4
+  F2_40   F2 r_c 41 L 40 | ancrage k=3 : E_re -2.941183 rec 0.0434 second 0.0426 (rapport 1.019) dist_sigma 0.136/1.23 cand 0.275 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 1.8e-15 | gamma_E vs gamma_W max 4.5e-07 | poids dans l absorbeur (k=3) 6.727e-10
+          plateau A (k -5..14) : PLATEAU k0 0 etalement 0.118 % Gamma_pl 9.020891e-11 | /M17 1.0015 | dans 0.5 % : (a) 5 (b) 5
+          plateau B (k -5..12) : PLATEAU k0 0 etalement 0.118 % Gamma_pl 9.020891e-11 | /M17 1.0015 | dans 0.5 % : (a) 5 (b) 5
+  F3_40   F3 r_c 41 L 40 | ancrage k=3 : E_re -2.941183 rec 0.0434 second 0.0426 (rapport 1.019) dist_sigma 0.136/1.45 cand 0.275 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 1.7e-15 | gamma_E vs gamma_W max 2.1e-06 | poids dans l absorbeur (k=3) 3.830e-10
+          plateau A (k -5..14) : PLATEAU k0 2 etalement 0.814 % Gamma_pl 9.044249e-11 | /M17 1.0041 | dans 0.5 % : (a) 4 (b) 4
+          plateau B (k -5..12) : PLATEAU k0 2 etalement 0.814 % Gamma_pl 9.044249e-11 | /M17 1.0041 | dans 0.5 % : (a) 4 (b) 4
+
+== pt 203_100 N = 101  (256.3 s)
+   lecture de M17 (sonde dense, F1 G20, k = 3) : 9.007655e-11 ; mon ancrage de la nuit bis : E_re -2.941183, recouvrement 0.0434 (second 0.0426)
+  F2_60   F2 r_c 41 L 60 | ancrage k=3 : E_re -2.941183 rec 0.0434 second 0.0426 (rapport 1.019) dist_sigma 0.136/1.23 cand 0.275 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 3.9e-15 | gamma_E vs gamma_W max 5.1e-07 | poids dans l absorbeur (k=3) 7.523e-10
+          plateau A (k -5..14) : PLATEAU k0 0 etalement 0.033 % Gamma_pl 9.025356e-11 | /M17 1.0020 | dans 0.5 % : (a) 6 (b) 7
+          plateau B (k -5..12) : PLATEAU k0 0 etalement 0.033 % Gamma_pl 9.025356e-11 | /M17 1.0020 | dans 0.5 % : (a) 6 (b) 7
+  F3_60   F3 r_c 41 L 60 | ancrage k=3 : E_re -2.941183 rec 0.0434 second 0.0426 (rapport 1.019) dist_sigma 0.136/1.45 cand 0.275 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 3.1e-15 | gamma_E vs gamma_W max 5.9e-07 | poids dans l absorbeur (k=3) 3.830e-10
+          plateau A (k -5..14) : PLATEAU k0 2 etalement 0.168 % Gamma_pl 9.031762e-11 | /M17 1.0027 | dans 0.5 % : (a) 5 (b) 5
+          plateau B (k -5..12) : PLATEAU k0 2 etalement 0.168 % Gamma_pl 9.031762e-11 | /M17 1.0027 | dans 0.5 % : (a) 5 (b) 5
+  F1_60   F1 r_c 41 L 60 | ancrage k=3 : E_re -2.941183 rec 0.0434 second 0.0426 (rapport 1.019) dist_sigma 0.136/1.45 cand 0.275 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 2.4e-15 | gamma_E vs gamma_W max 4.4e-07 | poids dans l absorbeur (k=3) 3.788e-10
+          plateau A (k -5..14) : PLATEAU k0 2 etalement 0.214 % Gamma_pl 9.037300e-11 | /M17 1.0033 | dans 0.5 % : (a) 5 (b) 5
+          plateau B (k -5..12) : PLATEAU k0 2 etalement 0.214 % Gamma_pl 9.037300e-11 | /M17 1.0033 | dans 0.5 % : (a) 5 (b) 5
+
+== pt 203_100 N = 111  (128.4 s)
+   lecture de M17 (sonde dense, F1 G20, k = 3) : 9.007655e-11 ; mon ancrage de la nuit bis : E_re -2.941183, recouvrement 0.0434 (second 0.0426)
+  F1T_60  F1 r_c 51 L 60 | ancrage k=3 : E_re -2.941183 rec 0.0434 second 0.0426 (rapport 1.019) dist_sigma 0.136/1.34 cand 0.275 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 3.3e-15 | gamma_E vs gamma_W max 1.3e-07 | poids dans l absorbeur (k=3) 2.317e-10
+          plateau A (k -5..14) : PLATEAU k0 2 etalement 0.268 % Gamma_pl 9.010929e-11 | /M17 1.0004 | dans 0.5 % : (a) 5 (b) 5
+          plateau B (k -5..12) : PLATEAU k0 2 etalement 0.268 % Gamma_pl 9.010929e-11 | /M17 1.0004 | dans 0.5 % : (a) 5 (b) 5
+
+== pt 203_100 N = 121  (303.7 s)
+   lecture de M17 (sonde dense, F1 G20, k = 3) : 9.007655e-11 ; mon ancrage de la nuit bis : E_re -2.941183, recouvrement 0.0434 (second 0.0426)
+  F2_80   F2 r_c 41 L 80 | ancrage k=3 : E_re -2.941183 rec 0.0434 second 0.0426 (rapport 1.019) dist_sigma 0.136/1.23 cand 0.275 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 1.8e-15 | gamma_E vs gamma_W max 1.4e-06 | poids dans l absorbeur (k=3) 8.105e-10
+          plateau A (k -5..14) : PLATEAU k0 0 etalement 0.006 % Gamma_pl 9.025948e-11 | /M17 1.0020 | dans 0.5 % : (a) 8 (b) 8
+          plateau B (k -5..12) : PLATEAU k0 0 etalement 0.006 % Gamma_pl 9.025948e-11 | /M17 1.0020 | dans 0.5 % : (a) 8 (b) 8
+  F1_80   F1 r_c 41 L 80 | ancrage k=3 : E_re -2.941183 rec 0.0434 second 0.0426 (rapport 1.019) dist_sigma 0.136/1.45 cand 0.275 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 1.9e-15 | gamma_E vs gamma_W max 4.4e-07 | poids dans l absorbeur (k=3) 3.788e-10
+          plateau A (k -5..14) : PLATEAU k0 2 etalement 0.234 % Gamma_pl 9.035207e-11 | /M17 1.0031 | dans 0.5 % : (a) 6 (b) 6
+          plateau B (k -5..12) : PLATEAU k0 2 etalement 0.234 % Gamma_pl 9.035207e-11 | /M17 1.0031 | dans 0.5 % : (a) 6 (b) 6
+
+== pt 41_20 N = 71  (61.4 s)
+   lecture de M17 (sonde dense, F1 G20, k = 3) : 2.661393e-09 ; mon ancrage de la nuit bis : E_re -3.902819, recouvrement 0.0431 (second 0.0429)
+  F2_30   F2 r_c 41 L 30 | ancrage k=3 : E_re -3.902819 rec 0.0431 second 0.0429 (rapport 1.004) dist_sigma 0.698/1.40 cand 0.273 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 1.1e-14 | gamma_E vs gamma_W max 7.9e-07 | poids dans l absorbeur (k=3) 1.043e-08
+          plateau A (k -5..14) : PLATEAU k0 -2 etalement 3.180 % Gamma_pl 2.589223e-09 | /M17 0.9729 | dans 0.5 % : (a) 2 (b) 1
+          plateau B (k -5..12) : PLATEAU k0 -2 etalement 3.180 % Gamma_pl 2.589223e-09 | /M17 0.9729 | dans 0.5 % : (a) 2 (b) 1
+  F3_30   F3 r_c 41 L 30 | ancrage k=3 : E_re -3.902819 rec 0.0431 second 0.0429 (rapport 1.004) dist_sigma 0.698/1.55 cand 0.273 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 1.2e-14 | gamma_E vs gamma_W max 1.3e-07 | poids dans l absorbeur (k=3) 6.266e-09
+          plateau A (k -5..14) : pas de plateau k0 -1 etalement 9.135 % Gamma_pl 2.771714e-09 | /M17 1.0415 | dans 0.5 % : (a) 1 (b) 0
+          plateau B (k -5..12) : pas de plateau k0 -1 etalement 9.135 % Gamma_pl 2.771714e-09 | /M17 1.0415 | dans 0.5 % : (a) 1 (b) 0
+
+== pt 41_20 N = 81  (138.9 s)
+   lecture de M17 (sonde dense, F1 G20, k = 3) : 2.661393e-09 ; mon ancrage de la nuit bis : E_re -3.902819, recouvrement 0.0431 (second 0.0429)
+  F1_40   F1 r_c 41 L 40 | ancrage k=3 : E_re -3.902819 rec 0.0431 second 0.0429 (rapport 1.004) dist_sigma 0.698/1.56 cand 0.273 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 9.8e-15 | gamma_E vs gamma_W max 1.2e-07 | poids dans l absorbeur (k=3) 6.048e-09
+          plateau A (k -5..14) : PLATEAU k0 2 etalement 4.019 % Gamma_pl 2.667034e-09 | /M17 1.0021 | dans 0.5 % : (a) 2 (b) 1
+          plateau B (k -5..12) : PLATEAU k0 2 etalement 4.019 % Gamma_pl 2.667034e-09 | /M17 1.0021 | dans 0.5 % : (a) 2 (b) 1
+  F2_40   F2 r_c 41 L 40 | ancrage k=3 : E_re -3.902819 rec 0.0431 second 0.0429 (rapport 1.004) dist_sigma 0.698/1.40 cand 0.273 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 8.4e-15 | gamma_E vs gamma_W max 5.4e-07 | poids dans l absorbeur (k=3) 1.142e-08
+          plateau A (k -5..14) : PLATEAU k0 0 etalement 0.399 % Gamma_pl 2.617558e-09 | /M17 0.9835 | dans 0.5 % : (a) 5 (b) 5
+          plateau B (k -5..12) : PLATEAU k0 0 etalement 0.399 % Gamma_pl 2.617558e-09 | /M17 0.9835 | dans 0.5 % : (a) 5 (b) 5
+  F3_40   F3 r_c 41 L 40 | ancrage k=3 : E_re -3.902819 rec 0.0431 second 0.0429 (rapport 1.004) dist_sigma 0.698/1.59 cand 0.273 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 7.2e-15 | gamma_E vs gamma_W max 7.8e-07 | poids dans l absorbeur (k=3) 6.266e-09
+          plateau A (k -5..14) : PLATEAU k0 2 etalement 4.399 % Gamma_pl 2.663950e-09 | /M17 1.0010 | dans 0.5 % : (a) 2 (b) 1
+          plateau B (k -5..12) : PLATEAU k0 2 etalement 4.399 % Gamma_pl 2.663950e-09 | /M17 1.0010 | dans 0.5 % : (a) 2 (b) 1
+
+== pt 41_20 N = 101  (272.3 s)
+   lecture de M17 (sonde dense, F1 G20, k = 3) : 2.661393e-09 ; mon ancrage de la nuit bis : E_re -3.902819, recouvrement 0.0431 (second 0.0429)
+  F2_60   F2 r_c 41 L 60 | ancrage k=3 : E_re -3.902819 rec 0.0431 second 0.0429 (rapport 1.004) dist_sigma 0.698/1.39 cand 0.273 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 9.3e-15 | gamma_E vs gamma_W max 3.2e-07 | poids dans l absorbeur (k=3) 1.289e-08
+          plateau A (k -5..14) : PLATEAU k0 -1 etalement 0.224 % Gamma_pl 2.618336e-09 | /M17 0.9838 | dans 0.5 % : (a) 6 (b) 6
+          plateau B (k -5..12) : PLATEAU k0 -1 etalement 0.224 % Gamma_pl 2.618336e-09 | /M17 0.9838 | dans 0.5 % : (a) 6 (b) 6
+  F3_60   F3 r_c 41 L 60 | ancrage k=3 : E_re -3.902819 rec 0.0431 second 0.0429 (rapport 1.004) dist_sigma 0.698/1.61 cand 0.273 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 7.8e-15 | gamma_E vs gamma_W max 4.5e-07 | poids dans l absorbeur (k=3) 6.266e-09
+          plateau A (k -5..14) : PLATEAU k0 3 etalement 1.171 % Gamma_pl 2.629922e-09 | /M17 0.9882 | dans 0.5 % : (a) 4 (b) 4
+          plateau B (k -5..12) : PLATEAU k0 3 etalement 1.171 % Gamma_pl 2.629922e-09 | /M17 0.9882 | dans 0.5 % : (a) 4 (b) 4
+  F1_60   F1 r_c 41 L 60 | ancrage k=3 : E_re -3.902819 rec 0.0431 second 0.0429 (rapport 1.004) dist_sigma 0.698/1.62 cand 0.273 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 1.1e-14 | gamma_E vs gamma_W max 3.1e-07 | poids dans l absorbeur (k=3) 6.048e-09
+          plateau A (k -5..14) : PLATEAU k0 3 etalement 2.165 % Gamma_pl 2.626739e-09 | /M17 0.9870 | dans 0.5 % : (a) 3 (b) 3
+          plateau B (k -5..12) : PLATEAU k0 3 etalement 2.165 % Gamma_pl 2.626739e-09 | /M17 0.9870 | dans 0.5 % : (a) 3 (b) 3
+
+== pt 41_20 N = 111  (127.3 s)
+   lecture de M17 (sonde dense, F1 G20, k = 3) : 2.661393e-09 ; mon ancrage de la nuit bis : E_re -3.902819, recouvrement 0.0431 (second 0.0429)
+  F1T_60  F1 r_c 51 L 60 | ancrage k=3 : E_re -3.902819 rec 0.0431 second 0.0429 (rapport 1.004) dist_sigma 0.698/1.50 cand 0.273 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 8.5e-15 | gamma_E vs gamma_W max 1.1e-07 | poids dans l absorbeur (k=3) 3.848e-09
+          plateau A (k -5..14) : PLATEAU k0 2 etalement 0.561 % Gamma_pl 2.625800e-09 | /M17 0.9866 | dans 0.5 % : (a) 4 (b) 5
+          plateau B (k -5..12) : PLATEAU k0 2 etalement 0.561 % Gamma_pl 2.625800e-09 | /M17 0.9866 | dans 0.5 % : (a) 4 (b) 5
+
+== pt 41_20 N = 121  (322.9 s)
+   lecture de M17 (sonde dense, F1 G20, k = 3) : 2.661393e-09 ; mon ancrage de la nuit bis : E_re -3.902819, recouvrement 0.0431 (second 0.0429)
+  F2_80   F2 r_c 41 L 80 | ancrage k=3 : E_re -3.902819 rec 0.0431 second 0.0429 (rapport 1.004) dist_sigma 0.698/1.43 cand 0.273 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 9.4e-15 | gamma_E vs gamma_W max 6.1e-07 | poids dans l absorbeur (k=3) 1.396e-08
+          plateau A (k -5..14) : PLATEAU k0 0 etalement 0.062 % Gamma_pl 2.617442e-09 | /M17 0.9835 | dans 0.5 % : (a) 8 (b) 8
+          plateau B (k -5..12) : PLATEAU k0 0 etalement 0.062 % Gamma_pl 2.617442e-09 | /M17 0.9835 | dans 0.5 % : (a) 8 (b) 8
+  F1_80   F1 r_c 41 L 80 | ancrage k=3 : E_re -3.902819 rec 0.0431 second 0.0429 (rapport 1.004) dist_sigma 0.698/1.62 cand 0.273 | R3 True
+          identite avec l etat de M17 (3.9) : 1.000000  meme etat
+          suivis 20 sur 20, perdus [] | residu max 9.1e-15 | gamma_E vs gamma_W max 6.6e-08 | poids dans l absorbeur (k=3) 6.048e-09
+          plateau A (k -5..14) : PLATEAU k0 3 etalement 1.524 % Gamma_pl 2.630028e-09 | /M17 0.9882 | dans 0.5 % : (a) 3 (b) 3
+          plateau B (k -5..12) : PLATEAU k0 3 etalement 1.524 % Gamma_pl 2.630028e-09 | /M17 0.9882 | dans 0.5 % : (a) 3 (b) 3
+
+== tp j06 N = 100  (208.3 s)
+   reference Gamma_ref 5.368820e-10 (incertitude declaree 2.14e-03 relatif), bord r_c 40, eta0 0.05
+  F1_60   F1 r_c 40 L 60 | ancrage k=3 : E_re -0.000148 rec 0.9999 second 0.0001 (rapport 16381.380) dist_sigma 0.000/7.60 cand 1.000 | R3 True
+          suivis 20 sur 20, perdus [] | residu max 3.7e-16 | gamma_E vs gamma_W max 2.0e-10 | poids dans l absorbeur (k=3) 5.661e-11
+          plateau A (k -5..14) : PLATEAU k0 -4 etalement 0.000 % Gamma_pl 5.372624e-10 | /ref 1.0007 | dans 0.5 % : (a) 9 (b) 9
+          plateau B (k -5..12) : PLATEAU k0 -4 etalement 0.000 % Gamma_pl 5.372624e-10 | /ref 1.0007 | dans 0.5 % : (a) 9 (b) 9
+          temoin : 9 barreaux consecutifs a moins de 0.5 % de la reference depuis k = -5, pire ecart 0.071 % ; ecart a k = -5, 0, 3, 6 : +0.071% +0.071% -0.002% -30.034%
+  F2_60   F2 r_c 40 L 60 | ancrage k=3 : E_re -0.000148 rec 0.9999 second 0.0001 (rapport 16381.379) dist_sigma 0.000/6.73 cand 1.000 | R3 True
+          suivis 20 sur 20, perdus [] | residu max 4.3e-16 | gamma_E vs gamma_W max 1.3e-10 | poids dans l absorbeur (k=3) 7.984e-11
+          plateau A (k -5..14) : PLATEAU k0 -5 etalement 0.000 % Gamma_pl 5.372624e-10 | /ref 1.0007 | dans 0.5 % : (a) 8 (b) 8
+          plateau B (k -5..12) : PLATEAU k0 -5 etalement 0.000 % Gamma_pl 5.372624e-10 | /ref 1.0007 | dans 0.5 % : (a) 8 (b) 8
+          temoin : 8 barreaux consecutifs a moins de 0.5 % de la reference depuis k = -5, pire ecart 0.071 % ; ecart a k = -5, 0, 3, 6 : +0.071% +0.071% -0.904% -48.579%
+
+== tp j06 N = 120  (407.3 s)
+   reference Gamma_ref 5.368820e-10 (incertitude declaree 2.14e-03 relatif), bord r_c 40, eta0 0.05
+  F1_80   F1 r_c 40 L 80 | ancrage k=3 : E_re -0.000148 rec 0.9999 second 0.0001 (rapport 16381.380) dist_sigma 0.000/8.81 cand 1.000 | R3 True
+          suivis 20 sur 20, perdus [] | residu max 8.5e-17 | gamma_E vs gamma_W max 1.5e-10 | poids dans l absorbeur (k=3) 5.199e-11
+          plateau A (k -5..14) : PLATEAU k0 -3 etalement 0.000 % Gamma_pl 5.372624e-10 | /ref 1.0007 | dans 0.5 % : (a) 11 (b) 11
+          plateau B (k -5..12) : PLATEAU k0 -3 etalement 0.000 % Gamma_pl 5.372624e-10 | /ref 1.0007 | dans 0.5 % : (a) 11 (b) 11
+          temoin : 11 barreaux consecutifs a moins de 0.5 % de la reference depuis k = -5, pire ecart 0.103 % ; ecart a k = -5, 0, 3, 6 : +0.071% +0.071% +0.072% -4.419%
+  F2_80   F2 r_c 40 L 80 | ancrage k=3 : E_re -0.000148 rec 0.9999 second 0.0001 (rapport 16381.380) dist_sigma 0.000/7.03 cand 1.000 | R3 True
+          suivis 20 sur 20, perdus [] | residu max 8.6e-17 | gamma_E vs gamma_W max 8.5e-11 | poids dans l absorbeur (k=3) 6.799e-11
+          plateau A (k -5..14) : PLATEAU k0 -5 etalement 0.000 % Gamma_pl 5.372624e-10 | /ref 1.0007 | dans 0.5 % : (a) 10 (b) 10
+          plateau B (k -5..12) : PLATEAU k0 -5 etalement 0.000 % Gamma_pl 5.372624e-10 | /ref 1.0007 | dans 0.5 % : (a) 10 (b) 10
+          temoin : 10 barreaux consecutifs a moins de 0.5 % de la reference depuis k = -5, pire ecart 0.103 % ; ecart a k = -5, 0, 3, 6 : +0.071% +0.071% +0.090% -18.750%
+
+== tp j08 N = 100  (238.4 s)
+   reference Gamma_ref 6.427903e-09 (incertitude declaree 1.64e-04 relatif), bord r_c 40, eta0 0.05
+  F1_60   F1 r_c 40 L 60 | ancrage k=3 : E_re -0.000211 rec 0.9999 second 0.0001 (rapport 11518.007) dist_sigma 0.000/7.25 cand 1.000 | R3 True
+          suivis 20 sur 20, perdus [] | residu max 4.1e-16 | gamma_E vs gamma_W max 7.0e-11 | poids dans l absorbeur (k=3) 6.573e-10
+          plateau A (k -5..14) : PLATEAU k0 -4 etalement 0.000 % Gamma_pl 6.428271e-09 | /ref 1.0001 | dans 0.5 % : (a) 9 (b) 9
+          plateau B (k -5..12) : PLATEAU k0 -4 etalement 0.000 % Gamma_pl 6.428271e-09 | /ref 1.0001 | dans 0.5 % : (a) 9 (b) 9
+          temoin : 9 barreaux consecutifs a moins de 0.5 % de la reference depuis k = -5, pire ecart 0.128 % ; ecart a k = -5, 0, 3, 6 : +0.006% +0.006% +0.128% -2.069%
+  F2_60   F2 r_c 40 L 60 | ancrage k=3 : E_re -0.000211 rec 0.9999 second 0.0001 (rapport 11518.009) dist_sigma 0.000/6.83 cand 1.000 | R3 True
+          suivis 20 sur 20, perdus [] | residu max 3.9e-16 | gamma_E vs gamma_W max 7.6e-11 | poids dans l absorbeur (k=3) 9.556e-10
+          plateau A (k -5..14) : PLATEAU k0 -5 etalement 0.000 % Gamma_pl 6.428271e-09 | /ref 1.0001 | dans 0.5 % : (a) 8 (b) 8
+          plateau B (k -5..12) : PLATEAU k0 -5 etalement 0.000 % Gamma_pl 6.428271e-09 | /ref 1.0001 | dans 0.5 % : (a) 8 (b) 8
+          temoin : 8 barreaux consecutifs a moins de 0.5 % de la reference depuis k = -5, pire ecart 0.046 % ; ecart a k = -5, 0, 3, 6 : +0.006% +0.006% +1.281% -25.930%
+
+== tp j08 N = 120  (403.5 s)
+   reference Gamma_ref 6.427903e-09 (incertitude declaree 1.64e-04 relatif), bord r_c 40, eta0 0.05
+  F1_80   F1 r_c 40 L 80 | ancrage k=3 : E_re -0.000211 rec 0.9999 second 0.0001 (rapport 11518.007) dist_sigma 0.000/8.78 cand 1.000 | R3 True
+          suivis 20 sur 20, perdus [] | residu max 4.9e-16 | gamma_E vs gamma_W max 3.3e-11 | poids dans l absorbeur (k=3) 5.965e-10
+          plateau A (k -5..14) : PLATEAU k0 -3 etalement 0.000 % Gamma_pl 6.428271e-09 | /ref 1.0001 | dans 0.5 % : (a) 10 (b) 10
+          plateau B (k -5..12) : PLATEAU k0 -3 etalement 0.000 % Gamma_pl 6.428271e-09 | /ref 1.0001 | dans 0.5 % : (a) 10 (b) 10
+          temoin : 10 barreaux consecutifs a moins de 0.5 % de la reference depuis k = -5, pire ecart 0.060 % ; ecart a k = -5, 0, 3, 6 : +0.006% +0.006% +0.006% -5.934%
+  F2_80   F2 r_c 40 L 80 | ancrage k=3 : E_re -0.000211 rec 0.9999 second 0.0001 (rapport 11518.007) dist_sigma 0.000/7.02 cand 1.000 | R3 True
+          suivis 20 sur 20, perdus [] | residu max 7.3e-13 | gamma_E vs gamma_W max 4.4e-11 | poids dans l absorbeur (k=3) 7.819e-10
+          plateau A (k -5..14) : PLATEAU k0 -5 etalement 0.000 % Gamma_pl 6.428271e-09 | /ref 1.0001 | dans 0.5 % : (a) 9 (b) 9
+          plateau B (k -5..12) : PLATEAU k0 -5 etalement 0.000 % Gamma_pl 6.428271e-09 | /ref 1.0001 | dans 0.5 % : (a) 9 (b) 9
+          temoin : 9 barreaux consecutifs a moins de 0.5 % de la reference depuis k = -5, pire ecart 0.008 % ; ecart a k = -5, 0, 3, 6 : +0.006% +0.006% -0.008% -11.797%
+
+R2 : 49 sur 74 configurations ; R3 : 74 sur 74

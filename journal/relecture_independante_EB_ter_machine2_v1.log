@@ -1,0 +1,40 @@
+MA RELECTURE : 137 etats, 136 QUALIFIES ; etats lus QUALIFIES : 12 sur 12 ; consigne (e) : 130 sur 137
+MA RELECTURE : VERDICT ESTIMATEUR QUALIFIE ; ISSUE LA LECTURE DEPOSEE EST SUR LE PLATEAU A NEUF ETATS SUR DIX AU MOINS
+FEUILLE DE MACHINE 1 : VERDICT ESTIMATEUR QUALIFIE ; ISSUE LA LECTURE DEPOSEE EST SUR LE PLATEAU A NEUF ETATS SUR DIX AU MOINS ; 137 etats juges, 136 qualifies, 137 a plateau sous A, 130 lus sur le plateau
+ECARTS DE STATUT OU DE PLATEAU ENTRE LES DEUX FEUILLES : 0 ; ACCORD COMPLET : True
+
+PAR POINT : etat lu, juges, QUALIFIES, NON QUALIFIES, NON LISIBLES, lecture deposee sur le plateau
+  C1  QUALIFIE       8  8  0  0    8 sur  8
+  C2  QUALIFIE      11 11  0  0   11 sur 11
+  C3  QUALIFIE      14 14  0  0   14 sur 14
+  C4  QUALIFIE      13 13  0  0   13 sur 13
+  M1  QUALIFIE      12 12  0  0   12 sur 12
+  M2  QUALIFIE      14 14  0  0   14 sur 14
+  M3  QUALIFIE       8  8  0  0    8 sur  8
+  M4  QUALIFIE       9  9  0  0    8 sur  9
+  L1  QUALIFIE      14 14  0  0   14 sur 14
+  L2  QUALIFIE      11 11  0  0   10 sur 11
+  L3  QUALIFIE      14 13  1  0   12 sur 14
+  L4  QUALIFIE       9  9  0  0    6 sur  9
+  L3 rang  5 NON QUALIFIE G_dep 7.941e-06 : ['c-accord'] []
+etats sans PLATEAU par absorbeur (pas de plateau ou aucune fenetre) : {'A': 0, 'B': 0, 'C': 0, 'D': 0}
+  etalement de la meilleure fenetre sous A : mediane 0.0001, plus grand 0.0234
+  etalement de la meilleure fenetre sous B : mediane 0.0000, plus grand 0.0204
+  etalement de la meilleure fenetre sous C : mediane 0.0025, plus grand 0.0376
+  etalement de la meilleure fenetre sous D : mediane 0.0001, plus grand 0.0416
+  accord B / A : |ln| mediane 0.0000, plus grand 0.0129 (137 etats)
+  accord C / A : |ln| mediane 0.0008, plus grand 0.0659 (137 etats)
+  accord D / A : |ln| mediane 0.0000, plus grand 0.0264 (137 etats)
+  consigne (e) : |ln(G_dep / Gamma_pl(A))| mediane 0.0193, plus grand 0.1023, au-dessus de tau : 7 sur 137
+
+LES ANNONCES (gel, section 11), par MA lecture ; non opposable
+  A-1   ESTIMATEUR QUALIFIE                      ESTIMATEUR QUALIFIE 0.46, QUALIFIE A L ETAT LU 0.08, QUALIFIE PAR POINT 0.40, NON QUALIFIE 0.01, NON LISIBLE 0.01, NON CONCLUANT 0.04
+  A-2   LA LECTURE DEPOSEE EST SUR LE PLATEAU A NEUF ETATS SUR DIX AU MOINS SUR LE PLATEAU 0.02 ; NEUF SUR DIX 0.23 ; PAS PARTOUT 0.75
+  A-3   True                                     l etat lu est QUALIFIE aux onze points autres que L3 : 0.80
+  A-4   True                                     L3 compte le plus d etats non QUALIFIES, ex aequo admis : 0.55 ; non qualifies par point {'C1': 0, 'C2': 0, 'C3': 0, 'C4': 0, 'M1': 0, 'M2': 0, 'M3': 0, 'M4': 0, 'L1': 0, 'L2': 0, 'L3': 1, 'L4': 0}
+  A-5   True                                     aux six points de delta negatif, aucun etat n a, sous A ni B, de meilleure fenetre d etalement > 0.02 : 0.80
+  A-6   True                                     a tout etat ou A et B ont un PLATEAU, |ln(Gamma_pl(B) / Gamma_pl(A))| <= 0.02 : 0.60 ; plus grand 0.0129 sur 137 etats
+  A-7   True                                     l instrument tient : 0.96
+  A-8   True                                     C est l absorbeur sous lequel le plus d etats n ont pas de PLATEAU, ex aequo admis, zero partout vrai : 0.70 ; {'A': 0, 'B': 0, 'C': 0, 'D': 0}
+  A-9   True                                     la mediane de |ln(G_dep / Gamma_pl(A))| est entre 0.01 et 0.04 : 0.75 ; elle vaut 0.0193
+  A-10  True                                     trois etats au plus NON LISIBLES : 0.80 ; il y en a 0

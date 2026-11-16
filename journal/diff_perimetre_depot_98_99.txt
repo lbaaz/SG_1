@@ -1,0 +1,62 @@
+--- delta98
++++ delta99
+@@ -1,20 +1,22 @@
+ #!/usr/bin/env python3
+ # -*- coding: ascii -*-
+-"""LE PERIMETRE DU DEPOT delta 98 (LA CHAINE E-A AU SECOND ORDRE) -- ENUMERE DEPUIS LES CITATIONS DE L'ACTE.
+-machine 2, v1, 15/11/2026.
+-
+-Derive de la feuille du delta 97 (perimetre_depot_delta97_machine2_v1.py, au registre ou au poste, NON EDITEE : regle 17), meme methode,
+-meme code, DEUX changements nommes, le diff est joint :
+-  1. dossier() : les instruments et constructions de ce chantier (la chaine E-A au second ordre (gel, sonde, bloc de la chaine, feuille)) vont sous scripts/, comme ceux du delta precedent.
++"""LE PERIMETRE DU DEPOT delta 99 (LA QUALIFICATION E-B TER) -- ENUMERE DEPUIS LES CITATIONS DE L'ACTE.
++machine 2, v1, 16/11/2026.
++
++Derive de la feuille du delta 98 (perimetre_depot_delta98_machine2_v1.py, au registre ou au poste, NON EDITEE : regle 17), meme methode,
++meme code, TROIS changements nommes, le diff est joint :
++  1. dossier() : les instruments et constructions de ce chantier (la qualification E-B ter (gel, sonde, lecteur creux de machine 1, feuille, banc)) vont sous scripts/, comme ceux du delta precedent.
+   2. le texte du manifeste (corps) parle de ce chantier et de sa date.
+ Pour le reste, tout est herite : le perimetre ne s'ecrit pas a la main, il s'ENUMERE depuis les citations de l'acte, resolues PAR CANON
+ (registre, poste, ou NON RESOLU qui mord) ; le numero se DERIVE du registre (plafond + 1) ; les lots cites entrent avec leurs pieces de
+ table ; les ZIP ne sont pas deposes ; DEUX VERBES (`chk` mesure, `note` porte la prose) ; PB-1 : rien n'est edite.
++  3. les lots du delta (manifeste dont l'en-tete porte le canon de l'acte, OU, pour un lot de machine 2, celui du contreseing e8ff4d600edf89ef) : tous, et non le premier trouve ; la rectification C07 retire
++     une morsure du contreseing et entre avec lui.
+ """
+ import hashlib, os, re, subprocess, sys, unicodedata
+ 
+ if len(sys.argv) != 3:
+-    sys.exit('usage : perimetre_depot_delta98_machine2_v1.py <clone frais du registre> <acte journal_delta_nn_..._vN.md>')
++    sys.exit('usage : perimetre_depot_delta99_machine2_v1.py <clone frais du registre> <acte journal_delta_nn_..._vN.md>')
+ CLONE = os.path.abspath(sys.argv[1])
+ ICI = os.path.dirname(os.path.abspath(__file__))
+ RAC = os.path.dirname(ICI)
+@@ -183,10 +185,9 @@
+         if (_b.upper().startswith('MANIFEST_') and _b.lower().endswith('.txt') and _c not in reg and
+                 _c not in [x[0] for x in a_deposer] and
+                 open(_p, encoding='utf-8', errors='replace').readline().startswith('MANIFESTE lot_') and
+-                canon_acte in open(_p, encoding='utf-8', errors='replace').readline()):
++                (canon_acte in open(_p, encoding='utf-8', errors='replace').readline() or ('e8ff4d600edf89ef' in open(_p, encoding='utf-8', errors='replace').readline() and open(_p, encoding='utf-8', errors='replace').readline().startswith('MANIFESTE lot_machine2_')))):
+             lots_delta.append((_c, _p))
+             a_deposer.append((_c, _p))
+-            break
+ chk('les lots de ce delta (manifeste dont l en-tete porte le canon de l acte) sont derives, non tapes',
+     len(lots_delta) >= 1, '; '.join('%s %s' % (c, rel(p, RAC)) for c, p in lots_delta))
+ 
+@@ -304,7 +305,7 @@
+         return 'gels/'
+     if re.match(r'(sonde_qualification_EB_machine1_v\d+|banc_qui_tue_qualification_EB_machine1_v\d+|'
+                 r'lecture_qualification_EB_machine1_v\d+|reference_TP_rotation_complexe_machine2_v\d+(_premier_jet)?|'
+-                r'estimation_TP_wkb_machine1_v\d+|construction_(gel_EB_v\d+|sonde_banc_v\d+|gel_EB_bis|instrument_EB_bis|gel_chaine_EA_par_etat|gel_domaine_G1|sonde_domaine_G1|gel_ordre2|sonde_ordre2)_machine1_v\d+|sonde_chaine_par_etat_machine1_v\d+|lecture_chaine_par_etat_machine1_v\d+|sonde_domaine_G1_machine1_v\d+|lecture_domaine_G1_machine1_v\d+|sonde_ordre2_machine1_v\d+|lecture_ordre2_machine1_v\d+|chaine_ordre2_bloc_machine1_v\d+)\.py$', b):
++                r'estimation_TP_wkb_machine1_v\d+|construction_(gel_EB_v\d+|sonde_banc_v\d+|gel_EB_bis|instrument_EB_bis|gel_chaine_EA_par_etat|gel_domaine_G1|sonde_domaine_G1|gel_ordre2|sonde_ordre2|feuille_ter|gel_ter|sonde_ter)_machine1_v\d+|sonde_chaine_par_etat_machine1_v\d+|lecture_chaine_par_etat_machine1_v\d+|sonde_domaine_G1_machine1_v\d+|lecture_domaine_G1_machine1_v\d+|sonde_ordre2_machine1_v\d+|lecture_ordre2_machine1_v\d+|chaine_ordre2_bloc_machine1_v\d+|sonde_qualification_EB_ter_machine1_v\d+|lecteur_plateau_bloc_machine1_v\d+|lecture_qualification_EB_ter_machine1_v\d+|banc_feuille_ter_machine1_v\d+)\.py$', b):
+         return 'scripts/'
+     return 'journal/'
+ 
+@@ -374,7 +375,7 @@
+ for c, *_ in lignes:
+     par_dossier[c.split('/')[0]] = par_dossier.get(c.split('/')[0], 0) + 1
+ 
+-corps = ("MANIFESTE DU LOT DE DEPOT -- DELTA %s (LA CHAINE E-A AU SECOND ORDRE) -- 15/11/2026 -- "
++corps = ("MANIFESTE DU LOT DE DEPOT -- DELTA %s (LA QUALIFICATION E-B TER) -- 16/11/2026 -- "
+          "assemble par machine 2 -- derive de l'acte v%s\n" % (NUMERO, VERSION))
+ corps += ("Convention B (sha256 NFC+LF, 16 hex) et empreinte brute, les deux tailles ; le depot et "
+           "le numero sont de la main de l'operateur.\n")

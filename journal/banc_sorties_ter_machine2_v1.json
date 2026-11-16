@@ -1,0 +1,230 @@
+[
+ {
+  "attendu": "TIENT",
+  "nom": "I00 base : mes sorties du pre-vol",
+  "obtenu": "TIENT",
+  "ok": true
+ },
+ {
+  "attendu": "NE TIENT PAS",
+  "nom": "I01 etage 0 : une largeur +0.2 %",
+  "obtenu": "NE TIENT PAS",
+  "ok": true
+ },
+ {
+  "attendu": "TIENT",
+  "nom": "I02 etage 0 : une largeur +0.05 % (dans la tolerance)",
+  "obtenu": "TIENT",
+  "ok": true
+ },
+ {
+  "attendu": "NE TIENT PAS",
+  "nom": "I03 etage 0 : une largeur non suivie",
+  "obtenu": "NE TIENT PAS",
+  "ok": true
+ },
+ {
+  "attendu": "REFUS",
+  "nom": "I04 etage 0 : un etat retire",
+  "obtenu": "REFUS",
+  "ok": true
+ },
+ {
+  "attendu": "REFUS",
+  "nom": "I05 etage 0 : canon de la sonde altere",
+  "obtenu": "REFUS",
+  "ok": true
+ },
+ {
+  "attendu": "REFUS",
+  "nom": "I06 etage 0 : reglage altere (poids_min 0.4)",
+  "obtenu": "REFUS",
+  "ok": true
+ },
+ {
+  "attendu": "REFUS",
+  "nom": "I07 etage 0 : mode altere",
+  "obtenu": "REFUS",
+  "ok": true
+ },
+ {
+  "attendu": "REFUS",
+  "nom": "I08 etage 0 : un point echange (ordre A2, A1)",
+  "obtenu": "REFUS",
+  "ok": true
+ },
+ {
+  "attendu": "NE TIENT PAS",
+  "nom": "I09 ancres : une largeur x (1 + 2e-6)",
+  "obtenu": "NE TIENT PAS",
+  "ok": true
+ },
+ {
+  "attendu": "TIENT",
+  "nom": "I10 ancres : une largeur x (1 + 5e-7)",
+  "obtenu": "TIENT",
+  "ok": true
+ },
+ {
+  "attendu": "NE TIENT PAS",
+  "nom": "I11 ancres : un statut de suivi change",
+  "obtenu": "NE TIENT PAS",
+  "ok": true
+ },
+ {
+  "attendu": "NE TIENT PAS",
+  "nom": "I12 ancres : les rangs 0 et 1 d'une ancre echanges",
+  "obtenu": "NE TIENT PAS",
+  "ok": true
+ },
+ {
+  "attendu": "REFUS",
+  "nom": "I13 ancres : un absorbeur retire",
+  "obtenu": "REFUS",
+  "ok": true
+ },
+ {
+  "attendu": "REFUS",
+  "nom": "I14 ancres : un barreau retire",
+  "obtenu": "REFUS",
+  "ok": true
+ },
+ {
+  "attendu": "REFUS",
+  "nom": "I15 ancres : un etat de rang 2 ajoute",
+  "obtenu": "REFUS",
+  "ok": true
+ },
+ {
+  "attendu": "NE TIENT PAS",
+  "nom": "I16 temoin positif : j = 6 sous C x exp(0.06)",
+  "obtenu": "NE TIENT PAS",
+  "ok": true
+ },
+ {
+  "attendu": "TIENT",
+  "nom": "I17 temoin positif : j = 6 sous C x exp(0.04)",
+  "obtenu": "TIENT",
+  "ok": true
+ },
+ {
+  "attendu": "NE TIENT PAS",
+  "nom": "I18 temoin negatif : A1 sous B rend un plateau",
+  "obtenu": "NE TIENT PAS",
+  "ok": true
+ },
+ {
+  "attendu": "REFUS",
+  "nom": "I19 temoin positif : un barreau retire",
+  "obtenu": "REFUS",
+  "ok": true
+ },
+ {
+  "attendu": "PAS TIENT",
+  "nom": "I20 temoin : liste des retenus alteree (j = 6 devient 7)",
+  "obtenu": "REFUS",
+  "ok": true
+ },
+ {
+  "attendu": "REFUS",
+  "nom": "I21 depot altere d un octet",
+  "obtenu": "REFUS",
+  "ok": true
+ },
+ {
+  "attendu": "REFUS",
+  "nom": "I22 table de reference du temoin alteree",
+  "obtenu": "REFUS",
+  "ok": true
+ },
+ {
+  "attendu": "REFUS",
+  "nom": "I23 reference des ancres alteree",
+  "obtenu": "REFUS",
+  "ok": true
+ },
+ {
+  "attendu": "ESTIMATEUR QUALIFIE",
+  "nom": "V01 tout QUALIFIE, depot a 0.01 du plateau",
+  "obtenu": "ESTIMATEUR QUALIFIE",
+  "ok": true
+ },
+ {
+  "attendu": "QUALIFIE A L'ETAT LU",
+  "nom": "V02 14 etats non qualifies (123 sur 137)",
+  "obtenu": "QUALIFIE A L'ETAT LU",
+  "ok": true
+ },
+ {
+  "attendu": "ESTIMATEUR QUALIFIE",
+  "nom": "V03 13 etats non qualifies (124 sur 137)",
+  "obtenu": "ESTIMATEUR QUALIFIE",
+  "ok": true
+ },
+ {
+  "attendu": "QUALIFIE PAR POINT",
+  "nom": "V04 etat lu de C1 non qualifie",
+  "obtenu": "QUALIFIE PAR POINT",
+  "ok": true
+ },
+ {
+  "attendu": "NON QUALIFIE",
+  "nom": "V05 etats lus tous non qualifies",
+  "obtenu": "NON QUALIFIE",
+  "ok": true
+ },
+ {
+  "attendu": "NON LISIBLE",
+  "nom": "V06 etats lus tous non lisibles",
+  "obtenu": "NON LISIBLE",
+  "ok": true
+ },
+ {
+  "attendu": "RUN INCOMPLET",
+  "nom": "V07 L4 absent",
+  "obtenu": "RUN INCOMPLET",
+  "ok": true
+ },
+ {
+  "attendu": "REFUS",
+  "nom": "V08 L4 lu deux fois",
+  "obtenu": "REFUS",
+  "ok": true
+ },
+ {
+  "attendu": "REFUS",
+  "nom": "V09 canon de la sonde altere dans un point",
+  "obtenu": "REFUS",
+  "ok": true
+ },
+ {
+  "attendu": "REFUS",
+  "nom": "V10 un etat de trop a C1",
+  "obtenu": "REFUS",
+  "ok": true
+ },
+ {
+  "attendu": "REFUS",
+  "nom": "V11 un etat manquant a M2",
+  "obtenu": "REFUS",
+  "ok": true
+ },
+ {
+  "attendu": "NON CONCLUANT D'INSTRUMENT",
+  "nom": "V12 instrument ne tient pas",
+  "obtenu": "NON CONCLUANT D'INSTRUMENT",
+  "ok": true
+ },
+ {
+  "attendu": "ESTIMATEUR QUALIFIE",
+  "nom": "V13 consigne (e) : 15 etats sur 137 a 0.06 du plateau",
+  "obtenu": "ESTIMATEUR QUALIFIE",
+  "ok": true
+ },
+ {
+  "attendu": "ESTIMATEUR QUALIFIE",
+  "nom": "V14 consigne (e) : 13 etats sur 137 a 0.06 du plateau",
+  "obtenu": "ESTIMATEUR QUALIFIE",
+  "ok": true
+ }
+]

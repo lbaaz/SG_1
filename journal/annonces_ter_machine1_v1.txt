@@ -1,0 +1,26 @@
+Si l'instrument ne tient pas, A-2 a A-6 et A-8 a A-10 sont NON JUGEES : ni creditees ni debitees.
+Une annonce qui porte sur des etats "a PLATEAU" est NON JUGEE s'il n'y en a aucun.
+  A-1  le verdict. ESTIMATEUR QUALIFIE : 0.46 ; QUALIFIE A L'ETAT LU : 0.08 ;
+       QUALIFIE PAR POINT : 0.40 ; NON QUALIFIE : 0.01 ; NON LISIBLE : 0.01 ;
+       NON CONCLUANT D'INSTRUMENT : 0.04.
+       Raison : au point de reglage le plus dur (E4, g = 1.2e-2), l'etat lu passe avec une marge
+       d'un peu plus d'un centieme et trois etats sur quatorze echouent ; le point juge L3 en
+       est proche. Ailleurs le reglage tient largement. L'instrument peut manquer sur une autre
+       plateforme (tolerance des ancres, installation).
+  A-2  l'issue de la lecture deposee. SUR LE PLATEAU a tous les etats : 0.02 ; A NEUF ETATS SUR DIX
+       AU MOINS : 0.23 ; PAS PARTOUT : 0.75. Raison : a E4, la lecture deposee s'ecarte du
+       plateau de plus de tau a la majorite des etats ; les points juges de fort couplage
+       portent plus de la moitie des etats juges.
+  A-3  l'etat lu est QUALIFIE aux onze points autres que L3 : 0.80.
+  A-4  L3 est le point qui compte le plus d'etats non QUALIFIES, ex aequo admis : 0.55.
+  A-5  aux six points de delta negatif (C1, C2, M1, M2, L1, L2), aucun etat n'a, sous A ni sous
+       B, de meilleure fenetre d'etalement superieur a 0.02 : 0.80.
+  A-6  a tout etat ou A et B ont un PLATEAU, |ln(Gamma_pl(B) / Gamma_pl(A))| <= 0.02 : 0.60.
+  A-7  l'instrument tient (non aveugle : etages regles) : 0.96.
+  A-8  C est l'absorbeur sous lequel le plus d'etats n'ont pas de PLATEAU, ex aequo admis et zero
+       partout compte comme vrai : 0.70.
+  A-9  la mediane de |ln(G_dep / Gamma_pl(A))|, sur les etats ou A a un PLATEAU, est entre 0.01
+       et 0.04 : 0.75.
+  A-10 trois etats au plus sont NON LISIBLES : 0.80.
+Ces probabilites sont ecrites apres le reglage de la section 4 et avant tout calcul aux douze
+points. Aucune n'a ete donnee a l'operateur avant ce reglage.

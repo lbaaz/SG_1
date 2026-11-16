@@ -1,0 +1,37 @@
+2026-11-15 13:42:11 DEBUT DU PILOTE machine 2, gel 432319b9feb34b82 ; python 3.11.9 ; numpy/scipy lus par la sonde ; cwd d:\devs\bocal\BOCAL4
+2026-11-15 13:42:11 machine : Windows 10.0.26300, 16 coeurs, AMD64 Family 25 Model 117 Stepping 2, AuthenticAMD
+2026-11-15 13:42:11 batterie (BatteryStatus WMI, 2 = secteur, 1 = batterie, vide = pas de batterie) : '2'
+2026-11-15 13:42:11 canon certif_EB_ter/lot_m1\qualification_EB_ter_pre_enregistrement_v1.md           432319b9feb34b82 (attendu 432319b9feb34b82) OK
+2026-11-15 13:42:11 canon certif_EB_ter/lot_m1\sonde_qualification_EB_ter_machine1_v1.py               b5616dcf858e8801 (attendu b5616dcf858e8801) OK
+2026-11-15 13:42:11 canon certif_EB_ter/lot_m1\lecteur_plateau_bloc_machine1_v1.py                     9b0f95f3e10e9b0d (attendu 9b0f95f3e10e9b0d) OK
+2026-11-15 13:42:11 canon certif_EB_ter/lot_m1\lecture_qualification_EB_ter_machine1_v1.py             b2d6d7cfaf30f1cf (attendu b2d6d7cfaf30f1cf) OK
+2026-11-15 13:42:11 canon certif_EB_ter/lot_m1\banc_feuille_ter_machine1_v1.py                         6b63a9de25107ae4 (attendu 6b63a9de25107ae4) OK
+2026-11-15 13:42:11 canon certif_EB_ter/lot_m1\reference_ancres_ter_machine1_v1.json                   6600fb8418c79930 (attendu 6600fb8418c79930) OK
+2026-11-15 13:42:11 canon m17_chaine_v17.py                                                            82a0be882568fe0c (attendu 82a0be882568fe0c) OK
+2026-11-15 13:42:11 canon C:\Users\bazil\AppData\Local\Temp\claude\75adcc7f3c1d08bf\7d33635e-8345-4a2c-a69e-f6a51f9d8fa7\scratchpad\reg_neuf98\journal\sonde_ordre2.json 10887c60d5f55bcf (attendu 10887c60d5f55bcf) OK
+2026-11-15 13:42:11 canon C:\Users\bazil\AppData\Local\Temp\claude\75adcc7f3c1d08bf\7d33635e-8345-4a2c-a69e-f6a51f9d8fa7\scratchpad\reg_neuf98\journal\tp_retenus_machine2_v1.json 69b3bab3bb8480b7 (attendu 69b3bab3bb8480b7) OK
+2026-11-15 13:42:11 canon C:\Users\bazil\AppData\Local\Temp\claude\75adcc7f3c1d08bf\7d33635e-8345-4a2c-a69e-f6a51f9d8fa7\scratchpad\reg_neuf98\journal\tp_reference_machine2_v1.json 4d51dd58ef456fe9 (attendu 4d51dd58ef456fe9) OK
+2026-11-15 13:42:11 ETAPE 1 : la sonde en modes etage0, ancres, etage1 (trois processus)
+2026-11-15 13:42:25 FIN  etage0         code=0 duree=14 s
+2026-11-15 13:48:14 FIN  ancres         code=0 duree=362 s
+2026-11-15 13:48:47 FIN  etage1         code=0 duree=396 s
+2026-11-15 13:48:47 ETAPE 2 : la feuille, etape instrument
+2026-11-15 13:48:47 FIN  feuille instrument code=0
+2026-11-15 13:48:47 VERDICT DE L INSTRUMENT : TIENT
+2026-11-15 13:48:47 ETAPE 3 : la sonde en mode point aux douze points (un processus par point) ; ordre de lancement : les plus lourds d abord
+2026-11-15 14:51:40 FIN  point_M3       code=0 duree=3772 s
+2026-11-15 14:55:01 FIN  point_L4       code=0 duree=3974 s
+2026-11-15 14:55:01 FIN  point_C1       code=0 duree=3974 s
+2026-11-15 14:55:01 FIN  point_M4       code=0 duree=3974 s
+2026-11-15 14:55:08 FIN  point_C2       code=0 duree=3981 s
+2026-11-15 14:55:08 FIN  point_C3       code=0 duree=3981 s
+2026-11-15 14:55:08 FIN  point_C4       code=0 duree=3981 s
+2026-11-15 14:55:08 FIN  point_M1       code=0 duree=3981 s
+2026-11-15 14:55:08 FIN  point_M2       code=0 duree=3980 s
+2026-11-15 14:55:08 FIN  point_L1       code=0 duree=3980 s
+2026-11-15 14:55:08 FIN  point_L2       code=0 duree=3980 s
+2026-11-15 14:55:08 FIN  point_L3       code=0 duree=3980 s
+2026-11-15 14:55:08 ETAPE 4 : la feuille, etape verdict
+2026-11-15 14:55:08 FIN  feuille verdict code=0
+2026-11-15 14:55:08 DUREE TOTALE DU RUN : 4377 s
+2026-11-15 14:55:08 FIN DU PILOTE

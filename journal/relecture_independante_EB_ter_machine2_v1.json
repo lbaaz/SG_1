@@ -1,0 +1,56 @@
+{
+ "verdict_ma": "ESTIMATEUR QUALIFIE",
+ "issue_ma": "LA LECTURE DEPOSEE EST SUR LE PLATEAU A NEUF ETATS SUR DIX AU MOINS",
+ "verdict_m1": "ESTIMATEUR QUALIFIE",
+ "issue_m1": "LA LECTURE DEPOSEE EST SUR LE PLATEAU A NEUF ETATS SUR DIX AU MOINS",
+ "accord_complet": true,
+ "ecarts": [],
+ "comptes": [
+  137,
+  136,
+  137,
+  130
+ ],
+ "annonces": {
+  "A-1": [
+   "ESTIMATEUR QUALIFIE",
+   "ESTIMATEUR QUALIFIE 0.46, QUALIFIE A L ETAT LU 0.08, QUALIFIE PAR POINT 0.40, NON QUALIFIE 0.01, NON LISIBLE 0.01, NON CONCLUANT 0.04"
+  ],
+  "A-2": [
+   "LA LECTURE DEPOSEE EST SUR LE PLATEAU A NEUF ETATS SUR DIX AU MOINS",
+   "SUR LE PLATEAU 0.02 ; NEUF SUR DIX 0.23 ; PAS PARTOUT 0.75"
+  ],
+  "A-3": [
+   "True",
+   "l etat lu est QUALIFIE aux onze points autres que L3 : 0.80"
+  ],
+  "A-4": [
+   "True",
+   "L3 compte le plus d etats non QUALIFIES, ex aequo admis : 0.55 ; non qualifies par point {'C1': 0, 'C2': 0, 'C3': 0, 'C4': 0, 'M1': 0, 'M2': 0, 'M3': 0, 'M4': 0, 'L1': 0, 'L2': 0, 'L3': 1, 'L4': 0}"
+  ],
+  "A-5": [
+   "True",
+   "aux six points de delta negatif, aucun etat n a, sous A ni B, de meilleure fenetre d etalement > 0.02 : 0.80"
+  ],
+  "A-6": [
+   "True",
+   "a tout etat ou A et B ont un PLATEAU, |ln(Gamma_pl(B) / Gamma_pl(A))| <= 0.02 : 0.60 ; plus grand 0.0129 sur 137 etats"
+  ],
+  "A-7": [
+   "True",
+   "l instrument tient : 0.96"
+  ],
+  "A-8": [
+   "True",
+   "C est l absorbeur sous lequel le plus d etats n ont pas de PLATEAU, ex aequo admis, zero partout vrai : 0.70 ; {'A': 0, 'B': 0, 'C': 0, 'D': 0}"
+  ],
+  "A-9": [
+   "True",
+   "la mediane de |ln(G_dep / Gamma_pl(A))| est entre 0.01 et 0.04 : 0.75 ; elle vaut 0.0193"
+  ],
+  "A-10": [
+   "True",
+   "trois etats au plus NON LISIBLES : 0.80 ; il y en a 0"
+  ]
+ }
+}

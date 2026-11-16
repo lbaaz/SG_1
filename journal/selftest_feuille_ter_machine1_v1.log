@@ -1,0 +1,69 @@
+  gamma = c eta                                                  OK
+  constante                                                      OK
+  constante : a egalite, le plus petit k de depart               OK
+  plateau de cinq (k = 2 a 6)                                    OK
+  plateau au bord fort (k = -3 a 1)                              OK
+  plateau au bord faible (k = 4 a 8)                             OK
+  quatre valeurs lisibles                                        OK
+  cinq lisibles non consecutives                                 OK
+  borne exacte (20.0 .. 21.0)                                    OK
+  borne + 1 ulp                                                  OK
+  borne en rationnels : le flottant 1.05 depasse 21/20           OK
+  fenetre retenue : plus petit rapport, puis plus petit k        OK
+  moyenne geometrique de la fenetre                              OK
+  etalement de la fenetre                                        OK
+  accord a tau - 1e-6                                            OK
+  accord a tau + 1e-6                                            OK
+  accord symetrique                                              OK
+  accord au TP a tau + u - 1e-6                                  OK
+  accord au TP a tau + u + 1e-6                                  OK
+  serie : non suivi                                              OK
+  serie : nul                                                    OK
+  serie : negatif                                                OK
+  serie : infini                                                 OK
+  serie : tres petit mais positif                                OK
+  etat : quatre plateaux en accord                               OK
+  etat : pas de plateau sous A                                   OK
+  etat : pas de plateau sous B                                   OK
+  etat : pas de plateau sous C                                   OK
+  etat : pas de plateau sous D                                   OK
+  etat : desaccord B / A a tau + 1e-6                            OK
+  etat : accord B / A a tau - 1e-6                               OK
+  etat : desaccord B / A par en dessous                          OK
+  etat : desaccord C / A a tau + 1e-6                            OK
+  etat : accord C / A a tau - 1e-6                               OK
+  etat : desaccord C / A par en dessous                          OK
+  etat : desaccord D / A a tau + 1e-6                            OK
+  etat : accord D / A a tau - 1e-6                               OK
+  etat : desaccord D / A par en dessous                          OK
+  etat : non suivi sous A                                        OK
+  etat : non suivi sous B                                        OK
+  etat : non suivi sous C                                        OK
+  etat : non suivi sous D                                        OK
+  etat : un echec l'emporte sur un non lisible                   OK
+  etat : sans plateau sous A, pas d'accord joue, consigne (e) non lue OK
+  consigne (e) : depot a tau - 1e-6                              OK
+  consigne (e) : depot a tau + 1e-6                              OK
+  consigne (e) sans effet sur le statut                          OK
+  cascade : instrument                                           OK
+  cascade : tout qualifie                                        OK
+  cascade : 108 sur 120, juste a neuf dixiemes                   OK
+  cascade : 107 sur 120                                          OK
+  cascade : onze etats lus sur douze                             OK
+  cascade : onze et un non lisible                               OK
+  cascade : un seul etat lu                                      OK
+  cascade : aucun, un echec                                      OK
+  cascade : aucun, tous non lisibles                             OK
+  cascade : onze points seulement                                OK
+  depot : tous                                                   OK
+  depot : 99 sur 100                                             OK
+  depot : 90 sur 100                                             OK
+  depot : 89 sur 100                                             OK
+  depot : aucun plateau                                          OK
+  etage 0 : dans la tolerance relative                           OK
+  etage 0 : hors tolerance                                       OK
+  etage 0 : petit etat, ecart absolu 9e-13                       OK
+  etage 0 : petit etat, ecart absolu 1.1e-12                     OK
+  etage 0 : non suivi                                            OK
+  etage 0 : par en dessous                                       OK
+selftest : 68 tenus sur 68

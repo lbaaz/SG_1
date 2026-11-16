@@ -1,0 +1,15 @@
+  S01_tout_plat                                        TIENT  (code 0 ; ['VERDICT : ESTIMATEUR QUALIFIE', 'ISSUE DE LA LECTURE DEPOSEE (consigne e) : LA LECTURE DEPOSEE EST SUR LE PLATEAU (137 sur 137)'])
+  S02_trois_groupes                                    TIENT  (code 0 ; ['VERDICT : ESTIMATEUR QUALIFIE', 'ISSUE DE LA LECTURE DEPOSEE (consigne e) : LA LECTURE DEPOSEE EST SUR LE PLATEAU (137 sur 137)'])
+  S03_etat_lu_de_L3_sans_plateau_sous_C                TIENT  (code 0 ; ['VERDICT : QUALIFIE PAR POINT', 'ISSUE DE LA LECTURE DEPOSEE (consigne e) : LA LECTURE DEPOSEE EST SUR LE PLATEAU (137 sur 137)'])
+  S04_etats_lus_tenus_26_autres_non                    TIENT  (code 0 ; ["VERDICT : QUALIFIE A L'ETAT LU", 'ISSUE DE LA LECTURE DEPOSEE (consigne e) : LA LECTURE DEPOSEE EST SUR LE PLATEAU (137 sur 137)'])
+  S05_plateau_a_8_centiemes_du_depot_a_M2              TIENT  (code 0 ; ['VERDICT : ESTIMATEUR QUALIFIE', "ISSUE DE LA LECTURE DEPOSEE (consigne e) : LA LECTURE DEPOSEE N'EST PAS PARTOUT SUR LE PLATEAU (123 sur 137)"])
+  S05b_plateau_a_8_centiemes_du_depot_a_C1             TIENT  (code 0 ; ['VERDICT : ESTIMATEUR QUALIFIE', 'ISSUE DE LA LECTURE DEPOSEE (consigne e) : LA LECTURE DEPOSEE EST SUR LE PLATEAU A NEUF ETATS SUR DIX AU MOINS (129 sur 137)'])
+  S06_rien_de_suivi_sous_D                             TIENT  (code 0 ; ['VERDICT : NON LISIBLE', 'ISSUE DE LA LECTURE DEPOSEE (consigne e) : LA LECTURE DEPOSEE EST SUR LE PLATEAU (137 sur 137)'])
+  S07_un_point_manque                                  TIENT  (code 0 ; ['VERDICT : RUN INCOMPLET', 'ISSUE DE LA LECTURE DEPOSEE (consigne e) : LA LECTURE DEPOSEE EST SUR LE PLATEAU (128 sur 128)'])
+  S08_un_point_lu_deux_fois                            TIENT  (code 2 ; ['LECTURE REFUSEE : point C1 hors des douze, ou lu deux fois'])
+  S09_sortie_d_une_autre_sonde                         TIENT  (code 2 ; ['LECTURE REFUSEE : point : sonde_canon vaut 0000000000000000, attendu b5616dcf858e8801'])
+  S10_un_etat_manque                                   TIENT  (code 2 ; ['LECTURE REFUSEE : point C3 : etats lus [(0, 6, 1), (1, 5, 1), (2, 5, 2), (3, 6, 2), (4, 7, 1), (5, 4, 1), (6, 4, 2), (7, 7, 2), (8, 8, 1), (9, 6, 0), (10, 5, 3), (11, 7, 0), (12, 5, 0)], attendus [(0, 6, 1), (1, 5, 1), (2, 5, 2), (3, 6, 2), (4, 7, 1), (5, 4, 1), (6, 4, 2), (7, 7, 2), (8, 8, 1), (9, 6, 0), (10, 5, 3), (11, 7, 0), (12, 5, 0), (13, 6, 3)]'])
+  S11_un_barreau_manque                                TIENT  (code 2 ; ['LECTURE REFUSEE : point C4 rang 0, B : barreaux [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7], attendus [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8]'])
+  S12_autre_reglage                                    TIENT  (code 2 ; ["LECTURE REFUSEE : point : le reglage consigne n'est pas celui du gel"])
+  S13_instrument_ne_tient_pas                          TIENT
+ESSAI SYNTHETIQUE DE LA FEUILLE : 14 cas, 14 tenus

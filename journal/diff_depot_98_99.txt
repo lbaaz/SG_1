@@ -1,0 +1,32 @@
+--- delta98
++++ delta99
+@@ -1,9 +1,9 @@
+ #!/usr/bin/env python3
+ # -*- coding: ascii -*-
+-"""LE DEPOT DU DELTA 98 SUR CLONE FRAIS -- copie, verification au bit, releve, commit LOCAL. machine 2, v1, 15/11/2026.
++"""LE DEPOT DU DELTA 99 SUR CLONE FRAIS -- copie, verification au bit, releve, commit LOCAL. machine 2, v1, 16/11/2026.
+ Le PUSH n'est pas fait ici.
+ 
+-Derive de depot_delta97_machine2_v1.py (NON EDITE : regle 17). Un seul changement : le texte du message de commit ; le numero se lit toujours
++Derive de depot_delta98_machine2_v1.py (NON EDITE : regle 17). Un seul changement : le texte du message de commit ; le numero se lit toujours
+ dans le nom du manifeste, l'etat attendu du registre s'en deduit, rien n'est tape. Le diff est joint.
+ Arguments : <clone frais> <MANIFEST_DEPOT_delta<nn>_machine2_v<N>.txt>.
+   1. releve AVANT : origin/main == HEAD, arbre propre, plafond == nn - 1, aucun delta_nn ;
+@@ -16,7 +16,7 @@
+ import hashlib, os, re, shutil, subprocess, sys, unicodedata
+ 
+ if len(sys.argv) != 3:
+-    sys.exit('usage : depot_delta98_machine2_v1.py <clone frais> <MANIFEST_DEPOT_delta<nn>_machine2_v<N>.txt>')
++    sys.exit('usage : depot_delta99_machine2_v1.py <clone frais> <MANIFEST_DEPOT_delta<nn>_machine2_v<N>.txt>')
+ CLONE, MAN = os.path.abspath(sys.argv[1]), os.path.abspath(sys.argv[2])
+ ICI = os.path.dirname(os.path.abspath(__file__))
+ RAC = os.path.dirname(ICI)
+@@ -122,7 +122,7 @@
+ 
+ print('\n4. COMMIT LOCAL (pas de push ici)')
+ auteur = git('log', '-1', '--format=%an <%ae>')
+-msg = ('delta 98 -- the E-A chain completed by its second order HOLDS against the width E-B reads at k = 3: under a freeze written before the run and certified by the other machine before it, opened by the operator\'s "ok go" on 14/11 at 22:04 as machine 1 declares it (machine 2 cannot check it), played once on BOCAL4 on 14 and 15/11 with every guard held and the two anchors reproducing M17\'s readings to the bit, on twelve judged points never played, at factors 2/3 to 3/2 and in three bands of |delta| (to 0.06, to 0.10, to 0.12), the chain with the level shift of each site and the hop to the second neighbour reads that width within a factor 1.25, 1.6 and 2 in the three bands, on 132 judged states, the largest ratio being 1.679 against a bound of 2 at L4: THE ORDER 2 HOLDS; it does better than the engine\'s own chain at the worst state at all twelve points, and it reads the energy shift of the states to one per cent, the largest gap being 0.0046; the residual is on one side only (the smallest ratio is 1.002) and grows with the disagreement, and the act does not say where it comes from; the verdict is unchanged under the thread noise up to seven times the noise measured at the anchors and may change from eight times, that noise not having been measured at the boxes of 73 and 74; the witness W2, played and not readable (3 judged states out of 14), and W1 (largest ratio 2.047), outside the statement, carry no weight; eighteen of the twenty announcements of the pen that can be judged are true; the act says nothing outside factors 2/3 to 3/2, the fraction 0.70, the 2:1 channel of x^5 and |delta| from 0.03 to 0.12, does not call the chain qualified and states no intrinsic width; the run was played on battery, which lengthened it to 4524 s and changed no number; no new candidate rule, thirty-four await review (X); act written by one machine and countersigned by the other after every number was recalculated from the countersigner\'s own sources, 16 controls of which one bites (a quotation from machine 1\'s own note that lost one word, with no consequence), the same sheet biting 14 times on a copy with nineteen figures or words changed, the deposited file being the countersigned one byte for byte')
++msg = ('delta 99 -- the E-B estimator Gamma_LS is QUALIFIED under the third freeze of track (0), the ter freeze: the width that the deposit of delta 98 reads at k = 3 at its twelve judged points is stable under absorbers of 80 and 100 layers in four forms (F2 80, F2 100, F1 100, F2 translated 80, rungs k = -3 to 8), read by machine 1\'s sparse reader; 136 of the 137 judged states are qualified against a threshold of 124, and the state read by the deposit is qualified at all twelve points; the one state not qualified is L3 rank 5, (7,2), whose agreement between absorbers C and A is 0.0659 against 0.05; separately, the deposited reading lies on the plateau at nine states out of ten at least (130 of 137, and at the read state at eleven points out of twelve, L4 rank 0 missing at |ln| 0.0686); QUALIFIED means a width stable under the variations played and nothing else, nothing on unitarity, on self-adjoint extensions or on the dynamics of the closed system, and the NOT QUALIFIED of delta 95 stands under its own freeze; the guard of the bis freeze was lifted by the operator\'s "ouvre" (15/11, 08:38, for an off-chain calculation) then "go" (15/11, 10:28, for this freeze), both messages attested by the operator; the freeze was certified by the other machine before the run with zero bite (sealed at 13:42:03) and played once on BOCAL4 on 15/11 from 13:42:11 to 14:55:08 (4377 s, twelve point calls in parallel, every exit code 0, on mains); the eight announcements of the pen are true by the countersigner\'s own reading; act written by machine 1 and countersigned by machine 2 after nineteen controls recomputed from its own sources, with one bite held (a sentence of section 5, flatter than the setting\'s, false for absorber D, 0.0416 against 0.0410, accepted by machine 1 as a defect of its pen) and a second bite of machine 2, on a rounding, retracted by exact fractions after machine 1 contested it, the arithmetic being machine 2\'s, the rectification deposited beside the countersign; the deposited file is the act as written, version 1, byte for byte; no new candidate rule, thirty-four await review (X)')
+ open(os.path.join(ICI, 'message_commit_delta%d.txt' % NUMERO), 'w', encoding='utf-8', newline='\n').write(msg + '\n')
+ chk('le message ne porte aucun trailer d outillage (convention du depot public, 25/08)',
+     'Co-Authored' not in msg and 'Claude' not in msg and 'Generated' not in msg, '%d caracteres' % len(msg))

@@ -1,0 +1,20 @@
+F1  les etats reels du reglage de machine 1
+   etats : 38 ; desaccords entre les deux feuilles : 0
+   MA feuille : 35 QUALIFIES, 3 NON QUALIFIES, 0 NON LISIBLES (le gel, section 4 (ii) : 35, 3, 0)
+   par point (QUALIFIES / juges) : A1 3/3, A2 3/3, E4 11/14, H1 3/3, J1 3/3, J2 7/7, J3 3/3, J5 2/2 (le gel : A1 3/3, A2 3/3, J1 3/3, J2 7/7, J3 3/3, J5 2/2, E4 11/14, H1 3/3)
+   etat lu (rang 0) : [('A1', 'QUALIFIE'), ('A2', 'QUALIFIE'), ('E4', 'QUALIFIE'), ('H1', 'QUALIFIE'), ('J1', 'QUALIFIE'), ('J2', 'QUALIFIE'), ('J3', 'QUALIFIE'), ('J5', 'QUALIFIE')]
+   etalement sous A : mediane 0.0069, plus grand 0.0409 (38 etats avec fenetre)
+   etalement sous B : mediane 0.0024, plus grand 0.0442 (38 etats avec fenetre)
+   etalement sous C : mediane 0.0116, plus grand 0.0657 (38 etats avec fenetre)
+   etalement sous D : mediane 0.0080, plus grand 0.0410 (38 etats avec fenetre)
+   accord B / A : |ln| mediane 0.0006, plus grand 0.0417
+   accord C / A : |ln| mediane 0.0024, plus grand 0.0409
+   accord D / A : |ln| mediane 0.0013, plus grand 0.0784
+   consigne (e) : |ln(G_dep / Gamma_pl(A))| mediane 0.0223, plus grand 0.1403, au-dessus de tau : 11 sur 38
+F2  etats synthetiques aux bords des seuils
+   20000 etats ; accord complet : 20000 ; statuts de MA feuille : {'NON QUALIFIE': 18316, 'QUALIFIE': 905, 'NON LISIBLE': 779}
+F3  cascade et issue de la consigne (e)
+   cascade : 2657206 cas, 0 desaccords ; issues atteintes par MA feuille : {"QUALIFIE A L'ETAT LU": 2, 'ESTIMATEUR QUALIFIE': 2, "NON CONCLUANT D'INSTRUMENT": 531441, 'QUALIFIE PAR POINT': 2109376, 'NON QUALIFIE': 16380, 'NON LISIBLE': 4}
+   issue de la consigne (e) : 10011 couples (npl, nlu), 0 desaccords
+
+DESACCORDS ENTRE LES DEUX FEUILLES, tous terrains : 0

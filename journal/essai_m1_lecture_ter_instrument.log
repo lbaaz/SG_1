@@ -1,0 +1,26 @@
+================================================================================================
+FEUILLE DE LECTURE E-B TER v1 -- INSTRUMENT (etages 0 et 1, ancres)
+================================================================================================
+selftest : 68 tenus sur 68
+ETAGE 0 : 84 lectures (attendu 84) ; pire ecart absolu 5.80e-13 ; pire ecart relatif au-dessus de mille planchers 2.9e-04 ; hors tolerance (0.001 relatif + 1e-12) : 0 : TIENT
+ANCRES : 192 lectures (attendu 192) ; pire |ln| a la reference de machine 1 0.00e+00 contre 1e-06 ; hors : 0 : TIENNENT
+TP j06 g = 0.08409 A : PLATEAU Gamma_pl 5.3726e-10 etalement 0.0000 k0 -3 ; |ln| = 0.0007 contre 0.0521 : TIENT
+TP j06 g = 0.08409 B : PLATEAU Gamma_pl 5.3726e-10 etalement 0.0000 k0 -3 ; |ln| = 0.0007 contre 0.0521 : TIENT
+TP j06 g = 0.08409 C : PLATEAU Gamma_pl 5.3726e-10 etalement 0.0000 k0 -2 ; |ln| = 0.0007 contre 0.0521 : TIENT
+TP j06 g = 0.08409 D : PLATEAU Gamma_pl 5.3726e-10 etalement 0.0000 k0 -3 ; |ln| = 0.0007 contre 0.0521 : TIENT
+TP j08 g = 0.10000 A : PLATEAU Gamma_pl 6.4283e-09 etalement 0.0000 k0 -3 ; |ln| = 0.0001 contre 0.0502 : TIENT
+TP j08 g = 0.10000 B : PLATEAU Gamma_pl 6.4283e-09 etalement 0.0000 k0 -3 ; |ln| = 0.0001 contre 0.0502 : TIENT
+TP j08 g = 0.10000 C : PLATEAU Gamma_pl 6.4283e-09 etalement 0.0000 k0 -2 ; |ln| = 0.0001 contre 0.0502 : TIENT
+TP j08 g = 0.10000 D : PLATEAU Gamma_pl 6.4283e-09 etalement 0.0000 k0 -3 ; |ln| = 0.0001 contre 0.0502 : TIENT
+TN A1 A : PAS DE PLATEAU (etalement 15.000)
+TN A1 B : PAS DE PLATEAU (etalement 15.000)
+TN A1 C : PAS DE PLATEAU (etalement 14.960)
+TN A1 D : PAS DE PLATEAU (etalement 15.000)
+TN A2 A : PAS DE PLATEAU (etalement 15.000)
+TN A2 B : PAS DE PLATEAU (etalement 15.000)
+TN A2 C : PAS DE PLATEAU (etalement 14.953)
+TN A2 D : PAS DE PLATEAU (etalement 15.000)
+ETAGE 1 : TIENT []
+VERDICT DE L'INSTRUMENT : TIENT []
+feuille lecture_qualification_EB_ter_machine1_v1.py canon b2d6d7cfaf30f1cf (relue du disque)
+CE QUE CE LOG NE JOUE PAS : aucune decomposition, aucune mesure.

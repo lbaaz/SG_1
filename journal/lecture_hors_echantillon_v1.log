@@ -1,0 +1,26 @@
+etats lus : 465 ; chaine sans boite sans plateau (ecart > 5e-3 entre ef 1/16 et 1/64) : 208
+retenus : 257
+tous                               n=257 k=2 contre k=3 : |brut| med 0.0160 q90 0.0346 max 0.0660 | reste o2b med 0.0134 q90 0.0937 max 0.3344 corr +0.02 | reste o2 med 0.0220 q90 0.0455 max 0.1087 corr +0.11
+tous                               n=257 k=4 contre k=3 : |brut| med 0.0460 q90 0.0998 max 0.1884 | reste o2b med 0.0459 q90 0.1216 max 0.2179 corr +0.14 | reste o2 med 0.0630 q90 0.1578 max 0.2592 corr -0.02
+|d| <= 0.03                        n= 22 k=2 contre k=3 : |brut| med 0.0112 q90 0.0165 max 0.0208 | reste o2b med 0.0135 q90 0.0216 max 0.0297 corr -0.05 | reste o2 med 0.0135 q90 0.0187 max 0.0222 corr +0.27
+|d| <= 0.03                        n= 22 k=4 contre k=3 : |brut| med 0.0521 q90 0.0795 max 0.0925 | reste o2b med 0.1350 q90 0.1977 max 0.2179 corr -0.88 | reste o2 med 0.0659 q90 0.1611 max 0.1767 corr +0.16
+0.03 < |d| <= 0.06                 n=136 k=2 contre k=3 : |brut| med 0.0148 q90 0.0310 max 0.0471 | reste o2b med 0.0067 q90 0.0261 max 0.0445 corr +0.63 | reste o2 med 0.0221 q90 0.0392 max 0.0579 corr +0.13
+0.03 < |d| <= 0.06                 n=136 k=4 contre k=3 : |brut| med 0.0407 q90 0.0940 max 0.1544 | reste o2b med 0.0384 q90 0.0927 max 0.1176 corr +0.55 | reste o2 med 0.0630 q90 0.1648 max 0.2216 corr -0.14
+0.06 < |d| <= 0.10                 n= 85 k=2 contre k=3 : |brut| med 0.0193 q90 0.0473 max 0.0660 | reste o2b med 0.0439 q90 0.1382 max 0.2536 corr -0.07 | reste o2 med 0.0254 q90 0.0628 max 0.1087 corr +0.01
+0.06 < |d| <= 0.10                 n= 85 k=4 contre k=3 : |brut| med 0.0474 q90 0.1036 max 0.1382 | reste o2b med 0.0509 q90 0.1229 max 0.1834 corr -0.07 | reste o2 med 0.0626 q90 0.1457 max 0.2084 corr +0.12
+|d| > 0.10                         n= 14 k=2 contre k=3 : |brut| med 0.0323 q90 0.0561 max 0.0623 | reste o2b med 0.0678 q90 0.2069 max 0.3344 corr -0.09 | reste o2 med 0.0265 q90 0.0517 max 0.0641 corr +0.36
+|d| > 0.10                         n= 14 k=4 contre k=3 : |brut| med 0.0621 q90 0.1513 max 0.1884 | reste o2b med 0.0862 q90 0.1831 max 0.2013 corr -0.02 | reste o2 med 0.0917 q90 0.1952 max 0.2592 corr -0.20
+t_rc <= 0.3                        n=  0
+0.3 < t_rc <= 0.6                  n= 21 k=2 contre k=3 : |brut| med 0.0114 q90 0.0165 max 0.0292 | reste o2b med 0.0106 q90 0.0202 max 0.0241 corr +0.36 | reste o2 med 0.0137 q90 0.0207 max 0.0265 corr +0.26
+0.3 < t_rc <= 0.6                  n= 21 k=4 contre k=3 : |brut| med 0.0415 q90 0.0704 max 0.0795 | reste o2b med 0.1060 q90 0.1936 max 0.2179 corr -0.88 | reste o2 med 0.0461 q90 0.1219 max 0.1767 corr +0.29
+0.6 < t_rc <= 1.2                  n=147 k=2 contre k=3 : |brut| med 0.0151 q90 0.0309 max 0.0471 | reste o2b med 0.0075 q90 0.0305 max 0.0492 corr +0.53 | reste o2 med 0.0206 q90 0.0392 max 0.0579 corr +0.13
+0.6 < t_rc <= 1.2                  n=147 k=4 contre k=3 : |brut| med 0.0428 q90 0.0976 max 0.1544 | reste o2b med 0.0405 q90 0.1018 max 0.2010 corr +0.43 | reste o2 med 0.0636 q90 0.1648 max 0.2216 corr -0.12
+t_rc > 1.2                         n= 89 k=2 contre k=3 : |brut| med 0.0219 q90 0.0517 max 0.0660 | reste o2b med 0.0502 q90 0.1561 max 0.3344 corr -0.09 | reste o2 med 0.0259 q90 0.0641 max 0.1087 corr +0.08
+t_rc > 1.2                         n= 89 k=4 contre k=3 : |brut| med 0.0481 q90 0.1187 max 0.1884 | reste o2b med 0.0531 q90 0.1354 max 0.2013 corr -0.05 | reste o2 med 0.0666 q90 0.1485 max 0.2592 corr +0.07
+
+FACTEUR DE BOITE selon la chaine, C3 = emulation(k=3) / chaine sans boite, et residus :
+  tous                 n=257  C3 : min 0.839 med 1.001 max 1.191 | chaine sans boite / 2D(k=3) : min 0.002 med 1.064 max 1.652 | emulation / 2D (k=3) : min 0.002 med 1.063 max 1.750
+  |d| <= 0.03          n= 22  C3 : min 0.983 med 1.004 max 1.014 | chaine sans boite / 2D(k=3) : min 1.001 med 1.019 max 1.046 | emulation / 2D (k=3) : min 0.996 med 1.024 max 1.059
+  0.03 < |d| <= 0.06   n=136  C3 : min 0.982 med 1.000 max 1.020 | chaine sans boite / 2D(k=3) : min 0.999 med 1.044 max 1.125 | emulation / 2D (k=3) : min 0.998 med 1.052 max 1.117
+  0.06 < |d| <= 0.10   n= 85  C3 : min 0.849 med 1.004 max 1.191 | chaine sans boite / 2D(k=3) : min 1.059 med 1.186 max 1.508 | emulation / 2D (k=3) : min 1.036 med 1.186 max 1.744
+  |d| > 0.10           n= 14  C3 : min 0.839 med 0.990 max 1.141 | chaine sans boite / 2D(k=3) : min 0.002 med 1.222 max 1.652 | emulation / 2D (k=3) : min 0.002 med 1.188 max 1.750

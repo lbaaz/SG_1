@@ -1,0 +1,67 @@
+[
+ {
+  "nom": "K01",
+  "tient": true,
+  "detail": "lot 42110a3d1eabdaa0, 55 pieces au manifeste, toutes au canon dans le dossier extrait : True ; gel 432319b9feb34b82"
+ },
+ {
+  "nom": "K02",
+  "tient": true,
+  "detail": "sonde, bloc, feuille, banc, reference des ancres : canon au manifeste == canon recalcule == canon ecrit dans le gel (5 sur 5)"
+ },
+ {
+  "nom": "K03",
+  "tient": true,
+  "detail": "11 canons de la section 2 relus a leur chemin (registre 8d54bf9 ou racine) : 11 resolus, hors canon []"
+ },
+ {
+  "nom": "K03b",
+  "tient": true,
+  "detail": "le lot de la note, 4103eae43f989877, recalcule de son manifeste : 4103eae43f989877"
+ },
+ {
+  "nom": "K04",
+  "tient": true,
+  "detail": "tableau du gel (12 lignes) == depot recalcule : w2, facteur, r_c, etats juges, N sous A, B, C, D, et eta0 = |w2 - 2| ; somme des etats 137 ; ecarts []"
+ },
+ {
+  "nom": "K05",
+  "tient": true,
+  "detail": "comptes G-T5 recalcules : etage 0 84, ancres 192, TP 96, TN 96, etage 2 6576 lectures (137 etats x 4 x 12)"
+ },
+ {
+  "nom": "K06",
+  "tient": true,
+  "detail": "aux douze points : un etat de rang 0 juge et des etiquettes (n1, n2) deux a deux distinctes ; aux ancres A1 et A2 : 14 etats, largeurs deposees a k = 2, 3, 4"
+ },
+ {
+  "nom": "K07",
+  "tient": true,
+  "detail": "section 4 (v) : ecart entre k = 2, 3 et 4 : mediane 0.0738, pire 0.2209 sur 137 etats (le gel : 0.074, 0.221, 137)"
+ },
+ {
+  "nom": "K08",
+  "tient": true,
+  "detail": "annonces : A-1 six probabilites, somme 1.00 ; A-2 trois, somme 1.00"
+ },
+ {
+  "nom": "K09",
+  "tient": true,
+  "detail": "constantes de la sonde et de la feuille == texte du gel (11 + 9 controles) ; manque dans le code [], dans le gel []"
+ },
+ {
+  "nom": "K10",
+  "tient": true,
+  "detail": "section 4 (i) : sous les cinq absorbeurs longs de la note, pire etalement 0.0152 (gel 0.0152), plus grand ecart entre les cinq valeurs de plateau 0.0070 (gel 0.0070) ; relu dans MON rejeu, qui n a pas ete fait pour cela"
+ },
+ {
+  "nom": "K11",
+  "tient": false,
+  "detail": "(iii) : TP tient 8 sur 8, pire |ln(Gamma_pl / ref)| 0.0007 (gel 0.0007) ; TN : plateau 0 sur 8, rapport entre barreaux voisins a 0.0044 de 2 au plus (gel 0.002), largeur a k = 3 de 1.4e-52 a 1.6e-39 (gel 1e-52 a 2e-39)"
+ },
+ {
+  "nom": "K12",
+  "tient": true,
+  "detail": "(iv) : etage 0 de machine 1 : 84 lectures, 0 hors tolerance, pire ecart absolu 5.8e-13 (gel 5.8e-13), relatif au-dessus de mille planchers 2.9e-04 (gel 2.9e-4) ; reglage : 1824 lectures, -2 Im(lambda) s ecarte de 2 eta <W> de 6.3e-04 au pire (gel 6e-04)"
+ }
+]
