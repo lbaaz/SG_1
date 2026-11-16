@@ -1,0 +1,15 @@
+(a) hermiticite de V sur le vrai operateur : ecart relatif max 0.000e+00 (|V| max 2.150e+01)
+    echelle de 6 sites (m = -1 .. 4), B 78 etats, plus petit ecart A-B 0.650, g0 = 3.024e-04 (|V| max 6.500e-03)
+(b) g = 3.024e-04 : reste sans l ordre 3 3.656e-08 ; avec 6.944e-10 ; |H3| max 3.656e-08
+(b) g = 6.048e-04 : reste sans l ordre 3 2.925e-07 ; avec 1.111e-08 ; |H3| max 2.925e-07
+(b) g = 1.210e-03 : reste sans l ordre 3 2.342e-06 ; avec 1.777e-07 ; |H3| max 2.340e-06
+(b) g = 2.419e-03 : reste sans l ordre 3 1.879e-05 ; avec 2.840e-06 ; |H3| max 1.872e-05
+    exposants de g (attendus : 3 sans l ordre 3, 4 avec) : sans ['3.00', '3.00', '3.00'] ; avec ['4.00', '4.00', '4.00']
+(c) mes chemins contre la formule dense (|H3| max 3.656e-08) : plus grand ecart 1.810e-15 (relatif au plus grand saut) ; sauts d ordre 3 aux j pairs et diagonale (doivent etre nuls) : 0.000e+00
+    j = 1 : 5 saut(s), |saut| de 3.129e-12 a 3.656e-08 (le plus grand |H3| : 3.656e-08), ecart relatif au saut lui-meme 4.224e-15
+    j = 3 : 3 saut(s), |saut| de 4.850e-12 a 3.965e-10 (le plus grand |H3| : 3.656e-08), ecart relatif au saut lui-meme 3.268e-15
+    j = 5 : 1 saut(s), |saut| de 6.131e-14 a 6.131e-14 (le plus grand |H3| : 3.656e-08), ecart relatif au saut lui-meme 1.235e-15
+(d) saut lointain contre l effectif exact, ecart relatif au saut lui-meme (attendu : en g^2, facteur 4 par doublement de g)
+    j = 3 (m = -1 -> 2) : g = 1.21e-03 2.42e-03 4.84e-03 : ecarts relatifs 4.71e-05 1.86e-04 7.35e-04 ; rapports 3.95 3.95
+    j = 5 (m = -1 -> 4) : g = 1.21e-03 2.42e-03 4.84e-03 : ecarts relatifs 7.44e-03 2.92e-02 1.13e-01 ; rapports 3.92 3.87
+EPREUVE SUR LA BASE TRONQUEE : hermiticite TIENT ; formule contre l exact TIENT ; chemins contre formule dense TIENT ; sauts lointains j = 3 et 5 contre l exact TIENT

@@ -1,0 +1,44 @@
+code retour du script de machine 1 : 0
+ETAPE 1 : la chaine d'ordre 2 contre la largeur de plateau (etats juges du delta 98 : 132, dont QUALIFIES : 131)
+  bande      borne  etats   q2 contre la lecture deposee        q2 contre le plateau                  hors borne   (etats QUALIFIES)
+                            min     mediane max                 min     mediane max                  depose plateau
+  proche     1.25    46     1.002   1.054   1.136               1.015   1.079   1.097                0      0
+  moyenne    1.6     41     1.041   1.128   1.447               1.085   1.100   1.383                0      0
+  lointaine  2.0     44     1.093   1.271   1.679               1.117   1.244   1.682                0      0
+  par point (QUALIFIES) : id, delta, etats, q2 depose min/med/max, q2 plateau min/med/max
+    C1  -0.03   8   1.002 1.042 1.055    1.017 1.029 1.040
+    C2  -0.06  11   1.044 1.099 1.136    1.079 1.095 1.097
+    C3  +0.03  14   1.015 1.021 1.032    1.015 1.021 1.025
+    C4  +0.06  13   1.067 1.076 1.091    1.079 1.084 1.086
+    M1  -0.07  11   1.075 1.120 1.140    1.088 1.095 1.099
+    M2  -0.08  13   1.041 1.108 1.144    1.085 1.095 1.106
+    M3  +0.07   8   1.114 1.128 1.153    1.153 1.158 1.163
+    M4  +0.10   9   1.356 1.388 1.447    1.352 1.365 1.383
+    L1  -0.11  14   1.093 1.181 1.226    1.117 1.170 1.180
+    L2  -0.12  10   1.171 1.229 1.314    1.204 1.234 1.250
+    L3  +0.11  11   1.273 1.308 1.350    1.259 1.289 1.345
+    L4  +0.12   9   1.508 1.579 1.679    1.599 1.629 1.682
+  ajustement ln q = c delta^2 m_bord contre lecture deposee : c = 2.641, correlation 0.910, ecart-type restant 0.0517
+  ajustement ln q = c delta^2 m_bord contre plateau         : c = 2.658, correlation 0.942, ecart-type restant 0.0420
+  q2 depose : de 1.002 a 1.679 (0 sous 1) ; q2 plateau : de 1.015 a 1.682 (0 sous 1) ; pire : L4 rang 0 (1.682, depose 1.571)
+  deplacement |ln(q2 plateau / q2 depose)| : mediane 0.0187, plus grand 0.1023
+
+sortie de machine 1 contre la mienne : 2921 feuilles, 4 differentes (non numeriques : 0), plus grand ecart relatif 4.441e-16
+etats juges 132, QUALIFIES 131
+etendue de ln q2 dans un point, contre la lecture deposee : mediane 0.0622 (de 0.0172 a 0.1155)
+etendue de ln q2 dans un point, contre la plateau         : mediane 0.0205 (de 0.0063 a 0.0661)
+tableau 3.5, etiquette (6, 2) : Gamma_pl(A) / |delta| aux sept points (QUALIFIES)
+  L2  delta -0.12  rang  1  Gamma_pl/|delta| = 9.951e-11  q1 1.283  q2 1.215
+  M1  delta -0.07  rang  2  Gamma_pl/|delta| = 1.436e-10  q1 0.896  q2 1.089
+  L1  delta -0.11  rang  1  Gamma_pl/|delta| = 8.086e-07  q1 0.950  q2 1.175
+  M2  delta -0.08  rang  0  Gamma_pl/|delta| = 9.188e-07  q1 0.844  q2 1.104
+  C4  delta +0.06  rang  2  Gamma_pl/|delta| = 4.944e-07  q1 1.613  q2 1.085
+  C3  delta +0.03  rang  3  Gamma_pl/|delta| = 1.263e-05  q1 1.136  q2 1.021
+  L3  delta +0.11  rang  2  Gamma_pl/|delta| = 4.633e-06  q1 3.133  q2 1.263
+dependance de ma reference a l absorbeur, |ln(Gamma_pl(X) / Gamma_pl(A))| sur les 136 etats QUALIFIES du verdict (et sur les 72 des six points C1 C2 C3 C4 M1 M2)
+  tous les points B : 136 etats, mediane 0.0000, p90 0.0020, max 0.0129
+  tous les points C : 136 etats, mediane 0.0008, p90 0.0087, max 0.0174
+  tous les points D : 136 etats, mediane 0.0000, p90 0.0057, max 0.0264
+  six points      B :  72 etats, mediane 0.0000, p90 0.0001, max 0.0003
+  six points      C :  72 etats, mediane 0.0006, p90 0.0030, max 0.0057
+  six points      D :  72 etats, mediane 0.0000, p90 0.0001, max 0.0005

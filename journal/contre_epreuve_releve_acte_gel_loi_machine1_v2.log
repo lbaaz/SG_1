@@ -1,0 +1,13 @@
+mutation 1 (R03) :     BP  13 / 13 /  5 /  8   TIENT  -> mordus ['R03'] : comme attendu
+mutation 2 (R03) : |ln q3| 0.0740   marge +0.0260     -> mordus ['R03'] : comme attendu
+mutation 3 (R05) : vaut 0.099617 pour T = 0.10        -> mordus ['R05'] : comme attendu
+mutation 4 (R06) : [0.3, 0.5[ : 59, 0.0160, 0.0770    -> mordus ['R06'] : comme attendu
+mutation 5 (R07) : totale 6166 s ; 19 appels          -> mordus ['R07'] : comme attendu
+mutation 6 (R02) : 87e9221cfc5f8f9b                   -> mordus ['R02'] : comme attendu
+mutation 7 (R04) : 1.6e-09 sur ln q3                  -> mordus ['R04'] : comme attendu
+mutation 8 (R05) : negatif a 58 etats sur 60          -> mordus ['R05'] : comme attendu
+mutation 9 (R05) : marge en logarithme est 0.174      -> mordus ['R05'] : comme attendu
+mutation 10 (R05) : soit 6.2 fois la marge             -> mordus ['R05'] : comme attendu
+mutation 11 (R05) : +0.000383, +0.0024, +0.0025        -> mordus ['R05'] : comme attendu
+mutation 12 (R05) : le 16/11 a 00 h 54                 -> mordus ['R05'] : comme attendu
+CONTRE-EPREUVE : 12 mutations, toutes mordues sur le controle vise

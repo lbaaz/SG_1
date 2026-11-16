@@ -1,0 +1,84 @@
+--- journal_delta_nn_loi_largeur_ordre3_v1.md	2026-11-16 06:58:32.497451130 +0100
++++ journal_delta_nn_loi_largeur_ordre3_v2.md	2026-11-16 07:33:57.174128594 +0100
+@@ -1,7 +1,7 @@
+ DELTA nn -- LOI DE LA LARGEUR, CHAINE D'ORDRE 3 : RUN DU 16/11/2026 SOUS LE GEL EN DEUX PARTIES
+ b56ca5cb2dd25da1 (REGLE DE TIRAGE) ET 543d8b33e5c9afb8 (INSTRUMENT, ENONCES).
+ VERDICT : E1 TENU, E2 TENU, E1B TENU, E3 TENU.
+--- PROJET, VERSION 1
++-- PROJET, VERSION 2 (trois retouches demandees par machine 2 au contreseing de la v1 : nn.9)
+ (plume machine 1 ; certification, run et seconde feuille machine 2 ; a contresigner par machine 2)
+ =======================================================================
+ 
+@@ -27,11 +27,12 @@
+   certifiee par machine 2 AVANT le run (lot 5a5ba910be8b3b29) : aucune morsure d'instrument ; une
+   morsure de description sans effet (O-1, nn.9) ; quatre reserves sans correction (nn.9). Son
+   pre-vol sur BOCAL4 avec les pieces finales tient 5 sur 5.
+-  Feu vert. Machine 2 rapporte que l'operateur lui a ecrit, vers 1 h le 16/11 : "Tu peux
+-  considerer que tu as mon feu vert pour lancer, car je vais me coucher et je veux que ca avance
+-  dans la nuit, ok ? Evidemment si et seulement si la certification est ok pour toi". Machine 1
+-  n'a pas vu ce message ; l'operateur lui a seulement dit, a 01 h 01, qu'il pensait machine 2 deja
+-  partie sur le run. C'est a l'operateur de l'attester.
++  Feu vert. Machine 2 rapporte que l'operateur lui a ecrit, le 16/11 a 00 h 54 (heure qu'elle lit
++  dans le journal de sa session) : "Tu peux considerer que tu as mon feu vert pour lancer, car je
++  vais me coucher et je veux que ca avance dans la nuit, ok ? Evidemment si et seulement si la
++  certification est ok pour toi". Machine 1 n'a pas vu ce message ; l'operateur lui a seulement
++  dit, a 01 h 01, qu'il pensait machine 2 deja partie sur le run. C'est a l'operateur de
++  l'attester.
+   Run. UN run, dans un dossier neuf, lance le 2026-11-16 a 01:49:18 et fini a 03:32:04 ; duree
+   totale 6166 s ; 19 appels, tous au code 0 ; aucun arret, aucune relance (journal du pilote,
+   125ebdb9027a3dfb). Table jouee : 35fa7b73f2b7f8eb, sans --prevol. Les douze canons que le pilote
+@@ -110,12 +111,18 @@
+   vaut 0.099617 pour T = 0.10 : marge +0.000383. BP TIENT selon la regle gelee, et l'acte n'en dit
+   pas plus : a cette cellule l'erreur de l'ordre 3 EST la tolerance. Ce verdict ne tient pas aux
+   gardes : les 8 etats de BP qui sont hors du domaine ont tous |ln q3| <= 0.0948, sous la
+-  tolerance eux aussi ; il tient au seul etat de rang 3. Plus petites distances d'un etat juge a
+-  une garde, dans tout le run : 0.0100 a e_bord = 0.7 (BP rang 5), 0.0041 a la stabilite 0.05 (BP
+-  rang 4).
++  tolerance eux aussi ; il tient au seul etat de rang 3. Precision demandee par machine 2 au
++  contreseing, nombres refaits par machine 1 : il ne faut pas lire que les autres etats ont de la
++  reserve. Trois des cinq etats du domaine de BP sont a moins de 0.0026 de la tolerance (rangs 3,
++  10 et 1 : +0.000383, +0.0024, +0.0025). Et la reference n'est pas connue a cette precision :
++  l'etalement du plateau que le lecteur publie a l'etat de rang 3 vaut 0.0024, le plus grand des
++  144 etats lus (mediane 0.00004), soit 6.2 fois la marge ; le plateau B s'y ecarte du plateau A
++  de 9.9e-05 en logarithme. Le verdict de BP est la lecture de la regle gelee, pas une mesure a
++  cette precision. Plus petites distances d'un etat juge a une garde, dans tout le run : 0.0100 a
++  e_bord = 0.7 (BP rang 5), 0.0041 a la stabilite 0.05 (BP rang 4).
+   E3. L'ordre 2 est dans la borne du delta 98 aux 141 etats juges : ligne N (borne 1.6), |ln q2|
+   au plus 0.1048 ; ligne P (borne 1.25), au plus 0.0493 ; BN 0.1106 ; BP 0.1204. La plus petite
+-  marge en logarithme est 0.173, sur la ligne P.
++  marge en logarithme est 0.174, sur la ligne P.
+ 
+ nn.6 CE QUI ETAIT CONSIGNE SANS ETRE JUGE
+   Signe de ln q3 dans le domaine : ligne N, negatif a 58 etats sur 60 ; ligne P, positif a 57 sur
+@@ -180,6 +187,13 @@
+   R-2 (pilote derive) : accepte, nn.1. R-3 (la regle des marges n'etait ecrite que dans le script)
+   : exact ; elle est redite en nn.7. R-4 : l'acte du gel ter reste contresigne et non depose ; la
+   reference de ce run est donc toujours un lecteur dont l'acte est hors registre (gel, L-2).
++  RETOUCHES DE LA VERSION 2. La version 1 de cet acte (a3f7d5d6809dcfe5) a ete relue par machine 2
++  (lot bbb74a8df7697397) : 68 controles, 67 tenus, une morsure de description. Trois retouches de
++  fond : (1) nn.5, E3 : la plus petite marge se lit 0.174 et non 0.173 (0.1738 ; la plume l'avait
++  arrondie par defaut) : correction demandee, sans effet sur un verdict ; (2) nn.5, E1B : la
++  precision sur BP, demandee comme precision et non comme condition ; (3) nn.1 : l'heure du feu
++  vert, 00 h 54 au lieu de "vers 1 h". S'y ajoutent, et rien d'autre : ce paragraphe, la mention
++  de version en tete, la ligne de fin, et le rappel de (2) dans la limite sur BP (nn.10).
+   Ecart de la plume : le gel (section 11) citait 2.2e-05 en relatif comme ecart de chaine entre
+   les deux machines, mesure aux ancres au gel du delta 98. Sur ce run il est de 1.6e-09 sur ln q3.
+   La plume avait cite le plus grand ecart du moteur, pas celui des blocs d'ordre 2 et 3 qui font
+@@ -189,8 +203,9 @@
+   Celles du gel, section 13, restent : un seul w2 par ligne ; la reference est le lecteur du gel
+     ter ; l'objet juge est UNE chaine, forme symetrique ; les tolerances sont lues sur des points
+     joues, pas tirees d'une theorie.
+-  BP tient a 0.000383 pres. Un run a un autre w2 du meme creneau pourrait tomber ; l'acte ne dit
+-    pas ou passe le bord du domaine a delta > 0.
++  BP tient a 0.000383 pres, et la reference n'y est pas connue a cette precision (nn.5). Un run a
++    un autre w2 du meme creneau pourrait tomber ; l'acte ne dit pas ou passe le bord du domaine a
++    delta > 0.
+   A delta > 0 le plus grand ecart de l'ordre 3 croit quand le couplage baisse, et la ligne P
+     s'arrete au facteur 3/4 : rien n'est dit en dessous.
+   P1 et P2 n'ont que 9 et 10 etats lus (12 et 13 predits dans le domaine) : aux faibles couplages,
+@@ -218,4 +233,4 @@
+     a34e5369e36bd10b verdict d'ordre 3 rejoue par machine 1
+     b0fcb117f8d5107e verdict du lecteur rejoue par machine 1
+ 
+--- FIN journal_delta_nn_loi_largeur_ordre3_v1 --
++-- FIN journal_delta_nn_loi_largeur_ordre3_v2 --

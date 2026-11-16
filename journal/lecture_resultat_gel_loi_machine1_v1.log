@@ -1,0 +1,31 @@
+ETATS : 141 juges, 129 dans le domaine, 12 hors
+  e_bord dans [0.0, 0.3[ :  40 etats du domaine ; |ln q3| mediane 0.0166, plus grand 0.0336
+  e_bord dans [0.3, 0.5[ :  59 etats du domaine ; |ln q3| mediane 0.0160, plus grand 0.0770
+  e_bord dans [0.5, 0.7[ :  30 etats du domaine ; |ln q3| mediane 0.0411, plus grand 0.0996
+  cellules de ligne : 117 etats du domaine ; |ln q3| mediane 0.0175, plus grand 0.0740 ; au-dela de e_bord = 0.603 (le plus grand vu avant le run) : 5 etats du domaine
+REGULARITE a delta < 0 : 67 etats du domaine, ln q3 negatif a 65 ; k aux 67 etats ou |ln(G3/G2)| >= 0.05 : mediane 2.03, de -0.53 a 2.85 (avant le run : mediane 1.99, de 0.55 a 3.24) ; k > 3.24 a 0 etats
+REGULARITE a delta > 0 : 62 etats du domaine, ln q3 positif a 62 ; ln q3 / delta^2 : mediane 14.1, plus grand 27.4 (avant : au plus 15.0) -> depasse a 28 etats ; ln q3 / delta^3 : mediane 378, plus grand 784 (avant : au plus 493) -> depasse a 15 etats
+     P  : 57 etats ; ln q3 / delta^3 de 136 a 784 ; ln q3 / delta^2 de 4.8 a 27.4
+     BP :  5 etats ; ln q3 / delta^3 de 255 a 331 ; ln q3 / delta^2 de 17.1 a 22.2
+ATTENTES GELEES (7.3, regle la plus defavorable) contre le REALISE (pire |ln q3| du domaine) :
+  N1  attente 0.0866 ; realise 0.0740 ; sous l'attente ; domaine predit 11, lu 11 ; ln(G3/G2) median predit -0.1524, lu -0.1512
+  N2  attente 0.0620 ; realise 0.0427 ; sous l'attente ; domaine predit 10, lu 11 ; ln(G3/G2) median predit -0.1311, lu -0.1279
+  N3  attente 0.0406 ; realise 0.0355 ; sous l'attente ; domaine predit 12, lu 11 ; ln(G3/G2) median predit -0.1056, lu -0.1055
+  N4  attente 0.0254 ; realise 0.0208 ; sous l'attente ; domaine predit 13, lu 14 ; ln(G3/G2) median predit -0.0840, lu -0.0835
+  N5  attente 0.0194 ; realise 0.0157 ; sous l'attente ; domaine predit 14, lu 13 ; ln(G3/G2) median predit -0.0731, lu -0.0729
+  P1  attente 0.0211 ; realise 0.0336 ; AU-DESSUS de l'attente ; domaine predit 12, lu  9 ; ln(G3/G2) median predit -0.0155, lu -0.0150
+  P2  attente 0.0211 ; realise 0.0302 ; AU-DESSUS de l'attente ; domaine predit 13, lu 10 ; ln(G3/G2) median predit -0.0165, lu -0.0165
+  P3  attente 0.0211 ; realise 0.0219 ; AU-DESSUS de l'attente ; domaine predit 13, lu 12 ; ln(G3/G2) median predit -0.0175, lu -0.0177
+  P4  attente 0.0211 ; realise 0.0217 ; AU-DESSUS de l'attente ; domaine predit 13, lu 13 ; ln(G3/G2) median predit -0.0178, lu -0.0179
+  P5  attente 0.0211 ; realise 0.0201 ; sous l'attente ; domaine predit 13, lu 13 ; ln(G3/G2) median predit -0.0174, lu -0.0176
+  BN  attente 0.0734 ; realise 0.0461 ; sous l'attente ; domaine predit  7, lu  7 ; ln(G3/G2) median predit -0.1411, lu -0.1411
+  BP  attente 0.1481 ; realise 0.0996 ; sous l'attente ; domaine predit  6, lu  5 ; ln(G3/G2) median predit -0.0355, lu -0.0206
+SIGNES ligne N : 60 etats du domaine, 58 negatifs, 2 positifs
+SIGNES ligne P : 57 etats du domaine, 0 negatifs, 57 positifs
+E2 : N1 11 sur 11 (seuil 9) ; N2 11 sur 11 (seuil 9) ; N3 11 sur 11 (seuil 9) ; N4 14 sur 14 (seuil 11) ; N5 13 sur 13 (seuil 10) ; total 60 sur 60
+E3 N  : borne 1.60 (ln = 0.470) ;  60 etats juges ; plus grand |ln q2| 0.1048 ; plus petite marge 0.365
+E3 P  : borne 1.25 (ln = 0.223) ;  57 etats juges ; plus grand |ln q2| 0.0493 ; plus petite marge 0.174
+E3 BN : borne 1.60 (ln = 0.470) ;  11 etats juges ; plus grand |ln q2| 0.1106 ; plus petite marge 0.359
+E3 BP : borne 1.60 (ln = 0.470) ;  13 etats juges ; plus grand |ln q2| 0.1204 ; plus petite marge 0.350
+HORS DU DOMAINE : 12 etats (e_bord de 0.489 a 0.711 ; 10 exclus du domaine par la stabilite seule) ; ordre 3 plus loin que l'ordre 2 a 0 ; |ln q3| au plus 0.0948 ; |ln q2| au plus 0.1204
+ETIQUETTES : 144 etats lus, dont 132 portent une etiquette parmi les 14 predites de leur cellule ; par cellule : N1 10/11 N2 9/11 N3 11/12 N4 13/14 N5 13/14 P1 8/9 P2 9/10 P3 11/12 P4 13/13 P5 12/13 BN 11/12 BP 12/13

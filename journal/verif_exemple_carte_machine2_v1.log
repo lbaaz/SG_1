@@ -1,0 +1,14 @@
+lignes du tableau d exemple lues chez machine 1 : 10 (attendu 10)
+  delta -0.06 x1    : g 2.096e-03 (note 2.096e-03) ; largeur ordre 3 8.669e-12 (note 8.670e-12 d) ; e_bord 0.52 (note 0.52) ; |ln(ordre 2 / ordre 3)| 0.092 -> discriminant a 5 pour cent : oui (note : oui)
+  delta -0.06 x6/5  : g 2.515e-03 (note 2.515e-03) ; largeur ordre 3 2.990e-09 (note 2.990e-09 d) ; e_bord 0.41 (note 0.41) ; |ln(ordre 2 / ordre 3)| 0.073 -> discriminant a 5 pour cent : oui (note : oui)
+  delta -0.06 x4/3  : g 2.794e-03 (note 2.794e-03) ; largeur ordre 3 5.646e-08 (note 5.650e-08 d) ; e_bord 0.35 (note 0.35) ; |ln(ordre 2 / ordre 3)| 0.064 -> discriminant a 5 pour cent : oui (note : oui)
+  delta -0.06 x3/2  : g 3.143e-03 (note 3.143e-03) ; largeur ordre 3 1.067e-06 (note 1.070e-06 d) ; e_bord 0.23 (note 0.23) ; |ln(ordre 2 / ordre 3)| 0.054 -> discriminant a 5 pour cent : oui (note : oui)
+  delta -0.06 x5/3  : g 3.493e-03 (note 3.493e-03) ; largeur ordre 3 1.074e-05 (note 1.070e-05) ; e_bord 0.18 (note 0.18) ; |ln(ordre 2 / ordre 3)| 0.046 -> discriminant a 5 pour cent : non (note : non)
+  delta +0.04 x1    : g 2.033e-03 (note 2.033e-03) ; largeur ordre 3 3.949e-12 (note 3.950e-12) ; e_bord 0.37 (note 0.37) ; |ln(ordre 2 / ordre 3)| 0.021 -> discriminant a 5 pour cent : non (note : non)
+  delta +0.04 x6/5  : g 2.440e-03 (note 2.440e-03) ; largeur ordre 3 1.333e-09 (note 1.330e-09) ; e_bord 0.29 (note 0.29) ; |ln(ordre 2 / ordre 3)| 0.023 -> discriminant a 5 pour cent : non (note : non)
+  delta +0.04 x4/3  : g 2.711e-03 (note 2.711e-03) ; largeur ordre 3 2.507e-08 (note 2.510e-08) ; e_bord 0.25 (note 0.25) ; |ln(ordre 2 / ordre 3)| 0.022 -> discriminant a 5 pour cent : non (note : non)
+  delta +0.04 x3/2  : g 3.050e-03 (note 3.050e-03) ; largeur ordre 3 4.702e-07 (note 4.700e-07) ; e_bord 0.20 (note 0.20) ; |ln(ordre 2 / ordre 3)| 0.021 -> discriminant a 5 pour cent : non (note : non)
+  delta +0.04 x5/3  : g 3.389e-03 (note 3.389e-03) ; largeur ordre 3 4.798e-06 (note 4.800e-06) ; e_bord 0.16 (note 0.16) ; |ln(ordre 2 / ordre 3)| 0.019 -> discriminant a 5 pour cent : non (note : non)
+plus grands ecarts : couplage (relatif) 1.64e-04 ; largeur d ordre 3 (relatif) 3.95e-03 ; e_bord (absolu, deux decimales de la note) 0.005
+marque "d" (discriminant a 5 pour cent) : IDENTIQUE aux dix lignes
+EXEMPLE DE LA CARTE : TIENT

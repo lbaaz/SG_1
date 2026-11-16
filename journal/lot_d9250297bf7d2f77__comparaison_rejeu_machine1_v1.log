@@ -1,0 +1,18 @@
+LECTEUR : 144 etats lus, 144 QUALIFIES ; memes etats et memes statuts au run et au rejeu : oui ; plus grand ecart relatif d'une largeur de plateau : 7.3e-15 ; verdict du lecteur au run : ESTIMATEUR QUALIFIE
+FEUILLE D'ORDRE 3 : issues du run : E1 TENU, E2 TENU, E1B TENU, E3 TENU ; memes issues au rejeu : oui ; memes comptes (144 lus, 141 juges, 129 du domaine, 12 hors) : oui ; memes cellules, exclusions et domaines, etat par etat : oui
+   plus grands ecarts entre machines, sur 141 etats juges : ln q3 1.6e-09 ; ln q2 1.1e-09 ; e_bord 0.0e+00 ; stabilite 1.7e-09
+MARGES (run) : a la tolerance, la plus petite : +0.000383 a BP rang 3 (8,1) : |ln q3| = 0.099617 pour T = 0.10 ; a la garde e_bord 0.7 : 0.0100 (BP rang 5) ; a la garde de stabilite 0.05 : 0.0041 (BP rang 4) ; a la frontiere e_bord 0.3 des tolerances : 0.0124 (P5 rang 5)
+MARGES (rejeu) : a la tolerance, la plus petite : +0.000383 a BP rang 3 (8,1) : |ln q3| = 0.099617 pour T = 0.10 ; a la garde e_bord 0.7 : 0.0100 (BP rang 5) ; a la garde de stabilite 0.05 : 0.0041 (BP rang 4) ; a la frontiere e_bord 0.3 des tolerances : 0.0124 (P5 rang 5)
+PAR CELLULE (run) : juges / domaine / hors ; ln q3 du domaine (min, mediane, max) ; ln q2 du domaine (mediane) ; ordre 3 plus pres / domaine ; marge de la cellule a sa tolerance ; e_bord max du domaine ; exclus
+  N1  11 / 11 /  0 ; ln q3 -0.0740 -0.0464 -0.0343 ; ln q2 +0.1026 ; 11 / 11 ; marge +0.0260 ; e_bord max 0.625 (au-dela de 0.603 : 2) ; exclus []
+  N2  11 / 11 /  0 ; ln q3 -0.0427 -0.0374 -0.0210 ; ln q2 +0.0908 ; 11 / 11 ; marge +0.0573 ; e_bord max 0.565 (au-dela de 0.603 : 0) ; exclus []
+  N3  11 / 11 /  0 ; ln q3 -0.0355 -0.0275 -0.0087 ; ln q2 +0.0800 ; 11 / 11 ; marge +0.0645 ; e_bord max 0.562 (au-dela de 0.603 : 0) ; exclus [[12, 'barriere vide']]
+  N4  14 / 14 /  0 ; ln q3 -0.0208 -0.0132 -0.0071 ; ln q2 +0.0686 ; 14 / 14 ; marge +0.0422 ; e_bord max 0.501 (au-dela de 0.603 : 0) ; exclus []
+  N5  13 / 13 /  0 ; ln q3 -0.0157 -0.0094 +0.0024 ; ln q2 +0.0627 ; 13 / 13 ; marge +0.0476 ; e_bord max 0.500 (au-dela de 0.603 : 0) ; exclus [[13, 'barriere vide']]
+  P1   9 /  9 /  0 ; ln q3 +0.0157 +0.0170 +0.0336 ; ln q2 +0.0314 ;  9 /  9 ; marge +0.0164 ; e_bord max 0.396 (au-dela de 0.603 : 0) ; exclus []
+  P2  10 / 10 /  0 ; ln q3 +0.0135 +0.0210 +0.0302 ; ln q2 +0.0375 ; 10 / 10 ; marge +0.0198 ; e_bord max 0.359 (au-dela de 0.603 : 0) ; exclus []
+  P3  12 / 12 /  0 ; ln q3 +0.0116 +0.0168 +0.0219 ; ln q2 +0.0344 ; 12 / 12 ; marge +0.0281 ; e_bord max 0.324 (au-dela de 0.603 : 0) ; exclus []
+  P4  13 / 13 /  0 ; ln q3 +0.0068 +0.0170 +0.0217 ; ln q2 +0.0349 ; 13 / 13 ; marge +0.0283 ; e_bord max 0.324 (au-dela de 0.603 : 0) ; exclus []
+  P5  13 / 13 /  0 ; ln q3 +0.0059 +0.0134 +0.0201 ; ln q2 +0.0312 ; 13 / 13 ; marge +0.0299 ; e_bord max 0.288 (au-dela de 0.603 : 0) ; exclus []
+  BN  11 /  7 /  4 ; ln q3 -0.0461 -0.0362 -0.0220 ; ln q2 +0.1057 ;  7 /  7 ; marge +0.0539 ; e_bord max 0.583 (au-dela de 0.603 : 0) ; exclus [[13, 'barriere vide']] ; hors du domaine : ordre 3 plus loin que l'ordre 2 a 0 sur 4, |ln q2| max 0.111, |ln q3| max 0.046
+  BP  13 /  5 /  8 ; ln q3 +0.0768 +0.0975 +0.0996 ; ln q2 +0.1178 ;  5 /  5 ; marge +0.0004 ; e_bord max 0.636 (au-dela de 0.603 : 3) ; exclus [] ; hors du domaine : ordre 3 plus loin que l'ordre 2 a 0 sur 8, |ln q2| max 0.120, |ln q3| max 0.095

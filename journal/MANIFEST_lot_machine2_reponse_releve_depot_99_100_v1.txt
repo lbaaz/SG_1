@@ -1,0 +1,17 @@
+MANIFESTE lot_machine2_2026-11-16_reponse_releve_depot_99_100_v1 -- REPONSE de machine 2 au releve de machine 1 apres les depots 99 et 100 (lot 860c0ca980977935) : mon releve independant (memes comptes sur les sept lots absents), le controle des lots extraits qui m'a manque et ses deux journaux d'avant le complement, l'authentification du lot de machine 1. Aucun nombre d'acte touche. machine 2, classe B
+colonnes : empreinte_B (sha256 NFC+LF, 16 hex)  empreinte_brute  octets_B  octets_bruts  fichier
+Le CANON du lot est l'empreinte B de CE manifeste ; il ne se porte pas lui-meme.
+
+f4434ca8330b278f f4434ca8330b278f     3870     3870  POUR_MACHINE1_reponse_releve_depot_99_100_machine2_v1.md
+e72af8d4fa057182 e72af8d4fa057182     2313     2313  certif_depot_99_100_machine2/authentifie_lot_releve_m1_machine2_v1.py
+3bf719c7a3fa8e8f 9053533df893cf76      176      180  certif_depot_99_100_machine2/authentifie_lot_releve_m1_machine2_v1.log
+2a18ac977c78f441 2a18ac977c78f441     5466     5466  certif_depot_99_100_machine2/releve_apres_depot_machine2_v1.py
+11a13051037bd92c eb68a76503e2977c     2173     2195  certif_depot_99_100_machine2/releve_apres_depot_machine2_v1.log
+f6d06a5d615711c6 a65567308d34e943     2105     2203  certif_depot_99_100_machine2/releve_apres_depot_machine2_v1.json
+2f799c5c0d49349e 2f799c5c0d49349e     2586     2586  certif_depot_99_100_machine2/controle_lots_entrants_machine2_v1.py
+61fe1fa437a4f7dc 8b4d37131f1201c3     1507     1518  certif_depot_99_100_machine2/controle_lots_entrants_delta99_avant_complement_machine2_v1.log
+a0cf6a8ed9eeb890 34a9b31f41ac555e     1716     1728  certif_depot_99_100_machine2/controle_lots_entrants_delta100_avant_complement_machine2_v1.log
+544fca5907b09e43 544fca5907b09e43     6016     6016  fabrique_lot_reponse_releve_depot_machine2_v1.py
+
+entrants : le releve de machine 1 860c0ca980977935 ; les depots 99 (91dd503) et 100 (54da87a) ; le registre au clone neuf 54da87a
+pieces : 10 (compte etabli APRES le dernier ajout)

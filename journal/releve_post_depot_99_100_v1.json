@@ -1,0 +1,419 @@
+{
+ "controles": {
+  "D01": {
+   "texte": "tete 54da87a ; 8d54bf9 <- 91dd503 <- 54da87a ; un commit par delta (1, 1)",
+   "tient": true
+  },
+  "D02": {
+   "texte": "delta 99 : 210 fichiers, tous ajoutes ; delta 100 : 277, tous ajoutes ; aucun fichier anterieur modifie ni retire",
+   "tient": true
+  },
+  "D03": {
+   "texte": "clone neuf sans modification locale",
+   "tient": true
+  },
+  "D04_100": {
+   "texte": "manifeste de depot 100 : 275 lignes (annonce 275), 275 au chemin, au canon, a l'empreinte brute et aux deux tailles ; en ecart : [] ; listees mais pas ajoutees par ce commit : []",
+   "tient": true
+  },
+  "D04_99": {
+   "texte": "manifeste de depot 99 : 208 lignes (annonce 208), 208 au chemin, au canon, a l'empreinte brute et aux deux tailles ; en ecart : [] ; listees mais pas ajoutees par ce commit : []",
+   "tient": true
+  },
+  "D05_100": {
+   "note": "ajoutes par le commit 100 hors des lignes du manifeste (2) : ['journal/MANIFEST_DEPOT_delta100_machine2_v2.txt', 'journal/perimetre_depot_delta100_sur_acte_v2_machine2.log']"
+  },
+  "D05_99": {
+   "note": "ajoutes par le commit 99 hors des lignes du manifeste (2) : ['journal/MANIFEST_DEPOT_delta99_machine2_v1.txt', 'journal/perimetre_depot_delta99_sur_acte_v1_machine2.log']"
+  },
+  "D06_ter": {
+   "texte": "journal/journal_delta_99_qualification_EB_ter_v1.md : 31655 octets, identique octet pour octet a mon original (journal_delta_nn_qualification_EB_ter_v1.md), canon 751165a3eee613d9 (attendu 751165a3eee613d9)",
+   "tient": true
+  },
+  "D06_v1": {
+   "texte": "journal/journal_delta_100_loi_largeur_ordre3_v1.md : 16613 octets, identique octet pour octet a mon original (journal_delta_nn_loi_largeur_ordre3_v1.md), canon a3f7d5d6809dcfe5 (attendu a3f7d5d6809dcfe5)",
+   "tient": true
+  },
+  "D06_v2": {
+   "texte": "journal/journal_delta_100_loi_largeur_ordre3_v2.md : 18109 octets, identique octet pour octet a mon original (journal_delta_nn_loi_largeur_ordre3_v2.md), canon b205b14cdfc23ba3 (attendu b205b14cdfc23ba3)",
+   "tient": true
+  },
+  "D07_ter": {
+   "note": "acte ter : 53 empreintes distinctes citees, 53 resolues au registre par canon (fichier ou manifeste de lot), non resolues : []"
+  },
+  "D07_v2": {
+   "note": "acte v2 : 24 empreintes distinctes citees, 24 resolues au registre par canon (fichier ou manifeste de lot), non resolues : []"
+  },
+  "D08": {
+   "note": "lot 548fb2ba8793ecfe (machine2_carte_reponse_v1) : 8 pieces, 0 au registre par canon, 0 a l'empreinte brute ; manifeste au registre : non ; absentes : ['POUR_MACHINE1_carte_reponse_machine2_v1.md', 'controle_carte_machine2/verif_couples_joues_machine2_v1.py', 'controle_carte_machine2/verif_couples_joues_machine2_v1.log', 'controle_carte_machine2/verif_couples_joues_machine2_v1.json', 'controle_carte_machine2/verif_exemple_carte_machine2_v1.py', 'controle_carte_machine2/verif_exemple_carte_machine2_v1.log', 'controle_carte_machine2/verif_exemple_carte_machine2_v1.json', 'fabrique_lot_carte_reponse_machine2_v1.py']"
+  },
+  "D08b": {
+   "note": "lot d9250297bf7d2f77 : au registre par canon mais sous d'autres octets que les miens : [('rejeu_machine1_lecture_ter.log', ['journal/lecture_ter.console.log']), ('rejeu_machine1_lecture_ter_instrument.log', ['journal/lecture_ter_instrument.console.log'])]"
+  },
+  "D09": {
+   "texte": "lot de machine 2 bbb74a8df7697397 : 22 pieces, 22 au registre par canon ; 3 different a l'empreinte brute, et pour chacune mes octets passes de CRLF en LF sont ceux du registre : [('certif_acte_gel_loi_machine2/releve_contreseing_acte_gel_loi_machine2_v1.py', 448, 'LF = registre'), ('certif_acte_gel_loi_machine2/releve_contreseing_acte_gel_loi_machine2_v1_second_jet.py', 443, 'LF = registre'), ('certif_acte_gel_loi_machine2/contre_epreuve_releve_acte_machine2_v1.py', 86, 'LF = registre')]",
+   "tient": true
+  },
+  "D10": {
+   "texte": "verdict d'ordre 3 87e9221cfc5f8f9b au registre : ['journal/lot_54ccae1713f92bc9__verdict_ordre3.json']",
+   "tient": true
+  },
+  "D11_0a57": {
+   "texte": "delta 100 : mon lot d'acte 0a5741ff95e7136c -- manifeste au registre : non ; pieces au registre 1 sur 10 ; absentes : 9",
+   "tient": false
+  },
+  "D11_26b3": {
+   "texte": "delta 99 : mon lot d'acte 26b3912297b31713 -- manifeste au registre : non ; pieces au registre 8 sur 30 ; absentes : 22",
+   "tient": false
+  },
+  "D11_98": {
+   "texte": "precedent : le manifeste de mon lot d'acte du delta 98 (da1c2668d317b9d5) est au registre : ['journal/MANIFEST_lot_machine1_acte_ordre2_chaine_EA_v1.txt']",
+   "tient": true
+  },
+  "D11_d925": {
+   "texte": "delta 100 : mon lot d'acte d9250297bf7d2f77 -- manifeste au registre : non ; pieces au registre 5 sur 23 ; absentes : 18",
+   "tient": false
+  },
+  "D11n": {
+   "note": "le canon 0a5741ff95e7136c est nomme par 8 fichiers du registre et n'y repond a aucun"
+  },
+  "D12": {
+   "note": "gel loi partie 2 543d8b33e5c9afb8 : 42 empreintes distinctes citees, non resolues au registre : ['26b3912297b31713', '548fb2ba8793ecfe', '889fe9b4c1c1c60a', 'e93f1898dcd78a8f']"
+  }
+ },
+ "lots": {
+  "0a5741ff95e7136c": {
+   "a_l_empreinte_brute": 1,
+   "absentes": [
+    "POUR_MACHINE2_acte_gel_loi_v2_machine1_v1.md",
+    "acte_v1_vers_v2.diff",
+    "canons_connus_releve_acte_v2.json",
+    "contre_epreuve_releve_acte_gel_loi_machine1_v2.log",
+    "contre_epreuve_releve_acte_gel_loi_machine1_v2.py",
+    "ecrire_acte_gel_loi_machine1_v2.py",
+    "ecrire_acte_v1_vers_v2.diff",
+    "releve_acte_gel_loi_machine1_v2.log",
+    "releve_acte_gel_loi_machine1_v2.py"
+   ],
+   "au_canon_autre_brut": [],
+   "au_registre_par_canon": 1,
+   "manifeste": "MANIFEST_lot_machine1_acte_gel_loi_ordre3_v2.txt",
+   "manifeste_au_registre": false,
+   "nomme_par": [
+    "journal/MANIFEST_lot_machine2_contreseing_acte_gel_loi_ordre3_v2_v1.txt",
+    "journal/POUR_MACHINE1_contreseing_acte_gel_loi_v2_machine2_v1.md",
+    "journal/authentifie_lot_acte_v2_machine2_v1.log",
+    "journal/authentifie_lot_acte_v2_machine2_v1.py",
+    "journal/derive_releve_v2_machine2.py",
+    "journal/diff_releve_v1_v2.txt",
+    "journal/fabrique_lot_contreseing_acte_gel_loi_v2_machine2_v1.py",
+    "journal/releve_contreseing_acte_gel_loi_machine2_v2.py"
+   ],
+   "pieces": 10
+  },
+  "1e8413aed149429f": {
+   "a_l_empreinte_brute": 1,
+   "absentes": [
+    "note_machine1_carte_gel_loi_2026-11-15_v1.md",
+    "POUR_MACHINE2_carte_et_reponse_contreseing_machine1_v1.md",
+    "carte_chaine_machine1_v1.py",
+    "carte_depot_v1.log",
+    "carte_depot_v1.json",
+    "carte_neg_v1.log",
+    "carte_neg_v1.json",
+    "carte_pos_v1.log",
+    "carte_pos_v1.json",
+    "lecture_carte_machine1_v1.py",
+    "lecture_carte_machine1_v1.log",
+    "lecture_carte_v1.json",
+    "ecart_exact_C07_machine1_v1.py",
+    "ecart_exact_C07_machine1_v1.log",
+    "construction_note_carte_machine1_v1.py"
+   ],
+   "au_canon_autre_brut": [],
+   "au_registre_par_canon": 1,
+   "manifeste": "MANIFEST_lot_machine1_note_carte_gel_loi_v1.txt",
+   "manifeste_au_registre": false,
+   "pieces": 16
+  },
+  "26b3912297b31713": {
+   "a_l_empreinte_brute": 6,
+   "absentes": [
+    "POUR_MACHINE2_acte_EB_ter_machine1_v1.md",
+    "comparaison_rejeu_machine1_v1.json",
+    "comparaison_rejeu_machine1_v1.py",
+    "console_point_L3_rejeu_machine1.log",
+    "console_rejeu_partiel_machine1.log",
+    "contre_epreuve_releve_acte_EB_ter_machine1_v1.log",
+    "contre_epreuve_releve_acte_EB_ter_machine1_v1.py",
+    "ecrire_acte_EB_ter_machine1_v1.py",
+    "rejeu_partiel_C1.json",
+    "rejeu_partiel_C2.json",
+    "rejeu_partiel_C3.json",
+    "rejeu_partiel_C4.json",
+    "rejeu_partiel_L1.json",
+    "rejeu_partiel_L2.json",
+    "rejeu_partiel_L4.json",
+    "rejeu_partiel_M1.json",
+    "rejeu_partiel_M2.json",
+    "rejeu_partiel_M3.json",
+    "rejeu_partiel_M4.json",
+    "rejeu_partiel_machine1_v1.py",
+    "releve_acte_EB_ter_machine1_v1.log",
+    "releve_acte_EB_ter_machine1_v1.py"
+   ],
+   "au_canon_autre_brut": [
+    [
+     "lecture_ter_instrument_rejouee_machine1.log",
+     [
+      "journal/console_feuille_instrument.log"
+     ]
+    ],
+    [
+     "lecture_ter_rejouee_machine1.log",
+     [
+      "journal/lecture_ter.log"
+     ]
+    ]
+   ],
+   "au_registre_par_canon": 8,
+   "manifeste": "MANIFEST_lot_machine1_acte_EB_ter_v1.txt",
+   "manifeste_au_registre": false,
+   "nomme_par": [
+    "gels/gel_loi_ordre3_partie2_instrument_enonces_pre_enregistrement_v1.md",
+    "journal/MANIFEST_lot_machine2_contreseing_acte_EB_ter_v1.txt",
+    "journal/MANIFEST_lot_machine2_rectification_C07_v1.txt",
+    "journal/POUR_MACHINE1_contreseing_acte_EB_ter_machine2_v1.md",
+    "journal/canons_connus_releve_v1.json",
+    "journal/fabrique_lot_contreseing_acte_EB_ter_machine2_v1.py",
+    "journal/fabrique_lot_rectification_C07_machine2_v1.py",
+    "journal/verification_acte_EB_ter_machine2_v1.json",
+    "journal/verification_acte_EB_ter_machine2_v1.log",
+    "journal/verification_acte_EB_ter_machine2_v1.py",
+    "journal/verification_acte_EB_ter_machine2_v1_premier_jet.py",
+    "journal/verification_acte_EB_ter_machine2_v1_premier_passage.json",
+    "journal/verification_acte_EB_ter_machine2_v1_premier_passage.log",
+    "journal/verification_acte_EB_ter_machine2_v1_sur_acte_mute.json",
+    "journal/verification_acte_EB_ter_machine2_v1_sur_acte_mute.log",
+    "scripts/construction_gel_partie2_machine1_v1.py"
+   ],
+   "pieces": 30
+  },
+  "4103eae43f989877": {
+   "a_l_empreinte_brute": 34,
+   "absentes": [],
+   "au_canon_autre_brut": [],
+   "au_registre_par_canon": 34,
+   "manifeste": "MANIFEST_lot_machine1_note_piste0_reprise_v1.txt",
+   "manifeste_au_registre": true,
+   "pieces": 34
+  },
+  "42110a3d1eabdaa0": {
+   "a_l_empreinte_brute": 55,
+   "absentes": [],
+   "au_canon_autre_brut": [],
+   "au_registre_par_canon": 55,
+   "manifeste": "MANIFEST_lot_machine1_gel_EB_ter_v1.txt",
+   "manifeste_au_registre": true,
+   "pieces": 55
+  },
+  "548fb2ba8793ecfe": {
+   "a_l_empreinte_brute": 0,
+   "absentes": [
+    "POUR_MACHINE1_carte_reponse_machine2_v1.md",
+    "controle_carte_machine2/verif_couples_joues_machine2_v1.py",
+    "controle_carte_machine2/verif_couples_joues_machine2_v1.log",
+    "controle_carte_machine2/verif_couples_joues_machine2_v1.json",
+    "controle_carte_machine2/verif_exemple_carte_machine2_v1.py",
+    "controle_carte_machine2/verif_exemple_carte_machine2_v1.log",
+    "controle_carte_machine2/verif_exemple_carte_machine2_v1.json",
+    "fabrique_lot_carte_reponse_machine2_v1.py"
+   ],
+   "au_canon_autre_brut": [],
+   "au_registre_par_canon": 0,
+   "manifeste": "MANIFEST_lot_machine2_carte_reponse_v1.txt",
+   "manifeste_au_registre": false,
+   "pieces": 8
+  },
+  "596a45bf6d4f97d7": {
+   "a_l_empreinte_brute": 15,
+   "absentes": [],
+   "au_canon_autre_brut": [],
+   "au_registre_par_canon": 15,
+   "manifeste": "MANIFEST_lot_machine1_gel_loi_partie1_regle_tirage_v1.txt",
+   "manifeste_au_registre": true,
+   "pieces": 15
+  },
+  "76ed746ef4db3b0c": {
+   "a_l_empreinte_brute": 63,
+   "absentes": [],
+   "au_canon_autre_brut": [
+    [
+     "tirage_machine1_v1_graine_200482.log",
+     [
+      "journal/tirage_graine_200482_script_machine1_sur_ma_machine_v1.log"
+     ]
+    ]
+   ],
+   "au_registre_par_canon": 64,
+   "manifeste": "MANIFEST_lot_machine1_gel_loi_partie2_instrument_enonces_v1.txt",
+   "manifeste_au_registre": true,
+   "pieces": 64
+  },
+  "889fe9b4c1c1c60a": {
+   "a_l_empreinte_brute": 1,
+   "absentes": [
+    "POUR_MACHINE1_ordre3_rederive_machine2_v1.md",
+    "controle_ordre3_machine2/formule_ordre3_jouet_machine2_v1.py",
+    "controle_ordre3_machine2/formule_ordre3_jouet_machine2_v1.log",
+    "controle_ordre3_machine2/ordre3_machine2_v1.log",
+    "controle_ordre3_machine2/ordre3_machine2_v1.json",
+    "controle_ordre3_machine2/ordre3_machine2_v1_base_tronquee.log",
+    "controle_ordre3_machine2/etape1_rejeu_machine2_v1.py",
+    "controle_ordre3_machine2/etape1_rejeu_machine2_v1.log",
+    "controle_ordre3_machine2/etape1_rejeu_machine2_v1.json",
+    "fabrique_lot_ordre3_machine2_v1.py"
+   ],
+   "au_canon_autre_brut": [],
+   "au_registre_par_canon": 1,
+   "manifeste": "MANIFEST_lot_machine2_ordre3_rederive_v1.txt",
+   "manifeste_au_registre": false,
+   "pieces": 11
+  },
+  "d9250297bf7d2f77": {
+   "a_l_empreinte_brute": 3,
+   "absentes": [
+    "POUR_MACHINE2_acte_gel_loi_machine1_v1.md",
+    "canons_connus_releve_acte_v1.json",
+    "comparaison_rejeu_machine1_v1.log",
+    "comparaison_rejeu_machine1_v1.py",
+    "comparaison_rejeu_v1.json",
+    "construction_note_pour_machine2_acte_machine1_v1.py",
+    "contre_epreuve_releve_acte_gel_loi_machine1_v1.log",
+    "contre_epreuve_releve_acte_gel_loi_machine1_v1.py",
+    "ecrire_acte_gel_loi_machine1_v1.py",
+    "feuille_ordre3_rejoue_machine1.log",
+    "feuille_ordre3_rejoue_sur_mon_verdict.log",
+    "lecture_resultat_gel_loi_machine1_v1.log",
+    "lecture_resultat_gel_loi_machine1_v1.py",
+    "lecture_resultat_gel_loi_v1.json",
+    "rejeu_machine1_verdict_ter_instrument.json",
+    "releve_acte_gel_loi_machine1_v1.log",
+    "releve_acte_gel_loi_machine1_v1.py",
+    "verdict_ordre3_rejoue_sur_mon_verdict.json"
+   ],
+   "au_canon_autre_brut": [
+    [
+     "rejeu_machine1_lecture_ter.log",
+     [
+      "journal/lecture_ter.console.log"
+     ]
+    ],
+    [
+     "rejeu_machine1_lecture_ter_instrument.log",
+     [
+      "journal/lecture_ter_instrument.console.log"
+     ]
+    ]
+   ],
+   "au_registre_par_canon": 5,
+   "manifeste": "MANIFEST_lot_machine1_acte_gel_loi_ordre3_v1.txt",
+   "manifeste_au_registre": false,
+   "nomme_par": [
+    "journal/MANIFEST_lot_machine2_contreseing_acte_gel_loi_ordre3_v1.txt",
+    "journal/POUR_MACHINE1_contreseing_acte_gel_loi_machine2_v1.md",
+    "journal/authentifie_lot_acte_machine2_v1.log",
+    "journal/authentifie_lot_acte_machine2_v1.py",
+    "journal/fabrique_lot_contreseing_acte_gel_loi_machine2_v1.py"
+   ],
+   "pieces": 23
+  },
+  "da1c2668d317b9d5": {
+   "a_l_empreinte_brute": 9,
+   "absentes": [],
+   "au_canon_autre_brut": [
+    [
+     "verdict_rejoue_machine1.json",
+     [
+      "journal/verdict_ordre2.json"
+     ]
+    ]
+   ],
+   "au_registre_par_canon": 10,
+   "manifeste": "MANIFEST_lot_machine1_acte_ordre2_chaine_EA_v1.txt",
+   "manifeste_au_registre": true,
+   "pieces": 10
+  },
+  "e93f1898dcd78a8f": {
+   "a_l_empreinte_brute": 2,
+   "absentes": [
+    "note_machine1_loi_largeur_2026-11-15_v1.md",
+    "POUR_MACHINE2_note_loi_largeur_machine1_v1.md",
+    "etape1_etalon_machine1_v1.py",
+    "etape1_etalon_machine1_v1.log",
+    "etape1_etalon_v1.json",
+    "controle_algebre_ordre3_machine1_v1.py",
+    "controle_algebre_ordre3_machine1_v1.log",
+    "controle_algebre_ordre3_v1.json",
+    "calcul_ordre3_machine1_v1.py",
+    "calcul_ordre3_machine1_v1.log",
+    "ordre3_par_etat_v1.json",
+    "forme_fermee_machine1_v1.py",
+    "forme_fermee_machine1_v1.log",
+    "forme_fermee_v1.json",
+    "structure_en_delta_machine1_v1.py",
+    "structure_en_delta_machine1_v1.log",
+    "structure_en_delta_v1.json",
+    "construction_note_loi_machine1_v1.py",
+    "valeurs_note_loi_machine1_v1.json"
+   ],
+   "au_canon_autre_brut": [],
+   "au_registre_par_canon": 2,
+   "manifeste": "MANIFEST_lot_machine1_note_loi_largeur_v1.txt",
+   "manifeste_au_registre": false,
+   "pieces": 21
+  }
+ },
+ "mordent": [
+  "D11_26b3",
+  "D11_d925",
+  "D11_0a57"
+ ],
+ "perimetre": {
+  "gel loi partie 1": {
+   "citees": 21,
+   "non_resolues": [
+    "1e8413aed149429f",
+    "1f6cfb5f9472b1b4",
+    "4b2a1d038c89c813",
+    "548fb2ba8793ecfe",
+    "889fe9b4c1c1c60a",
+    "e93f1898dcd78a8f"
+   ]
+  },
+  "gel loi partie 2": {
+   "citees": 42,
+   "non_resolues": [
+    "26b3912297b31713",
+    "548fb2ba8793ecfe",
+    "889fe9b4c1c1c60a",
+    "e93f1898dcd78a8f"
+   ]
+  },
+  "gel ter": {
+   "citees": 19,
+   "non_resolues": []
+  },
+  "ter": {
+   "citees": 53,
+   "non_resolues": [],
+   "resolues": 53
+  },
+  "v2": {
+   "citees": 24,
+   "non_resolues": [],
+   "resolues": 24
+  }
+ },
+ "tete": "54da87a"
+}

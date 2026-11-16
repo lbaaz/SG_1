@@ -1,0 +1,56 @@
+--- delta100
++++ delta101
+@@ -1,21 +1,22 @@
+ #!/usr/bin/env python3
+ # -*- coding: ascii -*-
+-"""LE PERIMETRE DU DEPOT delta 100 (LA LOI DE LA LARGEUR, CHAINE D'ORDRE 3) -- ENUMERE DEPUIS LES CITATIONS DE L'ACTE.
++"""LE PERIMETRE DU DEPOT delta 101 (COMPLEMENT AUX DEPOTS 99 ET 100) -- ENUMERE DEPUIS LES CITATIONS DE LA NOTE DE DEPOT.
+ machine 2, v1, 16/11/2026.
+ 
+-Derive de la feuille du delta 99 (perimetre_depot_delta99_machine2_v1.py, au registre ou au poste, NON EDITEE : regle 17), meme methode,
++Derive de la feuille du delta 100 (perimetre_depot_delta100_machine2_v1.py, au registre ou au poste, NON EDITEE : regle 17), meme methode,
+ meme code, TROIS changements nommes, le diff est joint :
+-  1. dossier() : les instruments et constructions de ce chantier (la loi de la largeur, chaine d'ordre 3 (regle de tirage, instrument, feuille, banc, pilote de machine 1)) vont sous scripts/, comme ceux du delta precedent.
++  1. dossier() : les instruments et constructions de ce chantier (le complement aux depots 99 et 100 (aucun changement de dossier() : pas d'instrument nouveau)) vont sous scripts/, comme ceux du delta precedent.
+   2. le texte du manifeste (corps) parle de ce chantier et de sa date.
+ Pour le reste, tout est herite : le perimetre ne s'ecrit pas a la main, il s'ENUMERE depuis les citations de l'acte, resolues PAR CANON
+ (registre, poste, ou NON RESOLU qui mord) ; le numero se DERIVE du registre (plafond + 1) ; les lots cites entrent avec leurs pieces de
+ table ; les ZIP ne sont pas deposes ; DEUX VERBES (`chk` mesure, `note` porte la prose) ; PB-1 : rien n'est edite.
+-  3. (herite du 99) les lots du delta : tous ceux dont l'en-tete porte le canon de l'acte, et, pour un lot de machine 2, le canon du contreseing e8ff4d600edf89ef ; la v1 de l'acte, citee par la v2, entre sous son numero.
++  3. la note de depot de ce delta, de la plume de machine 2, CITE les canons des lots a deposer : la feuille les enumere par citation ; la garde heritee "lots derives de l'en-tete" (>= 1) n'a plus d'objet ici et est REMPLACEE par
++     le controle qui manquait aux deltas 99 et 100 : TOUS les lots extraits sous entrants/ sont deposes.
+ """
+ import hashlib, os, re, subprocess, sys, unicodedata
+ 
+ if len(sys.argv) != 3:
+-    sys.exit('usage : perimetre_depot_delta100_machine2_v1.py <clone frais du registre> <acte journal_delta_nn_..._vN.md>')
++    sys.exit('usage : perimetre_depot_delta101_machine2_v1.py <clone frais du registre> <acte journal_delta_nn_..._vN.md>')
+ CLONE = os.path.abspath(sys.argv[1])
+ ICI = os.path.dirname(os.path.abspath(__file__))
+ RAC = os.path.dirname(ICI)
+@@ -187,8 +188,14 @@
+                 (canon_acte in open(_p, encoding='utf-8', errors='replace').readline() or ('e8ff4d600edf89ef' in open(_p, encoding='utf-8', errors='replace').readline() and open(_p, encoding='utf-8', errors='replace').readline().startswith('MANIFESTE lot_machine2_')))):
+             lots_delta.append((_c, _p))
+             a_deposer.append((_c, _p))
+-chk('les lots de ce delta (manifeste dont l en-tete porte le canon de l acte) sont derives, non tapes',
+-    len(lots_delta) >= 1, '; '.join('%s %s' % (c, rel(p, RAC)) for c, p in lots_delta))
++_ent = os.path.join(ICI, 'entrants')
++_canons_ent = []
++for _l in sorted(os.listdir(_ent)):
++    _m = [f for f in os.listdir(os.path.join(_ent, _l)) if f.startswith('MANIFEST_') and f.endswith('.txt')]
++    _canons_ent.append(emp_de(os.path.join(_ent, _l, _m[0]))[0])
++_deposes = [x[0] for x in a_deposer]
++chk('TOUS les lots extraits sous entrants/ sont deposes par citation de la note (le controle qui manquait aux deltas 99 et 100)',
++    len(_canons_ent) >= 1 and all(c in _deposes for c in _canons_ent), '%d lots extraits ; manquants : %s' % (len(_canons_ent), [c for c in _canons_ent if c not in _deposes]))
+ 
+ # =====================================================================
+ print('\n3. LES LOTS CITES ENTRENT AVEC LEURS PIECES DE TABLE')
+@@ -374,7 +381,7 @@
+ for c, *_ in lignes:
+     par_dossier[c.split('/')[0]] = par_dossier.get(c.split('/')[0], 0) + 1
+ 
+-corps = ("MANIFESTE DU LOT DE DEPOT -- DELTA %s (LA LOI DE LA LARGEUR, CHAINE D ORDRE 3) -- 16/11/2026 -- "
++corps = ("MANIFESTE DU LOT DE DEPOT -- DELTA %s (COMPLEMENT AUX DEPOTS 99 ET 100 : SEPT LOTS) -- 16/11/2026 -- "
+          "assemble par machine 2 -- derive de l'acte v%s\n" % (NUMERO, VERSION))
+ corps += ("Convention B (sha256 NFC+LF, 16 hex) et empreinte brute, les deux tailles ; le depot et "
+           "le numero sont de la main de l'operateur.\n")

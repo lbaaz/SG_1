@@ -1,0 +1,72 @@
+
+1. LES CITATIONS DE L ACTE, ET LES DEUX INDEX PAR CANON
+  [ note] acte                                                       journal_delta_nn_complement_lots_deposes_99_100_v1.md (version 1)
+  [PASSE] l acte est ASCII pur, LF, newline final                    5257 octets
+  [PASSE] l acte cite des empreintes (compte etabli apres extraction 14 jetons distincts de 16 hex
+  [PASSE] chaque VALEUR declaree est bien citee par l acte           
+  [PASSE] chaque lot de TRANSPORT declare est bien cite par l acte   
+  [ note] numero DERIVE du releve, non tape                          plafond 100 -> le delta de cet acte porte le 101 ; le numero reste de la main de l operateur (E18)
+  [PASSE] releve : HEAD 54da87a, plafond 100, aucun fichier delta_10 2330 fichiers suivis
+  [PASSE] le delta PRECEDENT est bien au registre -- le releve porte delta_100 present
+  [ note] index du poste                                             9981 canons distincts (B et brut), 3760 noms de table
+  [ note] balayage : tout BOCAL4 hors .git et __pycache__ ; exclues, manifest_depot_delta101_machine2_v1.txt, perimetre_depot_delta101_sur_acte_v1_machine2.log
+
+2. RESOLUTION DE CHAQUE CITATION -- AU REGISTRE, AU POSTE, OU NULLE PART
+   registre  543d8b33e5c9afb8  gels/gel_loi_ordre3_partie2_instrument_enonces_pre_enregistrement_v1.md
+   registre  b56ca5cb2dd25da1  gels/gel_loi_ordre3_partie1_regle_tirage_pre_enregistrement_v1.md
+   registre  751165a3eee613d9  journal/journal_delta_99_qualification_EB_ter_v1.md
+   registre  a3f7d5d6809dcfe5  journal/journal_delta_100_loi_largeur_ordre3_v1.md
+   registre  b205b14cdfc23ba3  journal/journal_delta_100_loi_largeur_ordre3_v2.md
+   poste     860c0ca980977935  DEPOT_delta101/entrants/lot_machine1_2026-11-16_releve_apres_depot_99_100_v1/MANIFEST_lot_machine1_releve_apres_depot_99_100_v1.txt
+   poste     c65d193217e44101  MANIFEST_lot_machine2_reponse_releve_depot_99_100_v1.txt
+   poste     26b3912297b31713  MANIFEST_lot_machine1_acte_EB_ter_v1.txt
+   poste     d9250297bf7d2f77  DEPOT_delta100/entrants/lot_machine1_2026-11-16_acte_gel_loi_ordre3_v1/MANIFEST_lot_machine1_acte_gel_loi_ordre3_v1.txt
+   poste     0a5741ff95e7136c  DEPOT_delta100/entrants/lot_machine1_2026-11-16_acte_gel_loi_ordre3_v2/MANIFEST_lot_machine1_acte_gel_loi_ordre3_v2.txt
+   poste     e93f1898dcd78a8f  DEPOT_delta101/entrants/lot_machine1_2026-11-15_note_loi_largeur_v1/MANIFEST_lot_machine1_note_loi_largeur_v1.txt
+   poste     1e8413aed149429f  DEPOT_delta101/entrants/lot_machine1_2026-11-15_note_carte_gel_loi_v1/MANIFEST_lot_machine1_note_carte_gel_loi_v1.txt
+   poste     889fe9b4c1c1c60a  MANIFEST_lot_machine2_ordre3_rederive_v1.txt
+   poste     548fb2ba8793ecfe  MANIFEST_lot_machine2_carte_reponse_v1.txt
+  [PASSE] toute empreinte citee resout par canon (registre, poste, o 5 au registre, 9 au poste, 0 zip, 0 valeurs
+  [PASSE] TOUS les lots extraits sous entrants/ sont deposes par cit 9 lots extraits ; manquants : []
+
+3. LES LOTS CITES ENTRENT AVEC LEURS PIECES DE TABLE
+  [ note] erratum                                                    aucun dans ce chantier : une divergence de table mord
+  [ note] manifeste sans ligne pieces : N                            860c0ca980977935 : compte attendu = 8 membres du zip extrait, hors manifeste
+   lot 860c0ca980977935  table  8 / declare 8    DEPOT_delta101/entrants/lot_machine1_2026-11-16_releve_apres_depot_99_100_v1/MANIFEST_lot_machine1_releve_apres_depot_99_100_v1.txt
+   lot c65d193217e44101  table 10 / declare 10   MANIFEST_lot_machine2_reponse_releve_depot_99_100_v1.txt
+  [ note] manifeste sans ligne pieces : N                            26b3912297b31713 : compte attendu = 30 membres du zip extrait, hors manifeste
+   lot 26b3912297b31713  table 30 / declare 30   MANIFEST_lot_machine1_acte_EB_ter_v1.txt
+  [ note] manifeste sans ligne pieces : N                            d9250297bf7d2f77 : compte attendu = 23 membres du zip extrait, hors manifeste
+   lot d9250297bf7d2f77  table 23 / declare 23   DEPOT_delta100/entrants/lot_machine1_2026-11-16_acte_gel_loi_ordre3_v1/MANIFEST_lot_machine1_acte_gel_loi_ordre3_v1.txt
+  [ note] manifeste sans ligne pieces : N                            0a5741ff95e7136c : compte attendu = 10 membres du zip extrait, hors manifeste
+   lot 0a5741ff95e7136c  table 10 / declare 10   DEPOT_delta100/entrants/lot_machine1_2026-11-16_acte_gel_loi_ordre3_v2/MANIFEST_lot_machine1_acte_gel_loi_ordre3_v2.txt
+  [ note] manifeste sans ligne pieces : N                            e93f1898dcd78a8f : compte attendu = 21 membres du zip extrait, hors manifeste
+   lot e93f1898dcd78a8f  table 21 / declare 21   DEPOT_delta101/entrants/lot_machine1_2026-11-15_note_loi_largeur_v1/MANIFEST_lot_machine1_note_loi_largeur_v1.txt
+  [ note] manifeste sans ligne pieces : N                            1e8413aed149429f : compte attendu = 16 membres du zip extrait, hors manifeste
+   lot 1e8413aed149429f  table 16 / declare 16   DEPOT_delta101/entrants/lot_machine1_2026-11-15_note_carte_gel_loi_v1/MANIFEST_lot_machine1_note_carte_gel_loi_v1.txt
+   lot 889fe9b4c1c1c60a  table 11 / declare 11   MANIFEST_lot_machine2_ordre3_rederive_v1.txt
+   lot 548fb2ba8793ecfe  table  8 / declare 8    MANIFEST_lot_machine2_carte_reponse_v1.txt
+  [PASSE] 9 lots cites a deposer, chacun au compte de table declare  0 faux compte
+  [PASSE] aucune piece de table ne s ecarte de son manifeste HORS er 0 ecart
+  [PASSE] aucune piece de table n est introuvable a cote de son mani 0 introuvable
+  [PASSE] aucune piece retenue n est deja au registre par canon      128 retenues
+
+4. LE MANIFESTE DE DEPOT -- DERIVE, JAMAIS ECRIT A LA MAIN
+  [ note] collision de nom, prefixe applique                         comparaison_rejeu_machine1_v1.log -> lot_d9250297bf7d2f77__comparaison_rejeu_machine1_v1.log
+  [ note] collision de nom, prefixe applique                         comparaison_rejeu_machine1_v1.py -> lot_26b3912297b31713__comparaison_rejeu_machine1_v1.py
+  [ note] collision de nom, prefixe applique                         comparaison_rejeu_machine1_v1.py -> lot_d9250297bf7d2f77__comparaison_rejeu_machine1_v1.py
+  [PASSE] aucun chemin cible en double ni deja au registre           133 chemins cibles
+  [PASSE] aucun doublon de canon dans le depot                       133 pieces
+  [PASSE] toute collision resolue porte le prefixe de son LOT (aucun 3 prefixes
+  [PASSE] les .md/.py/.txt deposes sont B == brut (ASCII/LF)         63 pieces texte
+  [PASSE] le manifeste relu porte autant de lignes que de pieces     133 lignes, 133 pieces
+  [PASSE] chaque source du manifeste resout encore au canon ecrit    0 ecart
+  [PASSE] le manifeste declare son compte, egal aux lignes           pieces : 133
+  [PASSE] le manifeste est ASCII                                     35401 octets
+
+=====================================================================
+BILAN PERIMETRE : 20/20 controles PASSENT
+14 empreintes citees : 5 au registre, 9 au poste, 0 zip, 0 valeurs, 0 non resolues
+DEPOT : 133 pieces (journal 133) ; manifeste MANIFEST_DEPOT_delta101_machine2_v1.txt 3f0d3c0e6aa6666a
+=====================================================================
+code 0

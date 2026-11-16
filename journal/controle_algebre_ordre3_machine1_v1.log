@@ -1,0 +1,17 @@
+(V0) elements de x^5 du moteur contre une matrice construite a part : 3600 elements, pire ecart relatif 6.8e-16
+(V1) base 13 x 13, w2 = 211/100, 6 sites de l'echelle de (3, 1) ; reste = |effectif exact - perturbatif|, plus grand element
+     g          saut voisin, avec ordre 3   sans ordre 3    diagonale    second voisin   3e voisin avec   sans    poids min
+     2.0e-04    7.893e-14                   4.562e-09       2.496e-11    4.551e-12       5.393e-16        4.495e-11   0.999981
+     4.0e-04    2.526e-12                   3.650e-08       3.994e-10    7.282e-11       1.894e-14        3.596e-10   0.999925
+     8.0e-04    8.085e-11                   2.920e-07       6.391e-09    1.165e-09       6.041e-13        2.878e-09   0.999700
+     1.6e-03    2.589e-09                   2.338e-06       1.023e-07    1.866e-08       1.929e-11        2.304e-08   0.998804
+     pentes en g : saut voisin avec ordre 3 5.00 (attendu 5), sans 3.00 (attendu 3) ; diagonale 4.00 (attendu 4) ; second voisin 4.00 (attendu 4) ;
+                   3e voisin avec ordre 3 5.04 (attendu 5), sans 3.00 (attendu 3)
+     5e voisin (un element) : reste sans ordre 3 1.60e-14 1.29e-13 1.03e-12 8.25e-12 ; pente 3.00 (attendu 3)
+                              reste avec ordre 3 1.05e-16 6.48e-17 7.80e-16 1.78e-14 : au plancher d'arrondi aux petits couplages, la pente n'y est pas lisible ;
+                              rapport avec / sans au plus fort couplage : 2.2e-03
+     4e voisin (interdit a l'ordre 3 par la parite ; premier terme : ordre 4) : reste 6.83e-15 1.11e-13 1.77e-12 2.84e-11 ; pente 4.01 (attendu 4)
+(V2) echelle de (3, 1) a w2 = 211/100, g = 5e-03, 9 sites : tables du bloc contre la formule dense, pire ecart relatif : T3 2.8e-13, W3 1.0e-13, W5 1.2e-14, Sigma2 5.3e-15, u 3.0e-15
+(V2) echelle de (7, 2) a w2 = 197/100, g = 5e-03, 8 sites : tables du bloc contre la formule dense, pire ecart relatif : T3 6.4e-14, W3 2.4e-14, W5 2.6e-14, Sigma2 5.9e-15, u 1.3e-15
+(V2) echelle de (4, 2) a w2 = 47/25, g = 5e-03, 9 sites : tables du bloc contre la formule dense, pire ecart relatif : T3 5.3e-14, W3 8.8e-15, W5 6.6e-15, Sigma2 3.5e-15, u 2.9e-15
+CONTROLE D'ALGEBRE : TIENT

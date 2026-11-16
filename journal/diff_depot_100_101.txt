@@ -1,0 +1,32 @@
+--- delta100
++++ delta101
+@@ -1,9 +1,9 @@
+ #!/usr/bin/env python3
+ # -*- coding: ascii -*-
+-"""LE DEPOT DU DELTA 100 SUR CLONE FRAIS -- copie, verification au bit, releve, commit LOCAL. machine 2, v1, 16/11/2026.
++"""LE DEPOT DU DELTA 101 SUR CLONE FRAIS -- copie, verification au bit, releve, commit LOCAL. machine 2, v1, 16/11/2026.
+ Le PUSH n'est pas fait ici.
+ 
+-Derive de depot_delta99_machine2_v1.py (NON EDITE : regle 17). Un seul changement : le texte du message de commit ; le numero se lit toujours
++Derive de depot_delta100_machine2_v1.py (NON EDITE : regle 17). Un seul changement : le texte du message de commit ; le numero se lit toujours
+ dans le nom du manifeste, l'etat attendu du registre s'en deduit, rien n'est tape. Le diff est joint.
+ Arguments : <clone frais> <MANIFEST_DEPOT_delta<nn>_machine2_v<N>.txt>.
+   1. releve AVANT : origin/main == HEAD, arbre propre, plafond == nn - 1, aucun delta_nn ;
+@@ -16,7 +16,7 @@
+ import hashlib, os, re, shutil, subprocess, sys, unicodedata
+ 
+ if len(sys.argv) != 3:
+-    sys.exit('usage : depot_delta100_machine2_v1.py <clone frais> <MANIFEST_DEPOT_delta<nn>_machine2_v<N>.txt>')
++    sys.exit('usage : depot_delta101_machine2_v1.py <clone frais> <MANIFEST_DEPOT_delta<nn>_machine2_v<N>.txt>')
+ CLONE, MAN = os.path.abspath(sys.argv[1]), os.path.abspath(sys.argv[2])
+ ICI = os.path.dirname(os.path.abspath(__file__))
+ RAC = os.path.dirname(ICI)
+@@ -122,7 +122,7 @@
+ 
+ print('\n4. COMMIT LOCAL (pas de push ici)')
+ auteur = git('log', '-1', '--format=%an <%ae>')
+-msg = ("delta 100 -- the one-dimensional chain pushed to third order reads the plateau width of states on twelve cells drawn at random and never played, to within 0.05 in logarithm where e_bord is below 0.3 and within 0.10 beyond, and is closer to it than order 2 on the negative line: E1 HELD (ten line cells of ten, none fallen), E2 HELD (five of five), E1B HELD (the two border cells), E3 HELD (the order-2 bound of delta 98 at all twelve cells); under a freeze in two parts, the draw rule, certified by the other machine with zero bite, the seed (200482) being given by the operator after it so that neither machine chose the cells, both machines drawing the same twelve (N1 to N5 at delta -0.065, P1 to P5 at +0.035, BN at -0.076, BP at +0.067), then the instrument and the statements, certified by the other machine before the run with zero bite on the instrument and one on a description (0.164 written for 0.163, no rule depending on it); played once on BOCAL4 on 16/11 from 01:49:18 to 03:32:04 (6166 s, 19 calls, every exit code 0, on mains) with a pilot derived by machine 2 from machine 1's (-P for -I because numpy sits in the user site, one BLAS thread outside the dense probe), launched on the operator's written green light of 00:54, conditional on that certification, the operator attesting the message and its time; 144 states read, 141 judged, 129 in the domain, 12 outside it (BN 4, BP 8); the widest |ln q3| of a line cell is 0.0740 (N1) and its narrowest margin +0.0164 (P1); the border cell BP holds by +0.000383 (|ln q3| 0.099617 for 0.10, at rank 3), three of its five domain states lying within 0.0026 of the tolerance and the plateau spread that the reader publishes at rank 3 being 0.0024, 6.2 times that margin, so that the verdict of BP is the reading of the frozen rule and not a measurement at that precision; machine 1's replay of the sheets on its own machine agrees to 1.6e-9 on ln q3, and a second sheet written by machine 2 from sections 5 and 6 alone agrees on the 141 judged states; the pen's regularity at delta > 0 does not hold as a bound (ln q3 / delta^3 reaches 784 against 493 before the run) though everything stays under the tolerance, and the pen, which gave E1 holding everywhere a probability of 0.35, was pessimistic; the act states no law in delta, each line having a single w2, and does not extend the domain beyond its guards; it rests on the reader of delta 99, deposited just before; act written by machine 1 and countersigned by machine 2 in two versions, the first by 68 controls recomputed from machine 2's own sources with one bite of description (0.173 written for 0.1738) and a precision requested on BP, the second, deposited here byte for byte with the first beside it, by 73 controls of which none bites; no new candidate rule, thirty-four await review (X)")
++msg = ('delta 101 -- complement to deltas 99 and 100: seven lots that those two deposits should have contained are deposited, with their manifests and their pieces (101 pieces): machine 1\'s act lots for the ter act and for the order-3 act (versions 1 and 2), its notes on the width law and on the map of the cells, machine 2\'s re-derivation of the order-3 block and its answer to the map, together with machine 1\'s survey of the registry after the deposits and machine 2\'s reply; the gap was found by machine 1\'s survey (14 controls, 11 held, 3 bit) and confirmed lot by lot, with the same counts, by machine 2\'s own survey written without reading machine 1\'s script; the cause is machine 2\'s: its perimeter rule enumerated only the lots cited by the act or whose manifest header carries the act\'s canon, and its deposit controls checked the lines of its own manifest, not that every lot it had extracted entered, and its covering note to machine 1 said both lots were deposited when three were not; the control that was missing is written and bites on both earlier deposits (one lot missing at delta 99, two at delta 100); no number of any act, no verdict and no freeze is touched, no rule is adopted, thirty-four await review (X); one earlier debt stays unresolved and is said so, the off-chain note of anteriority cited by the freezes of deltas 97 and 98, which neither machine holds; deposited on the operator\'s word "Ok pour moi" to the proposal of a complement; the note numbered here is machine 2\'s and machine 1 has not countersigned it')
+ open(os.path.join(ICI, 'message_commit_delta%d.txt' % NUMERO), 'w', encoding='utf-8', newline='\n').write(msg + '\n')
+ chk('le message ne porte aucun trailer d outillage (convention du depot public, 25/08)',
+     'Co-Authored' not in msg and 'Claude' not in msg and 'Generated' not in msg, '%d caracteres' % len(msg))
