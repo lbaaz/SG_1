@@ -1,0 +1,39 @@
+2026-11-16 00:58:33 PILOTE DU GEL LOI DE LA LARGEUR, ORDRE 3 -- PRE-VOL, RIEN N'EST JUGE ; 12 processus ; python 3.11.9
+2026-11-16 00:58:33 pilote pilote_gel_loi_machine2_v2.py canon 15998497f3422765
+2026-11-16 00:58:33   canon moteur            82a0be882568fe0c 
+2026-11-16 00:58:33   canon bloc2             7cd5977bc27bebc1 
+2026-11-16 00:58:33   canon bloc3             534ba246aa3b8973 
+2026-11-16 00:58:33   canon depot             10887c60d5f55bcf 
+2026-11-16 00:58:33   canon retenus           69b3bab3bb8480b7 
+2026-11-16 00:58:33   canon tp_reference      4d51dd58ef456fe9 
+2026-11-16 00:58:33   canon reference_ancres  6600fb8418c79930 
+2026-11-16 00:58:33   canon table             a29225df977dfe41 (table de pre-vol)
+2026-11-16 00:58:33   canon sonde_dense       68baf04c73ed5d44 
+2026-11-16 00:58:33   canon sonde_lecteur     d5cc48f48e37af99 
+2026-11-16 00:58:33   canon feuille_lecteur   83701094e6a2b965 
+2026-11-16 00:58:33   canon feuille_ordre3    facd3ceeec07d3bf 
+2026-11-16 00:58:33 ETAGE 1 NON JOUE (pre-vol) : la sortie dense passee en tient lieu : C:/Users/bazil/AppData/Local/Temp/claude/75adcc7f3c1d08bf/7d33635e-8345-4a2c-a69e-f6a51f9d8fa7/scratchpad/reg_neuf98/journal/sonde_ordre2.json
+2026-11-16 00:58:33 CANON DE LA SORTIE DENSE : 10887c60d5f55bcf (passe au second etage)
+2026-11-16 00:58:33 ETAGE 2a : sonde du lecteur, etage0, ancres, etage1
+2026-11-16 00:58:52   lecteur etage0               code=0 duree=19 s
+2026-11-16 01:09:47   lecteur ancres               code=0 duree=673 s
+2026-11-16 01:10:52   lecteur etage1               code=0 duree=738 s
+2026-11-16 01:10:52   feuille du lecteur, instrument code=0 duree=0 s
+2026-11-16 01:10:52 INSTRUMENT DU LECTEUR : TIENT
+2026-11-16 01:10:52 ETAGE 2b : sonde du lecteur en mode point, 1 points : C3
+2026-11-16 01:35:15   lecteur point C3             code=0 duree=1463 s
+2026-11-16 01:35:15   feuille du lecteur, verdict  code=0 duree=0 s
+2026-11-16 01:35:15 CANON DU VERDICT DU LECTEUR : 8d4ceb9bd825c78f
+2026-11-16 01:35:15 ETAGE 3 : feuille d'ordre 3
+2026-11-16 01:35:19   feuille d'ordre 3            code=0 duree=4 s
+2026-11-16 01:35:19     PRE-VOL (ne juge rien) -- FEUILLE D'ORDRE 3 -- table a29225df977dfe41, sortie dense 10887c60d5f55bcf, verdict du lecteur 8d4ceb9bd825c78f
+2026-11-16 01:35:19     ANCRES de la sonde dense contre le depot : 2 ancres, 0 ecarts : TIENNENT
+2026-11-16 01:35:19       C3  w2 = 203/100   x3/2  : lus 14, juges 14, domaine 14, hors  0 ; exploitable ; E1 TIENT         E2 -             E3 TIENT ; pire |ln q3| du domaine 0.0133 ; pire |ln q2| 0.0246
+2026-11-16 01:35:19     E1  : TENU                   (1 cellules, 1 exploitables ; tombees : aucune)
+2026-11-16 01:35:19     E2  : SANS OBJET             (0 cellules, 0 exploitables ; tombees : aucune)
+2026-11-16 01:35:19     E1B : SANS OBJET             (0 cellules, 0 exploitables ; tombees : aucune)
+2026-11-16 01:35:19     E3  : TENU                   (1 cellules ; tombees : aucune)
+2026-11-16 01:35:19     etats : 14 lus par le lecteur, 14 juges, 14 dans le domaine, 0 hors
+2026-11-16 01:35:19     PRE-VOL : cette sortie ne juge rien
+2026-11-16 01:35:19 CANON DU VERDICT D'ORDRE 3 : 89404dc078479d06
+2026-11-16 01:35:19 FIN DU PILOTE ; duree totale 2206 s

@@ -1,0 +1,31 @@
+{
+ "controles": [
+  {
+   "controle": "P1",
+   "detail": "mesures des etages 0, ancres et 1 contre la sonde certifiee sur la meme machine (en-tete et durees mis a part) : etage0 identique, ancres identique, etage1 identique",
+   "tient": true
+  },
+  {
+   "controle": "P2",
+   "detail": "point C3 : 14 etats, memes etiquettes : oui, memes suivis : oui ; 672 lectures suivies, pire ecart relatif 4.4e-16 (tolerance 1e-6)",
+   "tient": true
+  },
+  {
+   "controle": "P3",
+   "detail": "verdict du lecteur a C3 : 14 etats, memes statuts : oui (QUALIFIES : 14) ; pire |ln| entre largeurs de plateau A : 3.6e-15",
+   "tient": true
+  },
+  {
+   "controle": "P4",
+   "detail": "feuille d'ordre 3 a C3 : lus 14, juges 14, domaine 14, hors 0, E1 TIENT, E3 TIENT ; identiques a la feuille retrospective : oui ; pire ecart sur ln q3 : 3.7e-15",
+   "tient": true
+  },
+  {
+   "controle": "P5",
+   "detail": "sonde dense derivee a C3 : boite 55 (depot 55), ecart relatif de couplage 0e+00, 14 etiquettes identiques : oui ; pire ecart relatif de Gamma_2D(3) au-dessus de dix planchers 7.3e-04 ; pire ecart d'energie 3.0e-13 ; hors tolerance : 0 ; duree 138.8 s",
+   "tient": true
+  }
+ ],
+ "point": "C3",
+ "tient": true
+}

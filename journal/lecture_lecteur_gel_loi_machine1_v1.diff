@@ -1,0 +1,60 @@
+--- lecture_qualification_EB_ter_machine1_v1.py
++++ lecture_lecteur_gel_loi_machine1_v1.py
+@@ -1,2 +1,10 @@
+ # -*- coding: ascii -*-
++# FEUILLE DU LECTEUR DU GEL "LOI DE LA LARGEUR, ORDRE 3" -- machine 1, v1, 2026-11-15. Derivee par remplacements de
++# lecture_qualification_EB_ter_machine1_v1.py (b2d6d7cfaf30f1cf), jamais editee : meme routine de plateau, memes statuts par etat,
++# meme etage de l'instrument, meme selftest. SEULS CHANGENT, a l'etape "verdict" : les points juges sont ceux de la TABLE
++# GELEE, lus dans la SORTIE DENSE DU RUN (canon passe par le pilote, forme controlee avant toute lecture) ; un point dont
++# l'etat de rang 0 n'est pas lu n'arrete plus la lecture (son "etat_lu" vaut "NON LU") ; le verdict porte trois canons de plus.
++# Usage de l'etape "verdict" : ... verdict <dossier> <sonde_ordre2.json (depot)> <table des points.json> <sortie dense.json>
++#   <canon de la sortie dense> [--prevol]      ; l'etape "instrument" et --selftest sont inchanges.
++# Le texte ci-dessous est celui de la feuille d'origine.
+ # FEUILLE DE LECTURE DE LA QUALIFICATION E-B TER -- machine 1, v1, 2026-11-15. CLASSE 2.
+@@ -15,3 +23,4 @@
+ 
+-CANON_SONDE = "b5616dcf858e8801"
++CANON_SONDE = "d5cc48f48e37af99"
++CANON_TABLE, CANON_SONDE_DENSE, CANON_SONDE_DEPOT, N_ETATS_DENSE = "35fa7b73f2b7f8eb", "68baf04c73ed5d44", "24315c52b234319c", 14
+ CANON_MOTEUR, CANON_DEPOT, CANON_RETENUS = "82a0be882568fe0c", "10887c60d5f55bcf", "69b3bab3bb8480b7"
+@@ -159,5 +168,3 @@
+     lu0 = [j for j in etats if j["rang"] == 0]
+-    if len(lu0) != 1:
+-        raise Refus("point %s : l'etat de rang 0 n'est pas parmi les etats juges" % pt["id"])
+-    return {"id": pt["id"], "etat_lu": lu0[0]["statut"], "etats": etats,
++    return {"id": pt["id"], "etat_lu": (lu0[0]["statut"] if len(lu0) == 1 else "NON LU"), "etats": etats,
+             "n_juges": len(etats), "n_qualifies": sum(1 for j in etats if j["statut"] == "QUALIFIE"),
+@@ -468,3 +475,21 @@
+             inst = vi.get("instrument") if ok else "NE TIENT PAS"
+-            P = {p["id"]: p for p in depot["points"]}
++            f_table, f_dense, canon_dense = sys.argv[4], sys.argv[5], sys.argv[6]
++            prevol = "--prevol" in sys.argv[7:]
++            canon_table = canon_b(open(f_table, "rb").read())
++            if (canon_table == CANON_TABLE) == prevol:
++                raise Refus("sans --prevol la table doit etre au canon %s ; avec --prevol elle ne doit pas l'etre" % CANON_TABLE)
++            if canon_b(open(f_dense, "rb").read()) != canon_dense:
++                raise Refus("la sortie dense n'est pas au canon passe par le pilote (%s)" % canon_dense)
++            table = {str(p["id"]): p for p in lire_json(f_table)["points"]}
++            JUGES[:] = [i for i, p in table.items() if p["role"] == "juge"]
++            dense = lire_json(f_dense)
++            if dense.get("moteur_canon") != CANON_MOTEUR or dense.get("sonde_canon") not in ((CANON_SONDE_DENSE, CANON_SONDE_DEPOT) if prevol else (CANON_SONDE_DENSE,)):
++                raise Refus("la sortie dense ne porte pas les canons du moteur et de la sonde dense")
++            if not prevol and (dense.get("table_canon") != CANON_TABLE or dense.get("prevol") is not False or sorted(p["id"] for p in dense["points"]) != sorted(table)):
++                raise Refus("la sortie dense n'a pas ete produite sur la table du gel, ou n'en porte pas tous les points et eux seuls")
++            P = {p["id"]: p for p in dense["points"]}
++            for i in JUGES:
++                if i not in P or Fraction(str(P[i]["w2"])) != Fraction(str(table[i]["w2"])) or Fraction(str(P[i]["facteur"])) != Fraction(str(table[i]["facteur"])) \
++                        or len(P[i]["etats"]) != N_ETATS_DENSE or not P[i].get("faisable"):
++                    raise Refus("forme de la sortie dense au point %s (present, w2, facteur, nombre d'etats, faisable)" % i)
+             pts, vus = {}, []
+@@ -474,2 +499,4 @@
+                     controler_entete(s, "point")
++                    if s.get("dense_canon") != canon_dense or s.get("table_canon") != canon_table or s.get("prevol") is not prevol:
++                        raise Refus("%s : canon de la sortie dense, canon de la table ou marque de pre-vol differents de ceux de cette lecture" % os.path.basename(f))
+                     for pt in s["points"]:
+@@ -502,3 +529,4 @@
+             json.dump({"verdict": verdict, "issue_depot": dep[0], "n_plateau_A": dep[1], "n_lus_sur_le_plateau": dep[2],
+-                       "n_juges": nj, "n_qualifies": nq, "points": pts, "fichiers": vus, "instrument": inst},
++                       "n_juges": nj, "n_qualifies": nq, "points": pts, "fichiers": vus, "instrument": inst,
++                       "table_canon": canon_table, "dense_canon": canon_dense, "prevol": prevol, "feuille_canon": canon_b(open(__file__, "rb").read())},
+                       open(os.path.join(dossier, "verdict_ter.json"), "w"), indent=1, sort_keys=True)

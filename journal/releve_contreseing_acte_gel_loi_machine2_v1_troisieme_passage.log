@@ -1,0 +1,68 @@
+R01a  TIENT ASCII, sans pour cent, plus longue ligne 98, ligne de FIN
+R01b  TIENT canon de l'acte lu (fichier du lot) = manifeste = a3f7d5d6809dcfe5
+R02a  TIENT nn.12 : 14 empreintes lues, toutes recalculees depuis mes fichiers ; en defaut : []
+R02b  TIENT 22 empreintes distinctes citees dans l'acte, toutes retrouvees sur un de mes fichiers (table, pilote de m1, bloc 3, ma 2e feuille comprises) ; inconnues : []
+R02c  TIENT lot 4fb1dc66f96f57f6 cite dans nn.1 = manifeste retrouve chez moi (4fb1dc66f96f57f6)
+R02c  TIENT lot 220a0970134335e1 cite dans nn.1 = manifeste retrouve chez moi (220a0970134335e1)
+R02c  TIENT lot 596a45bf6d4f97d7 cite dans nn.1 = manifeste retrouve chez moi (596a45bf6d4f97d7)
+R02c  TIENT lot 76ed746ef4db3b0c cite dans nn.1 = manifeste retrouve chez moi (76ed746ef4db3b0c)
+R03a  TIENT lance 2026-11-16 01:49:18, fini 03:32:04, 6166 s, 19 appels tous au code 0 (journal du pilote)
+R03b  TIENT durees : dense 1548 s ; 12 points de 3329 a 3805 s ; feuille d'ordre 3 56 s
+R03c  TIENT table jouee 35fa7b73f2b7f8eb dans le journal, aucun pre-vol dans le journal
+R03d  TIENT les 12 canons imprimes au depart sont ceux du pilote de m1 (valeurs en dur) ou du gel
+R03e  TIENT pilote joue contre pilote de m1 : 3 blocs different (l'acte dit trois)
+R03f  TIENT mon manifeste de certification (01:48:45) precede le lancement (01:49:18) de moins de dix minutes
+R04a  TIENT ancres 2/0 ; instrument TIENT ; 144 etats lus, 144 QUALIFIES ; cascade "ESTIMATEUR QUALIFIE" ; plateau 142 sur 144
+R04b  TIENT canons nn.2 recalcules
+R05N1 TIENT N1 : acte 11 11 11 0 TIENT TIENT TIENT 0.0740 +0.0260 0.1048 ; refait 11 11 11 0 TIENT TIENT TIENT 0.0740 +0.0260 0.1048
+R05N2 TIENT N2 : acte 11 11 11 0 TIENT TIENT TIENT 0.0427 +0.0573 0.0987 ; refait 11 11 11 0 TIENT TIENT TIENT 0.0427 +0.0573 0.0987
+R05N3 TIENT N3 : acte 12 11 11 0 TIENT TIENT TIENT 0.0355 +0.0645 0.0841 ; refait 12 11 11 0 TIENT TIENT TIENT 0.0355 +0.0645 0.0841
+R05N4 TIENT N4 : acte 14 14 14 0 TIENT TIENT TIENT 0.0208 +0.0422 0.0747 ; refait 14 14 14 0 TIENT TIENT TIENT 0.0208 +0.0422 0.0747
+R05N5 TIENT N5 : acte 14 13 13 0 TIENT TIENT TIENT 0.0157 +0.0476 0.0699 ; refait 14 13 13 0 TIENT TIENT TIENT 0.0157 +0.0476 0.0699
+R05P1 TIENT P1 : acte 9 9 9 0 TIENT - TIENT 0.0336 +0.0164 0.0493 ; refait 9 9 9 0 TIENT - TIENT 0.0336 +0.0164 0.0493
+R05P2 TIENT P2 : acte 10 10 10 0 TIENT - TIENT 0.0302 +0.0198 0.0470 ; refait 10 10 10 0 TIENT - TIENT 0.0302 +0.0198 0.0470
+R05P3 TIENT P3 : acte 12 12 12 0 TIENT - TIENT 0.0219 +0.0281 0.0392 ; refait 12 12 12 0 TIENT - TIENT 0.0219 +0.0281 0.0392
+R05P4 TIENT P4 : acte 13 13 13 0 TIENT - TIENT 0.0217 +0.0283 0.0387 ; refait 13 13 13 0 TIENT - TIENT 0.0217 +0.0283 0.0387
+R05P5 TIENT P5 : acte 13 13 13 0 TIENT - TIENT 0.0201 +0.0299 0.0362 ; refait 13 13 13 0 TIENT - TIENT 0.0201 +0.0299 0.0362
+R05BN TIENT BN : acte 12 11 7 4 TIENT - TIENT 0.0461 +0.0539 0.1106 ; refait 12 11 7 4 TIENT - TIENT 0.0461 +0.0539 0.1106
+R05BP TIENT BP : acte 13 13 5 8 TIENT - TIENT 0.0996 +0.0004 0.1204 ; refait 13 13 5 8 TIENT - TIENT 0.0996 +0.0004 0.1204
+R06a  TIENT comptes 144/141/129/12 ; exclus : N3 rang 12, N5 rang 13, BN rang 13
+R06b  TIENT issues : E1 10/10, E2 5/5, E1B 2/2, E3 12, aucune tombee, aucune inexploitable
+R07a  TIENT lignes : 117 etats, mediane 0.0175, plus grand 0.0740 (N1)
+R07b0 TIENT classe e_bord 0 : 40 etats, mediane 0.0166, plus grand 0.0336
+R07b1 TIENT classe e_bord 1 : 59 etats, mediane 0.0160, plus grand 0.0770
+R07b2 TIENT classe e_bord 2 : 30 etats, mediane 0.0411, plus grand 0.0996
+R07b3 TIENT les trois classes couvrent les 129 etats du domaine
+R07c  TIENT plus petite marge de ligne +0.0164 a P1 (|ln q3| 0.0336, T 0.05, e_bord 0.286) ; N1 +0.0260
+R07d  TIENT E1B : acte -0.076 7 0.0461 +0.0539 +0.067 5 +0.0768 +0.0996 3 0.099617 0.10 +0.000383 ; refait -0.076 7 0.0461 +0.0539 +0.067 5 +0.0768 +0.0996 3 0.099617 0.10 +0.000383
+R07e  TIENT garde e_bord 0.7 : 0.0100 a BP rang 5 ; stabilite 0.05 : 0.0041 a BP rang 4
+R08a  TIENT E2 : 60 sur 60 ; ln q2 median +0.0627 a +0.1026 ; ln q3 median -0.0464 a -0.0094
+R08b  TIENT E3 : bornes 1.6 / 1.25 ; |ln q2| au plus N 0.1048, P 0.0493, BN 0.1106, BP 0.1204
+R08c  MORD  E3 : plus petite marge en logarithme refaite : 0.1738 sur P ; l'acte ecrit 0.173 sur P
+R09a  TIENT signes : N 58/60 negatifs ; P 57/57 positifs ; BN 7 ; BP 5
+R09b  TIENT hors domaine : 12 etats (BN 4, BP 8), e_bord 0.489 a 0.711, 10 par la stabilite seule, ordre 3 plus loin a 0, |ln q3| 0.0948, |ln q2| 0.1204
+R09c  TIENT ligne P : ordre 3 plus pres que l'ordre 2 a 57 etats du domaine
+R09d  TIENT etiquettes : 132 des 144 etats lus portent une etiquette parmi les quatorze predites de leur cellule (mon evaluateur 1D)
+R10a  TIENT k a delta < 0 : 67 etats (67 ou la correction se lit), mediane 2.03, plus grand 2.85 ; avant le run (gel) mediane 1.99, plus grand 3.24
+R10b  TIENT delta > 0 : 62 etats ; delta^3 plus grand 784 (avant 493), depasse a 15 ; delta^2 plus grand 27.4 (avant 15.0), depasse a 28
+R10c  TIENT attentes (lues dans la table 7.3 du gel) : realise sous l'attente a ['N1', 'N2', 'N3', 'N4', 'N5', 'BN'] ; N1 0.0740 pour 0.0866
+R10d  TIENT au-dessus de l'attente : ['P1', 'P2', 'P3', 'P4'] ; P1 0.0336 pour 0.0211
+R10e  TIENT ligne P : plus grand |ln q3| 0.0201 (facteur 4/3) a 0.0336 (facteur 3/4), decroissant avec le facteur ; medianes 0.0134 a 0.0210
+R10f  TIENT BP : realise 0.0996 entre 0.0672 (puissance 2) et 0.1481 (puissance 3, la table 7.3)
+R10g  MORD  au-dela de e_bord 0.603 : 5 etats du domaine : N1 r1, N1 r3, BP r1, BP r3, BP r10
+R11a  TIENT annonces de la section 10 du gel retrouvees : ('0.90', '0.35', '0.40', '0.45', '0.50', '0.85', '0.65', '0.40', '0.80')
+R11b  TIENT phrase de la plume (section 10) correctement rapportee
+R12a  TIENT phrase de nn.8 = phrase autorisee par la section 8 du gel (a la lettre) ; bloc d'ordre 3 534ba246aa3b8973
+R12b  TIENT nn.8 : limites ecrites (pas de loi en delta, BP a la limite, rien de regle apres lecture)
+R13a  TIENT O-1 : gel "0.066 a 0.164" ; mon calcul (verification des nombres, passage mordu) 0.1634 ; dans l acte : plus grand 0.16338, soit 0.1634
+R13b  TIENT R-1 : E2 TENU aux deux lectures (aucune cellule N tombee ou inexploitable)
+R14a  TIENT rejeu de m1 contre le run : memes issues True, differences d'etat [] ; ecarts ln q3 1.6e-09, ln q2 1.1e-09, stab 1.7e-09, e_bord 0.0e+00
+R14b  TIENT lecteur rejoue : memes etats et statuts : True ; plus grand ecart relatif d'une largeur de plateau 7.3e-15
+R14c  TIENT journaux de lecture du run et du rejeu identiques ligne a ligne (CRLF mis a part) : True
+R14d  TIENT MA feuille rejouee sur le verdict du lecteur de m1 : issues {'E1': 'TENU', 'E1B': 'TENU', 'E2': 'TENU', 'E3': 'TENU'} ; les siennes {'E1': 'TENU', 'E1B': 'TENU', 'E2': 'TENU', 'E3': 'TENU'} ; memes comptes : True
+R14e  TIENT ma 2e feuille adf4418505262df6 ; 141 etats juges (concordance deja faite hier, 0 difference)
+R14f  TIENT marge de BP 0.000383 = 2.4e+05 fois l'ecart ln q3 entre machines (l'acte : plus de cent mille)
+R15a  TIENT deltas des douze cellules et graine 200482 : ('200482', '-0.065', '+0.035', '-0.076', '+0.067')
+R15b  TIENT P1 et P2 : etats lus 9 et 10 ; predits dans le domaine 12 et 13 (table 7.3)
+R15c  TIENT nn.10 : BP tient a 0.000383 pres
+RELEVE DU CONTRESEING : 67 controles, 2 mordent : ['R08c', 'R10g']

@@ -1,0 +1,10 @@
+C01 TIENT   canon du texte b56ca5cb2dd25da1 (annonce b56ca5cb2dd25da1) ; ASCII : True
+C02 TIENT   canons de la section 1 recalcules depuis mes copies : tous tiennent ; mon lot de reponse 548fb2ba8793ecfe
+C03 TIENT   quatre creneaux : listes de 9, 18, 8 et 9 valeurs, fenetres et bornes contre mon script de tirage
+C04 TIENT   exemple de la section 3 et huit lignes de l autotest de machine 1 contre mon tirage : 8 sur 8 ; forme de la chaine hachee presente
+C05 TIENT   definitions 4.1 a 4.6 : seuils et formules que mon evaluateur applique
+C06 TIENT   regle des rangs : cinq rangs de 0 a 4, creneau entier, ordre N P BN BP, pas de retrait
+C07 TIENT   table de la section 7 : 152 cellules lues dans le texte ; differentes du JSON de machine 1 : 0 ; differentes de MA table : 0
+C08 MORD    comptes : 152 cellules, 44 w2, eligibles {'BN': 7, 'BP': 9, 'N': 9, 'P': 18} (JSON de machine 1) ; ABSENTS : ['152 cellules candidates (44 w2 au millieme)']
+C09 TIENT   section 11 : 11 canons de pieces ; recalcules depuis le lot de machine 1, differents : [] (le script de construction, qui porte ce texte, n est pas compare a lui-meme)
+BILAN : 9 controles, 1 mordent ['C08']

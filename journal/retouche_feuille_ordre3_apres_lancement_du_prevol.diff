@@ -1,0 +1,9 @@
+16a17,20
+> ISSUES. E1 (dix cellules de ligne) et E2 (cinq cellules N) : TOMBE si deux cellules exploitables ou plus tombent ; sinon NON
+> CONCLUANT si plus de deux (E1), plus d'une (E2) cellules sont inexploitables ; sinon TENU, ou TENU SAUF UNE CELLULE.
+> E1B : TOMBE si une cellule de bord exploitable tombe ; sinon NON CONCLUANT si l'une est inexploitable ; sinon TENU.
+> E3 : TENU si aucune cellule ne tombe (une cellule sans etat juge est VIDE et ne tombe pas).
+195c199
+< out["E2"] = dict(zip(("issue", "tombees", "exploitables"), issue(ligN, "E2", INEXPLOITABLES_E2, 0))); out["E2"]["cellules"] = len(ligN)
+---
+> out["E2"] = dict(zip(("issue", "tombees", "exploitables"), issue(ligN, "E2", INEXPLOITABLES_E2, 1))); out["E2"]["cellules"] = len(ligN)

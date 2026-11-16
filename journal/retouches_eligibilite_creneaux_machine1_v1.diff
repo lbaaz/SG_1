@@ -1,0 +1,31 @@
+--- carte_chaine_machine1_v1.py
++++ eligibilite_creneaux_machine1_v1.py
+@@ -2 +2,6 @@
+-"""CARTE PAR LA CHAINE SEULE -- machine 1, v1, 2026-11-15. Hors chaine. AUCUN CALCUL 2D, aucune largeur 2D lue ni jouee.
++"""ELIGIBILITE DES CELLULES CANDIDATES DE LA REGLE DE TIRAGE -- machine 1, v1, 2026-11-15. AUCUN CALCUL 2D.
++Derive de carte_chaine_machine1_v1.py (f0f6581d87176752, lot 1e8413aed149429f, non edite) par quatre retouches : cet en-tete (en deux
++endroits), la liste des cellules (les quatre creneaux de la regle au lieu de la grille) et les modes. Les fonctions etat et cellule sont celles de
++la carte, au caractere pres.
++--- texte de l'en-tete d'origine :
++CARTE PAR LA CHAINE SEULE -- machine 1, v1, 2026-11-15. Hors chaine. AUCUN CALCUL 2D, aucune largeur 2D lue ni jouee.
+@@ -10,2 +15,3 @@
+-Usage : python3 -I carte_chaine_machine1_v1.py <moteur_v17.py> <bloc ordre 2> <bloc ordre 3> <sonde_ordre2.json>
+-        <sortie.json> <mode>      mode : depot | neg | pos   (les seize points du depot ; grille delta < 0 ; delta > 0)"""
++--- usage de ce script :
++Usage : python3 -I eligibilite_creneaux_machine1_v1.py <moteur_v17.py> <bloc ordre 2> <bloc ordre 3> <sonde_ordre2.json>
++        <sortie.json> <creneaux>      creneaux : noms separes par des virgules, parmi N, P, BN, BP"""
+@@ -26,2 +32,5 @@
+-PAS_DELTA = [F(k, 100) for k in range(2, 13)]                                                  # |delta| de 0.02 a 0.12
+-FACTEURS = [F(1, 2), F(3, 5), F(2, 3), F(3, 4), F(5, 6), F(1), F(6, 5), F(4, 3), F(3, 2), F(5, 3), F(2)]
++CINQ = [F(3, 4), F(5, 6), F(1), F(6, 5), F(4, 3)]
++CRENEAUX = {"N": ([F(k, 1000) for k in range(1931, 1940)], CINQ),                               # delta dans ]-0.070, -0.060[
++            "P": ([F(k, 1000) for k in list(range(2031, 2040)) + list(range(2041, 2050))], CINQ),  # delta dans ]+0.030, +0.050[
++            "BN": ([F(k, 1000) for k in list(range(1916, 1920)) + list(range(1921, 1925))], [F(1)]),  # delta dans ]-0.085, -0.075[
++            "BP": ([F(k, 1000) for k in range(2061, 2070)], [F(1)])}                             # delta dans ]+0.060, +0.070[
+@@ -69,5 +78 @@
+-if MODE == "depot":
+-    travail = [(F(p["w2"]), F(p["facteur"]), p["id"], sorted(set((e["n1"], e["n2"]) for e in p["etats"]))) for p in json.load(open(DEP))["points"]]
+-else:
+-    sg = -1 if MODE == "neg" else 1
+-    travail = [(F(2) + sg * d, f, None, ()) for d in PAS_DELTA for f in FACTEURS]
++travail = [(w2, f, nom, ()) for nom in MODE.split(",") for w2 in CRENEAUX[nom][0] for f in CRENEAUX[nom][1]]

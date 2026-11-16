@@ -1,0 +1,121 @@
+{
+ "mutations": [
+  {
+   "attendu": "E1 TOMBE a C1 ; C2 et L4 inchanges",
+   "mutation": "m01",
+   "quoi": "Gamma_pl(A) d'un etat du domaine de C1 x 1.2",
+   "tient": true
+  },
+  {
+   "attendu": "E2 TOMBE a C2 (l'ordre 2 est alors le plus pres) ; C1 inchange",
+   "mutation": "m02",
+   "quoi": "toutes les Gamma_pl(A) de C2 x 1.15",
+   "tient": true
+  },
+  {
+   "attendu": "un etat juge de moins a C1, exclu \"non qualifie\" ; verdicts inchanges",
+   "mutation": "m03",
+   "quoi": "un etat de C1 declare NON QUALIFIE",
+   "tient": true
+  },
+  {
+   "attendu": "rien n'est juge",
+   "mutation": "m04",
+   "quoi": "verdict du lecteur : instrument NE TIENT PAS",
+   "tient": true
+  },
+  {
+   "attendu": "ARRET : etiquettes differentes",
+   "mutation": "m05",
+   "quoi": "une etiquette de la sortie dense changee (n1 + 1)",
+   "tient": true
+  },
+  {
+   "attendu": "ARRET : forme de la sortie dense",
+   "mutation": "m06",
+   "quoi": "couplage de C2 dans la sortie dense x (1 + 1e-6)",
+   "tient": true
+  },
+  {
+   "attendu": "ARRET : forme de la sortie dense",
+   "mutation": "m07",
+   "quoi": "un etat retire de L4 dans la sortie dense (13 etats)",
+   "tient": true
+  },
+  {
+   "attendu": "ARRET : forme de la sortie dense",
+   "mutation": "m08",
+   "quoi": "facteur d'un point change dans la table",
+   "tient": true
+  },
+  {
+   "attendu": "E3 TOMBE a L4 ; C1 et C2 inchanges",
+   "mutation": "m09",
+   "quoi": "Gamma_pl(A) d'un etat de L4 x 0.4",
+   "tient": true
+  },
+  {
+   "attendu": "un juge de moins a C1, exclu \"J flou\"",
+   "mutation": "m10",
+   "quoi": "ecart-type de J d'un etat de C1 mis a 0.5",
+   "tient": true
+  },
+  {
+   "attendu": "ARRET : sortie dense : canon",
+   "mutation": "m11",
+   "quoi": "canon de la sortie dense passe faux",
+   "tient": true
+  },
+  {
+   "attendu": "C1 INEXPLOITABLE pour E1 et E2 ; E3 tient encore",
+   "mutation": "m12",
+   "quoi": "C1 : tous les etats sauf 4 declares NON QUALIFIES",
+   "tient": true
+  },
+  {
+   "attendu": "les deux sont exclus \"etiquette double\"",
+   "mutation": "m13",
+   "quoi": "deux etats de C2 portent la meme etiquette (sortie dense et lecteur)",
+   "tient": true
+  },
+  {
+   "attendu": "l'instrument ne tient pas : rien n'est juge",
+   "mutation": "m14",
+   "quoi": "Gamma_2D(3) de l'etat de rang 0 de l'ancre A1 x 1.01 dans la sortie dense",
+   "tient": true
+  },
+  {
+   "attendu": "C2 INEXPLOITABLE (7 juges sur 11 lus, moins des deux tiers) alors que 7 sont dans le domaine",
+   "mutation": "m15",
+   "quoi": "C2 : quatre etats sur onze declares NON QUALIFIES",
+   "tient": true
+  },
+  {
+   "attendu": "l'instrument ne tient pas : rien n'est juge",
+   "mutation": "m16",
+   "quoi": "l'ancre A2 retiree de la table",
+   "tient": true
+  },
+  {
+   "attendu": "ARRET : sans --prevol la table doit etre au canon",
+   "mutation": "m17",
+   "quoi": "une table qui n'est pas celle du gel, sans --prevol",
+   "tient": true
+  }
+ ],
+ "temoin": {
+  "C1": [
+   8,
+   8
+  ],
+  "C2": [
+   11,
+   11
+  ],
+  "L4": [
+   9,
+   0
+  ]
+ },
+ "tient": true
+}

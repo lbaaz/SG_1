@@ -1,0 +1,100 @@
+
+1. LES CITATIONS DE L ACTE, ET LES DEUX INDEX PAR CANON
+  [ note] acte                                                       journal_delta_nn_loi_largeur_ordre3_v2.md (version 2)
+  [PASSE] l acte est ASCII pur, LF, newline final                    18109 octets
+  [PASSE] l acte cite des empreintes (compte etabli apres extraction 24 jetons distincts de 16 hex
+  [PASSE] chaque VALEUR declaree est bien citee par l acte           
+  [PASSE] chaque lot de TRANSPORT declare est bien cite par l acte   
+  [ note] numero DERIVE du releve, non tape                          plafond 99 -> le delta de cet acte porte le 100 ; le numero reste de la main de l operateur (E18)
+  [PASSE] releve : HEAD 91dd503, plafond 99, aucun fichier delta_100 2053 fichiers suivis
+  [PASSE] le delta PRECEDENT est bien au registre -- le releve porte delta_99 present
+  [ note] index du poste                                             9926 canons distincts (B et brut), 3607 noms de table
+  [ note] balayage : tout BOCAL4 hors .git et __pycache__ ; exclues, manifest_depot_delta100_machine2_v2.txt, perimetre_depot_delta100_sur_acte_v2_machine2.log
+
+2. RESOLUTION DE CHAQUE CITATION -- AU REGISTRE, AU POSTE, OU NULLE PART
+   poste     b56ca5cb2dd25da1  DEPOT_delta100/entrants/lot_machine1_2026-11-15_gel_loi_partie1_regle_tirage_v1/gel_loi_ordre3_partie1_regle_tirage_pre_enregistrement_v1.md
+   poste     543d8b33e5c9afb8  DEPOT_delta100/entrants/lot_machine1_2026-11-16_gel_loi_partie2_instrument_enonces_v1/gel_loi_ordre3_partie2_instrument_enonces_pre_enregistrement_v1.md
+   poste     4fb1dc66f96f57f6  MANIFEST_lot_machine2_certification_gel_loi_partie1_v1.txt
+   poste     220a0970134335e1  MANIFEST_lot_machine2_tirage_graine_200482_v1.txt
+   poste     76ed746ef4db3b0c  DEPOT_delta100/entrants/lot_machine1_2026-11-16_gel_loi_partie2_instrument_enonces_v1/MANIFEST_lot_machine1_gel_loi_partie2_instrument_enonces_v1.txt
+   poste     5a5ba910be8b3b29  MANIFEST_lot_machine2_certification_gel_loi_partie2_v1.txt
+   poste     125ebdb9027a3dfb  DEPOT_delta100/entrants/lot_machine2_2026-11-16_resultat_gel_loi_partie2_v1/run_gel_loi_ordre3/pilote_gel_loi.log
+   poste     35fa7b73f2b7f8eb  DEPOT_delta100/entrants/lot_machine1_2026-11-16_gel_loi_partie2_instrument_enonces_v1/table_points_gel_loi_ordre3_v1.json
+   poste     15998497f3422765  certif_gel_loi_partie2_machine2/pilote_gel_loi_machine2_v2.py
+   poste     2882de31bc49ce2f  DEPOT_delta100/entrants/lot_machine1_2026-11-16_gel_loi_partie2_instrument_enonces_v1/pilote_gel_loi_machine1_v1.py
+   poste     7fb8ad918c8ba795  DEPOT_delta100/entrants/lot_machine2_2026-11-16_resultat_gel_loi_partie2_v1/run_gel_loi_ordre3/sonde_dense.json
+   poste     d5d3880d73a2d3d7  DEPOT_delta100/entrants/lot_machine2_2026-11-16_resultat_gel_loi_partie2_v1/run_gel_loi_ordre3/verdict_ter_instrument.json
+   poste     158fc924414ddbca  DEPOT_delta100/entrants/lot_machine2_2026-11-16_resultat_gel_loi_partie2_v1/run_gel_loi_ordre3/verdict_ter.json
+   poste     87e9221cfc5f8f9b  DEPOT_delta100/entrants/lot_machine2_2026-11-16_resultat_gel_loi_partie2_v1/run_gel_loi_ordre3/verdict_ordre3.json
+   poste     54ccae1713f92bc9  MANIFEST_lot_machine2_resultat_gel_loi_partie2_v1.txt
+   poste     adf4418505262df6  certif_acte_gel_loi_machine2/feuille_independante_gel_loi_machine2_v1.py
+   poste     534ba246aa3b8973  DEPOT_delta100/entrants/lot_machine1_2026-11-16_gel_loi_partie2_instrument_enonces_v1/ordre3_bloc_machine1_v1.py
+   poste     a3f7d5d6809dcfe5  DEPOT_delta100/entrants/lot_machine1_2026-11-16_acte_gel_loi_ordre3_v1/journal_delta_nn_loi_largeur_ordre3_v1.md
+   poste     bbb74a8df7697397  MANIFEST_lot_machine2_contreseing_acte_gel_loi_ordre3_v1.txt
+   poste     596a45bf6d4f97d7  DEPOT_delta100/entrants/lot_machine1_2026-11-15_gel_loi_partie1_regle_tirage_v1/MANIFEST_lot_machine1_gel_loi_partie1_regle_tirage_v1.txt
+   poste     89914c76edb0453c  POUR_MACHINE1_certification_gel_loi_partie2_machine2_v1.md
+   poste     0adbc286a08c56ad  POUR_MACHINE1_resultat_gel_loi_partie2_machine2_v1.md
+   poste     a34e5369e36bd10b  DEPOT_delta100/entrants/lot_machine1_2026-11-16_acte_gel_loi_ordre3_v1/verdict_ordre3_rejoue_machine1.json
+   poste     b0fcb117f8d5107e  DEPOT_delta100/entrants/lot_machine1_2026-11-16_acte_gel_loi_ordre3_v1/rejeu_machine1_verdict_ter.json
+  [PASSE] toute empreinte citee resout par canon (registre, poste, o 0 au registre, 24 au poste, 0 zip, 0 valeurs
+  [PASSE] les lots de ce delta (manifeste dont l en-tete porte le ca cf53c53fa77ac0e9 MANIFEST_lot_machine2_contreseing_acte_gel_loi_ordre3_v2_v1.txt
+
+3. LES LOTS CITES ENTRENT AVEC LEURS PIECES DE TABLE
+  [ note] erratum                                                    aucun dans ce chantier : une divergence de table mord
+   lot 4fb1dc66f96f57f6  table 21 / declare 21   MANIFEST_lot_machine2_certification_gel_loi_partie1_v1.txt
+   lot 220a0970134335e1  table  5 / declare 5    MANIFEST_lot_machine2_tirage_graine_200482_v1.txt
+  [ note] manifeste sans ligne pieces : N                            76ed746ef4db3b0c : compte attendu = 64 membres du zip extrait, hors manifeste
+   lot 76ed746ef4db3b0c  table 64 / declare 64   DEPOT_delta100/entrants/lot_machine1_2026-11-16_gel_loi_partie2_instrument_enonces_v1/MANIFEST_lot_machine1_gel_loi_partie2_instrument_enonces_v1.txt
+   lot 5a5ba910be8b3b29  table 79 / declare 79   MANIFEST_lot_machine2_certification_gel_loi_partie2_v1.txt
+   lot 54ccae1713f92bc9  table 56 / declare 56   MANIFEST_lot_machine2_resultat_gel_loi_partie2_v1.txt
+   lot bbb74a8df7697397  table 22 / declare 22   MANIFEST_lot_machine2_contreseing_acte_gel_loi_ordre3_v1.txt
+  [ note] manifeste sans ligne pieces : N                            596a45bf6d4f97d7 : compte attendu = 15 membres du zip extrait, hors manifeste
+   lot 596a45bf6d4f97d7  table 15 / declare 15   DEPOT_delta100/entrants/lot_machine1_2026-11-15_gel_loi_partie1_regle_tirage_v1/MANIFEST_lot_machine1_gel_loi_partie1_regle_tirage_v1.txt
+   lot cf53c53fa77ac0e9  table 14 / declare 14   MANIFEST_lot_machine2_contreseing_acte_gel_loi_ordre3_v2_v1.txt
+  [PASSE] 8 lots cites a deposer, chacun au compte de table declare  0 faux compte
+  [PASSE] aucune piece de table ne s ecarte de son manifeste HORS er 0 ecart
+  [PASSE] aucune piece de table n est introuvable a cote de son mani 0 introuvable
+  [PASSE] aucune piece retenue n est deja au registre par canon      268 retenues
+
+4. LE MANIFESTE DE DEPOT -- DERIVE, JAMAIS ECRIT A LA MAIN
+  [ note] collision de nom, prefixe applique                         console_ancres.log -> lot_5a5ba910be8b3b29__console_ancres.log
+  [ note] collision de nom, prefixe applique                         console_ancres.log -> lot_54ccae1713f92bc9__console_ancres.log
+  [ note] collision de nom, prefixe applique                         console_etage0.log -> lot_5a5ba910be8b3b29__console_etage0.log
+  [ note] collision de nom, prefixe applique                         console_etage0.log -> lot_54ccae1713f92bc9__console_etage0.log
+  [ note] collision de nom, prefixe applique                         console_etage1.log -> lot_5a5ba910be8b3b29__console_etage1.log
+  [ note] collision de nom, prefixe applique                         console_etage1.log -> lot_54ccae1713f92bc9__console_etage1.log
+  [ note] collision de nom, prefixe applique                         console_point_C3.log -> lot_5a5ba910be8b3b29__console_point_C3.log
+  [ note] collision de nom, prefixe applique                         feuille_ordre3.log -> lot_5a5ba910be8b3b29__feuille_ordre3.log
+  [ note] collision de nom, prefixe applique                         feuille_ordre3.log -> lot_54ccae1713f92bc9__feuille_ordre3.log
+  [ note] collision de nom, prefixe applique                         pilote_gel_loi.log -> lot_5a5ba910be8b3b29__pilote_gel_loi.log
+  [ note] collision de nom, prefixe applique                         pilote_gel_loi.log -> lot_5a5ba910be8b3b29__pilote_gel_loi.log
+  [ note] collision de nom, prefixe applique                         pilote_gel_loi.log -> lot_54ccae1713f92bc9__pilote_gel_loi.log
+  [ note] collision de nom, prefixe applique                         sonde_ter_ancres.json -> lot_5a5ba910be8b3b29__sonde_ter_ancres.json
+  [ note] collision de nom, prefixe applique                         sonde_ter_ancres.json -> lot_54ccae1713f92bc9__sonde_ter_ancres.json
+  [ note] collision de nom, prefixe applique                         sonde_ter_etage0.json -> lot_5a5ba910be8b3b29__sonde_ter_etage0.json
+  [ note] collision de nom, prefixe applique                         sonde_ter_etage0.json -> lot_54ccae1713f92bc9__sonde_ter_etage0.json
+  [ note] collision de nom, prefixe applique                         sonde_ter_etage1.json -> lot_5a5ba910be8b3b29__sonde_ter_etage1.json
+  [ note] collision de nom, prefixe applique                         sonde_ter_etage1.json -> lot_54ccae1713f92bc9__sonde_ter_etage1.json
+  [ note] collision de nom, prefixe applique                         sonde_ter_point_C3.json -> lot_5a5ba910be8b3b29__sonde_ter_point_C3.json
+  [ note] collision de nom, prefixe applique                         verdict_ordre3.json -> lot_5a5ba910be8b3b29__verdict_ordre3.json
+  [ note] collision de nom, prefixe applique                         verdict_ordre3.json -> lot_54ccae1713f92bc9__verdict_ordre3.json
+  [ note] collision de nom, prefixe applique                         verdict_ter.json -> lot_5a5ba910be8b3b29__verdict_ter.json
+  [ note] collision de nom, prefixe applique                         verdict_ter.json -> lot_54ccae1713f92bc9__verdict_ter.json
+  [ note] collision de nom, prefixe applique                         verdict_ter_instrument.json -> lot_5a5ba910be8b3b29__verdict_ter_instrument.json
+  [ note] collision de nom, prefixe applique                         verdict_ter_instrument.json -> lot_54ccae1713f92bc9__verdict_ter_instrument.json
+  [ note] collision de nom, prefixe applique                         journal/lot_5a5ba910be8b3b29__pilote_gel_loi.log -> canon_7b101a572060dd08__lot_5a5ba910be8b3b29__pilote_gel_loi.log (meme lot, meme nom)
+  [PASSE] aucun chemin cible en double ni deja au registre           275 chemins cibles
+  [PASSE] aucun doublon de canon dans le depot                       275 pieces
+  [PASSE] toute collision resolue porte le prefixe de son LOT (aucun 26 prefixes
+  [PASSE] les .md/.py/.txt deposes sont B == brut (ASCII/LF)         96 pieces texte
+  [PASSE] le manifeste relu porte autant de lignes que de pieces     275 lignes, 275 pieces
+  [PASSE] chaque source du manifeste resout encore au canon ecrit    0 ecart
+  [PASSE] le manifeste declare son compte, egal aux lignes           pieces : 275
+  [PASSE] le manifeste est ASCII                                     68804 octets
+
+=====================================================================
+BILAN PERIMETRE : 20/20 controles PASSENT
+24 empreintes citees : 0 au registre, 25 au poste, 0 zip, 0 valeurs, 0 non resolues
+DEPOT : 275 pieces (gels 2, journal 259, scripts 14) ; manifeste MANIFEST_DEPOT_delta100_machine2_v2.txt 851505c36ff22909
+=====================================================================
+code 0

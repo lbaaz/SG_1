@@ -1,0 +1,11 @@
+lignes lues dans le journal d autotest de machine 1 : 8 (attendu 8)
+  N  rang 0 : mon sha256 4b2a1d038c89c813... ; modulo  9 =  4 -> w2 = 1.935 ; machine 1 : 4b2a1d038c89c813... ; modulo  9 =  4 -> 1.935 : IDENTIQUE
+  N  rang 1 : mon sha256 1b5deb7b253e3dfa... ; modulo  9 =  0 -> w2 = 1.931 ; machine 1 : 1b5deb7b253e3dfa... ; modulo  9 =  0 -> 1.931 : IDENTIQUE
+  P  rang 0 : mon sha256 c044a7a576ead835... ; modulo 18 = 16 -> w2 = 2.048 ; machine 1 : c044a7a576ead835... ; modulo 18 = 16 -> 2.048 : IDENTIQUE
+  P  rang 1 : mon sha256 1301bfbc47473183... ; modulo 18 = 11 -> w2 = 2.043 ; machine 1 : 1301bfbc47473183... ; modulo 18 = 11 -> 2.043 : IDENTIQUE
+  BN rang 0 : mon sha256 380a2339ad60d374... ; modulo  8 =  2 -> w2 = 1.918 ; machine 1 : 380a2339ad60d374... ; modulo  8 =  2 -> 1.918 : IDENTIQUE
+  BN rang 1 : mon sha256 1a6d595fe470d18c... ; modulo  8 =  6 -> w2 = 1.923 ; machine 1 : 1a6d595fe470d18c... ; modulo  8 =  6 -> 1.923 : IDENTIQUE
+  BP rang 0 : mon sha256 60963710bfe44dd5... ; modulo  9 =  8 -> w2 = 2.069 ; machine 1 : 60963710bfe44dd5... ; modulo  9 =  8 -> 2.069 : IDENTIQUE
+  BP rang 1 : mon sha256 9a6c8a4aa4c29ecb... ; modulo  9 =  4 -> w2 = 2.065 ; machine 1 : 9a6c8a4aa4c29ecb... ; modulo  9 =  4 -> 2.065 : IDENTIQUE
+exemple de la section 3 du gel : sha256("DEMONSTRATION|N|0") = 4b2a1d038c89c813... ; modulo 9 = 4 -> w2 = 1.935 : RETROUVE
+TIRAGE SUR LA GRAINE DE DEMONSTRATION : TIENT, les huit lignes sont identiques

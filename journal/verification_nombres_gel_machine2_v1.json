@@ -1,0 +1,206 @@
+{
+ "c3_max": 492.563400938695,
+ "controles": [
+  {
+   "controle": "N01",
+   "detail": "section 3 : douze cellules (w2, delta, facteur, g a 4 chiffres, boite N, jugeables / domaine / hors) = mon evaluateur 1D : toutes",
+   "tient": true
+  },
+  {
+   "controle": "N02",
+   "detail": "section 4.5 et 12 : etats juges et dans le domaine (texte ('131', '56')) ; etats lus au run du gel ter (texte 137) ; ma feuille : 131 juges, 56 domaine, 137 lus",
+   "tient": true
+  },
+  {
+   "controle": "N03",
+   "detail": "sections 7.1 et E-1 : ordre 3 plus pres que l'ordre 2 a 56 des 56 etats du domaine ; 83 etats juges de e_bord < 0.7 dont 27 exclus par la stabilite (texte : ('56', '56') ; ('83', '27'))",
+   "tient": true
+  },
+  {
+   "controle": "N04",
+   "detail": "7.1 : classes de e_bord (nombre, mediane, plus grand |ln q3|) : moi {'0': (27, 0.0083, 0.0374), '1': (16, 0.0277, 0.0415), '2': (13, 0.0385, 0.0604)} ; texte {'0': (27, 0.0083, 0.0374), '1': (16, 0.0277, 0.0415), '2': (13, 0.0385, 0.0604)}",
+   "tient": true
+  },
+  {
+   "controle": "N05",
+   "detail": "7.1 : ln q3 aux deux etats lus des ancres : moi A1 [-0.0122, -0.0065] A2 [0.0373, 0.0374] ; texte A1 [-0.0122, -0.0065] A2 [0.0373, 0.0374]",
+   "tient": true
+  },
+  {
+   "controle": "N06",
+   "detail": "7.2 : delta<0 : etats / negatifs / lus pour k / k min, mediane, max ; delta>0 : etats, c2 mediane et max, c3 mediane et max : moi (39, 35, 31, 0.55, 1.99, 3.24, 21, 10.2, 15.0, 192, 493) ; texte (39, 35, 31, 0.55, 1.99, 3.24, 21, 10.2, 15.0, 192, 493) ; ln q3 positif partout a delta>0 : True",
+   "tient": true
+  },
+  {
+   "controle": "N07",
+   "detail": "7.3 : plus grand e_bord d un etat du domaine aux points joues : moi 0.6031, texte 0.603",
+   "tient": true
+  },
+  {
+   "controle": "N08",
+   "detail": "7.3 : douze lignes (etats du domaine, a T = 0.05, e_bord extremes, ln(G3/G2) median, attente, marge) recalculees de mes chaines : toutes",
+   "tient": true
+  },
+  {
+   "controle": "N09",
+   "detail": "7.3 : etats predits du domaine au-dela du plus grand e_bord vu (0.603) : N1 3, BP 2, total 5 (texte : ('5', '3', '2'))",
+   "tient": true
+  },
+  {
+   "controle": "N10",
+   "detail": "7.3 : N1, sous k = 3.24, l'ordre 2 est plus pres que l'ordre 3 a 4 etats sur 11 (texte : ('4', '11'))",
+   "tient": true
+  },
+  {
+   "controle": "N11",
+   "detail": "section 6 : |ln(G3/G2)| aux etiquettes predites, ligne P : de 0.0140 a 0.0188 (texte ('0.014', '0.019') ; tolerance : un demi dernier chiffre)",
+   "tient": true
+  },
+  {
+   "controle": "N11N",
+   "detail": "section 6 : |ln(G3/G2)| aux etiquettes predites, ligne N : de 0.0663 a 0.1634 (texte ('0.066', '0.164') ; tolerance : un demi dernier chiffre)",
+   "tient": false
+  },
+  {
+   "controle": "N12",
+   "detail": "section 12 : etats predits jugeables aux douze cellules : 149 (texte : 149 au-dessus de dix planchers)",
+   "tient": true
+  }
+ ],
+ "e_vu": 0.6031396537933464,
+ "k_max": 3.2444566000199804,
+ "marges": {
+  "BN": {
+   "T_bas": 0,
+   "attente": 0.07341170596288292,
+   "d32_med": -0.14105250132788794,
+   "domaine": 7,
+   "e_bord": [
+    0.36876550921422047,
+    0.5826261773079634
+   ],
+   "marge": 1.3621805771760729
+  },
+  "BP": {
+   "T_bas": 0,
+   "attente": 0.14814484615652584,
+   "d32_med": -0.035475305554462454,
+   "domaine": 6,
+   "e_bord": [
+    0.34680244754948614,
+    0.6360833583794643
+   ],
+   "marge": 0.6750150450346596
+  },
+  "N1": {
+   "T_bas": 0,
+   "attente": 0.08660719165676262,
+   "d32_med": -0.1523659811231706,
+   "domaine": 11,
+   "e_bord": [
+    0.44190498832689995,
+    0.6257567217756314
+   ],
+   "marge": 1.154638524665655
+  },
+  "N2": {
+   "T_bas": 0,
+   "attente": 0.06198176113695387,
+   "d32_med": -0.1311376493549449,
+   "domaine": 10,
+   "e_bord": [
+    0.44053313801783456,
+    0.5647756454269631
+   ],
+   "marge": 1.6133778415724855
+  },
+  "N3": {
+   "T_bas": 0,
+   "attente": 0.04060960915568871,
+   "d32_med": -0.10561594638505953,
+   "domaine": 12,
+   "e_bord": [
+    0.31666037210821574,
+    0.5616934250677568
+   ],
+   "marge": 2.4624713726404264
+  },
+  "N4": {
+   "T_bas": 1,
+   "attente": 0.025388720752550734,
+   "d32_med": -0.08395666711637143,
+   "domaine": 13,
+   "e_bord": [
+    0.1914474060211313,
+    0.5014302918210908
+   ],
+   "marge": 2.779257879953697
+  },
+  "N5": {
+   "T_bas": 2,
+   "attente": 0.019435425614048957,
+   "d32_med": -0.07312087444376297,
+   "domaine": 14,
+   "e_bord": [
+    0.19128329698859173,
+    0.4996478303779008
+   ],
+   "marge": 3.4575580863387434
+  },
+  "P1": {
+   "T_bas": 5,
+   "attente": 0.021118655815246804,
+   "d32_med": -0.015484560004969387,
+   "domaine": 12,
+   "e_bord": [
+    0.2496955767110717,
+    0.3956596800653075
+   ],
+   "marge": 2.367574926994267
+  },
+  "P2": {
+   "T_bas": 6,
+   "attente": 0.021118655815246804,
+   "d32_med": -0.016472086922805,
+   "domaine": 13,
+   "e_bord": [
+    0.21362375899794703,
+    0.35915983305353494
+   ],
+   "marge": 2.367574926994267
+  },
+  "P3": {
+   "T_bas": 8,
+   "attente": 0.021118655815246804,
+   "d32_med": -0.0175399183928457,
+   "domaine": 13,
+   "e_bord": [
+    0.14195514741989745,
+    0.3237343999559133
+   ],
+   "marge": 2.367574926994267
+  },
+  "P4": {
+   "T_bas": 13,
+   "attente": 0.021118655815246804,
+   "d32_med": -0.01775147317005664,
+   "domaine": 13,
+   "e_bord": [
+    0.1420669411395141,
+    0.2870025433338255
+   ],
+   "marge": 2.367574926994267
+  },
+  "P5": {
+   "T_bas": 13,
+   "attente": 0.021118655815246804,
+   "d32_med": -0.017437299857385173,
+   "domaine": 13,
+   "e_bord": [
+    0.14215889609981788,
+    0.28758474988866095
+   ],
+   "marge": 2.367574926994267
+  }
+ }
+}

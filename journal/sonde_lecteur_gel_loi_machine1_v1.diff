@@ -1,0 +1,65 @@
+--- sonde_qualification_EB_ter_machine1_v1.py
++++ sonde_lecteur_gel_loi_machine1_v1.py
+@@ -1,3 +1,11 @@
+ # -*- coding: ascii -*-
+-"""SONDE DE LA QUALIFICATION E-B TER -- machine 1, v1, 2026-11-15. CLASSE 2. Elle MESURE et ne juge pas.
++"""SONDE DU LECTEUR DU GEL "LOI DE LA LARGEUR, ORDRE 3" -- machine 1, v1, 2026-11-15. Elle MESURE et ne juge pas.
++Derivee par remplacements de sonde_qualification_EB_ter_machine1_v1.py (b5616dcf858e8801), jamais editee : meme lecteur,
++memes absorbeurs, memes barreaux. SEULS CHANGENT : les points du mode "point", pris dans la TABLE GELEE et lus dans la
++SORTIE DENSE DU RUN, dont le canon est passe en argument par le pilote (les ancres et les temoins restent ceux du depot
++du delta 98, au canon en dur) ; et l'en-tete de la sortie. Arguments, dans l'ordre :
++  <moteur_v17.py> <sonde_ordre2.json (depot)> <tp_retenus.json> <table des points.json> <sortie dense.json>
++  <canon de la sortie dense> <dossier de sortie> <mode> [<id> ...] [--prevol]
++Le texte ci-dessous est celui de la sonde d'origine (ses "douze points juges" sont ici ceux de la table).
++SONDE DE LA QUALIFICATION E-B TER -- machine 1, v1, 2026-11-15. CLASSE 2. Elle MESURE et ne juge pas.
+ Lecture, par le lecteur creux, de la largeur d'etats du H 2D du moteur sous absorbeur long.
+@@ -24,6 +32,9 @@
+ 
+-MOTEUR, DEPOT, RETENUS, DOSSIER, MODE = sys.argv[1:6]
+-IDS = sys.argv[6:]
++MOTEUR, DEPOT, RETENUS, TABLE, DENSE, CANON_DENSE, DOSSIER, MODE = sys.argv[1:9]
++IDS = [a for a in sys.argv[9:] if a != "--prevol"]
++PREVOL = "--prevol" in sys.argv[9:]
++CANON_TABLE, CANON_SONDE_DENSE, CANON_SONDE_DEPOT, N_ETATS_DENSE = "35fa7b73f2b7f8eb", "68baf04c73ed5d44", "24315c52b234319c", 14
+ CANON_MOTEUR, CANON_DEPOT, CANON_RETENUS = "82a0be882568fe0c", "10887c60d5f55bcf", "69b3bab3bb8480b7"
+-JUGES = ["C1", "C2", "C3", "C4", "M1", "M2", "M3", "M4", "L1", "L2", "L3", "L4"]
++T_POINTS = {str(p["id"]): p for p in json.load(open(TABLE))["points"]}
++JUGES = [i for i, p in T_POINTS.items() if p["role"] == "juge"]
+ ANCRES = ["A1", "A2"]
+@@ -42,2 +53,4 @@
+         raise SystemExit("REFUS : le canon du %s (%s) n'est pas %s" % (quoi, canon_B(chemin), attendu))
++if (canon_B(TABLE) == CANON_TABLE) == PREVOL:
++    raise SystemExit("REFUS : sans --prevol la table doit etre au canon %s ; avec --prevol elle ne doit pas l'etre" % CANON_TABLE)
+ spec = importlib.util.spec_from_file_location("moteur", MOTEUR)
+@@ -200,5 +213,24 @@
+ 
++def points_de_la_sortie_dense():
++    """Les points du mode "point" : lus dans la sortie dense du run, apres controle du canon passe et de la forme."""
++    if canon_B(DENSE) != CANON_DENSE:
++        raise SystemExit("REFUS : la sortie dense (%s) n'est pas au canon passe par le pilote (%s)" % (canon_B(DENSE), CANON_DENSE))
++    DD = json.load(open(DENSE))
++    if DD.get("moteur_canon") != CANON_MOTEUR or DD.get("sonde_canon") not in ((CANON_SONDE_DENSE, CANON_SONDE_DEPOT) if PREVOL else (CANON_SONDE_DENSE,)):
++        raise SystemExit("REFUS : la sortie dense ne porte pas les canons du moteur et de la sonde dense")
++    if not PREVOL and (DD.get("table_canon") != CANON_TABLE or DD.get("prevol") is not False):
++        raise SystemExit("REFUS : la sortie dense n'a pas ete produite sur la table du gel")
++    PD = {p["id"]: p for p in DD["points"]}
++    for i in IDS:
++        if i not in PD:
++            raise SystemExit("REFUS : le point %s manque a la sortie dense" % i)
++        p, t = PD[i], T_POINTS[i]; w2 = F(str(p["w2"])); g_att = float(M.g_du_point(w2)) * float(F(str(p["facteur"])))
++        if w2 != F(str(t["w2"])) or F(str(p["facteur"])) != F(str(t["facteur"])) or abs(p["g"] / g_att - 1.0) > 1e-12 or len(p["etats"]) != N_ETATS_DENSE or not p.get("faisable"):
++            raise SystemExit("REFUS : forme de la sortie dense au point %s (w2, facteur, couplage, nombre d'etats, faisable)" % i)
++    return PD
++
+ def main():
+     D = json.load(open(DEPOT)); P = {p["id"]: p for p in D["points"]}
+-    sortie = {"sonde": "sonde_qualification_EB_ter_machine1_v1", "sonde_canon": canon_B(os.path.abspath(__file__)),
++    sortie = {"sonde": "sonde_lecteur_gel_loi_machine1_v1", "sonde_canon": canon_B(os.path.abspath(__file__)),
++              "table_canon": canon_B(TABLE), "dense_canon": (CANON_DENSE if MODE == "point" else None), "prevol": PREVOL,
+               "moteur_canon": canon_B(MOTEUR), "depot_canon": canon_B(DEPOT), "retenus_canon": canon_B(RETENUS), "mode": MODE, "ids": IDS,
+@@ -231,3 +263,4 @@
+         if not IDS or any(i not in JUGES for i in IDS): raise SystemExit("REFUS : point demande un ou plusieurs identifiants parmi %s" % JUGES)
+-        sortie["points"] = [mesurer_point(P[pid], "juges", ABSORBEURS, KS) for pid in IDS]
++        PD = points_de_la_sortie_dense()
++        sortie["points"] = [mesurer_point(PD[pid], "juges", ABSORBEURS, KS) for pid in IDS]
+         nom = "sonde_ter_point_%s.json" % "_".join(IDS)

@@ -1,0 +1,34 @@
+R01a  TIENT ASCII, sans pour cent, plus longue ligne 98, ligne de FIN
+R01b  TIENT canon de l'acte lu (fichier du lot) = manifeste = a3f7d5d6809dcfe5
+R02a  TIENT nn.12 : 14 empreintes lues, toutes recalculees depuis mes fichiers ; en defaut : []
+R02b  TIENT 22 empreintes distinctes citees dans l'acte, toutes retrouvees sur un de mes fichiers (table, pilote de m1, bloc 3, ma 2e feuille comprises) ; inconnues : []
+R02c  TIENT lot 4fb1dc66f96f57f6 cite dans nn.1 = manifeste retrouve chez moi (4fb1dc66f96f57f6)
+R02c  TIENT lot 220a0970134335e1 cite dans nn.1 = manifeste retrouve chez moi (220a0970134335e1)
+R02c  TIENT lot 596a45bf6d4f97d7 cite dans nn.1 = manifeste retrouve chez moi (596a45bf6d4f97d7)
+R02c  TIENT lot 76ed746ef4db3b0c cite dans nn.1 = manifeste retrouve chez moi (76ed746ef4db3b0c)
+R03a  TIENT lance 2026-11-16 01:49:18, fini 03:32:04, 6166 s, 19 appels tous au code 0 (journal du pilote)
+R03b  TIENT durees : dense 1548 s ; 12 points de 3329 a 3805 s ; feuille d'ordre 3 56 s
+R03c  TIENT table jouee 35fa7b73f2b7f8eb dans le journal, aucun pre-vol dans le journal
+R03d  TIENT les 12 canons imprimes au depart sont ceux du pilote de m1 (valeurs en dur) ou du gel
+R03e  TIENT pilote joue contre pilote de m1 : 3 blocs different (l'acte dit trois)
+R03f  TIENT mon manifeste de certification (01:48:45) precede le lancement (01:49:18) de moins de dix minutes
+R04a  MORD  ancres 2/0 ; instrument TIENT ; 144 etats lus, 144 QUALIFIES ; cascade "ESTIMATEUR QUALIFIE" ; plateau 142 sur 144
+R04b  TIENT canons nn.2 recalcules
+R05N1 TIENT N1 : acte 11 11 11 0 TIENT TIENT TIENT 0.0740 +0.0260 0.1048 ; refait 11 11 11 0 TIENT TIENT TIENT 0.0740 +0.0260 0.1048
+R05N2 TIENT N2 : acte 11 11 11 0 TIENT TIENT TIENT 0.0427 +0.0573 0.0987 ; refait 11 11 11 0 TIENT TIENT TIENT 0.0427 +0.0573 0.0987
+R05N3 TIENT N3 : acte 12 11 11 0 TIENT TIENT TIENT 0.0355 +0.0645 0.0841 ; refait 12 11 11 0 TIENT TIENT TIENT 0.0355 +0.0645 0.0841
+R05N4 TIENT N4 : acte 14 14 14 0 TIENT TIENT TIENT 0.0208 +0.0422 0.0747 ; refait 14 14 14 0 TIENT TIENT TIENT 0.0208 +0.0422 0.0747
+R05N5 TIENT N5 : acte 14 13 13 0 TIENT TIENT TIENT 0.0157 +0.0476 0.0699 ; refait 14 13 13 0 TIENT TIENT TIENT 0.0157 +0.0476 0.0699
+R05P1 TIENT P1 : acte 9 9 9 0 TIENT - TIENT 0.0336 +0.0164 0.0493 ; refait 9 9 9 0 TIENT - TIENT 0.0336 +0.0164 0.0493
+R05P2 TIENT P2 : acte 10 10 10 0 TIENT - TIENT 0.0302 +0.0198 0.0470 ; refait 10 10 10 0 TIENT - TIENT 0.0302 +0.0198 0.0470
+R05P3 TIENT P3 : acte 12 12 12 0 TIENT - TIENT 0.0219 +0.0281 0.0392 ; refait 12 12 12 0 TIENT - TIENT 0.0219 +0.0281 0.0392
+R05P4 TIENT P4 : acte 13 13 13 0 TIENT - TIENT 0.0217 +0.0283 0.0387 ; refait 13 13 13 0 TIENT - TIENT 0.0217 +0.0283 0.0387
+R05P5 TIENT P5 : acte 13 13 13 0 TIENT - TIENT 0.0201 +0.0299 0.0362 ; refait 13 13 13 0 TIENT - TIENT 0.0201 +0.0299 0.0362
+R05BN TIENT BN : acte 12 11 7 4 TIENT - TIENT 0.0461 +0.0539 0.1106 ; refait 12 11 7 4 TIENT - TIENT 0.0461 +0.0539 0.1106
+R05BP TIENT BP : acte 13 13 5 8 TIENT - TIENT 0.0996 +0.0004 0.1204 ; refait 13 13 5 8 TIENT - TIENT 0.0996 +0.0004 0.1204
+R06a  MORD  comptes 144/141/129/12 ; exclus : BN rang 13, N3 rang 12, N5 rang 13
+Traceback (most recent call last):
+  File "d:\devs\bocal\BOCAL4\certif_acte_gel_loi_machine2\releve_contreseing_acte_gel_loi_machine2_v1.py", line 205, in <module>
+    ok = (m.group(1), int(m.group(2)), int(m.group(3))) == (V3['E1'] if isinstance(V3['E1'], str) else V3['E1'][0], len(lig), ex(lig))
+                                                                                                       ~~~~~~~~^^^
+KeyError: 0

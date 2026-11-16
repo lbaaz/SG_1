@@ -1,0 +1,21 @@
+R00  TIENT  source sonde_ordre2_machine1_v1.py : canon 24315c52b234319c (attendu 24315c52b234319c)
+R00  TIENT  source sonde_qualification_EB_ter_machine1_v1.py : canon b5616dcf858e8801 (attendu b5616dcf858e8801)
+R00  TIENT  source lecture_qualification_EB_ter_machine1_v1.py : canon b2d6d7cfaf30f1cf (attendu b2d6d7cfaf30f1cf)
+sonde_dense_gel_loi_machine1_v1.py           canon 68baf04c73ed5d44 ;  5 remplacements ; diff : 5 blocs, 14 lignes retirees, 17 ajoutees
+sonde_lecteur_gel_loi_machine1_v1.py         canon d5cc48f48e37af99 ;  6 remplacements ; diff : 5 blocs, 6 lignes retirees, 39 ajoutees
+lecture_lecteur_gel_loi_machine1_v1.py       canon 83701094e6a2b965 ;  5 remplacements ; diff : 6 blocs, 6 lignes retirees, 34 ajoutees
+table du gel 35fa7b73f2b7f8eb ; table du pre-vol a29225df977dfe41
+R01  TIENT  le script de construction de machine 1, rejoue sur mes sources : code 0
+R02  TIENT  sonde_dense_gel_loi_machine1_v1.py : identique a l octet (canon B 68baf04c73ed5d44 / 68baf04c73ed5d44)
+R02  TIENT  sonde_lecteur_gel_loi_machine1_v1.py : identique a l octet (canon B d5cc48f48e37af99 / d5cc48f48e37af99)
+R02  TIENT  lecture_lecteur_gel_loi_machine1_v1.py : identique a l octet (canon B 83701094e6a2b965 / 83701094e6a2b965)
+R02  TIENT  table_points_gel_loi_ordre3_v1.json : identique a l octet (canon B 35fa7b73f2b7f8eb / 35fa7b73f2b7f8eb)
+R02  TIENT  table_points_prevol_gel_loi_ordre3_v1.json : identique a l octet (canon B a29225df977dfe41 / a29225df977dfe41)
+R02  TIENT  sonde_dense_gel_loi_machine1_v1.diff : identique a l octet (canon B c22564dc22032c48 / c22564dc22032c48)
+R02  TIENT  sonde_lecteur_gel_loi_machine1_v1.diff : identique a l octet (canon B 3e3424fa5f3579d2 / 3e3424fa5f3579d2)
+R02  TIENT  lecture_lecteur_gel_loi_machine1_v1.diff : identique a l octet (canon B a7961fa8572a4df6 / a7961fa8572a4df6)
+R02  TIENT  canons_instrument_v1.json : identique au canon B (fins de ligne) (canon B e377874a09110b1e / e377874a09110b1e)
+R03  TIENT  sonde_dense_gel_loi_machine1_v1.py : blocs modifies 5, lignes retirees 14 / ajoutees 17 (mon recalcul) ; diff du lot : 14 / 17
+R03  TIENT  sonde_lecteur_gel_loi_machine1_v1.py : blocs modifies 7, lignes retirees 6 / ajoutees 39 (mon recalcul) ; diff du lot : 6 / 39
+R03  TIENT  lecture_lecteur_gel_loi_machine1_v1.py : blocs modifies 6, lignes retirees 6 / ajoutees 34 (mon recalcul) ; diff du lot : 6 / 34
+BILAN : 16 controles, 16 tiennent

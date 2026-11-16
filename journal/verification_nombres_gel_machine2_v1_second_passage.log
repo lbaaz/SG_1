@@ -1,0 +1,27 @@
+  cellule N1 evaluee (1D) : N 68, g 1.6697e-03
+  cellule N2 evaluee (1D) : N 63, g 1.8552e-03
+  cellule N3 evaluee (1D) : N 60, g 2.2262e-03
+  cellule N4 evaluee (1D) : N 57, g 2.6715e-03
+  cellule N5 evaluee (1D) : N 55, g 2.9683e-03
+  cellule P1 evaluee (1D) : N 69, g 1.3105e-03
+  cellule P2 evaluee (1D) : N 64, g 1.4561e-03
+  cellule P3 evaluee (1D) : N 61, g 1.7473e-03
+  cellule P4 evaluee (1D) : N 58, g 2.0968e-03
+  cellule P5 evaluee (1D) : N 55, g 2.3297e-03
+  cellule BN evaluee (1D) : N 60, g 2.4924e-03
+  cellule BP evaluee (1D) : N 61, g 3.7499e-03
+N01   TIENT  section 3 : douze cellules (w2, delta, facteur, g a 4 chiffres, boite N, jugeables / domaine / hors) = mon evaluateur 1D : toutes
+N02   TIENT  section 4.5 et 12 : etats juges et dans le domaine (texte ('131', '56')) ; etats lus au run du gel ter (texte 137) ; ma feuille : 131 juges, 56 domaine, 137 lus
+N03   TIENT  sections 7.1 et E-1 : ordre 3 plus pres que l'ordre 2 a 56 des 56 etats du domaine ; 83 etats juges de e_bord < 0.7 dont 27 exclus par la stabilite (texte : ('56', '56') ; ('83', '27'))
+N04   TIENT  7.1 : classes de e_bord (nombre, mediane, plus grand |ln q3|) : moi {'0': (27, 0.0083, 0.0374), '1': (16, 0.0277, 0.0415), '2': (13, 0.0385, 0.0604)} ; texte {'0': (27, 0.0083, 0.0374), '1': (16, 0.0277, 0.0415), '2': (13, 0.0385, 0.0604)}
+N05   TIENT  7.1 : ln q3 aux deux etats lus des ancres : moi A1 [-0.0122, -0.0065] A2 [0.0373, 0.0374] ; texte A1 [-0.0122, -0.0065] A2 [0.0373, 0.0374]
+N06   TIENT  7.2 : delta<0 : etats / negatifs / lus pour k / k min, mediane, max ; delta>0 : etats, c2 mediane et max, c3 mediane et max : moi (39, 35, 31, 0.55, 1.99, 3.24, 21, 10.2, 15.0, 192, 493) ; texte (39, 35, 31, 0.55, 1.99, 3.24, 21, 10.2, 15.0, 192, 493) ; ln q3 positif partout a delta>0 : True
+N07   TIENT  7.3 : plus grand e_bord d un etat du domaine aux points joues : moi 0.6031, texte 0.603
+N08   TIENT  7.3 : douze lignes (etats du domaine, a T = 0.05, e_bord extremes, ln(G3/G2) median, attente, marge) recalculees de mes chaines : toutes
+N09   TIENT  7.3 : etats predits du domaine au-dela du plus grand e_bord vu (0.603) : N1 3, BP 2, total 5 (texte : ('5', '3', '2'))
+N10   TIENT  7.3 : N1, sous k = 3.24, l'ordre 2 est plus pres que l'ordre 3 a 4 etats sur 11 (texte : ('4', '11'))
+Traceback (most recent call last):
+  File "d:\devs\bocal\BOCAL4\certif_gel_loi_partie2_machine2\verification_nombres_gel_machine2_v1.py", line 211, in <module>
+    ctl('N11', abs(min(pp) - float(mt11p.group(1))) < 6e-4 and abs(max(pp) - float(mt11p.group(2))) < 6e-4 and abs(min(nn) - float(mt11n.group(1))) < 6e-4 and abs(max(nn) - float(mt11n.group(2))) < 6e-4,
+                                                                                                                                   ^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'group'

@@ -1,0 +1,543 @@
+# -*- coding: ascii -*-
+# FEUILLE DU LECTEUR DU GEL "LOI DE LA LARGEUR, ORDRE 3" -- machine 1, v1, 2026-11-15. Derivee par remplacements de
+# lecture_qualification_EB_ter_machine1_v1.py (b2d6d7cfaf30f1cf), jamais editee : meme routine de plateau, memes statuts par etat,
+# meme etage de l'instrument, meme selftest. SEULS CHANGENT, a l'etape "verdict" : les points juges sont ceux de la TABLE
+# GELEE, lus dans la SORTIE DENSE DU RUN (canon passe par le pilote, forme controlee avant toute lecture) ; un point dont
+# l'etat de rang 0 n'est pas lu n'arrete plus la lecture (son "etat_lu" vaut "NON LU") ; le verdict porte trois canons de plus.
+# Usage de l'etape "verdict" : ... verdict <dossier> <sonde_ordre2.json (depot)> <table des points.json> <sortie dense.json>
+#   <canon de la sortie dense> [--prevol]      ; l'etape "instrument" et --selftest sont inchanges.
+# Le texte ci-dessous est celui de la feuille d'origine.
+# FEUILLE DE LECTURE DE LA QUALIFICATION E-B TER -- machine 1, v1, 2026-11-15. CLASSE 2.
+# Elle JUGE et ne mesure pas : aucun moteur, aucune decomposition, aucune lecture d'etat.
+# Routine de plateau (rationnels exacts) et accords repris de la feuille du gel bis (c14dafffc5f84c97) ;
+# echelle k = -3 a 8 ; statuts par etat, par point, cascade ; etage de l'instrument ; selftest.
+# Usage :
+#   python -I lecture_qualification_EB_ter_machine1_v1.py --selftest
+#   python -I lecture_qualification_EB_ter_machine1_v1.py instrument <dossier> <sonde_ordre2.json>
+#          <tp_reference.json> <reference_ancres_ter_machine1_v1.json>
+#   python -I lecture_qualification_EB_ter_machine1_v1.py verdict <dossier> <sonde_ordre2.json>
+# "instrument" lit sonde_ter_etage0.json, sonde_ter_ancres.json et sonde_ter_etage1.json du dossier et ecrit
+# verdict_ter_instrument.json ; "verdict" lit ce fichier et les sonde_ter_point_*.json et ecrit verdict_ter.json.
+import sys, os, json, math, glob, hashlib, unicodedata
+from fractions import Fraction
+
+CANON_SONDE = "d5cc48f48e37af99"
+CANON_TABLE, CANON_SONDE_DENSE, CANON_SONDE_DEPOT, N_ETATS_DENSE = "35fa7b73f2b7f8eb", "68baf04c73ed5d44", "24315c52b234319c", 14
+CANON_MOTEUR, CANON_DEPOT, CANON_RETENUS = "82a0be882568fe0c", "10887c60d5f55bcf", "69b3bab3bb8480b7"
+CANON_REFERENCE_TP, CANON_REFERENCE_ANCRES = "4d51dd58ef456fe9", "6600fb8418c79930"
+K_MIN, K_MAX = -3, 8
+KS = list(range(K_MIN, K_MAX + 1))
+KS_ETAGE0 = [2, 3, 4]
+TAU = Fraction(1, 20)
+TAU_F = 0.05
+PLANCHER10 = 1.33e-12
+TOL_E0_REL, TOL_E0_ABS = 1e-3, 1e-12
+TOL_ANCRE = 1e-6
+PART_ETATS = Fraction(9, 10)
+JUGES = ["C1", "C2", "C3", "C4", "M1", "M2", "M3", "M4", "L1", "L2", "L3", "L4"]
+ANCRES = ["A1", "A2"]
+ABS = ["A", "B", "C", "D"]
+EPREUVE = {"A": "a", "B": "b", "C": "c", "D": "d"}
+REGLAGE = {"ks": KS, "ks_etage0": KS_ETAGE0,
+           "absorbeurs": [["A", "F2", 0, 80], ["B", "F2", 0, 100], ["C", "F1", 0, 100], ["D", "F2", 10, 80]],
+           "plancher10": PLANCHER10, "iter_min": 2, "iter_max": 12, "tol_residu": 1e-11, "poids_min": 0.5}
+
+
+def dire(*a):
+    s = " ".join(str(x) for x in a)
+    print(s, flush=True)
+    if dire.f:
+        dire.f.write(s + "\n")
+
+
+dire.f = None
+
+
+def canon_b(octets):
+    t = unicodedata.normalize("NFC", octets.decode("utf-8"))
+    t = t.replace("\r\n", "\n").replace("\r", "\n")
+    return hashlib.sha256(t.encode("utf-8")).hexdigest()[:16]
+
+
+class Refus(Exception):
+    pass
+
+
+def serie(traj):
+    """{k: gamma LISIBLE ou None} : lisible = suivie, finie et strictement positive."""
+    out = {}
+    for ks, rec in traj.items():
+        g = rec.get("gamma") if rec.get("suivi") else None
+        out[int(ks)] = g if (g is not None and math.isfinite(g) and g > 0.0) else None
+    return out
+
+
+def plateau(ser):
+    """Fenetre de cinq valeurs lisibles a k consecutifs ; PLATEAU si Fraction(max) <= (1 + 1/20) Fraction(min),
+    en rationnels exacts ; fenetre retenue : plus petit rapport, puis plus petit k de depart."""
+    best = None
+    for k0 in range(K_MIN, K_MAX - 3):
+        v = [ser.get(k) for k in range(k0, k0 + 5)]
+        if any(x is None for x in v):
+            continue
+        mx, mn = Fraction(max(v)), Fraction(min(v))
+        ok = mx <= (1 + TAU) * mn
+        cand = (not ok, mx / mn, k0)
+        if best is None or cand < best[0]:
+            best = (cand, v, ok)
+    if best is None:
+        return {"statut": "AUCUNE FENETRE"}
+    (_, rapport, k0), v, ok = best
+    return {"statut": "PLATEAU" if ok else "PAS DE PLATEAU", "k0": k0, "etalement": float(rapport) - 1.0,
+            "Gamma_pl": math.exp(sum(math.log(x) for x in v) / 5.0)}
+
+
+def accord(a, b, tau=TAU_F):
+    return abs(math.log(a / b)) <= tau
+
+
+def accord_tp(gamma_pl, gamma_ref, u_ref):
+    e = abs(math.log(gamma_pl / gamma_ref))
+    return e, e <= TAU_F + u_ref
+
+
+def juger_etat(trajs, g_dep3):
+    """Epreuves (a) a (d) sur un etat ; consigne (e). trajs : {"A": traj, "B": ..., "C": ..., "D": ...}."""
+    P = {x: plateau(serie(trajs[x])) for x in ABS}
+    ech, nl = [], []
+    for x in ABS:
+        if P[x]["statut"] == "AUCUNE FENETRE":
+            nl.append(x)
+        elif P[x]["statut"] == "PAS DE PLATEAU":
+            ech.append("(%s) pas de plateau sous %s (meilleur etalement %.4f)" % (EPREUVE[x], x, P[x]["etalement"]))
+    for x in ("B", "C", "D"):
+        if P["A"]["statut"] == "PLATEAU" and P[x]["statut"] == "PLATEAU":
+            e = abs(math.log(P[x]["Gamma_pl"] / P["A"]["Gamma_pl"]))
+            P[x]["ecart_ln_A"] = e
+            if e > TAU_F:
+                ech.append("(%s) accord %s / A : |ln| = %.4f" % (EPREUVE[x], x, e))
+    st = "NON QUALIFIE" if ech else ("NON LISIBLE" if nl else "QUALIFIE")
+    lu = None
+    if P["A"]["statut"] == "PLATEAU" and g_dep3 is not None:
+        lu = accord(g_dep3, P["A"]["Gamma_pl"])
+    return {"statut": st, "echecs": ech, "non_lisibles": nl, "plateaux": P, "lu_sur_le_plateau": lu,
+            "ecart_ln_depot": (abs(math.log(g_dep3 / P["A"]["Gamma_pl"])) if lu is not None else None)}
+
+
+def etats_attendus(p_depot, choix):
+    out = []
+    for e in p_depot["etats"]:
+        g3 = (e.get("Gamma_2D") or {}).get("3")
+        if choix == "tous" or (choix == "rangs01" and e["rang"] in (0, 1)) or (
+                choix == "juges" and g3 is not None and g3 > PLANCHER10):
+            out.append((e["rang"], int(e["n1"]), int(e["n2"])))
+    return sorted(out)
+
+
+def controler_entete(s, mode):
+    for cle, att in (("sonde_canon", CANON_SONDE), ("moteur_canon", CANON_MOTEUR), ("depot_canon", CANON_DEPOT),
+                     ("retenus_canon", CANON_RETENUS)):
+        if s.get(cle) != att:
+            raise Refus("%s : %s vaut %s, attendu %s" % (mode, cle, s.get(cle), att))
+    if s.get("mode") != mode:
+        raise Refus("mode %s, attendu %s" % (s.get("mode"), mode))
+    if s.get("reglage") != REGLAGE:
+        raise Refus("%s : le reglage consigne n'est pas celui du gel" % mode)
+
+
+def controler_trajectoires(rec, noms, ks, ou):
+    if sorted(rec["traj"]) != sorted(noms):
+        raise Refus("%s : absorbeurs %s, attendus %s" % (ou, sorted(rec["traj"]), sorted(noms)))
+    for x in noms:
+        if sorted(int(k) for k in rec["traj"][x]) != sorted(ks):
+            raise Refus("%s, %s : barreaux %s, attendus %s" % (ou, x, sorted(int(k) for k in rec["traj"][x]), ks))
+
+
+def juger_point(pt, p_depot):
+    att = etats_attendus(p_depot, "juges")
+    lus = sorted((e["rang"], e["n1"], e["n2"]) for e in pt["etats"])
+    if lus != att:
+        raise Refus("point %s : etats lus %s, attendus %s" % (pt["id"], lus, att))
+    dep = {e["rang"]: e for e in p_depot["etats"]}
+    etats = []
+    for e in sorted(pt["etats"], key=lambda x: x["rang"]):
+        controler_trajectoires(e, ABS, KS, "point %s rang %d" % (pt["id"], e["rang"]))
+        j = juger_etat(e["traj"], dep[e["rang"]]["Gamma_2D"]["3"])
+        j.update({"rang": e["rang"], "n1": e["n1"], "n2": e["n2"], "G_dep": dep[e["rang"]]["Gamma_2D"]["3"]})
+        etats.append(j)
+    lu0 = [j for j in etats if j["rang"] == 0]
+    return {"id": pt["id"], "etat_lu": (lu0[0]["statut"] if len(lu0) == 1 else "NON LU"), "etats": etats,
+            "n_juges": len(etats), "n_qualifies": sum(1 for j in etats if j["statut"] == "QUALIFIE"),
+            "n_non_qualifies": sum(1 for j in etats if j["statut"] == "NON QUALIFIE"),
+            "n_non_lisibles": sum(1 for j in etats if j["statut"] == "NON LISIBLE"),
+            "n_plateau_A": sum(1 for j in etats if j["lu_sur_le_plateau"] is not None),
+            "n_lus_sur_le_plateau": sum(1 for j in etats if j["lu_sur_le_plateau"] is True)}
+
+
+def cascade(instrument, pts):
+    """pts : {id: {"etat_lu": statut, "n_juges": n, "n_qualifies": q}} pour les douze points juges."""
+    if instrument != "TIENT":
+        return "NON CONCLUANT D'INSTRUMENT"
+    if sorted(pts) != sorted(JUGES):
+        return "RUN INCOMPLET"
+    q0 = sum(1 for p in pts.values() if p["etat_lu"] == "QUALIFIE")
+    n0 = sum(1 for p in pts.values() if p["etat_lu"] == "NON QUALIFIE")
+    nj = sum(p["n_juges"] for p in pts.values())
+    nq = sum(p["n_qualifies"] for p in pts.values())
+    if q0 == len(JUGES):
+        if Fraction(nq) >= PART_ETATS * nj:
+            return "ESTIMATEUR QUALIFIE"
+        return "QUALIFIE A L'ETAT LU"
+    if q0 >= 1:
+        return "QUALIFIE PAR POINT"
+    return "NON QUALIFIE" if n0 >= 1 else "NON LISIBLE"
+
+
+def issue_depot(pts):
+    """Consigne (e), issue separee : la lecture deposee a k = 3 est-elle sur le plateau ?"""
+    npl = sum(p["n_plateau_A"] for p in pts.values())
+    nlu = sum(p["n_lus_sur_le_plateau"] for p in pts.values())
+    if npl == 0:
+        return "NON LUE", npl, nlu
+    if nlu == npl:
+        return "LA LECTURE DEPOSEE EST SUR LE PLATEAU", npl, nlu
+    if Fraction(nlu) >= PART_ETATS * npl:
+        return "LA LECTURE DEPOSEE EST SUR LE PLATEAU A NEUF ETATS SUR DIX AU MOINS", npl, nlu
+    return "LA LECTURE DEPOSEE N'EST PAS PARTOUT SUR LE PLATEAU", npl, nlu
+
+
+def tenue_etage0(g_lu, suivi, g_dep):
+    return bool(suivi) and g_lu is not None and abs(g_lu - g_dep) <= TOL_E0_REL * g_dep + TOL_E0_ABS
+
+
+def juger_etage0(s0, depot):
+    controler_entete(s0, "etage0")
+    P = {p["id"]: p for p in depot["points"]}
+    if [p["id"] for p in s0["points"]] != ANCRES:
+        raise Refus("etage0 : points %s, attendus %s" % ([p["id"] for p in s0["points"]], ANCRES))
+    n, hors, pire_abs, pire_rel = 0, [], 0.0, 0.0
+    for pt in s0["points"]:
+        att = etats_attendus(P[pt["id"]], "tous")
+        if sorted((e["rang"], e["n1"], e["n2"]) for e in pt["etats"]) != att:
+            raise Refus("etage0 : etats de %s differents du depot" % pt["id"])
+        dep = {e["rang"]: e for e in P[pt["id"]]["etats"]}
+        for e in pt["etats"]:
+            controler_trajectoires(e, ["depot"], KS_ETAGE0, "etage0 %s rang %d" % (pt["id"], e["rang"]))
+            for k in KS_ETAGE0:
+                r = e["traj"]["depot"][str(k)]; gd = dep[e["rang"]]["Gamma_2D"][str(k)]
+                n += 1
+                if r.get("suivi") and r.get("gamma") is not None:
+                    pire_abs = max(pire_abs, abs(r["gamma"] - gd))
+                    if gd > 1000 * PLANCHER10 / 10:
+                        pire_rel = max(pire_rel, abs(r["gamma"] - gd) / gd)
+                if not tenue_etage0(r.get("gamma"), r.get("suivi"), gd):
+                    hors.append("%s rang %d k=%d : lu %r, depose %r, suivi %r" % (
+                        pt["id"], e["rang"], k, r.get("gamma"), gd, r.get("suivi")))
+    return {"lectures": n, "hors": hors, "pire_ecart_absolu": pire_abs,
+            "pire_ecart_relatif_au_dessus_de_mille_planchers": pire_rel, "tient": n == 84 and not hors}
+
+
+def juger_ancres(sa, ref, depot):
+    controler_entete(sa, "ancres")
+    P = {p["id"]: p for p in depot["points"]}
+    if [p["id"] for p in sa["points"]] != ANCRES or [p["id"] for p in ref["points"]] != ANCRES:
+        raise Refus("ancres : points differents de %s" % ANCRES)
+    n, hors, pire = 0, [], 0.0
+    for pt, pr in zip(sa["points"], ref["points"]):
+        att = etats_attendus(P[pt["id"]], "rangs01")
+        for q in (pt, pr):
+            if sorted((e["rang"], e["n1"], e["n2"]) for e in q["etats"]) != att:
+                raise Refus("ancres : etats de %s differents du depot" % pt["id"])
+        R = {e["rang"]: e for e in pr["etats"]}
+        for e in pt["etats"]:
+            controler_trajectoires(e, ABS, KS, "ancres %s rang %d" % (pt["id"], e["rang"]))
+            for x in ABS:
+                for k in KS:
+                    a, b = e["traj"][x][str(k)], R[e["rang"]]["traj"][x][str(k)]
+                    n += 1
+                    if bool(a.get("suivi")) != bool(b.get("suivi")):
+                        hors.append("%s rang %d %s k=%d : suivi %r, reference %r" % (
+                            pt["id"], e["rang"], x, k, a.get("suivi"), b.get("suivi")))
+                    elif a.get("suivi"):
+                        ec = abs(math.log(a["gamma"] / b["gamma"]))
+                        pire = max(pire, ec)
+                        if ec > TOL_ANCRE:
+                            hors.append("%s rang %d %s k=%d : |ln| = %.3e" % (pt["id"], e["rang"], x, k, ec))
+    return {"lectures": n, "hors": hors, "pire_ecart_ln": pire, "tient": n == 192 and not hors}
+
+
+def juger_etage1(s1, ref_tp):
+    controler_entete(s1, "etage1")
+    table = {r["j"]: r for r in ref_tp.get("balayage", [])}
+    jr = sorted(r["j"] for r in ref_tp.get("retenus", []))
+    js = sorted(v["j"] for v in s1["temoin"])
+    motifs, det = [], {"TP": {}, "TN": {}}
+    if not js or js != jr:
+        motifs.append("TP : retenus de la sonde %s, de la reference %s" % (js, jr))
+    for v in s1["temoin"]:
+        r = table.get(v["j"])
+        if r is None or r["g"] != v["g"]:
+            raise Refus("TP : j = %s absent de la table ou g different" % v["j"])
+        controler_trajectoires(v, ABS, KS, "TP j=%d" % v["j"])
+        cle = "j%02d" % v["j"]
+        det["TP"][cle] = {"Gamma_ref": r["Gamma_ref"], "u_ref": r["u_ref"]}
+        for x in ABS:
+            p = plateau(serie(v["traj"][x]))
+            e, ok = (accord_tp(p["Gamma_pl"], r["Gamma_ref"], r["u_ref"]) if p["statut"] == "PLATEAU" else (None, False))
+            det["TP"][cle][x] = dict(p, ecart_ln=e, tient=ok)
+            dire("TP %s g = %.5f %s : %s%s ; |ln| = %s contre %.4f : %s" % (
+                cle, v["g"], x, p["statut"],
+                " Gamma_pl %.4e etalement %.4f k0 %d" % (p["Gamma_pl"], p["etalement"], p["k0"]) if "k0" in p else "",
+                "%.4f" % e if e is not None else "-", TAU_F + r["u_ref"], "TIENT" if ok else "NE TIENT PAS"))
+            if not ok:
+                motifs.append("TP ne tient pas a %s sous %s" % (cle, x))
+    if [t["id"] for t in s1["temoin_negatif"]] != ANCRES:
+        raise Refus("TN : points %s, attendus %s" % ([t["id"] for t in s1["temoin_negatif"]], ANCRES))
+    for t in s1["temoin_negatif"]:
+        controler_trajectoires(t, ABS, KS, "TN %s" % t["id"])
+        det["TN"][t["id"]] = {}
+        for x in ABS:
+            p = plateau(serie(t["traj"][x]))
+            det["TN"][t["id"]][x] = p
+            dire("TN %s %s : %s%s" % (t["id"], x, p["statut"], " (etalement %.3f)" % p["etalement"] if "k0" in p else ""))
+            if p["statut"] == "PLATEAU":
+                motifs.append("TN rend PLATEAU a %s sous %s : le critere ne mord pas" % (t["id"], x))
+    return {"motifs": motifs, "detail": det, "tient": not motifs}
+
+
+def selftest():
+    """Rend (ok, lignes)."""
+    eta = {k: 0.05 * 2.0 ** (-k) for k in KS}
+    tau = 0.05                                             # en clair : le selftest ne suit pas les constantes de la feuille
+    ep = {"A": "(a)", "B": "(b)", "C": "(c)", "D": "(d)"}
+    T = []
+
+    def t(nom, obtenu, attendu):
+        T.append((nom, obtenu == attendu, obtenu, attendu))
+
+    def tr(vals, suivi=True):
+        return {str(k): {"gamma": vals[k], "suivi": suivi} for k in vals}
+    plat = {k: 2e-10 for k in KS}
+    lin = {k: 3e-7 * eta[k] for k in KS}
+    # --- plateau, serie, accords ---
+    t("gamma = c eta", plateau(lin)["statut"], "PAS DE PLATEAU")
+    t("constante", plateau(plat)["statut"], "PLATEAU")
+    t("constante : a egalite, le plus petit k de depart", plateau(plat)["k0"], -3)
+    s = {k: (2e-10 if 2 <= k <= 6 else 2e-10 * eta[k] / eta[2] if k > 6 else 2e-10 * (1.0 + 0.2 * (2 - k))) for k in KS}
+    p = plateau(s)
+    t("plateau de cinq (k = 2 a 6)", (p["statut"], p.get("k0")), ("PLATEAU", 2))
+    f = {k: (2e-10 if k <= 1 else 2e-10 * eta[k] / eta[1]) for k in KS}
+    p = plateau(f)
+    t("plateau au bord fort (k = -3 a 1)", (p["statut"], p.get("k0")), ("PLATEAU", -3))
+    f = {k: (2e-10 if k >= 4 else 2e-10 * (1.0 + 0.3 * (4 - k))) for k in KS}
+    p = plateau(f)
+    t("plateau au bord faible (k = 4 a 8)", (p["statut"], p.get("k0")), ("PLATEAU", 4))
+    q = {k: None for k in KS}
+    q.update({0: 1e-9, 1: 1e-9, 2: 1e-9, 3: 1e-9})
+    t("quatre valeurs lisibles", plateau(q)["statut"], "AUCUNE FENETRE")
+    q.update({4: None, 5: 1e-9})
+    t("cinq lisibles non consecutives", plateau(q)["statut"], "AUCUNE FENETRE")
+    b = {k: None for k in KS}
+    b.update({0: 20.0, 1: 20.25, 2: 20.5, 3: 20.75, 4: 21.0})
+    t("borne exacte (20.0 .. 21.0)", plateau(b)["statut"], "PLATEAU")
+    b[4] = math.nextafter(21.0, math.inf)
+    t("borne + 1 ulp", plateau(b)["statut"], "PAS DE PLATEAU")
+    c = {k: None for k in KS}
+    c.update({0: 1.0, 1: 1.0, 2: 1.0, 3: 1.0, 4: 1.05})
+    t("borne en rationnels : le flottant 1.05 depasse 21/20", plateau(c)["statut"], "PAS DE PLATEAU")
+    d = dict(plat); d.update({-3: 2.02e-10, -2: 2.0e-10, 3: 2.02e-10, 4: 2.02e-10, 5: 2.02e-10, 6: 2.02e-10, 7: 2.02e-10, 8: 2.02e-10})
+    p = plateau(d)
+    t("fenetre retenue : plus petit rapport, puis plus petit k", (p["statut"], p.get("k0")), ("PLATEAU", -2))
+    m = {k: None for k in KS}
+    m.update({1: 1.00e-10, 2: 1.04e-10, 3: 1.00e-10, 4: 1.04e-10, 5: 1.00e-10})
+    p = plateau(m)
+    t("moyenne geometrique de la fenetre", (p["k0"], round(p["Gamma_pl"] * 1e10, 6)), (1, round(1.04 ** 0.4, 6)))
+    t("etalement de la fenetre", round(p["etalement"], 9), 0.04)
+    t("accord a tau - 1e-6", accord(math.exp(tau - 1e-6), 1.0), True)
+    t("accord a tau + 1e-6", accord(math.exp(tau + 1e-6), 1.0), False)
+    t("accord symetrique", accord(1.0, math.exp(tau + 1e-6)), False)
+    t("accord au TP a tau + u - 1e-6", accord_tp(math.exp(tau + 0.01 - 1e-6), 1.0, 0.01)[1], True)
+    t("accord au TP a tau + u + 1e-6", accord_tp(math.exp(tau + 0.01 + 1e-6), 1.0, 0.01)[1], False)
+    t("serie : non suivi", serie({"0": {"suivi": False, "gamma": 1e-9}})[0], None)
+    t("serie : nul", serie({"0": {"suivi": True, "gamma": 0.0}})[0], None)
+    t("serie : negatif", serie({"0": {"suivi": True, "gamma": -1e-12}})[0], None)
+    t("serie : infini", serie({"0": {"suivi": True, "gamma": float("inf")}})[0], None)
+    t("serie : tres petit mais positif", serie({"0": {"suivi": True, "gamma": 1e-41}})[0], 1e-41)
+    # --- etats ---
+    P4 = {x: tr(plat) for x in ABS}
+    t("etat : quatre plateaux en accord", juger_etat(P4, 2e-10)["statut"], "QUALIFIE")
+    for x in ABS:
+        E = dict(P4); E[x] = tr(lin)
+        j = juger_etat(E, 2e-10)
+        t("etat : pas de plateau sous %s" % x, (j["statut"], len(j["echecs"]), j["echecs"][0][:3]), ("NON QUALIFIE", 1, ep[x]))
+    for x in ("B", "C", "D"):
+        E = dict(P4); E[x] = tr({k: 2e-10 * math.exp(tau + 1e-6) for k in KS})
+        j = juger_etat(E, 2e-10)
+        t("etat : desaccord %s / A a tau + 1e-6" % x, (j["statut"], j["echecs"][0][:3]), ("NON QUALIFIE", ep[x]))
+        E[x] = tr({k: 2e-10 * math.exp(tau - 1e-6) for k in KS})
+        t("etat : accord %s / A a tau - 1e-6" % x, juger_etat(E, 2e-10)["statut"], "QUALIFIE")
+        E[x] = tr({k: 2e-10 * math.exp(-tau - 1e-6) for k in KS})
+        t("etat : desaccord %s / A par en dessous" % x, juger_etat(E, 2e-10)["statut"], "NON QUALIFIE")
+    for x in ABS:
+        E = dict(P4); E[x] = tr(plat, suivi=False)
+        j = juger_etat(E, 2e-10)
+        t("etat : non suivi sous %s" % x, (j["statut"], j["non_lisibles"]), ("NON LISIBLE", [x]))
+    E = dict(P4); E["B"] = tr(plat, suivi=False); E["C"] = tr(lin)
+    t("etat : un echec l'emporte sur un non lisible", juger_etat(E, 2e-10)["statut"], "NON QUALIFIE")
+    E = dict(P4); E["A"] = tr(lin); E["B"] = tr({k: 9e-10 for k in KS})
+    j = juger_etat(E, 2e-10)
+    t("etat : sans plateau sous A, pas d'accord joue, consigne (e) non lue", (j["statut"], len(j["echecs"]), j["lu_sur_le_plateau"]), ("NON QUALIFIE", 1, None))
+    t("consigne (e) : depot a tau - 1e-6", juger_etat(P4, 2e-10 * math.exp(tau - 1e-6))["lu_sur_le_plateau"], True)
+    t("consigne (e) : depot a tau + 1e-6", juger_etat(P4, 2e-10 * math.exp(tau + 1e-6))["lu_sur_le_plateau"], False)
+    t("consigne (e) sans effet sur le statut", juger_etat(P4, 9e-10)["statut"], "QUALIFIE")
+    # --- cascade ---
+    def pts(lu, nq, nj=10):
+        return {i: {"etat_lu": lu[n], "n_juges": nj, "n_qualifies": nq[n]} for n, i in enumerate(JUGES)}
+    Q, N, L = "QUALIFIE", "NON QUALIFIE", "NON LISIBLE"
+    t("cascade : instrument", cascade("NE TIENT PAS", pts([Q] * 12, [10] * 12)), "NON CONCLUANT D'INSTRUMENT")
+    t("cascade : tout qualifie", cascade("TIENT", pts([Q] * 12, [10] * 12)), "ESTIMATEUR QUALIFIE")
+    t("cascade : 108 sur 120, juste a neuf dixiemes", cascade("TIENT", pts([Q] * 12, [9] * 12)), "ESTIMATEUR QUALIFIE")
+    t("cascade : 107 sur 120", cascade("TIENT", pts([Q] * 12, [9] * 11 + [8])), "QUALIFIE A L'ETAT LU")
+    t("cascade : onze etats lus sur douze", cascade("TIENT", pts([Q] * 11 + [N], [10] * 12)), "QUALIFIE PAR POINT")
+    t("cascade : onze et un non lisible", cascade("TIENT", pts([Q] * 11 + [L], [10] * 12)), "QUALIFIE PAR POINT")
+    t("cascade : un seul etat lu", cascade("TIENT", pts([Q] + [N] * 11, [1] + [0] * 11)), "QUALIFIE PAR POINT")
+    t("cascade : aucun, un echec", cascade("TIENT", pts([N] + [L] * 11, [0] * 12)), "NON QUALIFIE")
+    t("cascade : aucun, tous non lisibles", cascade("TIENT", pts([L] * 12, [0] * 12)), "NON LISIBLE")
+    inc = pts([Q] * 12, [10] * 12); del inc["L4"]
+    t("cascade : onze points seulement", cascade("TIENT", inc), "RUN INCOMPLET")
+    def dp(npl, nlu):
+        return {"x": {"n_plateau_A": npl, "n_lus_sur_le_plateau": nlu}}
+    t("depot : tous", issue_depot(dp(100, 100))[0], "LA LECTURE DEPOSEE EST SUR LE PLATEAU")
+    t("depot : 99 sur 100", issue_depot(dp(100, 99))[0], "LA LECTURE DEPOSEE EST SUR LE PLATEAU A NEUF ETATS SUR DIX AU MOINS")
+    t("depot : 90 sur 100", issue_depot(dp(100, 90))[0], "LA LECTURE DEPOSEE EST SUR LE PLATEAU A NEUF ETATS SUR DIX AU MOINS")
+    t("depot : 89 sur 100", issue_depot(dp(100, 89))[0], "LA LECTURE DEPOSEE N'EST PAS PARTOUT SUR LE PLATEAU")
+    t("depot : aucun plateau", issue_depot(dp(0, 0))[0], "NON LUE")
+    # --- instrument ---
+    t("etage 0 : dans la tolerance relative", tenue_etage0(1e-8 * (1 + 0.9e-3), True, 1e-8), True)
+    t("etage 0 : hors tolerance", tenue_etage0(1e-8 * (1 + 1.2e-3), True, 1e-8), False)
+    t("etage 0 : petit etat, ecart absolu 9e-13", tenue_etage0(2e-12 + 9e-13, True, 2e-12), True)
+    t("etage 0 : petit etat, ecart absolu 1.1e-12", tenue_etage0(2e-12 + 1.1e-12, True, 2e-12), False)
+    t("etage 0 : non suivi", tenue_etage0(1e-8, False, 1e-8), False)
+    t("etage 0 : par en dessous", tenue_etage0(1e-8 * (1 - 1.2e-3), True, 1e-8), False)
+    return all(x[1] for x in T), T
+
+
+def lire_json(chemin):
+    return json.load(open(chemin, "rb"))
+
+
+def main():
+    if len(sys.argv) == 2 and sys.argv[1] == "--selftest":
+        ok, T = selftest()
+        for nom, o, obt, att in T:
+            print("  %-62s %s" % (nom, "OK" if o else "MORD %s / %s" % (obt, att)))
+        print("selftest : %d tenus sur %d" % (sum(x[1] for x in T), len(T)))
+        sys.exit(0 if ok else 1)
+    etape, dossier, f_depot = sys.argv[1], sys.argv[2], sys.argv[3]
+    ok, T = selftest()
+    if canon_b(open(f_depot, "rb").read()) != CANON_DEPOT:
+        print("LECTURE REFUSEE : le depot n'est pas au canon %s" % CANON_DEPOT); sys.exit(2)
+    depot = lire_json(f_depot)
+    try:
+        if etape == "instrument":
+            f_tp, f_anc = sys.argv[4], sys.argv[5]
+            for f, c, quoi in ((f_tp, CANON_REFERENCE_TP, "reference du temoin"), (f_anc, CANON_REFERENCE_ANCRES, "reference des ancres")):
+                if canon_b(open(f, "rb").read()) != c:
+                    raise Refus("la %s n'est pas au canon %s" % (quoi, c))
+            dire.f = open(os.path.join(dossier, "lecture_ter_instrument.log"), "w")
+            dire("=" * 96); dire("FEUILLE DE LECTURE E-B TER v1 -- INSTRUMENT (etages 0 et 1, ancres)"); dire("=" * 96)
+            dire("selftest : %d tenus sur %d" % (sum(x[1] for x in T), len(T)))
+            fichiers = {m: os.path.join(dossier, "sonde_ter_%s.json" % m) for m in ("etage0", "ancres", "etage1")}
+            e0 = juger_etage0(lire_json(fichiers["etage0"]), depot)
+            dire("ETAGE 0 : %d lectures (attendu 84) ; pire ecart absolu %.2e ; pire ecart relatif au-dessus de mille planchers %.1e ;"
+                 " hors tolerance (%g relatif + %g) : %d : %s" % (e0["lectures"], e0["pire_ecart_absolu"],
+                 e0["pire_ecart_relatif_au_dessus_de_mille_planchers"], TOL_E0_REL, TOL_E0_ABS, len(e0["hors"]), "TIENT" if e0["tient"] else "NE TIENT PAS"))
+            for h in e0["hors"]:
+                dire("      hors : %s" % h)
+            an = juger_ancres(lire_json(fichiers["ancres"]), lire_json(f_anc), depot)
+            dire("ANCRES : %d lectures (attendu 192) ; pire |ln| a la reference de machine 1 %.2e contre %g ; hors : %d : %s" % (
+                an["lectures"], an["pire_ecart_ln"], TOL_ANCRE, len(an["hors"]), "TIENNENT" if an["tient"] else "NE TIENNENT PAS"))
+            for h in an["hors"]:
+                dire("      hors : %s" % h)
+            e1 = juger_etage1(lire_json(fichiers["etage1"]), lire_json(f_tp))
+            dire("ETAGE 1 : %s %s" % ("TIENT" if e1["tient"] else "NE TIENT PAS", e1["motifs"]))
+            motifs = ([] if ok else ["selftest"]) + ([] if e0["tient"] else ["etage 0"]) + ([] if an["tient"] else ["ancres"]) + ([] if e1["tient"] else ["etage 1"])
+            v = "TIENT" if not motifs else "NE TIENT PAS"
+            json.dump({"instrument": v, "motifs": motifs, "etage0": e0, "ancres": an, "etage1": e1,
+                       "canons": {m: canon_b(open(f, "rb").read()) for m, f in fichiers.items()}},
+                      open(os.path.join(dossier, "verdict_ter_instrument.json"), "w"), indent=1, sort_keys=True)
+            dire("VERDICT DE L'INSTRUMENT : %s %s" % (v, motifs))
+        elif etape == "verdict":
+            dire.f = open(os.path.join(dossier, "lecture_ter.log"), "w")
+            dire("=" * 96); dire("FEUILLE DE LECTURE E-B TER v1 -- ETAGE 2 ET VERDICT"); dire("=" * 96)
+            dire("selftest : %d tenus sur %d" % (sum(x[1] for x in T), len(T)))
+            vi = lire_json(os.path.join(dossier, "verdict_ter_instrument.json"))
+            inst = vi.get("instrument") if ok else "NE TIENT PAS"
+            f_table, f_dense, canon_dense = sys.argv[4], sys.argv[5], sys.argv[6]
+            prevol = "--prevol" in sys.argv[7:]
+            canon_table = canon_b(open(f_table, "rb").read())
+            if (canon_table == CANON_TABLE) == prevol:
+                raise Refus("sans --prevol la table doit etre au canon %s ; avec --prevol elle ne doit pas l'etre" % CANON_TABLE)
+            if canon_b(open(f_dense, "rb").read()) != canon_dense:
+                raise Refus("la sortie dense n'est pas au canon passe par le pilote (%s)" % canon_dense)
+            table = {str(p["id"]): p for p in lire_json(f_table)["points"]}
+            JUGES[:] = [i for i, p in table.items() if p["role"] == "juge"]
+            dense = lire_json(f_dense)
+            if dense.get("moteur_canon") != CANON_MOTEUR or dense.get("sonde_canon") not in ((CANON_SONDE_DENSE, CANON_SONDE_DEPOT) if prevol else (CANON_SONDE_DENSE,)):
+                raise Refus("la sortie dense ne porte pas les canons du moteur et de la sonde dense")
+            if not prevol and (dense.get("table_canon") != CANON_TABLE or dense.get("prevol") is not False or sorted(p["id"] for p in dense["points"]) != sorted(table)):
+                raise Refus("la sortie dense n'a pas ete produite sur la table du gel, ou n'en porte pas tous les points et eux seuls")
+            P = {p["id"]: p for p in dense["points"]}
+            for i in JUGES:
+                if i not in P or Fraction(str(P[i]["w2"])) != Fraction(str(table[i]["w2"])) or Fraction(str(P[i]["facteur"])) != Fraction(str(table[i]["facteur"])) \
+                        or len(P[i]["etats"]) != N_ETATS_DENSE or not P[i].get("faisable"):
+                    raise Refus("forme de la sortie dense au point %s (present, w2, facteur, nombre d'etats, faisable)" % i)
+            pts, vus = {}, []
+            if inst == "TIENT":
+                for f in sorted(glob.glob(os.path.join(dossier, "sonde_ter_point_*.json"))):
+                    s = lire_json(f)
+                    controler_entete(s, "point")
+                    if s.get("dense_canon") != canon_dense or s.get("table_canon") != canon_table or s.get("prevol") is not prevol:
+                        raise Refus("%s : canon de la sortie dense, canon de la table ou marque de pre-vol differents de ceux de cette lecture" % os.path.basename(f))
+                    for pt in s["points"]:
+                        if pt["id"] not in JUGES or pt["id"] in pts:
+                            raise Refus("point %s hors des douze, ou lu deux fois" % pt["id"])
+                        pts[pt["id"]] = juger_point(pt, P[pt["id"]])
+                        vus.append((pt["id"], os.path.basename(f), canon_b(open(f, "rb").read())))
+            verdict = cascade(inst, pts)
+            for i in JUGES:
+                if i not in pts:
+                    continue
+                p = pts[i]
+                dire("point %-3s etat lu %-13s etats : %2d juges, %2d QUALIFIES, %2d NON QUALIFIES, %2d NON LISIBLES ; lecture deposee"
+                     " sur le plateau : %2d sur %2d" % (i, p["etat_lu"], p["n_juges"], p["n_qualifies"], p["n_non_qualifies"],
+                                                         p["n_non_lisibles"], p["n_lus_sur_le_plateau"], p["n_plateau_A"]))
+                for j in p["etats"]:
+                    dire("    rang %2d (%2d,%d) G_dep %.3e %-13s %s%s" % (
+                        j["rang"], j["n1"], j["n2"], j["G_dep"], j["statut"], " ".join("%s:%s" % (
+                            x, ("%.4e/%.4f/k0=%d" % (q["Gamma_pl"], q["etalement"], q["k0"])) if "k0" in q else q["statut"])
+                            for x, q in sorted(j["plateaux"].items())),
+                        "" if j["ecart_ln_depot"] is None else " ; |ln(depot / plateau)| = %.4f" % j["ecart_ln_depot"]))
+                    for e in j["echecs"]:
+                        dire("        echec : %s" % e)
+            nj = sum(p["n_juges"] for p in pts.values()); nq = sum(p["n_qualifies"] for p in pts.values())
+            dep = issue_depot(pts) if pts else ("NON LUE", 0, 0)
+            dire("ETATS : %d juges, %d QUALIFIES ; etats lus QUALIFIES : %d sur %d points" % (
+                nj, nq, sum(1 for p in pts.values() if p["etat_lu"] == "QUALIFIE"), len(pts)))
+            dire("VERDICT : %s" % verdict)
+            dire("ISSUE DE LA LECTURE DEPOSEE (consigne e) : %s (%d sur %d)" % (dep[0], dep[2], dep[1]))
+            json.dump({"verdict": verdict, "issue_depot": dep[0], "n_plateau_A": dep[1], "n_lus_sur_le_plateau": dep[2],
+                       "n_juges": nj, "n_qualifies": nq, "points": pts, "fichiers": vus, "instrument": inst,
+                       "table_canon": canon_table, "dense_canon": canon_dense, "prevol": prevol, "feuille_canon": canon_b(open(__file__, "rb").read())},
+                      open(os.path.join(dossier, "verdict_ter.json"), "w"), indent=1, sort_keys=True)
+        else:
+            raise Refus("etape inconnue %s" % etape)
+    except Refus as x:
+        dire("LECTURE REFUSEE : %s" % x)
+        sys.exit(2)
+    dire("feuille %s canon %s (relue du disque)" % (os.path.basename(__file__), canon_b(open(__file__, "rb").read())))
+    dire("CE QUE CE LOG NE JOUE PAS : aucune decomposition, aucune mesure.")
+
+
+if __name__ == "__main__":
+    main()

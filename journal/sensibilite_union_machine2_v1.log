@@ -1,0 +1,10 @@
+52 essais (40 aleatoires + 12 aux limites) ; 35 mutations de ma feuille ; tuees par l un ou l autre jeu : 27 ; survivantes aux deux : 8
+   SURVIT : K03 stabilite du domaine 0.05 -> 0.06
+   SURVIT : K07 tolerance stricte (<= devient <)
+   SURVIT : K08 plus pres : < devient <=
+   SURVIT : K28 chaine du moteur instable non exclue
+   SURVIT : K29 chaine d'ordre 2 instable non exclue
+   SURVIT : K30 stabilite : rapport 2 -> 2.5
+   SURVIT : K33 facteur d eta 1/32 au lieu de 1/16 (ordre 2)
+   SURVIT : K35 domaine sans la condition G3 > 0
+tuees seulement par les essais aux limites : ['K12 garde des deux tiers stricte', 'K14 domaine minimum des bords 2 -> 1', 'K15 hors-domaine minimum des bords 2 -> 1']

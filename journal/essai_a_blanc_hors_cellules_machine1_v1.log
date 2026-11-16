@@ -1,0 +1,12 @@
+PIECES EPROUVEES (convention B) : facd3ceeec07d3bf feuille_ordre3_machine1_v1.py ; 83701094e6a2b965 lecture_lecteur_gel_loi_machine1_v1.py ; 534ba246aa3b8973 ordre3_bloc_machine1_v1.py ; 68baf04c73ed5d44 sonde_dense_gel_loi_machine1_v1.py ; d5cc48f48e37af99 sonde_lecteur_gel_loi_machine1_v1.py ; 35fa7b73f2b7f8eb table_points_gel_loi_ordre3_v1.json ; a29225df977dfe41 table_points_prevol_gel_loi_ordre3_v1.json
+S1  TIENT  sonde dense, table du gel, sans --prevol, ancre A1 seule : code 0 ; prevol False ; canon de la table du gel porte ; 14 etats ; hors tolerance des ancres contre le depot : 0 ; duree 240.5 s
+S2  TIENT  sonde dense : table du gel avec --prevol refusee (code 1) ; table de pre-vol sans --prevol refusee (code 1) ; rien n'est ecrit
+S3  TIENT  sonde du lecteur, table du gel, sans --prevol, mode etage0 (ancres) : code 0 ; mesures identiques a celles du pre-vol : oui
+S4  TIENT  sonde du lecteur, mode point N1, sans --prevol : arret au controle de forme (point infaisable) apres les controles de provenance ; sortie dense sans canon de table refusee ; canon passe faux refuse ; aucune mesure, aucun fichier
+S5  TIENT  feuille du lecteur, etape verdict, sans --prevol, fichiers fabriques : code 0 ; les douze points lus ; le verdict porte les canons de la table, de la sortie dense et de la feuille : oui
+S6  TIENT  feuille d'ordre 3, sans --prevol, fichiers fabriques : code 0 ; douze cellules ; ancres tenues ; une issue rendue pour E1 (10 cellules), E2 (5), E1B (2), E3 (12) : oui (issues non affichees : elles n'ont aucun sens)
+ESSAI A BLANC HORS CELLULES : 6 essais, 6 tiennent ; les fichiers fabriques sont effaces
+
+real	5m11.013s
+user	5m6.292s
+sys	0m1.355s

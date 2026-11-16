@@ -1,0 +1,61 @@
+2026-11-16 01:49:18 PILOTE DU GEL LOI DE LA LARGEUR, ORDRE 3 ; 12 processus ; python 3.11.9
+2026-11-16 01:49:18 pilote pilote_gel_loi_machine2_v2.py canon 15998497f3422765
+2026-11-16 01:49:18   canon moteur            82a0be882568fe0c 
+2026-11-16 01:49:18   canon bloc2             7cd5977bc27bebc1 
+2026-11-16 01:49:18   canon bloc3             534ba246aa3b8973 
+2026-11-16 01:49:18   canon depot             10887c60d5f55bcf 
+2026-11-16 01:49:18   canon retenus           69b3bab3bb8480b7 
+2026-11-16 01:49:18   canon tp_reference      4d51dd58ef456fe9 
+2026-11-16 01:49:18   canon reference_ancres  6600fb8418c79930 
+2026-11-16 01:49:18   canon table             35fa7b73f2b7f8eb 
+2026-11-16 01:49:18   canon sonde_dense       68baf04c73ed5d44 
+2026-11-16 01:49:18   canon sonde_lecteur     d5cc48f48e37af99 
+2026-11-16 01:49:18   canon feuille_lecteur   83701094e6a2b965 
+2026-11-16 01:49:18   canon feuille_ordre3    facd3ceeec07d3bf 
+2026-11-16 01:49:18 ETAGE 1 : sonde dense, 12 points juges et les ancres
+2026-11-16 02:15:06   sonde dense                  code=0 duree=1548 s
+2026-11-16 02:15:06 CANON DE LA SORTIE DENSE : 7fb8ad918c8ba795 (passe au second etage)
+2026-11-16 02:15:06 ETAGE 2a : sonde du lecteur, etage0, ancres, etage1
+2026-11-16 02:15:20   lecteur etage0               code=0 duree=14 s
+2026-11-16 02:26:59   lecteur ancres               code=0 duree=713 s
+2026-11-16 02:27:42   lecteur etage1               code=0 duree=756 s
+2026-11-16 02:27:42   feuille du lecteur, instrument code=0 duree=0 s
+2026-11-16 02:27:43 INSTRUMENT DU LECTEUR : TIENT
+2026-11-16 02:27:43 ETAGE 2b : sonde du lecteur en mode point, 12 points : N1 N2 N3 N4 N5 P1 P2 P3 P4 P5 BN BP
+2026-11-16 03:23:12   lecteur point P5             code=0 duree=3329 s
+2026-11-16 03:24:01   lecteur point P1             code=0 duree=3378 s
+2026-11-16 03:24:38   lecteur point P2             code=0 duree=3416 s
+2026-11-16 03:27:06   lecteur point P3             code=0 duree=3564 s
+2026-11-16 03:27:22   lecteur point N3             code=0 duree=3579 s
+2026-11-16 03:27:39   lecteur point BN             code=0 duree=3596 s
+2026-11-16 03:27:40   lecteur point N5             code=0 duree=3598 s
+2026-11-16 03:28:04   lecteur point N2             code=0 duree=3622 s
+2026-11-16 03:29:37   lecteur point P4             code=0 duree=3715 s
+2026-11-16 03:30:25   lecteur point BP             code=0 duree=3762 s
+2026-11-16 03:31:04   lecteur point N1             code=0 duree=3802 s
+2026-11-16 03:31:07   lecteur point N4             code=0 duree=3805 s
+2026-11-16 03:31:07   feuille du lecteur, verdict  code=0 duree=0 s
+2026-11-16 03:31:07 CANON DU VERDICT DU LECTEUR : 158fc924414ddbca
+2026-11-16 03:31:07 ETAGE 3 : feuille d'ordre 3
+2026-11-16 03:32:04   feuille d'ordre 3            code=0 duree=56 s
+2026-11-16 03:32:04     FEUILLE D'ORDRE 3 -- table 35fa7b73f2b7f8eb, sortie dense 7fb8ad918c8ba795, verdict du lecteur 158fc924414ddbca
+2026-11-16 03:32:04     ANCRES de la sonde dense contre le depot : 2 ancres, 0 ecarts : TIENNENT
+2026-11-16 03:32:04       N1  w2 = 387/200   x3/4  : lus 11, juges 11, domaine 11, hors  0 ; exploitable ; E1 TIENT         E2 TIENT         E3 TIENT ; pire |ln q3| du domaine 0.0740 ; pire |ln q2| 0.1048
+2026-11-16 03:32:04       N2  w2 = 387/200   x5/6  : lus 11, juges 11, domaine 11, hors  0 ; exploitable ; E1 TIENT         E2 TIENT         E3 TIENT ; pire |ln q3| du domaine 0.0427 ; pire |ln q2| 0.0987
+2026-11-16 03:32:04       N3  w2 = 387/200   x1    : lus 12, juges 11, domaine 11, hors  0 ; exploitable ; E1 TIENT         E2 TIENT         E3 TIENT ; pire |ln q3| du domaine 0.0355 ; pire |ln q2| 0.0841
+2026-11-16 03:32:04       N4  w2 = 387/200   x6/5  : lus 14, juges 14, domaine 14, hors  0 ; exploitable ; E1 TIENT         E2 TIENT         E3 TIENT ; pire |ln q3| du domaine 0.0208 ; pire |ln q2| 0.0747
+2026-11-16 03:32:04       N5  w2 = 387/200   x4/3  : lus 14, juges 13, domaine 13, hors  0 ; exploitable ; E1 TIENT         E2 TIENT         E3 TIENT ; pire |ln q3| du domaine 0.0157 ; pire |ln q2| 0.0699
+2026-11-16 03:32:04       P1  w2 = 407/200   x3/4  : lus  9, juges  9, domaine  9, hors  0 ; exploitable ; E1 TIENT         E2 -             E3 TIENT ; pire |ln q3| du domaine 0.0336 ; pire |ln q2| 0.0493
+2026-11-16 03:32:04       P2  w2 = 407/200   x5/6  : lus 10, juges 10, domaine 10, hors  0 ; exploitable ; E1 TIENT         E2 -             E3 TIENT ; pire |ln q3| du domaine 0.0302 ; pire |ln q2| 0.0470
+2026-11-16 03:32:04       P3  w2 = 407/200   x1    : lus 12, juges 12, domaine 12, hors  0 ; exploitable ; E1 TIENT         E2 -             E3 TIENT ; pire |ln q3| du domaine 0.0219 ; pire |ln q2| 0.0392
+2026-11-16 03:32:04       P4  w2 = 407/200   x6/5  : lus 13, juges 13, domaine 13, hors  0 ; exploitable ; E1 TIENT         E2 -             E3 TIENT ; pire |ln q3| du domaine 0.0217 ; pire |ln q2| 0.0387
+2026-11-16 03:32:04       P5  w2 = 407/200   x4/3  : lus 13, juges 13, domaine 13, hors  0 ; exploitable ; E1 TIENT         E2 -             E3 TIENT ; pire |ln q3| du domaine 0.0201 ; pire |ln q2| 0.0362
+2026-11-16 03:32:04       BN  w2 = 481/250   x1    : lus 12, juges 11, domaine  7, hors  4 ; exploitable ; E1 TIENT         E2 -             E3 TIENT ; pire |ln q3| du domaine 0.0461 ; pire |ln q2| 0.1106
+2026-11-16 03:32:04       BP  w2 = 2067/1000 x1    : lus 13, juges 13, domaine  5, hors  8 ; exploitable ; E1 TIENT         E2 -             E3 TIENT ; pire |ln q3| du domaine 0.0996 ; pire |ln q2| 0.1204
+2026-11-16 03:32:04     E1  : TENU                   (10 cellules, 10 exploitables ; tombees : aucune)
+2026-11-16 03:32:04     E2  : TENU                   (5 cellules, 5 exploitables ; tombees : aucune)
+2026-11-16 03:32:04     E1B : TENU                   (2 cellules, 2 exploitables ; tombees : aucune)
+2026-11-16 03:32:04     E3  : TENU                   (12 cellules ; tombees : aucune)
+2026-11-16 03:32:04     etats : 144 lus par le lecteur, 141 juges, 129 dans le domaine, 12 hors
+2026-11-16 03:32:04 CANON DU VERDICT D'ORDRE 3 : 87e9221cfc5f8f9b
+2026-11-16 03:32:04 FIN DU PILOTE ; duree totale 6166 s

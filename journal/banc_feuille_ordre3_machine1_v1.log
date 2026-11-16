@@ -1,0 +1,19 @@
+TEMOIN : C1 juges 8 domaine 8 E1 TIENT E2 TIENT E3 TIENT ; C2 juges 11 domaine 11 E1 TIENT E2 TIENT E3 TIENT ; L4 juges 9 domaine 0 E1 INEXPLOITABLE E3 TIENT
+m01  MORD  Gamma_pl(A) d'un etat du domaine de C1 x 1.2 -> attendu : E1 TOMBE a C1 ; C2 et L4 inchanges
+m02  MORD  toutes les Gamma_pl(A) de C2 x 1.15 -> attendu : E2 TOMBE a C2 (l'ordre 2 est alors le plus pres) ; C1 inchange
+m03  MORD  un etat de C1 declare NON QUALIFIE -> attendu : un etat juge de moins a C1, exclu "non qualifie" ; verdicts inchanges
+m04  MORD  verdict du lecteur : instrument NE TIENT PAS -> attendu : rien n'est juge
+m05  MORD  une etiquette de la sortie dense changee (n1 + 1) -> attendu : ARRET : etiquettes differentes
+m06  MORD  couplage de C2 dans la sortie dense x (1 + 1e-6) -> attendu : ARRET : forme de la sortie dense
+m07  MORD  un etat retire de L4 dans la sortie dense (13 etats) -> attendu : ARRET : forme de la sortie dense
+m08  MORD  facteur d'un point change dans la table -> attendu : ARRET : forme de la sortie dense
+m09  MORD  Gamma_pl(A) d'un etat de L4 x 0.4 -> attendu : E3 TOMBE a L4 ; C1 et C2 inchanges
+m10  MORD  ecart-type de J d'un etat de C1 mis a 0.5 -> attendu : un juge de moins a C1, exclu "J flou"
+m11  MORD  canon de la sortie dense passe faux -> attendu : ARRET : sortie dense : canon
+m12  MORD  C1 : tous les etats sauf 4 declares NON QUALIFIES -> attendu : C1 INEXPLOITABLE pour E1 et E2 ; E3 tient encore
+m13  MORD  deux etats de C2 portent la meme etiquette (sortie dense et lecteur) -> attendu : les deux sont exclus "etiquette double"
+m14  MORD  Gamma_2D(3) de l'etat de rang 0 de l'ancre A1 x 1.01 dans la sortie dense -> attendu : l'instrument ne tient pas : rien n'est juge
+m15  MORD  C2 : quatre etats sur onze declares NON QUALIFIES -> attendu : C2 INEXPLOITABLE (7 juges sur 11 lus, moins des deux tiers) alors que 7 sont dans le domaine
+m16  MORD  l'ancre A2 retiree de la table -> attendu : l'instrument ne tient pas : rien n'est juge
+m17  MORD  une table qui n'est pas celle du gel, sans --prevol -> attendu : ARRET : sans --prevol la table doit etre au canon
+BANC DE LA FEUILLE D'ORDRE 3 : 17 mutations, 17 mordent comme attendu : TIENT

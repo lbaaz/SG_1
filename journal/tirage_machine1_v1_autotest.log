@@ -1,0 +1,10 @@
+sha256("DEMONSTRATION|N|0") = 4b2a1d038c89c813... ; modulo  9 =  4 -> w2 = 1.935
+sha256("DEMONSTRATION|N|1") = 1b5deb7b253e3dfa... ; modulo  9 =  0 -> w2 = 1.931
+sha256("DEMONSTRATION|P|0") = c044a7a576ead835... ; modulo 18 = 16 -> w2 = 2.048
+sha256("DEMONSTRATION|P|1") = 1301bfbc47473183... ; modulo 18 = 11 -> w2 = 2.043
+sha256("DEMONSTRATION|BN|0") = 380a2339ad60d374... ; modulo  8 =  2 -> w2 = 1.918
+sha256("DEMONSTRATION|BN|1") = 1a6d595fe470d18c... ; modulo  8 =  6 -> w2 = 1.923
+sha256("DEMONSTRATION|BP|0") = 60963710bfe44dd5... ; modulo  9 =  8 -> w2 = 2.069
+sha256("DEMONSTRATION|BP|1") = 9a6c8a4aa4c29ecb... ; modulo  9 =  4 -> w2 = 2.065
+ids : N1 N2 N3 N4 N5 P1 P2 P3 P4 P5 BN BP
+AUTOTEST : TIENT (determinisme, douze cellules, rang suivant, arret sans candidat)

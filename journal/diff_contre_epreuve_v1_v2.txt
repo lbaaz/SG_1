@@ -1,0 +1,43 @@
+--- v1
++++ v2
+@@ -1,6 +1,6 @@
+ # -*- coding: ascii -*-
+-"""CONTRE-EPREUVE de mon releve du contreseing -- machine 2, 2026-11-16. On corrompt une COPIE de l'acte (UNE chose a la fois, texte unique asserte, retours a la ligne tolerees), on relance
+-releve_contreseing_acte_gel_loi_machine2_v1.py sur chaque copie ; le releve doit MORDRE, et sur le controle attendu (qui ne mordait pas sur l'acte tel quel). Un releve qui ne mord pas sur une corruption ne certifie rien.
++"""CONTRE-EPREUVE de mon releve du contreseing de la VERSION 2 (derivee de contre_epreuve_releve_acte_machine2_v1.py, NON EDITEE ; diff joint) -- machine 2, 2026-11-16. On corrompt une COPIE de l'acte (UNE chose a la fois, texte unique asserte, retours a la ligne tolerees), on relance
++releve_contreseing_acte_gel_loi_machine2_v2.py sur chaque copie ; le releve doit MORDRE, et sur le controle attendu (qui ne mordait pas sur l'acte tel quel). Un releve qui ne mord pas sur une corruption ne certifie rien.
+ Une 'correction' fait l'inverse : un controle qui mord sur l'acte tel quel doit cesser de mordre quand on corrige le texte.
+ Usage : py -3.11 -P contre_epreuve_releve_acte_machine2_v1.py <acte.md> <dossier de travail (neuf)> <sortie.json> <controles qui mordent sur l'acte tel quel, separes par des virgules>"""
+ import json
+@@ -40,7 +40,12 @@
+     ('M24 aux cellules : N4 ln q2 0.0747 -> 0.0847', '|ln q3| 0.0208 marge +0.0422 |ln q2| 0.0747', '|ln q3| 0.0208 marge +0.0422 |ln q2| 0.0847', 'corruption', 'R05N4'),
+     ('M25 canon du lot de resultat : 54ccae1713f92bc9 -> ...c', '54ccae1713f92bc9 lot de machine 2 : resultat du run', '54ccae1713f92bca lot de machine 2 : resultat du run', 'corruption', 'R02a'),
+     ("M27 rien regle apres lecture : phrase alteree", "Aucun seuil, aucune garde, aucune tolerance n'a ete regle apres lecture", "Un seuil, aucune garde, aucune tolerance n'a ete regle apres lecture", 'corruption', 'R12c'),
+-    ('M26 CORRECTION E3 : 0.173 -> 0.174 doit faire tenir R08c', 'La plus petite marge en logarithme est 0.173, sur la ligne P', 'La plus petite marge en logarithme est 0.174, sur la ligne P', 'correction', 'R08c'),
++    ("M28 precision sur BP : 0.0026 -> 0.0025 (mon propre arrondi de la v1, faux : le rang 1 est a +0.002524)", 'sont a moins de 0.0026 de la tolerance', 'sont a moins de 0.0025 de la tolerance', 'corruption', 'R16a'),
++    ('M29 precision sur BP : 6.2 fois la marge -> 6.9', 'soit 6.2 fois la marge', 'soit 6.9 fois la marge', 'corruption', 'R16a'),
++    ('M30 feu vert : 00 h 54 -> 01 h 00', 'le 16/11 a 00 h 54 (heure', 'le 16/11 a 01 h 00 (heure', 'corruption', 'R16b'),
++    ('M31 retouches : 67 tenus -> 66', '68 controles, 67 tenus, une morsure de description. Trois retouches', '68 controles, 66 tenus, une morsure de description. Trois retouches', 'corruption', 'R16c'),
++    ('M32 hors du diff annonce : un mot ajoute en nn.0', 'Ce delta rend le run unique du gel', 'Ce delta rend le run unique, joue, du gel', 'corruption', 'R17'),
++    ('M33 hors du diff annonce : un mot ajoute en nn.7', 'Annonces (gel, section 10). A-1', 'Annonces (gel, section 10, relues). A-1', 'corruption', 'R17'),
+ ]
+ 
+ 
+@@ -52,7 +57,7 @@
+ base = os.path.join(TRAV, 'base')
+ os.makedirs(base)
+ open(os.path.join(base, 'acte.md'), 'w', encoding='ascii', newline='\n').write(raw)
+-procs.append(('base', None, base, 'reference', subprocess.Popen([sys.executable, '-P', 'releve_contreseing_acte_gel_loi_machine2_v1.py', os.path.join(base, 'acte.md'), os.path.join(base, 'sortie.json')],
++procs.append(('base', None, base, 'reference', subprocess.Popen([sys.executable, '-P', 'releve_contreseing_acte_gel_loi_machine2_v2.py', os.path.join(base, 'acte.md'), os.path.join(base, 'sortie.json')],
+                                                               stdout=open(os.path.join(base, 'releve.log'), 'w'), stderr=subprocess.STDOUT)))
+ for nom, a, b, genre, att in MUT:
+     n = len(re.findall(flex(a), raw))
+@@ -61,7 +66,7 @@
+     os.makedirs(d)
+     g = os.path.join(d, 'acte_mute.md')
+     open(g, 'w', encoding='ascii', newline='\n').write(re.sub(flex(a), lambda m: b, raw))
+-    procs.append((nom, att, d, genre, subprocess.Popen([sys.executable, '-P', 'releve_contreseing_acte_gel_loi_machine2_v1.py', g, os.path.join(d, 'sortie.json')],
++    procs.append((nom, att, d, genre, subprocess.Popen([sys.executable, '-P', 'releve_contreseing_acte_gel_loi_machine2_v2.py', g, os.path.join(d, 'sortie.json')],
+                                                        stdout=open(os.path.join(d, 'releve.log'), 'w'), stderr=subprocess.STDOUT)))
+ res = []
+ for nom, att, d, genre, p in procs:

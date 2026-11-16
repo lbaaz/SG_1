@@ -1,0 +1,19 @@
+--- pilote_gel_loi_machine1_v1.py
++++ pilote_gel_loi_machine2_v2.py
+@@ -1,3 +1,6 @@
+ # -*- coding: ascii -*-
+-"""PILOTE DU RUN du gel "loi de la largeur, ordre 3" -- machine 1, v1, 2026-11-15. UN RUN, DEUX ETAGES. Il ne mesure ni ne
++"""[DERIVE par machine 2 le 2026-11-16 du pilote de machine 1 (2882de31bc49ce2f) ; deux ecarts de comportement dus a BOCAL4 : -I devient -P (numpy est dans le site
++utilisateur) ; les fils BLAS valent 1 pour tous les appels SAUF la sonde dense (fils par defaut, comme au run de l'ordre 2). Voir derive_pilote_machine2_v2.py et le diff.
++Le texte ci-dessous est celui d'origine.]
++PILOTE DU RUN du gel "loi de la largeur, ordre 3" -- machine 1, v1, 2026-11-15. UN RUN, DEUX ETAGES. Il ne mesure ni ne
+ juge : il enchaine les scripts de l'instrument, tient le journal (heures, codes de sortie, canons) et passe au second
+@@ -61,5 +64,7 @@
+ PV = ["--prevol"] if PREVOL else []
++ENV_UN_FIL = dict(os.environ, OPENBLAS_NUM_THREADS="1", OMP_NUM_THREADS="1", MKL_NUM_THREADS="1")
+ 
+ def lancer(nom, args, console):
+-    return (nom, time.time(), subprocess.Popen([sys.executable, "-I"] + args, stdout=open(os.path.join(RUN, console), "w"), stderr=subprocess.STDOUT))
++    return (nom, time.time(), subprocess.Popen([sys.executable, "-P"] + args, stdout=open(os.path.join(RUN, console), "w"), stderr=subprocess.STDOUT,
++                                                  env=(None if args[0] == S_DENSE else ENV_UN_FIL)))
+ 

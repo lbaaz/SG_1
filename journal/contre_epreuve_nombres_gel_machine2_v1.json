@@ -1,0 +1,142 @@
+[
+ {
+  "mutation": "G01 section 3 : boite de N1 68 -> 69",
+  "attendu": "N01",
+  "code": 1,
+  "controles_qui_mordent": [
+   "N01",
+   "N11N"
+  ],
+  "tient": true
+ },
+ {
+  "mutation": "G02 section 4.5 : 131 etats -> 132",
+  "attendu": "N02",
+  "code": 1,
+  "controles_qui_mordent": [
+   "N02",
+   "N11N"
+  ],
+  "tient": true
+ },
+ {
+  "mutation": "G03 E-1 : 83 etats juges -> 84",
+  "attendu": "N03",
+  "code": 1,
+  "controles_qui_mordent": [
+   "N03",
+   "N11N"
+  ],
+  "tient": true
+ },
+ {
+  "mutation": "G04 7.1 : plus grand de la classe [0.5, 0.7[ 0.0604 -> 0.0704",
+  "attendu": "N04",
+  "code": 1,
+  "controles_qui_mordent": [
+   "N04",
+   "N11N"
+  ],
+  "tient": true
+ },
+ {
+  "mutation": "G05 7.1 : ln q3 de l ancre A2 +0.0374 -> +0.0474",
+  "attendu": "N05",
+  "code": 1,
+  "controles_qui_mordent": [
+   "N05",
+   "N11N"
+  ],
+  "tient": true
+ },
+ {
+  "mutation": "G06 7.2 : k le plus grand 3.24 -> 3.34",
+  "attendu": "N06",
+  "code": 1,
+  "controles_qui_mordent": [
+   "N06",
+   "N11N"
+  ],
+  "tient": true
+ },
+ {
+  "mutation": "G07 7.3 : plus grand e_bord vu 0.603 -> 0.653",
+  "attendu": "N07",
+  "code": 1,
+  "controles_qui_mordent": [
+   "N07",
+   "N11N"
+  ],
+  "tient": true
+ },
+ {
+  "mutation": "G08 7.3 : marge de N1 1.15 -> 1.25",
+  "attendu": "N08",
+  "code": 1,
+  "controles_qui_mordent": [
+   "N08",
+   "N11N"
+  ],
+  "tient": true
+ },
+ {
+  "mutation": "G09 7.3 : 3 etats a N1 -> 2 (et 5 -> 4)",
+  "attendu": "N09",
+  "code": 1,
+  "controles_qui_mordent": [
+   "N09",
+   "N11N"
+  ],
+  "tient": true
+ },
+ {
+  "mutation": "G10 7.3 : l ordre 2 plus pres a 4 etats sur 11 -> 5",
+  "attendu": "N10",
+  "code": 1,
+  "controles_qui_mordent": [
+   "N10",
+   "N11N"
+  ],
+  "tient": true
+ },
+ {
+  "mutation": "G11 section 6 : |ln(G3/G2)| de la ligne P jusqu a 0.019 -> 0.029",
+  "attendu": "N11",
+  "code": 1,
+  "controles_qui_mordent": [
+   "N11",
+   "N11N"
+  ],
+  "tient": true
+ },
+ {
+  "mutation": "G12 section 12 : 149 etats -> 150",
+  "attendu": "N12",
+  "code": 1,
+  "controles_qui_mordent": [
+   "N11N",
+   "N12"
+  ],
+  "tient": true
+ },
+ {
+  "mutation": "G13 section 3 : delta de BN -0.076 -> -0.086",
+  "attendu": "N01",
+  "code": 1,
+  "controles_qui_mordent": [
+   "N01",
+   "N11N"
+  ],
+  "tient": true
+ },
+ {
+  "mutation": "G14 7.3 : e_bord maximal de BP 0.636 -> 0.736",
+  "attendu": "N08",
+  "code": 1,
+  "controles_qui_mordent": [
+   "N08",
+   "N11N"
+  ],
+  "tient": true
+ }
+]

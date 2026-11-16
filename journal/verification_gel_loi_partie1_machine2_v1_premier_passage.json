@@ -1,0 +1,47 @@
+{
+ "bilan": {
+  "ids": [
+   "C08"
+  ],
+  "mord": 1
+ },
+ "canon": "b56ca5cb2dd25da1",
+ "controles": {
+  "C01": {
+   "detail": "canon du texte b56ca5cb2dd25da1 (annonce b56ca5cb2dd25da1) ; ASCII : True",
+   "tient": true
+  },
+  "C02": {
+   "detail": "canons de la section 1 recalcules depuis mes copies : tous tiennent ; mon lot de reponse 548fb2ba8793ecfe",
+   "tient": true
+  },
+  "C03": {
+   "detail": "quatre creneaux : listes de 9, 18, 8 et 9 valeurs, fenetres et bornes contre mon script de tirage",
+   "tient": true
+  },
+  "C04": {
+   "detail": "exemple de la section 3 et huit lignes de l autotest de machine 1 contre mon tirage : 8 sur 8 ; forme de la chaine hachee presente",
+   "tient": true
+  },
+  "C05": {
+   "detail": "definitions 4.1 a 4.6 : seuils et formules que mon evaluateur applique",
+   "tient": true
+  },
+  "C06": {
+   "detail": "regle des rangs : cinq rangs de 0 a 4, creneau entier, ordre N P BN BP, pas de retrait",
+   "tient": true
+  },
+  "C07": {
+   "detail": "table de la section 7 : 152 cellules lues dans le texte ; differentes du JSON de machine 1 : 0 ; differentes de MA table : 0",
+   "tient": true
+  },
+  "C08": {
+   "detail": "comptes : 152 cellules, 44 w2, eligibles {'BN': 7, 'BP': 9, 'N': 9, 'P': 18} (JSON de machine 1) ; ABSENTS : ['152 cellules candidates (44 w2 au millieme)']",
+   "tient": false
+  },
+  "C09": {
+   "detail": "section 11 : 11 canons de pieces ; recalcules depuis le lot de machine 1, differents : [] (le script de construction, qui porte ce texte, n est pas compare a lui-meme)",
+   "tient": true
+  }
+ }
+}

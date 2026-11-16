@@ -1,0 +1,37 @@
+ETALONNAGE aux points deja joues (etats du domaine) : delta < 0 : 39 etats (A1 C1 C2 M1 M2) ; delta > 0 : 21 etats (A2 C3 C4)
+  delta < 0 : ln q3 negatif a 35 etats sur 39 ; k = -ln q3 / (ln(G3/G2))^2, lu aux 31 etats ou |ln(G3/G2)| >= 0.05 (A1 C2 M1 M2) : mediane 1.99, de 0.55 a 3.24
+     A1  delta -0.05 :  2 etats ; ln q3 mediane -0.0093 ; ln(G3/G2) mediane -0.0617 ; k de 1.77 a 3.09
+     C1  delta -0.03 :  8 etats ; ln q3 mediane -0.0028 ; ln(G3/G2) mediane -0.0315 ; k de -11.23 a 14.40
+     C2  delta -0.06 : 11 etats ; ln q3 mediane -0.0341 ; ln(G3/G2) mediane -0.1267 ; k de 1.95 a 3.24
+     M1  delta -0.07 : 11 etats ; ln q3 mediane -0.0341 ; ln(G3/G2) mediane -0.1224 ; k de 1.22 a 2.57
+     M2  delta -0.08 :  7 etats ; ln q3 mediane -0.0166 ; ln(G3/G2) mediane -0.1049 ; k de 0.55 a 1.73
+  delta > 0 : ln q3 positif a 21 etats sur 21 ; c2 = ln q3 / delta^2 : mediane 10.2, plus grand 15.0 ; c3 = ln q3 / delta^3 : mediane 192, plus grand 493
+     A2  delta +0.05 :  2 etats ; ln q3 de +0.0373 a +0.0374
+     C3  delta +0.03 : 14 etats ; ln q3 de +0.0010 a +0.0133
+     C4  delta +0.06 :  5 etats ; ln q3 de +0.0367 a +0.0415
+  plus grand e_bord d'un etat du domaine aux points joues : 0.603
+CELLULES TIREES (etiquettes PREDITES ; T = 0.05 si e_bord < 0.3, 0.10 sinon) : attente du pire |ln q3| du domaine, et marge T / attente
+  N1  delta -0.065 x3/4  N 68 : domaine 11 (dont 0 a T = 0.05 ; 3 au-dela du plus grand e_bord vu), hors 0 ; e_bord 0.442 a 0.626 ; ln(G3/G2) mediane -0.1524, extreme -0.1634
+        mediane : attente 0.0531, marge 1.88, ordre 2 plus pres a 0 etats sur 11 (seuil E2 : 9 plus pres pour l'ordre 3) ; pire : attente 0.0866, marge 1.15, ordre 2 plus pres a 4 etats sur 11 (seuil E2 : 9 plus pres pour l'ordre 3)
+  N2  delta -0.065 x5/6  N 63 : domaine 10 (dont 0 a T = 0.05 ; 0 au-dela du plus grand e_bord vu), hors 0 ; e_bord 0.441 a 0.565 ; ln(G3/G2) mediane -0.1311, extreme -0.1382
+        mediane : attente 0.0380, marge 2.63, ordre 2 plus pres a 0 etats sur 10 (seuil E2 : 8 plus pres pour l'ordre 3) ; pire : attente 0.0620, marge 1.61, ordre 2 plus pres a 0 etats sur 10 (seuil E2 : 8 plus pres pour l'ordre 3)
+  N3  delta -0.065 x1/1  N 60 : domaine 12 (dont 0 a T = 0.05 ; 0 au-dela du plus grand e_bord vu), hors 0 ; e_bord 0.317 a 0.562 ; ln(G3/G2) mediane -0.1056, extreme -0.1119
+        mediane : attente 0.0249, marge 4.02, ordre 2 plus pres a 0 etats sur 12 (seuil E2 : 9 plus pres pour l'ordre 3) ; pire : attente 0.0406, marge 2.46, ordre 2 plus pres a 0 etats sur 12 (seuil E2 : 9 plus pres pour l'ordre 3)
+  N4  delta -0.065 x6/5  N 57 : domaine 13 (dont 1 a T = 0.05 ; 0 au-dela du plus grand e_bord vu), hors 0 ; e_bord 0.191 a 0.501 ; ln(G3/G2) mediane -0.0840, extreme -0.0885
+        mediane : attente 0.0156, marge 4.54, ordre 2 plus pres a 0 etats sur 13 (seuil E2 : 10 plus pres pour l'ordre 3) ; pire : attente 0.0254, marge 2.78, ordre 2 plus pres a 0 etats sur 13 (seuil E2 : 10 plus pres pour l'ordre 3)
+  N5  delta -0.065 x4/3  N 55 : domaine 14 (dont 2 a T = 0.05 ; 0 au-dela du plus grand e_bord vu), hors 0 ; e_bord 0.191 a 0.500 ; ln(G3/G2) mediane -0.0731, extreme -0.0774
+        mediane : attente 0.0119, marge 5.64, ordre 2 plus pres a 0 etats sur 14 (seuil E2 : 11 plus pres pour l'ordre 3) ; pire : attente 0.0194, marge 3.46, ordre 2 plus pres a 0 etats sur 14 (seuil E2 : 11 plus pres pour l'ordre 3)
+  P1  delta +0.035 x3/4  N 69 : domaine 12 (dont 5 a T = 0.05 ; 0 au-dela du plus grand e_bord vu), hors 0 ; e_bord 0.250 a 0.396 ; ln(G3/G2) mediane -0.0155, extreme -0.0159
+        p2_mediane : attente 0.0125, marge 4.00 ; p2_pire : attente 0.0183, marge 2.73 ; p3_mediane : attente 0.0082, marge 6.07 ; p3_pire : attente 0.0211, marge 2.37
+  P2  delta +0.035 x5/6  N 64 : domaine 13 (dont 6 a T = 0.05 ; 0 au-dela du plus grand e_bord vu), hors 0 ; e_bord 0.214 a 0.359 ; ln(G3/G2) mediane -0.0165, extreme -0.0169
+        p2_mediane : attente 0.0125, marge 4.00 ; p2_pire : attente 0.0183, marge 2.73 ; p3_mediane : attente 0.0082, marge 6.07 ; p3_pire : attente 0.0211, marge 2.37
+  P3  delta +0.035 x1/1  N 61 : domaine 13 (dont 8 a T = 0.05 ; 0 au-dela du plus grand e_bord vu), hors 0 ; e_bord 0.142 a 0.324 ; ln(G3/G2) mediane -0.0175, extreme -0.0182
+        p2_mediane : attente 0.0125, marge 4.00 ; p2_pire : attente 0.0183, marge 2.73 ; p3_mediane : attente 0.0082, marge 6.07 ; p3_pire : attente 0.0211, marge 2.37
+  P4  delta +0.035 x6/5  N 58 : domaine 13 (dont 13 a T = 0.05 ; 0 au-dela du plus grand e_bord vu), hors 0 ; e_bord 0.142 a 0.287 ; ln(G3/G2) mediane -0.0178, extreme -0.0186
+        p2_mediane : attente 0.0125, marge 4.00 ; p2_pire : attente 0.0183, marge 2.73 ; p3_mediane : attente 0.0082, marge 6.07 ; p3_pire : attente 0.0211, marge 2.37
+  P5  delta +0.035 x4/3  N 55 : domaine 13 (dont 13 a T = 0.05 ; 0 au-dela du plus grand e_bord vu), hors 0 ; e_bord 0.142 a 0.288 ; ln(G3/G2) mediane -0.0174, extreme -0.0188
+        p2_mediane : attente 0.0125, marge 4.00 ; p2_pire : attente 0.0183, marge 2.73 ; p3_mediane : attente 0.0082, marge 6.07 ; p3_pire : attente 0.0211, marge 2.37
+  BN  delta -0.076 x1/1  N 60 : domaine  7 (dont 0 a T = 0.05 ; 0 au-dela du plus grand e_bord vu), hors 4 ; e_bord 0.369 a 0.583 ; ln(G3/G2) mediane -0.1411, extreme -0.1504
+        mediane : attente 0.0450, marge 2.22, ordre 2 plus pres a 0 etats sur 7 (seuil E2 : 6 plus pres pour l'ordre 3) ; pire : attente 0.0734, marge 1.36, ordre 2 plus pres a 0 etats sur 7 (seuil E2 : 6 plus pres pour l'ordre 3)
+  BP  delta +0.067 x1/1  N 61 : domaine  6 (dont 0 a T = 0.05 ; 2 au-dela du plus grand e_bord vu), hors 8 ; e_bord 0.347 a 0.636 ; ln(G3/G2) mediane -0.0355, extreme -0.0385
+        p2_mediane : attente 0.0458, marge 2.18 ; p2_pire : attente 0.0672, marge 1.49 ; p3_mediane : attente 0.0577, marge 1.73 ; p3_pire : attente 0.1481, marge 0.68

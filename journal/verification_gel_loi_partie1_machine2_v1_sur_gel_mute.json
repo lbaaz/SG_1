@@ -1,0 +1,55 @@
+{
+ "bilan": {
+  "ids": [
+   "C01",
+   "C02",
+   "C03",
+   "C04",
+   "C05",
+   "C06",
+   "C07",
+   "C08",
+   "C09"
+  ],
+  "mord": 9
+ },
+ "canon": "b8e371fbae222c2f",
+ "controles": {
+  "C01": {
+   "detail": "canon du texte b8e371fbae222c2f (annonce b56ca5cb2dd25da1) ; ASCII : True",
+   "tient": false
+  },
+  "C02": {
+   "detail": "canons de la section 1 recalcules depuis mes copies : MORDENT ['82a0be882568fe0c'] ; mon lot de reponse 548fb2ba8793ecfe",
+   "tient": false
+  },
+  "C03": {
+   "detail": "quatre creneaux : listes de 9, 18, 8 et 9 valeurs, fenetres et bornes contre mon script de tirage ; MORD : ['w2 = 1.931 a 1.939']",
+   "tient": false
+  },
+  "C04": {
+   "detail": "exemple de la section 3 et huit lignes de l autotest de machine 1 contre mon tirage : 8 sur 8 ; forme de la chaine hachee presente",
+   "tient": false
+  },
+  "C05": {
+   "detail": "definitions 4.1 a 4.6 : seuils et formules que mon evaluateur applique ; ABSENTS : ['e_bord < 0.7', 'N <= 74, au moins 8 etiquettes jugeables sur les 14, dont au moins 5 dans le domaine']",
+   "tient": false
+  },
+  "C06": {
+   "detail": "regle des rangs : cinq rangs de 0 a 4, creneau entier, ordre N P BN BP, pas de retrait ; ABSENTS : ['Au plus cinq rangs, de 0 a 4']",
+   "tient": false
+  },
+  "C07": {
+   "detail": "table de la section 7 : 152 cellules lues dans le texte ; differentes du JSON de machine 1 : 2 ; differentes de MA table : 2",
+   "tient": false
+  },
+  "C08": {
+   "detail": "comptes : 152 cellules, 44 w2, eligibles {'BN': 7, 'BP': 9, 'N': 9, 'P': 18} (JSON de machine 1) ; ABSENTS : ['creneau BN : 7 w2 eligibles sur 8', '152 cellules candidates (44 w2)']",
+   "tient": false
+  },
+  "C09": {
+   "detail": "section 11 : 11 canons de pieces ; recalcules depuis le lot de machine 1, differents : ['eligibilite_creneaux_machine1_v1.py'] (le script de construction, qui porte ce texte, n est pas compare a lui-meme)",
+   "tient": false
+  }
+ }
+}

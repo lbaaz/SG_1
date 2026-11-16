@@ -1,0 +1,30 @@
+C2 (w2 = 387/200, etiquette (7,2), barriere tenue) : |E_Bloch - E_sym| aux couplages x0.03125 x0.0625 x0.125 x0.25 x0.5 x1 : 5.37e-15 8.66e-14 1.43e-12 2.58e-11 6.20e-10 3.03e-08
+     pentes locales (d'un couplage au double) : 4.01 4.05 4.17 4.58 5.61 ; attendue : 4 a petit couplage
+D  etat (9,2) de C2 : dernier site de la barriere m = 10, debut de l'absorbeur m = 15, fin de l'echelle m = 80
+     correction du saut au dernier site de la barriere, en parts du saut : symetrique -0.0103 ; moitie haute +0.0940 ; moitie basse -0.1146 (rapports a la symetrique : 9.1 et 11.1)
+     au debut de l'absorbeur : moitie haute +0.304, moitie basse -0.374 du saut ; la moitie haute depasse le saut lui-meme a partir de m = 22
+     saut au second voisin au dernier site de la barriere : moitie haute -0.22, moitie basse +2.22 fois la valeur symetrique
+     largeur (-2 Im) aux forces d'absorbeur 1/4, 1/8, 1/16, 1/32 : symetrique 3.923e-12 4.004e-12 4.021e-12 4.030e-12 (plus grande / plus petite 1.027) ; Bloch 1.758e-12 1.463e-12 6.396e-13 3.507e-13 (plus grande / plus petite 5.01)
+C1 : demi-somme des deux moities contre les tables symetriques des blocs, pire ecart relatif 2.3e-10 ; ma chaine symetrique contre celle du bloc, largeur lue par le flux : pire ecart relatif 4.6e-10
+     la lecture -2 Im, seule possible pour la forme de Bloch, est plus bruitee : dans le bloc lui-meme, flux / (-2 Im) va de 0.9991 a 1.0100 ; entre ma chaine symetrique et le bloc, -2 Im s'ecarte d'au plus 1.0e-02
+POINTS DEJA JOUES, etats du domaine : ln(G_Bloch / G_sym), puis |ln q3| de la forme symetrique et de la forme de Bloch (plateau du run ter)
+  C1  delta -0.03 :  8 etats ; ln(G_Bloch / G_sym) de -0.0264 a -0.0016 ; |ln q3| mediane : symetrique 0.0082, Bloch 0.0105 ; plus grand : symetrique 0.0143, Bloch 0.0340
+  C2  delta -0.06 : 11 etats ; ln(G_Bloch / G_sym) de -1.9299 a +0.0345 ; |ln q3| mediane : symetrique 0.0341, Bloch 0.4367 ; plus grand : symetrique 0.0604, Bloch 1.9888
+  C3  delta +0.03 : 14 etats ; ln(G_Bloch / G_sym) de -0.0863 a +0.1035 ; |ln q3| mediane : symetrique 0.0082, Bloch 0.0576 ; plus grand : symetrique 0.0133, Bloch 0.1120
+  C4  delta +0.06 :  5 etats ; ln(G_Bloch / G_sym) de -1.6411 a -0.1358 ; |ln q3| mediane : symetrique 0.0374, Bloch 0.2843 ; plus grand : symetrique 0.0415, Bloch 1.5996
+  M1  delta -0.07 : 11 etats ; ln(G_Bloch / G_sym) de -1.2007 a +2.5412 ; |ln q3| mediane : symetrique 0.0341, Bloch 1.2048 ; plus grand : symetrique 0.0431, Bloch 2.5016
+  M2  delta -0.08 :  7 etats ; ln(G_Bloch / G_sym) de -3.7878 a -0.7837 ; |ln q3| mediane : symetrique 0.0166, Bloch 1.2612 ; plus grand : symetrique 0.0220, Bloch 3.8099
+  les 56 etats : |ln(G_Bloch / G_sym)| mediane 0.3305, plus grand 3.7878 ; Bloch plus pres du plateau que la forme symetrique a 7 etats
+DOUZE CELLULES, etiquettes predites du domaine : ln(G_Bloch / G_sym)
+  N1  11 etats : de -0.9708 a -0.6964, mediane -0.8394
+  N2  10 etats : de -1.5208 a -0.7145, mediane -0.9586
+  N3  12 etats : de -1.8873 a -0.0065, mediane -1.5136
+  N4  13 etats : de -1.9058 a +0.2529, mediane -1.5607
+  N5  14 etats : de -2.2353 a +0.4165, mediane -1.4803
+  P1  12 etats : de -0.0609 a +0.1023, mediane -0.0231
+  P2  13 etats : de -0.0935 a +0.0221, mediane -0.0136
+  P3  13 etats : de -0.0764 a +0.0431, mediane +0.0149
+  P4  13 etats : de -0.1604 a +0.0714, mediane +0.0046
+  P5  13 etats : de -0.3010 a +0.0440, mediane -0.0174
+  BN   7 etats : de -2.6193 a +1.2505, mediane +0.0508
+  BP   6 etats : de -1.6077 a -0.7222, mediane -0.7796

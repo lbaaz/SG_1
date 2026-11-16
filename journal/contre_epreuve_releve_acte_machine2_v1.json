@@ -1,0 +1,307 @@
+[
+ {
+  "mutation": "base",
+  "genre": "reference",
+  "controles_qui_mordent": [
+   "R08c"
+  ],
+  "tient": true
+ },
+ {
+  "mutation": "M01 tableau : |ln q3| de N1 0.0740 -> 0.0840",
+  "genre": "corruption",
+  "attendu": "R05N1",
+  "code": 1,
+  "controles_qui_mordent": [
+   "R05N1",
+   "R08c"
+  ],
+  "tient": true
+ },
+ {
+  "mutation": "M02 chronologie : 19 appels -> 18",
+  "genre": "corruption",
+  "attendu": "R03a",
+  "code": 1,
+  "controles_qui_mordent": [
+   "R03a",
+   "R08c"
+  ],
+  "tient": true
+ },
+ {
+  "mutation": "M03 chronologie : duree 6166 -> 6176 s",
+  "genre": "corruption",
+  "attendu": "R03a",
+  "code": 1,
+  "controles_qui_mordent": [
+   "R03a",
+   "R08c"
+  ],
+  "tient": true
+ },
+ {
+  "mutation": "M04 empreinte du verdict d ordre 3 : dernier chiffre",
+  "genre": "corruption",
+  "attendu": "R02a",
+  "code": 1,
+  "controles_qui_mordent": [
+   "R02a",
+   "R02b",
+   "R08c"
+  ],
+  "tient": true
+ },
+ {
+  "mutation": "M05 BP : 0.099617 -> 0.099717",
+  "genre": "corruption",
+  "attendu": "R07d",
+  "code": 1,
+  "controles_qui_mordent": [
+   "R07d",
+   "R08c"
+  ],
+  "tient": true
+ },
+ {
+  "mutation": "M06 delta > 0 : 784 -> 774",
+  "genre": "corruption",
+  "attendu": "R10b",
+  "code": 1,
+  "controles_qui_mordent": [
+   "R08c",
+   "R10b"
+  ],
+  "tient": true
+ },
+ {
+  "mutation": "M07 delta > 0 : 15 etats sur 62 -> 14",
+  "genre": "corruption",
+  "attendu": "R10b",
+  "code": 1,
+  "controles_qui_mordent": [
+   "R08c",
+   "R10b"
+  ],
+  "tient": true
+ },
+ {
+  "mutation": "M08 signes : 58 sur 60 -> 59",
+  "genre": "corruption",
+  "attendu": "R09a",
+  "code": 1,
+  "controles_qui_mordent": [
+   "R08c",
+   "R09a"
+  ],
+  "tient": true
+ },
+ {
+  "mutation": "M09 annonce A-6 BN : 0.65 -> 0.55",
+  "genre": "corruption",
+  "attendu": "R11a",
+  "code": 1,
+  "controles_qui_mordent": [
+   "R08c",
+   "R11a"
+  ],
+  "tient": true
+ },
+ {
+  "mutation": "M10 phrase autorisee : 0.05 pres -> 0.06 pres",
+  "genre": "corruption",
+  "attendu": "R12a",
+  "code": 1,
+  "controles_qui_mordent": [
+   "R08c",
+   "R12a"
+  ],
+  "tient": true
+ },
+ {
+  "mutation": "M11 rejeu : 1.6e-09 -> 1.7e-09 sur ln q3",
+  "genre": "corruption",
+  "attendu": "R14a",
+  "code": 1,
+  "controles_qui_mordent": [
+   "R08c",
+   "R14a"
+  ],
+  "tient": true
+ },
+ {
+  "mutation": "M12 lecteur : plateau 142 -> 143 sur 144",
+  "genre": "corruption",
+  "attendu": "R04a",
+  "code": 1,
+  "controles_qui_mordent": [
+   "R04a",
+   "R08c"
+  ],
+  "tient": true
+ },
+ {
+  "mutation": "M13 O-1 : 0.16338 -> 0.16438",
+  "genre": "corruption",
+  "attendu": "R13a",
+  "code": 1,
+  "controles_qui_mordent": [
+   "R08c",
+   "R13a"
+  ],
+  "tient": true
+ },
+ {
+  "mutation": "M14 E1 lignes : 117 etats -> 116",
+  "genre": "corruption",
+  "attendu": "R07a",
+  "code": 1,
+  "controles_qui_mordent": [
+   "R07a",
+   "R08c"
+  ],
+  "tient": true
+ },
+ {
+  "mutation": "M15 etiquettes : 132 -> 133",
+  "genre": "corruption",
+  "attendu": "R09d",
+  "code": 1,
+  "controles_qui_mordent": [
+   "R08c",
+   "R09d"
+  ],
+  "tient": true
+ },
+ {
+  "mutation": "M16 hors domaine : e_bord 0.489 -> 0.499",
+  "genre": "corruption",
+  "attendu": "R09b",
+  "code": 1,
+  "controles_qui_mordent": [
+   "R08c",
+   "R09b"
+  ],
+  "tient": true
+ },
+ {
+  "mutation": "M17 exclus : N5 rang 13 -> 14",
+  "genre": "corruption",
+  "attendu": "R06a",
+  "code": 1,
+  "controles_qui_mordent": [
+   "R06a",
+   "R08c"
+  ],
+  "tient": true
+ },
+ {
+  "mutation": "M18 garde e_bord : BP rang 5 -> 6",
+  "genre": "corruption",
+  "attendu": "R07e",
+  "code": 1,
+  "controles_qui_mordent": [
+   "R07e",
+   "R08c"
+  ],
+  "tient": true
+ },
+ {
+  "mutation": "M19 au-dela de 0.603 : N1 rang 1 -> 2",
+  "genre": "corruption",
+  "attendu": "R10g",
+  "code": 1,
+  "controles_qui_mordent": [
+   "R08c",
+   "R10g"
+  ],
+  "tient": true
+ },
+ {
+  "mutation": "M20 lecteur rejoue : 7.3e-15 -> 7.4e-15",
+  "genre": "corruption",
+  "attendu": "R14b",
+  "code": 1,
+  "controles_qui_mordent": [
+   "R08c",
+   "R14b"
+  ],
+  "tient": true
+ },
+ {
+  "mutation": "M21 attente de P1 : 0.0336 -> 0.0236",
+  "genre": "corruption",
+  "attendu": "R10d",
+  "code": 1,
+  "controles_qui_mordent": [
+   "R08c",
+   "R10d"
+  ],
+  "tient": true
+ },
+ {
+  "mutation": "M22 deltas : -0.065 -> -0.055",
+  "genre": "corruption",
+  "attendu": "R15a",
+  "code": 1,
+  "controles_qui_mordent": [
+   "R08c",
+   "R15a"
+  ],
+  "tient": true
+ },
+ {
+  "mutation": "M23 P1 P2 : 13 predits -> 14",
+  "genre": "corruption",
+  "attendu": "R15b",
+  "code": 1,
+  "controles_qui_mordent": [
+   "R08c",
+   "R15b"
+  ],
+  "tient": true
+ },
+ {
+  "mutation": "M24 aux cellules : N4 ln q2 0.0747 -> 0.0847",
+  "genre": "corruption",
+  "attendu": "R05N4",
+  "code": 1,
+  "controles_qui_mordent": [
+   "R05N4",
+   "R08c"
+  ],
+  "tient": true
+ },
+ {
+  "mutation": "M25 canon du lot de resultat : 54ccae1713f92bc9 -> ...c",
+  "genre": "corruption",
+  "attendu": "R02a",
+  "code": 1,
+  "controles_qui_mordent": [
+   "R02a",
+   "R02b",
+   "R08c"
+  ],
+  "tient": true
+ },
+ {
+  "mutation": "M27 rien regle apres lecture : phrase alteree",
+  "genre": "corruption",
+  "attendu": "R12c",
+  "code": 1,
+  "controles_qui_mordent": [
+   "R08c",
+   "R12b",
+   "R12c"
+  ],
+  "tient": true
+ },
+ {
+  "mutation": "M26 CORRECTION E3 : 0.173 -> 0.174 doit faire tenir R08c",
+  "genre": "correction",
+  "attendu": "R08c",
+  "code": 0,
+  "controles_qui_mordent": [],
+  "tient": true
+ }
+]
