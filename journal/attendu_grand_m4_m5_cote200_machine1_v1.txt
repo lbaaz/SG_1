@@ -1,0 +1,9 @@
+ATTENDU ECRIT AVANT DE LANCER -- machine 1, 2026-11-16, hors chaine, classe 3, point sacrifie w2 = 101/50.
+Lu a ce moment : 3 barreaux, cotes 72 a 151 (pont_2d_grand_m3_v1.log) : 11 niveaux aux cotes 150 et 151, somme moyenne 1.02.
+Cotes 31 a 45, diagonalisation complete : 2.60 / 2.33 / 2.20 niveaux par boite a 3 / 4 / 5 barreaux (g decroissant).
+A1  4 barreaux, cotes 150 et 151 : moyenne des deux boites entre 8 et 12 niveaux (11 x 2.33 / 2.60 = 9.9).
+A2  5 barreaux, cotes 150 et 151 : moyenne des deux boites entre 7 et 12 niveaux (11 x 2.20 / 2.60 = 9.3).
+A3  4 et 5 barreaux, cotes 96, 97, 128, 129, 150, 151 : somme des y / 7.95, moyenne des six boites, entre 0.85 et 1.15 a chaque
+    profondeur ; et aucun niveau "non fiable" a 4 barreaux (a 5 barreaux les poids sont au bord de la double precision : pas d'attente).
+A4  3 barreaux, cotes 200 et 201 : moyenne des deux boites entre 12 et 19 niveaux (droite prolongee : 16.2 ; la pente observee
+    de 64 a 151 est un peu plus faible) ; somme entre 0.7 et 1.3 sur deux boites seulement.

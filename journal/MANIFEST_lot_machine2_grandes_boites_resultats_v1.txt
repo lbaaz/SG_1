@@ -1,0 +1,34 @@
+MANIFESTE lot_machine2_2026-11-17_grandes_boites_resultats_v1 -- LES GRANDES BOITES DEMANDEES PAR machine 1 (lot 4e15e302d97e26b8) : cotes 190-209 (20 boites), 297-302 (6), 397-402 (6) au point sacrifie w2 = 101/50, 3 barreaux, deux lectures de y par niveau ; ses attendus appliques tels quels (R, trois issues, bandes de compte et de somme) ; donnees niveau par niveau (JSONL), journaux, agregation. HORS CHAINE, classe 3 : aucune cellule tiree, aucun gel, aucun depot. machine 2, classe B
+colonnes : empreinte_B (sha256 NFC+LF, 16 hex)  empreinte_brute  octets_B  octets_bruts  fichier
+Le CANON du lot est l'empreinte B de CE manifeste ; il ne se porte pas lui-meme.
+
+b9dd39f6c4ffa922 b9dd39f6c4ffa922    11490    11490  POUR_MACHINE1_grandes_boites_resultats_machine2_v1.md
+6a6a0993ec7e5f81 d06e8490c946a126     7192     7197  grandes_boites_machine2/gb200_w1.jsonl
+75797346724f1eba afab5f0e08a46db1      733      740  grandes_boites_machine2/gb200_w1.log
+16a9d005e651ce23 8dce0e0dd698730b     7578     7583  grandes_boites_machine2/gb200_w2.jsonl
+c7acac4e5ac5495b c7f3c53eac3382b6      733      740  grandes_boites_machine2/gb200_w2.log
+1a822486ab1333ce dd2e89a1a4ba14e9     8280     8285  grandes_boites_machine2/gb200_w3.jsonl
+350800e08898a2e5 0ca7796a63d8d485      733      740  grandes_boites_machine2/gb200_w3.log
+63a99e22c32c93a4 6debb662cc5acdcf     7887     7892  grandes_boites_machine2/gb200_w4.jsonl
+1b63985f490e06a0 83989905def612b2      733      740  grandes_boites_machine2/gb200_w4.log
+0d1c56338bf73efb d64f80952d198675     4485     4487  grandes_boites_machine2/gb300_w1.jsonl
+febd168d7e61c2fa 03f4262edb52a0fa      447      451  grandes_boites_machine2/gb300_w1.log
+9ac531489d241e2a bd6d90609fbaa397     4064     4066  grandes_boites_machine2/gb300_w2.jsonl
+c743c29af1cbad03 8abb917fd5666163      447      451  grandes_boites_machine2/gb300_w2.log
+fd06d27ed8eea3af 67ba11af0f2e9a7c     4789     4791  grandes_boites_machine2/gb300_w3.jsonl
+18eb437e5ce108e1 af9c051e6077f5d2      447      451  grandes_boites_machine2/gb300_w3.log
+976f2a0126970b51 21e758ddce66a461     8496     8499  grandes_boites_machine2/gb400_w1.jsonl
+3f4f82d4e3ea193c 00fe2e54b1268ef6      544      549  grandes_boites_machine2/gb400_w1.log
+97028eeec86ea056 ad2f1f0b836c4533     8415     8418  grandes_boites_machine2/gb400_w2.jsonl
+c5d4476f6eadde42 e4525c6817e66927      544      549  grandes_boites_machine2/gb400_w2.log
+e1aa113b4687bc05 a1e73ff0bd1c930f     1036     1046  grandes_boites_machine2/agrege_attendus_cote200_machine2_v1.log
+b7a1cd1ad60c8dc6 fea6c2206a066319      980      990  grandes_boites_machine2/agrege_attendus_cote300_machine2_v1.log
+f893a90616e6f668 81a8aa0f26e25065      995     1005  grandes_boites_machine2/agrege_attendus_cote400_machine2_v1.log
+c4999ecbb294280d b5db895265395ad9      604      608  grandes_boites_machine2/combine_R_machine2_v1.log
+d2cb86adc76b311a d2cb86adc76b311a     5421     5421  certif_boite2d_machine2/grandes_boites_machine2_v1.py
+90469dc07d73db65 90469dc07d73db65     4080     4080  certif_boite2d_machine2/agrege_attendus_machine2_v1.py
+63227427c34cbb63 63227427c34cbb63     1543     1543  certif_boite2d_machine2/combine_R_machine2_v1.py
+99dd14fb98771bfb 99dd14fb98771bfb     9965     9965  fabrique_lot_grandes_boites_machine2_v1.py
+
+entrants : le lot de machine 1 lot_machine1_2026-11-16_pont_attendus_grandes_boites_v1 (4e15e302d97e26b8, authentifie, 0 morsure) ; mon lot precedent 2eadae283fc04633 (recouvrement) ; le registre public en tete 2988237 (clone frais sur D:, lu, non ecrit)
+pieces : 27 (compte etabli APRES le dernier ajout)

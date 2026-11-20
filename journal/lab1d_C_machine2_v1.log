@@ -1,0 +1,10 @@
+PARAMETRES B=2 U=3.000 t0=1.000 tb=1.000 tc=1.000 | resonance exacte : E_r = -0.32867609 -0.00873123i ; Gamma = 1.746246e-02 ; 1/Gamma = 57.3 ; L(Gamma=D) = 2pi/Gamma = 359.8
+K couloirs de longueurs differentes (somme des L_c = 1024), saut vide-couloir tc/sqrt(K) ; meme self-energie, donc MEME Gamma exact ; seule la DOS totale compte.
+K    N     somme L_c  Gamma/D_tot   n_eff   Gamma_Q/Gamma   P(t_f)   taux ajuste/Gamma  (t_f)
+1    1027  1024         2.8459    12.160    1.3921        0.2068     0.9975          (85.9)
+2    1027  1024         2.8459     9.121    1.4411        0.2068     0.9975          (85.9)
+4    1027  1024         2.8459     7.983    1.5454        0.2068     0.9975          (85.9)
+8    1025  1022         2.8404     6.498    1.6328        0.2161     0.9906          (85.9)
+16   1028  1025         2.8487     8.715    1.4079        0.2016     1.0049          (85.9)
+32   1031  1028         2.8571     2.695    2.1239        0.2443     0.8796          (85.9)
+64   1028  1025         2.8487     3.566    2.4508        0.1456     1.2511          (85.9)

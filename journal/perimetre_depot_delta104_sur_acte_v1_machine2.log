@@ -1,0 +1,52 @@
+
+1. LES CITATIONS DE L ACTE, ET LES DEUX INDEX PAR CANON
+  [ note] acte                                                       journal_delta_nn_complement_exploration_pont_machine2_v1.md (version 1)
+  [PASSE] l acte est ASCII pur, LF, newline final                    4977 octets
+  [PASSE] l acte cite des empreintes (compte etabli apres extraction 5 jetons distincts de 16 hex
+  [PASSE] chaque VALEUR declaree est bien citee par l acte           
+  [PASSE] chaque lot de TRANSPORT declare est bien cite par l acte   
+  [ note] numero DERIVE du releve, non tape                          plafond 103 -> le delta de cet acte porte le 104 ; le numero reste de la main de l operateur (E18)
+  [PASSE] releve : HEAD d27a951, plafond 103, aucun fichier delta_10 3417 fichiers suivis
+  [PASSE] le delta PRECEDENT est bien au registre -- le releve porte delta_103 present
+  [ note] index du poste                                             11894 canons distincts (B et brut), 5822 noms de table
+  [ note] balayage : tout BOCAL4 hors .git et __pycache__ ; exclues, manifest_depot_delta104_machine2_v1.txt, perimetre_depot_delta104_sur_acte_v1_machine2.log
+
+2. RESOLUTION DE CHAQUE CITATION -- AU REGISTRE, AU POSTE, OU NULLE PART
+   poste     359e2fb28b7e09d3  DEPOT_delta104/entrants/lot_machine1_2026-11-16_pont_v3_et_reponse_controle_v1/MANIFESTE_lot_machine1_2026-11-16_pont_v3_et_reponse_controle_v1.txt
+   poste     4e15e302d97e26b8  DEPOT_delta104/entrants/lot_machine1_2026-11-16_pont_attendus_grandes_boites_v1/MANIFESTE_lot_machine1_2026-11-16_pont_attendus_grandes_boites_v1.txt
+   poste     723311e2e29bdfbb  MANIFEST_lot_machine2_pont_controle_ordres_1_et_3_v1.txt
+   poste     2eadae283fc04633  MANIFEST_lot_machine2_boite2d_et_laboratoire_v1.txt
+   poste     dce7431e7a8b4a8c  MANIFEST_lot_machine2_grandes_boites_resultats_v1.txt
+  [PASSE] toute empreinte citee resout par canon (registre, poste, o 0 au registre, 5 au poste, 0 zip, 0 valeurs
+  [PASSE] TOUS les lots extraits sous entrants/ sont deposes par cit 5 lots extraits ; manquants : []
+
+3. LES LOTS CITES ENTRENT AVEC LEURS PIECES DE TABLE
+  [ note] erratum                                                    aucun dans ce chantier : une divergence de table mord
+  [ note] manifeste sans ligne pieces : N                            359e2fb28b7e09d3 : compte attendu = 53 membres du zip extrait, hors manifeste
+   lot 359e2fb28b7e09d3  table 53 / declare 53   DEPOT_delta104/entrants/lot_machine1_2026-11-16_pont_v3_et_reponse_controle_v1/MANIFESTE_lot_machine1_2026-11-16_pont_v3_et_reponse_controle_v1.txt
+  [ note] manifeste sans ligne pieces : N                            4e15e302d97e26b8 : compte attendu = 7 membres du zip extrait, hors manifeste
+   lot 4e15e302d97e26b8  table  7 / declare 7    DEPOT_delta104/entrants/lot_machine1_2026-11-16_pont_attendus_grandes_boites_v1/MANIFESTE_lot_machine1_2026-11-16_pont_attendus_grandes_boites_v1.txt
+   lot 723311e2e29bdfbb  table 16 / declare 16   MANIFEST_lot_machine2_pont_controle_ordres_1_et_3_v1.txt
+   lot 2eadae283fc04633  table 20 / declare 20   MANIFEST_lot_machine2_boite2d_et_laboratoire_v1.txt
+   lot dce7431e7a8b4a8c  table 27 / declare 27   MANIFEST_lot_machine2_grandes_boites_resultats_v1.txt
+  [PASSE] 5 lots cites a deposer, chacun au compte de table declare  0 faux compte
+  [PASSE] aucune piece de table ne s ecarte de son manifeste HORS er 0 ecart
+  [PASSE] aucune piece de table n est introuvable a cote de son mani 0 introuvable
+  [PASSE] aucune piece retenue n est deja au registre par canon      128 retenues
+
+4. LE MANIFESTE DE DEPOT -- DERIVE, JAMAIS ECRIT A LA MAIN
+  [PASSE] aucun chemin cible en double ni deja au registre           134 chemins cibles
+  [PASSE] aucun doublon de canon dans le depot                       134 pieces
+  [PASSE] aucune des pieces exclues (vie privee, delta 102) n entre  6 exclues declarees, 0 rencontrees ; 134 lignes de depot
+  [PASSE] toute collision resolue porte le prefixe de son LOT (aucun 0 prefixes
+  [PASSE] les .md/.py/.txt deposes sont B == brut (ASCII/LF)         53 pieces texte
+  [PASSE] le manifeste relu porte autant de lignes que de pieces     134 lignes, 134 pieces
+  [PASSE] chaque source du manifeste resout encore au canon ecrit    0 ecart
+  [PASSE] le manifeste declare son compte, egal aux lignes           pieces : 134
+  [PASSE] le manifeste est ASCII                                     34620 octets
+
+=====================================================================
+BILAN PERIMETRE : 21/21 controles PASSENT
+5 empreintes citees : 0 au registre, 5 au poste, 0 zip, 0 valeurs, 0 non resolues
+DEPOT : 134 pieces (journal 134) ; manifeste MANIFEST_DEPOT_delta104_machine2_v1.txt 997c3bc12d687cfd
+=====================================================================

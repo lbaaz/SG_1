@@ -1,0 +1,11 @@
+point w2 = 101/50, g = 4.22189e-03 : barriere de 4 barreaux ; chaine d'ordre 3 sous absorbeur : Gamma = 7.2530e-11 (etendue 0.0049)
+boite 27 x 27 (729 etats), dernier site de l'echelle (26, 13), 13 s : T = 92.18, sortie de barriere 5.38, V attendu = racine(Gamma / T) = 8.8706e-07
+   boite nue (u = 0) : energie du vide -8.032e-06 ; poids sur (0, 0) 0.999588 ; poids hors des 5 premiers barreaux : 9.81e-10 ; niveaux voisins a -0.0284 et +0.0195 (en |delta| : -1.42, +0.97)
+   chaine fermee, ordre 1 : croisement a u = +1.0608e-01 ; V = 8.7973e-07 ; poids 0.500 / 0.500 ; adjacents True ; ln(V^2 T / Gamma) = -0.0166 ; ecart/bruit 9.6e+09
+   chaine fermee, ordre 3 : croisement a u = -1.9371e-01 ; V = 8.7838e-07 ; poids 0.500 / 0.500 ; adjacents True ; ln(V^2 T / Gamma) = -0.0197 ; ecart/bruit 1.0e+10
+   BOITE 2D FERMEE       : croisement a u = +1.6710e+00 ; V = 8.4062e-07 ; poids 0.500 / 0.500 ; adjacents True ; ln(V^2 T / Gamma) = -0.1075 ; ecart/bruit 1.5e+08
+boite 35 x 35 (1225 etats), dernier site de l'echelle (34, 17), 55 s : T = 98.83, sortie de barriere 5.38, V attendu = racine(Gamma / T) = 8.5669e-07
+   boite nue (u = 0) : energie du vide -8.032e-06 ; poids sur (0, 0) 0.999588 ; poids hors des 5 premiers barreaux : 3.08e-09 ; niveaux voisins a -0.0137 et +0.0195 (en |delta| : -0.68, +0.97)
+   chaine fermee, ordre 1 : croisement a u = -5.9400e-01 ; V = 8.5556e-07 ; poids 0.500 / 0.500 ; adjacents True ; ln(V^2 T / Gamma) = -0.0026 ; ecart/bruit 5.6e+09
+   chaine fermee, ordre 3 : aucun croisement
+   BOITE 2D FERMEE       : croisement a u = +1.1755e+00 ; V = 4.2848e-07 ; poids 0.500 / 0.500 ; adjacents True ; ln(V^2 T / Gamma) = -1.3856 ; ecart/bruit 5.7e+07

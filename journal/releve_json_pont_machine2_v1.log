@@ -1,0 +1,6 @@
+croisements : 136 | paires (cellule, N) distinctes : 104 | configurations (profondeur, N) distinctes : 26
+paires (cellule, N) enregistrees plus d'une fois : 32 | ecart maximal entre doublons : 0.0
+ln_R_T (= ln(2 pi V^2/D_T / G) = ln(V^2 T / G)) : min -0.0171 max -0.0057  -> tous negatifs : True
+recalcul ln(V^2 T / G) depuis V, D_T, ln G : ecart max a ln_R_T = 7.11e-15
+champ Gamma_T_sur_V2 = 14688.935155512905 | G*T/V^2 = 14688.935155512905 | G/(V^2 T) = 1.0172355247798288 | (unite : 1/energie^2 pour le premier)
+a (profondeur, N) fixes, ecart maximal du residu entre cellules : 4.40e-05 (sur 26 configurations)

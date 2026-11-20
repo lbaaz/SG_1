@@ -1,0 +1,40 @@
+--- delta103
++++ delta104
+@@ -1,20 +1,20 @@
+ #!/usr/bin/env python3
+ # -*- coding: ascii -*-
+-"""LE PERIMETRE DU DEPOT delta 103 (LE PONT ENTRE L ABSORBEUR ET LA BOITE FERMEE) -- ENUMERE DEPUIS LES CITATIONS DE L ACTE ET DE LA NOTE DE DEPOT.
+-machine 2, v1, 20/11/2026.
+-
+-Derive de la feuille du delta 102 (perimetre_depot_delta102_machine2_v1.py, au registre ou au poste, NON EDITEE : regle 17), meme methode,
+-meme code, CINQ changements nommes, le diff est joint :
+-  1. dossier() : les instruments et constructions de ce chantier (le pont entre l absorbeur et la boite fermee (regle de tirage, sondes, feuilles, chaine et rejeu de machine 1)) vont sous scripts/, comme ceux du delta precedent.
++"""LE PERIMETRE DU DEPOT delta 104 (COMPLEMENT AU DELTA 103 : L EXPLORATION DU PONT) -- ENUMERE DEPUIS LES CITATIONS DE LA NOTE DE DEPOT.
++machine 2, v1, 21/11/2026.
++
++Derive de la feuille du delta 103 (perimetre_depot_delta103_machine2_v1.py, au registre ou au poste, NON EDITEE : regle 17), meme methode,
++meme code, TROIS changements nommes, le diff est joint :
++  1. dossier() : les instruments et constructions de ce chantier (l exploration du pont (notes, sondes et lectures de machine 1 et de machine 2, hors chaine, avant le gel du pont)) vont sous scripts/, comme ceux du delta precedent.
+   2. le texte du manifeste (corps) parle de ce chantier et de sa date.
+ Pour le reste, tout est herite : le perimetre ne s'ecrit pas a la main, il s'ENUMERE depuis les citations de l'acte, resolues PAR CANON
+ (registre, poste, ou NON RESOLU qui mord) ; le numero se DERIVE du registre (plafond + 1) ; les lots cites entrent avec leurs pieces de
+ table ; les ZIP ne sont pas deposes ; DEUX VERBES (`chk` mesure, `note` porte la prose) ; PB-1 : rien n'est edite.
+-  3. la note de depot de ce delta (de la plume de machine 2) CITE les canons des neuf lots : la feuille prend un TROISIEME argument, cette note, dont les empreintes s ajoutent a celles de l acte ; l acte n en cite que sept (il ne cite ni son propre lot ni mon contreseing).\n  4. la table EXCLUS du delta 102 (six scripts de machine 2 dont un chemin local en dur porte l identifiant de l utilisateur du poste) est CONSERVEE : aucune de ces pieces n entre dans ce depot ; mais aucune piece des neuf lots n en est une (balayage de vie privee rejoue sur les neuf zips avant ce depot : 0 fuite) ; le controle exige seulement que celles qui seraient rencontrees soient declarees et qu aucune n entre, et non plus qu elles soient toutes rencontrees.\n  5. le manifeste n ecrit son bloc NON DEPOSES, ASSUMES (VIE PRIVEE) que si une piece exclue est rencontree.\n"""
++  3. ce delta n a pas d acte de machine 1 : sa piece de depot est la NOTE DE DEPOT de machine 2 (journal_delta_nn_complement_exploration_pont_machine2_v1.md), donnee a la feuille comme acte ET comme troisieme argument (precedent : le delta 101, note de complement) ; elle cite les canons des cinq lots.\n  4. la table EXCLUS du delta 102 est CONSERVEE (aucune de ses pieces n entre) ; aucune piece des cinq lots n en est une (balayage de vie privee rejoue sur les cinq zips : 0 fuite). Un sixieme lot de machine 2 (l evaluateur de tirage du 15/11) porte un chemin local en dur avec l identifiant du poste : il n est PAS depose et la note ne le cite pas.\n  5. rien n est ajoute a aucun acte : les errata que la note signale (acte 89, gel M11 v4) ne corrigent aucune piece scellee.\n"""
+ import hashlib, os, re, subprocess, sys, unicodedata
+ 
+ if len(sys.argv) != 4:
+-    sys.exit('usage : perimetre_depot_delta103_machine2_v1.py <clone frais du registre> <acte journal_delta_nn_..._vN.md> <note de depot qui cite des lots>')
++    sys.exit('usage : perimetre_depot_delta104_machine2_v1.py <clone frais du registre> <acte journal_delta_nn_..._vN.md> <note de depot qui cite des lots>')
+ CLONE = os.path.abspath(sys.argv[1])
+ ICI = os.path.dirname(os.path.abspath(__file__))
+ RAC = os.path.dirname(ICI)
+@@ -389,7 +389,7 @@
+ for c, *_ in lignes:
+     par_dossier[c.split('/')[0]] = par_dossier.get(c.split('/')[0], 0) + 1
+ 
+-corps = ("MANIFESTE DU LOT DE DEPOT -- DELTA %s (LE PONT ENTRE L ABSORBEUR ET LA BOITE FERMEE) -- 20/11/2026 -- "
++corps = ("MANIFESTE DU LOT DE DEPOT -- DELTA %s (COMPLEMENT AU DELTA 103 : L EXPLORATION DU PONT) -- 21/11/2026 -- "
+          "assemble par machine 2 -- derive de l'acte v%s\n" % (NUMERO, VERSION))
+ corps += ("Convention B (sha256 NFC+LF, 16 hex) et empreinte brute, les deux tailles ; le depot et "
+           "le numero sont de la main de l'operateur.\n")
