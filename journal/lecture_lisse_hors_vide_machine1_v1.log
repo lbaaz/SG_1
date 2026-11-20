@@ -1,0 +1,23 @@
+LE VIDE, par absorbeur (routine de plateau deposee) :
+  A : PLATEAU, k0 = -2, etalement 0.0000, Gamma 3.26603e-09 ; ln(chaine ordre 3 / 2D) = +0.00002 ; w0 = 0.99927488
+  B : PLATEAU, k0 = -1, etalement 0.0001, Gamma 3.26602e-09 ; ln(chaine ordre 3 / 2D) = +0.00002 ; w0 = 0.99927488
+  C : PLATEAU, k0 = 1, etalement 0.0040, Gamma 3.27175e-09 ; ln(chaine ordre 3 / 2D) = -0.00173 ; w0 = 0.99927489
+  D : PLATEAU, k0 = -1, etalement 0.0003, Gamma 3.26590e-09 ; ln(chaine ordre 3 / 2D) = +0.00006 ; w0 = 0.99927487
+A0 TEL QU'ECRIT (k = 0 a 6, quatre absorbeurs) : etendue des ln rho_2D par ecart : 0.203  0.280  0.306  0.245  0.083  0.255  0.265  0.182  0.358  0.213  0.224  0.412
+REGLE DE REMPLACEMENT : plateau depose par absorbeur, mediane des quatre.
+   x     statuts  k0 (A B C D)   etalement max   etendue entre absorbeurs   ln rho_2D     R ordre 3   R ordre 2   R ordre 1   lisible
+   0.05  PPPP   -2 -1  1 -1   0.0046          0.0021                       -7.8169     1.0006      0.9981      0.9867      oui
+   0.25  PPPP   -1 -1  1 -3   0.0065          0.0027                      -11.9860     1.0003      0.9982      0.9945      oui
+   0.50  PPPP   -1 -1  1 -2   0.0077          0.0031                      -14.4419     1.0005      0.9984      1.0044      oui
+   1.00  PPPP   -1 -1  2 -2   0.0036          0.0019                      -17.6937     1.0006      0.9997      1.0255      oui
+   1.50  PPPP   -2 -1  1 -2   0.0018          0.0006                      -20.1201     0.9996      1.0002      1.0479      oui
+   2.00  PPPP   -1 -1  1 -3   0.0036          0.0017                      -22.1374     0.9985      1.0006      1.0713      oui
+   3.00  PPPP   -1 -1  2 -2   0.0042          0.0027                      -25.4708     0.9969      1.0036      1.1215      oui
+   4.00  PPPP   -1 -1  1 -2   0.0070          0.0025                      -28.2331     0.9941      1.0066      1.1761      oui
+   5.00  PPPP   -2 -1  1 -2   0.0027          0.0013                      -30.6303     0.9926      1.0120      1.2357      oui
+   6.00  PPPP   -1 -2  2 -2   0.0059          0.0020                      -32.7680     0.9909      1.0186      1.3020      oui
+   7.00  PPPP   -1 -1  2 -2   0.0149          0.0009                      -34.7089     0.9896      1.0258      1.3744      oui
+   8.00  PPPP   -2 -1  1 -3   0.0121          0.0045                      -36.4936     0.9914      1.0371      1.4540      oui
+R ordre 3 : de 0.9896 a 1.0006 sur la fenetre ; moyenne uniforme en x (trapezes) 0.9949 ; pente -0.00150 par |delta| ; R(0.05) = 1.0006 ; R(8) = 0.9914
+incertitude : etendue entre absorbeurs 2D au plus 0.0045 ; etendue entre les dix-huit variantes de la chaine au plus 0.0106
+A0 (regle de remplacement) : lisible a tous les ecarts ; A1 : TIENT ; A2 : NE TIENT PAS ; ISSUE (iii)

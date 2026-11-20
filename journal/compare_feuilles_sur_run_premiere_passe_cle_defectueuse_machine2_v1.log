@@ -1,0 +1,25 @@
+boites : 60 chez moi, 60 chez lui (cles identiques : True)
+boites : plus grand |S ma - S sa| 3.07e-01 ; plus grand ecart relatif de participation 1.22e+00 ; desaccords : n 56, fiables 56, valide 0, lisible 0
+MG3 : (L) moi False / lui TOMBE ; (L2) False / TOMBE ; (S) True / TIENT ; (C) True / TIENT
+     S moyenne : moi 0.994589936604 lui 0.994589936604 ; erreur moi 0.017859140804180967 lui 0.01785914080419081
+     Q3 : moi 1.010655729893 (S-lisibles boites) lui 1.010655729894 (20 boites)
+MG4 : (L) moi False / lui TOMBE ; (L2) False / TOMBE ; (S) True / TIENT ; (C) True / TIENT
+     S moyenne : moi 0.980376733900 lui 0.980376733901 ; erreur moi 0.021222550453153487 lui 0.02122255045324079
+     Q3 : moi 0.997898492796 (S-lisibles boites) lui 0.997898492796 (20 boites)
+MG5 : (L) moi False / lui TOMBE ; (L2) False / TOMBE ; (S) True / TIENT ; (C) True / TIENT
+     S moyenne : moi 0.984826303230 lui 0.984826303230 ; erreur moi 0.017819137516582557 lui 0.01781913751649953
+     Q3 : moi 1.006357075901 (S-lisibles boites) lui 1.006357075901 (20 boites)
+PG3 : (L) moi True / lui TIENT ; (L2) True / TIENT ; (S) True / TIENT ; (C) True / TIENT
+     S moyenne : moi 0.990557791611 lui 0.990557791612 ; erreur moi 0.02301690563220116 lui 0.023016905632364637
+     Q3 : moi 0.995571453731 (S-lisibles boites) lui 0.995571453732 (20 boites)
+PG4 : (L) moi True / lui TIENT ; (L2) True / TIENT ; (S) True / TIENT ; (C) True / TIENT
+     S moyenne : moi 1.029867731923 lui 1.029867731923 ; erreur moi 0.019810993857167447 lui 0.01981099385718161
+     Q3 : moi 1.032046785788 (S-lisibles boites) lui 1.032046785788 (20 boites)
+PG5 : (L) moi True / lui TIENT ; (L2) True / TIENT ; (S) True / TIENT ; (C) True / TIENT
+     S moyenne : moi 0.986875255031 lui 0.986875255034 ; erreur moi 0.021467692110938658 lui 0.021467692111142776
+     Q3 : moi 0.985151129805 (S-lisibles boites) lui 0.985151129807 (20 boites)
+famille (L) : moi TOMBEE / lui TOMBEE
+famille (L2) : moi TOMBEE / lui TOMBEE
+famille (S) : moi TENUE / lui TENUE
+famille (C) : moi TENUE / lui TENUE
+Q2 groupes : moi {'Q2_groupe_DEUX': (60, 0.902125), 'Q2_groupe_UN': (60, 0.793235)} | lui {'Q1': {'boites': 120, 'erreur': 0.008245809934492936, 'exces_en_erreurs': -0.665110481519058, 'moyenne': 0.9945156253839548}, 'Q2_DEUX': {'boites': 60, 'rapport': 0.9021253432063185}, 'Q2_UN': {'boites': 60, 'rapport': 0.7932354699146528}}

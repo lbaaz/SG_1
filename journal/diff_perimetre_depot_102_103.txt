@@ -1,0 +1,73 @@
+--- delta102
++++ delta103
+@@ -1,26 +1,20 @@
+ #!/usr/bin/env python3
+ # -*- coding: ascii -*-
+-"""LE PERIMETRE DU DEPOT delta 102 (LA LARGEUR DU VIDE) -- ENUMERE DEPUIS LES CITATIONS DE L ACTE ET DE LA NOTE DE DEPOT.
+-machine 2, v1, 16/11/2026.
+-
+-Derive de la feuille du delta 101 (perimetre_depot_delta101_machine2_v1.py, au registre ou au poste, NON EDITEE : regle 17), meme methode,
+-meme code, HUIT changements nommes, le diff est joint :
+-  1. dossier() : les instruments et constructions de ce chantier (la largeur du vide (regle de tirage, sonde, feuille, banc, predictions, pilote et bloc de l absorbeur adapte de machine 1)) vont sous scripts/, comme ceux du delta precedent.
++"""LE PERIMETRE DU DEPOT delta 103 (LE PONT ENTRE L ABSORBEUR ET LA BOITE FERMEE) -- ENUMERE DEPUIS LES CITATIONS DE L ACTE ET DE LA NOTE DE DEPOT.
++machine 2, v1, 20/11/2026.
++
++Derive de la feuille du delta 102 (perimetre_depot_delta102_machine2_v1.py, au registre ou au poste, NON EDITEE : regle 17), meme methode,
++meme code, CINQ changements nommes, le diff est joint :
++  1. dossier() : les instruments et constructions de ce chantier (le pont entre l absorbeur et la boite fermee (regle de tirage, sondes, feuilles, chaine et rejeu de machine 1)) vont sous scripts/, comme ceux du delta precedent.
+   2. le texte du manifeste (corps) parle de ce chantier et de sa date.
+ Pour le reste, tout est herite : le perimetre ne s'ecrit pas a la main, il s'ENUMERE depuis les citations de l'acte, resolues PAR CANON
+ (registre, poste, ou NON RESOLU qui mord) ; le numero se DERIVE du registre (plafond + 1) ; les lots cites entrent avec leurs pieces de
+ table ; les ZIP ne sont pas deposes ; DEUX VERBES (`chk` mesure, `note` porte la prose) ; PB-1 : rien n'est edite.
+-  3. la note de depot de ce delta (de la plume de machine 2) CITE les canons des quatorze lots : la feuille prend un TROISIEME argument, cette note, dont les empreintes s ajoutent a celles de l acte ; l acte n en cite que dix.
+-  4. les manifestes de machine 1 de ce chantier s appellent MANIFESTE_ (et non MANIFEST_) et sont DANS le zip, sous le dossier du lot : la feuille les reconnait.
+-  5. le controle "tous les lots extraits sont deposes" cherche le manifeste de chaque lot dans son arbre.
+-  6. le compte attendu d un manifeste sans ligne pieces : N retire les manifestes de tout l arbre du lot, pas seulement ceux de sa racine.
+-  7. six scripts de machine 2 portent, dans un chemin local en dur, l identifiant de l utilisateur du poste (balayage de vie privee, rejouable : certif_depot_102_machine2/balayage_vie_privee_depot_102_machine2_v1.py) : la table EXCLUS les nomme par canon ; ils ne sont PAS deposes.
+-  8. le manifeste les declare (NON DEPOSES, ASSUMES) ; un controle de la feuille exige que chacun soit rencontre (citation ou table de lot) et qu aucun n entre dans le depot.
+-"""
++  3. la note de depot de ce delta (de la plume de machine 2) CITE les canons des neuf lots : la feuille prend un TROISIEME argument, cette note, dont les empreintes s ajoutent a celles de l acte ; l acte n en cite que sept (il ne cite ni son propre lot ni mon contreseing).\n  4. la table EXCLUS du delta 102 (six scripts de machine 2 dont un chemin local en dur porte l identifiant de l utilisateur du poste) est CONSERVEE : aucune de ces pieces n entre dans ce depot ; mais aucune piece des neuf lots n en est une (balayage de vie privee rejoue sur les neuf zips avant ce depot : 0 fuite) ; le controle exige seulement que celles qui seraient rencontrees soient declarees et qu aucune n entre, et non plus qu elles soient toutes rencontrees.\n  5. le manifeste n ecrit son bloc NON DEPOSES, ASSUMES (VIE PRIVEE) que si une piece exclue est rencontree.\n"""
+ import hashlib, os, re, subprocess, sys, unicodedata
+ 
+ if len(sys.argv) != 4:
+-    sys.exit('usage : perimetre_depot_delta102_machine2_v1.py <clone frais du registre> <acte journal_delta_nn_..._vN.md> <note de depot qui cite des lots>')
++    sys.exit('usage : perimetre_depot_delta103_machine2_v1.py <clone frais du registre> <acte journal_delta_nn_..._vN.md> <note de depot qui cite des lots>')
+ CLONE = os.path.abspath(sys.argv[1])
+ ICI = os.path.dirname(os.path.abspath(__file__))
+ RAC = os.path.dirname(ICI)
+@@ -324,7 +318,7 @@
+         return 'gels/'
+     if re.match(r'(sonde_qualification_EB_machine1_v\d+|banc_qui_tue_qualification_EB_machine1_v\d+|'
+                 r'lecture_qualification_EB_machine1_v\d+|reference_TP_rotation_complexe_machine2_v\d+(_premier_jet)?|'
+-                r'estimation_TP_wkb_machine1_v\d+|construction_(gel_EB_v\d+|sonde_banc_v\d+|gel_EB_bis|instrument_EB_bis|gel_chaine_EA_par_etat|gel_domaine_G1|sonde_domaine_G1|gel_ordre2|sonde_ordre2|feuille_ter|gel_ter|sonde_ter|instrument_gel_loi|pilote_gel_loi|gel_partie2|regle_tirage)_machine1_v\d+|sonde_chaine_par_etat_machine1_v\d+|lecture_chaine_par_etat_machine1_v\d+|sonde_domaine_G1_machine1_v\d+|lecture_domaine_G1_machine1_v\d+|sonde_ordre2_machine1_v\d+|lecture_ordre2_machine1_v\d+|chaine_ordre2_bloc_machine1_v\d+|sonde_qualification_EB_ter_machine1_v\d+|lecteur_plateau_bloc_machine1_v\d+|lecture_qualification_EB_ter_machine1_v\d+|banc_feuille_ter_machine1_v\d+|pilote_gel_loi_machine1_v\d+|feuille_ordre3_machine1_v\d+|banc_feuille_ordre3_machine1_v\d+|ordre3_bloc_machine1_v\d+|sonde_dense_gel_loi_machine1_v\d+|sonde_lecteur_gel_loi_machine1_v\d+|lecture_lecteur_gel_loi_machine1_v\d+|tirage_machine1_v\d+|eligibilite_creneaux_machine1_v\d+|lecture_eligibilite_machine1_v\d+|sonde_vide_machine1_v\d+|feuille_vide_machine1_v\d+|pilote_gel_vide_machine1_v\d+|banc_feuille_vide_machine1_v\d+|predictions_vide_machine1_v\d+|chaine_adaptee_bloc_machine1_v\d+|tirage_vide_machine1_v\d+|eligibilite_vide_machine1_v\d+|lecture_eligibilite_vide_machine1_v\d+|table_prevol_vide_machine1_v\d+|construction_gel_vide_partie2_machine1_v\d+|construction_regle_tirage_vide_machine1_v\d+)\.py$', b):
++                r'estimation_TP_wkb_machine1_v\d+|construction_(gel_EB_v\d+|sonde_banc_v\d+|gel_EB_bis|instrument_EB_bis|gel_chaine_EA_par_etat|gel_domaine_G1|sonde_domaine_G1|gel_ordre2|sonde_ordre2|feuille_ter|gel_ter|sonde_ter|instrument_gel_loi|pilote_gel_loi|gel_partie2|regle_tirage)_machine1_v\d+|sonde_chaine_par_etat_machine1_v\d+|lecture_chaine_par_etat_machine1_v\d+|sonde_domaine_G1_machine1_v\d+|lecture_domaine_G1_machine1_v\d+|sonde_ordre2_machine1_v\d+|lecture_ordre2_machine1_v\d+|chaine_ordre2_bloc_machine1_v\d+|sonde_qualification_EB_ter_machine1_v\d+|lecteur_plateau_bloc_machine1_v\d+|lecture_qualification_EB_ter_machine1_v\d+|banc_feuille_ter_machine1_v\d+|pilote_gel_loi_machine1_v\d+|feuille_ordre3_machine1_v\d+|banc_feuille_ordre3_machine1_v\d+|ordre3_bloc_machine1_v\d+|sonde_dense_gel_loi_machine1_v\d+|sonde_lecteur_gel_loi_machine1_v\d+|lecture_lecteur_gel_loi_machine1_v\d+|tirage_machine1_v\d+|eligibilite_creneaux_machine1_v\d+|lecture_eligibilite_machine1_v\d+|sonde_vide_machine1_v\d+|feuille_vide_machine1_v\d+|pilote_gel_vide_machine1_v\d+|banc_feuille_vide_machine1_v\d+|predictions_vide_machine1_v\d+|chaine_adaptee_bloc_machine1_v\d+|tirage_vide_machine1_v\d+|eligibilite_vide_machine1_v\d+|lecture_eligibilite_vide_machine1_v\d+|table_prevol_vide_machine1_v\d+|construction_gel_vide_partie2_machine1_v\d+|construction_regle_tirage_vide_machine1_v\d+|sonde_densite_2d_pont_machine1_v\d+|sonde_boite_fermee_pont_machine1_v\d+|lecture_densite_2d_pont_machine1_v\d+|lecture_boites_pont_machine1_v\d+|verdict_pont_machine1_v\d+|chaine_pont_bloc_machine1_v\d+|chaine_cellules_pont_machine1_v\d+|tirage_pont_machine1_v\d+|eligibilite_pont_machine1_v\d+|construction_gel_pont_partie2_machine1_v\d+|construction_regle_tirage_pont_machine1_v\d+|rejeu_feuilles_run_pont_machine1_v\d+|lisse_chaine_machine1_v\d+|lisse_2d_machine1_v\d+)\.py$', b):
+         return 'scripts/'
+     return 'journal/'
+ 
+@@ -385,7 +379,7 @@
+     and not [c for c in cibles if c in suivis], '%d chemins cibles' % len(cibles))
+ canons_dep = [l[1] for l in lignes]
+ chk('aucun doublon de canon dans le depot', len(canons_dep) == len(set(canons_dep)), '%d pieces' % len(lignes))
+-chk('les pieces exclues (vie privee) sont toutes rencontrees et aucune n entre dans le depot', set(EXCLUS_VUS) == set(EXCLUS) and not [l for l in lignes if l[1] in EXCLUS or l[2] in EXCLUS], '%d exclues, toutes vues ; %d lignes de depot' % (len(EXCLUS), len(lignes)))
++chk('aucune des pieces exclues (vie privee, delta 102) n entre dans le depot ; celles rencontrees sont declarees', set(EXCLUS_VUS) <= set(EXCLUS) and not [l for l in lignes if l[1] in EXCLUS or l[2] in EXCLUS], '%d exclues declarees, %d rencontrees ; %d lignes de depot' % (len(EXCLUS), len(EXCLUS_VUS), len(lignes)))
+ chk('toute collision resolue porte le prefixe de son LOT (aucune piece flottante)', not sans_lot,
+     ','.join(sans_lot) or '%d prefixes' % len(prefixes))
+ non_ascii = [c for c, B, br, oB, obr, src, orig in lignes if c.endswith(('.md', '.py', '.txt')) and B != br]
+@@ -395,7 +389,7 @@
+ for c, *_ in lignes:
+     par_dossier[c.split('/')[0]] = par_dossier.get(c.split('/')[0], 0) + 1
+ 
+-corps = ("MANIFESTE DU LOT DE DEPOT -- DELTA %s (LA LARGEUR DU VIDE) -- 16/11/2026 -- "
++corps = ("MANIFESTE DU LOT DE DEPOT -- DELTA %s (LE PONT ENTRE L ABSORBEUR ET LA BOITE FERMEE) -- 20/11/2026 -- "
+          "assemble par machine 2 -- derive de l'acte v%s\n" % (NUMERO, VERSION))
+ corps += ("Convention B (sha256 NFC+LF, 16 hex) et empreinte brute, les deux tailles ; le depot et "
+           "le numero sont de la main de l'operateur.\n")
+@@ -419,7 +413,7 @@
+ corps += "colonnes : chemin_cible  empreinte_B  empreinte_brute  octets_B  octets_bruts  source (relative a BOCAL4)  [origine]\n\n"
+ for c, B, br, oB, obr, src, orig in lignes:
+     corps += "%-84s %s %s %9d %9d  %s  [%s]\n" % (c, B, br, oB, obr, src, orig)
+-corps += "\nNON DEPOSES, ASSUMES (VIE PRIVEE : un chemin local en dur de ces scripts porte l identifiant de l utilisateur du poste ; le depot public est pseudonymise depuis le delta 65 ; ils sont scelles, leurs canons sont cites par l acte et par des manifestes de lots, donc ils ne sont pas corriges ; ils ne sont pas deposes, et leurs canons restent cites) :\n"
++corps += "" if not EXCLUS_VUS else "\nNON DEPOSES, ASSUMES (VIE PRIVEE : un chemin local en dur de ces scripts porte l identifiant de l utilisateur du poste ; le depot public est pseudonymise depuis le delta 65 ; ils sont scelles, leurs canons sont cites par l acte et par des manifestes de lots, donc ils ne sont pas corriges ; ils ne sont pas deposes, et leurs canons restent cites) :\n"
+ for _c, _r in sorted(EXCLUS_VUS.items()):
+     corps += "  %s  %s  [%s]\n" % (_c, EXCLUS[_c], '; '.join(_r))
+ corps += "\nZIP CITES EN BRUT, NON DEPOSES :\n"

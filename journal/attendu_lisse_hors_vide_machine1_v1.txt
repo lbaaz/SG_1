@@ -1,0 +1,26 @@
+ATTENDU ECRIT AVANT LE CALCUL -- machine 1, 2026-11-17, 00 h 28 (horloge du conteneur). Hors chaine, classe 3.
+Point sacrifie w2 = 101/50, 3 barreaux, g = 5.53067e-03. Ouverture de l'operateur a 00 h 24 : "Go regarder la chaine d'ordre 3".
+Aucune densite 2D hors de l'energie du vide n'a ete calculee par machine 1 avant cette ligne.
+
+GRANDEUR. R(x) = rho_2D(x) / (w0 rho_chaine3(x)), x = ecart au vide en |delta|, du cote oppose a delta, de 0.05 a 8.
+  rho = densite locale de l'etat (0, 0) sous absorbeur, lue par le flux : rho = (eta / pi) somme_j W_j |x_j|^2,
+  x = (E - H + i eta W)^(-1) e_(0,0), E pris a ecart egal du vide de CHAQUE systeme.
+  2D : hamiltonien et absorbeurs A, B, C, D du lecteur depose (bloc "LECTEUR CREUX" du registre), barreaux k.
+  chaine : ordre 3 sous les dix-huit variantes adaptees du bloc depose, mediane des logarithmes.
+  w0 : poids du site (0, 0) dans l'etat du vide 2D. La somme / largeur des grandes boites est la moyenne de R sur la fenetre.
+
+A0 (instrument). Le plateau 2D existe a chaque x : etendue des ln rho_2D entre absorbeurs et barreaux retenus <= 0.02.
+    La ou elle ne l'est pas, l'ecart n'est pas lisible et je le dis ; je ne choisis pas les barreaux apres avoir vu R.
+    Barreaux retenus, fixes ici : k = 0 a 6 (eta de |delta| a |delta| / 64), les quatre absorbeurs.
+A1 (recoupement au vide). |R(0.05) - 1| <= 0.01. Le gel du vide (delta 102) a lu |ln q| <= 0.00068 a l'energie du vide.
+A2 (mon soupcon, tire de la somme des grandes boites, 1.043 +- 0.018, pente +0.024 +- 0.014 par |delta|).
+    R croit avec x ; R(8) est entre 1.05 et 1.25 ; la moyenne de R sur la fenetre (uniforme en x) est entre 1.01 et 1.08.
+
+ISSUES.
+  (i)   A2 tient : l'exces de la somme vient du lisse d'ordre 3 loin de l'energie du vide, pas de la boite fermee.
+  (ii)  R plat, a 0.01 pres de 1 sur toute la fenetre : le lisse est bon ; l'exces de la somme (2.4 ecarts types) est une
+        fluctuation, ou vient de la formule de premier ordre des parts.
+  (iii) autre chose (R decroit, sort de [0.99, 1.25], ou n'est pas monotone) : mon soupcon etait faux dans sa forme.
+PROBABILITES que je me donne : (i) 0.50 ; (ii) 0.30 ; (iii) 0.20.
+
+CE QUE CE CALCUL NE DIT PAS : rien des grandes boites elles-memes ; le moteur est partage par la chaine et par la 2D.

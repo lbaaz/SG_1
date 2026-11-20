@@ -1,0 +1,16 @@
+48 cellules ; eligibles : 42
+(i) m_bord = m                     ecarte 0 cellule(s) ; m_bord = m partout : True
+(ii) e_bord < 0.7                  valeur max 0.0961 (2.019 m5) pour un seuil de 0.70 : rapport seuil/max = 7.29 ; ecarte 0 cellule(s)
+(iii) etendue au vide <= 0.02      valeur max 0.0068 (2.018 m5) pour un seuil de 0.02 : rapport seuil/max = 2.96 ; ecarte 0 cellule(s)
+(iv) etendue du lisse <= 0.03      valeur max 0.0219 (2.019 m5) pour un seuil de 0.03 : rapport seuil/max = 1.37 ; ecarte 0 cellule(s)
+(v) |pas| <= 0.10                  valeur max 0.1581 (1.981 m5) pour un seuil de 0.10 : rapport seuil/max = 0.63 ; ecarte 6 cellule(s) ; la plus proche du seuil : dedans 1.983 m3 0.0932, dehors 1.984 m5 0.1021 (marge 0.0068 et 0.0021)
+cellules ecartees par (v), avec l'ecart x qui porte le pas maximal :
+   1.981 m3 : |pas| max 0.1224 a x = 8
+   1.981 m4 : |pas| max 0.1388 a x = 8
+   1.981 m5 : |pas| max 0.1581 a x = 8
+   1.983 m4 : |pas| max 0.1051 a x = 8
+   1.983 m5 : |pas| max 0.1190 a x = 8
+   1.984 m5 : |pas| max 0.1021 a x = 8
+w2 ecartes : 1.981 1.983 1.984
+G3* (plateau au vide) : de 8.31e-13 a 3.11e-09 ; rho_3 lisse a 8 |delta| : de 7.8e-22 a 2.2e-16
+ecart relatif maximal de Gamma lu en double precision (-2 Im E) a la precision etendue : 6.84e-03

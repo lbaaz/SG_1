@@ -1,0 +1,197 @@
+{
+ "cellules": {
+  "SA3": {
+   "C": {
+    "compte_reduit": {
+     "DEUX": 0.39832285115303945,
+     "UN": 0.4636021202979321
+    },
+    "lisible": true,
+    "n_moyen": {
+     "DEUX": 19.0,
+     "UN": 13.6
+    },
+    "rapport": 1.397058823529412,
+    "tient": true
+   },
+   "L": {
+    "ecarts_lisibles": 12,
+    "lisible": true,
+    "pire": 0.010425942134560273,
+    "tient": true
+   },
+   "L2": {
+    "lisible": true,
+    "tient": true
+   },
+   "S": {
+    "boites_lisibles": {
+     "DEUX": 1,
+     "UN": 10
+    },
+    "erreur": 0.031831267462124065,
+    "lisible": true,
+    "moyenne": 1.0015921154347043,
+    "par_groupe": {
+     "DEUX": 1.0428145846808583,
+     "UN": 0.9974698685100888
+    },
+    "tient": true
+   },
+   "questions": {
+    "Q1_moyenne_S": 1.0015921154347043,
+    "Q2_DEUX": 0.6706139880232308,
+    "Q2_UN": 0.9610312870032721,
+    "Q3_somme_densite_2D": 1.006960700303742
+   }
+  },
+  "SA4": {
+   "C": {
+    "compte_reduit": {
+     "DEUX": 0.39832285115303945,
+     "UN": NaN
+    },
+    "lisible": false,
+    "n_moyen": {
+     "DEUX": 19.0,
+     "UN": NaN
+    },
+    "rapport": NaN,
+    "tient": null
+   },
+   "L": {
+    "ecarts_lisibles": 12,
+    "lisible": true,
+    "pire": 0.004602028114220502,
+    "tient": true
+   },
+   "L2": {
+    "lisible": true,
+    "tient": true
+   },
+   "S": {
+    "boites_lisibles": {
+     "DEUX": 1,
+     "UN": 0
+    },
+    "erreur": null,
+    "lisible": false,
+    "moyenne": 1.0423857745732314,
+    "par_groupe": {
+     "DEUX": 1.0423857745732314,
+     "UN": NaN
+    },
+    "tient": null
+   },
+   "questions": {
+    "Q1_moyenne_S": 1.0423857745732314,
+    "Q2_DEUX": 1.213551211592311,
+    "Q3_somme_densite_2D": 1.0442575820158837
+   }
+  },
+  "SA5": {
+   "C": {
+    "compte_reduit": {
+     "DEUX": 0.39832285115303945,
+     "UN": NaN
+    },
+    "lisible": false,
+    "n_moyen": {
+     "DEUX": 19.0,
+     "UN": NaN
+    },
+    "rapport": NaN,
+    "tient": null
+   },
+   "L": {
+    "ecarts_lisibles": 12,
+    "lisible": true,
+    "pire": 0.022489843330291137,
+    "tient": true
+   },
+   "L2": {
+    "lisible": true,
+    "tient": true
+   },
+   "S": {
+    "boites_lisibles": {
+     "DEUX": 1,
+     "UN": 0
+    },
+    "erreur": null,
+    "lisible": false,
+    "moyenne": 1.1107447389489908,
+    "par_groupe": {
+     "DEUX": 1.1107447389489908,
+     "UN": NaN
+    },
+    "tient": null
+   },
+   "questions": {
+    "Q1_moyenne_S": 1.1107447389489908,
+    "Q2_DEUX": 0.9135293902922716,
+    "Q3_somme_densite_2D": 1.1052071962259384
+   }
+  }
+ },
+ "familles": {
+  "C": {
+   "cellules_lisibles": [
+    "SA3"
+   ],
+   "etat": "NON JUGEE",
+   "par_creneau": {
+    "MG": "NON JUGEE",
+    "PG": "NON JUGEE"
+   },
+   "tombees": []
+  },
+  "L": {
+   "cellules_lisibles": [
+    "SA3",
+    "SA4",
+    "SA5"
+   ],
+   "etat": "NON JUGEE",
+   "par_creneau": {
+    "MG": "NON JUGEE",
+    "PG": "NON JUGEE"
+   },
+   "tombees": []
+  },
+  "L2": {
+   "cellules_lisibles": [
+    "SA3",
+    "SA4",
+    "SA5"
+   ],
+   "etat": "NON JUGEE",
+   "par_creneau": {
+    "MG": "NON JUGEE",
+    "PG": "NON JUGEE"
+   },
+   "tombees": []
+  },
+  "S": {
+   "cellules_lisibles": [
+    "SA3"
+   ],
+   "etat": "NON JUGEE",
+   "par_creneau": {
+    "MG": "NON JUGEE",
+    "PG": "NON JUGEE"
+   },
+   "tombees": []
+  }
+ },
+ "questions": {
+  "Q2_groupe_DEUX": {
+   "boites": 3,
+   "rapport": 0.9325648633026044
+  },
+  "Q2_groupe_UN": {
+   "boites": 10,
+   "rapport": 0.9610312870032721
+  }
+ }
+}

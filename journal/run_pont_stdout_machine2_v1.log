@@ -1,0 +1,117 @@
+[     0 s] MODE run ; 8 jobs a la fois, budget memoire 12.0 Go ; feu vert ecrit : 2026-11-18 00:11
+[     6 s] chaine (m1) : code 0
+[     6 s] 48 jobs
+[     6 s] LANCE  densite MG3 B                      (essai 0)  jobs en cours 1, memoire estimee 0.5 Go
+[     6 s] LANCE  densite MG3 C                      (essai 0)  jobs en cours 2, memoire estimee 1.0 Go
+[     6 s] LANCE  densite MG3 D                      (essai 0)  jobs en cours 3, memoire estimee 1.5 Go
+[     6 s] LANCE  densite MG3 A                      (essai 0)  jobs en cours 4, memoire estimee 2.0 Go
+[     6 s] LANCE  boites MG3 DEUX1 [291, 292, 293, 294] (essai 0)  jobs en cours 5, memoire estimee 3.9 Go
+[     6 s] LANCE  boites MG3 DEUX2 [295, 296, 297]   (essai 0)  jobs en cours 6, memoire estimee 5.8 Go
+[     7 s] LANCE  boites MG3 DEUX3 [298, 299, 300]   (essai 0)  jobs en cours 7, memoire estimee 7.7 Go
+[     7 s] LANCE  boites MG3 UN1 [180, 181, 182, 183, 184, 185, 186, 187, 188, 189] (essai 0)  jobs en cours 8, memoire estimee 8.5 Go
+[   489 s] FAIT   boites MG3 UN1 [180, 181, 182, 183, 184, 185, 186, 187, 188, 189] 483 s : toutes les boites sont la
+[   489 s] LANCE  densite MG4 B                      (essai 0)  jobs en cours 8, memoire estimee 8.2 Go
+[   660 s] FAIT   boites MG3 DEUX2 [295, 296, 297]   653 s : toutes les boites sont la
+[   660 s] LANCE  densite MG4 C                      (essai 0)  jobs en cours 8, memoire estimee 6.8 Go
+[   680 s] FAIT   boites MG3 DEUX3 [298, 299, 300]   673 s : toutes les boites sont la
+[   680 s] LANCE  densite MG4 D                      (essai 0)  jobs en cours 8, memoire estimee 5.4 Go
+[   927 s] FAIT   boites MG3 DEUX1 [291, 292, 293, 294] 920 s : toutes les boites sont la
+[   927 s] LANCE  densite MG4 A                      (essai 0)  jobs en cours 8, memoire estimee 4.0 Go
+[  2018 s] FAIT   densite MG3 A                      2012 s : complete (12 barreaux)
+[  2019 s] LANCE  boites MG4 DEUX1 [291, 292, 293, 294] (essai 0)  jobs en cours 8, memoire estimee 5.4 Go
+[  2696 s] FAIT   densite MG3 D                      2690 s : complete (12 barreaux)
+[  2696 s] LANCE  boites MG4 DEUX2 [295, 296, 297]   (essai 0)  jobs en cours 8, memoire estimee 6.8 Go
+[  2868 s] FAIT   densite MG4 A                      1942 s : complete (12 barreaux)
+[  2869 s] LANCE  boites MG4 DEUX3 [298, 299, 300]   (essai 0)  jobs en cours 8, memoire estimee 8.2 Go
+[  3039 s] FAIT   boites MG4 DEUX1 [291, 292, 293, 294] 1020 s : toutes les boites sont la
+[  3039 s] LANCE  boites MG4 UN1 [180, 181, 182, 183, 184, 185, 186, 187, 188, 189] (essai 0)  jobs en cours 8, memoire estimee 7.1 Go
+[  3299 s] FAIT   densite MG4 D                      2619 s : complete (12 barreaux)
+[  3299 s] LANCE  densite MG5 B                      (essai 0)  jobs en cours 8, memoire estimee 7.1 Go
+[  3313 s] FAIT   boites MG4 DEUX2 [295, 296, 297]   617 s : toutes les boites sont la
+[  3313 s] LANCE  densite MG5 C                      (essai 0)  jobs en cours 8, memoire estimee 5.7 Go
+[  3514 s] FAIT   boites MG4 UN1 [180, 181, 182, 183, 184, 185, 186, 187, 188, 189] 475 s : toutes les boites sont la
+[  3514 s] LANCE  densite MG5 D                      (essai 0)  jobs en cours 8, memoire estimee 5.4 Go
+[  3522 s] FAIT   densite MG3 C                      3515 s : complete (12 barreaux)
+[  3522 s] LANCE  densite MG5 A                      (essai 0)  jobs en cours 8, memoire estimee 5.4 Go
+[  3550 s] FAIT   boites MG4 DEUX3 [298, 299, 300]   681 s : toutes les boites sont la
+[  3550 s] LANCE  boites MG5 DEUX1 [291, 292, 293, 294] (essai 0)  jobs en cours 8, memoire estimee 5.4 Go
+[  3556 s] FAIT   densite MG3 B                      3550 s : complete (12 barreaux)
+[  3556 s] LANCE  boites MG5 DEUX2 [295, 296, 297]   (essai 0)  jobs en cours 8, memoire estimee 6.8 Go
+[  3666 s] FAIT   densite MG4 B                      3177 s : complete (12 barreaux)
+[  3666 s] LANCE  boites MG5 DEUX3 [298, 299, 300]   (essai 0)  jobs en cours 8, memoire estimee 8.2 Go
+[  3813 s] FAIT   densite MG4 C                      3153 s : complete (12 barreaux)
+[  3813 s] LANCE  boites MG5 UN1 [180, 181, 182, 183, 184, 185, 186, 187, 188, 189] (essai 0)  jobs en cours 8, memoire estimee 8.5 Go
+[  4147 s] FAIT   boites MG5 DEUX2 [295, 296, 297]   591 s : toutes les boites sont la
+[  4147 s] LANCE  densite PG3 B                      (essai 0)  jobs en cours 8, memoire estimee 7.1 Go
+[  4247 s] FAIT   boites MG5 UN1 [180, 181, 182, 183, 184, 185, 186, 187, 188, 189] 435 s : toutes les boites sont la
+[  4247 s] LANCE  densite PG3 C                      (essai 0)  jobs en cours 8, memoire estimee 6.8 Go
+[  4265 s] FAIT   boites MG5 DEUX3 [298, 299, 300]   599 s : toutes les boites sont la
+[  4265 s] LANCE  densite PG3 D                      (essai 0)  jobs en cours 8, memoire estimee 5.4 Go
+[  4334 s] FAIT   boites MG5 DEUX1 [291, 292, 293, 294] 784 s : toutes les boites sont la
+[  4334 s] LANCE  densite PG3 A                      (essai 0)  jobs en cours 8, memoire estimee 4.0 Go
+[  5503 s] FAIT   densite MG5 A                      1981 s : complete (12 barreaux)
+[  5503 s] LANCE  boites PG3 DEUX1 [291, 292, 293, 294] (essai 0)  jobs en cours 8, memoire estimee 5.4 Go
+[  5898 s] FAIT   densite MG5 D                      2384 s : complete (12 barreaux)
+[  5898 s] LANCE  boites PG3 DEUX2 [295, 296, 297]   (essai 0)  jobs en cours 8, memoire estimee 6.8 Go
+[  5968 s] FAIT   densite PG3 A                      1634 s : complete (12 barreaux)
+[  5968 s] LANCE  boites PG3 DEUX3 [298, 299, 300]   (essai 0)  jobs en cours 8, memoire estimee 8.2 Go
+[  6527 s] FAIT   boites PG3 DEUX1 [291, 292, 293, 294] 1024 s : toutes les boites sont la
+[  6527 s] LANCE  boites PG3 UN1 [180, 181, 182, 183, 184, 185, 186, 187, 188, 189] (essai 0)  jobs en cours 8, memoire estimee 7.1 Go
+[  6629 s] FAIT   densite PG3 D                      2364 s : complete (12 barreaux)
+[  6629 s] LANCE  densite PG4 B                      (essai 0)  jobs en cours 8, memoire estimee 7.1 Go
+[  6633 s] FAIT   boites PG3 DEUX2 [295, 296, 297]   735 s : toutes les boites sont la
+[  6633 s] LANCE  densite PG4 C                      (essai 0)  jobs en cours 8, memoire estimee 5.7 Go
+[  6699 s] FAIT   boites PG3 DEUX3 [298, 299, 300]   731 s : toutes les boites sont la
+[  6699 s] LANCE  densite PG4 D                      (essai 0)  jobs en cours 8, memoire estimee 4.3 Go
+[  7050 s] FAIT   densite MG5 B                      3751 s : complete (12 barreaux)
+[  7050 s] FAIT   densite MG5 C                      3737 s : complete (12 barreaux)
+[  7050 s] LANCE  densite PG4 A                      (essai 0)  jobs en cours 7, memoire estimee 3.8 Go
+[  7050 s] LANCE  boites PG4 DEUX1 [291, 292, 293, 294] (essai 0)  jobs en cours 8, memoire estimee 5.7 Go
+[  7112 s] FAIT   boites PG3 UN1 [180, 181, 182, 183, 184, 185, 186, 187, 188, 189] 585 s : toutes les boites sont la
+[  7112 s] LANCE  boites PG4 DEUX2 [295, 296, 297]   (essai 0)  jobs en cours 8, memoire estimee 6.8 Go
+[  7343 s] FAIT   densite PG3 B                      3196 s : complete (12 barreaux)
+[  7343 s] LANCE  boites PG4 DEUX3 [298, 299, 300]   (essai 0)  jobs en cours 8, memoire estimee 8.2 Go
+[  7409 s] FAIT   densite PG3 C                      3162 s : complete (12 barreaux)
+[  7409 s] LANCE  boites PG4 UN1 [180, 181, 182, 183, 184, 185, 186, 187, 188, 189] (essai 0)  jobs en cours 8, memoire estimee 8.5 Go
+[  7781 s] FAIT   boites PG4 DEUX2 [295, 296, 297]   669 s : toutes les boites sont la
+[  7782 s] LANCE  densite PG5 B                      (essai 0)  jobs en cours 8, memoire estimee 7.1 Go
+[  7850 s] FAIT   boites PG4 UN1 [180, 181, 182, 183, 184, 185, 186, 187, 188, 189] 441 s : toutes les boites sont la
+[  7850 s] LANCE  densite PG5 C                      (essai 0)  jobs en cours 8, memoire estimee 6.8 Go
+[  7942 s] FAIT   boites PG4 DEUX1 [291, 292, 293, 294] 892 s : toutes les boites sont la
+[  7942 s] LANCE  densite PG5 D                      (essai 0)  jobs en cours 8, memoire estimee 5.4 Go
+[  8066 s] FAIT   boites PG4 DEUX3 [298, 299, 300]   723 s : toutes les boites sont la
+[  8066 s] LANCE  densite PG5 A                      (essai 0)  jobs en cours 8, memoire estimee 4.0 Go
+[  8824 s] FAIT   densite PG4 A                      1774 s : complete (12 barreaux)
+[  8825 s] LANCE  boites PG5 DEUX1 [291, 292, 293, 294] (essai 0)  jobs en cours 8, memoire estimee 5.4 Go
+[  9105 s] FAIT   densite PG4 D                      2406 s : complete (12 barreaux)
+[  9105 s] LANCE  boites PG5 DEUX2 [295, 296, 297]   (essai 0)  jobs en cours 8, memoire estimee 6.8 Go
+[  9576 s] FAIT   densite PG4 C                      2943 s : complete (12 barreaux)
+[  9576 s] LANCE  boites PG5 DEUX3 [298, 299, 300]   (essai 0)  jobs en cours 8, memoire estimee 8.2 Go
+[  9598 s] FAIT   densite PG4 B                      2969 s : complete (12 barreaux)
+[  9598 s] LANCE  boites PG5 UN1 [180, 181, 182, 183, 184, 185, 186, 187, 188, 189] (essai 0)  jobs en cours 8, memoire estimee 8.5 Go
+[  9808 s] FAIT   boites PG5 DEUX1 [291, 292, 293, 294] 984 s : toutes les boites sont la
+[  9836 s] FAIT   boites PG5 DEUX2 [295, 296, 297]   731 s : toutes les boites sont la
+[ 10015 s] FAIT   boites PG5 UN1 [180, 181, 182, 183, 184, 185, 186, 187, 188, 189] 417 s : toutes les boites sont la
+[ 10027 s] FAIT   densite PG5 A                      1960 s : complete (12 barreaux)
+[ 10169 s] FAIT   boites PG5 DEUX3 [298, 299, 300]   593 s : toutes les boites sont la
+[ 10285 s] FAIT   densite PG5 D                      2343 s : complete (12 barreaux)
+[ 11116 s] FAIT   densite PG5 B                      3334 s : complete (12 barreaux)
+[ 11140 s] FAIT   densite PG5 C                      3290 s : complete (12 barreaux)
+[ 11140 s] feuille de densite (m1) MG3 : code 0
+[ 11140 s] feuille de densite (m1) MG4 : code 0
+[ 11140 s] feuille de densite (m1) MG5 : code 0
+[ 11140 s] feuille de densite (m1) PG3 : code 0
+[ 11140 s] feuille de densite (m1) PG4 : code 0
+[ 11140 s] feuille de densite (m1) PG5 : code 0
+[ 11173 s] feuille des boites (m1) : code 0
+[ 11173 s] feuille de verdict (m1) : code 0
+[ 11178 s] ma chaine : code 0
+[ 11178 s] ma feuille de densite MG3 : code 0
+[ 11178 s] ma feuille de densite MG4 : code 0
+[ 11179 s] ma feuille de densite MG5 : code 0
+[ 11179 s] ma feuille de densite PG3 : code 0
+[ 11179 s] ma feuille de densite PG4 : code 0
+[ 11179 s] ma feuille de densite PG5 : code 0
+[ 11184 s] ma feuille des boites : code 0
+[ 11185 s] mon verdict : code 0
+[ 11185 s] RUN TERMINE

@@ -1,0 +1,24 @@
+  densite a 12 barreaux : complete                                       OK
+  densite a 9 barreaux (interrompue) : INCOMPLETE                        OK
+  JSON coupe en plein milieu : INCOMPLET                                 OK
+  densite d une autre cellule : refusee                                  OK
+  barreau dit non suivi : compte comme present                           OK
+  boites : 180 presente, 181 coupee -> manquants [181, 182]              OK
+  boites : une boite d une autre cellule ne compte pas                   OK
+  masque de chemins : lettre de lecteur et barres                        OK
+[     0 s] LANCE  fantome bon                        (essai 0)  jobs en cours 1, memoire estimee 0.1 Go
+[     0 s] LANCE  fantome un_echec                   (essai 0)  jobs en cours 2, memoire estimee 0.2 Go
+[     0 s] LANCE  fantome toujours                   (essai 0)  jobs en cours 3, memoire estimee 0.3 Go
+[     0 s] FAIT   fantome bon                        0 s : code 0
+[     0 s] INCOMPLET fantome un_echec                code 3 : relance 1 sur 2
+[     0 s] INCOMPLET fantome toujours                code 3 : relance 1 sur 2
+[     0 s] LANCE  fantome toujours                   (essai 1)  jobs en cours 1, memoire estimee 0.1 Go
+[     0 s] LANCE  fantome un_echec                   (essai 1)  jobs en cours 2, memoire estimee 0.2 Go
+[     1 s] INCOMPLET fantome toujours                code 3 : relance 2 sur 2
+[     1 s] FAIT   fantome un_echec                   0 s : code 0
+[     1 s] LANCE  fantome toujours                   (essai 2)  jobs en cours 1, memoire estimee 0.1 Go
+[     1 s] ECHEC  fantome toujours                   code 3 (apres 2 relances)
+  job reussi du premier coup : lance UNE seule fois                      OK
+  job echoue une fois : relance, puis fait (2 lancements)                OK
+  job qui echoue toujours : 3 lancements puis ECHEC, signale             OK
+SELFTEST : tous les controles tiennent

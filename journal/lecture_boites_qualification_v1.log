@@ -1,0 +1,21 @@
+CELLULE w2 = 101/50, m = 3, g = 5.53067e-03 : 5 boites
+   cote   w0          n  libre  fiables  S        participation  part non fiable  lisible
+   120    0.99927462  8  7      8        0.8980   4.213          0.0000           oui
+   190    0.99927507  12 8      12       1.0086   4.793          0.0000           oui
+   200    0.99927491  16 13     16       1.1181   5.416          0.0000           oui
+   209    0.99927519  14 14     14       1.0754   8.823          0.0000           oui
+   300    0.99927289  19 20     19       1.0428   10.438         0.0000           oui
+CELLULE w2 = 101/50, m = 4, g = 4.22189e-03 : 1 boites
+   cote   w0          n  libre  fiables  S        participation  part non fiable  lisible
+   300    0.99958770  19 20     19       1.0424   5.768          0.0000           oui
+CELLULE w2 = 101/50, m = 5, g = 3.35640e-03 : 1 boites
+   cote   w0          n  libre  fiables  S        participation  part non fiable  lisible
+   300    0.99974240  19 20     19       1.1107   7.663          0.0000           oui
+CONFRONTATION aux boites de machine 2 (meme w2, meme profondeur, meme cote) :
+   m = 3 cote 190 : niveaux 12 contre 12 ; ecart max sur x 5.5e-13 ; sur y 5.72e-05 (ses fiables : 5.72e-05) ; S 1.0086 contre 1.0086 ; w0 5.86e-13
+   m = 3 cote 200 : niveaux 16 contre 16 ; ecart max sur x 1.1e-12 ; sur y 3.39e-04 (ses fiables : 3.39e-04) ; S 1.1181 contre 1.1181 ; w0 4.90e-13
+   m = 3 cote 209 : niveaux 14 contre 14 ; ecart max sur x 1.1e-12 ; sur y 4.68e-05 (ses fiables : 4.68e-05) ; S 1.0754 contre 1.0754 ; w0 5.57e-13
+   m = 3 cote 300 : niveaux 19 contre 19 ; ecart max sur x 1.5e-12 ; sur y 1.44e-04 (ses fiables : 1.44e-04) ; S 1.0428 contre 1.0428 ; w0 2.46e-12
+   m = 4 cote 300 : niveaux 19 contre 19 ; ecart max sur x 2.8e-12 ; sur y 4.17e-03 (ses fiables : 4.17e-03) ; S 1.0424 contre 1.0423 ; w0 5.14e-14
+   m = 5 cote 300 : niveaux 19 contre 19 ; ecart max sur x 1.1e-12 ; sur y 1.93e-02 (ses fiables : 1.77e-02) ; S 1.1107 contre 1.1123 ; w0 4.22e-15
+ecrit : lecture_boites_qualification_v1.json

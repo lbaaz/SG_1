@@ -1,0 +1,18 @@
+A1 : TIENT   {}
+A2 : TIENT   {}
+A3 : TOMBE   {"max_4": 0.0046020281143484, "max_5": 0.022489843330305348}
+A4 : TOMBE   {"R3_8_moins_R3_005": {"3": -0.009161842503449869, "4": 0.004220600573436428, "5": 0.021919829255912404}}
+B1 : TIENT   {"boites": 6, "ecart_x_max": 2.8208546609675977e-12}
+B2 : TIENT   {"ecart_max_brut_contre_ses_fiables": 0.013874417152664797, "ecart_max_partition_contre_ses_fiables": 0.01771870393622832}
+B3 : TOMBE   {"au_dessus_de_1e-3": [181], "boites": 14, "cote_du_max": 181, "max": 0.0010799355916930597, "mediane": 7.54045147608462e-05}
+B4 : TIENT   {"brut_a_b": 0.011243871494910795, "partition_a_b": 2.7716051675952258e-11, "x": 6.698904345723717}
+U1 : TOMBE   {}
+U2 : TIENT   {}
+U3 : TIENT   {}
+U4 : TIENT   {}
+UN : {"S_ecart_type": 0.11034593761782896, "S_erreur": 0.03489444934191941, "S_moyenne": 0.9974698685098222, "boites": 10, "compte_reduit": 0.46360212029793246, "n_max": 15, "n_min": 10, "n_moyen": 13.6, "secondes_par_boite": 43.83361053466797, "tous_fiables": true}
+accords : {"3": {"brut_a_b_max": 0.0002724796893263104, "partition_a_b_max": 2.3324941977875824e-10, "rayon_max": 1.4543588555682163e-10, "secondes": 335.68034529685974}, "4": {"brut_a_b_max": 0.008318787123640758, "partition_a_b_max": 1.6942758307436634e-10, "rayon_max": 2.105468022151058e-10, "secondes": 355.51143527030945}, "5": {"brut_a_b_max": 0.015170474115348664, "partition_a_b_max": 4.7352344267892477e-11, "rayon_max": 1.9721335675626506e-11, "secondes": 366.2054786682129}}
+cote 300 : {"3": {"S": 1.0428145846793253, "compte_reduit": 0.3983228511530398, "n": 19}, "4": {"S": 1.0423857745727838, "compte_reduit": 0.3983228511530398, "n": 19}, "5": {"S": 1.1107447389493552, "compte_reduit": 0.3983228511530398, "n": 19}}
+SA3 : |ln R3| max 0.0104 ; ordre 3 plus pres pour x >= 5 : True ; pour x >= 4 : True (marge a x = 4 : 0.0007)
+SA4 : |ln R3| max 0.0046 ; ordre 3 plus pres pour x >= 5 : True ; pour x >= 4 : True (marge a x = 4 : 0.0052)
+SA5 : |ln R3| max 0.0225 ; ordre 3 plus pres pour x >= 5 : True ; pour x >= 4 : True (marge a x = 4 : 0.0111)

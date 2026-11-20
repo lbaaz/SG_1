@@ -1,0 +1,6 @@
+RECTIFICATIF DE MACHINE 1 -- l'heure de l'attendu de qualification des instruments du gel "pont"
+2026-11-17. L'attendu attendu_qualification_instruments_pont_machine1_v1.txt dit en tete "vers 10 h 45".
+C'est faux : je n'avais pas lu l'horloge. La date du fichier, a l'horloge du poste de machine 1, est
+10 h 05 min 31 s le 17/11/2026 ; la premiere sortie de calibration (densite_2d_SA4_A_v1.log) est datee de
+10 h 11. L'attendu est donc bien anterieur aux sorties, mais son heure ecrite ne vaut rien. Rien d'autre
+ne change ; l'attendu n'est pas retouche.

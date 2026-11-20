@@ -1,0 +1,13 @@
+MATRICE DE MUTATIONS DU TIRAGE (ma version, une faute a la fois) contre le tirage de machine 1, 20000 graines sur la table commune + 50 tables aleatoires x 200 graines
+--- mutation quatre_rangs
+(a) table commune : 20000 graines ; desaccords : 252 ; PAS DE GEL : 129 (0.0065) ; w2 de MG tires : 1.985 1.986 1.987 1.988 1.989 ; w2 de PG tires : 2.011 2.012 2.013 2.014 2.015 2.016 2.018 2.019
+(b) 50 tables aleatoires x 200 graines = 10000 tirages ; desaccords : 769 ; PAS DE GEL : 1674 (0.167)
+--- mutation cellule_par_cellule
+(a) table commune : 20000 graines ; desaccords : 7258 ; PAS DE GEL : 129 (0.0065) ; w2 de MG tires : 1.985 1.986 1.987 1.988 1.989 ; w2 de PG tires : 2.011 2.012 2.013 2.014 2.015 2.016 2.018 2.019
+(b) 50 tables aleatoires x 200 graines = 10000 tirages ; desaccords : 6046 ; PAS DE GEL : 1674 (0.167)
+--- mutation liste_decroissante
+(a) table commune : 20000 graines ; desaccords : 20000 ; PAS DE GEL : 129 (0.0065) ; w2 de MG tires : 1.985 1.986 1.987 1.988 1.989 ; w2 de PG tires : 2.011 2.012 2.013 2.014 2.015 2.016 2.018 2.019
+(b) 50 tables aleatoires x 200 graines = 10000 tirages ; desaccords : 9200 ; PAS DE GEL : 1674 (0.167)
+--- mutation modulo_octets
+(a) table commune : 20000 graines ; desaccords : 19501 ; PAS DE GEL : 129 (0.0065) ; w2 de MG tires : 1.985 1.986 1.987 1.988 1.989 ; w2 de PG tires : 2.011 2.012 2.013 2.014 2.015 2.016 2.018 2.019
+(b) 50 tables aleatoires x 200 graines = 10000 tirages ; desaccords : 8897 ; PAS DE GEL : 1674 (0.167)

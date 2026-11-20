@@ -1,0 +1,9 @@
+cellule  w2       |delta|  g            m_bord  e_bord  etendue_vide  etendue_lisse_max  pas_max  | rang de pas_max parmi les 48 (1 = le plus grand)  marge a 0.10 | rang de etendue_lisse_max  marge a 0.03
+MG3      1.985    0.015    3.63872e-03  3       0.0447  0.0014        0.0046             0.0690   | 13                                                 +0.0310       | 46                         +0.0254
+MG4      1.985    0.015    2.77765e-03  4       0.0595  0.0015        0.0074             0.0774   | 11                                                 +0.0226       | 37                         +0.0226
+MG5      1.985    0.015    2.20823e-03  5       0.0743  0.0026        0.0110             0.0869   | 9                                                  +0.0131       | 21                         +0.0190
+PG3      2.019    0.019    5.23478e-03  3       0.0575  0.0050        0.0105             0.0421   | 21                                                 +0.0579       | 25                         +0.0195
+PG4      2.019    0.019    3.99601e-03  4       0.0768  0.0060        0.0167             0.0418   | 22                                                 +0.0582       | 9                          +0.0133
+PG5      2.019    0.019    3.17683e-03  5       0.0961  0.0063        0.0219             0.0384   | 27                                                 +0.0616       | 1                          +0.0081
+|delta| des w2 ELIGIBLES (trois cellules eligibles) : MG 0.015 0.014 0.013 0.012 0.011 ; PG 0.019 0.018 0.016 0.015 0.014 0.013 0.012 0.011
+le w2 tire de MG a le plus grand |delta| parmi les w2 eligibles de MG : True ; celui de PG a le plus grand |delta| parmi les w2 eligibles de PG : True

@@ -1,0 +1,18 @@
+RECTIFICATIF DE L'INSTRUMENT, ECRIT AVANT DE CALCULER R -- machine 1, 2026-11-17 (horloge du conteneur en bas de page).
+Suite de attendu_lisse_hors_vide_machine1_v1.txt (canon 5bb45d0c8081106f), qui reste tel quel.
+
+CE QUE J'AI VU : les ln rho_2D sous les quatre absorbeurs, barreaux k = -3 a 8, aux douze ecarts. PAS le rapport R : les
+densites de la chaine n'ont pas ete rapprochees de celles-ci.
+
+A0 TEL QU'ECRIT NE TIENT PAS. J'avais fixe "barreaux k = 0 a 6, les quatre absorbeurs, etendue <= 0.02". Aux barreaux 5 et 6
+(absorbeur faible) la densite oscille avec l'ecart, jusqu'a 0.25 en logarithme : l'absorbeur reflechit. Sous C (forme F1) le
+barreau 0 s'ecarte de 0.03. C'est un defaut de MA specification (je n'avais pas repris la regle de plateau du lecteur), pas
+de la lecture : sous A, B et D les barreaux -3 a 3 s'accordent a 0.002 pres.
+
+REGLE DE REMPLACEMENT, fixee ici, avant R. C'est la routine de plateau DEPOSEE du lecteur (gel ter, gel du vide) :
+  pour chaque absorbeur et chaque ecart x, la serie rho(x ; k), k = -3 a 8 ; fenetre de cinq barreaux consecutifs de plus
+  petit rapport max / min, puis de plus petit k de depart ; PLATEAU si max <= (1 + 1/20) min ; valeur : moyenne geometrique.
+  Valeur 2D a l'ecart x : mediane des logarithmes des plateaux des quatre absorbeurs ; INCERTITUDE : leur etendue.
+  LISIBLE a l'ecart x si les quatre absorbeurs rendent PLATEAU et si leur etendue est <= 0.02.
+A1, A2, les trois issues et les probabilites ne changent pas.
+ecrit a 00:44:36 CET le 2026-11-17

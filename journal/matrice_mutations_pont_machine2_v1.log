@@ -1,0 +1,19 @@
+mutation                     faute                                                          verdict   eligibilite : w2 changes   couplages g changes   nombres changes (sur 144)
+seuil_pas_15                 seuil (v) 0.10 -> 0.15                                         MORDUE    2 (MG:1983/1000 MG:248/125) 0                      0
+sans_condition_v             condition (v) supprimee                                        MORDUE    3 (MG:1981/1000 MG:1983/1000 MG:248/125) 0                      0
+seuil_lisse_04               seuil (iv) 0.03 -> 0.04                                        non mordue 0                          0                      0
+sans_condition_iv            condition (iv) supprimee                                       non mordue 0                          0                      0
+seuil_vide_03                seuil (iii) 0.02 -> 0.03                                       non mordue 0                          0                      0
+seuil_ebord_08               seuil (ii) 0.7 -> 0.8                                          non mordue 0                          0                      0
+ebord_inclus                 (ii) e_bord < 0.7 -> <= 0.7                                    non mordue 0                          0                      0
+sans_condition_i             condition (i) m_bord = m supprimee                             non mordue 0                          0                      0
+g_cinq_chiffres              couplage arrondi a cinq chiffres (%.4e)                        MORDUE    0                          48                     2
+kappa_permutes               kappa_3 et kappa_5 permutes                                    MORDUE    13 (MG:1987/1000 MG:1989/1000 MG:397/200 MG:497/250 MG:993/500 PG:1007/500 PG:1009/500 PG:2011/1000 PG:2013/1000 PG:2019/1000 PG:252/125 PG:403/200 PG:503/250) 32                     64
+cote_oppose_inverse          E = E_v + x delta (du cote du desaccord)                       MORDUE    3 (MG:1981/1000 MG:1983/1000 MG:248/125) 0                      96
+ordre_2_pour_3               rho_3 calcule avec la matrice d'ordre 2                        MORDUE    3 (MG:1981/1000 MG:1983/1000 MG:248/125) 0                      93
+lisse_moyenne                lisse = moyenne des 18 ln rho au lieu de la mediane            MORDUE    0                          0                      33
+ecarts_sans_8                ecart x = 8 retire (11 ecarts)                                 MORDUE    2 (MG:1983/1000 MG:248/125) 0                      88
+ecarts_sans_005              ecart x = 0.05 retire (11 ecarts)                              non mordue 0                          0                      0
+gamma_double                 Gamma = -2 Im(E) en double precision (au lieu de la precision etendue) MORDUE    0                          0                      20
+plus_grande_partie_reelle    a poids egal, la PLUS GRANDE partie reelle (au lieu de la plus petite) non mordue 0                          0                      0
+e_bord_sans_sigma            e_bord sans les termes Sigma2                                  non mordue 0                          0                      0

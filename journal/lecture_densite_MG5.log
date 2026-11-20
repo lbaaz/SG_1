@@ -1,0 +1,20 @@
+CELLULE MG5 : w2 = 397/200, m = 5, g = 2.20823e-03
+  vide, absorbeur A : 12 barreaux suivis sur 12 ; PLATEAU k0 = -2, etalement 0.0000, Gamma 1.12583e-12 ; ln(chaine d'ordre 3 / 2D) = +0.00038
+  vide, absorbeur B : 12 barreaux suivis sur 12 ; PLATEAU k0 = -1, etalement 0.0000, Gamma 1.12582e-12 ; ln(chaine d'ordre 3 / 2D) = +0.00038
+  vide, absorbeur C : 12 barreaux suivis sur 12 ; PLATEAU k0 = 2, etalement 0.0037, Gamma 1.12554e-12 ; ln(chaine d'ordre 3 / 2D) = +0.00063
+  vide, absorbeur D : 12 barreaux suivis sur 12 ; PLATEAU k0 = -2, etalement 0.0000, Gamma 1.12582e-12 ; ln(chaine d'ordre 3 / 2D) = +0.00038
+  w0 = 0.99974235
+     x   plateaux  k0 (A B C D)  etalement max  etendue entre absorbeurs  ln rho_2D     ln R3      ln R2     lisible
+   0.05    PPPP     -2 -1  2 -2     0.0033         0.0002                     -15.2525   -0.0001    -0.0012    oui
+   0.25    PPPP     -2 -1  1 -2     0.0012         0.0003                     -19.5749   -0.0003    -0.0009    oui
+   0.50    PPPP     -1 -1  2 -2     0.0011         0.0006                     -22.2182   -0.0006    -0.0005    oui
+   1.00    PPPP     -1 -1  2 -2     0.0048         0.0011                     -25.8284   -0.0010    +0.0005    oui
+   1.50    PPPP     -1 -1  2 -2     0.0060         0.0012                     -28.5925   -0.0019    +0.0017    oui
+   2.00    PPPP     -1 -1  2 -2     0.0039         0.0008                     -30.9295   -0.0033    +0.0027    oui
+   3.00    PPPP     -1 -1  1 -2     0.0038         0.0017                     -34.8587   -0.0070    +0.0057    oui
+   4.00    PPPP     -1 -1  2 -2     0.0064         0.0018                     -38.1715   -0.0135    +0.0078    oui
+   5.00    PPPP     -1 -1  2 -2     0.0033         0.0016                     -41.0850   -0.0223    +0.0106    oui
+   6.00    PPPP     -1 -1  1 -2     0.0007         0.0005                     -43.7127   -0.0345    +0.0130    oui
+   7.00    PPPP     -1 -1  2 -2     0.0054         0.0021                     -46.1237   -0.0521    +0.0131    oui
+   8.00    PPPP     -1 -1  2 -2     0.0068         0.0033                     -48.3639   -0.0745    +0.0125    oui
+  12 ecarts lisibles sur 12 ; plus grand |ln R3| lisible 0.0745 ; plus grande etendue entre absorbeurs 0.0033

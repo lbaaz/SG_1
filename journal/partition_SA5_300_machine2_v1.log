@@ -1,0 +1,11 @@
+11:22:52 debut
+decalage 2 |delta| : 19 niveaux (k = 80) ; 187 s
+decalage 5.5 |delta| : 19 niveaux (k = 40) ; 230 s
+niveaux : 19 et 19 ; ecart relatif entre les deux decalages, par lecture :
+   brut         plus grand 1.91e-02
+   carre_rc     plus grand 5.77e-11
+   carre_rc+6   plus grand 4.00e-11
+   carre_rc+12  plus grand 6.29e-11
+   diamant      plus grand 4.34e-11
+   coupures entre elles (decalage 2) : carre_rc+6 / carre_rc 5.17e-11 ; carre_rc+12 / carre_rc 5.09e-11 ; diamant / carre_rc 4.98e-11
+11:26:47 fin

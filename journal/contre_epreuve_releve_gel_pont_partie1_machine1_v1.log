@@ -1,0 +1,23 @@
+texte intact : code 0 ; RELEVE : 11 controles, 0 mordent : [] -> TIENT
+une etendue citee                    : code 1 ; attendu R08 ; ['R08'] -> MORD
+le pas cite                          : code 1 ; attendu R08 ; ['R08'] -> MORD
+un compte d'eligibles                : code 1 ; attendu R05 ; ['R05'] -> MORD
+une cellule de la table              : code 1 ; attendu R05 ; ['R05'] -> MORD
+un point d'exclamation retire        : code 1 ; attendu R05 ; ['R05'] -> MORD
+une eligibilite inversee             : code 1 ; attendu R05 ; ['R05'] -> MORD
+le nombre de cellules ecartees       : code 1 ; attendu R06 ; ['R06'] -> MORD
+la probabilite de PAS DE GEL         : code 1 ; attendu R06 ; ['R06'] -> MORD
+un seuil                             : code 1 ; attendu R06 ; ['R06'] -> MORD
+un canon du registre                 : code 1 ; attendu R02 ; ['R02', 'R03'] -> MORD
+un canon de piece                    : code 1 ; attendu R04 ; ['R04'] -> MORD
+un numero de demonstration           : code 1 ; attendu R07 ; ['R07'] -> MORD
+un candidat ajoute                   : code 1 ; attendu R07 ; ['R07'] -> MORD
+le compte des niveaux                : code 1 ; attendu R08 ; ['R08'] -> MORD
+la somme citee                       : code 1 ; attendu R08 ; ['R08'] -> MORD
+le balayage                          : code 1 ; attendu R08 ; ['R08'] -> MORD
+une ligne du tableau par profondeur  : code 1 ; attendu R09 ; ['R09'] -> MORD
+une citation de machine 2            : code 1 ; attendu R10 ; ['R10'] -> MORD
+un signe pour cent de trop           : code 1 ; attendu R01 ; ['R01'] -> MORD
+une ligne trop longue                : code 1 ; attendu R01 ; ['R01'] -> MORD
+une empreinte inconnue               : code 1 ; attendu R03 ; ['R01', 'R03'] -> MORD
+CONTRE-EPREUVE : 21 alterations, 21 mordent au controle attendu ; texte intact : aucune morsure

@@ -1,0 +1,5 @@
+CONTROLE DU HACHAGE par une troisieme voie (sha256sum de coreutils, sans Python) ; graine 456823 ; la chaine hachee est <graine>|<creneau>|<rang>, ASCII, barre verticale = caractere 124
+sha256sum(456823|MG|0) = bab2ed478849ce6c... ; modulo 8 = 3
+sha256sum(456823|MG|1) = 6e83d25560134175... ; modulo 8 = 3
+sha256sum(456823|PG|0) = 7ba5f5c18c4df1e2... ; modulo 8 = 7
+sha256sum(456823|PG|1) = ea8cc2c28d12d658... ; modulo 8 = 3

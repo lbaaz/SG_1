@@ -1,0 +1,14 @@
+ATTENDU DE MACHINE 1 -- dix boites fermees de cotes 180 a 189 au point sacrifie, 3 barreaux
+2026-11-17, 10 h 42 a l'horloge du poste, ecrit AVANT que la premiere de ces boites soit lue.
+Hors chaine, classe 3. w2 = 101/50, qui n'est pas candidat. Sonde de machine 1.
+
+Pourquoi : la seconde partie du gel demandera des boites de cotes 180 a 189, ou une seule famille de
+niveaux libres est entiere dans la fenetre. Les 32 boites de machine 2 commencent au cote 190.
+
+U1. Le nombre moyen de niveaux de la fenetre vaut de 8 a 11. Probabilite 0.8. (Compte libre exact a ce
+    point : 7 a 8 selon le cote, 9 a 10 si l'on compte les niveaux libres qui tombent exactement sur le
+    bord x = 8 ; aux cotes 190 a 209 le compte observe depassait le compte libre exact.)
+U2. La moyenne de S sur les dix boites est dans [0.90, 1.15]. Probabilite 0.85.
+U3. L'ecart-type de S d'une boite a l'autre est de 0.08 a 0.20. Probabilite 0.7. (0.089 aux cotes 190 a
+    209 ; moins de niveaux par boite, donc plus de dispersion.)
+U4. Tous les niveaux sont fiables (deux lectures par partition d'accord a 2 pour cent). Probabilite 0.9.

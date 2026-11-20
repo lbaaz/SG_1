@@ -1,0 +1,14 @@
+barriere : m_bord = 3 ; d = +0.0200 ; tables jusqu'au site 44
+ordre 1 : E_vide -1.402741e-05 ; Gamma au vide 3.3189e-09 (etendue 3.3e-03) ; 2 pi x^2 delta^2 rho / Gamma : 0.774  0.297  0.101  0.015  0.003  0.001  0.000  0.000  0.000  0.000  0.000  0.000
+          etendue des ln rho entre les dix-huit variantes : 3.2e-03  2.9e-03  2.9e-03  3.0e-03  4.7e-03  4.7e-03  2.5e-03  6.3e-03  7.0e-03  5.0e-03  5.1e-03  7.1e-03
+          forme directe (-Im G_00 / pi) contre flux : ecart relatif au plus 1.3e-15 sur 216 lectures
+ordre 2 : E_vide -1.402481e-05 ; Gamma au vide 3.2745e-09 (etendue 5.1e-03) ; 2 pi x^2 delta^2 rho / Gamma : 0.775  0.300  0.103  0.016  0.003  0.001  0.000  0.000  0.000  0.000  0.000  0.000
+          etendue des ln rho entre les dix-huit variantes : 4.8e-03  5.0e-03  5.7e-03  5.4e-03  5.0e-03  4.4e-03  5.5e-03  6.8e-03  7.4e-03  5.3e-03  6.7e-03  1.0e-02
+          forme directe (-Im G_00 / pi) contre flux : ecart relatif au plus 1.6e-15 sur 216 lectures
+ordre 3 : E_vide -1.402445e-05 ; Gamma au vide 3.2661e-09 (etendue 4.1e-03) ; 2 pi x^2 delta^2 rho / Gamma : 0.775  0.300  0.103  0.016  0.003  0.001  0.000  0.000  0.000  0.000  0.000  0.000
+          etendue des ln rho entre les dix-huit variantes : 4.2e-03  4.7e-03  5.4e-03  5.3e-03  4.6e-03  4.9e-03  5.9e-03  7.2e-03  7.6e-03  5.7e-03  7.3e-03  1.1e-02
+          forme directe (-Im G_00 / pi) contre flux : ecart relatif au plus 2.6e-15 sur 216 lectures
+x (|delta|)             :  0.05   0.25   0.50   1.00   1.50   2.00   3.00   4.00   5.00   6.00   7.00   8.00
+rho ordre 1 / ordre 3   : 1.014  1.006  0.996  0.976  0.954  0.932  0.889  0.845  0.803  0.761  0.720  0.682
+rho ordre 2 / ordre 3   : 1.002  1.002  1.002  1.001  0.999  0.998  0.993  0.988  0.981  0.973  0.965  0.956
+log10 rho ordre 3       : -3.39  -5.21  -6.27  -7.68  -8.74  -9.61  -11.06  -12.26  -13.30  -14.23  -15.07  -15.84

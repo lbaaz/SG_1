@@ -1,0 +1,6 @@
+ESSAI : sortie de densite INTERROMPUE apres le barreau 5 (SA5, absorbeurs A a D, barreaux -3 a 5 seulement), donnee aux deux feuilles de densite
+--- ma feuille (apres l ajout du controle de completude) :
+AssertionError: sortie de sonde INCOMPLETE : les douze barreaux -3 a 8 doivent tous y etre (la sonde reecrit son fichier a chaque barreau)
+--- sa feuille :
+   8.00    PPPP     -1 -2  1 -3     0.0081         0.0028                     -47.7476   +0.0225    +0.0631    oui
+  12 ecarts lisibles sur 12 ; plus grand |ln R3| lisible 0.0225 ; plus grande etendue entre absorbeurs 0.0083

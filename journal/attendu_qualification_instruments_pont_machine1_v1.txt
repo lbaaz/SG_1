@@ -1,0 +1,32 @@
+ATTENDU DE MACHINE 1 -- qualification des deux instruments de la seconde partie du gel "pont"
+2026-11-17, vers 10 h 45, ecrit AVANT toute lecture des sorties. Hors chaine, classe 3.
+Tout est au point sacrifie w2 = 101/50 (delta = +0.02), qui n'est pas candidat. Aucune 2D a un w2 tire.
+
+Ce qui est deja vu, et ne compte pas comme attendu : a 3 barreaux, R3(x) = rho_2D / (w0 rho_3) de 0.9896 a
+1.0006 sur les douze ecarts, lisible partout (exploration du 17/11) ; a 3 barreaux, 32 boites de machine 2,
+somme des parts 1.043 +- 0.018 ; a 4 et 5 barreaux, une boite de cote 300 chacune (machine 2) : 1.042 et
+1.112, 19 niveaux, un non fiable a 5 barreaux.
+
+A. DENSITE 2D SOUS ABSORBEUR, 4 ET 5 BARREAUX (sonde_densite_2d_pont_machine1_v1.py, quatre absorbeurs,
+   douze barreaux, routine de plateau deposee ; lisible = quatre plateaux et etendue entre absorbeurs
+   <= 0.02).
+   A1. 4 barreaux : lisible aux douze ecarts. Probabilite 0.85.
+   A2. 5 barreaux : lisible aux douze ecarts. Probabilite 0.65. Si ce n'est pas le cas, ce sera aux
+       grands ecarts (x >= 6), ou la densite est la plus petite (ln rho_3 |delta| vers -50).
+   A3. La ou c'est lisible, |ln R3| <= 0.02 a chaque ecart, aux deux profondeurs. Probabilite 0.75.
+       Le pas de l'ordre 2 a l'ordre 3 y est le meme qu'a 3 barreaux (0.041 a 0.045 a 8 |delta|) ; je
+       n'ai pas de raison d'attendre un residu plus grand, sinon que la barriere est plus longue.
+   A4. R3 decroit avec x comme a 3 barreaux (R3(8) < R3(0.05)). Probabilite 0.7.
+
+B. BOITE FERMEE (sonde_boite_fermee_pont_machine1_v1.py, a ecrire), contre les niveaux publies par
+   machine 2 (lots dce7431e7a8b4a8c et acfecb6da73f20ae).
+   B1. Memes niveaux : meme compte, ecarts au vide egaux a 1e-6 |delta| pres. Probabilite 0.9.
+   B2. Mes parts (lecture par le composant brut) egales aux siennes a 2 pour cent pres sur ses
+       niveaux fiables. Probabilite 0.9 ; les deux codes font le meme calcul par deux routes.
+   B3. Ma lecture "par partition" (le composant du site 0 recalcule depuis le dehors) s'accorde a ma
+       lecture brute a 1e-3 pres a 3 barreaux. Probabilite 0.8.
+   B4. A 5 barreaux, cote 300, sur le niveau que machine 2 dit non fiable (ecart -6.699 |delta|,
+       2.6 pour cent entre ses deux lectures) : mes deux lectures par partition s'accordent a 1e-3
+       pres. Probabilite 0.6. Si oui, la lecture par partition devient la lecture du gel.
+   Si B3 ou B4 tombe, la lecture du gel sera la lecture brute a deux decalages, comme chez machine 2,
+   et le gel dira ce que vaut un niveau non fiable.

@@ -1,0 +1,8 @@
+temps mesures (secondes par boite, une boite par essai, plusieurs jobs en parallele sur la machine) : {(3, 185): 35, (3, 300): 132, (4, 300): 130, (5, 185): 24, (5, 300): 186}
+densite, absorbeur A, 5 barreaux : 12 barreaux lus, 1454 s au total (moyenne 121 s par barreau)
+estimation : densite 13.0 h de coeur, boites 3.0 h de coeur, total 16.0 h de coeur (hypotheses : cout ~ cote^3 entre absorbeurs ; boites UN ~ la boite 185 mesuree, DEUX ~ la 300 mesuree ; 2 cellules par profondeur)
+   avec  4 jobs en parallele : environ 4.0 h (en negligeant la contention memoire et le desequilibre)
+   avec  8 jobs en parallele : environ 2.0 h (en negligeant la contention memoire et le desequilibre)
+   avec 12 jobs en parallele : environ 1.3 h (en negligeant la contention memoire et le desequilibre)
+pic de memoire, densite, absorbeur B (le plus grand : boite 128 x 128), 5 barreaux, un barreau : code de sortie 0 ; duree 205 s ; pic de memoire de travail du processus 0.38 Go
+pic de memoire, boite de cote 300, 5 barreaux : code de sortie 0 ; duree 134 s ; pic de memoire de travail du processus 1.71 Go

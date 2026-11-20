@@ -1,0 +1,14 @@
+boites : 15 chez moi, 15 chez lui (cles identiques : True)
+boites : plus grand |S ma - S sa| 1.53e-12 ; plus grand ecart relatif de participation 3.84e-12 ; desaccords : n 0, fiables 0, valide 0, lisible 0
+SA3 : (L) moi True / lui TIENT ; (L2) True / TIENT ; (S) True / TIENT ; (C) True / TIENT
+     S moyenne : moi 1.001592115435 lui 1.001592115434 ; erreur moi 0.031831267462124065 lui 0.03183126746206128
+     Q3 : moi 1.006960700304 (S-lisibles boites) lui 1.006960700303 (11 boites)
+SA4 : (L) moi True / lui TIENT ; (L2) True / TIENT ; (S) None / ILLISIBLE ; (C) None / ILLISIBLE
+     Q3 : moi 1.044257582016 (S-lisibles boites) lui 1.044257582016 (1 boites)
+SA5 : (L) moi True / lui TIENT ; (L2) True / TIENT ; (S) None / ILLISIBLE ; (C) None / ILLISIBLE
+     Q3 : moi 1.105207196226 (S-lisibles boites) lui 1.105207196226 (1 boites)
+famille (L) : moi NON JUGEE / lui TENUE
+famille (L2) : moi NON JUGEE / lui TENUE
+famille (S) : moi NON JUGEE / lui NON JUGEE
+famille (C) : moi NON JUGEE / lui NON JUGEE
+Q2 groupes : moi {'Q2_groupe_DEUX': (3, 0.932565), 'Q2_groupe_UN': (10, 0.961031)} | lui {'Q1': {'boites': 11, 'erreur': 0.03183126746206128, 'exces_en_erreurs': 0.05001734336277859, 'moyenne': 1.0015921154343224}, 'Q2_DEUX': {'boites': 3, 'rapport': 0.9325648633030343}, 'Q2_UN': {'boites': 10, 'rapport': 0.9610312870032223}}

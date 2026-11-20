@@ -1,0 +1,16 @@
+[     0 s] MODE essai ; 8 jobs a la fois, budget memoire 12.0 Go
+[     1 s] chaine (m1) : code 0
+[     1 s] 6 jobs
+[     1 s] LANCE  densite SA3 B                      (essai 0)  jobs en cours 1, memoire estimee 0.5 Go
+[     1 s] LANCE  densite SA3 C                      (essai 0)  jobs en cours 2, memoire estimee 1.0 Go
+[     1 s] LANCE  densite SA3 D                      (essai 0)  jobs en cours 3, memoire estimee 1.5 Go
+[     1 s] LANCE  densite SA3 A                      (essai 0)  jobs en cours 4, memoire estimee 2.0 Go
+[     1 s] LANCE  boites SA3 DEUX1 [50, 51]          (essai 0)  jobs en cours 5, memoire estimee 3.9 Go
+[     1 s] LANCE  boites SA3 UN1 [52, 53]            (essai 0)  jobs en cours 6, memoire estimee 4.7 Go
+[     5 s] FAIT   boites SA3 DEUX1 [50, 51]          4 s : toutes les boites sont la
+[     5 s] FAIT   boites SA3 UN1 [52, 53]            4 s : toutes les boites sont la
+[   155 s] FAIT   densite SA3 A                      154 s : complete (1 barreaux)
+[   205 s] FAIT   densite SA3 D                      204 s : complete (1 barreaux)
+[   262 s] FAIT   densite SA3 C                      260 s : complete (1 barreaux)
+[   264 s] FAIT   densite SA3 B                      262 s : complete (1 barreaux)
+[   264 s] ESSAI : sorties completes ; les feuilles ne sont pas passees (un essai n a pas les douze barreaux ni les vingt cotes)

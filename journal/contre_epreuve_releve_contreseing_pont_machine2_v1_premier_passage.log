@@ -1,0 +1,9 @@
+copie intacte : 0 morsure
+Traceback (most recent call last):
+  File "<chemin>", line 69, in <module>
+    rc, mord, out, err = passe(T0.replace(a, b), 'alteree.md')
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<chemin>", line 52, in passe
+    open(p, 'wb').write(texte.encode('ascii'))
+                        ^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'ascii' codec can't encode character '\xe9' in position 461: ordinal not in range(128)

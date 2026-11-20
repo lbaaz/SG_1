@@ -1,0 +1,17 @@
+(1) hachages de la graine de demonstration (section 3) :
+    sha256("DEMONSTRATION|MG|0") = 8254e7d473dd8e66... ; modulo  8 =  5 -> w2 = 1.987   | dans le gel : OUI
+    sha256("DEMONSTRATION|MG|1") = 3bcf50fd02de7108... ; modulo  8 =  4 -> w2 = 1.986   | dans le gel : OUI
+    sha256("DEMONSTRATION|PG|0") = c67ae8de8fe0b645... ; modulo  8 =  7 -> w2 = 2.019   | dans le gel : OUI
+    sha256("DEMONSTRATION|PG|1") = a72d87914f9453df... ; modulo  8 =  7 -> w2 = 2.019   | dans le gel : OUI
+(3) w2 candidats recalcules depuis la section 2 : 0.01 < |w2 - 2| < 0.02, au millieme, moins {1.982, 2.017}
+    MG : 8 w2 : 1.981 1.983 1.984 1.985 1.986 1.987 1.988 1.989 | identique a la liste du gel : True
+    PG : 8 w2 : 2.011 2.012 2.013 2.014 2.015 2.016 2.018 2.019 | identique a la liste du gel : True
+(2) couplage au point sacrifie (section 2) : g = kappa_m |w2 - 2| P / X(w2), X = X_saut_reel(P, 2, 1, 0, 0, w2), "%.5e" :
+    m = 3 : g = 5.53067e-03
+    m = 4 : g = 4.22189e-03
+    m = 5 : g = 3.35640e-03
+    (note de machine 1 : 5.53067e-03, 4.22189e-03, 3.35640e-03)
+(4) probabilite qu un creneau n ait aucun w2 eligible en cinq rangs, MG : (3/8)^5 = 0.0074 (gel : 0.0074)
+(5) canon de ma note dans le manifeste de mon lot :
+    b9dd39f6c4ffa922  POUR_MACHINE1_grandes_boites_resultats_machine2_v1.md  (gel : b9dd39f6c4ffa922)
+    canon de mon lot (manifeste) : dce7431e7a8b4a8c  (gel : dce7431e7a8b4a8c)
