@@ -1,0 +1,42 @@
+feuille deposee au canon 83701094e6a2b965 : oui ; juger_etat appele tel quel
+=== Q2a  w2 = 20001/10000  g = 6e-5  eta0 = 2.33642e-04  statut QUALIFIE ; echecs [] ; non lisibles []
+    A : PLATEAU  k0 = -1  etalement 0.0000  Gamma_pl = 4.94717e-08  ln(Gamma_pl / G3*) = +0.00019
+    B : PLATEAU  k0 = -1  etalement 0.0000  Gamma_pl = 4.94718e-08  ln(Gamma_pl / G3*) = +0.00019  |ln(X / A)| = 0.0000
+    C : PLATEAU  k0 = +1  etalement 0.0035  Gamma_pl = 4.95346e-08  ln(Gamma_pl / G3*) = +0.00146  |ln(X / A)| = 0.0013
+    D : PLATEAU  k0 = -2  etalement 0.0000  Gamma_pl = 4.94718e-08  ln(Gamma_pl / G3*) = +0.00019  |ln(X / A)| = 0.0000
+    Gamma_pl(A) / g = 0.000825 ; ln(Gamma_pl / G3*) = +0.00019 ; poids du site dans la fenetre de A >= 0.9943 ; plat a 0.005 sous A aux barreaux [-3, -2, -1, 0, 1, 2, 3, 4]
+    jumeau : 48 lectures suivies sur 48 ; plus grande largeur 9.092e-53 (1.84e-45 Gamma_pl) ; temoin TIENT
+=== Q2b  w2 = 20001/10000  g = 4e-5  eta0 = 1.55762e-04  statut QUALIFIE ; echecs [] ; non lisibles []
+    A : PLATEAU  k0 = -2  etalement 0.0000  Gamma_pl = 2.05518e-09  ln(Gamma_pl / G3*) = +0.00034
+    B : PLATEAU  k0 = -1  etalement 0.0000  Gamma_pl = 2.05517e-09  ln(Gamma_pl / G3*) = +0.00033  |ln(X / A)| = 0.0000
+    C : PLATEAU  k0 = +1  etalement 0.0004  Gamma_pl = 2.05516e-09  ln(Gamma_pl / G3*) = +0.00033  |ln(X / A)| = 0.0000
+    D : PLATEAU  k0 = -2  etalement 0.0000  Gamma_pl = 2.05516e-09  ln(Gamma_pl / G3*) = +0.00033  |ln(X / A)| = 0.0000
+    Gamma_pl(A) / g = 0.000051 ; ln(Gamma_pl / G3*) = +0.00034 ; poids du site dans la fenetre de A >= 0.9980 ; plat a 0.005 sous A aux barreaux [-3, -2, -1, 0, 1, 2, 3, 4]
+    jumeau : 48 lectures suivies sur 48 ; plus grande largeur 6.389e-57 (3.11e-48 Gamma_pl) ; temoin TIENT
+=== Q2c  w2 = 19999/10000  g = 3e-4  eta0 = 1.16909e-03  statut QUALIFIE ; echecs [] ; non lisibles []
+    A : PLATEAU  k0 = -1  etalement 0.0000  Gamma_pl = 1.21073e-05  ln(Gamma_pl / G3*) = +0.00002
+    B : PLATEAU  k0 = -1  etalement 0.0000  Gamma_pl = 1.21073e-05  ln(Gamma_pl / G3*) = +0.00001  |ln(X / A)| = 0.0000
+    C : PLATEAU  k0 = +2  etalement 0.0019  Gamma_pl = 1.20929e-05  ln(Gamma_pl / G3*) = -0.00118  |ln(X / A)| = 0.0012
+    D : PLATEAU  k0 = -2  etalement 0.0000  Gamma_pl = 1.21071e-05  ln(Gamma_pl / G3*) = +0.00000  |ln(X / A)| = 0.0000
+    Gamma_pl(A) / g = 0.040358 ; ln(Gamma_pl / G3*) = +0.00002 ; poids du site dans la fenetre de A >= 0.9209 ; plat a 0.005 sous A aux barreaux [-3, -2, -1, 0, 1, 2, 3, 4]
+    jumeau : 48 lectures suivies sur 48 ; plus grande largeur 1.024e-40 (8.46e-36 Gamma_pl) ; temoin TIENT
+=== Q2d  w2 = 19999/10000  g = 1.5e-4  eta0 = 5.84544e-04  statut QUALIFIE ; echecs [] ; non lisibles []
+    A : PLATEAU  k0 = -1  etalement 0.0000  Gamma_pl = 2.92063e-06  ln(Gamma_pl / G3*) = -0.00008
+    B : PLATEAU  k0 = -1  etalement 0.0000  Gamma_pl = 2.92064e-06  ln(Gamma_pl / G3*) = -0.00008  |ln(X / A)| = 0.0000
+    C : PLATEAU  k0 = +1  etalement 0.0005  Gamma_pl = 2.92103e-06  ln(Gamma_pl / G3*) = +0.00006  |ln(X / A)| = 0.0001
+    D : PLATEAU  k0 = -2  etalement 0.0000  Gamma_pl = 2.92065e-06  ln(Gamma_pl / G3*) = -0.00007  |ln(X / A)| = 0.0000
+    Gamma_pl(A) / g = 0.019471 ; ln(Gamma_pl / G3*) = -0.00008 ; poids du site dans la fenetre de A >= 0.9558 ; plat a 0.005 sous A aux barreaux [-3, -2, -1, 0, 1, 2, 3, 4]
+    jumeau : 48 lectures suivies sur 48 ; plus grande largeur 1.994e-43 (6.83e-38 Gamma_pl) ; temoin TIENT
+
+lectures suivies : 384 sur 384
+=== MES ATTENDUS, A LA LETTRE
+Q2-1  les quatre points QUALIFIES : TENU (Q2a QUALIFIE ; Q2b QUALIFIE ; Q2c QUALIFIE ; Q2d QUALIFIE)
+Q2-2  |ln(Gamma_pl / G3*)| <= 0.002 a chaque point qualifie : TENU (Q2a 0.00019 ; Q2b 0.00034 ; Q2c 0.00002 ; Q2d 0.00008 ; plus grand 0.00034)
+Q2-3  le temoin tient aux quatre points : TENU (plus grande largeur du jumeau rapportee au plateau : 8.46e-36)
+Q2-4  ln[Gamma_pl(Q2-c) / Gamma_pl(Q-e)] = +0.00121 dans [+0.0007, +0.0017] : oui ; ln[Gamma_pl(Q2-d) / Gamma_pl(Q-f)] = +0.00212 dans [+0.0016, +0.0026] : oui -> TENU
+      plateaux de Q relus par la feuille : Q-e 1.20926e-05 ; Q-f 2.91446e-06 ; chaine : +0.00121 et +0.00211 ; ecarts des lectures a la chaine : +0.00000 et +0.00001
+TORT : point qualifie a plus de 0.01 : 0 ; points sans plateau sous A : 0 ; rapport de signe negatif : 0 -> NON REALISE
+ln(Gamma_pl / G3*) signes, aux quatre points : Q2a +0.00019 ; Q2b +0.00034 ; Q2c +0.00002 ; Q2d -0.00008
+plus grand |ln(X / A)| sur les douze (point, absorbeur B, C, D) : 0.0013
+barreaux plats a 0.005 sous A, communs aux quatre points : [-3, -2, -1, 0, 1, 2, 3, 4]
+=== BILAN : Q2-1 TENU ; Q2-2 TENU ; Q2-3 TENU ; Q2-4 TENU ; tort NON REALISE

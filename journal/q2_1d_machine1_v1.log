@@ -1,0 +1,21 @@
+canons controles : moteur 82a0be882568fe0c ; bloc 2 7cd5977bc27bebc1 ; bloc 3 534ba246aa3b8973 ; bloc adapte 49a40d9098b55361
+
+=== 1. LA COLONNE G3* ET LA GEOMETRIE (une dimension)
+point  w2            g        |d| / g  kappa    m_bord  r_c  eta0         eta0 / g  G3*          G3* / g      etendue  ln(G3/G2)  ln(G3/G1)
+Q2-a   20001/10000   6.0e-05  1.667    0.0612   1       20   2.33642e-04  3.8940    4.94622e-08  8.24370e-04  0.0026   -0.00000   -0.00004
+Q2-b   20001/10000   4.0e-05  2.500    0.0408   2       22   1.55762e-04  3.8940    2.05449e-09  5.13623e-05  0.0024   -0.00000   -0.00004
+Q2-c   19999/10000   3.0e-04  0.333    0.3063   0*      18   1.16909e-03  3.8970    1.21071e-05  4.03570e-02  0.0030   -0.00000   +0.00002
+Q2-d   19999/10000   1.5e-04  0.667    0.1532   0*      18   5.84544e-04  3.8970    2.92086e-06  1.94724e-02  0.0033   -0.00000   +0.00003
+Q-e    20001/10000   3.0e-04  0.333    0.3061   0*      18   1.16821e-03  3.8940    1.20924e-05  4.03081e-02  0.0026   -0.00000   -0.00002
+Q-f    20001/10000   1.5e-04  0.667    0.1530   0*      18   5.84106e-04  3.8940    2.91470e-06  1.94314e-02  0.0032   -0.00000   -0.00003
+(* = barriere du moteur vide, m_bord = 0 pose ; eta0 : regle ['absolu'] aux six points)
+
+=== 2. CE QUE LA CHAINE DIT DU SIGNE DE DELTA, au meme couplage
+ln[G3*(Q2-c) / G3*(Q-e)] = +0.00121   (G3* = 1.21071e-05 a delta < 0, 1.20924e-05 a delta > 0)
+ln[G3*(Q2-d) / G3*(Q-f)] = +0.00211   (G3* = 2.92086e-06 a delta < 0, 2.91470e-06 a delta > 0)
+
+=== 3. LE MANDATAIRE A UNE DIMENSION DU LECTEUR, aux quatre points Q2 (premier ordre ; regle de plateau de la feuille)
+Q2-a  r_c = 20  QUALIFIE (mandataire)  fenetres k0 : A -1 B -1 C +1 D -2  plus grand |ln(X / A)| 0.0036  ln(plateau A / G1*) = +0.00018  poids >= 0.994  plat a 0.005 sous A : k = -3 a 4
+Q2-b  r_c = 22  QUALIFIE (mandataire)  fenetres k0 : A -2 B -1 C +1 D -2  plus grand |ln(X / A)| 0.0003  ln(plateau A / G1*) = +0.00034  poids >= 0.998  plat a 0.005 sous A : k = -3 a 4
+Q2-c  r_c = 18  QUALIFIE (mandataire)  fenetres k0 : A -1 B -1 C +1 D -2  plus grand |ln(X / A)| 0.0035  ln(plateau A / G1*) = +0.00003  poids >= 0.921  plat a 0.005 sous A : k = -3 a 4
+Q2-d  r_c = 18  QUALIFIE (mandataire)  fenetres k0 : A -1 B -1 C +1 D -2  plus grand |ln(X / A)| 0.0002  ln(plateau A / G1*) = -0.00008  poids >= 0.956  plat a 0.005 sous A : k = -3 a 4

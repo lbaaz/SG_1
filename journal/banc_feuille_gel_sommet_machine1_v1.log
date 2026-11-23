@@ -1,0 +1,61 @@
+b01  rien : le dossier de base                                            : TIENT
+       attendu {"S1.comptes.NON JUGEABLE": 0, "S1.comptes.NON LUE": 0, "S1.comptes.TIENT": 56, "S1.comptes.TOMBE": 0, "S1.issue": "TENU", "miroirs": 7, "plus_grand_ln_q": 0.0005, "portee": 7, "verdict": "S1 TENU"}
+b02  une cellule tombe (ln q = +0.02)                                     : TIENT
+       attendu {"S1.comptes.TIENT": 55, "S1.comptes.TOMBE": 1, "S1.issue": "TENU SAUF UNE CELLULE", "tombees": ["MPa3"], "verdict": "S1 TENU SAUF UNE CELLULE"}
+b03  deux cellules tombent                                                : TIENT
+       attendu {"S1.comptes.TIENT": 54, "S1.comptes.TOMBE": 2, "S1.issue": "TOMBE", "verdict": "S1 TOMBE"}
+b04  une cellule tombe de l'autre cote (ln q = -0.02)                     : TIENT
+       attendu {"S1.comptes.TIENT": 55, "S1.comptes.TOMBE": 1, "S1.issue": "TENU SAUF UNE CELLULE", "tombees": ["MGa1"], "verdict": "S1 TENU SAUF UNE CELLULE"}
+b05  une cellule non jugeable (ln q = 0.008)                              : TIENT
+       attendu {"S1.comptes.NON JUGEABLE": 1, "S1.comptes.TIENT": 55, "S1.comptes.TOMBE": 0, "S1.issue": "TENU", "verdict": "S1 TENU"}
+b06  quinze cellules non jugeables : 41 jugees                            : TIENT
+       attendu {"S1.comptes.NON JUGEABLE": 15, "S1.comptes.TIENT": 41, "S1.issue": "NON CONCLUANT", "verdict": "S1 NON CONCLUANT"}
+b07  un w2 n'a que trois cellules tenues                                  : TIENT
+       attendu {"S1.comptes.NON JUGEABLE": 4, "S1.comptes.TIENT": 52, "S1.issue": "NON CONCLUANT", "verdict": "S1 NON CONCLUANT"}
+b08  desaccord de l'absorbeur C (0.06) a une cellule                      : TIENT
+       attendu {"S1.comptes.NON LUE": 1, "S1.comptes.TIENT": 55, "S1.issue": "TENU", "statut:PPa5": "NON QUALIFIE", "verdict": "S1 TENU"}
+b09  pas de plateau sous B a une cellule                                  : TIENT
+       attendu {"S1.comptes.NON LUE": 1, "S1.comptes.TIENT": 55, "S1.issue": "TENU", "statut:PPb2": "NON QUALIFIE", "verdict": "S1 TENU"}
+b10  A sans cinq barreaux lisibles consecutifs (k = 1 et 6 non suivis)    : TIENT
+       attendu {"S1.comptes.NON LUE": 1, "S1.comptes.TIENT": 55, "S1.issue": "TENU", "statut:MGb4": "NON LISIBLE", "verdict": "S1 TENU"}
+b11  une lecture non suivie sous A hors de toute gene (k = 8)             : TIENT
+       attendu {"S1.comptes.TIENT": 56, "S1.issue": "TENU", "statut:MGb4": "QUALIFIE", "verdict": "S1 TENU"}
+b12  jumeau trop large (1e-5 du plateau)                                  : TIENT
+       attendu {"S1.comptes.NON LUE": 1, "S1.comptes.TIENT": 55, "S1.issue": "TENU", "verdict": "S1 TENU"}
+b13  une lecture du jumeau non suivie                                     : TIENT
+       attendu {"S1.comptes.NON LUE": 1, "S1.comptes.TIENT": 55, "S1.issue": "TENU", "verdict": "S1 TENU"}
+b14  l'instrument ne tient pas                                            : TIENT
+       attendu {"S1": null, "verdict": "L'INSTRUMENT NE TIENT PAS : RIEN N'EST JUGE"}
+b15  le verdict de l'instrument est absent                                : TIENT
+       attendu {"S1": null, "verdict": "L'INSTRUMENT NE TIENT PAS : RIEN N'EST JUGE"}
+b16  un temoin positif a 0.002 de sa reference                            : TIENT
+       attendu {"S1": null, "temoins.tenus": 8, "verdict": "LES TEMOINS POSITIFS DU SOMMET NE TIENNENT PAS : RIEN N'EST JUGE"}
+b17  un temoin positif non qualifie                                       : TIENT
+       attendu {"S1": null, "temoins.tenus": 8, "verdict": "LES TEMOINS POSITIFS DU SOMMET NE TIENNENT PAS : RIEN N'EST JUGE"}
+b18  un temoin positif a 0.0009 de sa reference (sous le seuil)           : TIENT
+       attendu {"S1.comptes.TIENT": 56, "S1.issue": "TENU", "temoins.tenus": 9, "verdict": "S1 TENU"}
+b19  les fichiers d'une cellule manquent                                  : TIENT
+       attendu {"S1": null, "incomplet": 1, "verdict": "RUN INCOMPLET : RIEN N'EST JUGE"}
+b20  un fichier porte un autre canon de pilote                            : TIENT
+       attendu {"S1": null, "incomplet": 1, "verdict": "RUN INCOMPLET : RIEN N'EST JUGE"}
+b21  un fichier porte un autre couplage                                   : TIENT
+       attendu {"S1": null, "incomplet": 1, "verdict": "RUN INCOMPLET : RIEN N'EST JUGE"}
+b22  un fichier porte un autre eta0                                       : TIENT
+       attendu {"S1": null, "incomplet": 1, "verdict": "RUN INCOMPLET : RIEN N'EST JUGE"}
+b23  un fichier porte un autre bord d'absorbeur                           : TIENT
+       attendu {"S1": null, "incomplet": 1, "verdict": "RUN INCOMPLET : RIEN N'EST JUGE"}
+b24  une autre table (un couplage change)                                 : TIENT
+       attendu {"code": 2, "sortie": null}
+b25  etalement du plateau sous A de 0.008 : la bande depasse T            : TIENT
+       attendu {"S1.comptes.NON JUGEABLE": 1, "S1.comptes.TIENT": 55, "S1.issue": "TENU", "verdict": "S1 TENU"}
+b26  cinq cellules de kappa = 1 non lues : la portee perd ce kappa        : TIENT
+       attendu {"S1.comptes.NON LUE": 5, "S1.comptes.TIENT": 51, "S1.issue": "TENU", "portee": 6, "portee_sans": "1.0000", "verdict": "S1 TENU"}
+b27  etape de garde, avant toute cellule                                  : TIENT
+       attendu {"code": 0, "verdict": "TIENT : les cellules peuvent etre lues"}
+b28  etape de garde, alors que des cellules sont deja lues                : TIENT
+       attendu {"code": 3}
+b29  etape de garde, l'instrument ne tient pas                            : TIENT
+       attendu {"verdict": "L'INSTRUMENT NE TIENT PAS : aucune cellule ne doit etre lue"}
+b30  etape de garde, un temoin positif hors de sa reference               : TIENT
+       attendu {"verdict": "LES TEMOINS POSITIFS NE TIENNENT PAS : aucune cellule ne doit etre lue"}
+BANC DE LA FEUILLE : 30 cas, 30 tenus

@@ -1,0 +1,198 @@
+
+1. LES CITATIONS DE L ACTE, ET LES DEUX INDEX PAR CANON
+  [ note] acte                                                       journal_delta_nn_sommet_v1.md (version 1)
+  [PASSE] l acte est ASCII pur, LF, newline final                    26438 octets
+  [PASSE] l acte cite des empreintes (compte etabli apres extraction 31 jetons distincts de 16 hex
+  [PASSE] chaque VALEUR declaree est bien citee par l acte           
+  [PASSE] chaque lot de TRANSPORT declare est bien cite par l acte   
+  [ note] numero DERIVE du releve, non tape                          plafond 104 -> le delta de cet acte porte le 105 ; le numero reste de la main de l operateur (E18)
+  [PASSE] releve : HEAD 055be58, plafond 104, aucun fichier delta_10 3553 fichiers suivis
+  [PASSE] le delta PRECEDENT est bien au registre -- le releve porte delta_104 present
+  [ note] index du poste                                             14136 canons distincts (B et brut), 7356 noms de table
+  [ note] balayage : tout BOCAL4 hors .git et __pycache__ ; exclues, manifest_depot_delta105_machine2_v1.txt, perimetre_depot_delta105_sur_acte_v1_machine2.log
+
+2. RESOLUTION DE CHAQUE CITATION -- AU REGISTRE, AU POSTE, OU NULLE PART
+   registre  d5cc48f48e37af99  scripts/sonde_lecteur_gel_loi_machine1_v1.py
+   registre  83701094e6a2b965  scripts/lecture_lecteur_gel_loi_machine1_v1.py
+   registre  82a0be882568fe0c  scripts/m17_chaine_v17.py
+   registre  49a40d9098b55361  scripts/chaine_adaptee_bloc_machine1_v1.py
+   poste     1e5039cade55d13f  DEPOT_delta105/entrants/lot_machine1_2026-11-22_Q2_notee_et_gel_sommet_partie1_v1/gel_sommet_partie1_regle_tirage_pre_enregistrement_v1.md
+   poste     81a2febcfce49007  DEPOT_delta105/entrants/lot_machine1_2026-11-22_gel_sommet_partie2_v1/gel_sommet_partie2_instrument_enonce_pre_enregistrement_v1.md
+   poste     4238e2b262119f83  DEPOT_delta105/entrants/lot_machine1_2026-11-22_gel_sommet_partie2_v1/table_cellules_gel_sommet_v1.json
+   poste     c58c2b3f533c516b  DEPOT_delta105/entrants/lot_machine2_2026-11-22_Q_sommet_v1/MANIFEST_lot_machine2_Q_sommet_v1.txt
+   poste     295b2b1549b076c2  DEPOT_delta105/entrants/lot_machine2_2026-11-22_Q2_signe_v1/MANIFEST_lot_machine2_Q2_signe_v1.txt
+   poste     423ec0fd24240977  DEPOT_delta105/entrants/lot_machine1_2026-11-22_pole_court_lu_et_qualification_du_sommet_v1/MANIFESTE_lot_machine1_2026-11-22_pole_court_lu_et_qualification_du_sommet_v1.txt
+   poste     074b131287ad2b6f  DEPOT_delta105/entrants/lot_machine1_2026-11-22_Q_notee_et_Q2_attendus_v1/MANIFESTE_lot_machine1_2026-11-22_Q_notee_et_Q2_attendus_v1.txt
+   poste     3ba4618d7976c6ea  DEPOT_delta105/entrants/lot_machine1_2026-11-22_Q2_notee_et_gel_sommet_partie1_v1/MANIFESTE_lot_machine1_2026-11-22_Q2_notee_et_gel_sommet_partie1_v1.txt
+   poste     21e9bddfe5db83b2  DEPOT_delta105/entrants/lot_machine2_2026-11-22_certification_gel_sommet_partie1_v1/MANIFEST_lot_machine2_certification_gel_sommet_partie1_v1.txt
+   poste     77ce2a6c7e867011  DEPOT_delta105/entrants/lot_machine1_2026-11-22_Q2_notee_et_gel_sommet_partie1_v1/eligibilite_candidates_sommet_v1.json
+   poste     3db782eea5023b31  DEPOT_delta105/entrants/lot_machine2_2026-11-22_tirage_graine_114565_gel_sommet_v1/MANIFEST_lot_machine2_tirage_graine_114565_gel_sommet_v1.txt
+   poste     a2dc5cb2b9c3da0d  DEPOT_delta105/entrants/lot_machine1_2026-11-22_gel_sommet_partie2_v1/MANIFESTE_lot_machine1_2026-11-22_gel_sommet_partie2_v1.txt
+   poste     b7f328b916ba720d  DEPOT_delta105/entrants/lot_machine2_2026-11-23_certification_gel_sommet_partie2_v1/MANIFEST_lot_machine2_certification_gel_sommet_partie2_v1.txt
+   poste     ed4c3886b17fcdc3  DEPOT_delta105/entrants/lot_machine1_2026-11-22_gel_sommet_partie2_v1/pilote_gel_sommet_machine1_v1.py
+   poste     47a84eae6052f006  DEPOT_delta105/entrants/lot_machine2_2026-11-22_Q2_signe_v1/certif_relecteur_machine2/lecteur_2D_pilote_machine2_v1.py
+   poste     ac934e0caaa59c08  DEPOT_delta105/entrants/lot_machine1_2026-11-22_gel_sommet_partie2_v1/feuille_gel_sommet_machine1_v1.py
+   poste     c11edf7b49007d05  DEPOT_delta105/entrants/lot_machine2_2026-11-23_resultat_run_gel_sommet_v1/certif_gel_sommet_partie2_machine2/run_sommet_2026-11-23/verdict_ter_instrument.json
+   poste     707b6d999a2b9100  DEPOT_delta105/entrants/lot_machine2_2026-11-23_resultat_run_gel_sommet_v1/certif_gel_sommet_partie2_machine2/run_sommet_2026-11-23/garde_sommet.json
+   poste     2c39171a593d95df  DEPOT_delta105/entrants/lot_machine2_2026-11-23_resultat_run_gel_sommet_v1/certif_gel_sommet_partie2_machine2/run_sommet_2026-11-23/verdict_sommet.json
+   poste     735b9394013b02db  DEPOT_delta105/entrants/lot_machine2_2026-11-23_resultat_run_gel_sommet_v1/MANIFEST_lot_machine2_resultat_run_gel_sommet_v1.txt
+   poste     ab4629fe72da3e92  DEPOT_delta105/entrants/lot_machine1_2026-11-23_acte_gel_sommet_v1/verdict_sommet_rejoue_machine1.json
+   poste     c46c3aa3977366f4  DEPOT_delta105/entrants/lot_machine2_2026-11-23_certification_gel_sommet_partie2_v1/POUR_MACHINE1_certification_gel_sommet_partie2_machine2_v1.md
+   poste     c462991d2484064c  DEPOT_delta105/entrants/lot_machine2_2026-11-23_resultat_run_gel_sommet_v1/POUR_MACHINE1_resultat_run_gel_sommet_machine2_v1.md
+   poste     f6382d96633043ff  DEPOT_delta105/entrants/lot_machine2_2026-11-23_resultat_run_gel_sommet_v1/certif_gel_sommet_partie2_machine2/run_sommet_2026-11-23/pilote_gel_sommet.log
+   poste     417cf051cc04671b  DEPOT_delta105/entrants/lot_machine1_2026-11-23_acte_gel_sommet_v1/journal_delta_nn_sommet_v1.md
+   poste     fcfeb710fc3910cc  DEPOT_delta105/entrants/lot_machine1_2026-11-23_acte_gel_sommet_v1/MANIFESTE_lot_machine1_2026-11-23_acte_gel_sommet_v1.txt
+   poste     0be2226ba97a3ad9  DEPOT_delta105/entrants/lot_machine2_2026-11-23_contreseing_acte_gel_sommet_v1/MANIFEST_lot_machine2_contreseing_acte_gel_sommet_v1.txt
+  [PASSE] toute empreinte citee resout par canon (registre, poste, o 4 au registre, 27 au poste, 0 zip, 0 valeurs
+  [PASSE] TOUS les lots extraits sous entrants/ sont deposes par cit 12 lots extraits ; manquants : []
+
+3. LES LOTS CITES ENTRENT AVEC LEURS PIECES DE TABLE
+  [ note] erratum                                                    aucun dans ce chantier : une divergence de table mord
+   lot c58c2b3f533c516b  table 38 / declare 38   DEPOT_delta105/entrants/lot_machine2_2026-11-22_Q_sommet_v1/MANIFEST_lot_machine2_Q_sommet_v1.txt
+   lot 295b2b1549b076c2  table 30 / declare 30   DEPOT_delta105/entrants/lot_machine2_2026-11-22_Q2_signe_v1/MANIFEST_lot_machine2_Q2_signe_v1.txt
+   lot 423ec0fd24240977  table 16 / declare 16   DEPOT_delta105/entrants/lot_machine1_2026-11-22_pole_court_lu_et_qualification_du_sommet_v1/MANIFESTE_lot_machine1_2026-11-22_pole_court_lu_et_qualification_du_sommet_v1.txt
+   lot 074b131287ad2b6f  table  8 / declare 8    DEPOT_delta105/entrants/lot_machine1_2026-11-22_Q_notee_et_Q2_attendus_v1/MANIFESTE_lot_machine1_2026-11-22_Q_notee_et_Q2_attendus_v1.txt
+   lot 3ba4618d7976c6ea  table 29 / declare 29   DEPOT_delta105/entrants/lot_machine1_2026-11-22_Q2_notee_et_gel_sommet_partie1_v1/MANIFESTE_lot_machine1_2026-11-22_Q2_notee_et_gel_sommet_partie1_v1.txt
+   lot 21e9bddfe5db83b2  table 22 / declare 22   DEPOT_delta105/entrants/lot_machine2_2026-11-22_certification_gel_sommet_partie1_v1/MANIFEST_lot_machine2_certification_gel_sommet_partie1_v1.txt
+   lot 3db782eea5023b31  table  9 / declare 9    DEPOT_delta105/entrants/lot_machine2_2026-11-22_tirage_graine_114565_gel_sommet_v1/MANIFEST_lot_machine2_tirage_graine_114565_gel_sommet_v1.txt
+   lot a2dc5cb2b9c3da0d  table 22 / declare 22   DEPOT_delta105/entrants/lot_machine1_2026-11-22_gel_sommet_partie2_v1/MANIFESTE_lot_machine1_2026-11-22_gel_sommet_partie2_v1.txt
+   lot b7f328b916ba720d  table 62 / declare 62   DEPOT_delta105/entrants/lot_machine2_2026-11-23_certification_gel_sommet_partie2_v1/MANIFEST_lot_machine2_certification_gel_sommet_partie2_v1.txt
+   lot 735b9394013b02db  table 284 / declare 284  DEPOT_delta105/entrants/lot_machine2_2026-11-23_resultat_run_gel_sommet_v1/MANIFEST_lot_machine2_resultat_run_gel_sommet_v1.txt
+   lot fcfeb710fc3910cc  table 13 / declare 13   DEPOT_delta105/entrants/lot_machine1_2026-11-23_acte_gel_sommet_v1/MANIFESTE_lot_machine1_2026-11-23_acte_gel_sommet_v1.txt
+   lot 0be2226ba97a3ad9  table  9 / declare 9    DEPOT_delta105/entrants/lot_machine2_2026-11-23_contreseing_acte_gel_sommet_v1/MANIFEST_lot_machine2_contreseing_acte_gel_sommet_v1.txt
+  [PASSE] 12 lots cites a deposer, chacun au compte de table declare 0 faux compte
+  [PASSE] aucune piece de table ne s ecarte de son manifeste HORS er 0 ecart
+  [PASSE] aucune piece de table n est introuvable a cote de son mani 0 introuvable
+  [PASSE] aucune piece retenue n est deja au registre par canon      539 retenues
+
+4. LE MANIFESTE DE DEPOT -- DERIVE, JAMAIS ECRIT A LA MAIN
+  [ note] collision de nom, prefixe applique                         authentification_lots_machine2_v2.log -> lot_21e9bddfe5db83b2__authentification_lots_machine2_v2.log
+  [ note] collision de nom, prefixe applique                         authentification_lots_machine2_v2.log -> lot_b7f328b916ba720d__authentification_lots_machine2_v2.log
+  [ note] collision de nom, prefixe applique                         authentification_lots_machine2_v2.log -> lot_0be2226ba97a3ad9__authentification_lots_machine2_v2.log
+  [ note] collision de nom, prefixe applique                         console_Q2a_fantome.log -> lot_b7f328b916ba720d__console_Q2a_fantome.log
+  [ note] collision de nom, prefixe applique                         console_Q2a_fantome.log -> lot_735b9394013b02db__console_Q2a_fantome.log
+  [ note] collision de nom, prefixe applique                         console_Q2a_jumeau.log -> lot_b7f328b916ba720d__console_Q2a_jumeau.log
+  [ note] collision de nom, prefixe applique                         console_Q2a_jumeau.log -> lot_735b9394013b02db__console_Q2a_jumeau.log
+  [ note] collision de nom, prefixe applique                         console_Q2b_fantome.log -> lot_b7f328b916ba720d__console_Q2b_fantome.log
+  [ note] collision de nom, prefixe applique                         console_Q2b_fantome.log -> lot_735b9394013b02db__console_Q2b_fantome.log
+  [ note] collision de nom, prefixe applique                         console_Q2b_jumeau.log -> lot_b7f328b916ba720d__console_Q2b_jumeau.log
+  [ note] collision de nom, prefixe applique                         console_Q2b_jumeau.log -> lot_735b9394013b02db__console_Q2b_jumeau.log
+  [ note] collision de nom, prefixe applique                         console_Q2c_fantome.log -> lot_b7f328b916ba720d__console_Q2c_fantome.log
+  [ note] collision de nom, prefixe applique                         console_Q2c_fantome.log -> lot_735b9394013b02db__console_Q2c_fantome.log
+  [ note] collision de nom, prefixe applique                         console_Q2c_jumeau.log -> lot_b7f328b916ba720d__console_Q2c_jumeau.log
+  [ note] collision de nom, prefixe applique                         console_Q2c_jumeau.log -> lot_735b9394013b02db__console_Q2c_jumeau.log
+  [ note] collision de nom, prefixe applique                         console_Q2d_fantome.log -> lot_b7f328b916ba720d__console_Q2d_fantome.log
+  [ note] collision de nom, prefixe applique                         console_Q2d_fantome.log -> lot_735b9394013b02db__console_Q2d_fantome.log
+  [ note] collision de nom, prefixe applique                         console_Q2d_jumeau.log -> lot_b7f328b916ba720d__console_Q2d_jumeau.log
+  [ note] collision de nom, prefixe applique                         console_Q2d_jumeau.log -> lot_735b9394013b02db__console_Q2d_jumeau.log
+  [ note] collision de nom, prefixe applique                         console_Qa_fantome.log -> lot_b7f328b916ba720d__console_Qa_fantome.log
+  [ note] collision de nom, prefixe applique                         console_Qa_fantome.log -> lot_735b9394013b02db__console_Qa_fantome.log
+  [ note] collision de nom, prefixe applique                         console_Qa_jumeau.log -> lot_b7f328b916ba720d__console_Qa_jumeau.log
+  [ note] collision de nom, prefixe applique                         console_Qa_jumeau.log -> lot_735b9394013b02db__console_Qa_jumeau.log
+  [ note] collision de nom, prefixe applique                         console_Qc_fantome.log -> lot_b7f328b916ba720d__console_Qc_fantome.log
+  [ note] collision de nom, prefixe applique                         console_Qc_fantome.log -> lot_735b9394013b02db__console_Qc_fantome.log
+  [ note] collision de nom, prefixe applique                         console_Qc_jumeau.log -> lot_b7f328b916ba720d__console_Qc_jumeau.log
+  [ note] collision de nom, prefixe applique                         console_Qc_jumeau.log -> lot_735b9394013b02db__console_Qc_jumeau.log
+  [ note] collision de nom, prefixe applique                         console_Qd_fantome.log -> lot_b7f328b916ba720d__console_Qd_fantome.log
+  [ note] collision de nom, prefixe applique                         console_Qd_fantome.log -> lot_735b9394013b02db__console_Qd_fantome.log
+  [ note] collision de nom, prefixe applique                         console_Qd_jumeau.log -> lot_b7f328b916ba720d__console_Qd_jumeau.log
+  [ note] collision de nom, prefixe applique                         console_Qd_jumeau.log -> lot_735b9394013b02db__console_Qd_jumeau.log
+  [ note] collision de nom, prefixe applique                         console_Qe_fantome.log -> lot_b7f328b916ba720d__console_Qe_fantome.log
+  [ note] collision de nom, prefixe applique                         console_Qe_fantome.log -> lot_735b9394013b02db__console_Qe_fantome.log
+  [ note] collision de nom, prefixe applique                         console_Qe_jumeau.log -> lot_b7f328b916ba720d__console_Qe_jumeau.log
+  [ note] collision de nom, prefixe applique                         console_Qe_jumeau.log -> lot_735b9394013b02db__console_Qe_jumeau.log
+  [ note] collision de nom, prefixe applique                         console_Qf_fantome.log -> lot_b7f328b916ba720d__console_Qf_fantome.log
+  [ note] collision de nom, prefixe applique                         console_Qf_fantome.log -> lot_735b9394013b02db__console_Qf_fantome.log
+  [ note] collision de nom, prefixe applique                         console_Qf_jumeau.log -> lot_b7f328b916ba720d__console_Qf_jumeau.log
+  [ note] collision de nom, prefixe applique                         console_Qf_jumeau.log -> lot_735b9394013b02db__console_Qf_jumeau.log
+  [ note] collision de nom, prefixe applique                         console_ancres.log -> lot_b7f328b916ba720d__console_ancres.log
+  [ note] collision de nom, prefixe applique                         console_ancres.log -> lot_735b9394013b02db__console_ancres.log
+  [ note] collision de nom, prefixe applique                         console_etage0.log -> lot_b7f328b916ba720d__console_etage0.log
+  [ note] collision de nom, prefixe applique                         console_etage0.log -> lot_735b9394013b02db__console_etage0.log
+  [ note] collision de nom, prefixe applique                         console_etage1.log -> lot_b7f328b916ba720d__console_etage1.log
+  [ note] collision de nom, prefixe applique                         console_etage1.log -> lot_735b9394013b02db__console_etage1.log
+  [ note] collision de nom, prefixe applique                         debut.txt -> lot_c58c2b3f533c516b__debut.txt
+  [ note] collision de nom, prefixe applique                         debut.txt -> lot_295b2b1549b076c2__debut.txt
+  [ note] collision de nom, prefixe applique                         feuille_gel_sommet_garde.log -> lot_b7f328b916ba720d__feuille_gel_sommet_garde.log
+  [ note] collision de nom, prefixe applique                         feuille_gel_sommet_garde.log -> lot_735b9394013b02db__feuille_gel_sommet_garde.log
+  [ note] collision de nom, prefixe applique                         garde_sommet.json -> lot_b7f328b916ba720d__garde_sommet.json
+  [ note] collision de nom, prefixe applique                         garde_sommet.json -> lot_735b9394013b02db__garde_sommet.json
+  [ note] collision de nom, prefixe applique                         lect2D_Q2a_fantome.json -> lot_295b2b1549b076c2__lect2D_Q2a_fantome.json
+  [ note] collision de nom, prefixe applique                         lect2D_Q2a_fantome.json -> lot_b7f328b916ba720d__lect2D_Q2a_fantome.json
+  [ note] collision de nom, prefixe applique                         lect2D_Q2a_fantome.json -> lot_735b9394013b02db__lect2D_Q2a_fantome.json
+  [ note] collision de nom, prefixe applique                         lect2D_Q2a_jumeau.json -> lot_295b2b1549b076c2__lect2D_Q2a_jumeau.json
+  [ note] collision de nom, prefixe applique                         lect2D_Q2a_jumeau.json -> lot_b7f328b916ba720d__lect2D_Q2a_jumeau.json
+  [ note] collision de nom, prefixe applique                         lect2D_Q2a_jumeau.json -> lot_735b9394013b02db__lect2D_Q2a_jumeau.json
+  [ note] collision de nom, prefixe applique                         lect2D_Q2b_fantome.json -> lot_295b2b1549b076c2__lect2D_Q2b_fantome.json
+  [ note] collision de nom, prefixe applique                         lect2D_Q2b_fantome.json -> lot_b7f328b916ba720d__lect2D_Q2b_fantome.json
+  [ note] collision de nom, prefixe applique                         lect2D_Q2b_fantome.json -> lot_735b9394013b02db__lect2D_Q2b_fantome.json
+  [ note] collision de nom, prefixe applique                         lect2D_Q2b_jumeau.json -> lot_295b2b1549b076c2__lect2D_Q2b_jumeau.json
+  [ note] collision de nom, prefixe applique                         lect2D_Q2b_jumeau.json -> lot_b7f328b916ba720d__lect2D_Q2b_jumeau.json
+  [ note] collision de nom, prefixe applique                         lect2D_Q2b_jumeau.json -> lot_735b9394013b02db__lect2D_Q2b_jumeau.json
+  [ note] collision de nom, prefixe applique                         lect2D_Q2c_fantome.json -> lot_295b2b1549b076c2__lect2D_Q2c_fantome.json
+  [ note] collision de nom, prefixe applique                         lect2D_Q2c_fantome.json -> lot_b7f328b916ba720d__lect2D_Q2c_fantome.json
+  [ note] collision de nom, prefixe applique                         lect2D_Q2c_fantome.json -> lot_735b9394013b02db__lect2D_Q2c_fantome.json
+  [ note] collision de nom, prefixe applique                         lect2D_Q2c_jumeau.json -> lot_295b2b1549b076c2__lect2D_Q2c_jumeau.json
+  [ note] collision de nom, prefixe applique                         lect2D_Q2c_jumeau.json -> lot_b7f328b916ba720d__lect2D_Q2c_jumeau.json
+  [ note] collision de nom, prefixe applique                         lect2D_Q2c_jumeau.json -> lot_735b9394013b02db__lect2D_Q2c_jumeau.json
+  [ note] collision de nom, prefixe applique                         lect2D_Q2d_fantome.json -> lot_295b2b1549b076c2__lect2D_Q2d_fantome.json
+  [ note] collision de nom, prefixe applique                         lect2D_Q2d_fantome.json -> lot_b7f328b916ba720d__lect2D_Q2d_fantome.json
+  [ note] collision de nom, prefixe applique                         lect2D_Q2d_fantome.json -> lot_735b9394013b02db__lect2D_Q2d_fantome.json
+  [ note] collision de nom, prefixe applique                         lect2D_Q2d_jumeau.json -> lot_295b2b1549b076c2__lect2D_Q2d_jumeau.json
+  [ note] collision de nom, prefixe applique                         lect2D_Q2d_jumeau.json -> lot_b7f328b916ba720d__lect2D_Q2d_jumeau.json
+  [ note] collision de nom, prefixe applique                         lect2D_Q2d_jumeau.json -> lot_735b9394013b02db__lect2D_Q2d_jumeau.json
+  [ note] collision de nom, prefixe applique                         lect2D_Qa_fantome.json -> lot_c58c2b3f533c516b__lect2D_Qa_fantome.json
+  [ note] collision de nom, prefixe applique                         lect2D_Qa_fantome.json -> lot_b7f328b916ba720d__lect2D_Qa_fantome.json
+  [ note] collision de nom, prefixe applique                         lect2D_Qa_fantome.json -> lot_735b9394013b02db__lect2D_Qa_fantome.json
+  [ note] collision de nom, prefixe applique                         lect2D_Qa_jumeau.json -> lot_c58c2b3f533c516b__lect2D_Qa_jumeau.json
+  [ note] collision de nom, prefixe applique                         lect2D_Qa_jumeau.json -> lot_b7f328b916ba720d__lect2D_Qa_jumeau.json
+  [ note] collision de nom, prefixe applique                         lect2D_Qa_jumeau.json -> lot_735b9394013b02db__lect2D_Qa_jumeau.json
+  [ note] collision de nom, prefixe applique                         lect2D_Qc_fantome.json -> lot_c58c2b3f533c516b__lect2D_Qc_fantome.json
+  [ note] collision de nom, prefixe applique                         lect2D_Qc_fantome.json -> lot_b7f328b916ba720d__lect2D_Qc_fantome.json
+  [ note] collision de nom, prefixe applique                         lect2D_Qc_fantome.json -> lot_735b9394013b02db__lect2D_Qc_fantome.json
+  [ note] collision de nom, prefixe applique                         lect2D_Qc_jumeau.json -> lot_c58c2b3f533c516b__lect2D_Qc_jumeau.json
+  [ note] collision de nom, prefixe applique                         lect2D_Qc_jumeau.json -> lot_b7f328b916ba720d__lect2D_Qc_jumeau.json
+  [ note] collision de nom, prefixe applique                         lect2D_Qc_jumeau.json -> lot_735b9394013b02db__lect2D_Qc_jumeau.json
+  [ note] collision de nom, prefixe applique                         lect2D_Qd_fantome.json -> lot_c58c2b3f533c516b__lect2D_Qd_fantome.json
+  [ note] collision de nom, prefixe applique                         lect2D_Qd_fantome.json -> lot_b7f328b916ba720d__lect2D_Qd_fantome.json
+  [ note] collision de nom, prefixe applique                         lect2D_Qd_fantome.json -> lot_735b9394013b02db__lect2D_Qd_fantome.json
+  [ note] collision de nom, prefixe applique                         lect2D_Qd_jumeau.json -> lot_c58c2b3f533c516b__lect2D_Qd_jumeau.json
+  [ note] collision de nom, prefixe applique                         lect2D_Qd_jumeau.json -> lot_b7f328b916ba720d__lect2D_Qd_jumeau.json
+  [ note] collision de nom, prefixe applique                         lect2D_Qd_jumeau.json -> lot_735b9394013b02db__lect2D_Qd_jumeau.json
+  [ note] collision de nom, prefixe applique                         lect2D_Qe_fantome.json -> lot_c58c2b3f533c516b__lect2D_Qe_fantome.json
+  [ note] collision de nom, prefixe applique                         lect2D_Qe_fantome.json -> lot_b7f328b916ba720d__lect2D_Qe_fantome.json
+  [ note] collision de nom, prefixe applique                         lect2D_Qe_fantome.json -> lot_735b9394013b02db__lect2D_Qe_fantome.json
+  [ note] collision de nom, prefixe applique                         lect2D_Qe_jumeau.json -> lot_c58c2b3f533c516b__lect2D_Qe_jumeau.json
+  [ note] collision de nom, prefixe applique                         lect2D_Qe_jumeau.json -> lot_b7f328b916ba720d__lect2D_Qe_jumeau.json
+  [ note] collision de nom, prefixe applique                         lect2D_Qe_jumeau.json -> lot_735b9394013b02db__lect2D_Qe_jumeau.json
+  [ note] collision de nom, prefixe applique                         lect2D_Qf_fantome.json -> lot_c58c2b3f533c516b__lect2D_Qf_fantome.json
+  [ note] collision de nom, prefixe applique                         lect2D_Qf_fantome.json -> lot_b7f328b916ba720d__lect2D_Qf_fantome.json
+  [ note] collision de nom, prefixe applique                         lect2D_Qf_fantome.json -> lot_735b9394013b02db__lect2D_Qf_fantome.json
+  [ note] collision de nom, prefixe applique                         lect2D_Qf_jumeau.json -> lot_c58c2b3f533c516b__lect2D_Qf_jumeau.json
+  [ note] collision de nom, prefixe applique                         lect2D_Qf_jumeau.json -> lot_b7f328b916ba720d__lect2D_Qf_jumeau.json
+  [ note] collision de nom, prefixe applique                         lect2D_Qf_jumeau.json -> lot_735b9394013b02db__lect2D_Qf_jumeau.json
+  [ note] collision de nom, prefixe applique                         pilote_gel_sommet.log -> lot_b7f328b916ba720d__pilote_gel_sommet.log
+  [ note] collision de nom, prefixe applique                         pilote_gel_sommet.log -> lot_735b9394013b02db__pilote_gel_sommet.log
+  [ note] collision de nom, prefixe applique                         sonde_ter_ancres.json -> lot_b7f328b916ba720d__sonde_ter_ancres.json
+  [ note] collision de nom, prefixe applique                         sonde_ter_ancres.json -> lot_735b9394013b02db__sonde_ter_ancres.json
+  [ note] collision de nom, prefixe applique                         sonde_ter_etage0.json -> lot_b7f328b916ba720d__sonde_ter_etage0.json
+  [ note] collision de nom, prefixe applique                         sonde_ter_etage0.json -> lot_735b9394013b02db__sonde_ter_etage0.json
+  [ note] collision de nom, prefixe applique                         sonde_ter_etage1.json -> lot_b7f328b916ba720d__sonde_ter_etage1.json
+  [ note] collision de nom, prefixe applique                         sonde_ter_etage1.json -> lot_735b9394013b02db__sonde_ter_etage1.json
+  [ note] collision de nom, prefixe applique                         verdict_ter_instrument.json -> lot_b7f328b916ba720d__verdict_ter_instrument.json
+  [ note] collision de nom, prefixe applique                         verdict_ter_instrument.json -> lot_735b9394013b02db__verdict_ter_instrument.json
+  [PASSE] aucun chemin cible en double ni deja au registre           547 chemins cibles
+  [PASSE] aucun doublon de canon dans le depot                       547 pieces
+  [PASSE] aucune des pieces exclues (vie privee, delta 102) n entre  6 exclues declarees, 0 rencontrees ; 547 lignes de depot
+  [PASSE] toute collision resolue porte le prefixe de son LOT (aucun 115 prefixes
+  [PASSE] les .md/.py/.txt deposes sont B == brut (ASCII/LF)         125 pieces texte
+  [PASSE] le manifeste relu porte autant de lignes que de pieces     547 lignes, 547 pieces
+  [PASSE] chaque source du manifeste resout encore au canon ecrit    0 ecart
+  [PASSE] le manifeste declare son compte, egal aux lignes           pieces : 547
+  [PASSE] le manifeste est ASCII                                     170044 octets
+
+=====================================================================
+BILAN PERIMETRE : 21/21 controles PASSENT
+31 empreintes citees : 4 au registre, 27 au poste, 0 zip, 0 valeurs, 0 non resolues
+DEPOT : 547 pieces (gels 2, journal 534, scripts 11) ; manifeste MANIFEST_DEPOT_delta105_machine2_v1.txt a09a01285f5f9b6a
+=====================================================================

@@ -1,0 +1,312 @@
+2026-11-23 00:16:01 PILOTE DU GEL SOMMET ; 12 processus ; python 3.11.9 ; drapeau -P
+2026-11-23 00:16:01 pilote pilote_gel_sommet_machine1_v1.py canon ed4c3886b17fcdc3
+2026-11-23 00:16:01   canon moteur            82a0be882568fe0c 
+2026-11-23 00:16:01   canon depot             10887c60d5f55bcf 
+2026-11-23 00:16:01   canon retenus           69b3bab3bb8480b7 
+2026-11-23 00:16:01   canon tp_reference      4d51dd58ef456fe9 
+2026-11-23 00:16:01   canon reference_ancres  6600fb8418c79930 
+2026-11-23 00:16:01   canon table_ordre3      35fa7b73f2b7f8eb 
+2026-11-23 00:16:01   canon sonde_lecteur     d5cc48f48e37af99 
+2026-11-23 00:16:01   canon feuille_lecteur   83701094e6a2b965 
+2026-11-23 00:16:01   canon table             4238e2b262119f83 
+2026-11-23 00:16:01   canon pilote_machine2   47a84eae6052f006 
+2026-11-23 00:16:01   canon feuille_sommet    ac934e0caaa59c08 
+2026-11-23 00:16:01 ETAGE A : sonde deposee du lecteur, etage0, ancres, etage1 ; puis feuille deposee, etape instrument
+2026-11-23 00:16:21   lecteur etage0                     code=0 duree=20 s
+2026-11-23 00:30:08   lecteur ancres                     code=0 duree=846 s
+2026-11-23 00:30:58   lecteur etage1                     code=0 duree=897 s
+2026-11-23 00:30:58   feuille du lecteur, instrument     code=0 duree=0 s
+2026-11-23 00:30:58 INSTRUMENT DU LECTEUR : TIENT ; canon de son verdict c11edf7b49007d05
+2026-11-23 00:30:58 ETAGE A' : temoins positifs du sommet, 9 points : Qa Qc Qd Qe Qf Q2a Q2b Q2c Q2d
+2026-11-23 00:33:40   lecture Qa jumeau                  code=0 duree=161 s
+2026-11-23 00:33:40   lecture Qe jumeau                  code=0 duree=161 s
+2026-11-23 00:33:41   lecture Qc jumeau                  code=0 duree=163 s
+2026-11-23 00:33:41   lecture Qd jumeau                  code=0 duree=163 s
+2026-11-23 00:33:42   lecture Qf jumeau                  code=0 duree=163 s
+2026-11-23 00:33:42   lecture Qf fantome                 code=0 duree=164 s
+2026-11-23 00:33:43   lecture Qe fantome                 code=0 duree=165 s
+2026-11-23 00:33:44   lecture Qa fantome                 code=0 duree=166 s
+2026-11-23 00:33:46   lecture Qc fantome                 code=0 duree=168 s
+2026-11-23 00:33:46   lecture Qd fantome                 code=0 duree=168 s
+2026-11-23 00:33:58   lecture Q2a jumeau                 code=0 duree=180 s
+2026-11-23 00:33:59   lecture Q2a fantome                code=0 duree=180 s
+2026-11-23 00:35:50   lecture Q2c jumeau                 code=0 duree=129 s
+2026-11-23 00:35:51   lecture Q2d jumeau                 code=0 duree=129 s
+2026-11-23 00:35:53   lecture Q2c fantome                code=0 duree=132 s
+2026-11-23 00:35:53   lecture Q2d fantome                code=0 duree=131 s
+2026-11-23 00:36:04   lecture Q2b jumeau                 code=0 duree=144 s
+2026-11-23 00:36:05   lecture Q2b fantome                code=0 duree=145 s
+2026-11-23 00:36:05   feuille du gel, etape de garde     code=0 duree=0 s
+2026-11-23 00:36:05     ====================================================================================================
+2026-11-23 00:36:05     FEUILLE DU GEL SOMMET v1 -- ETAPE DE GARDE (instrument et temoins positifs), RIEN N'EST JUGE
+2026-11-23 00:36:05     ====================================================================================================
+2026-11-23 00:36:05     INSTRUMENT DU LECTEUR (etage 0, ancres, etage 1 ; pieces deposees) : TIENT
+2026-11-23 00:36:05     TEMOINS POSITIFS DU SOMMET (les neuf points sacrifies de Q et de Q2, relus dans le run)
+2026-11-23 00:36:05     temoin  w2           m  lecteur        jumeau     plateau lu   reference    ln(lu / reference)  ln(lu / G3*)  tient
+2026-11-23 00:36:05     Qa      2            0  QUALIFIE       tenu       1.36078e-05  1.36078e-05  +0.00e+00           +0.00002      oui
+2026-11-23 00:36:05     Qc      2            0  QUALIFIE       tenu       5.44311e-05  5.44311e-05  +0.00e+00           +0.00000      oui
+2026-11-23 00:36:05     Qd      2            0  QUALIFIE       tenu       1.08861e-04  1.08861e-04  +0.00e+00           -0.00000      oui
+2026-11-23 00:36:05     Qe      20001/10000  0  QUALIFIE       tenu       1.20926e-05  1.20926e-05  +0.00e+00           +0.00002      oui
+2026-11-23 00:36:05     Qf      20001/10000  0  QUALIFIE       tenu       2.91446e-06  2.91446e-06  +0.00e+00           -0.00008      oui
+2026-11-23 00:36:05     Q2a     20001/10000  1  QUALIFIE       tenu       4.94717e-08  4.94717e-08  +0.00e+00           +0.00019      oui
+2026-11-23 00:36:05     Q2b     20001/10000  2  QUALIFIE       tenu       2.05518e-09  2.05518e-09  +0.00e+00           +0.00034      oui
+2026-11-23 00:36:05     Q2c     19999/10000  0  QUALIFIE       tenu       1.21073e-05  1.21073e-05  +0.00e+00           +0.00002      oui
+2026-11-23 00:36:05     Q2d     19999/10000  0  QUALIFIE       tenu       2.92063e-06  2.92063e-06  +0.00e+00           -0.00008      oui
+2026-11-23 00:36:05     TEMOINS POSITIFS : TIENNENT (9 sur 9)
+2026-11-23 00:36:05     GARDE : TIENT : les cellules peuvent etre lues
+2026-11-23 00:36:05     ecrit run_sommet_2026-11-23\garde_sommet.json
+2026-11-23 00:36:05 GARDE : TIENT : les cellules peuvent etre lues ; canon 707b6d999a2b9100
+2026-11-23 00:36:05 ETAGE B : 56 cellules : MPa1 MPa2 MPa3 MPa4 MPa5 MPa6 MPa7 MPb1 MPb2 MPb3 MPb4 MPb5 MPb6 MPb7 PPa1 PPa2 PPa3 PPa4 PPa5 PPa6 PPa7 PPb1 PPb2 PPb3 PPb4 PPb5 PPb6 PPb7 MGa1 MGa2 MGa3 MGa4 MGa5 MGa6 MGa7 MGb1 MGb2 MGb3 MGb4 MGb5 MGb6 MGb7 PGa1 PGa2 PGa3 PGa4 PGa5 PGa6 PGa7 PGb1 PGb2 PGb3 PGb4 PGb5 PGb6 PGb7
+2026-11-23 00:39:07   lecture MPa4 jumeau                code=0 duree=182 s
+2026-11-23 00:39:07   lecture MPa3 jumeau                code=0 duree=182 s
+2026-11-23 00:39:08   lecture MPa6 jumeau                code=0 duree=183 s
+2026-11-23 00:39:09   lecture MPa5 jumeau                code=0 duree=183 s
+2026-11-23 00:39:10   lecture MPa3 fantome               code=0 duree=185 s
+2026-11-23 00:39:10   lecture MPa4 fantome               code=0 duree=185 s
+2026-11-23 00:39:11   lecture MPa5 fantome               code=0 duree=186 s
+2026-11-23 00:39:12   lecture MPa6 fantome               code=0 duree=187 s
+2026-11-23 00:39:27   lecture MPa1 jumeau                code=0 duree=202 s
+2026-11-23 00:39:29   lecture MPa1 fantome               code=0 duree=204 s
+2026-11-23 00:39:29   lecture MPa2 jumeau                code=0 duree=204 s
+2026-11-23 00:39:31   lecture MPa2 fantome               code=0 duree=206 s
+2026-11-23 00:42:09   lecture MPa7 jumeau                code=0 duree=182 s
+2026-11-23 00:42:13   lecture MPb3 jumeau                code=0 duree=182 s
+2026-11-23 00:42:14   lecture MPb3 fantome               code=0 duree=182 s
+2026-11-23 00:42:15   lecture MPa7 fantome               code=0 duree=187 s
+2026-11-23 00:42:30   lecture MPb1 jumeau                code=0 duree=202 s
+2026-11-23 00:42:30   lecture MPb4 jumeau                code=0 duree=183 s
+2026-11-23 00:42:32   lecture MPb5 jumeau                code=0 duree=183 s
+2026-11-23 00:42:33   lecture MPb2 jumeau                code=0 duree=203 s
+2026-11-23 00:42:33   lecture MPb1 fantome               code=0 duree=205 s
+2026-11-23 00:42:34   lecture MPb4 fantome               code=0 duree=184 s
+2026-11-23 00:42:36   lecture MPb2 fantome               code=0 duree=206 s
+2026-11-23 00:42:36   lecture MPb5 fantome               code=0 duree=185 s
+2026-11-23 00:45:07   lecture MPb6 jumeau                code=0 duree=179 s
+2026-11-23 00:45:12   lecture MPb7 jumeau                code=0 duree=178 s
+2026-11-23 00:45:14   lecture MPb6 fantome               code=0 duree=181 s
+2026-11-23 00:45:18   lecture MPb7 fantome               code=0 duree=183 s
+2026-11-23 00:45:31   lecture PPa3 jumeau                code=0 duree=178 s
+2026-11-23 00:45:33   lecture PPa4 jumeau                code=0 duree=177 s
+2026-11-23 00:45:33   lecture PPa3 fantome               code=0 duree=180 s
+2026-11-23 00:45:35   lecture PPa4 fantome               code=0 duree=179 s
+2026-11-23 00:45:47   lecture PPa1 jumeau                code=0 duree=197 s
+2026-11-23 00:45:50   lecture PPa1 fantome               code=0 duree=200 s
+2026-11-23 00:45:52   lecture PPa2 jumeau                code=0 duree=200 s
+2026-11-23 00:45:54   lecture PPa2 fantome               code=0 duree=202 s
+2026-11-23 00:47:58   lecture PPa5 jumeau                code=0 duree=171 s
+2026-11-23 00:48:06   lecture PPa5 fantome               code=0 duree=174 s
+2026-11-23 00:48:06   lecture PPa6 jumeau                code=0 duree=172 s
+2026-11-23 00:48:13   lecture PPa6 fantome               code=0 duree=175 s
+2026-11-23 00:48:23   lecture PPa7 jumeau                code=0 duree=172 s
+2026-11-23 00:48:31   lecture PPa7 fantome               code=0 duree=178 s
+2026-11-23 00:48:44   lecture PPb3 jumeau                code=0 duree=173 s
+2026-11-23 00:48:46   lecture PPb1 jumeau                code=0 duree=193 s
+2026-11-23 00:48:47   lecture PPb3 fantome               code=0 duree=173 s
+2026-11-23 00:48:49   lecture PPb1 fantome               code=0 duree=194 s
+2026-11-23 00:49:02   lecture PPb2 jumeau                code=0 duree=195 s
+2026-11-23 00:49:08   lecture PPb2 fantome               code=0 duree=197 s
+2026-11-23 00:50:51   lecture PPb4 jumeau                code=0 duree=173 s
+2026-11-23 00:51:00   lecture PPb5 jumeau                code=0 duree=173 s
+2026-11-23 00:51:02   lecture PPb4 fantome               code=0 duree=176 s
+2026-11-23 00:51:10   lecture PPb5 fantome               code=0 duree=176 s
+2026-11-23 00:51:17   lecture PPb6 jumeau                code=0 duree=174 s
+2026-11-23 00:51:28   lecture PPb6 fantome               code=0 duree=178 s
+2026-11-23 00:51:38   lecture PPb7 jumeau                code=0 duree=174 s
+2026-11-23 00:51:47   lecture PPb7 fantome               code=0 duree=180 s
+2026-11-23 00:52:03   lecture MGa1 jumeau                code=0 duree=196 s
+2026-11-23 00:52:07   lecture MGa1 fantome               code=0 duree=197 s
+2026-11-23 00:52:20   lecture MGa2 jumeau                code=0 duree=197 s
+2026-11-23 00:52:27   lecture MGa2 fantome               code=0 duree=199 s
+2026-11-23 00:53:44   lecture MGa3 jumeau                code=0 duree=173 s
+2026-11-23 00:53:53   lecture MGa3 fantome               code=0 duree=174 s
+2026-11-23 00:53:55   lecture MGa4 jumeau                code=0 duree=173 s
+2026-11-23 00:54:06   lecture MGa4 fantome               code=0 duree=176 s
+2026-11-23 00:54:10   lecture MGa5 jumeau                code=0 duree=173 s
+2026-11-23 00:54:25   lecture MGa5 fantome               code=0 duree=176 s
+2026-11-23 00:54:31   lecture MGa6 jumeau                code=0 duree=173 s
+2026-11-23 00:54:45   lecture MGa6 fantome               code=0 duree=179 s
+2026-11-23 00:54:56   lecture MGa7 jumeau                code=0 duree=173 s
+2026-11-23 00:55:09   lecture MGa7 fantome               code=0 duree=182 s
+2026-11-23 00:55:35   lecture MGb1 jumeau                code=0 duree=195 s
+2026-11-23 00:55:45   lecture MGb1 fantome               code=0 duree=197 s
+2026-11-23 00:56:48   lecture MGb3 jumeau                code=0 duree=173 s
+2026-11-23 00:57:01   lecture MGb3 fantome               code=0 duree=175 s
+2026-11-23 00:57:01   lecture MGb2 jumeau                code=0 duree=197 s
+2026-11-23 00:57:03   lecture MGb4 jumeau                code=0 duree=173 s
+2026-11-23 00:57:12   lecture MGb2 fantome               code=0 duree=199 s
+2026-11-23 00:57:21   lecture MGb4 fantome               code=0 duree=176 s
+2026-11-23 00:57:25   lecture MGb5 jumeau                code=0 duree=173 s
+2026-11-23 00:57:43   lecture MGb5 fantome               code=0 duree=177 s
+2026-11-23 00:57:50   lecture MGb6 jumeau                code=0 duree=173 s
+2026-11-23 00:58:09   lecture MGb6 fantome               code=0 duree=180 s
+2026-11-23 00:58:28   lecture MGb7 jumeau                code=0 duree=173 s
+2026-11-23 00:58:49   lecture MGb7 fantome               code=0 duree=185 s
+2026-11-23 01:00:05   lecture PGa1 jumeau                code=0 duree=197 s
+2026-11-23 01:00:08   lecture PGa3 jumeau                code=0 duree=176 s
+2026-11-23 01:00:16   lecture PGa3 fantome               code=0 duree=176 s
+2026-11-23 01:00:17   lecture PGa1 fantome               code=0 duree=196 s
+2026-11-23 01:00:17   lecture PGa2 jumeau                code=0 duree=196 s
+2026-11-23 01:00:17   lecture PGa4 jumeau                code=0 duree=173 s
+2026-11-23 01:00:19   lecture PGa2 fantome               code=0 duree=196 s
+2026-11-23 01:00:32   lecture PGa4 fantome               code=0 duree=170 s
+2026-11-23 01:00:36   lecture PGa5 jumeau                code=0 duree=166 s
+2026-11-23 01:00:54   lecture PGa5 fantome               code=0 duree=165 s
+2026-11-23 01:01:06   lecture PGa6 jumeau                code=0 duree=158 s
+2026-11-23 01:01:28   lecture PGa6 fantome               code=0 duree=158 s
+2026-11-23 01:02:32   lecture PGa7 jumeau                code=0 duree=147 s
+2026-11-23 01:02:47   lecture PGa7 fantome               code=0 duree=159 s
+2026-11-23 01:02:51   lecture PGb3 jumeau                code=0 duree=152 s
+2026-11-23 01:03:10   lecture PGb1 jumeau                code=0 duree=173 s
+2026-11-23 01:03:11   lecture PGb3 fantome               code=0 duree=158 s
+2026-11-23 01:03:11   lecture PGb2 jumeau                code=0 duree=174 s
+2026-11-23 01:03:13   lecture PGb1 fantome               code=0 duree=175 s
+2026-11-23 01:03:14   lecture PGb2 fantome               code=0 duree=176 s
+2026-11-23 01:03:15   lecture PGb4 jumeau                code=0 duree=159 s
+2026-11-23 01:03:32   lecture PGb4 fantome               code=0 duree=158 s
+2026-11-23 01:03:42   lecture PGb5 jumeau                code=0 duree=156 s
+2026-11-23 01:04:03   lecture PGb5 fantome               code=0 duree=155 s
+2026-11-23 01:04:43   lecture PGb6 jumeau                code=0 duree=131 s
+2026-11-23 01:04:53   lecture PGb7 jumeau                code=0 duree=123 s
+2026-11-23 01:04:54   lecture PGb6 fantome               code=0 duree=127 s
+2026-11-23 01:05:04   lecture PGb7 fantome               code=0 duree=115 s
+2026-11-23 01:05:04   canons lect2D_MPa1  jumeau b67712328ed2eee9 fantome dda03216bce702b3
+2026-11-23 01:05:04   canons lect2D_MPa2  jumeau e94b9102c584c682 fantome b1407cc05f43456f
+2026-11-23 01:05:04   canons lect2D_MPa3  jumeau ef75680509a63f73 fantome 66ebc541d9a8f0cd
+2026-11-23 01:05:04   canons lect2D_MPa4  jumeau bcf1bdcab739941c fantome d4ff8a0077930c6e
+2026-11-23 01:05:04   canons lect2D_MPa5  jumeau 08081bf1851237a8 fantome bd752d229f71341c
+2026-11-23 01:05:04   canons lect2D_MPa6  jumeau 28837e8a7ebc7363 fantome a109494b96b22f3a
+2026-11-23 01:05:04   canons lect2D_MPa7  jumeau 576c14c0e6e2f01c fantome 6c300ac8935ab6b0
+2026-11-23 01:05:04   canons lect2D_MPb1  jumeau f7c214a88b1142a4 fantome 0fe3f17758e8626f
+2026-11-23 01:05:04   canons lect2D_MPb2  jumeau f0901e0cd64249c7 fantome cbcf9bfff399f28d
+2026-11-23 01:05:04   canons lect2D_MPb3  jumeau 41b40ea58e0648f7 fantome 6be918c254273ab0
+2026-11-23 01:05:04   canons lect2D_MPb4  jumeau 7326adfdf7720de0 fantome b3f67314ac49b0a6
+2026-11-23 01:05:04   canons lect2D_MPb5  jumeau edda211661765236 fantome 6514d4ee4d9c5648
+2026-11-23 01:05:04   canons lect2D_MPb6  jumeau 2655a8faf52bd940 fantome 060f1c44dc54a094
+2026-11-23 01:05:04   canons lect2D_MPb7  jumeau eb1f22e8d747dffc fantome 21c01055993732d5
+2026-11-23 01:05:05   canons lect2D_PPa1  jumeau 22d1d1bfed90bd59 fantome f0038c8e6682b858
+2026-11-23 01:05:05   canons lect2D_PPa2  jumeau c8760da7330ec159 fantome 607a8801d8937fa2
+2026-11-23 01:05:05   canons lect2D_PPa3  jumeau efea5df4e431bc47 fantome 6536a4e3decc57fa
+2026-11-23 01:05:05   canons lect2D_PPa4  jumeau 133290d8d91a8960 fantome 079fc440d0a887ec
+2026-11-23 01:05:05   canons lect2D_PPa5  jumeau f40e97da5857cb8b fantome aa5c983aac73973e
+2026-11-23 01:05:05   canons lect2D_PPa6  jumeau cc49475cfc7dff74 fantome 18da030dcc2dc232
+2026-11-23 01:05:05   canons lect2D_PPa7  jumeau 84c6549861699dcc fantome d008cbddbe2ba428
+2026-11-23 01:05:05   canons lect2D_PPb1  jumeau d9c594bc04cb5d4c fantome fe5e97df26778b1a
+2026-11-23 01:05:05   canons lect2D_PPb2  jumeau 719aa5d3d11d046e fantome 59b4df94fd6832af
+2026-11-23 01:05:05   canons lect2D_PPb3  jumeau a37e37853b49aba9 fantome b7d629c4fc78ee9f
+2026-11-23 01:05:05   canons lect2D_PPb4  jumeau b88f687311ce8175 fantome 3eb6b8a1f5ea6dc9
+2026-11-23 01:05:05   canons lect2D_PPb5  jumeau 9e45cd5bd1a1d42e fantome 4ee5fff3b25262a8
+2026-11-23 01:05:05   canons lect2D_PPb6  jumeau 14cc7cfa57b6e82a fantome 0977d4cc15b96516
+2026-11-23 01:05:05   canons lect2D_PPb7  jumeau 0ffb04fc52c2e46b fantome eb14f3fac87220d2
+2026-11-23 01:05:05   canons lect2D_MGa1  jumeau dc168778d81c63aa fantome 576b4a2cd3565d86
+2026-11-23 01:05:05   canons lect2D_MGa2  jumeau 2183dde635413fc8 fantome 84bc94d0cb8b435f
+2026-11-23 01:05:05   canons lect2D_MGa3  jumeau 3989a47512dac3db fantome 3d8dafe9054cc570
+2026-11-23 01:05:05   canons lect2D_MGa4  jumeau 4ba6714f4e89d69f fantome b60df286d111e80f
+2026-11-23 01:05:05   canons lect2D_MGa5  jumeau 68049ca9451539fc fantome 41eee2e20d48973c
+2026-11-23 01:05:05   canons lect2D_MGa6  jumeau 137634c102a24c05 fantome 6429a238449ca80c
+2026-11-23 01:05:05   canons lect2D_MGa7  jumeau 841143e646226115 fantome 031f414c305b3256
+2026-11-23 01:05:05   canons lect2D_MGb1  jumeau a067f5d61a48dbb8 fantome bd8f3388ea2ba565
+2026-11-23 01:05:05   canons lect2D_MGb2  jumeau e3a11fe0a6423ff8 fantome bb12758fe0d5ed20
+2026-11-23 01:05:05   canons lect2D_MGb3  jumeau 30f44a4c1d56c8a5 fantome 13d9fd90a9c77b42
+2026-11-23 01:05:05   canons lect2D_MGb4  jumeau ff37064cab505ec4 fantome 168f3170bb425871
+2026-11-23 01:05:05   canons lect2D_MGb5  jumeau c0c54db5a8ecb651 fantome 302ac71edf79b33c
+2026-11-23 01:05:05   canons lect2D_MGb6  jumeau 6465cabf6e025598 fantome c33550e7361089f8
+2026-11-23 01:05:05   canons lect2D_MGb7  jumeau 6550b628653d5d38 fantome 55886c1eaecc9da7
+2026-11-23 01:05:05   canons lect2D_PGa1  jumeau d027406727cff00d fantome 1e1a03365f537155
+2026-11-23 01:05:05   canons lect2D_PGa2  jumeau d1cd24073f843f88 fantome 198ee11ee3f4e95d
+2026-11-23 01:05:05   canons lect2D_PGa3  jumeau 9d3e8da9708b53a4 fantome b20103979a509a00
+2026-11-23 01:05:05   canons lect2D_PGa4  jumeau 871eb9cb05537d9d fantome cffb0b0c4416fab2
+2026-11-23 01:05:05   canons lect2D_PGa5  jumeau dc82a2746e600d0c fantome 17318e8e87a03a14
+2026-11-23 01:05:05   canons lect2D_PGa6  jumeau 08382949cda0f015 fantome 61215cbb289342e4
+2026-11-23 01:05:05   canons lect2D_PGa7  jumeau 7b6522bd59898f20 fantome e49a798156a7cfce
+2026-11-23 01:05:05   canons lect2D_PGb1  jumeau ecab3f0fb1978693 fantome 0ca4adcd6d7c69ef
+2026-11-23 01:05:05   canons lect2D_PGb2  jumeau 403dc639fa558535 fantome edf59d9427f924c8
+2026-11-23 01:05:05   canons lect2D_PGb3  jumeau 9e6aa21e47a721af fantome 2cfd018336e3a287
+2026-11-23 01:05:05   canons lect2D_PGb4  jumeau b4666465d6b701c4 fantome 1e04cfbfbf2950fc
+2026-11-23 01:05:05   canons lect2D_PGb5  jumeau c20a59f168f6aabe fantome 88f2226f1ce54e55
+2026-11-23 01:05:05   canons lect2D_PGb6  jumeau 715a8ffe0abc5329 fantome 33368981c3ddd3ca
+2026-11-23 01:05:05   canons lect2D_PGb7  jumeau 47ecfcbe49a99cd5 fantome d50c6d9e62b538f9
+2026-11-23 01:05:05 ETAGE C : feuille du gel
+2026-11-23 01:05:05   feuille du gel                     code=0 duree=0 s
+2026-11-23 01:05:05     ====================================================================================================
+2026-11-23 01:05:05     FEUILLE DU GEL SOMMET v1
+2026-11-23 01:05:05     ====================================================================================================
+2026-11-23 01:05:05     INSTRUMENT DU LECTEUR (etage 0, ancres, etage 1 ; pieces deposees) : TIENT
+2026-11-23 01:05:05     TEMOINS POSITIFS DU SOMMET (les neuf points sacrifies de Q et de Q2, relus dans le run)
+2026-11-23 01:05:05     temoin  w2           m  lecteur        jumeau     plateau lu   reference    ln(lu / reference)  ln(lu / G3*)  tient
+2026-11-23 01:05:05     Qa      2            0  QUALIFIE       tenu       1.36078e-05  1.36078e-05  +0.00e+00           +0.00002      oui
+2026-11-23 01:05:05     Qc      2            0  QUALIFIE       tenu       5.44311e-05  5.44311e-05  +0.00e+00           +0.00000      oui
+2026-11-23 01:05:05     Qd      2            0  QUALIFIE       tenu       1.08861e-04  1.08861e-04  +0.00e+00           -0.00000      oui
+2026-11-23 01:05:05     Qe      20001/10000  0  QUALIFIE       tenu       1.20926e-05  1.20926e-05  +0.00e+00           +0.00002      oui
+2026-11-23 01:05:05     Qf      20001/10000  0  QUALIFIE       tenu       2.91446e-06  2.91446e-06  +0.00e+00           -0.00008      oui
+2026-11-23 01:05:05     Q2a     20001/10000  1  QUALIFIE       tenu       4.94717e-08  4.94717e-08  +0.00e+00           +0.00019      oui
+2026-11-23 01:05:05     Q2b     20001/10000  2  QUALIFIE       tenu       2.05518e-09  2.05518e-09  +0.00e+00           +0.00034      oui
+2026-11-23 01:05:05     Q2c     19999/10000  0  QUALIFIE       tenu       1.21073e-05  1.21073e-05  +0.00e+00           +0.00002      oui
+2026-11-23 01:05:05     Q2d     19999/10000  0  QUALIFIE       tenu       2.92063e-06  2.92063e-06  +0.00e+00           -0.00008      oui
+2026-11-23 01:05:05     TEMOINS POSITIFS : TIENNENT (9 sur 9)
+2026-11-23 01:05:05     cellule  w2              kappa   lecteur        temoin     ln Gamma_pl  etal.s  etendue  bande b  ln q      T     jugement
+2026-11-23 01:05:05     MPa1     199989/100000   0.0363  QUALIFIE       tenu       -21.0309     0.0021  0.0034   0.0055   +0.00000  0.01  TIENT
+2026-11-23 01:05:05     MPa2     199989/100000   0.0530  QUALIFIE       tenu       -17.7397     0.0012  0.0021   0.0032   -0.00024  0.01  TIENT
+2026-11-23 01:05:05     MPa3     199989/100000   0.0800  QUALIFIE       tenu       -15.1489     0.0009  0.0018   0.0027   -0.00008  0.01  TIENT
+2026-11-23 01:05:05     MPa4     199989/100000   0.1300  QUALIFIE       tenu       -13.1356     0.0009  0.0024   0.0033   +0.00001  0.01  TIENT
+2026-11-23 01:05:05     MPa5     199989/100000   0.2000  QUALIFIE       tenu       -12.0016     0.0016  0.0003   0.0019   +0.00010  0.01  TIENT
+2026-11-23 01:05:05     MPa6     199989/100000   0.4000  QUALIFIE       tenu       -10.8412     0.0008  0.0015   0.0022   -0.00004  0.01  TIENT
+2026-11-23 01:05:05     MPa7     199989/100000   1.0000  QUALIFIE       tenu       -9.7740      0.0009  0.0030   0.0040   -0.00000  0.01  TIENT
+2026-11-23 01:05:05     MPb1     199993/100000   0.0363  QUALIFIE       tenu       -21.4829     0.0021  0.0034   0.0054   +0.00001  0.01  TIENT
+2026-11-23 01:05:05     MPb2     199993/100000   0.0530  QUALIFIE       tenu       -18.1917     0.0012  0.0021   0.0033   -0.00024  0.01  TIENT
+2026-11-23 01:05:05     MPb3     199993/100000   0.0800  QUALIFIE       tenu       -15.6009     0.0009  0.0017   0.0026   -0.00008  0.01  TIENT
+2026-11-23 01:05:05     MPb4     199993/100000   0.1300  QUALIFIE       tenu       -13.5876     0.0015  0.0022   0.0037   +0.00001  0.01  TIENT
+2026-11-23 01:05:05     MPb5     199993/100000   0.2000  QUALIFIE       tenu       -12.4536     0.0001  0.0003   0.0004   +0.00007  0.01  TIENT
+2026-11-23 01:05:05     MPb6     199993/100000   0.4000  QUALIFIE       tenu       -11.2932     0.0008  0.0019   0.0027   -0.00003  0.01  TIENT
+2026-11-23 01:05:05     MPb7     199993/100000   1.0000  QUALIFIE       tenu       -10.2260     0.0010  0.0032   0.0042   -0.00002  0.01  TIENT
+2026-11-23 01:05:05     PPa1     25001/12500     0.0363  QUALIFIE       tenu       -21.3494     0.0021  0.0033   0.0054   +0.00003  0.01  TIENT
+2026-11-23 01:05:05     PPa2     25001/12500     0.0530  QUALIFIE       tenu       -18.0582     0.0012  0.0024   0.0036   -0.00025  0.01  TIENT
+2026-11-23 01:05:05     PPa3     25001/12500     0.0800  QUALIFIE       tenu       -15.4674     0.0009  0.0014   0.0023   -0.00010  0.01  TIENT
+2026-11-23 01:05:05     PPa4     25001/12500     0.1300  QUALIFIE       tenu       -13.4541     0.0015  0.0018   0.0033   +0.00001  0.01  TIENT
+2026-11-23 01:05:05     PPa5     25001/12500     0.2000  QUALIFIE       tenu       -12.3201     0.0008  0.0017   0.0025   +0.00007  0.01  TIENT
+2026-11-23 01:05:05     PPa6     25001/12500     0.4000  QUALIFIE       tenu       -11.1597     0.0007  0.0033   0.0040   -0.00004  0.01  TIENT
+2026-11-23 01:05:05     PPa7     25001/12500     1.0000  QUALIFIE       tenu       -10.0925     0.0020  0.0024   0.0044   -0.00003  0.01  TIENT
+2026-11-23 01:05:05     PPb1     200011/100000   0.0363  QUALIFIE       tenu       -21.0309     0.0021  0.0033   0.0054   +0.00003  0.01  TIENT
+2026-11-23 01:05:05     PPb2     200011/100000   0.0530  QUALIFIE       tenu       -17.7398     0.0012  0.0024   0.0037   -0.00025  0.01  TIENT
+2026-11-23 01:05:05     PPb3     200011/100000   0.0800  QUALIFIE       tenu       -15.1490     0.0009  0.0013   0.0022   -0.00014  0.01  TIENT
+2026-11-23 01:05:05     PPb4     200011/100000   0.1300  QUALIFIE       tenu       -13.1357     0.0009  0.0017   0.0026   +0.00002  0.01  TIENT
+2026-11-23 01:05:05     PPb5     200011/100000   0.2000  QUALIFIE       tenu       -12.0016     0.0009  0.0019   0.0028   +0.00007  0.01  TIENT
+2026-11-23 01:05:05     PPb6     200011/100000   0.4000  QUALIFIE       tenu       -10.8413     0.0008  0.0032   0.0040   -0.00004  0.01  TIENT
+2026-11-23 01:05:05     PPb7     200011/100000   1.0000  QUALIFIE       tenu       -9.7740      0.0008  0.0031   0.0039   -0.00004  0.01  TIENT
+2026-11-23 01:05:05     MGa1     6249/3125       0.0363  QUALIFIE       tenu       -19.9630     0.0021  0.0034   0.0055   -0.00005  0.01  TIENT
+2026-11-23 01:05:05     MGa2     6249/3125       0.0530  QUALIFIE       tenu       -16.6718     0.0005  0.0016   0.0022   -0.00022  0.01  TIENT
+2026-11-23 01:05:05     MGa3     6249/3125       0.0800  QUALIFIE       tenu       -14.0810     0.0006  0.0023   0.0029   -0.00006  0.01  TIENT
+2026-11-23 01:05:05     MGa4     6249/3125       0.1300  QUALIFIE       tenu       -12.0677     0.0015  0.0030   0.0045   +0.00002  0.01  TIENT
+2026-11-23 01:05:05     MGa5     6249/3125       0.2000  QUALIFIE       tenu       -10.9337     0.0015  0.0021   0.0036   +0.00013  0.01  TIENT
+2026-11-23 01:05:05     MGa6     6249/3125       0.4000  QUALIFIE       tenu       -9.7733      0.0008  0.0026   0.0035   -0.00004  0.01  TIENT
+2026-11-23 01:05:05     MGa7     6249/3125       1.0000  QUALIFIE       tenu       -8.7061      0.0016  0.0023   0.0039   +0.00006  0.01  TIENT
+2026-11-23 01:05:05     MGb1     49989/25000     0.0363  QUALIFIE       tenu       -19.6446     0.0021  0.0035   0.0056   -0.00007  0.01  TIENT
+2026-11-23 01:05:05     MGb2     49989/25000     0.0530  QUALIFIE       tenu       -16.3533     0.0006  0.0013   0.0019   -0.00020  0.01  TIENT
+2026-11-23 01:05:05     MGb3     49989/25000     0.0800  QUALIFIE       tenu       -13.7625     0.0006  0.0026   0.0033   -0.00006  0.01  TIENT
+2026-11-23 01:05:05     MGb4     49989/25000     0.1300  QUALIFIE       tenu       -11.7492     0.0008  0.0031   0.0039   +0.00002  0.01  TIENT
+2026-11-23 01:05:05     MGb5     49989/25000     0.2000  QUALIFIE       tenu       -10.6152     0.0015  0.0027   0.0042   +0.00013  0.01  TIENT
+2026-11-23 01:05:05     MGb6     49989/25000     0.4000  QUALIFIE       tenu       -9.4548      0.0006  0.0029   0.0035   -0.00002  0.01  TIENT
+2026-11-23 01:05:05     MGb7     49989/25000     1.0000  QUALIFIE       tenu       -8.3876      0.0009  0.0024   0.0034   +0.00005  0.01  TIENT
+2026-11-23 01:05:05     PGa1     200039/100000   0.0363  QUALIFIE       tenu       -19.7653     0.0022  0.0031   0.0053   +0.00007  0.01  TIENT
+2026-11-23 01:05:05     PGa2     200039/100000   0.0530  QUALIFIE       tenu       -16.4742     0.0014  0.0028   0.0041   -0.00025  0.01  TIENT
+2026-11-23 01:05:05     PGa3     200039/100000   0.0800  QUALIFIE       tenu       -13.8834     0.0010  0.0012   0.0021   -0.00021  0.01  TIENT
+2026-11-23 01:05:05     PGa4     200039/100000   0.1300  QUALIFIE       tenu       -11.8701     0.0016  0.0010   0.0026   +0.00010  0.01  TIENT
+2026-11-23 01:05:05     PGa5     200039/100000   0.2000  QUALIFIE       tenu       -10.7360     0.0009  0.0031   0.0041   +0.00009  0.01  TIENT
+2026-11-23 01:05:05     PGa6     200039/100000   0.4000  QUALIFIE       tenu       -9.5756      0.0008  0.0024   0.0032   -0.00009  0.01  TIENT
+2026-11-23 01:05:05     PGa7     200039/100000   1.0000  QUALIFIE       tenu       -8.5084      0.0015  0.0021   0.0036   -0.00013  0.01  TIENT
+2026-11-23 01:05:05     PGb1     12503/6250      0.0363  QUALIFIE       tenu       -19.5577     0.0019  0.0030   0.0049   +0.00008  0.01  TIENT
+2026-11-23 01:05:05     PGb2     12503/6250      0.0530  QUALIFIE       tenu       -16.2666     0.0008  0.0028   0.0036   -0.00024  0.01  TIENT
+2026-11-23 01:05:05     PGb3     12503/6250      0.0800  QUALIFIE       tenu       -13.6758     0.0010  0.0014   0.0024   -0.00022  0.01  TIENT
+2026-11-23 01:05:05     PGb4     12503/6250      0.1300  QUALIFIE       tenu       -11.6625     0.0016  0.0012   0.0029   +0.00009  0.01  TIENT
+2026-11-23 01:05:05     PGb5     12503/6250      0.2000  QUALIFIE       tenu       -10.5284     0.0017  0.0030   0.0047   +0.00009  0.01  TIENT
+2026-11-23 01:05:05     PGb6     12503/6250      0.4000  QUALIFIE       tenu       -9.3680      0.0005  0.0026   0.0031   -0.00010  0.01  TIENT
+2026-11-23 01:05:05     PGb7     12503/6250      1.0000  QUALIFIE       tenu       -8.3008      0.0014  0.0030   0.0044   -0.00014  0.01  TIENT
+2026-11-23 01:05:05     S1 (56 cellules, 8 w2) : TENU ; tenues 56, tombees 0 [], non jugeables 0, non lues 0
+2026-11-23 01:05:05       tenues par w2 (sur 7) : 49989/25000 7 ; 6249/3125 7 ; 199989/100000 7 ; 199993/100000 7 ; 25001/12500 7 ; 200011/100000 7 ; 200039/100000 7 ; 12503/6250 7
+2026-11-23 01:05:05       tenues par kappa (sur 8) : 0.0363 8 ; 0.0530 8 ; 0.0800 8 ; 0.1300 8 ; 0.2000 8 ; 0.4000 8 ; 1.0000 8 ; PORTEE : 0.0363 0.0530 0.0800 0.1300 0.2000 0.4000 1.0000
+2026-11-23 01:05:05     consigne, sans jugement, sur 56 cellules lues : plus grand |ln q| 0.00025 ; ln q negatif (lecteur au-dessus de la chaine) a 32 ; ln q du signe de delta a 28 ; ordre 3 plus pres que l'ordre 1 a 35
+2026-11-23 01:05:05       loi d'echelle, etalement de ln(Gamma_pl / |delta|) a kappa egal, lu (chaine) : 0.0363 0.00017 (0.00004) ; 0.0530 0.00028 (0.00032) ; 0.0800 0.00032 (0.00048) ; 0.1300 0.00029 (0.00022) ; 0.2000 0.00024 (0.00028) ; 0.4000 0.00019 (0.00027) ; 1.0000 0.00016 (0.00035)
+2026-11-23 01:05:05       signe de delta, paires de w2 miroirs lues, ln[Phi(delta < 0) / Phi(delta > 0)] lu (chaine) : 0.0363 +0.00003 (-0.00001) ; 0.0530 +0.00005 (+0.00006) ; 0.0800 +0.00008 (+0.00014) ; 0.1300 +0.00006 (+0.00005) ; 0.2000 +0.00006 (+0.00008) ; 0.4000 +0.00005 (+0.00005) ; 1.0000 +0.00005 (+0.00008)
+2026-11-23 01:05:05     VERDICT : S1 TENU
+2026-11-23 01:05:05     ecrit run_sommet_2026-11-23\verdict_sommet.json
+2026-11-23 01:05:05 CANON DU VERDICT : 2c39171a593d95df
+2026-11-23 01:05:05 FIN DU PILOTE ; duree totale 2944 s

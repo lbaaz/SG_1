@@ -1,0 +1,14 @@
+copie du pilote : seules les 3 lignes du dictionnaire CANONS different (remplacees par 1 ligne) ; canon du pilote eprouve ed4c3886b17fcdc3
+p1a  run entier : code 0, FIN DU PILOTE, verdict ecrit                          : TIENT
+p1b  etage A : trois modes de la sonde puis la feuille du lecteur, avant toute lecture : TIENT
+p1c  etage A' : les 18 lectures des temoins sont les lignes du fichier de travail, avant la garde : TIENT
+p1d  etage B : les 112 lectures des cellules sont les lignes du fichier de travail, apres la garde : TIENT
+p1e  130 fichiers de lecture, et les canons des 112 fichiers de cellule au journal : TIENT
+p2  instrument NE TIENT PAS : code 0, aucune lecture, aucune feuille du gel    : TIENT
+p3  garde NE TIENT PAS : 18 lectures de temoins, aucune cellule, pas de verdict : TIENT
+p4  --prevol : etage A, 18 temoins, garde ; aucune cellule, pas de verdict     : TIENT
+p5  dossier du run deja la : refus, rien n'est ecrit                           : TIENT
+p6  une lecture de cellule rend un code non nul : ARRET, pas de verdict        : TIENT
+p7  le pilote non modifie devant des pieces factices : ARRET sur le premier canon, aucun appel : TIENT
+p8  --drapeau autre que -I ou -P : refus avant tout                            : TIENT
+BANC DU PILOTE : 12 cas, 12 tenus

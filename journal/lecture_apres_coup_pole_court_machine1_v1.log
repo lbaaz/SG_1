@@ -1,0 +1,65 @@
+=== 0. mon rejeu : 96 cas ; plus grand ecart a machine 2 (Gamma / g, Re E / g, poids) : 1.9e-10
+
+=== 1. 2D moins chaine : C1 (premier ordre) et C2 (ordre 2, table), par force d'absorbeur
+    a      g       max|2D - C1|  max|2D - C2|   cas ou C1 est plus pres que C2
+    0.5  5e-04   4.48e-04      8.33e-04       12 sur 12
+    0.5  1e-03   1.65e-03      3.16e-03       12 sur 12
+    1.0  5e-04   1.06e-04      1.26e-04       12 sur 12
+    1.0  1e-03   4.73e-04      5.63e-04       12 sur 12
+    2.0  5e-04   5.78e-06      1.05e-05       8 sur 12
+    2.0  1e-03   2.43e-05      2.90e-05       9 sur 12
+    4.0  5e-04   2.02e-06      3.98e-06       12 sur 12
+    4.0  1e-03   7.99e-06      4.02e-06       10 sur 12
+
+=== 2. croissance avec g, cas par cas : (ecart a g = 1e-03) / (ecart a g = 5e-04) ; 4 = terme en g^2
+    a = 0.5 : 2D - C1 : de 3.60 a 4.12 ; 2D - C2 : de 3.79 a 4.20 (C2 a cinq decimales)
+    a = 1.0 : 2D - C1 : de 4.12 a 4.48 ; 2D - C2 : de 3.78 a 4.48 (C2 a cinq decimales)
+
+=== 3. signes a a = 0.5 : (2D - C1), (C2 - C1), par parite de coupe
+    coupes paires   : 2D - C1 : 12 negatifs, 0 positifs ; C2 - C1 : 0 negatifs, 12 positifs
+    coupes impaires : 2D - C1 : 0 negatifs, 12 positifs ; C2 - C1 : 12 negatifs, 0 positifs
+    a = 1, coupes paires   : 2D - C1 : 12 negatifs, 0 positifs
+    a = 1, coupes impaires : 2D - C1 : 0 negatifs, 12 positifs
+    48 cas forts : plus grand |2D - C1| = 2.43e-05 ; cas au-dessus de 2.5e-04 : 0
+
+=== 4. l'ecart 2D - C1 lu comme un changement de force d'absorbeur : d ln a = (2D - C1) / (dC1 / d ln a)
+    (derivee par differences centrees, pas 1e-4 en ln a) ; en unites de g^2 : d ln a / g^2
+    a     m_c  m0    d ln a (5e-04)  d ln a (1e-03)   / g^2 (5e-04)   / g^2 (1e-03)
+    0.5   10   2    -0.00406        -0.01643         -16246          -16430
+    0.5   10   3    -0.00449        -0.01815         -17941          -18151
+    0.5   10   4    -0.00498        -0.02016         -19924          -20163
+    0.5   11   2    -0.00417        -0.01623         -16695          -16226
+    0.5   11   3    -0.00400        -0.01519         -16009          -15191
+    0.5   11   4    -0.00354        -0.01273         -14144          -12733
+    0.5   12   2    -0.00896        -0.03681         -35822          -36811
+    0.5   12   3    -0.00970        -0.03991         -38810          -39909
+    0.5   12   4    -0.01056        -0.04346         -42240          -43462
+    0.5   13   2    -0.01015        -0.03973         -40591          -39733
+    0.5   13   3    -0.01023        -0.03918         -40938          -39177
+    0.5   13   4    -0.01009        -0.03718         -40354          -37177
+    1.0   10   2    -0.00434        -0.01787         -17355          -17868
+    1.0   10   3    -0.00474        -0.01952         -18966          -19523
+    1.0   10   4    -0.00524        -0.02158         -20969          -21579
+    1.0   11   2    -0.00643        -0.02695         -25715          -26954
+    1.0   11   3    -0.00695        -0.02911         -27790          -29114
+    1.0   11   4    -0.00748        -0.03133         -29930          -31334
+    1.0   12   2    -0.00965        -0.04156         -38600          -41560
+    1.0   12   3    -0.01035        -0.04452         -41383          -44525
+    1.0   12   4    -0.01120        -0.04815         -44791          -48150
+    1.0   13   2    -0.01371        -0.06143         -54840          -61434
+    1.0   13   3    -0.01466        -0.06561         -58639          -65613
+    1.0   13   4    -0.01561        -0.06976         -62432          -69757
+    g = 5e-04 : d ln a / g^2 de -62432 a -14144 ; tous negatifs : oui
+    g = 1e-03 : d ln a / g^2 de -69757 a -12733 ; tous negatifs : oui
+    m_c = 10 : d ln a / g^2 de -21579 a -16246 (12 valeurs)
+    m_c = 11 : d ln a / g^2 de -31334 a -12733 (12 valeurs)
+    m_c = 12 : d ln a / g^2 de -48150 a -35822 (12 valeurs)
+    m_c = 13 : d ln a / g^2 de -69757 a -37177 (12 valeurs)
+
+=== 5. le plateau a deux dimensions, a absorbeur fort (48 cas)
+    de 0.054191 a 0.054558 ; moyenne 0.054413 ; reference absorbeur long, premier ordre : 0.054432
+    g = 5e-04 : moyenne 0.054413
+    g = 1e-03 : moyenne 0.054413
+    a = 4, coupes 12 et 13 (12 cas) : de 0.054394 a 0.054450 ; moyenne 0.054421
+    |Gamma / g (1e-03) - Gamma / g (5e-04)|, 24 couples a absorbeur fort : plus grand 1.85e-05 ; moyenne 4.85e-06
+    idem a a = 4 seul (12 couples) : plus grand 5.96e-06

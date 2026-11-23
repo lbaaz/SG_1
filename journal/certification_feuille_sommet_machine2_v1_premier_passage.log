@@ -1,0 +1,40 @@
+TIENT  : s01 base : tout a ln q = 0, plateaux plats
+TIENT  : s02 une cellule tombe (ln q = +0.02)
+TIENT  : s03 une cellule tombe de l autre cote (ln q = -0.02)
+TIENT  : s04 deux cellules tombent (+0.02, -0.02)
+TIENT  : s05 une cellule non jugeable (ln q = 0.01)
+TIENT  : s06 bornes : T - b - 1e-6 (tient), T - b + 1e-6 (non jugeable), T + b - 1e-6 (non jugeable), T + b + 1e-6 (tombe)
+TIENT  : s07 deux tombent ET quinze non lues : TOMBE l emporte
+TIENT  : s08 jumeau trop large a MPa2 : cellule non lue, 55 jugees
+TIENT  : s09 jumeau a 0.999999e-6 Gamma_pl a MPa2 : tient (au plus 1e-6)
+TIENT  : s10 jumeau a 47 lectures suivies sur 48 : non lue
+TIENT  : s11 pas de plateau sous A a MGb2 : non lue
+TIENT  : s12 B s ecarte de A de 0.06 en ln a PGa2 : non qualifie, non lue
+TIENT  : s13 B s ecarte de A de 0.04 a PGa2 : qualifie, s = 0.04, bande > T : ni tient ni tombe
+TIENT  : s14 C s ecarte de 0.049 (qualifie) puis D de 0.051 (non qualifie)
+TIENT  : s15 C sans cinq barreaux lisibles consecutifs a PPb7 : non lisible, non lue
+TIENT  : s16 une lecture non suivie HORS de la fenetre retenue (C, k = 8) : sans consequence
+TIENT  : s17 une lecture sur deux non suivie sous C : aucune fenetre de cinq : non lue
+TIENT  : s18 un w2 avec trois cellules non lues (quatre tenues sur sept) : TENU
+TIENT  : s19 un w2 avec quatre cellules non lues (trois tenues) : NON CONCLUANT
+TIENT  : s20 quatorze cellules non lues : 42 jugees : TENU
+TIENT  : s21 quinze cellules non lues : 41 jugees : NON CONCLUANT
+TIENT  : s22 le kappa 1 (0.0363) perd 5 cellules sur 8 (3 tenues) : hors portee
+TIENT  : s23 le kappa 1 perd 4 cellules sur 8 (4 tenues) : dans la portee
+TIENT  : s24 instrument NON TENU : rien n est lu ni juge
+TIENT  : s25 temoin positif hors de sa reference de 0.002 : la garde ne tient pas
+TIENT  : s26 temoin positif a 0.0009 de sa reference : la garde tient
+TIENT  : s27 temoin positif a -0.0011 : la garde ne tient pas
+TIENT  : s28 temoin positif non qualifie (B a 0.06) : la garde ne tient pas
+TIENT  : s29 jumeau d un temoin positif trop large : la garde ne tient pas
+TIENT  : s30 fichier d une cellule absent : RUN INCOMPLET, rien n est juge
+TIENT  : s31 fichier d un temoin positif absent : rien n est juge
+TIENT  : s32 couplage ecrit different dans un fichier de cellule : refuse
+TIENT  : s33 eta0 different dans un fichier de cellule : refuse
+TIENT  : s34 r_c different (et boites coherentes) dans un fichier : refuse
+TIENT  : s35 canon du pilote de lecture different dans un fichier : refuse
+TIENT  : s36 empreinte du bloc du lecteur differente : refuse
+TIENT  : s37 une trajectoire de onze barreaux : refuse
+ECHOUE : s38 la garde (--temoins) REFUSE un dossier ou une cellule a deja un fichier (code 3)
+
+SCENARIOS : 38 ; TIENNENT 37 ; ECHOUENT 1

@@ -1,0 +1,60 @@
+23:47:07 lancement du pre-vol
+2026-11-22 23:47:07 PILOTE DU GEL SOMMET -- PRE-VOL, AUCUNE CELLULE N'EST LUE ; 12 processus ; python 3.11.9 ; drapeau -P
+2026-11-22 23:47:07 pilote pilote_gel_sommet_machine1_v1.py canon ed4c3886b17fcdc3
+2026-11-22 23:47:07   canon moteur            82a0be882568fe0c 
+2026-11-22 23:47:07   canon depot             10887c60d5f55bcf 
+2026-11-22 23:47:07   canon retenus           69b3bab3bb8480b7 
+2026-11-22 23:47:07   canon tp_reference      4d51dd58ef456fe9 
+2026-11-22 23:47:07   canon reference_ancres  6600fb8418c79930 
+2026-11-22 23:47:07   canon table_ordre3      35fa7b73f2b7f8eb 
+2026-11-22 23:47:07   canon sonde_lecteur     d5cc48f48e37af99 
+2026-11-22 23:47:07   canon feuille_lecteur   83701094e6a2b965 
+2026-11-22 23:47:07   canon table             4238e2b262119f83 
+2026-11-22 23:47:07   canon pilote_machine2   47a84eae6052f006 
+2026-11-22 23:47:07   canon feuille_sommet    ac934e0caaa59c08 
+2026-11-22 23:47:07 ETAGE A : sonde deposee du lecteur, etage0, ancres, etage1 ; puis feuille deposee, etape instrument
+2026-11-22 23:47:35   lecteur etage0                     code=0 duree=28 s
+2026-11-22 23:59:37   lecteur ancres                     code=0 duree=750 s
+2026-11-23 00:00:22   lecteur etage1                     code=0 duree=795 s
+2026-11-23 00:00:22   feuille du lecteur, instrument     code=0 duree=0 s
+2026-11-23 00:00:22 INSTRUMENT DU LECTEUR : TIENT ; canon de son verdict 0eac1369af038f77
+2026-11-23 00:00:22 ETAGE A' : temoins positifs du sommet, 9 points : Qa Qc Qd Qe Qf Q2a Q2b Q2c Q2d
+2026-11-23 00:03:17   lecture Qc jumeau                  code=0 duree=175 s
+2026-11-23 00:03:17   lecture Qe jumeau                  code=0 duree=175 s
+2026-11-23 00:03:19   lecture Qa jumeau                  code=0 duree=176 s
+2026-11-23 00:03:19   lecture Qd jumeau                  code=0 duree=176 s
+2026-11-23 00:03:19   lecture Qf jumeau                  code=0 duree=176 s
+2026-11-23 00:03:20   lecture Qf fantome                 code=0 duree=178 s
+2026-11-23 00:03:21   lecture Qe fantome                 code=0 duree=178 s
+2026-11-23 00:03:21   lecture Qa fantome                 code=0 duree=179 s
+2026-11-23 00:03:23   lecture Qc fantome                 code=0 duree=181 s
+2026-11-23 00:03:24   lecture Qd fantome                 code=0 duree=181 s
+2026-11-23 00:03:38   lecture Q2a jumeau                 code=0 duree=195 s
+2026-11-23 00:03:39   lecture Q2a fantome                code=0 duree=196 s
+2026-11-23 00:05:31   lecture Q2d jumeau                 code=0 duree=133 s
+2026-11-23 00:05:32   lecture Q2c jumeau                 code=0 duree=134 s
+2026-11-23 00:05:34   lecture Q2d fantome                code=0 duree=134 s
+2026-11-23 00:05:35   lecture Q2c fantome                code=0 duree=136 s
+2026-11-23 00:05:46   lecture Q2b jumeau                 code=0 duree=148 s
+2026-11-23 00:05:46   lecture Q2b fantome                code=0 duree=149 s
+2026-11-23 00:05:47   feuille du gel, etape de garde     code=0 duree=0 s
+2026-11-23 00:05:47     ====================================================================================================
+2026-11-23 00:05:47     FEUILLE DU GEL SOMMET v1 -- ETAPE DE GARDE (instrument et temoins positifs), RIEN N'EST JUGE
+2026-11-23 00:05:47     ====================================================================================================
+2026-11-23 00:05:47     INSTRUMENT DU LECTEUR (etage 0, ancres, etage 1 ; pieces deposees) : TIENT
+2026-11-23 00:05:47     TEMOINS POSITIFS DU SOMMET (les neuf points sacrifies de Q et de Q2, relus dans le run)
+2026-11-23 00:05:47     temoin  w2           m  lecteur        jumeau     plateau lu   reference    ln(lu / reference)  ln(lu / G3*)  tient
+2026-11-23 00:05:47     Qa      2            0  QUALIFIE       tenu       1.36078e-05  1.36078e-05  +0.00e+00           +0.00002      oui
+2026-11-23 00:05:47     Qc      2            0  QUALIFIE       tenu       5.44311e-05  5.44311e-05  +0.00e+00           +0.00000      oui
+2026-11-23 00:05:47     Qd      2            0  QUALIFIE       tenu       1.08861e-04  1.08861e-04  +0.00e+00           -0.00000      oui
+2026-11-23 00:05:47     Qe      20001/10000  0  QUALIFIE       tenu       1.20926e-05  1.20926e-05  +0.00e+00           +0.00002      oui
+2026-11-23 00:05:47     Qf      20001/10000  0  QUALIFIE       tenu       2.91446e-06  2.91446e-06  +0.00e+00           -0.00008      oui
+2026-11-23 00:05:47     Q2a     20001/10000  1  QUALIFIE       tenu       4.94717e-08  4.94717e-08  +0.00e+00           +0.00019      oui
+2026-11-23 00:05:47     Q2b     20001/10000  2  QUALIFIE       tenu       2.05518e-09  2.05518e-09  +0.00e+00           +0.00034      oui
+2026-11-23 00:05:47     Q2c     19999/10000  0  QUALIFIE       tenu       1.21073e-05  1.21073e-05  +0.00e+00           +0.00002      oui
+2026-11-23 00:05:47     Q2d     19999/10000  0  QUALIFIE       tenu       2.92063e-06  2.92063e-06  +0.00e+00           -0.00008      oui
+2026-11-23 00:05:47     TEMOINS POSITIFS : TIENNENT (9 sur 9)
+2026-11-23 00:05:47     GARDE : TIENT : les cellules peuvent etre lues
+2026-11-23 00:05:47     ecrit prevol_run\garde_sommet.json
+2026-11-23 00:05:47 GARDE : TIENT : les cellules peuvent etre lues ; canon c893d6a9bbb91199
+2026-11-23 00:05:47 PRE-VOL : la garde tient ; aucune cellule n'est lue ; rien n'est juge ; duree totale 1120 s

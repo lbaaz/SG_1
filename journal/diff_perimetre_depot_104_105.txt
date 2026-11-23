@@ -1,0 +1,59 @@
+--- delta104
++++ delta105
+@@ -1,20 +1,20 @@
+ #!/usr/bin/env python3
+ # -*- coding: ascii -*-
+-"""LE PERIMETRE DU DEPOT delta 104 (COMPLEMENT AU DELTA 103 : L EXPLORATION DU PONT) -- ENUMERE DEPUIS LES CITATIONS DE LA NOTE DE DEPOT.
+-machine 2, v1, 21/11/2026.
+-
+-Derive de la feuille du delta 103 (perimetre_depot_delta103_machine2_v1.py, au registre ou au poste, NON EDITEE : regle 17), meme methode,
++"""LE PERIMETRE DU DEPOT delta 105 (LE VIDE AU SOMMET DU PROFIL) -- ENUMERE DEPUIS LES CITATIONS DE L ACTE ET DE LA NOTE DE DEPOT.
++machine 2, v1, 23/11/2026.
++
++Derive de la feuille du delta 104 (perimetre_depot_delta104_machine2_v1.py, au registre ou au poste, NON EDITEE : regle 17), meme methode,
+ meme code, TROIS changements nommes, le diff est joint :
+-  1. dossier() : les instruments et constructions de ce chantier (l exploration du pont (notes, sondes et lectures de machine 1 et de machine 2, hors chaine, avant le gel du pont)) vont sous scripts/, comme ceux du delta precedent.
++  1. dossier() : les instruments et constructions de ce chantier (le vide au sommet du profil (regle de tirage, instrument, feuille, pilote, bancs, predictions et eligibilite de machine 1 ; pilote de lecture de machine 2)) vont sous scripts/, comme ceux du delta precedent.
+   2. le texte du manifeste (corps) parle de ce chantier et de sa date.
+ Pour le reste, tout est herite : le perimetre ne s'ecrit pas a la main, il s'ENUMERE depuis les citations de l'acte, resolues PAR CANON
+ (registre, poste, ou NON RESOLU qui mord) ; le numero se DERIVE du registre (plafond + 1) ; les lots cites entrent avec leurs pieces de
+ table ; les ZIP ne sont pas deposes ; DEUX VERBES (`chk` mesure, `note` porte la prose) ; PB-1 : rien n'est edite.
+-  3. ce delta n a pas d acte de machine 1 : sa piece de depot est la NOTE DE DEPOT de machine 2 (journal_delta_nn_complement_exploration_pont_machine2_v1.md), donnee a la feuille comme acte ET comme troisieme argument (precedent : le delta 101, note de complement) ; elle cite les canons des cinq lots.\n  4. la table EXCLUS du delta 102 est CONSERVEE (aucune de ses pieces n entre) ; aucune piece des cinq lots n en est une (balayage de vie privee rejoue sur les cinq zips : 0 fuite). Un sixieme lot de machine 2 (l evaluateur de tirage du 15/11) porte un chemin local en dur avec l identifiant du poste : il n est PAS depose et la note ne le cite pas.\n  5. rien n est ajoute a aucun acte : les errata que la note signale (acte 89, gel M11 v4) ne corrigent aucune piece scellee.\n"""
++  3. la note de depot de ce delta (de la plume de machine 2) CITE les canons des douze lots : la feuille prend un TROISIEME argument, cette note, dont les empreintes s ajoutent a celles de l acte ; l acte n en cite que dix (il ne cite ni son propre lot ni mon contreseing).\n  4. la table EXCLUS du delta 102 est CONSERVEE (aucune de ses pieces n entre) ; aucune piece des douze lots n en est une (balayage de vie privee rejoue sur les douze zips avant ce depot : 0 fuite ; deux touches, des faux positifs : l expression reguliere de deux scripts de machine 1 (des heures hh:mm:ss) ressemble a une lettre de lecteur).\n  5. l acte est le PROJET v1 de machine 1, depose octet pour octet ; l etat du contreseing de machine 2 (deux morsures de texte non corrigees) est dit dans la note de depot.\n  6. chemin_de() PREFERE la copie extraite sous entrants/ (le zip du lot, fins de ligne LF) a l exemplaire du poste (CRLF pour les fichiers ecrits sous Windows) : meme canon B, mais le controle B == brut exige des octets LF ; le premier passage, qui mordait sur ce controle, est conserve hors du dossier (DEPOT_delta105_premier_passage_B_brut_CRLF).\n"""
+ import hashlib, os, re, subprocess, sys, unicodedata
+ 
+ if len(sys.argv) != 4:
+-    sys.exit('usage : perimetre_depot_delta104_machine2_v1.py <clone frais du registre> <acte journal_delta_nn_..._vN.md> <note de depot qui cite des lots>')
++    sys.exit('usage : perimetre_depot_delta105_machine2_v1.py <clone frais du registre> <acte journal_delta_nn_..._vN.md> <note de depot qui cite des lots>')
+ CLONE = os.path.abspath(sys.argv[1])
+ ICI = os.path.dirname(os.path.abspath(__file__))
+ RAC = os.path.dirname(ICI)
+@@ -146,6 +146,10 @@
+ 
+ def chemin_de(canon):
+     ps = poste[canon]
++    _ent = os.path.normcase(os.path.join(ICI, 'entrants'))
++    for p in ps:
++        if os.path.normcase(p).startswith(_ent):
++            return p
+     for p in ps:
+         if os.path.normcase(p) in tables:
+             return p
+@@ -318,7 +322,7 @@
+         return 'gels/'
+     if re.match(r'(sonde_qualification_EB_machine1_v\d+|banc_qui_tue_qualification_EB_machine1_v\d+|'
+                 r'lecture_qualification_EB_machine1_v\d+|reference_TP_rotation_complexe_machine2_v\d+(_premier_jet)?|'
+-                r'estimation_TP_wkb_machine1_v\d+|construction_(gel_EB_v\d+|sonde_banc_v\d+|gel_EB_bis|instrument_EB_bis|gel_chaine_EA_par_etat|gel_domaine_G1|sonde_domaine_G1|gel_ordre2|sonde_ordre2|feuille_ter|gel_ter|sonde_ter|instrument_gel_loi|pilote_gel_loi|gel_partie2|regle_tirage)_machine1_v\d+|sonde_chaine_par_etat_machine1_v\d+|lecture_chaine_par_etat_machine1_v\d+|sonde_domaine_G1_machine1_v\d+|lecture_domaine_G1_machine1_v\d+|sonde_ordre2_machine1_v\d+|lecture_ordre2_machine1_v\d+|chaine_ordre2_bloc_machine1_v\d+|sonde_qualification_EB_ter_machine1_v\d+|lecteur_plateau_bloc_machine1_v\d+|lecture_qualification_EB_ter_machine1_v\d+|banc_feuille_ter_machine1_v\d+|pilote_gel_loi_machine1_v\d+|feuille_ordre3_machine1_v\d+|banc_feuille_ordre3_machine1_v\d+|ordre3_bloc_machine1_v\d+|sonde_dense_gel_loi_machine1_v\d+|sonde_lecteur_gel_loi_machine1_v\d+|lecture_lecteur_gel_loi_machine1_v\d+|tirage_machine1_v\d+|eligibilite_creneaux_machine1_v\d+|lecture_eligibilite_machine1_v\d+|sonde_vide_machine1_v\d+|feuille_vide_machine1_v\d+|pilote_gel_vide_machine1_v\d+|banc_feuille_vide_machine1_v\d+|predictions_vide_machine1_v\d+|chaine_adaptee_bloc_machine1_v\d+|tirage_vide_machine1_v\d+|eligibilite_vide_machine1_v\d+|lecture_eligibilite_vide_machine1_v\d+|table_prevol_vide_machine1_v\d+|construction_gel_vide_partie2_machine1_v\d+|construction_regle_tirage_vide_machine1_v\d+|sonde_densite_2d_pont_machine1_v\d+|sonde_boite_fermee_pont_machine1_v\d+|lecture_densite_2d_pont_machine1_v\d+|lecture_boites_pont_machine1_v\d+|verdict_pont_machine1_v\d+|chaine_pont_bloc_machine1_v\d+|chaine_cellules_pont_machine1_v\d+|tirage_pont_machine1_v\d+|eligibilite_pont_machine1_v\d+|construction_gel_pont_partie2_machine1_v\d+|construction_regle_tirage_pont_machine1_v\d+|rejeu_feuilles_run_pont_machine1_v\d+|lisse_chaine_machine1_v\d+|lisse_2d_machine1_v\d+)\.py$', b):
++                r'estimation_TP_wkb_machine1_v\d+|construction_(gel_EB_v\d+|sonde_banc_v\d+|gel_EB_bis|instrument_EB_bis|gel_chaine_EA_par_etat|gel_domaine_G1|sonde_domaine_G1|gel_ordre2|sonde_ordre2|feuille_ter|gel_ter|sonde_ter|instrument_gel_loi|pilote_gel_loi|gel_partie2|regle_tirage)_machine1_v\d+|sonde_chaine_par_etat_machine1_v\d+|lecture_chaine_par_etat_machine1_v\d+|sonde_domaine_G1_machine1_v\d+|lecture_domaine_G1_machine1_v\d+|sonde_ordre2_machine1_v\d+|lecture_ordre2_machine1_v\d+|chaine_ordre2_bloc_machine1_v\d+|sonde_qualification_EB_ter_machine1_v\d+|lecteur_plateau_bloc_machine1_v\d+|lecture_qualification_EB_ter_machine1_v\d+|banc_feuille_ter_machine1_v\d+|pilote_gel_loi_machine1_v\d+|feuille_ordre3_machine1_v\d+|banc_feuille_ordre3_machine1_v\d+|ordre3_bloc_machine1_v\d+|sonde_dense_gel_loi_machine1_v\d+|sonde_lecteur_gel_loi_machine1_v\d+|lecture_lecteur_gel_loi_machine1_v\d+|tirage_machine1_v\d+|eligibilite_creneaux_machine1_v\d+|lecture_eligibilite_machine1_v\d+|sonde_vide_machine1_v\d+|feuille_vide_machine1_v\d+|pilote_gel_vide_machine1_v\d+|banc_feuille_vide_machine1_v\d+|predictions_vide_machine1_v\d+|chaine_adaptee_bloc_machine1_v\d+|tirage_vide_machine1_v\d+|eligibilite_vide_machine1_v\d+|lecture_eligibilite_vide_machine1_v\d+|table_prevol_vide_machine1_v\d+|construction_gel_vide_partie2_machine1_v\d+|construction_regle_tirage_vide_machine1_v\d+|sonde_densite_2d_pont_machine1_v\d+|sonde_boite_fermee_pont_machine1_v\d+|lecture_densite_2d_pont_machine1_v\d+|lecture_boites_pont_machine1_v\d+|verdict_pont_machine1_v\d+|chaine_pont_bloc_machine1_v\d+|chaine_cellules_pont_machine1_v\d+|tirage_pont_machine1_v\d+|eligibilite_pont_machine1_v\d+|construction_gel_pont_partie2_machine1_v\d+|construction_regle_tirage_pont_machine1_v\d+|rejeu_feuilles_run_pont_machine1_v\d+|lisse_chaine_machine1_v\d+|lisse_2d_machine1_v\d+|pilote_gel_sommet_machine1_v\d+|feuille_gel_sommet_machine1_v\d+|banc_feuille_gel_sommet_machine1_v\d+|banc_pilote_gel_sommet_machine1_v\d+|predictions_sommet_machine1_v\d+|tirage_sommet_machine1_v\d+|eligibilite_sommet_machine1_v\d+|lecture_eligibilite_sommet_machine1_v\d+|construction_regle_tirage_sommet_machine1_v\d+|construction_gel_sommet_partie2_machine1_v\d+|lecteur_2D_pilote_machine2_v\d+)\.py$', b):
+         return 'scripts/'
+     return 'journal/'
+ 
+@@ -389,7 +393,7 @@
+ for c, *_ in lignes:
+     par_dossier[c.split('/')[0]] = par_dossier.get(c.split('/')[0], 0) + 1
+ 
+-corps = ("MANIFESTE DU LOT DE DEPOT -- DELTA %s (COMPLEMENT AU DELTA 103 : L EXPLORATION DU PONT) -- 21/11/2026 -- "
++corps = ("MANIFESTE DU LOT DE DEPOT -- DELTA %s (LE VIDE AU SOMMET DU PROFIL) -- 23/11/2026 -- "
+          "assemble par machine 2 -- derive de l'acte v%s\n" % (NUMERO, VERSION))
+ corps += ("Convention B (sha256 NFC+LF, 16 hex) et empreinte brute, les deux tailles ; le depot et "
+           "le numero sont de la main de l'operateur.\n")

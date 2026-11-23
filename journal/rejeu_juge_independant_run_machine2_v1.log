@@ -1,0 +1,10 @@
+MON JUGE sur le run reel : garde TIENT ; S1 TENU ; portee ['0.0363', '0.0530', '0.0800', '0.1300', '0.2000', '0.4000', '1.0000'] ; comptes {'tenues': 56, 'tombees': 0, 'jugees': 56}
+SA FEUILLE (verdict_sommet.json) : verdict 'S1 TENU' ; S1 TENU ; portee ['0.0363', '0.0530', '0.0800', '0.1300', '0.2000', '0.4000', '1.0000'] ; comptes {'NON JUGEABLE': 0, 'NON LUE': 0, 'TIENT': 56, 'TOMBE': 0}
+56 cellules comparees : differences de lecture ou de jugement : AUCUNE ; plus grands ecarts : ln q 1.8e-16 ; bande 0.0e+00 ; ln Gamma_pl 0.0e+00 ; etalement s 0.0e+00
+ACCORD DE MON JUGE ET DE SA FEUILLE SUR LE RUN REEL : OUI
+
+SANS JUGEMENT : lectures non suivies du fantome : 9 sur 2688 ; du jumeau : 0 sur 2688
+    fantome non suivies : MPa7 A k=+8; MPb7 D k=+8; PPa7 A k=+8; PPa7 D k=+7; PPa7 D k=+8; MGa6 A k=+8; MGa7 C k=-3; MGb7 C k=-3; PGa7 B k=+8
+    poids du site (0, 0) minimal sur toutes les lectures suivies du fantome : 0.7181
+    cellules lues : 56 ; plus grand |ln q| : 0.00025 ; plus petite marge T - b - |ln q| : 0.00436
+    plus grand etalement s du lecteur : 0.00219 ; plus grande bande b : 0.00556

@@ -1,0 +1,10 @@
+MP : rangs lus 2 ; w2 retenus ['199989/100000', '199993/100000'] ; trace (rang, indice, w2, eligible, deja) [(0, 9, '199989/100000', True, False), (1, 12, '199993/100000', True, False)]
+PP : rangs lus 2 ; w2 retenus ['25001/12500', '200011/100000'] ; trace (rang, indice, w2, eligible, deja) [(0, 3, '25001/12500', True, False), (1, 5, '200011/100000', True, False)]
+MG : rangs lus 2 ; w2 retenus ['6249/3125', '49989/25000'] ; trace (rang, indice, w2, eligible, deja) [(0, 17, '6249/3125', True, False), (1, 5, '49989/25000', True, False)]
+PG : rangs lus 2 ; w2 retenus ['200039/100000', '12503/6250'] ; trace (rang, indice, w2, eligible, deja) [(0, 14, '200039/100000', True, False), (1, 23, '12503/6250', True, False)]
+
+(1) seconde ecriture contre le journal de mon tirage : IDENTIQUES
+(2) cellules du journal : 56 ; retrouvees identiques dans ma table : 56 ; dans la table de machine 1 : 56
+(3) hachages recalcules ici : 114565|MP|0 -> 075d562d52484be8 ; 114565|MP|1 -> ca2fef773b2d924b ; 114565|PP|0 -> 45ca0c879ef2a590 ; 114565|PP|1 -> 1a37a5fa7a9a1e40 ; 114565|MG|0 -> c4599ce5a0078c03 ; 114565|MG|1 -> dd20c4b207612810 ; 114565|PG|0 -> 970e004a58200fbc ; 114565|PG|1 -> 71a77b17c3bff9f4
+
+TIENT

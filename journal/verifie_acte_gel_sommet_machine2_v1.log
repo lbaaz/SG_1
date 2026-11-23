@@ -1,0 +1,55 @@
+A. nn.3 : les 56 lignes contre le verdict de ma feuille-run
+TIENT  : A. les 56 lignes de nn.3 (w2, kappa, g, plateau lu a six chiffres, s, etendue, bande, ln q, jugement) = verdict de la feuille jouee dans le run (56 lignes lues ; differences : aucune)
+
+B. nn.2 : les neuf temoins
+TIENT  : B. les neuf temoins de nn.2 (w2, g, plateau lu, reference, ecart nul) = ma garde jouee dans le run (9 lignes ; differences : aucune)
+
+C. nn.6 : le tableau par kappa
+TIENT  : C1. le tableau par kappa de nn.6 (min, max, moyenne de ln q ; nombre de negatifs ; Phi lu min et max ; etalement lu et de la chaine) (7 lignes ; differences : aucune)
+TIENT  : C2. "meme signe aux huit w2 a 5 kappa sur sept" (negatifs par kappa : [2, 8, 8, 0, 0, 8, 6])
+TIENT  : C3. "la largeur rapportee au saut au pied de l echelle, moyenne par kappa" (acte : 0.0363 0.0002 ; 0.0530 0.0034 ; 0.0800 0.0300 ; 0.1300 0.1380 ; 0.2000 0.2788 ; 0.4000 0.4449 ; 1.0000 0.5174 ; moi : 0.0363 0.0002; 0.0530 0.0034; 0.0800 0.0300; 0.1300 0.1380; 0.2000 0.2788; 0.4000 0.4449; 1.0000 0.5174)
+TIENT  : C4. "la largeur lue rapportee au desaccord varie de 0.00032 au plus entre les huit w2" (moi : 0.00032)
+TIENT  : C5. "desaccords de 0.00007 a 0.00048 et les deux signes" (|delta| en 1e-5 : [7, 8, 11, 32, 39, 44, 48] ; 7 valeurs distinctes pour huit w2)
+
+D. nn.1 et nn.3 : durees, appels, heures, lectures
+TIENT  : D1. "136 appels, tous au code 0 ; aucun arret, aucune relance" (appels comptes dans le journal du pilote : 136)
+TIENT  : D2. "etage A : 20 s, 846 s et 897 s (etage 0, ancres, etage 1, en parallele)" (journal : etage0 20 s, ancres 846 s, etage1 897 s)
+TIENT  : D3. "les dix-huit lectures des temoins de 129 a 180 s ; les 112 lectures des cellules de 115 a 206 s" (journal : 18 de 129 a 180 s ; 112 de 115 a 206 s)
+TIENT  : D4. "lance le 2026-11-23 00:16:01 et fini a 01:05:05 ; duree totale 2944 s" 
+TIENT  : D5. "garde : jouee a 00:36:05, avant la premiere lecture de cellule" 
+TIENT  : D6. "fantome : 2679 suivies sur 2688 ; les 9 non suivies ; jumeau : 0 non suivie sur 2688" (moi : 2679 suivies, 9 non suivies, 0 au jumeau)
+TIENT  : D7. "plus grande largeur du jumeau : 4.8e-26 du plateau au plus" (moi : 4.78e-26)
+TIENT  : D8. "sous A la largeur est plate a 0.005 pres aux barreaux k = -3 a 4 a toutes les cellules" (plus grand ecart relatif sous A, k = -3 a 4, aux 56 cellules : 0.00486)
+
+E. nn.5
+TIENT  : E1. "la plus grande bande est 0.0056 ; la cellule la plus pres de sa limite (MGb1) garde 0.0044" (moi : bande max 0.00556 ; cellule MGb1, marge 0.00436)
+TIENT  : E2. "|ln q| est sous l etendue de la chaine a 56 cellules sur 56, et sous l etalement du lecteur a 56" (moi : sous l etendue 56, sous l etalement s 56)
+TIENT  : E3. nn.0 "plateaux de 4.68e-10 a 2.48e-04 ; couplages de 2.48901e-05 a 4.71149e-03 ; |ln q| au plus 0.00025 (PPb2)" (plus grand |ln q| : PPb2)
+
+F. nn.7 : les annonces
+TIENT  : F1. "A-7 : dix cellules de barriere negatives : huit de kappa = 0.0530 et 2 des huit de kappa = 0.0363" 
+TIENT  : F2. "A-8 : 7 sur 7 a 0.0001" et "A-9 : 0.00032 au plus" 
+TIENT  : F3. "ln q est negatif a 32 cellules, du signe de delta a 28 ; l ordre 3 plus pres a 35 sur 56" 
+
+G. nn.9 : le champ poids_min de sa feuille
+TIENT  : G1. "poids_min de la feuille (toutes lectures) = 0.5348 ; poids des lectures suivies = 0.7181" (moi : champ poids_min 0.5348 ; lectures suivies 0.7181)
+
+H. nn.12 : les canons de mes pieces citees
+TIENT  : H. c46c3aa3977366f4 = canon de ma note POUR_MACHINE1_certification_gel_sommet_partie2_machine2_v1.md (moi : c46c3aa3977366f4)
+TIENT  : H. c462991d2484064c = canon de ma note POUR_MACHINE1_resultat_run_gel_sommet_machine2_v1.md (moi : c462991d2484064c)
+TIENT  : H. f6382d96633043ff = canon de pilote_gel_sommet.log du run (moi : f6382d96633043ff)
+TIENT  : H. c11edf7b49007d05 = canon de verdict_ter_instrument.json du run (moi : c11edf7b49007d05)
+TIENT  : H. 707b6d999a2b9100 = canon de garde_sommet.json du run (moi : 707b6d999a2b9100)
+TIENT  : H. 2c39171a593d95df = canon de verdict_sommet.json du run (moi : 2c39171a593d95df)
+TIENT  : H. c58c2b3f533c516b = canon du manifeste de mon lot (MANIFEST_lot_machine2_Q_sommet_v1.txt) (moi : c58c2b3f533c516b)
+TIENT  : H. 295b2b1549b076c2 = canon du manifeste de mon lot (MANIFEST_lot_machine2_Q2_signe_v1.txt) (moi : 295b2b1549b076c2)
+TIENT  : H. 21e9bddfe5db83b2 = canon du manifeste de mon lot (MANIFEST_lot_machine2_certification_gel_sommet_partie1_v1.txt) (moi : 21e9bddfe5db83b2)
+TIENT  : H. 3db782eea5023b31 = canon du manifeste de mon lot (MANIFEST_lot_machine2_tirage_graine_114565_gel_sommet_v1.txt) (moi : 3db782eea5023b31)
+TIENT  : H. b7f328b916ba720d = canon du manifeste de mon lot (MANIFEST_lot_machine2_certification_gel_sommet_partie2_v1.txt) (moi : b7f328b916ba720d)
+TIENT  : H. 735b9394013b02db = canon du manifeste de mon lot (MANIFEST_lot_machine2_resultat_run_gel_sommet_v1.txt) (moi : 735b9394013b02db)
+
+I. nn.8 : ce que le delta 102 depose dit
+TIENT  : I1. delta 102 : "|delta| de 0.003 a 0.018" et "0.0098 a trois barreaux jusqu a 0.1262 a seize" 
+TIENT  : I2. "kappa = 1 a |delta| = 0.01 demande g voisin de 0.1" (moi : g = kappa |delta| P / X = 0.0980)
+
+BILAN : 36 controles tenus, 0 morsures

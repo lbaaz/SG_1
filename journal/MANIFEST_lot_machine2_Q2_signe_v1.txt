@@ -1,0 +1,37 @@
+MANIFESTE lot_machine2_2026-11-22_Q2_signe_v1 -- EPREUVE "Q2" (sa 22h, sections 3 et 4) jouee aux quatre points sacrifies (w2 = 20001/10000 a g = 6e-05 et 4e-05, r_c = 20 et 22 ; w2 = 19999/10000 a g = 3e-04 et 1.5e-04, r_c = 18), ses attendus Q2-1 a Q2-4 ecrits avant et lus a la lettre ; ma verification a une dimension de sa declaration ; le recoupement apres coup du lecteur et de deux chaines aux neuf points lus. HORS CHAINE, classe 3, non certifie ; aucun gel ; aucun depot. machine 2, classe B
+colonnes : empreinte_B (sha256 NFC+LF, 16 hex)  empreinte_du_zip (octets portes par le zip, fins de ligne LF, chemins de disque masques dans les journaux)  octets_B  octets_zip  fichier
+Le CANON du lot est l'empreinte B de CE manifeste ; il ne se porte pas lui-meme.
+
+e0578d05c4a08fe3 e0578d05c4a08fe3    19565    19565  POUR_MACHINE1_Q2_signe_machine2_v1.md
+e30aa7f4aaac9eb0 e30aa7f4aaac9eb0    12965    12965  certif_relecteur_machine2/epreuve_Q2_machine2_v1.py
+4229f3274188457f 4229f3274188457f     6033     6033  certif_relecteur_machine2/epreuve_Q2_machine2_v1.log
+bc1d1bb68c86c98a bc1d1bb68c86c98a     3981     3981  certif_relecteur_machine2/verifie_Q2_1d_machine2_v1.py
+8c3432084ead81f8 8c3432084ead81f8     1990     1990  certif_relecteur_machine2/verifie_Q2_1d_machine2_v1.log
+df7c2ae9fd9f6938 df7c2ae9fd9f6938     2858     2858  certif_relecteur_machine2/apres_coup_Q_Q2_ordre1_machine2_v1.py
+746bb57e46a20c42 746bb57e46a20c42     1389     1389  certif_relecteur_machine2/apres_coup_Q_Q2_ordre1_machine2_v1.log
+71e556fef5b18986 71e556fef5b18986     2578     2578  certif_relecteur_machine2/chaine_premier_ordre_machine2_v1.py
+1d25171fcab2a51a 1d25171fcab2a51a      368      368  certif_relecteur_machine2/jobs_Q2_machine2_v1.txt
+717ac565f42dce81 717ac565f42dce81      236      236  certif_relecteur_machine2/lance_Q2_machine2_v1.out
+523989345e376153 523989345e376153     1212     1212  certif_relecteur_machine2/lance_lect2D_machine2_v3_abs.sh
+47a84eae6052f006 47a84eae6052f006     5996     5996  certif_relecteur_machine2/lecteur_2D_pilote_machine2_v1.py
+94116c2b7cfe4092 94116c2b7cfe4092       28       28  certif_relecteur_machine2/Q2_sorties/debut.txt
+98c7399b4c2557bb 98c7399b4c2557bb    14957    14957  certif_relecteur_machine2/Q2_sorties/lect2D_Q2a_fantome.json
+969ae9cd5005766e 969ae9cd5005766e    14727    14727  certif_relecteur_machine2/Q2_sorties/lect2D_Q2a_jumeau.json
+c645721d8161603c c645721d8161603c    14995    14995  certif_relecteur_machine2/Q2_sorties/lect2D_Q2b_fantome.json
+41d8764ae84aefaf 41d8764ae84aefaf    14807    14807  certif_relecteur_machine2/Q2_sorties/lect2D_Q2b_jumeau.json
+f0f9ac5fc50806ad f0f9ac5fc50806ad    14940    14940  certif_relecteur_machine2/Q2_sorties/lect2D_Q2c_fantome.json
+d0fcd58fb72ec21d d0fcd58fb72ec21d    14751    14751  certif_relecteur_machine2/Q2_sorties/lect2D_Q2c_jumeau.json
+c05b0bbec25016ad c05b0bbec25016ad    14944    14944  certif_relecteur_machine2/Q2_sorties/lect2D_Q2d_fantome.json
+a318525b926316a9 a318525b926316a9    14688    14688  certif_relecteur_machine2/Q2_sorties/lect2D_Q2d_jumeau.json
+20d10eca2bf3352c 20d10eca2bf3352c      444      444  certif_relecteur_machine2/Q2_sorties/log_Q2a_fantome.txt
+5bf5df1126349d64 5bf5df1126349d64      443      443  certif_relecteur_machine2/Q2_sorties/log_Q2a_jumeau.txt
+5871b2b593174155 5871b2b593174155      444      444  certif_relecteur_machine2/Q2_sorties/log_Q2b_fantome.txt
+6ee344bc5cc6845d 6ee344bc5cc6845d      443      443  certif_relecteur_machine2/Q2_sorties/log_Q2b_jumeau.txt
+79797818ad143064 79797818ad143064      444      444  certif_relecteur_machine2/Q2_sorties/log_Q2c_fantome.txt
+2414195d7804a459 2414195d7804a459      442      442  certif_relecteur_machine2/Q2_sorties/log_Q2c_jumeau.txt
+3a83db06a250b36e 3a83db06a250b36e      444      444  certif_relecteur_machine2/Q2_sorties/log_Q2d_fantome.txt
+2410eb8cbe820d47 2410eb8cbe820d47      442      442  certif_relecteur_machine2/Q2_sorties/log_Q2d_jumeau.txt
+b2092cce204ca592 b2092cce204ca592     9677     9677  fabrique_lot_Q2_signe_machine2_v1.py
+
+entrants : son enveloppe 22h (lot 074b131287ad2b6f), lue comme donnees ; mon lot c58c2b3f533c516b (Q) et ses JSON ; le registre public en tete 055be58 : moteur 82a0be882568fe0c, bloc LECTEUR CREUX d5cc48f48e37af99, feuille 83701094e6a2b965 ; mon pilote 47a84eae6052f006
+pieces : 30 (compte etabli APRES le dernier ajout) ; 19 portees en LF ; 0 pieces dont des chemins de disque ont ete masques

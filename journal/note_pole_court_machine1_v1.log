@@ -1,0 +1,56 @@
+=== 0. ma table et sa recopie
+nombres dans ma recopie de ma note : 96 (attendu 96)
+nombres dans la recopie de machine 2 (lue comme un texte) : 96 (attendu 96)
+cles differentes entre les deux recopies : 0
+
+=== 1. sorties lues : 8 (attendu 8)
+cas lus : 96 (attendu 96) ; cles distinctes : 96
+tailles : 868, 869, 1181, 1182 : oui ; pire |somme des poids - 1| : 2.6e-10 ; pire residu : 2.0e-13
+
+=== 2. S-1 : aux 48 cas a = 2 et 4, Gamma / g dans [0.0539, 0.0549]
+cas : 48 ; plus petit 0.054191 ; plus grand 0.054558 ; hors fenetre : 0
+marge a la borne basse 2.91e-04 ; a la borne haute 3.42e-04
+S-1 : TENU aux 48 cas
+
+=== 3. S-2 : aux memes 48 cas, ecart a ma table d'au plus 2.5e-04
+plus grand ecart : 2.90e-05 (g = 1e-03, m_c = 10, a = 2, m0 = 4 : 0.054191 contre 0.05422)
+ecart median : 2.87e-06 ; cas au-dessus de 2.5e-04 : 0 ; cas au-dessus de 5e-06 (demi-unite de ma table) : 14
+   g = 5e-04 : plus grand 1.05e-05 ; moyenne 2.89e-06
+   g = 1e-03 : plus grand 2.90e-05 ; moyenne 7.96e-06
+S-2 : TENU aux 48 cas
+
+=== 4. S-3 : aux 24 cas a = 0.5, sous 0.050 aux coupes paires, au-dessus de 0.060 aux coupes impaires
+cas : 24 ; coupes paires (12) : de 0.036337 a 0.044569 ; coupes impaires (12) : de 0.065237 a 0.080191
+S-3 : TENU aux 24 cas
+
+=== 5. clause de tort : un cas fort hors de [0.053, 0.056], ou six valeurs fortes d'une boite etalees
+       sur plus de 0.02 fois leur moyenne
+cas forts hors de [0.053, 0.056] : 0
+   g = 5e-04 m_c = 10 : de 0.05421 a 0.05453 ; etalement relatif 0.0059
+   g = 5e-04 m_c = 11 : de 0.05435 a 0.05454 ; etalement relatif 0.0035
+   g = 5e-04 m_c = 12 : de 0.05436 a 0.05445 ; etalement relatif 0.0016
+   g = 5e-04 m_c = 13 : de 0.05440 a 0.05446 ; etalement relatif 0.0012
+   g = 1e-03 m_c = 10 : de 0.05419 a 0.05453 ; etalement relatif 0.0062
+   g = 1e-03 m_c = 11 : de 0.05435 a 0.05456 ; etalement relatif 0.0038
+   g = 1e-03 m_c = 12 : de 0.05435 a 0.05445 ; etalement relatif 0.0019
+   g = 1e-03 m_c = 13 : de 0.05440 a 0.05447 ; etalement relatif 0.0014
+plus grand etalement : 0.0062 (limite 0.02) ; TORT REALISE : NON
+
+=== 6. hors attendu, sans jugement : ecart a ma table a absorbeur faible, et sa croissance avec g
+a = 0.5 : g = 5e-04 : plus grand 8.33e-04, moyenne 3.89e-04 ; g = 1e-03 : plus grand 3.16e-03, moyenne 1.52e-03 ; rapport des moyennes 3.90
+a = 1.0 : g = 5e-04 : plus grand 1.26e-04, moyenne 7.59e-05 ; g = 1e-03 : plus grand 5.63e-04, moyenne 3.21e-04 ; rapport des moyennes 4.23
+a = 2.0 : g = 5e-04 : plus grand 1.05e-05, moyenne 3.61e-06 ; g = 1e-03 : plus grand 2.90e-05, moyenne 1.33e-05 ; rapport des moyennes 3.68
+a = 4.0 : g = 5e-04 : plus grand 3.98e-06, moyenne 2.18e-06 ; g = 1e-03 : plus grand 4.02e-06, moyenne 2.67e-06 ; rapport des moyennes 1.22
+signe de (2D - chaine) a a = 0.5, par parite de coupe :
+   coupes paires : 12 cas ; negatifs 12 ; positifs 0 ; de -1.31e-03 a -1.20e-04
+   coupes impaires : 12 cas ; negatifs 0 ; positifs 12 ; de +3.39e-04 a +3.16e-03
+partie reelle du pole, Re E / g :
+   a = 0.5 : plus grand |Re E / g| = 4.22e-03
+   a = 1.0 : plus grand |Re E / g| = 4.15e-04
+   a = 2.0 : plus grand |Re E / g| = 1.88e-05
+   a = 4.0 : plus grand |Re E / g| = 6.71e-06
+rapport Re E / g (g = 1e-03) / (g = 5e-04), cas par cas, a = 0.5 :
+   de 2.061 a 2.401 (2 = une energie d'ordre g^2)
+poids biorthogonal, 96 cas : de 1.0126 a 1.1744
+
+=== BILAN : S-1 TENU ; S-2 TENU ; S-3 TENU ; tort NON REALISE

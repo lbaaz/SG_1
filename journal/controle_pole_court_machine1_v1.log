@@ -1,0 +1,152 @@
+=== PARTIE 1 (une dimension) : sauts de l'echelle par mes elements neufs, contre la forme close
+   tau_0 : elements neufs 0.102062072616 ; forme close 0.102062072616
+   tau_1 : elements neufs 0.785674201318 ; forme close 0.785674201318
+   tau_2 : elements neufs 2.358249900369 ; forme close 2.358249900369
+   tau_3 : elements neufs 5.040576098762 ; forme close 5.040576098762
+   tau_4 : elements neufs 9.015483081077 ; forme close 9.015483081077
+ecart relatif maximal, m = 0 a 30 : 6.7e-16
+plus grand element direct entre sites d'echelle a deux ou trois crans : 0.0e+00
+
+=== PARTIE 2 (une dimension) : chaine du PREMIER ordre coupee au site m_c, absorbeur court
+    diagonale nulle (w2 = 2), sauts tau_m, terme -i W_m ; Gamma / g ; colonnes m0 = 2, 3, 4
+   a = 2.0 m_c = 10 : 0.05435 0.05434 0.05422
+   a = 2.0 m_c = 11 : 0.05443 0.05450 0.05454
+   a = 2.0 m_c = 12 : 0.05439 0.05442 0.05436
+   a = 2.0 m_c = 13 : 0.05442 0.05446 0.05446
+   a = 4.0 m_c = 10 : 0.05436 0.05453 0.05440
+   a = 4.0 m_c = 11 : 0.05439 0.05447 0.05435
+   a = 4.0 m_c = 12 : 0.05439 0.05445 0.05441
+   a = 4.0 m_c = 13 : 0.05440 0.05445 0.05443
+   a = 0.5 m_c = 10 : 0.04158 0.03933 0.03683
+   a = 0.5 m_c = 11 : 0.06980 0.07395 0.07938
+   a = 0.5 m_c = 12 : 0.04476 0.04299 0.04098
+   a = 0.5 m_c = 13 : 0.06492 0.06752 0.07081
+   a = 1.0 m_c = 10 : 0.05252 0.05170 0.05053
+   a = 1.0 m_c = 11 : 0.05585 0.05655 0.05751
+   a = 1.0 m_c = 12 : 0.05341 0.05298 0.05233
+   a = 1.0 m_c = 13 : 0.05516 0.05553 0.05601
+absorbeur fort (24 cas, premier ordre) : de 0.05422 a 0.05454 ; moyenne 0.05441
+
+=== PARTIE 3 (deux dimensions) : boite 0, (34, 24, 10), 868 etats, g = 5e-04
+   a = 0.5 m0 = 2 : Gamma / g = 0.041489576 ; Re E / g = +0.000499604 ; poids 1.0241182 ; |somme - 1| 1.4e-12 ; residu 8.2e-14 ; ecarts a machine 2 : 6.0e-12 1.0e-10 1.5e-12 (2 s)
+   a = 0.5 m0 = 3 : Gamma / g = 0.039223912 ; Re E / g = +0.000571138 ; poids 1.0189099 ; |somme - 1| 1.9e-12 ; residu 8.3e-14 ; ecarts a machine 2 : 1.2e-11 7.5e-11 2.7e-12 (3 s)
+   a = 0.5 m0 = 4 : Gamma / g = 0.036708447 ; Re E / g = +0.000643838 ; poids 1.0135632 ; |somme - 1| 1.5e-12 ; residu 7.7e-14 ; ecarts a machine 2 : 2.7e-12 2.9e-11 4.9e-13 (5 s)
+   a = 1.0 m0 = 2 : Gamma / g = 0.052486987 ; Re E / g = +0.000085330 ; poids 1.0544213 ; |somme - 1| 5.1e-12 ; residu 8.2e-14 ; ecarts a machine 2 : 4.3e-13 2.2e-11 3.0e-12 (6 s)
+   a = 1.0 m0 = 3 : Gamma / g = 0.051657679 ; Re E / g = +0.000122389 ; poids 1.0517599 ; |somme - 1| 1.5e-11 ; residu 8.9e-14 ; ecarts a machine 2 : 5.3e-12 7.5e-11 2.0e-12 (8 s)
+   a = 1.0 m0 = 4 : Gamma / g = 0.050462263 ; Re E / g = +0.000170262 ; poids 1.0481547 ; |somme - 1| 7.4e-11 ; residu 2.1e-13 ; ecarts a machine 2 : 1.8e-11 1.4e-10 8.9e-12 (9 s)
+   a = 2.0 m0 = 2 : Gamma / g = 0.054347446 ; Re E / g = +0.000002705 ; poids 1.0604823 ; |somme - 1| 2.8e-11 ; residu 1.8e-13 ; ecarts a machine 2 : 3.8e-12 5.3e-11 2.1e-12 (11 s)
+   a = 2.0 m0 = 3 : Gamma / g = 0.054342117 ; Re E / g = +0.000006151 ; poids 1.0603242 ; |somme - 1| 1.6e-10 ; residu 1.9e-13 ; ecarts a machine 2 : 4.5e-11 1.2e-10 2.7e-11 (13 s)
+   a = 2.0 m0 = 4 : Gamma / g = 0.054209528 ; Re E / g = +0.000008497 ; poids 1.0599763 ; |somme - 1| 1.9e-11 ; residu 8.6e-14 ; ecarts a machine 2 : 1.3e-11 5.0e-11 6.6e-12 (14 s)
+   a = 4.0 m0 = 2 : Gamma / g = 0.054357135 ; Re E / g = -0.000000128 ; poids 1.0606012 ; |somme - 1| 2.7e-11 ; residu 8.4e-14 ; ecarts a machine 2 : 4.5e-12 3.0e-11 6.7e-12 (16 s)
+   a = 4.0 m0 = 3 : Gamma / g = 0.054528436 ; Re E / g = +0.000001018 ; poids 1.0608948 ; |somme - 1| 4.9e-12 ; residu 8.5e-14 ; ecarts a machine 2 : 9.9e-12 6.2e-11 8.5e-12 (18 s)
+   a = 4.0 m0 = 4 : Gamma / g = 0.054397295 ; Re E / g = +0.000003460 ; poids 1.0606135 ; |somme - 1| 1.4e-11 ; residu 9.1e-14 ; ecarts a machine 2 : 1.7e-11 9.0e-11 1.3e-11 (19 s)
+boite 0 g = 5e-4 : 12 cas ; plus grand ecart a machine 2 : Gamma / g 4.5e-11 ; Re E / g 1.4e-10 ; poids 2.7e-11
+
+real	0m19.239s
+user	0m19.106s
+sys	0m0.072s
+
+=== PARTIE 3 (deux dimensions) : boite 0, (34, 24, 10), 868 etats, g = 1e-03
+   a = 0.5 m0 = 2 : Gamma / g = 0.041204029 ; Re E / g = +0.001033067 ; poids 1.0233466 ; |somme - 1| 3.7e-12 ; residu 1.8e-13 ; ecarts a machine 2 : 2.4e-12 1.7e-11 1.9e-12 (2 s)
+   a = 0.5 m0 = 3 : Gamma / g = 0.038895593 ; Re E / g = +0.001179199 ; poids 1.0180601 ; |somme - 1| 2.1e-12 ; residu 9.5e-14 ; ecarts a machine 2 : 4.1e-12 2.0e-12 2.7e-12 (4 s)
+   a = 0.5 m0 = 4 : Gamma / g = 0.036336526 ; Re E / g = +0.001327179 ; poids 1.0126476 ; |somme - 1| 2.9e-12 ; residu 8.7e-14 ; ecarts a machine 2 : 3.1e-12 4.9e-11 7.2e-14 (5 s)
+   a = 1.0 m0 = 2 : Gamma / g = 0.052387568 ; Re E / g = +0.000182141 ; poids 1.0541040 ; |somme - 1| 5.1e-12 ; residu 8.1e-14 ; ecarts a machine 2 : 9.8e-12 2.6e-11 5.6e-12 (7 s)
+   a = 1.0 m0 = 3 : Gamma / g = 0.051515935 ; Re E / g = +0.000260844 ; poids 1.0513150 ; |somme - 1| 2.8e-12 ; residu 9.1e-14 ; ecarts a machine 2 : 3.0e-12 3.0e-11 1.7e-12 (8 s)
+   a = 1.0 m0 = 4 : Gamma / g = 0.050264257 ; Re E / g = +0.000362399 ; poids 1.0475478 ; |somme - 1| 3.9e-12 ; residu 9.0e-14 ; ecarts a machine 2 : 9.3e-12 1.5e-11 7.7e-12 (10 s)
+   a = 2.0 m0 = 2 : Gamma / g = 0.054343367 ; Re E / g = +0.000005840 ; poids 1.0604688 ; |somme - 1| 8.5e-12 ; residu 1.7e-13 ; ecarts a machine 2 : 1.8e-11 2.5e-11 1.1e-11 (11 s)
+   a = 2.0 m0 = 3 : Gamma / g = 0.054333600 ; Re E / g = +0.000013200 ; poids 1.0602961 ; |somme - 1| 1.4e-11 ; residu 8.6e-14 ; ecarts a machine 2 : 1.1e-11 4.1e-11 3.6e-13 (13 s)
+   a = 2.0 m0 = 4 : Gamma / g = 0.054191050 ; Re E / g = +0.000018837 ; poids 1.0599154 ; |somme - 1| 4.0e-11 ; residu 2.0e-13 ; ecarts a machine 2 : 4.0e-12 1.2e-10 3.9e-12 (14 s)
+   a = 4.0 m0 = 2 : Gamma / g = 0.054356678 ; Re E / g = -0.000000244 ; poids 1.0605997 ; |somme - 1| 4.9e-12 ; residu 8.6e-14 ; ecarts a machine 2 : 4.2e-12 1.7e-11 6.7e-12 (16 s)
+   a = 4.0 m0 = 3 : Gamma / g = 0.054527797 ; Re E / g = +0.000002016 ; poids 1.0608927 ; |somme - 1| 6.5e-12 ; residu 8.5e-14 ; ecarts a machine 2 : 2.7e-12 1.6e-11 7.8e-13 (18 s)
+   a = 4.0 m0 = 4 : Gamma / g = 0.054403260 ; Re E / g = +0.000006710 ; poids 1.0606334 ; |somme - 1| 1.4e-12 ; residu 8.6e-14 ; ecarts a machine 2 : 5.8e-12 1.0e-10 4.8e-13 (19 s)
+boite 0 g = 1e-3 : 12 cas ; plus grand ecart a machine 2 : Gamma / g 1.8e-11 ; Re E / g 1.2e-10 ; poids 1.1e-11
+
+=== PARTIE 3 (deux dimensions) : boite 1, (34, 24, 11), 869 etats, g = 5e-04
+   a = 0.5 m0 = 2 : Gamma / g = 0.069978731 ; Re E / g = -0.001063076 ; poids 1.1229738 ; |somme - 1| 3.0e-11 ; residu 8.3e-14 ; ecarts a machine 2 : 3.7e-12 1.0e-10 9.9e-12 (2 s)
+   a = 0.5 m0 = 3 : Gamma / g = 0.074157399 ; Re E / g = -0.001419887 ; poids 1.1437158 ; |somme - 1| 1.4e-11 ; residu 9.0e-14 ; ecarts a machine 2 : 2.1e-11 1.6e-10 6.1e-11 (3 s)
+   a = 0.5 m0 = 4 : Gamma / g = 0.079601692 ; Re E / g = -0.001943354 ; poids 1.1738009 ; |somme - 1| 2.4e-10 ; residu 1.9e-13 ; ecarts a machine 2 : 5.3e-11 1.9e-10 2.7e-11 (5 s)
+   a = 1.0 m0 = 2 : Gamma / g = 0.055888642 ; Re E / g = -0.000083516 ; poids 1.0656328 ; |somme - 1| 1.7e-11 ; residu 9.2e-14 ; ecarts a machine 2 : 8.0e-12 4.9e-11 2.4e-13 (6 s)
+   a = 1.0 m0 = 3 : Gamma / g = 0.056609479 ; Re E / g = -0.000123997 ; poids 1.0680764 ; |somme - 1| 1.7e-11 ; residu 8.9e-14 ; ecarts a machine 2 : 5.2e-11 4.7e-11 1.9e-11 (8 s)
+   a = 1.0 m0 = 4 : Gamma / g = 0.057596088 ; Re E / g = -0.000184961 ; poids 1.0716080 ; |somme - 1| 2.0e-11 ; residu 8.9e-14 ; ecarts a machine 2 : 1.3e-11 9.9e-11 1.0e-12 (10 s)
+   a = 2.0 m0 = 2 : Gamma / g = 0.054432039 ; Re E / g = -0.000001106 ; poids 1.0607435 ; |somme - 1| 1.5e-11 ; residu 8.8e-14 ; ecarts a machine 2 : 1.4e-11 9.0e-14 4.2e-12 (11 s)
+   a = 2.0 m0 = 3 : Gamma / g = 0.054505606 ; Re E / g = -0.000002027 ; poids 1.0608771 ; |somme - 1| 1.3e-11 ; residu 8.6e-14 ; ecarts a machine 2 : 8.1e-12 1.0e-10 1.1e-11 (13 s)
+   a = 2.0 m0 = 4 : Gamma / g = 0.054542853 ; Re E / g = -0.000006851 ; poids 1.0610689 ; |somme - 1| 2.7e-11 ; residu 9.6e-14 ; ecarts a machine 2 : 6.8e-12 2.3e-11 2.3e-11 (14 s)
+   a = 4.0 m0 = 2 : Gamma / g = 0.054386836 ; Re E / g = +0.000000030 ; poids 1.0606635 ; |somme - 1| 7.9e-12 ; residu 8.9e-14 ; ecarts a machine 2 : 5.5e-11 1.6e-11 5.2e-11 (16 s)
+   a = 4.0 m0 = 3 : Gamma / g = 0.054471528 ; Re E / g = +0.000002008 ; poids 1.0607251 ; |somme - 1| 1.3e-11 ; residu 8.9e-14 ; ecarts a machine 2 : 1.0e-11 7.4e-12 3.2e-12 (17 s)
+   a = 4.0 m0 = 4 : Gamma / g = 0.054351352 ; Re E / g = +0.000000115 ; poids 1.0604567 ; |somme - 1| 2.3e-11 ; residu 8.8e-14 ; ecarts a machine 2 : 7.2e-12 6.1e-11 6.9e-12 (19 s)
+boite 1 g = 5e-4 : 12 cas ; plus grand ecart a machine 2 : Gamma / g 5.5e-11 ; Re E / g 1.9e-10 ; poids 6.1e-11
+
+=== PARTIE 3 (deux dimensions) : boite 1, (34, 24, 11), 869 etats, g = 1e-03
+   a = 0.5 m0 = 2 : Gamma / g = 0.070485867 ; Re E / g = -0.002299356 ; poids 1.1246713 ; |somme - 1| 8.7e-12 ; residu 8.4e-14 ; ecarts a machine 2 : 7.5e-12 2.4e-11 4.2e-12 (2 s)
+   a = 0.5 m0 = 3 : Gamma / g = 0.074732820 ; Re E / g = -0.003077143 ; poids 1.1453347 ; |somme - 1| 3.6e-11 ; residu 9.0e-14 ; ecarts a machine 2 : 3.2e-12 1.6e-11 1.0e-11 (4 s)
+   a = 0.5 m0 = 4 : Gamma / g = 0.080190684 ; Re E / g = -0.004218396 ; poids 1.1743763 ; |somme - 1| 3.1e-11 ; residu 8.3e-14 ; ecarts a machine 2 : 1.8e-11 2.8e-11 3.6e-11 (5 s)
+   a = 1.0 m0 = 2 : Gamma / g = 0.056017236 ; Re E / g = -0.000187088 ; poids 1.0660721 ; |somme - 1| 2.0e-11 ; residu 1.9e-13 ; ecarts a machine 2 : 1.2e-11 3.3e-11 9.3e-12 (7 s)
+   a = 1.0 m0 = 3 : Gamma / g = 0.056797657 ; Re E / g = -0.000277988 ; poids 1.0687277 ; |somme - 1| 5.5e-12 ; residu 8.0e-14 ; ecarts a machine 2 : 1.6e-11 1.6e-11 9.0e-12 (8 s)
+   a = 1.0 m0 = 4 : Gamma / g = 0.057869199 ; Re E / g = -0.000414854 ; poids 1.0725705 ; |somme - 1| 8.5e-12 ; residu 1.8e-13 ; ecarts a machine 2 : 1.6e-11 1.1e-11 2.2e-11 (10 s)
+   a = 2.0 m0 = 2 : Gamma / g = 0.054435779 ; Re E / g = -0.000002696 ; poids 1.0607559 ; |somme - 1| 1.0e-11 ; residu 8.6e-14 ; ecarts a machine 2 : 1.4e-11 1.9e-11 4.5e-12 (11 s)
+   a = 2.0 m0 = 3 : Gamma / g = 0.054513318 ; Re E / g = -0.000005059 ; poids 1.0609027 ; |somme - 1| 7.0e-12 ; residu 8.9e-14 ; ecarts a machine 2 : 1.4e-12 2.8e-11 2.5e-12 (13 s)
+   a = 2.0 m0 = 4 : Gamma / g = 0.054558421 ; Re E / g = -0.000015771 ; poids 1.0611208 ; |somme - 1| 3.1e-11 ; residu 1.9e-13 ; ecarts a machine 2 : 3.4e-12 8.4e-12 1.2e-12 (15 s)
+   a = 4.0 m0 = 2 : Gamma / g = 0.054386639 ; Re E / g = +0.000000058 ; poids 1.0606629 ; |somme - 1| 6.7e-12 ; residu 8.6e-14 ; ecarts a machine 2 : 6.0e-12 2.4e-11 3.1e-12 (16 s)
+   a = 4.0 m0 = 3 : Gamma / g = 0.054472315 ; Re E / g = +0.000003977 ; poids 1.0607277 ; |somme - 1| 2.4e-12 ; residu 8.3e-14 ; ecarts a machine 2 : 1.4e-11 2.5e-11 3.7e-12 (18 s)
+   a = 4.0 m0 = 4 : Gamma / g = 0.054352890 ; Re E / g = +0.000000247 ; poids 1.0604618 ; |somme - 1| 6.9e-12 ; residu 9.2e-14 ; ecarts a machine 2 : 5.9e-12 1.4e-11 7.4e-12 (19 s)
+boite 1 g = 1e-3 : 12 cas ; plus grand ecart a machine 2 : Gamma / g 1.8e-11 ; Re E / g 3.3e-11 ; poids 3.6e-11
+
+=== PARTIE 3 (deux dimensions) : boite 2, (40, 28, 12), 1181 etats, g = 5e-04
+   a = 0.5 m0 = 2 : Gamma / g = 0.044569481 ; Re E / g = +0.000603017 ; poids 1.0315913 ; |somme - 1| 1.0e-11 ; residu 1.0e-13 ; ecarts a machine 2 : 4.0e-12 3.4e-11 3.0e-12 (3 s)
+   a = 0.5 m0 = 3 : Gamma / g = 0.042773956 ; Re E / g = +0.000697456 ; poids 1.0270391 ; |somme - 1| 1.2e-12 ; residu 1.1e-13 ; ecarts a machine 2 : 2.1e-12 6.4e-11 1.6e-12 (7 s)
+   a = 0.5 m0 = 4 : Gamma / g = 0.040735165 ; Re E / g = +0.000797794 ; poids 1.0221671 ; |somme - 1| 6.5e-12 ; residu 1.2e-13 ; ecarts a machine 2 : 6.2e-12 1.4e-10 3.3e-14 (10 s)
+   a = 1.0 m0 = 2 : Gamma / g = 0.053369360 ; Re E / g = +0.000071861 ; poids 1.0572117 ; |somme - 1| 7.8e-12 ; residu 1.1e-13 ; ecarts a machine 2 : 9.2e-12 6.9e-11 1.0e-12 (14 s)
+   a = 1.0 m0 = 3 : Gamma / g = 0.052916622 ; Re E / g = +0.000103670 ; poids 1.0557083 ; |somme - 1| 2.4e-11 ; residu 1.0e-13 ; ecarts a machine 2 : 4.3e-13 6.5e-12 1.1e-12 (18 s)
+   a = 1.0 m0 = 4 : Gamma / g = 0.052240978 ; Re E / g = +0.000146625 ; poids 1.0535850 ; |somme - 1| 1.1e-11 ; residu 1.1e-13 ; ecarts a machine 2 : 1.3e-11 6.8e-11 1.4e-11 (21 s)
+   a = 2.0 m0 = 2 : Gamma / g = 0.054393451 ; Re E / g = +0.000001550 ; poids 1.0606023 ; |somme - 1| 2.3e-11 ; residu 1.0e-13 ; ecarts a machine 2 : 2.6e-12 2.0e-11 2.7e-13 (25 s)
+   a = 2.0 m0 = 3 : Gamma / g = 0.054414430 ; Re E / g = +0.000003260 ; poids 1.0605829 ; |somme - 1| 1.4e-11 ; residu 1.1e-13 ; ecarts a machine 2 : 1.2e-12 1.2e-10 6.1e-12 (29 s)
+   a = 2.0 m0 = 4 : Gamma / g = 0.054359845 ; Re E / g = +0.000004348 ; poids 1.0604549 ; |somme - 1| 4.0e-12 ; residu 1.1e-13 ; ecarts a machine 2 : 6.7e-12 1.1e-10 3.2e-12 (32 s)
+   a = 4.0 m0 = 2 : Gamma / g = 0.054393977 ; Re E / g = +0.000000284 ; poids 1.0606606 ; |somme - 1| 9.1e-12 ; residu 1.1e-13 ; ecarts a machine 2 : 1.2e-11 3.5e-11 6.8e-12 (36 s)
+   a = 4.0 m0 = 3 : Gamma / g = 0.054449171 ; Re E / g = +0.000001753 ; poids 1.0606669 ; |somme - 1| 1.0e-11 ; residu 1.1e-13 ; ecarts a machine 2 : 1.1e-11 7.3e-13 6.5e-13 (39 s)
+   a = 4.0 m0 = 4 : Gamma / g = 0.054409223 ; Re E / g = -0.000001128 ; poids 1.0606394 ; |somme - 1| 1.1e-11 ; residu 1.1e-13 ; ecarts a machine 2 : 2.5e-12 1.2e-10 2.8e-12 (43 s)
+boite 2 g = 5e-4 : 12 cas ; plus grand ecart a machine 2 : Gamma / g 1.3e-11 ; Re E / g 1.4e-10 ; poids 1.4e-11
+
+=== PARTIE 3 (deux dimensions) : boite 2, (40, 28, 12), 1181 etats, g = 1e-03
+   a = 0.5 m0 = 2 : Gamma / g = 0.043988330 ; Re E / g = +0.001315164 ; poids 1.0299305 ; |somme - 1| 4.0e-12 ; residu 1.0e-13 ; ecarts a machine 2 : 9.3e-13 1.2e-11 4.2e-13 (3 s)
+   a = 0.5 m0 = 3 : Gamma / g = 0.042100986 ; Re E / g = +0.001516039 ; poids 1.0251770 ; |somme - 1| 1.0e-12 ; residu 1.1e-13 ; ecarts a machine 2 : 7.6e-13 3.8e-11 2.2e-12 (7 s)
+   a = 0.5 m0 = 4 : Gamma / g = 0.039965174 ; Re E / g = +0.001727819 ; poids 1.0201163 ; |somme - 1| 1.9e-12 ; residu 1.1e-13 ; ecarts a machine 2 : 1.5e-13 2.8e-12 2.7e-13 (10 s)
+   a = 1.0 m0 = 2 : Gamma / g = 0.053223668 ; Re E / g = +0.000169700 ; poids 1.0567370 ; |somme - 1| 7.3e-12 ; residu 1.1e-13 ; ecarts a machine 2 : 7.1e-12 1.7e-12 3.0e-12 (14 s)
+   a = 1.0 m0 = 3 : Gamma / g = 0.052708401 ; Re E / g = +0.000244117 ; poids 1.0550360 ; |somme - 1| 3.4e-12 ; residu 1.1e-13 ; ecarts a machine 2 : 1.2e-14 1.1e-12 1.0e-12 (17 s)
+   a = 1.0 m0 = 4 : Gamma / g = 0.051947636 ; Re E / g = +0.000344345 ; poids 1.0526505 ; |somme - 1| 6.2e-12 ; residu 1.1e-13 ; ecarts a machine 2 : 7.2e-12 8.8e-12 5.2e-13 (21 s)
+   a = 2.0 m0 = 2 : Gamma / g = 0.054390080 ; Re E / g = +0.000003633 ; poids 1.0605911 ; |somme - 1| 3.2e-12 ; residu 1.1e-13 ; ecarts a machine 2 : 2.7e-12 5.9e-11 7.4e-13 (25 s)
+   a = 2.0 m0 = 3 : Gamma / g = 0.054407529 ; Re E / g = +0.000007617 ; poids 1.0605600 ; |somme - 1| 2.4e-12 ; residu 1.1e-13 ; ecarts a machine 2 : 1.8e-12 1.1e-12 6.8e-13 (28 s)
+   a = 2.0 m0 = 4 : Gamma / g = 0.054345846 ; Re E / g = +0.000010916 ; poids 1.0604085 ; |somme - 1| 6.7e-12 ; residu 1.1e-13 ; ecarts a machine 2 : 7.2e-13 2.1e-11 1.6e-12 (31 s)
+   a = 4.0 m0 = 2 : Gamma / g = 0.054394020 ; Re E / g = +0.000000563 ; poids 1.0606608 ; |somme - 1| 6.6e-12 ; residu 1.2e-13 ; ecarts a machine 2 : 1.7e-12 3.7e-12 2.7e-12 (35 s)
+   a = 4.0 m0 = 3 : Gamma / g = 0.054449605 ; Re E / g = +0.000003505 ; poids 1.0606684 ; |somme - 1| 3.1e-12 ; residu 1.2e-13 ; ecarts a machine 2 : 3.0e-12 6.1e-11 2.7e-12 (38 s)
+   a = 4.0 m0 = 4 : Gamma / g = 0.054407943 ; Re E / g = -0.000002165 ; poids 1.0606352 ; |somme - 1| 7.3e-12 ; residu 1.2e-13 ; ecarts a machine 2 : 2.5e-12 1.0e-11 1.9e-12 (41 s)
+boite 2 g = 1e-3 : 12 cas ; plus grand ecart a machine 2 : Gamma / g 7.2e-12 ; Re E / g 6.1e-11 ; poids 3.0e-12
+
+=== PARTIE 3 (deux dimensions) : boite 3, (40, 28, 13), 1182 etats, g = 5e-04
+   a = 0.5 m0 = 2 : Gamma / g = 0.065237208 ; Re E / g = -0.001035064 ; poids 1.1016096 ; |somme - 1| 1.6e-11 ; residu 1.1e-13 ; ecarts a machine 2 : 5.7e-12 1.0e-11 1.8e-11 (4 s)
+   a = 0.5 m0 = 3 : Gamma / g = 0.067900467 ; Re E / g = -0.001333511 ; poids 1.1132820 ; |somme - 1| 1.4e-11 ; residu 1.0e-13 ; ecarts a machine 2 : 2.6e-12 7.3e-11 8.3e-13 (7 s)
+   a = 0.5 m0 = 4 : Gamma / g = 0.071253279 ; Re E / g = -0.001739963 ; poids 1.1290036 ; |somme - 1| 1.5e-11 ; residu 1.1e-13 ; ecarts a machine 2 : 1.4e-11 6.0e-11 1.1e-11 (10 s)
+   a = 1.0 m0 = 2 : Gamma / g = 0.055215507 ; Re E / g = -0.000066027 ; poids 1.0633315 ; |somme - 1| 6.6e-12 ; residu 1.1e-13 ; ecarts a machine 2 : 2.8e-13 3.1e-11 1.2e-11 (14 s)
+   a = 1.0 m0 = 3 : Gamma / g = 0.055599652 ; Re E / g = -0.000097077 ; poids 1.0646038 ; |somme - 1| 5.2e-12 ; residu 1.1e-13 ; ecarts a machine 2 : 6.9e-12 8.4e-11 2.1e-14 (17 s)
+   a = 1.0 m0 = 4 : Gamma / g = 0.056115791 ; Re E / g = -0.000143036 ; poids 1.0664054 ; |somme - 1| 9.8e-12 ; residu 1.1e-13 ; ecarts a machine 2 : 7.4e-12 3.8e-11 1.5e-11 (21 s)
+   a = 2.0 m0 = 2 : Gamma / g = 0.054420774 ; Re E / g = -0.000000160 ; poids 1.0606831 ; |somme - 1| 3.7e-12 ; residu 1.1e-13 ; ecarts a machine 2 : 1.9e-12 8.0e-11 4.2e-12 (25 s)
+   a = 2.0 m0 = 3 : Gamma / g = 0.054461134 ; Re E / g = -0.000000401 ; poids 1.0607440 ; |somme - 1| 1.7e-11 ; residu 1.1e-13 ; ecarts a machine 2 : 4.2e-12 9.3e-11 6.1e-13 (28 s)
+   a = 2.0 m0 = 4 : Gamma / g = 0.054459219 ; Re E / g = -0.000002777 ; poids 1.0607807 ; |somme - 1| 4.9e-12 ; residu 1.1e-13 ; ecarts a machine 2 : 1.6e-11 7.4e-12 4.2e-12 (32 s)
+   a = 4.0 m0 = 2 : Gamma / g = 0.054397434 ; Re E / g = +0.000000390 ; poids 1.0606525 ; |somme - 1| 1.5e-11 ; residu 1.1e-13 ; ecarts a machine 2 : 6.2e-12 6.0e-11 7.5e-12 (36 s)
+   a = 4.0 m0 = 3 : Gamma / g = 0.054447871 ; Re E / g = +0.000001387 ; poids 1.0606745 ; |somme - 1| 1.1e-11 ; residu 1.1e-13 ; ecarts a machine 2 : 5.4e-13 5.8e-11 3.4e-12 (39 s)
+   a = 4.0 m0 = 4 : Gamma / g = 0.054427343 ; Re E / g = -0.000000769 ; poids 1.0606911 ; |somme - 1| 1.5e-11 ; residu 1.1e-13 ; ecarts a machine 2 : 5.2e-12 2.7e-11 6.3e-12 (43 s)
+boite 3 g = 5e-4 : 12 cas ; plus grand ecart a machine 2 : Gamma / g 1.6e-11 ; Re E / g 9.3e-11 ; poids 1.8e-11
+
+=== PARTIE 3 (deux dimensions) : boite 3, (40, 28, 13), 1182 etats, g = 1e-03
+   a = 0.5 m0 = 2 : Gamma / g = 0.066152660 ; Re E / g = -0.002469551 ; poids 1.1047499 ; |somme - 1| 1.5e-11 ; residu 1.1e-13 ; ecarts a machine 2 : 4.4e-12 1.2e-11 3.8e-12 (4 s)
+   a = 0.5 m0 = 3 : Gamma / g = 0.068968507 ; Re E / g = -0.003191467 ; poids 1.1167594 ; |somme - 1| 3.6e-11 ; residu 1.1e-13 ; ecarts a machine 2 : 8.9e-12 2.2e-11 1.7e-11 (7 s)
+   a = 0.5 m0 = 4 : Gamma / g = 0.072455031 ; Re E / g = -0.004177659 ; poids 1.1323572 ; |somme - 1| 9.3e-12 ; residu 1.1e-13 ; ecarts a machine 2 : 3.3e-12 2.0e-11 4.1e-12 (11 s)
+   a = 1.0 m0 = 2 : Gamma / g = 0.055392104 ; Re E / g = -0.000172417 ; poids 1.0639290 ; |somme - 1| 5.6e-12 ; residu 1.1e-13 ; ecarts a machine 2 : 2.0e-12 4.1e-11 2.2e-12 (15 s)
+   a = 1.0 m0 = 3 : Gamma / g = 0.055855354 ; Re E / g = -0.000253438 ; poids 1.0654750 ; |somme - 1| 8.8e-12 ; residu 1.1e-13 ; ecarts a machine 2 : 1.1e-13 1.0e-11 1.7e-12 (19 s)
+   a = 1.0 m0 = 4 : Gamma / g = 0.056483300 ; Re E / g = -0.000373009 ; poids 1.0676696 ; |somme - 1| 3.5e-12 ; residu 1.1e-13 ; ecarts a machine 2 : 3.7e-12 7.5e-12 2.1e-12 (22 s)
+   a = 2.0 m0 = 2 : Gamma / g = 0.054423798 ; Re E / g = -0.000000903 ; poids 1.0606932 ; |somme - 1| 1.2e-11 ; residu 1.1e-13 ; ecarts a machine 2 : 7.7e-12 3.9e-11 9.2e-12 (26 s)
+   a = 2.0 m0 = 3 : Gamma / g = 0.054467376 ; Re E / g = -0.000002000 ; poids 1.0607648 ; |somme - 1| 8.0e-12 ; residu 1.1e-13 ; ecarts a machine 2 : 7.1e-12 1.2e-11 5.3e-13 (30 s)
+   a = 2.0 m0 = 4 : Gamma / g = 0.054471714 ; Re E / g = -0.000007979 ; poids 1.0608224 ; |somme - 1| 1.7e-12 ; residu 1.1e-13 ; ecarts a machine 2 : 5.4e-12 2.8e-11 5.0e-13 (33 s)
+   a = 4.0 m0 = 2 : Gamma / g = 0.054397492 ; Re E / g = +0.000000779 ; poids 1.0606527 ; |somme - 1| 7.5e-12 ; residu 1.1e-13 ; ecarts a machine 2 : 1.1e-11 1.8e-11 7.0e-12 (37 s)
+   a = 4.0 m0 = 3 : Gamma / g = 0.054447866 ; Re E / g = +0.000002785 ; poids 1.0606745 ; |somme - 1| 3.3e-12 ; residu 1.0e-13 ; ecarts a machine 2 : 1.5e-12 4.5e-11 1.0e-12 (40 s)
+   a = 4.0 m0 = 4 : Gamma / g = 0.054426482 ; Re E / g = -0.000001524 ; poids 1.0606883 ; |somme - 1| 7.5e-12 ; residu 1.0e-13 ; ecarts a machine 2 : 2.3e-12 1.9e-11 2.0e-12 (44 s)
+boite 3 g = 1e-3 : 12 cas ; plus grand ecart a machine 2 : Gamma / g 1.1e-11 ; Re E / g 4.5e-11 ; poids 1.7e-11

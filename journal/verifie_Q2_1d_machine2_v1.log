@@ -1,0 +1,18 @@
+(1) eta0 et (2) profondeur de barriere, r_c
+Q2-a  w2 = 20001/10000 g = 6e-05   |d|/g = 1.667  seuils 1er ordre des sites 1..3 : 1.5708 2.3574 3.3591  -> profondeur 1 (sa colonne : 1) ; r_c = 20 (sa colonne : 20) ; eta0 = 2.33642e-04 (sa colonne 2.33642e-04, ecart relatif 0.0e+00)
+Q2-b  w2 = 20001/10000 g = 4e-05   |d|/g = 2.500  seuils 1er ordre des sites 1..3 : 1.5708 2.3574 3.3591  -> profondeur 2 (sa colonne : 2) ; r_c = 22 (sa colonne : 22) ; eta0 = 1.55762e-04 (sa colonne 1.55762e-04, ecart relatif 0.0e+00)
+Q2-c  w2 = 19999/10000 g = 0.0003  |d|/g = 0.333  seuils 1er ordre des sites 1..3 : 1.5719 2.3591 3.3616  -> profondeur 0 (sa colonne : 0) ; r_c = 18 (sa colonne : 18) ; eta0 = 1.16909e-03 (sa colonne 1.16909e-03, ecart relatif 0.0e+00)
+Q2-d  w2 = 19999/10000 g = 0.00015 |d|/g = 0.667  seuils 1er ordre des sites 1..3 : 1.5719 2.3591 3.3616  -> profondeur 0 (sa colonne : 0) ; r_c = 18 (sa colonne : 18) ; eta0 = 5.84544e-04 (sa colonne 5.84544e-04, ecart relatif 0.0e+00)
+plus grand ecart relatif sur eta0 : 0.0e+00
+
+(3) recoupement de sa colonne G3* par ma chaine du premier ordre (absorbeur lisse, pole)
+Q2-a  Gamma_1er = 4.94741e-08 ; sa G3* = 4.94622e-08 ; ln(G3* / G1er) = -0.00024
+Q2-b  Gamma_1er = 2.05525e-09 ; sa G3* = 2.05449e-09 ; ln(G3* / G1er) = -0.00037
+Q2-c  Gamma_1er = 1.21069e-05 ; sa G3* = 1.21071e-05 ; ln(G3* / G1er) = +0.00001
+Q2-d  Gamma_1er = 2.92055e-06 ; sa G3* = 2.92086e-06 ; ln(G3* / G1er) = +0.00011
+
+rapports de signe au premier ordre (ma chaine) : ln[G(Q2-c) / G(Q-e)] et ln[G(Q2-d) / G(Q-f)] ; je calcule G(Q-e), G(Q-f) au meme premier ordre
+Q2-c  ln[G1er(Q2-c) / G1er(Q-e, w2 = 2.0001)] = +0.00117   (ses rapports de G3* : +0.00121 pour Q2-c, +0.00211 pour Q2-d)
+Q2-d  ln[G1er(Q2-d) / G1er(Q-f, w2 = 2.0001)] = +0.00205   (ses rapports de G3* : +0.00121 pour Q2-c, +0.00211 pour Q2-d)
+
+Ce que ce script ne dit pas : rien d un etat 2D, rien de la feuille deposee, rien de sa chaine d ordre 3 elle-meme (je n en ai que le premier ordre).

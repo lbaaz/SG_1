@@ -1,0 +1,633 @@
+{
+ "etape": "temoins",
+ "feuille": "feuille_gel_sommet_machine1_v1",
+ "feuille_canon": "ac934e0caaa59c08",
+ "feuille_lecteur_canon": "83701094e6a2b965",
+ "graine": "114565",
+ "instrument": "TIENT",
+ "instrument_canon": "0eac1369af038f77",
+ "pilote_machine2_canon": "47a84eae6052f006",
+ "reglage": {
+  "plat": 0.005,
+  "portee_tenues_par_kappa_min": 4,
+  "s1_jugees_min": 42,
+  "s1_tenues_par_w2_min": 4,
+  "tau_accord": 0.05,
+  "tau_plateau": 0.05,
+  "temoin_max": 1e-06,
+  "tolerance": 0.01,
+  "tolerance_temoin_positif": 0.001
+ },
+ "table_canon": "4238e2b262119f83",
+ "temoins_positifs": {
+  "issue": "TIENNENT",
+  "points": [
+   {
+    "barreaux_plats_sous_A": [
+     -3,
+     -2,
+     -1,
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "ecart_reference": 0.0,
+    "etalement_du_lecteur": 0.0011733497942004322,
+    "g": "2.5e-4",
+    "id": "Qa",
+    "lecteur": {
+     "echecs": [],
+     "non_lisibles": [],
+     "plateaux": {
+      "A": {
+       "Gamma_pl": 1.3607809034366038e-05,
+       "ecart_ln_A": null,
+       "etalement": 2.655805337004047e-05,
+       "k0": -1,
+       "statut": "PLATEAU"
+      },
+      "B": {
+       "Gamma_pl": 1.3607864753523685e-05,
+       "ecart_ln_A": 4.094637382967175e-06,
+       "etalement": 1.7202231136659307e-05,
+       "k0": -1,
+       "statut": "PLATEAU"
+      },
+      "C": {
+       "Gamma_pl": 1.3623785125234572e-05,
+       "ecart_ln_A": 0.0011733497942004322,
+       "etalement": 0.0023576785480827755,
+       "k0": 2,
+       "statut": "PLATEAU"
+      },
+      "D": {
+       "Gamma_pl": 1.3607982259214882e-05,
+       "ecart_ln_A": 1.2729730837478031e-05,
+       "etalement": 1.249880927622904e-05,
+       "k0": -1,
+       "statut": "PLATEAU"
+      }
+     },
+     "poids_min": 0.614405428480414,
+     "statut": "QUALIFIE",
+     "suivies": 47
+    },
+    "ln_Gamma_pl": -11.20486673630501,
+    "ln_q": -1.5361471568553497e-05,
+    "lu": true,
+    "m": 0,
+    "motif": null,
+    "temoin": {
+     "lectures": 48,
+     "plus_grande_largeur": 1.9755397102973636e-41,
+     "rapport_au_plateau": 1.4517691314657697e-36,
+     "suivies": 48,
+     "tient": true
+    },
+    "tient": true,
+    "w2": "2"
+   },
+   {
+    "barreaux_plats_sous_A": [
+     -3,
+     -2,
+     -1,
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "ecart_reference": 0.0,
+    "etalement_du_lecteur": 0.0018312032604441883,
+    "g": "1e-3",
+    "id": "Qc",
+    "lecteur": {
+     "echecs": [],
+     "non_lisibles": [],
+     "plateaux": {
+      "A": {
+       "Gamma_pl": 5.4431130732776826e-05,
+       "ecart_ln_A": null,
+       "etalement": 2.5865240738331963e-05,
+       "k0": -1,
+       "statut": "PLATEAU"
+      },
+      "B": {
+       "Gamma_pl": 5.443145518355995e-05,
+       "ecart_ln_A": 5.960739962162149e-06,
+       "etalement": 1.8526975939403556e-05,
+       "k0": -1,
+       "statut": "PLATEAU"
+      },
+      "C": {
+       "Gamma_pl": 5.4530896514678136e-05,
+       "ecart_ln_A": 0.0018312032604441883,
+       "etalement": 0.003210930816301749,
+       "k0": 2,
+       "statut": "PLATEAU"
+      },
+      "D": {
+       "Gamma_pl": 5.4432177004441374e-05,
+       "ecart_ln_A": 1.922175040100677e-05,
+       "etalement": 1.4916837289380425e-05,
+       "k0": -2,
+       "statut": "PLATEAU"
+      }
+     },
+     "poids_min": 0.5721394418708975,
+     "statut": "QUALIFIE",
+     "suivies": 47
+    },
+    "ln_Gamma_pl": -9.818574311661248,
+    "ln_q": -5.646178031781801e-07,
+    "lu": true,
+    "m": 0,
+    "motif": null,
+    "temoin": {
+     "lectures": 48,
+     "plus_grande_largeur": 5.3922646085747374e-36,
+     "rapport_au_plateau": 9.906582016543842e-32,
+     "suivies": 48,
+     "tient": true
+    },
+    "tient": true,
+    "w2": "2"
+   },
+   {
+    "barreaux_plats_sous_A": [
+     -3,
+     -2,
+     -1,
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "ecart_reference": 0.0,
+    "etalement_du_lecteur": 0.0008936348481879393,
+    "g": "2e-3",
+    "id": "Qd",
+    "lecteur": {
+     "echecs": [],
+     "non_lisibles": [],
+     "plateaux": {
+      "A": {
+       "Gamma_pl": 0.00010886099933830343,
+       "ecart_ln_A": null,
+       "etalement": 6.0244083402327675e-05,
+       "k0": -2,
+       "statut": "PLATEAU"
+      },
+      "B": {
+       "Gamma_pl": 0.00010886282652882157,
+       "ecart_ln_A": 1.6784479244743933e-05,
+       "etalement": 1.8703384855989214e-05,
+       "k0": -1,
+       "statut": "PLATEAU"
+      },
+      "C": {
+       "Gamma_pl": 0.00010895832480115644,
+       "ecart_ln_A": 0.0008936348481879393,
+       "etalement": 0.001300105669495899,
+       "k0": 3,
+       "statut": "PLATEAU"
+      },
+      "D": {
+       "Gamma_pl": 0.00010886448655777665,
+       "ecart_ln_A": 3.203317663204769e-05,
+       "etalement": 1.794735997506791e-05,
+       "k0": -2,
+       "statut": "PLATEAU"
+      }
+     },
+     "poids_min": 0.6583417332191216,
+     "statut": "QUALIFIE",
+     "suivies": 47
+    },
+    "ln_Gamma_pl": -9.125438724968173,
+    "ln_q": 6.078362702055529e-09,
+    "lu": true,
+    "m": 0,
+    "motif": null,
+    "temoin": {
+     "lectures": 48,
+     "plus_grande_largeur": 3.114790367938863e-33,
+     "rapport_au_plateau": 2.861254615401004e-29,
+     "suivies": 48,
+     "tient": true
+    },
+    "tient": true,
+    "w2": "2"
+   },
+   {
+    "barreaux_plats_sous_A": [
+     -3,
+     -2,
+     -1,
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "ecart_reference": 0.0,
+    "etalement_du_lecteur": 0.0011526955091661476,
+    "g": "3e-4",
+    "id": "Qe",
+    "lecteur": {
+     "echecs": [],
+     "non_lisibles": [],
+     "plateaux": {
+      "A": {
+       "Gamma_pl": 1.2092619130849218e-05,
+       "ecart_ln_A": null,
+       "etalement": 2.3236802707105042e-05,
+       "k0": -1,
+       "statut": "PLATEAU"
+      },
+      "B": {
+       "Gamma_pl": 1.2092575795613206e-05,
+       "ecart_ln_A": 3.583616848551704e-06,
+       "etalement": 1.518820757562267e-05,
+       "k0": -1,
+       "statut": "PLATEAU"
+      },
+      "C": {
+       "Gamma_pl": 1.2078688053770552e-05,
+       "ecart_ln_A": 0.0011526955091661476,
+       "etalement": 0.00198058997499051,
+       "k0": 2,
+       "statut": "PLATEAU"
+      },
+      "D": {
+       "Gamma_pl": 1.2092481625178372e-05,
+       "ecart_ln_A": 1.1371105891605878e-05,
+       "etalement": 1.1177590461652898e-05,
+       "k0": -1,
+       "statut": "PLATEAU"
+      }
+     },
+     "poids_min": 0.9077660473322725,
+     "statut": "QUALIFIE",
+     "suivies": 48
+    },
+    "ln_Gamma_pl": -11.322915280666688,
+    "ln_q": -1.812120536648365e-05,
+    "lu": true,
+    "m": 0,
+    "motif": null,
+    "temoin": {
+     "lectures": 48,
+     "plus_grande_largeur": 1.0174065757064658e-40,
+     "rapport_au_plateau": 8.41345092157068e-36,
+     "suivies": 48,
+     "tient": true
+    },
+    "tient": true,
+    "w2": "20001/10000"
+   },
+   {
+    "barreaux_plats_sous_A": [
+     -3,
+     -2,
+     -1,
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "ecart_reference": 0.0,
+    "etalement_du_lecteur": 0.0001478763818580305,
+    "g": "1.5e-4",
+    "id": "Qf",
+    "lecteur": {
+     "echecs": [],
+     "non_lisibles": [],
+     "plateaux": {
+      "A": {
+       "Gamma_pl": 2.914461013617495e-06,
+       "ecart_ln_A": null,
+       "etalement": 6.436690577205084e-06,
+       "k0": -1,
+       "statut": "PLATEAU"
+      },
+      "B": {
+       "Gamma_pl": 2.914465532871928e-06,
+       "ecart_ln_A": 1.550630084923043e-06,
+       "etalement": 4.406681908930565e-06,
+       "k0": -1,
+       "statut": "PLATEAU"
+      },
+      "C": {
+       "Gamma_pl": 2.9148920254347037e-06,
+       "ecart_ln_A": 0.0001478763818580305,
+       "etalement": 0.0005301816636646972,
+       "k0": 1,
+       "statut": "PLATEAU"
+      },
+      "D": {
+       "Gamma_pl": 2.9144811437995865e-06,
+       "ecart_ln_A": 6.9069761023216515e-06,
+       "etalement": 8.567925838143253e-06,
+       "k0": -2,
+       "statut": "PLATEAU"
+      }
+     },
+     "poids_min": 0.8801633073461697,
+     "statut": "QUALIFIE",
+     "suivies": 48
+    },
+    "ln_Gamma_pl": -12.745825656246966,
+    "ln_q": 8.199683696474835e-05,
+    "lu": true,
+    "m": 0,
+    "motif": null,
+    "temoin": {
+     "lectures": 48,
+     "plus_grande_largeur": 1.9812554950685384e-43,
+     "rapport_au_plateau": 6.79801680589084e-38,
+     "suivies": 48,
+     "tient": true
+    },
+    "tient": true,
+    "w2": "20001/10000"
+   },
+   {
+    "barreaux_plats_sous_A": [
+     -3,
+     -2,
+     -1,
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "ecart_reference": 0.0,
+    "etalement_du_lecteur": 0.001270905801163609,
+    "g": "6e-5",
+    "id": "Q2a",
+    "lecteur": {
+     "echecs": [],
+     "non_lisibles": [],
+     "plateaux": {
+      "A": {
+       "Gamma_pl": 4.9471714002248326e-08,
+       "ecart_ln_A": null,
+       "etalement": 9.677444033462379e-06,
+       "k0": -1,
+       "statut": "PLATEAU"
+      },
+      "B": {
+       "Gamma_pl": 4.947182917937088e-08,
+       "ecart_ln_A": 2.328138226142646e-06,
+       "etalement": 6.5223958884974564e-06,
+       "k0": -1,
+       "statut": "PLATEAU"
+      },
+      "C": {
+       "Gamma_pl": 4.9534627860893043e-08,
+       "ecart_ln_A": 0.001270905801163609,
+       "etalement": 0.003483367777029178,
+       "k0": 1,
+       "statut": "PLATEAU"
+      },
+      "D": {
+       "Gamma_pl": 4.9471820817200913e-08,
+       "ecart_ln_A": 2.1591092895030426e-06,
+       "etalement": 7.1957428084967745e-06,
+       "k0": -2,
+       "statut": "PLATEAU"
+      }
+     },
+     "poids_min": 0.9939051294752236,
+     "statut": "QUALIFIE",
+     "suivies": 48
+    },
+    "ln_Gamma_pl": -16.821864765000583,
+    "ln_q": -0.0001923304535864645,
+    "lu": true,
+    "m": 1,
+    "motif": null,
+    "temoin": {
+     "lectures": 48,
+     "plus_grande_largeur": 9.091738838765156e-53,
+     "rapport_au_plateau": 1.8377650789200403e-45,
+     "suivies": 48,
+     "tient": true
+    },
+    "tient": true,
+    "w2": "20001/10000"
+   },
+   {
+    "barreaux_plats_sous_A": [
+     -3,
+     -2,
+     -1,
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "ecart_reference": 0.0,
+    "etalement_du_lecteur": 1.0603718559727346e-05,
+    "g": "4e-5",
+    "id": "Q2b",
+    "lecteur": {
+     "echecs": [],
+     "non_lisibles": [],
+     "plateaux": {
+      "A": {
+       "Gamma_pl": 2.0551792324673785e-09,
+       "ecart_ln_A": null,
+       "etalement": 1.0603774779349706e-05,
+       "k0": -2,
+       "statut": "PLATEAU"
+      },
+      "B": {
+       "Gamma_pl": 2.0551730902743667e-09,
+       "ecart_ln_A": 2.988645512305243e-06,
+       "etalement": 3.458684879387164e-06,
+       "k0": -1,
+       "statut": "PLATEAU"
+      },
+      "C": {
+       "Gamma_pl": 2.055163221237163e-09,
+       "ecart_ln_A": 7.790703765504835e-06,
+       "etalement": 0.0004106787018296476,
+       "k0": 1,
+       "statut": "PLATEAU"
+      },
+      "D": {
+       "Gamma_pl": 2.0551598130890224e-09,
+       "ecart_ln_A": 9.449039673337353e-06,
+       "etalement": 1.2555530319646735e-05,
+       "k0": -2,
+       "statut": "PLATEAU"
+      }
+     },
+     "poids_min": 0.9979365314740591,
+     "statut": "QUALIFIE",
+     "suivies": 48
+    },
+    "ln_Gamma_pl": -20.002902775055777,
+    "ln_q": -0.00033541992547370114,
+    "lu": true,
+    "m": 2,
+    "motif": null,
+    "temoin": {
+     "lectures": 48,
+     "plus_grande_largeur": 6.388515279973039e-57,
+     "rapport_au_plateau": 3.108495443632527e-48,
+     "suivies": 48,
+     "tient": true
+    },
+    "tient": true,
+    "w2": "20001/10000"
+   },
+   {
+    "barreaux_plats_sous_A": [
+     -3,
+     -2,
+     -1,
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "ecart_reference": 0.0,
+    "etalement_du_lecteur": 0.0011931414654177705,
+    "g": "3e-4",
+    "id": "Q2c",
+    "lecteur": {
+     "echecs": [],
+     "non_lisibles": [],
+     "plateaux": {
+      "A": {
+       "Gamma_pl": 1.2107295418721328e-05,
+       "ecart_ln_A": null,
+       "etalement": 2.350349426927245e-05,
+       "k0": -1,
+       "statut": "PLATEAU"
+      },
+      "B": {
+       "Gamma_pl": 1.2107254769853302e-05,
+       "ecart_ln_A": 3.3573919573239712e-06,
+       "etalement": 1.485204188655942e-05,
+       "k0": -1,
+       "statut": "PLATEAU"
+      },
+      "C": {
+       "Gamma_pl": 1.2092858316988254e-05,
+       "ecart_ln_A": 0.0011931414654177705,
+       "etalement": 0.0019397124274225241,
+       "k0": 2,
+       "statut": "PLATEAU"
+      },
+      "D": {
+       "Gamma_pl": 1.210712117789706e-05,
+       "ecart_ln_A": 1.4391494717725227e-05,
+       "etalement": 1.2178969680975982e-05,
+       "k0": -2,
+       "statut": "PLATEAU"
+      }
+     },
+     "poids_min": 0.8463299890310424,
+     "statut": "QUALIFIE",
+     "suivies": 48
+    },
+    "ln_Gamma_pl": -11.321702359882085,
+    "ln_q": -1.61407062169161e-05,
+    "lu": true,
+    "m": 0,
+    "motif": null,
+    "temoin": {
+     "lectures": 48,
+     "plus_grande_largeur": 1.0237322199734472e-40,
+     "rapport_au_plateau": 8.45549880934156e-36,
+     "suivies": 48,
+     "tient": true
+    },
+    "tient": true,
+    "w2": "19999/10000"
+   },
+   {
+    "barreaux_plats_sous_A": [
+     -3,
+     -2,
+     -1,
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "ecart_reference": 0.0,
+    "etalement_du_lecteur": 0.00013596191888789113,
+    "g": "1.5e-4",
+    "id": "Q2d",
+    "lecteur": {
+     "echecs": [],
+     "non_lisibles": [],
+     "plateaux": {
+      "A": {
+       "Gamma_pl": 2.9206317555763934e-06,
+       "ecart_ln_A": null,
+       "etalement": 6.109395073172763e-06,
+       "k0": -1,
+       "statut": "PLATEAU"
+      },
+      "B": {
+       "Gamma_pl": 2.920635784636175e-06,
+       "ecart_ln_A": 1.3795155772557095e-06,
+       "etalement": 4.217287665309044e-06,
+       "k0": -1,
+       "statut": "PLATEAU"
+      },
+      "C": {
+       "Gamma_pl": 2.9210288772703485e-06,
+       "ecart_ln_A": 0.00013596191888789113,
+       "etalement": 0.0005096560365955849,
+       "k0": 1,
+       "statut": "PLATEAU"
+      },
+      "D": {
+       "Gamma_pl": 2.9206505620819435e-06,
+       "ecart_ln_A": 6.439170212062481e-06,
+       "etalement": 8.14239567836772e-06,
+       "k0": -2,
+       "statut": "PLATEAU"
+      }
+     },
+     "poids_min": 0.9346909855856206,
+     "statut": "QUALIFIE",
+     "suivies": 48
+    },
+    "ln_Gamma_pl": -12.743710610435926,
+    "ln_q": 7.814593712396345e-05,
+    "lu": true,
+    "m": 0,
+    "motif": null,
+    "temoin": {
+     "lectures": 48,
+     "plus_grande_largeur": 1.9935578869456605e-43,
+     "rapport_au_plateau": 6.825776249057551e-38,
+     "suivies": 48,
+     "tient": true
+    },
+    "tient": true,
+    "w2": "19999/10000"
+   }
+  ],
+  "sur": 9,
+  "tenus": 9
+ },
+ "verdict": "TIENT : les cellules peuvent etre lues"
+}

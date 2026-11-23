@@ -1,0 +1,6 @@
+TIENT : T0 table intacte : w2 retenus = seconde ecriture, quatre creneaux
+TIENT : T1 PP rang 0 ineligible : retenus ['100009/50000', '25001/12500'] = seconde ecriture ['100009/50000', '25001/12500'] ; a != b ; 2.00020 absent
+TIENT : T2 PP rangs 0 et 1 ineligibles : retenus ['25001/12500', '40003/20000'] = seconde ecriture ['25001/12500', '40003/20000']
+TIENT : T3 MP : un seul w2 eligible -> PAS DE GEL (code de sortie 2, message)
+TIENT : T4 determinisme : deux executions donnent la meme sortie
+AUTOTEST : TIENT (5 sur 5)

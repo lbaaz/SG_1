@@ -1,0 +1,87 @@
+graine : 114565 ; table commune : lue
+
+les huit lignes de controle de la section 3 (rangs 0 et 1 bruts, avant la regle des rangs) :
+    sha256("114565|MP|0") = 075d562d52484be8... ; modulo 15 = 9 -> w2 = 1.99989
+    sha256("114565|MP|1") = ca2fef773b2d924b... ; modulo 15 = 12 -> w2 = 1.99993
+    sha256("114565|PP|0") = 45ca0c879ef2a590... ; modulo 15 = 3 -> w2 = 2.00008
+    sha256("114565|PP|1") = 1a37a5fa7a9a1e40... ; modulo 15 = 5 -> w2 = 2.00011
+    sha256("114565|MG|0") = c4599ce5a0078c03... ; modulo 25 = 17 -> w2 = 1.99968
+    sha256("114565|MG|1") = dd20c4b207612810... ; modulo 25 = 5 -> w2 = 1.99956
+    sha256("114565|PG|0") = 970e004a58200fbc... ; modulo 25 = 14 -> w2 = 2.00039
+    sha256("114565|PG|1") = 71a77b17c3bff9f4... ; modulo 25 = 23 -> w2 = 2.00048
+
+tirage (regle des rangs, section 6) :
+  MP rang 0 : indice 9 sur 15 -> w2 = 1.99989 ; eligible dans la table commune : True ; deja retenu : False
+  MP rang 1 : indice 12 sur 15 -> w2 = 1.99993 ; eligible dans la table commune : True ; deja retenu : False
+  => MPa : w2 = 199989/100000 = 1.99989
+       MPa1  kappa 0.0363  g = 3.91071e-05  eta0 = 1.52405e-04  r_c = 22
+       MPa2  kappa 0.0530  g = 5.70985e-05  eta0 = 2.22519e-04  r_c = 20
+       MPa3  kappa 0.0800  g = 8.61865e-05  eta0 = 3.35878e-04  r_c = 18
+       MPa4  kappa 0.1300  g = 1.40053e-04  eta0 = 5.45801e-04  r_c = 18
+       MPa5  kappa 0.2000  g = 2.15466e-04  eta0 = 8.39694e-04  r_c = 18
+       MPa6  kappa 0.4000  g = 4.30932e-04  eta0 = 1.67939e-03  r_c = 18
+       MPa7  kappa 1.0000  g = 1.07733e-03  eta0 = 4.19847e-03  r_c = 18
+  => MPb : w2 = 199993/100000 = 1.99993
+       MPb1  kappa 0.0363  g = 2.48901e-05  eta0 = 9.69848e-05  r_c = 22
+       MPb2  kappa 0.0530  g = 3.63409e-05  eta0 = 1.41603e-04  r_c = 20
+       MPb3  kappa 0.0800  g = 5.48542e-05  eta0 = 2.13741e-04  r_c = 18
+       MPb4  kappa 0.1300  g = 8.91380e-05  eta0 = 3.47328e-04  r_c = 18
+       MPb5  kappa 0.2000  g = 1.37135e-04  eta0 = 5.34350e-04  r_c = 18
+       MPb6  kappa 0.4000  g = 2.74271e-04  eta0 = 1.06870e-03  r_c = 18
+       MPb7  kappa 1.0000  g = 6.85677e-04  eta0 = 2.67176e-03  r_c = 18
+  PP rang 0 : indice 3 sur 15 -> w2 = 2.00008 ; eligible dans la table commune : True ; deja retenu : False
+  PP rang 1 : indice 5 sur 15 -> w2 = 2.00011 ; eligible dans la table commune : True ; deja retenu : False
+  => PPa : w2 = 25001/12500 = 2.00008
+       PPa1  kappa 0.0363  g = 2.84618e-05  eta0 = 1.10840e-04  r_c = 22
+       PPa2  kappa 0.0530  g = 4.15558e-05  eta0 = 1.61832e-04  r_c = 20
+       PPa3  kappa 0.0800  g = 6.27258e-05  eta0 = 2.44275e-04  r_c = 18
+       PPa4  kappa 0.1300  g = 1.01929e-04  eta0 = 3.96945e-04  r_c = 18
+       PPa5  kappa 0.2000  g = 1.56814e-04  eta0 = 6.10686e-04  r_c = 18
+       PPa6  kappa 0.4000  g = 3.13629e-04  eta0 = 1.22137e-03  r_c = 18
+       PPa7  kappa 1.0000  g = 7.84072e-04  eta0 = 3.05344e-03  r_c = 18
+  => PPb : w2 = 200011/100000 = 2.00011
+       PPb1  kappa 0.0363  g = 3.91394e-05  eta0 = 1.52405e-04  r_c = 22
+       PPb2  kappa 0.0530  g = 5.71457e-05  eta0 = 2.22519e-04  r_c = 20
+       PPb3  kappa 0.0800  g = 8.62576e-05  eta0 = 3.35878e-04  r_c = 18
+       PPb4  kappa 0.1300  g = 1.40169e-04  eta0 = 5.45803e-04  r_c = 18
+       PPb5  kappa 0.2000  g = 2.15644e-04  eta0 = 8.39695e-04  r_c = 18
+       PPb6  kappa 0.4000  g = 4.31288e-04  eta0 = 1.67939e-03  r_c = 18
+       PPb7  kappa 1.0000  g = 1.07822e-03  eta0 = 4.19847e-03  r_c = 18
+  MG rang 0 : indice 17 sur 25 -> w2 = 1.99968 ; eligible dans la table commune : True ; deja retenu : False
+  MG rang 1 : indice 5 sur 25 -> w2 = 1.99956 ; eligible dans la table commune : True ; deja retenu : False
+  => MGa : w2 = 6249/3125 = 1.99968
+       MGa1  kappa 0.0363  g = 1.13677e-04  eta0 = 4.43360e-04  r_c = 22
+       MGa2  kappa 0.0530  g = 1.65974e-04  eta0 = 6.47328e-04  r_c = 20
+       MGa3  kappa 0.0800  g = 2.50527e-04  eta0 = 9.77100e-04  r_c = 18
+       MGa4  kappa 0.1300  g = 4.07106e-04  eta0 = 1.58779e-03  r_c = 18
+       MGa5  kappa 0.2000  g = 6.26317e-04  eta0 = 2.44275e-03  r_c = 18
+       MGa6  kappa 0.4000  g = 1.25263e-03  eta0 = 4.88548e-03  r_c = 18
+       MGa7  kappa 1.0000  g = 3.13159e-03  eta0 = 1.22138e-02  r_c = 18
+  => MGb : w2 = 49989/25000 = 1.99956
+       MGb1  kappa 0.0363  g = 1.56235e-04  eta0 = 6.09618e-04  r_c = 22
+       MGb2  kappa 0.0530  g = 2.28112e-04  eta0 = 8.90078e-04  r_c = 20
+       MGb3  kappa 0.0800  g = 3.44319e-04  eta0 = 1.34351e-03  r_c = 18
+       MGb4  kappa 0.1300  g = 5.59519e-04  eta0 = 2.18321e-03  r_c = 18
+       MGb5  kappa 0.2000  g = 8.60799e-04  eta0 = 3.35878e-03  r_c = 18
+       MGb6  kappa 0.4000  g = 1.72160e-03  eta0 = 6.71757e-03  r_c = 18
+       MGb7  kappa 1.0000  g = 4.30399e-03  eta0 = 1.67939e-02  r_c = 18
+  PG rang 0 : indice 14 sur 25 -> w2 = 2.00039 ; eligible dans la table commune : True ; deja retenu : False
+  PG rang 1 : indice 23 sur 25 -> w2 = 2.00048 ; eligible dans la table commune : True ; deja retenu : False
+  => PGa : w2 = 200039/100000 = 2.00039
+       PGa1  kappa 0.0363  g = 1.38913e-04  eta0 = 5.40345e-04  r_c = 22
+       PGa2  kappa 0.0530  g = 2.02820e-04  eta0 = 7.88931e-04  r_c = 20
+       PGa3  kappa 0.0800  g = 3.06144e-04  eta0 = 1.19084e-03  r_c = 18
+       PGa4  kappa 0.1300  g = 4.97483e-04  eta0 = 1.93511e-03  r_c = 18
+       PGa5  kappa 0.2000  g = 7.65359e-04  eta0 = 2.97710e-03  r_c = 18
+       PGa6  kappa 0.4000  g = 1.53072e-03  eta0 = 5.95421e-03  r_c = 18
+       PGa7  kappa 1.0000  g = 3.82680e-03  eta0 = 1.48855e-02  r_c = 18
+  => PGb : w2 = 12503/6250 = 2.00048
+       PGb1  kappa 0.0363  g = 1.71027e-04  eta0 = 6.65038e-04  r_c = 22
+       PGb2  kappa 0.0530  g = 2.49709e-04  eta0 = 9.70992e-04  r_c = 20
+       PGb3  kappa 0.0800  g = 3.76919e-04  eta0 = 1.46565e-03  r_c = 18
+       PGb4  kappa 0.1300  g = 6.12494e-04  eta0 = 2.38168e-03  r_c = 18
+       PGb5  kappa 0.2000  g = 9.42298e-04  eta0 = 3.66412e-03  r_c = 18
+       PGb6  kappa 0.4000  g = 1.88460e-03  eta0 = 7.32826e-03  r_c = 18
+       PGb7  kappa 1.0000  g = 4.71149e-03  eta0 = 1.83206e-02  r_c = 18
+
+8 w2, 56 cellules : MPa=199989/100000 MPb=199993/100000 PPa=25001/12500 PPb=200011/100000 MGa=6249/3125 MGb=49989/25000 PGa=200039/100000 PGb=12503/6250

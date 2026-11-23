@@ -1,0 +1,14 @@
+cas 2D : 96 ; cles C1 : 48
+a    g      max|2D-C1|    max|2D-C2|    cas ou C1 plus pres que C2
+0.5  5e-04  4.48e-04      8.33e-04      12 sur 12
+0.5  1e-03  1.65e-03      3.16e-03      12 sur 12
+1.0  5e-04  1.06e-04      1.26e-04      12 sur 12
+1.0  1e-03  4.73e-04      5.63e-04      12 sur 12
+2.0  5e-04  5.78e-06      1.05e-05      8 sur 12
+2.0  1e-03  2.43e-05      2.90e-05      9 sur 12
+4.0  5e-04  2.02e-06      3.98e-06      12 sur 12
+4.0  1e-03  7.99e-06      4.02e-06      10 sur 12
+a = 0.5 : (2D - C1)(g = 1e-3) / (2D - C1)(g = 5e-4) de 3.60 a 4.12
+a = 1.0 : (2D - C1)(g = 1e-3) / (2D - C1)(g = 5e-4) de 4.12 a 4.48
+a = 0.5, coupes paires : 2D - C1 : 12 negatifs, 0 positifs
+a = 0.5, coupes impaires : 2D - C1 : 0 negatifs, 12 positifs

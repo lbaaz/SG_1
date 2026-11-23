@@ -1,0 +1,15 @@
+kappa   ln(lu / ma chaine 1er ordre)       ln(G3* / ma chaine 1er ordre)      ln q = ln(G3* / lu) [residu de l acte]
+        min, max, moyenne                  min, max, moyenne                  min, max, moyenne                 
+0.0363  -0.00015 +0.00015 +0.00001      -0.00007 +0.00007 +0.00002      -0.00007 +0.00008 +0.00001
+0.0530  -0.00018 +0.00018 +0.00000      -0.00043 -0.00002 -0.00024      -0.00025 -0.00020 -0.00024
+0.0800  -0.00019 +0.00018 +0.00000      -0.00041 +0.00012 -0.00012      -0.00022 -0.00006 -0.00012
+0.1300  -0.00017 +0.00014 -0.00002      -0.00008 +0.00015 +0.00002      +0.00001 +0.00010 +0.00003
+0.2000  -0.00012 +0.00012 +0.00000      -0.00002 +0.00025 +0.00010      +0.00007 +0.00013 +0.00009
+0.4000  -0.00009 +0.00010 +0.00000      -0.00019 +0.00007 -0.00005      -0.00010 -0.00002 -0.00005
+1.0000  -0.00009 +0.00006 -0.00001      -0.00023 +0.00011 -0.00004      -0.00014 +0.00006 -0.00003
+
+plus grand |ln(lu / ma chaine du premier ordre)| aux 56 cellules : 0.00019 ; mediane : 0.00005
+plus grand |ln(G3* / ma chaine du premier ordre)| : 0.00043 (cellule PGb2)
+correlation, cellule par cellule, entre ln q (residu de l acte) et ln(G3* / ma chaine) : 0.7881
+
+Ce que ceci ne dit pas : que le premier ordre est meilleur que l ordre 3 (les deux chaines different de 0.0003 au plus et ont chacune son absorbeur) ; que le lecteur lit juste (il partage le moteur avec les chaines) ; rien du systeme ferme.

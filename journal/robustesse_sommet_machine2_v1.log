@@ -1,0 +1,20 @@
+(1) M_FACTEUR
+    84 cellules (12 w2 x 7 kappa) ; plus grand |ln Gamma(M_facteur 5) - ln Gamma(M_facteur 6)| sur les dix-huit variantes : 0.00e+00
+    cellules a barriere VIDE de l echantillon : 60 ; avec M_facteur = 4 : 0 aboutissent, 60 echouent (KeyError)
+
+(2) SEUIL D ETENDUE (ma table)
+    etendue : minimum 0.0003, mediane 0.0025, maximum 0.0037 sur 560 cellules
+    seuil 0.0030 : 161 cellules et 80 w2 sur 80 seraient retires
+    seuil 0.0033 :  55 cellules et 50 w2 sur 80 seraient retires
+    seuil 0.0035 :   7 cellules et  7 w2 sur 80 seraient retires
+    seuil 0.0036 :   3 cellules et  3 w2 sur 80 seraient retires
+    seuil 0.0037 :   1 cellules et  1 w2 sur 80 seraient retires
+    seuil 0.0038 :   0 cellules et  0 w2 sur 80 seraient retires
+    seuil 0.0050 :   0 cellules et  0 w2 sur 80 seraient retires
+    seuil 0.0100 :   0 cellules et  0 w2 sur 80 seraient retires
+    seuil 0.0200 :   0 cellules et  0 w2 sur 80 seraient retires
+    tout seuil >= 0.0037 donne la meme table ; le seuil ecrit (0.005) est 1.35 fois le maximum lu
+
+(3) e_bord
+    160 cellules de barriere non vide : plus grand ecart entre ma formule et la valeur du moteur : 1.08e-19
+    plus grand e_bord sur les 560 cellules : 0.0010 (garde : 0.7 : 714 fois de marge)

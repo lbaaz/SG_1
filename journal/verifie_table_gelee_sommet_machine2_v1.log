@@ -1,0 +1,19 @@
+(a) SON TIRAGE CONTRE LE MIEN
+    huit w2 : miens {'MPa': '199989/100000', 'MPb': '199993/100000', 'PPa': '25001/12500', 'PPb': '200011/100000', 'MGa': '6249/3125', 'MGb': '49989/25000', 'PGa': '200039/100000', 'PGb': '12503/6250'}
+    huit w2 : siens {'MGa': '6249/3125', 'MGb': '49989/25000', 'MPa': '199989/100000', 'MPb': '199993/100000', 'PGa': '200039/100000', 'PGb': '12503/6250', 'PPa': '25001/12500', 'PPb': '200011/100000'}
+    identiques : OUI
+    56 cellules : 56 dans sa table, 56 dans mon journal ; differences (w2, kappa, g, eta0, r_c, tolerance 0.01, boite = r_c + 100) : AUCUNE ; plus grand ecart de delta : 1.7e-16
+(a) TIENT
+
+(b) SES PREDICTIONS CONTRE MA TABLE (calculee de sa piece de gel, partie 1, avant la graine)
+    56 cellules : plus grand ecart etendue 1.02e-11 ; ln G3* 1.76e-11 ; poids du site 0 5.61e-13 ; m, r_c, g, eta0 differents : AUCUN
+    tableau imprime de la section 3 de la piece : 56 lignes lues ; differentes de sa table JSON (w2, delta, kappa, m, g, eta0, r_c, G3* a quatre chiffres, etendue) : AUCUNE
+(b) TIENT
+
+(e) LES NEUF TEMOINS POSITIFS ET LE PILOTE DE LECTURE
+    9 temoins : g, eta0, r_c, m, w2 contre mes fichiers de travail : differences AUCUNE ; plus grand ecart du ln du plateau de reference a celui que la feuille deposee rend sur mes sorties : 0.00e+00
+    canon de MON pilote : 47a84eae6052f006 ; ses canons dans la table : pilote 47a84eae6052f006, bloc 5b835ce079ce2cf4, source d5cc48f48e37af99, moteur 82a0be882568fe0c
+    ce que mes dix-huit fichiers de Q et de Q2 portent (pilote, bloc, source, moteur) : [('47a84eae6052f006', '5b835ce079ce2cf4', 'd5cc48f48e37af99', '82a0be882568fe0c')]
+(e) TIENT
+
+RESUME : (a) TIENT ; (b) TIENT ; (e) TIENT

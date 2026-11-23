@@ -1,0 +1,34 @@
+verdict du run : canon 2c39171a593d95df ; verdict rejoue : canon ab4629fe72da3e92 ; identiques a l'octet : False
+feuille : ac934e0caaa59c08 et ac934e0caaa59c08 ; table : 4238e2b262119f83 et 4238e2b262119f83 ; graine : 114565 et 114565
+VERDICT du run : S1 TENU ; VERDICT rejoue : S1 TENU
+instrument : TIENT et TIENT ; temoins positifs : TIENNENT (9 sur 9) et TIENNENT (9 sur 9)
+S1 du run : TENU {'NON JUGEABLE': 0, 'NON LUE': 0, 'TIENT': 56, 'TOMBE': 0} ; S1 rejoue : TENU {'NON JUGEABLE': 0, 'NON LUE': 0, 'TIENT': 56, 'TOMBE': 0}
+portee : 0.0363 0.0530 0.0800 0.1300 0.2000 0.4000 1.0000 ; et 0.0363 0.0530 0.0800 0.1300 0.2000 0.4000 1.0000
+cellules : 56 et 56 ; jugements, statuts ou lectures differents : 0 ; plus grands ecarts : ln q 3.6e-15 ; ln Gamma_pl 3.6e-15 ; bande 3.7e-15 ; etalement 3.7e-15
+LES DEUX VERDICTS SONT LES MEMES : OUI
+
+=== CE QUE LE RUN DIT, DEPUIS LE VERDICT REJOUE
+cellules lues 56 ; plus grand |ln q| 0.00025 (PPb2) ; plus grande bande 0.00556 ; plus grand etalement du lecteur 0.00219 ; plus petite marge T - b - |ln q| 0.00436 (MGb1)
+lectures suivies du fantome : 2679 sur 2688 ; plus petit poids du site : 0.5348 ; jumeau : plus grand rapport au plateau 4.78e-26
+par kappa : ln q du plus petit au plus grand, et moyenne
+    0.0363   -0.00007 a +0.00008   moyenne +0.00001   negatifs 2 sur 8
+    0.0530   -0.00025 a -0.00020   moyenne -0.00024   negatifs 8 sur 8
+    0.0800   -0.00022 a -0.00006   moyenne -0.00012   negatifs 8 sur 8
+    0.1300   +0.00001 a +0.00010   moyenne +0.00003   negatifs 0 sur 8
+    0.2000   +0.00007 a +0.00013   moyenne +0.00009   negatifs 0 sur 8
+    0.4000   -0.00010 a -0.00002   moyenne -0.00005   negatifs 8 sur 8
+    1.0000   -0.00014 a +0.00006   moyenne -0.00003   negatifs 6 sur 8
+plateaux lus : de 4.67848e-10 a 2.48322e-04 ; couplages de 2.48901e-05 a 4.71149e-03
+
+=== MES ANNONCES DE LA SECTION 10, RECOMPTEES (elles ne sont pas des enonces juges)
+A-1 (0.95) l'instrument tient : oui
+A-2 (0.97) les neuf temoins positifs tiennent : oui
+A-3 (0.95) le temoin tient aux 56 cellules : oui (56 sur 56)
+A-4 (0.70) le lecteur qualifie les 56 cellules : oui (56 sur 56)
+A-5 S1 TENU (0.80) : TENU
+A-6 (0.75) plus grand |ln q| sous 0.001 : oui (0.00025)
+A-7 (0.70) ln q negatif a douze cellules de barriere au moins sur seize : NON (10 sur 16 ; a kappa = 0.0363 : 2 sur 8 ; a 0.0530 : 8 sur 8)
+A-8 (0.65) aux paires miroirs, rapport lu a 0.0001 de celui de la chaine a cinq paires au moins : oui (7 sur 7 ; ecarts : +0.00003 -0.00001 -0.00006 +0.00001 -0.00003 -0.00001 -0.00003)
+A-9 (0.75) a chaque kappa, etalement de ln(Gamma_pl / |delta|) sous 0.001 : oui (0.0363 0.00017 ; 0.0530 0.00028 ; 0.0800 0.00032 ; 0.1300 0.00029 ; 0.2000 0.00024 ; 0.4000 0.00019 ; 1.0000 0.00016)
+consigne : ordre 3 plus pres que le premier ordre a 35 cellules sur 56 ; ln q du signe de delta a 28 ; ln q negatif a 32
+le signe de delta aux sept paires miroirs, lu (chaine) : 0.0363 +0.00003 (-0.00001) ; 0.0530 +0.00005 (+0.00006) ; 0.0800 +0.00008 (+0.00014) ; 0.1300 +0.00006 (+0.00005) ; 0.2000 +0.00006 (+0.00008) ; 0.4000 +0.00005 (+0.00005) ; 1.0000 +0.00005 (+0.00008)
